@@ -1,0 +1,66 @@
+﻿@keyframes announcement-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-45%);
+  }
+}
+
+@keyframes industry-rotate {
+  0%,
+  14% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  19%,
+  100% {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes problem-rotate {
+  0%,
+  7% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  10%,
+  16% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  19%,
+  100% {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+}
+
+@keyframes emoji-rotate {
+  0%,
+  14% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  20%,
+  34% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  40%,
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+
+

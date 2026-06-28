@@ -1,0 +1,34 @@
+import type { PortfolioData } from "@/context/PortfolioContentContext";
+import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
+import { CaseStudyBranding } from "./CaseStudyBranding";
+import { CaseStudyChallengesResults } from "./CaseStudyChallengesResults";
+import { CaseStudyDesktopLayout } from "./CaseStudyDesktopLayout";
+import { CaseStudyFeedback } from "./CaseStudyFeedback";
+import { CaseStudyHero } from "./CaseStudyHero";
+import { CaseStudyJsonLd } from "./CaseStudyJsonLd";
+import { CaseStudyOverview } from "./CaseStudyOverview";
+import { CaseStudyResponsiveLayout } from "./CaseStudyResponsiveLayout";
+import { CaseStudyTools } from "./CaseStudyTools";
+import styles from "./Ape24ProCaseStudy.module.scss";
+
+export function CaseStudyDetail({
+  portfolio,
+  study,
+}: {
+  portfolio: PortfolioData;
+  study: CaseStudyDetailData;
+}) {
+  return (
+    <main className={styles.caseStudy}>
+      <CaseStudyJsonLd portfolio={portfolio} study={study} />
+      <CaseStudyHero study={study} />
+      <CaseStudyOverview study={study} />
+      <CaseStudyChallengesResults study={study} />
+      <CaseStudyTools study={study} />
+      <CaseStudyBranding study={study} />
+      <CaseStudyDesktopLayout study={study} />
+      <CaseStudyResponsiveLayout study={study} />
+      <CaseStudyFeedback study={study} />
+    </main>
+  );
+}

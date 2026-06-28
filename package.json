@@ -1,0 +1,48 @@
+{
+  "name": "headless-woo-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A modern portfolio and case-study website built with Next.js 16, React 19, and Tailwind CSS v4.",
+  "author": "msrbuilds",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msrbuilds/headless-woo-landing.git"
+  },
+  "homepage": "https://github.com/msrbuilds/headless-woo-landing#readme",
+  "keywords": [
+    "nextjs",
+    "react",
+    "tailwindcss",
+    "landing-page",
+    "woocommerce",
+    "headless",
+    "template",
+    "animation"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@formspree/react": "^3.0.0",
+    "@iconify/icons-lucide": "^1.2.135",
+    "@iconify/react": "^6.0.2",
+    "next": "^16.2.9",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-simple-typewriter": "^5.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.1",
+    "@types/node": "^26.0.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "playwright": "^1.61.0",
+    "sass": "^1.101.0",
+    "tailwindcss": "^4.3.1",
+    "typescript": "^6.0.3"
+  }
+}

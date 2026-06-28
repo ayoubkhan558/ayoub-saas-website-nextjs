@@ -1,0 +1,436 @@
+{
+  "ape-24-pro": {
+    "slug": "ape-24-pro",
+    "client": "Ape 24 Pro",
+    "urlLabel": "ape24pro.com",
+    "eyebrow": "Case study / Ape 24 Pro",
+    "headline": "A focused WordPress build for a sharper business presence.",
+    "tagline": "Unlocking Opportunities, Delivering Excellence.",
+    "overview": "Ape 24 Pro provides B2B solutions, business consulting, company incorporation, regulatory compliance, bank account opening, and corporate services. The website needed to position them as strategic partners who help companies optimize operations and drive sustainable growth.",
+    "facts": [
+      { "label": "Industry", "value": "Business consulting and corporate services" },
+      { "label": "Objective", "value": "Sharper positioning, modern interface, and easier content updates" },
+      { "label": "Project type", "value": "WordPress design and Elementor implementation" }
+    ],
+    "challenges": [
+      {
+        "title": "Unclear positioning",
+        "text": "The previous brand identity lacked a concise value proposition, causing confusion around the company core B2B offerings."
+      },
+      {
+        "title": "Outdated visual interface",
+        "text": "The legacy interface did not reflect the modern professionalism expected from a corporate service firm."
+      },
+      {
+        "title": "Responsive layout issues",
+        "text": "The layout had rendering inconsistencies across tablet and mobile viewports that weakened the browsing experience."
+      },
+      {
+        "title": "Limited collaboration",
+        "text": "Internal teams struggled to update content efficiently because the back-end workflow was rigid and unintuitive."
+      }
+    ],
+    "results": [
+      {
+        "title": "Optimized performance",
+        "text": "Frontend delivery was reworked for faster page loads, better PageSpeed behavior, and smoother user interaction."
+      },
+      {
+        "title": "Responsive layouts across devices",
+        "text": "The final layout adapts cleanly across desktop, tablet, and smartphone screens for a consistent browsing experience."
+      },
+      {
+        "title": "Clear positioning highlights",
+        "text": "Copy and layout hierarchy were restructured to emphasize the company core capabilities and improve corporate credibility."
+      },
+      {
+        "title": "Optimized content update experience",
+        "text": "Content administrators gained a streamlined WordPress editing system for faster independent updates."
+      }
+    ],
+    "tools": [
+      { "name": "Elementor Builder", "mark": "EL", "meta": "Flexible layout architecture with pixel-focused production control" },
+      { "name": "WordPress CMS", "mark": "WP", "meta": "Scalable content management foundation for client updates" },
+      { "name": "Yoast SEO", "mark": "YS", "meta": "Structural metadata, search previews, and indexation controls" },
+      { "name": "Wordfence Plugin", "mark": "WF", "meta": "Firewall protection and live traffic threat monitoring" }
+    ],
+    "performanceNote": "Performance and security were handled as part of the build: optimized frontend delivery, faster load behavior, responsive QA, Yoast SEO structure, and Wordfence protection for a client-managed WordPress site.",
+    "branding": {
+      "title": "A corporate identity system with a sharper digital presence.",
+      "text": "The brand direction uses DM Sans, a deep charcoal foundation, primary blue accents, and an APE 24 PRO logo treatment with a geometric icon cue.",
+      "logoMark": "APE",
+      "fontName": "DM Sans",
+      "fontMeta": "Clean, modern sans-serif typography used across headings and body text.",
+      "palette": [
+        { "label": "Deep charcoal #0D111A", "tone": "dark" },
+        { "label": "Corporate slate", "tone": "gray" },
+        { "label": "Clean white", "tone": "light" },
+        { "label": "Primary blue #1A42D9", "tone": "accent" }
+      ]
+    },
+    "desktopPages": [
+      { "name": "Home page hero", "type": "Value-first messaging and dark corporate imagery" },
+      { "name": "Our services", "type": "Structured service cards for corporate pathways" },
+      { "name": "Footer system", "type": "Deep charcoal navigation, policy links, and office contact details" }
+    ],
+    "responsiveBenefits": [
+      "Tablet and mobile layouts preserve the proportions of the desktop design system.",
+      "Menus collapse into a focused hamburger navigation without losing important paths.",
+      "Responsive sections keep corporate service content readable across modern devices."
+    ],
+    "testimonial": {
+      "quote": "Working with them was an absolute pleasure. They provided top-notch service, knowledge, and support. Highly recommend, and we will continue to work together on many more items ahead. Thank you once again for your fantastic service.",
+      "author": "Anish",
+      "meta": "Ape 24 Pro Representative"
+    },
+    "cta": {
+      "heading": "Like what you see? Let's make it happen for you.",
+      "text": "Send the project details and I will map the build, stack, and estimate.",
+      "buttonText": "Start Collaboration"
+    }
+  },
+  "5gstore": {
+    "slug": "5gstore",
+    "client": "5gStore",
+    "urlLabel": "5gstore.pk",
+    "eyebrow": "Case study / 5gStore",
+    "headline": "A WooCommerce storefront structured for easier shopping and management.",
+    "tagline": "Cleaner product discovery, faster updates, and a checkout path built around intent.",
+    "overview": "5gStore needed a WooCommerce site that presented products clearly, reduced friction in the shopping flow, and gave the store team a manageable Elementor and WordPress setup.",
+    "facts": [
+      { "label": "Industry", "value": "E-commerce and connectivity products" },
+      { "label": "Objective", "value": "Improve product pages, shopping flow, and CMS editing" },
+      { "label": "Project type", "value": "WooCommerce customization and Elementor implementation" }
+    ],
+    "challenges": [
+      {
+        "title": "Dense product information",
+        "text": "Product content needed to be easier to scan while still giving buyers enough detail to make a decision."
+      },
+      {
+        "title": "Checkout friction",
+        "text": "The storefront needed clearer paths from browsing to cart actions without burying important buying cues."
+      },
+      {
+        "title": "Store-team editing",
+        "text": "The client needed reusable CMS sections so product and page updates could happen without rebuilding layouts."
+      }
+    ],
+    "results": [
+      {
+        "title": "Cleaner buying flow",
+        "text": "Product, category, and checkout sections were organized around quick comparison and clearer next actions."
+      },
+      {
+        "title": "Monthly inquiries improved",
+        "text": "The storefront structure made product discovery and contact paths easier for ready-to-buy visitors."
+      },
+      {
+        "title": "Editable WooCommerce foundation",
+        "text": "Elementor and WordPress patterns gave the team a more practical way to maintain pages after launch."
+      }
+    ],
+    "tools": [
+      { "name": "WooCommerce", "mark": "WC", "meta": "Storefront and product system" },
+      { "name": "Elementor Pro", "mark": "EL", "meta": "Reusable page sections" },
+      { "name": "WordPress CMS", "mark": "WP", "meta": "Content and product management" },
+      { "name": "Performance QA", "mark": "QA", "meta": "Mobile and load-time checks" }
+    ],
+    "performanceNote": "The build focused on lighter page structure, mobile-first product sections, and checkout-oriented UX so the store stayed usable across common buyer devices.",
+    "branding": {
+      "title": "A storefront style that puts products first.",
+      "text": "The visual system keeps the interface clean and commercial, with readable product typography, neutral surfaces, and concise action areas for shopping intent.",
+      "logoMark": "5G",
+      "fontName": "System sans",
+      "fontMeta": "Readable storefront typography tuned for product names, prices, specs, and checkout copy.",
+      "palette": [
+        { "label": "Ink", "tone": "dark" },
+        { "label": "Steel", "tone": "gray" },
+        { "label": "White", "tone": "light" },
+        { "label": "Line", "tone": "accent" }
+      ]
+    },
+    "desktopPages": [
+      { "name": "Storefront", "type": "Featured products and conversion routes" },
+      { "name": "Category", "type": "Product browsing and comparison" },
+      { "name": "Product", "type": "Specs, trust cues, and cart action" }
+    ],
+    "responsiveBenefits": [
+      "Product sections stay readable on mobile screens.",
+      "Cart and inquiry actions remain visible in the shopping flow.",
+      "Reusable CMS sections make store updates easier after launch."
+    ],
+    "testimonial": {
+      "quote": "The store became easier to manage and the product pages feel much clearer for customers.",
+      "author": "5gStore",
+      "meta": "WooCommerce storefront improvements"
+    },
+    "cta": {
+      "heading": "Like what you see? Let's make it happen for you.",
+      "text": "Send the project details and I will map the build, stack, and estimate.",
+      "buttonText": "Get a build estimate"
+    }
+  },
+  "pin-auto": {
+    "slug": "pin-auto",
+    "client": "PinAuto",
+    "urlLabel": "pin-auto.com",
+    "eyebrow": "Case study / PinAuto",
+    "headline": "A product website for a Pinterest automation service.",
+    "tagline": "Clear positioning, practical feature education, and a faster path from interest to inquiry.",
+    "overview": "PinAuto needed a website that could explain a Pinterest automation product without making the visitor work too hard. The build focused on product positioning, integration-focused sections, clearer feature hierarchy, and a WordPress editing structure the team could keep updating.",
+    "facts": [
+      { "label": "Industry", "value": "Marketing automation and Pinterest workflows" },
+      { "label": "Objective", "value": "Explain the product, clarify use cases, and improve inquiry paths" },
+      { "label": "Project type", "value": "WordPress product website with Bricks Builder implementation" }
+    ],
+    "challenges": [
+      {
+        "title": "Complex product explanation",
+        "text": "The automation workflow needed to be explained clearly for users who may not already understand Pinterest scheduling or API-based posting."
+      },
+      {
+        "title": "Weak signup path",
+        "text": "Visitors needed a more direct path from understanding the offer to taking the next inquiry or signup action."
+      },
+      {
+        "title": "Feature hierarchy",
+        "text": "Important benefits, workflow details, and integration points needed a tighter structure so the page did not feel like a long feature dump."
+      },
+      {
+        "title": "Editable product pages",
+        "text": "The site needed reusable WordPress sections so product messaging could evolve without rebuilding every block."
+      }
+    ],
+    "results": [
+      {
+        "title": "Clearer product story",
+        "text": "The content structure now introduces the problem, workflow, benefit, and next action in a more logical order."
+      },
+      {
+        "title": "Improved inquiry path",
+        "text": "Primary actions and contact routes were positioned around product interest instead of buried below general information."
+      },
+      {
+        "title": "Reusable page system",
+        "text": "Bricks Builder sections gave the team a practical system for updating product copy, sections, and supporting pages."
+      },
+      {
+        "title": "Faster production workflow",
+        "text": "The build reused structured builder patterns to reduce manual layout work and keep future edits consistent."
+      }
+    ],
+    "tools": [
+      { "name": "WordPress CMS", "mark": "WP", "meta": "Content management and product page publishing" },
+      { "name": "Bricks Builder", "mark": "BR", "meta": "Reusable visual builder sections and layout system" },
+      { "name": "Pinterest API Positioning", "mark": "API", "meta": "Integration-focused content and workflow explanation" },
+      { "name": "Performance QA", "mark": "QA", "meta": "Mobile, load-time, and interaction checks" }
+    ],
+    "performanceNote": "The implementation focused on lean page sections, reusable builder components, and mobile-first product messaging so the page stayed clear and fast while explaining a technical automation workflow.",
+    "branding": {
+      "title": "A product-led website system for automation buyers.",
+      "text": "The visual direction keeps the product story clean and practical: strong contrast, direct feature blocks, readable content sections, and action areas that support signup or inquiry intent.",
+      "logoMark": "PA",
+      "fontName": "Modern sans",
+      "fontMeta": "Readable product typography tuned for feature explanations, workflow copy, and conversion sections.",
+      "palette": [
+        { "label": "Product ink", "tone": "dark" },
+        { "label": "Interface gray", "tone": "gray" },
+        { "label": "Clean white", "tone": "light" },
+        { "label": "Pinterest signal", "tone": "accent" }
+      ]
+    },
+    "desktopPages": [
+      { "name": "Home", "type": "Product positioning, value proposition, and action route" },
+      { "name": "Features", "type": "Automation workflow and benefit sections" },
+      { "name": "Contact", "type": "Inquiry path and product-fit messaging" }
+    ],
+    "responsiveBenefits": [
+      "Feature explanations stay readable on mobile without long text blocks.",
+      "Primary actions remain easy to find across smaller screens.",
+      "Reusable WordPress sections keep future product-page edits consistent."
+    ],
+    "testimonial": {
+      "quote": "The site made the product easier to understand and gave us a cleaner path for interested users to take action.",
+      "author": "PinAuto",
+      "meta": "Pinterest automation product website"
+    },
+    "cta": {
+      "heading": "Like what you see? Let's make it happen for you.",
+      "text": "Send the project details and I will map the build, stack, and estimate.",
+      "buttonText": "Get a build estimate"
+    }
+  },
+  "markedine": {
+    "slug": "markedine",
+    "client": "Markedine",
+    "urlLabel": "markedine.com",
+    "eyebrow": "Case study / Markedine",
+    "headline": "A service website built around clearer offers and faster contact.",
+    "tagline": "Cleaner service sections, stronger trust flow, and a WhatsApp-led inquiry path.",
+    "overview": "Markedine needed a service website that made its offers easier to understand and gave visitors a direct way to start a conversation. The build focused on clearer service structure, stronger conversion sections, mobile readability, and WordPress editing control.",
+    "facts": [
+      { "label": "Industry", "value": "Digital services and marketing" },
+      { "label": "Objective", "value": "Improve service clarity, conversion paths, and mobile contact flow" },
+      { "label": "Project type", "value": "WordPress and Elementor service website" }
+    ],
+    "challenges": [
+      {
+        "title": "Service clarity",
+        "text": "The site needed to explain services quickly so visitors could understand what was offered without reading dense paragraphs."
+      },
+      {
+        "title": "Lead contact friction",
+        "text": "Interested visitors needed a shorter path to contact, especially on mobile where WhatsApp is often the fastest action."
+      },
+      {
+        "title": "Section consistency",
+        "text": "Service, proof, and contact sections needed a consistent layout system instead of one-off page blocks."
+      },
+      {
+        "title": "Mobile presentation",
+        "text": "The browsing experience needed stronger spacing, readable cards, and clear actions on smaller devices."
+      }
+    ],
+    "results": [
+      {
+        "title": "Clearer service pages",
+        "text": "Service content was grouped into easier sections with direct headings, shorter explanations, and stronger action areas."
+      },
+      {
+        "title": "Lead contact flow improved",
+        "text": "WhatsApp-led contact routes made it easier for ready visitors to start a conversation from the page."
+      },
+      {
+        "title": "Editable Elementor system",
+        "text": "Reusable Elementor sections gave the client a cleaner way to update services and campaign content."
+      },
+      {
+        "title": "Better mobile readability",
+        "text": "Spacing, cards, and action hierarchy were adjusted around the way service buyers scan on phones."
+      }
+    ],
+    "tools": [
+      { "name": "WordPress CMS", "mark": "WP", "meta": "Content management and page publishing" },
+      { "name": "Elementor Pro", "mark": "EL", "meta": "Reusable service page sections and visual editing" },
+      { "name": "WhatsApp Flow", "mark": "WA", "meta": "Lead contact route and mobile-first inquiry action" },
+      { "name": "Performance QA", "mark": "QA", "meta": "Responsive checks and launch polish" }
+    ],
+    "performanceNote": "The page structure was kept practical and lightweight for a service website: clear sections, focused calls to action, responsive spacing, and direct contact routes for mobile visitors.",
+    "branding": {
+      "title": "A service-led design system with clear contact intent.",
+      "text": "The visual system keeps the page focused on service understanding and contact: neutral surfaces, concise headings, scan-friendly cards, and strong action hierarchy.",
+      "logoMark": "MD",
+      "fontName": "Modern sans",
+      "fontMeta": "Readable service typography for headings, short descriptions, and mobile conversion areas.",
+      "palette": [
+        { "label": "Service ink", "tone": "dark" },
+        { "label": "Neutral gray", "tone": "gray" },
+        { "label": "Clean white", "tone": "light" },
+        { "label": "Contact line", "tone": "accent" }
+      ]
+    },
+    "desktopPages": [
+      { "name": "Home", "type": "Offer positioning and contact route" },
+      { "name": "Services", "type": "Service cards and proof sections" },
+      { "name": "Contact", "type": "WhatsApp inquiry flow and lead prompt" }
+    ],
+    "responsiveBenefits": [
+      "Service cards stay easy to scan on mobile screens.",
+      "WhatsApp contact actions remain close to buying intent.",
+      "Reusable Elementor sections make future service updates easier."
+    ],
+    "testimonial": {
+      "quote": "The new structure made our services easier to understand and gave visitors a much simpler way to contact us.",
+      "author": "Markedine",
+      "meta": "Service website and lead-flow improvements"
+    },
+    "cta": {
+      "heading": "Like what you see? Let's make it happen for you.",
+      "text": "Send the project details and I will map the build, stack, and estimate.",
+      "buttonText": "Get a build estimate"
+    }
+  },
+  "xgrid-b2b": {
+    "slug": "xgrid-b2b",
+    "client": "Xgrid B2B Marketing",
+    "urlLabel": "xgrid.co/b2b-digital-marketing-agency",
+    "eyebrow": "Case study / Xgrid B2B",
+    "headline": "A custom WordPress marketing system for a B2B growth team.",
+    "tagline": "Flexible templates, structured content, and a CMS built for ongoing campaigns.",
+    "overview": "Xgrid needed a custom-coded WordPress foundation for a B2B marketing site, with flexible templates, structured fields, and a content model that could support campaign pages over time.",
+    "facts": [
+      { "label": "Industry", "value": "B2B marketing and technology services" },
+      { "label": "Objective", "value": "Build a custom CMS architecture for scalable marketing pages" },
+      { "label": "Project type", "value": "Custom WordPress theme with PHP, ACF, and REST patterns" }
+    ],
+    "challenges": [
+      {
+        "title": "Template flexibility",
+        "text": "The marketing team needed pages that could adapt to multiple offers without becoming one-off hardcoded layouts."
+      },
+      {
+        "title": "Structured content",
+        "text": "Content blocks, fields, and page sections needed a reliable CMS structure for repeatable updates."
+      },
+      {
+        "title": "Performance for campaigns",
+        "text": "The site needed to support conversion-focused pages without dragging down load speed or maintainability."
+      }
+    ],
+    "results": [
+      {
+        "title": "Custom CMS architecture",
+        "text": "ACF-powered content models gave the team repeatable page sections and cleaner publishing control."
+      },
+      {
+        "title": "Traffic quality improved",
+        "text": "The page structure supported clearer campaign messaging and more focused visitor journeys."
+      },
+      {
+        "title": "Performance increased",
+        "text": "Custom theme implementation reduced unnecessary builder overhead and kept templates easier to optimize."
+      }
+    ],
+    "tools": [
+      { "name": "WordPress CMS", "mark": "WP", "meta": "Publishing platform" },
+      { "name": "PHP Templates", "mark": "PHP", "meta": "Custom theme logic" },
+      { "name": "Advanced Custom Fields", "mark": "ACF", "meta": "Structured content model" },
+      { "name": "REST API Patterns", "mark": "API", "meta": "Data-aware template structure" }
+    ],
+    "performanceNote": "The custom theme approach kept the page architecture leaner than a heavy builder setup, improving maintainability and giving the team more control over campaign performance.",
+    "branding": {
+      "title": "A technical marketing look with structured content underneath.",
+      "text": "The design direction supports B2B credibility: restrained colors, clear section hierarchy, and typography that works for technical service messaging.",
+      "logoMark": "XG",
+      "fontName": "Modern sans",
+      "fontMeta": "Clean marketing typography for service pages, long-form copy, and campaign modules.",
+      "palette": [
+        { "label": "Carbon", "tone": "dark" },
+        { "label": "Graphite", "tone": "gray" },
+        { "label": "Cloud", "tone": "light" },
+        { "label": "Signal", "tone": "accent" }
+      ]
+    },
+    "desktopPages": [
+      { "name": "Landing", "type": "B2B campaign story and CTA flow" },
+      { "name": "Services", "type": "Offer modules and proof blocks" },
+      { "name": "Insights", "type": "CMS-driven content structure" }
+    ],
+    "responsiveBenefits": [
+      "Campaign sections adapt cleanly from desktop to mobile.",
+      "ACF modules keep page creation consistent for future pages.",
+      "Custom templates reduce editing complexity for marketing updates."
+    ],
+    "testimonial": {
+      "quote": "The custom WordPress setup gave us the flexibility to manage marketing pages without losing structure.",
+      "author": "Xgrid B2B Marketing",
+      "meta": "Custom WordPress architecture"
+    },
+    "cta": {
+      "heading": "Like what you see? Let's make it happen for you.",
+      "text": "Send the project details and I will map the build, stack, and estimate.",
+      "buttonText": "Get a build estimate"
+    }
+  }
+}

@@ -1,0 +1,201 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-top: 1px solid var(--color-fog-border);
+  border-bottom: 1px solid var(--color-fog-border);
+  background: rgba(255, 252, 252, 0.94);
+  backdrop-filter: blur(18px);
+}
+
+.site-header__announcement {
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-fog-border);
+  background: #e8e8e8b8;
+}
+
+.site-header__announcement-inner {
+  overflow: hidden;
+}
+
+.site-header__announcement-track {
+  display: flex;
+  width: max-content;
+  min-width: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-7);
+  padding-inline: var(--space-4);
+  animation: announcement-scroll 28s linear infinite;
+  color: var(--color-plum-charcoal);
+  font-family: var(--font-code);
+  font-size: var(--text-sm);
+  line-height: 1;
+  white-space: nowrap;
+
+  @media (min-width: 860px) {
+    width: 100%;
+    justify-content: center;
+    animation: none;
+  }
+}
+
+.site-header__announcement-item {
+  position: relative;
+}
+
+.site-header__announcement-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(var(--space-4) * -1);
+  width: 4px;
+  height: 4px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.site-header__nav {
+  display: grid;
+  min-height: 64px;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: var(--space-4);
+
+  @media (min-width: 860px) {
+    grid-template-columns: auto 1fr auto;
+  }
+}
+
+.site-header__nav-brand {
+  justify-self: start;
+  color: var(--color-plum-charcoal);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-h3);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.site-header__nav-links {
+  display: none;
+  align-items: center;
+  gap: var(--space-3);
+
+  @media (min-width: 860px) {
+    display: flex;
+  }
+}
+
+.site-header__nav-link,
+.site-header__nav-login {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  border-radius: var(--radius-buttons);
+  color: var(--color-plum-charcoal);
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1;
+  padding: var(--space-2);
+}
+
+.site-header__nav-login svg {
+  width: 15px;
+  height: 15px;
+}
+
+.site-header__nav-link:hover,
+.site-header__nav-login:hover {
+  background: var(--color-bone-mist);
+}
+
+.site-header__nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: var(--space-3);
+
+  @media (min-width: 860px) {
+    justify-self: end;
+  }
+}
+
+.site-header__nav-login,
+.site-header__nav-button {
+  display: none;
+}
+
+.site-header__nav-login {
+  @media (min-width: 860px) {
+    display: flex;
+  }
+}
+
+.site-header__nav-button {
+  @media (min-width: 860px) {
+    display: flex;
+  }
+}
+
+.site-header__nav-toggle {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid var(--color-fog-border);
+  border-radius: var(--radius-buttons);
+  background: #fff;
+  color: var(--color-ink-violet);
+  cursor: pointer;
+
+  @media (min-width: 860px) {
+    display: none;
+  }
+}
+
+.site-header__nav-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.site-header__mobile-nav {
+  display: none;
+  width: min(100% - 24px, 420px);
+  margin: var(--space-2) auto var(--space-3);
+  border: 1px solid var(--color-fog-border);
+  border-radius: var(--radius-cards);
+  background: #fff;
+  box-shadow: var(--shadow-product-light);
+
+  @media (min-width: 860px) {
+    display: none;
+  }
+}
+
+.site-header__mobile-nav--open {
+  display: grid;
+}
+
+.site-header__mobile-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  border-bottom: 1px solid var(--color-bone-mist);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.site-header__mobile-link svg {
+  width: 15px;
+  height: 15px;
+}
+
+.site-header__mobile-link:last-child {
+  border-bottom: 0;
+}
