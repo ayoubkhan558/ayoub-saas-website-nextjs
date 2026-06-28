@@ -444,6 +444,7 @@
   color: var(--color-ink-violet);
   font-size: var(--text-subheading);
   font-weight: 700;
+  line-height: 1.2;
   list-style: none;
   padding: var(--space-4) var(--space-5);
   text-align: left;
@@ -508,8 +509,14 @@
 
 .faq__answer {
   overflow: hidden;
+  min-height: 0;
   max-width: 78ch;
-  margin: var(--space-0) var(--space-5) var(--space-5);
+  margin: var(--space-0) var(--space-5);
   color: var(--color-ink-violet);
   font-size: var(--text-md);
+  line-height: 1.35;
+}
+
+.faq__item--open .faq__answer {
+  padding-bottom: var(--space-3);
 }
