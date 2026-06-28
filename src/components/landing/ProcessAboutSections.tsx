@@ -91,7 +91,10 @@ export function ProcessAboutSections({ portfolio }: { portfolio: PortfolioData }
             </div>
             <div className={`container ${styles["about__recognition-row"]}`} aria-label="Awards recognition and certifications">
               {portfolio.about.awards.map((award) => (
-                <span className={styles["about__recognition-item"]} key={award}>{award}</span>
+                <span className={styles["about__recognition-item"]} key={award.label}>
+                  <span className={styles["about__recognition-label"]}>{award.label}</span>
+                  <strong className={styles["about__recognition-value"]}>{award.value}</strong>
+                </span>
               ))}
             </div>
         </div>

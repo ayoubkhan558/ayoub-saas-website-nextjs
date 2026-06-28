@@ -309,11 +309,11 @@
     "signature": "Muhammad Ayoub",
     "resumeHref": "/ATS-react-front-Ayoub-CV_Resume.pdf",
     "awards": [
-      "50+ Projects Delivered",
-      "100% Job Success",
-      "Top Rated Freelancer",
-      "5+ Years Experience",
-      "20+ Happy Clients"
+      { "label": "Projects delivered", "value": "50+" },
+      { "label": "Job success", "value": "100%" },
+      { "label": "Freelancer status", "value": "Top Rated" },
+      { "label": "Experience", "value": "5+ Years" },
+      { "label": "Happy clients", "value": "20+" }
     ]
   },
   "testimonials": [

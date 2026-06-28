@@ -66,7 +66,6 @@
   display: grid;
   align-content: start;
   gap: var(--space-4);
-  min-height: 292px;
   padding: var(--space-7) var(--space-5);
 }
 
@@ -335,8 +334,11 @@
 }
 
 .about__recognition-item {
+  display: grid;
+  align-content: end;
+  gap: var(--space-2);
   position: relative;
-  min-height: 78px;
+  min-height: 92px;
   overflow: hidden;
   border: 1px solid rgba(49, 38, 59, 0.14);
   background:
@@ -344,10 +346,6 @@
     rgba(255, 255, 255, 0.86);
   background-size: 6px 6px, auto;
   color: var(--color-ink-violet);
-  font-family: var(--font-display-compact);
-  font-size: var(--text-subheading);
-  font-weight: 800;
-  line-height: 1.05;
   padding: var(--space-5) var(--space-4) var(--space-3);
   transition:
     border-color 180ms ease,
@@ -355,17 +353,17 @@
     transform 180ms ease;
 }
 
-.about__recognition-item::before {
-  content: "0" counter(about-recognition);
-  position: absolute;
-  top: var(--space-2);
-  left: var(--space-3);
-  color: var(--color-primary);
-  font-family: var(--font-code);
-  font-size: var(--text-2xs);
-  font-weight: 400;
-  line-height: 1;
-}
+// .about__recognition-item::before {
+//   content: "0" counter(about-recognition);
+//   position: absolute;
+//   top: var(--space-2);
+//   left: var(--space-3);
+//   color: var(--color-ink-violet);
+//   font-family: var(--font-code);
+//   font-size: var(--text-2xs);
+//   font-weight: 400;
+//   line-height: 1;
+// }
 
 .about__recognition-item::after {
   content: "";
@@ -388,6 +386,21 @@
   box-shadow:
     rgba(255, 255, 255, 0.82) 0 1px 0 inset,
     rgba(49, 38, 59, 0.09) 0 24px 54px;
+}
+
+.about__recognition-label {
+  color: var(--color-primary);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.about__recognition-value {
+  color: var(--color-ink-violet);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-h4);
+  font-weight: 800;
 }
 
 .faq__grid {

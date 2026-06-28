@@ -13,14 +13,14 @@
     radial-gradient(rgba(49, 38, 59, 0.045) 1px, transparent 1px) 0 0 / 7px 7px,
     #fff;
   box-shadow: var(--shadow-product-light);
-  padding: var(--space-7);
+  padding: var(--space-6) var(--space-5);
 
   @media (min-width: 860px) {
     grid-template-columns: minmax(0, 1fr) minmax(320px, 0.46fr);
   }
 
-  @media (max-width: 560px) {
-    padding: var(--space-6) var(--space-4);
+  @media (min-width: 560px) {
+    padding: var(--space-7);
   }
 }
 
@@ -35,9 +35,13 @@
 
 .cta__inner::before {
   top: var(--space-4);
-  left: var(--space-4);
+  left: var(--space-2);
   border-top: 1px solid var(--color-plum-charcoal);
   border-left: 1px solid var(--color-plum-charcoal);
+
+  @media (min-width: 768px) {
+    left: var(--space-4);
+  }
 }
 
 .cta__inner::after {
@@ -130,7 +134,7 @@
 .cta__contact-value {
   overflow-wrap: anywhere;
   font-family: var(--font-display-compact);
-  font-size: var(--text-h5);
+  // font-size: var(--text-h5);
   font-weight: 800;
   line-height: 1.05;
 }

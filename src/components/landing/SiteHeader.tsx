@@ -16,7 +16,6 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
         <div className={`${styles["site-header__announcement-inner"]} container`}>
           <div className={styles["site-header__announcement-track"]}>
             <span className={styles["site-header__announcement-item"]}>{portfolio.topbar.offer}</span>
-            <span className={styles["site-header__announcement-item"]}>{profile.availability}</span>
           </div>
         </div>
       </div>

@@ -253,7 +253,6 @@
     #fff;
   color: var(--color-ink-violet);
   padding: var(--space-3);
-  padding-bottom: var(--space-7);
   transition:
     border-color 160ms ease,
     background-color 160ms ease,
@@ -341,6 +340,7 @@
   justify-items: start;
   gap: var(--space-1);
   padding-block: 2px;
+  margin-bottom: auto;
 }
 
 .showcase__badge {
@@ -400,9 +400,8 @@
 }
 
 .showcase__action {
-  position: absolute;
-  right: var(--space-3);
-  bottom: var(--space-3);
+  margin-top: auto;
+  margin-left: auto;
   display: inline-flex;
   width: fit-content;
   height: 32px;
@@ -415,7 +414,6 @@
   font-family: var(--font-display-compact);
   font-size: var(--text-xs);
   font-weight: 800;
-  line-height: 1;
   padding-inline: var(--space-2);
   transition:
     background-color 160ms ease,

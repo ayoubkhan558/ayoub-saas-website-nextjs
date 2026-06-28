@@ -91,9 +91,9 @@ export default function AboutPage() {
           <div className="section__inner">
             <div className={`container ${styles["about-page-proof__inner"]}`}>
               {portfolio.about.awards.map((award) => (
-                <div className={styles["about-page-award"]} key={award}>
-                  <span>{award.split(" ")[0]}</span>
-                  <strong>{award}</strong>
+                <div className={styles["about-page-award"]} key={award.label}>
+                  <span>{award.label}</span>
+                  <strong>{award.value}</strong>
                 </div>
               ))}
             </div>

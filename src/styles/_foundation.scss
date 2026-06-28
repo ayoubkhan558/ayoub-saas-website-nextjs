@@ -265,13 +265,18 @@ img {
 
 .section {
   position: relative;
-  padding: 0 var(--space-5);
   background-color: var(--section-grain-color-soft);
   // background-image:
   //   radial-gradient(var(--section-grain-color) 1px, transparent 1px),
   //   radial-gradient(var(--section-grain-color-soft) 1px, transparent 1px),
   //   linear-gradient(90deg, var(--section-grid-color) 1px, transparent 1px);
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'><rect width='2' height='2' fill='%23e8e4e6'/><rect x='2' y='2' width='2' height='2' fill='%23e8e4e6'/></svg>"); // background: linear-gradient(red, green);
+
+  padding: 0 var(--space-0);
+
+  @media (min-width: 760px) {
+  padding: 0 var(--space-5);
+  }
 }
 
 .section__inner {

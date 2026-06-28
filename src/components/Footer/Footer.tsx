@@ -49,9 +49,6 @@ export function Footer({ portfolio }: { portfolio: PortfolioData }) {
                 </span>
                 from Pakistan.
               </span>
-              <a className={styles["footer__bottom-link"]} href={profile.website} target="_blank" rel="noreferrer">
-                {profile.website.replace(/^https?:\/\//, "")}
-              </a>
             </div>
           </div>
         </div>
