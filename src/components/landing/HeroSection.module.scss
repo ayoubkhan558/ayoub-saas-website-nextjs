@@ -126,6 +126,11 @@
   font-size: var(--text-xs);
   line-height: 1;
   text-transform: uppercase;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .hero__industries-label {
@@ -135,9 +140,13 @@
 .hero__industries-track {
   position: relative;
   padding-top: 5px;
-  min-width: min(56vw, 190px);
+  min-width: unset;
   min-height: 14px;
   overflow: hidden;
+
+  @media (min-width: 768px) {
+    min-width: min(56vw, 190px);
+  }
 }
 
 .hero__industries-item {
@@ -235,7 +244,6 @@
   max-width: 38ch;
   color: var(--color-storm-mauve);
   font-size: var(--text-md);
-  line-height: 1.38;
 }
 
 .hero__tool-metric {
@@ -294,7 +302,6 @@
   color: var(--color-ink-violet);
   font-size: var(--text-md);
   font-weight: 700;
-  line-height: 1.36;
 }
 
 .hero__quote-card figcaption {

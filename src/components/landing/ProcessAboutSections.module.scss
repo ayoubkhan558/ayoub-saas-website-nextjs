@@ -93,7 +93,6 @@
   max-width: 290px;
   color: var(--color-storm-mauve);
   font-size: var(--text-body);
-  line-height: 1.45;
 }
 
 .about__grid {
@@ -353,18 +352,6 @@
     transform 180ms ease;
 }
 
-// .about__recognition-item::before {
-//   content: "0" counter(about-recognition);
-//   position: absolute;
-//   top: var(--space-2);
-//   left: var(--space-3);
-//   color: var(--color-ink-violet);
-//   font-family: var(--font-code);
-//   font-size: var(--text-2xs);
-//   font-weight: 400;
-//   line-height: 1;
-// }
-
 .about__recognition-item::after {
   content: "";
   position: absolute;
@@ -455,10 +442,8 @@
   border: 0;
   background: transparent;
   color: var(--color-ink-violet);
-  font-family: var(--font-ui);
   font-size: var(--text-subheading);
   font-weight: 700;
-  line-height: 1.25;
   list-style: none;
   padding: var(--space-4) var(--space-5);
   text-align: left;
@@ -473,7 +458,6 @@
   color: var(--color-primary);
   font-family: var(--font-code);
   font-size: var(--text-xs);
-  font-weight: 400;
   line-height: 1;
 }
 
@@ -528,5 +512,4 @@
   margin: var(--space-0) var(--space-5) var(--space-5);
   color: var(--color-ink-violet);
   font-size: var(--text-md);
-  line-height: 1.55;
 }

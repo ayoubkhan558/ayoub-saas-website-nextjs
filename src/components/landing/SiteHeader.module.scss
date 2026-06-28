@@ -30,11 +30,11 @@
   animation: announcement-scroll 28s linear infinite;
   color: var(--color-plum-charcoal);
   font-family: var(--font-code);
-  font-size: var(--text-sm);
-  line-height: 1;
+  font-size: var(--text-2xs);
   white-space: nowrap;
 
   @media (min-width: 860px) {
+    font-size: var(--text-sm);
     width: 100%;
     justify-content: center;
     animation: none;
@@ -76,6 +76,7 @@
   font-size: var(--text-h3);
   font-weight: 800;
   line-height: 1;
+  margin-bottom: -5px;
 }
 
 .site-header__nav-links {
@@ -95,7 +96,6 @@
   gap: var(--space-1);
   border-radius: var(--radius-buttons);
   color: var(--color-plum-charcoal);
-  font-family: var(--font-ui);
   font-size: var(--text-sm);
   font-weight: 600;
   line-height: 1;
@@ -186,7 +186,6 @@
   gap: var(--space-3);
   border-bottom: 1px solid var(--color-bone-mist);
   padding: var(--space-3) var(--space-4);
-  font-family: var(--font-ui);
   font-size: var(--text-sm);
   font-weight: 600;
 }

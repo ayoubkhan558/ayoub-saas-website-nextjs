@@ -1,40 +1,4 @@
 .trust-sections :global(.section__inner) {
-  padding-block: var(--space-0) var(--space-5);
-}
-
-.trust-stats__grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-5) var(--space-9);
-  align-items: baseline;
-  justify-content: center;
-  text-align: center;
-}
-
-.trust-stats__grid--metrics {
-  margin-top: var(--space-5);
-}
-
-.trust-stats__card {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-}
-
-.trust-stats__value {
-  display: inline-block;
-  color: var(--color-ink-violet);
-  font-family: var(--font-display-compact);
-  font-size: var(--text-h4);
-  font-weight: 800;
-  line-height: 1;
-}
-
-.trust-stats__label {
-  color: var(--color-storm-mauve);
-  font-size: var(--text-ui);
-  line-height: 1.25;
-  white-space: nowrap;
+  padding-block: 0;
+  padding-inline: 0;
 }

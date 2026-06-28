@@ -129,7 +129,6 @@
   padding: var(--space-3);
   color: var(--color-storm-mauve);
   font-size: var(--text-sm);
-  line-height: 1.35;
   opacity: 0;
   pointer-events: none;
   transition:
@@ -161,7 +160,6 @@
   color: var(--color-slate-iris);
   font-family: var(--font-code);
   font-size: var(--text-2xs);
-  font-weight: 400;
   text-transform: uppercase;
 }
 

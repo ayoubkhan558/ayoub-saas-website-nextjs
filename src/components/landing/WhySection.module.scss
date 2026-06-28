@@ -61,7 +61,7 @@
   font-family: var(--font-display-compact);
   font-size: var(--text-h5);
   font-weight: 800;
-  
+
 }
 
 .why__group-list {
@@ -152,9 +152,13 @@
   animation: outcomes-scroll 34s linear infinite;
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
-  font-size: var(--text-h5);
   font-weight: 800;
   white-space: nowrap;
+  font-size: var(--text-sm);
+
+  @media (min-width: 860px) {
+    font-size: var(--text-h6);
+  }
 }
 
 .outcomes__group {

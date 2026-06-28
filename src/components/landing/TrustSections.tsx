@@ -9,19 +9,6 @@ export function TrustSections({ portfolio }: { portfolio: PortfolioData }) {
           <div className={`${styles["trust-sections__logos"]} container container--fluid`}>
             <TrustLogos clients={portfolio.clients} />
           </div>
-          <div className="container">
-            <div className={`${styles["trust-stats__grid"]} ${styles["trust-stats__grid--metrics"]}`}>
-              {portfolio.stats.map((stat) => (
-                <div className={styles["trust-stats__card"]} key={stat.label}>
-                  <strong className={styles["trust-stats__value"]}>
-                    {stat.target}
-                    {stat.suffix}
-                  </strong>
-                  <p className={styles["trust-stats__label"]}>{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
       </div>
     </section>
   );
