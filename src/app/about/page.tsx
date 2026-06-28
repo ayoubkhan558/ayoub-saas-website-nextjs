@@ -128,33 +128,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
-
-        <section className="section">
-          <div className="section__inner">
-            <div className="container">
-              <header className={styles["about-page-section-header"]}>
-                <span className={styles["about-page__eyebrow"]}>Proof</span>
-                <h2>
-                  Credibility that is easy to <i>scan.</i>
-                </h2>
-              </header>
-              <div className={styles["about-page-stat-grid"]}>
-                {portfolio.stats.map((stat) => (
-                  <article className={styles["about-page-stat-card"]} key={stat.label}>
-                    <IconGlyph name={stat.icon} />
-                    <strong>
-                      {stat.target}
-                      {stat.suffix}
-                    </strong>
-                    <span>{stat.label}</span>
-                    <p>{stat.sub}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        </section> 
  
       </main>
       <ContactFooter portfolio={portfolio} />

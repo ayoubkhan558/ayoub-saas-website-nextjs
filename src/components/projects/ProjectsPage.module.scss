@@ -209,7 +209,8 @@
 .card__media {
   display: grid;
   overflow: hidden;
-  min-height: 180px;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
   place-items: center;
   border: 1px solid rgba(49, 38, 59, 0.14);
   background:
@@ -219,7 +220,6 @@
 }
 
 .card__media img {
-  aspect-ratio: 16 / 10;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -351,10 +351,34 @@
 
 .caseLink__inner {
   align-items: center;
-  border: 1px solid rgba(49, 38, 59, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   background:
-    radial-gradient(rgba(49, 38, 59, 0.045) 1px, transparent 1px) 0 0 / 7px 7px,
-    #fff;
-  box-shadow: var(--shadow-product-light);
+    radial-gradient(rgba(255, 255, 255, 0.08) 0.75px, transparent 0.75px),
+    var(--color-ink-violet);
+  background-size: 7px 7px, auto;
+  box-shadow: rgba(1, 1, 27, 0.18) 0 28px 72px;
+  color: #fff;
   padding: var(--space-6);
+}
+
+.caseLink__inner .eyebrow,
+.caseLink__inner p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.caseLink__inner h2,
+.caseLink__inner h2 i {
+  color: #fff;
+}
+
+.caseLink__inner :global(.button--dark) {
+  border-color: #fff;
+  background: #fff;
+  color: var(--color-ink-violet);
+}
+
+.caseLink__inner :global(.button--dark:hover) {
+  border-color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--color-ink-violet);
 }

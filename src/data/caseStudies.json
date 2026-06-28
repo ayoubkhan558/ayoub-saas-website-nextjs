@@ -1,18 +1,5 @@
 [
   {
-    "tag": "CASE_01",
-    "icon": "globe",
-    "title": "Ape 24 Pro",
-    "description": "WordPress and Elementor website build focused on clearer positioning, responsive layouts, performance, SEO, and security.",
-    "result": "Professional company website with faster load behavior",
-    "achievement": "Performance, SEO, and security baseline improved",
-    "stack": ["WP", "Elementor", "Yoast"],
-    "href": "/case-studies/ape-24-pro",
-    "liveUrl": "https://ape24pro.com",
-    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fape24pro.com?w=1200",
-    "imageAlt": "Screenshot preview of the Ape 24 Pro business website"
-  },
-  {
     "tag": "CASE_02",
     "icon": "cart",
     "title": "5gStore",

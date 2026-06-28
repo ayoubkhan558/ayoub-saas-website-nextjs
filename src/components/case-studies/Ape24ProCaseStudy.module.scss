@@ -49,7 +49,7 @@
   align-items: end;
 
   @media (min-width: 980px) {
-    grid-template-columns: minmax(0, 0.86fr) minmax(420px, 1.14fr);
+    grid-template-columns: minmax(0, 0.96fr) minmax(380px, 1.04fr);
   }
 }
 
@@ -68,7 +68,8 @@
 
 .heroCopy {
   gap: var(--space-4);
-  max-width: 900px;
+  min-width: 0;
+  max-width: 760px;
 }
 
 .eyebrow,
@@ -88,11 +89,12 @@
 }
 
 .title {
-  max-width: 980px;
+  max-width: 760px;
   font-family: var(--font-display);
-  font-size: var(--text-display);
-  line-height: 0.96;
+  font-size: var(--text-h1);
+  line-height: 1;
   text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 
 .tagline {
@@ -117,6 +119,7 @@
 .heroFact {
   display: grid;
   gap: var(--space-2);
+  align-content: start;
   border: 1px solid var(--color-fog-border);
   background:
     radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
@@ -131,9 +134,10 @@
 .heroFact strong {
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
-  font-size: var(--text-md);
+  font-size: var(--text-ui);
   font-weight: 800;
-  line-height: 1.08;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
 }
 
 .heroVisual {
@@ -238,7 +242,7 @@
 .realPreview img {
   aspect-ratio: 16 / 10;
   width: 100%;
-  min-height: clamp(320px, 42vw, 620px);
+  min-height: clamp(260px, 34vw, 480px);
   object-fit: cover;
   object-position: top;
 }
