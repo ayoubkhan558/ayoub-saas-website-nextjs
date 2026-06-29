@@ -57,7 +57,7 @@ export function AboutSection({ portfolio }: { portfolio: PortfolioData }) {
               <img src="/ayoub-about-v2.jpg" alt="" aria-hidden="true" loading="lazy" />
               <div className={styles["about__portrait-caption"]}>
                 <strong>Muhammad Ayoub</strong>
-                <span>5+ years WordPress, CMS, and front-end experience</span>
+                <span>5+ years of experience as Reactjs Frontend Developer & WordPress</span>
               </div>
             </div>
           </aside>

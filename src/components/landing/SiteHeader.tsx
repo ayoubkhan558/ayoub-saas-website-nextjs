@@ -23,6 +23,28 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
     setContactOpen(true);
   };
 
+  useEffect(() => {
+    if (!contactOpen) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setContactOpen(false);
+      }
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [contactOpen]);
+
   const primaryBottomLinks = [
     { label: "Home", href: "#top", sectionId: "top" },
     { label: "Services", href: "#services", sectionId: "services" },
@@ -146,31 +168,20 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
           </div>
 
           <div className={styles["contact-panel__copy"]}>
-            <span className={styles["contact-panel__eyebrow"]}>Work together</span>
             <h2>
-              Let&apos;s build a website that <i>brings more leads.</i>
+              Let&apos;s build something <i>amazing</i> together
             </h2>
-            <p>{profile.summary}</p>
+            <p>Full Stack Developer specializing in WordPress, React, Next.js and conversion-focused websites. Open to freelance, contracts and collaborations.</p>
           </div>
 
-          <div className={styles["contact-panel__methods"]}>
-            <a className={styles["contact-panel__method"]} href={`mailto:${profile.email}`}>
-              <IconGlyph name="mail" />
-              <span>
-                <small>Email me</small>
-                <strong>{profile.email}</strong>
-              </span>
-              <IconGlyph name="arrowRight" />
-            </a>
-            <a className={styles["contact-panel__method"]} href={`tel:${profile.phone.replace(/\s+/g, "")}`}>
-              <IconGlyph name="phone" />
-              <span>
-                <small>Call / WhatsApp</small>
-                <strong>{profile.phone}</strong>
-              </span>
-              <IconGlyph name="arrowRight" />
-            </a>
-          </div>
+          <a className={styles["contact-panel__method"]} href={`mailto:${profile.email}`}>
+            <IconGlyph name="mail" />
+            <span>
+              <small>Email me</small>
+              <strong>{profile.email}</strong>
+            </span>
+            <IconGlyph name="arrowRight" />
+          </a>
 
           <div className={styles["contact-panel__social"]} aria-label="Find me online">
             <span>Find me on</span>
@@ -184,11 +195,14 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
               <a href={profile.upwork} target="_blank" rel="noreferrer" aria-label="Upwork">
                 <IconGlyph name="externalLink" />
               </a>
+              <a href="/contact" aria-label="Contact form">
+                <IconGlyph name="mail" />
+              </a>
             </div>
           </div>
 
-          <Link className={`button button--dark ${styles["contact-panel__hire"]}`} href="/contact" onClick={() => setContactOpen(false)}>
-            Hire me
+          <Link className={styles["contact-panel__hire"]} href="/contact" onClick={() => setContactOpen(false)}>
+            Hire Me
             <IconGlyph name="arrowRight" />
           </Link>
         </aside>
