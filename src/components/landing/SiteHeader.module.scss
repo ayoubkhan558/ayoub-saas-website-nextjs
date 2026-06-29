@@ -224,7 +224,7 @@
   z-index: 70;
   display: none;
   width: fit-content;
-  max-width: min(100% - var(--space-6), 560px);
+  max-width: min(100% - var(--space-6), 720px);
   align-items: center;
   justify-content: center;
   gap: var(--space-1);
@@ -273,7 +273,7 @@
   font-size: var(--text-xs);
   font-weight: 700;
   line-height: 1;
-  padding: 8px 12px;
+  padding: 8px 10px;
   transition:
     background-color 160ms ease,
     color 160ms ease,

@@ -8,10 +8,19 @@ import type { PortfolioData } from "@/context/PortfolioContentContext";
 import { IconGlyph } from "./IconGlyph";
 import styles from "./SiteHeader.module.scss";
 
+const floatingNavLinks = [
+  { label: "Services", href: "#services", sectionId: "services" },
+  { label: "Case Studies", href: "#work", sectionId: "work" },
+  { label: "Projects", href: "#showcase", sectionId: "showcase" },
+  { label: "About", href: "#about", sectionId: "about" },
+  { label: "Working Style", href: "#process", sectionId: "process" },
+];
+
 export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [floatingNavAllowed, setFloatingNavAllowed] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const headerRef = useRef<HTMLElement | null>(null);
   const contactDrawerRef = useRef<HTMLElement | null>(null);
   const pathname = usePathname();
@@ -63,7 +72,6 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   }, [contactOpen]);
 
   const navLinks = portfolio.navLinks;
-  const floatingNavLinks = [...portfolio.navLinks];
   const showFloatingNav = pathname === "/" && floatingNavAllowed;
 
   useEffect(() => {
@@ -103,6 +111,51 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
       footerObserver.disconnect();
       window.removeEventListener("scroll", updateFloatingNav);
       window.removeEventListener("resize", updateFloatingNav);
+    };
+  }, [pathname]);
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      return;
+    }
+
+    const sectionIds = floatingNavLinks.map((link) => link.sectionId);
+    const sections = sectionIds
+      .map((sectionId) => document.getElementById(sectionId))
+      .filter((section): section is HTMLElement => Boolean(section));
+
+    if (!sections.length) {
+      return;
+    }
+
+    const sectionScores = new Map<string, number>();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          sectionScores.set(entry.target.id, entry.intersectionRatio);
+        });
+
+        const visibleSection = sectionIds
+          .map((sectionId) => ({
+            sectionId,
+            score: sectionScores.get(sectionId) ?? 0,
+          }))
+          .filter((section) => section.score > 0)
+          .sort((first, second) => second.score - first.score)[0];
+
+        setActiveSection(visibleSection?.sectionId ?? "");
+      },
+      {
+        rootMargin: "-42% 0px -44% 0px",
+        threshold: [0, 0.1, 0.2, 0.35, 0.5, 0.75, 1],
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      observer.disconnect();
     };
   }, [pathname]);
 
@@ -251,10 +304,11 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
     >
       {floatingNavLinks.map((link) => (
         <Link
-          className={`${styles["site-header__floating-link"]} ${pathname === link.href ? styles["site-header__floating-link--active"] : ""
+          className={`${styles["site-header__floating-link"]} ${activeSection === link.sectionId ? styles["site-header__floating-link--active"] : ""
             }`}
           href={link.href}
           key={link.href}
+          aria-current={activeSection === link.sectionId ? "true" : undefined}
         >
           {link.label}
         </Link>
