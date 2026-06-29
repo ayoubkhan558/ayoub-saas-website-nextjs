@@ -316,6 +316,7 @@
 .contact-panel__backdrop {
   position: absolute;
   inset: 0;
+  z-index: 0;
   border: 0;
   background: rgba(1, 1, 27, 0.34);
   cursor: pointer;
@@ -327,6 +328,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   display: grid;
   width: min(calc(100vw - 18px), 390px);
   min-height: 100dvh;

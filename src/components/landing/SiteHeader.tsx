@@ -14,6 +14,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   const [activeSection, setActiveSection] = useState("top");
   const [floatingNavAllowed, setFloatingNavAllowed] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
+  const contactDrawerRef = useRef<HTMLElement | null>(null);
   const pathname = usePathname();
   const profile = portfolio.profile;
   const referralHref = `/contact?subject=${encodeURIComponent("Referral client intro")}&details=${encodeURIComponent(
@@ -30,12 +31,6 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
     openContactPanel();
   };
 
-  const handleContactPanelClick = (event: MouseEvent<HTMLDivElement>) => {
-    if (event.target === event.currentTarget) {
-      setContactOpen(false);
-    }
-  };
-
   useEffect(() => {
     if (!contactOpen) {
       return;
@@ -49,12 +44,22 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
       }
     };
 
+    const handlePointerDown = (event: PointerEvent) => {
+      const drawer = contactDrawerRef.current;
+
+      if (drawer && !drawer.contains(event.target as Node)) {
+        setContactOpen(false);
+      }
+    };
+
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("pointerdown", handlePointerDown, true);
 
     return () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("pointerdown", handlePointerDown, true);
     };
   }, [contactOpen]);
 
@@ -218,15 +223,20 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
       <div
         className={`${styles["contact-panel"]} ${contactOpen ? styles["contact-panel--open"] : ""}`}
         aria-hidden={!contactOpen}
-        onClick={handleContactPanelClick}
       >
-        <button className={styles["contact-panel__backdrop"]} type="button" aria-label="Close contact panel" onClick={() => setContactOpen(false)} />
+        <button
+          className={styles["contact-panel__backdrop"]}
+          type="button"
+          aria-label="Close contact panel"
+          onMouseDown={() => setContactOpen(false)}
+          onClick={() => setContactOpen(false)}
+        />
         <aside
+          ref={contactDrawerRef}
           className={styles["contact-panel__drawer"]}
           aria-label="Contact Muhammad Ayoub"
           aria-modal="true"
           role="dialog"
-          onClick={(event) => event.stopPropagation()}
         >
           <div className={styles["contact-panel__top"]}>
             <span className={styles["contact-panel__mark"]}>
@@ -289,7 +299,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
           className={`${styles["site-header__floating-link"]} ${activeSection === link.sectionId ? styles["site-header__floating-link--active"] : ""
             }`}
           href={link.href}
-          key={link.href}
+          key={`${link.sectionId}-${link.label}`}
         >
           {link.label}
         </Link>
