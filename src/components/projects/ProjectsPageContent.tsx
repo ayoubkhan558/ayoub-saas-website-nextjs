@@ -42,7 +42,7 @@ export function ProjectsPageContent({
             <header className={styles.sectionHeader}>
               <span className={styles.eyebrow}>Selected work</span>
               <h2>
-                Project <i>archive.</i>
+                Project archive.
               </h2>
               <p>
                 Showing {page.startItem}-{page.endItem} of {page.totalItems}. Each card shows the project type,
@@ -84,7 +84,7 @@ export function ProjectsPageContent({
             <div>
               <span className={styles.eyebrow}>Need detail?</span>
               <h2>
-                Case studies show the <i>decision work.</i>
+                Case studies show the decision work.
               </h2>
             </div>
             <Link className="button button--dark" href="/case-studies">

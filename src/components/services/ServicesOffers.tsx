@@ -74,7 +74,7 @@ export function ServicesOffers({ services }: { services: PortfolioData["services
           <header className={styles["services-section-header"]}>
             <span className={styles["services-page__eyebrow"]}>What I build</span>
             <h2>
-              Services for websites that need <i>better execution.</i>
+              Services for websites that need better execution.
             </h2>
             <p>
               Each service is scoped around what a buyer actually needs: outcome, timeline, best fit, and what is

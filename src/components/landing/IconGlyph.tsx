@@ -1,6 +1,7 @@
 "use client";
 
 import { Icon } from "@iconify/react";
+import arrowLeft from "@iconify/icons-lucide/arrow-left";
 import arrowRight from "@iconify/icons-lucide/arrow-right";
 import badgeCheck from "@iconify/icons-lucide/badge-check";
 import check from "@iconify/icons-lucide/check";
@@ -29,6 +30,7 @@ import users from "@iconify/icons-lucide/users";
 import x from "@iconify/icons-lucide/x";
 
 const iconMap = {
+  arrowLeft,
   arrowRight,
   badgeCheck,
   cart: shoppingCart,

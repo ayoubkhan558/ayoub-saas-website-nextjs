@@ -37,7 +37,7 @@
   color: var(--color-ink-violet);
   font-family: var(--font-editorial-display);
   font-size: var(--text-h2);
-  font-style: italic;
+  font-style: normal;
   font-weight: 200;
   letter-spacing: 0;
   line-height: 1;
@@ -147,7 +147,7 @@
   display: grid;
   gap: var(--space-4);
   box-shadow:
-    inset 4px 0 0 var(--color-ink-violet),
+    0 0 0 1px rgba(49, 38, 59, 0.1),
     rgba(255, 255, 255, 0.74) 0 1px 0 inset,
     rgba(49, 38, 59, 0.06) 0 20px 54px;
   padding: var(--space-4);

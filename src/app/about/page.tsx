@@ -81,6 +81,11 @@ const toolboxIcons = [
   { name: "MySQL", src: "/tools/mysql.svg" },
 ];
 
+const toolboxIconRows = [
+  toolboxIcons,
+  [...toolboxIcons].reverse(),
+];
+
 export default function AboutPage() {
   const education = portfolio.about.education;
 
@@ -94,7 +99,7 @@ export default function AboutPage() {
               <div className={styles["about-page-hero__copy"]}>
                 <span className={styles["about-page__eyebrow"]}>About / Muhammad Ayoub</span>
                 <h1>
-                  Self-taught developer, <i>practical builder.</i>
+                  Self-taught developer, practical builder.
                 </h1>
                 <p>
                   I started learning web development in 2018 with downloaded videos, limited resources,
@@ -140,7 +145,7 @@ export default function AboutPage() {
               <div className={styles["about-page-section-header"]}>
                 <span className={styles["about-page__eyebrow"]}>My Story</span>
                 <h2>
-                  I learned the hard way, and that made me <i>patient.</i>
+                  I learned the hard way, and that made me patient.
                 </h2>
                 <p>
                   I started web development in 2018. In the early times, I did not have an internet
@@ -148,6 +153,10 @@ export default function AboutPage() {
                   them offline to learn HTML, CSS, and the fundamentals. That beginning made me
                   self-learned, resourceful, and passionate about building useful things.
                 </p>
+                <article className={styles["about-page-education"]}>
+                  <span>Latest degree</span>
+                  <strong>{education}</strong>
+                </article>
               </div>
             </div>
             <div className={`container ${styles["about-page-story-grid"]}`}>
@@ -162,29 +171,12 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className={`section ${styles["about-page-education-section"]}`}>
-          <div className="section__inner">
-            <div className={`container ${styles["about-page-education-layout"]}`}>
-              <div className={styles["about-page-section-header"]}>
-                <span className={styles["about-page__eyebrow"]}>Education</span>
-                <h2>
-                  Latest <i>degree.</i>
-                </h2>
-              </div>
-              <article className={styles["about-page-education"]}>
-                <span>Latest degree</span>
-                <strong>{education}</strong>
-              </article>
-            </div>
-          </div>
-        </section>
-
         <section className="section">
           <div className="section__inner">
             <div className={`container ${styles["about-page-section-header"]}`}>
               <span className={styles["about-page__eyebrow"]}>Professional Experience</span>
               <h2>
-                Roles across front-end, WordPress, and product <i>delivery.</i>
+                Roles across front-end, WordPress, and product delivery.
               </h2>
             </div>
             <div className={`container ${styles["about-page-experience-list"]}`}>
@@ -207,14 +199,22 @@ export default function AboutPage() {
             <header className={`section-header section-header--center ${styles["about-page-toolbox-header"]}`}>
               <span className="section-header__label">Toolbox</span>
               <h2 className="section-header__title">
-                My <i>skills.</i>
+                My skills.
               </h2>
             </header>
             <div className={`container ${styles["about-page-skills-panel"]}`}>
-              <div className={styles["about-page-skill-icons"]} aria-label="Technologies and tools">
-                {toolboxIcons.map((tool) => (
-                  <div className={styles["about-page-skill-icon"]} key={tool.name}>
-                    <img src={tool.src} alt={tool.name} />
+              <div className={styles["about-page-skill-marquee"]} aria-label="Technologies and tools">
+                {toolboxIconRows.map((row, rowIndex) => (
+                  <div className={styles["about-page-skill-marquee__row"]} key={`tool-row-${rowIndex}`}>
+                    {[...row, ...row].map((tool, index) => (
+                      <div
+                        className={styles["about-page-skill-icon"]}
+                        key={`${tool.name}-${rowIndex}-${index}`}
+                        aria-hidden={index >= row.length}
+                      >
+                        <img src={tool.src} alt={index < row.length ? tool.name : ""} />
+                      </div>
+                    ))}
                   </div>
                 ))}
               </div>
@@ -228,7 +228,7 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
- 
+
       </main>
       <ContactFooter portfolio={portfolio} />
     </div>

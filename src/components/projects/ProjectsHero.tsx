@@ -10,7 +10,7 @@ export function ProjectsHero({ stats }: { stats: Array<{ label: string; value: s
           <div className={styles.hero__copy}>
             <span className={styles.eyebrow}>Projects</span>
             <h1>
-              Selected client <i>projects.</i>
+              Selected client projects.
             </h1>
             <p>
               A wider archive of shipped websites, WordPress builds, product pages, and implementation work from my

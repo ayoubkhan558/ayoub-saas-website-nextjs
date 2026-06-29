@@ -95,7 +95,7 @@ export function ClientTestimonials({ clients }: { clients: Client[] }) {
               )}
             </span>
             <strong className={styles["testimonials__author-name"]}>{activeClient.name}</strong>
-            <em className={styles["testimonials__author-role"]}>{activeClient.role}</em>
+            <span className={styles["testimonials__author-role"]}>{activeClient.role}</span>
           </figcaption>
         </figure>
       </div>

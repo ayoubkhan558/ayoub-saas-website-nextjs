@@ -23,7 +23,7 @@ export default function NotFound() {
               <div className={styles["not-found-page__copy"]}>
                 <span className={styles["not-found-page__code"]}>404</span>
                 <h1>
-                  Page <i>not found.</i>
+                  Page not found.
                 </h1>
                 <p>
                   The site is still here. Jump back to the useful pages, or send the project details if you were trying

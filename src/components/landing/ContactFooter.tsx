@@ -14,8 +14,7 @@ export function ContactFooter({ portfolio }: { portfolio: PortfolioData }) {
               <div className={styles["cta__copy"]}>
                 <span className={styles["cta__label"]}>Contact / Hire Me</span>
                 <h2 className={styles["cta__title"]}>
-                  Let&apos;s build it
-                  <i className={styles["cta__title-accent"]}> right.</i>
+                  Let&apos;s build it right.
                 </h2>
                 <p className={styles["cta__text"]}>
                   Share your goals, current site, and timeline. I will respond with a practical next

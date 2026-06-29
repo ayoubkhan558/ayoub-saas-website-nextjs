@@ -10,7 +10,7 @@ export function ServicesProcess({ process }: { process: PortfolioData["process"]
           <header className={styles["services-section-header"]}>
             <span className={styles["services-page__eyebrow"]}>How it runs</span>
             <h2>
-              A simple process for <i>clean delivery.</i>
+              A simple process for clean delivery.
             </h2>
             <p>
               You get the scope, the build, the checks, and the handoff in a sequence that keeps decisions visible.

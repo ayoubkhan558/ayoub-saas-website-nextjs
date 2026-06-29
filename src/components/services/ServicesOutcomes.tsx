@@ -9,7 +9,7 @@ export function ServicesOutcomes() {
           <div className={styles["services-outcomes__copy"]}>
             <span className={styles["services-page__eyebrow"]}>What changes</span>
             <h2>
-              Less guessing. More <i>usable output.</i>
+              Less guessing. More usable output.
             </h2>
             <p>
               The goal is not just a prettier page. The goal is a clearer offer, cleaner implementation, easier updates,

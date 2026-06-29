@@ -58,7 +58,7 @@
 .sectionHeader h2 i {
   color: var(--color-ink-violet);
   font-family: var(--font-editorial-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: 200;
 }
 
@@ -257,7 +257,8 @@
 }
 
 .card__achievement {
-  border-left: 2px solid var(--color-ink-violet);
+  border: 1px solid rgba(49, 38, 59, 0.18);
+  box-shadow: inset 0 0 0 3px rgba(49, 38, 59, 0.045);
   background: rgba(255, 255, 255, 0.54);
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
@@ -291,7 +292,7 @@
   color: var(--color-ink-violet);
   font-family: var(--font-editorial-display);
   font-size: var(--text-h2);
-  font-style: italic;
+  font-style: normal;
   font-weight: 200;
   letter-spacing: 0;
   line-height: 1;

@@ -25,7 +25,7 @@ export function CaseStudiesPageContent({
             <header className={styles.sectionHeader}>
               <span className={styles.eyebrow}>Selected cases</span>
               <h2>
-                Detailed work with <i>proof.</i>
+                Detailed work with proof.
               </h2>
               <p>
                 Showing {page.startItem}-{page.endItem} of {page.totalItems}. Each case opens into challenge, tools,

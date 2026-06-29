@@ -15,9 +15,9 @@ export function ServicesHero() {
       <div className="section__inner">
         <div className={`container ${styles["services-page-hero__inner"]}`}>
           <div className={styles["services-page-hero__copy"]}>
-            <span className={styles["services-page__eyebrow"]}>Services / Hire me</span>
+            <span className={styles["services-page__eyebrow"]}>Services  </span>
             <h1>
-              Web builds, <i>done right.</i>
+              Web builds, done right.
             </h1>
             <p>
               Pick the service that matches the problem: product interfaces, editable WordPress sites, or

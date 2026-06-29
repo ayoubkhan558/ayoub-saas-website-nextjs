@@ -11,7 +11,6 @@ import styles from "./SiteHeader.module.scss";
 export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("top");
   const [floatingNavAllowed, setFloatingNavAllowed] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
   const contactDrawerRef = useRef<HTMLElement | null>(null);
@@ -63,53 +62,9 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
     };
   }, [contactOpen]);
 
-  const primaryBottomLinks = [
-    { label: "Home", href: "#top", sectionId: "top" },
-    { label: "Services", href: "#services", sectionId: "services" },
-    { label: "Projects", href: "#work", sectionId: "work" },
-    { label: "Pricing", href: "#services", sectionId: "services" },
-    { label: "About Me", href: "#about", sectionId: "about" },
-    { label: "Testimonials", href: "#proof", sectionId: "proof" },
-    { label: "FAQ'S", href: "#faqs", sectionId: "faqs" },
-  ];
+  const navLinks = portfolio.navLinks;
+  const floatingNavLinks = [...portfolio.navLinks];
   const showFloatingNav = pathname === "/" && floatingNavAllowed;
-
-  useEffect(() => {
-    if (pathname !== "/") {
-      return;
-    }
-
-    const visibleSections = new Set<string>();
-    const sectionObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            visibleSections.add(entry.target.id);
-          } else {
-            visibleSections.delete(entry.target.id);
-          }
-        });
-
-        const orderedSections = ["faqs", "proof", "about", "work", "services", "top"];
-        const current = orderedSections.find((sectionId) => visibleSections.has(sectionId));
-        if (current) {
-          setActiveSection(current);
-        }
-      },
-      { rootMargin: "-35% 0px -50% 0px", threshold: 0.01 },
-    );
-
-    primaryBottomLinks.forEach((link) => {
-      const section = document.getElementById(link.sectionId);
-      if (section) {
-        sectionObserver.observe(section);
-      }
-    });
-
-    return () => {
-      sectionObserver.disconnect();
-    };
-  }, [pathname]);
 
   useEffect(() => {
     if (pathname !== "/") {
@@ -164,17 +119,16 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
       </div>
 
       <div className={`${styles["site-header__nav"]} container`}>
-        <Link className={styles["site-header__nav-brand"]} href="/#top" aria-label={`${profile.brand} home`}>
+        <Link className={styles["site-header__nav-brand"]} href="/" aria-label={`${profile.brand} home`}>
           <Image src="/mayoub-dev-logo.svg" alt="mayoub.dev" width={640} height={160} priority />
         </Link>
 
         <nav className={styles["site-header__nav-links"]} aria-label="Primary navigation">
-          {portfolio.navLinks.map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               className={styles["site-header__nav-link"]}
               href={link.href}
-              onClick={link.label.toLowerCase() === "contact" ? handleContactTrigger : undefined}
             >
               {link.label}
             </Link>
@@ -204,12 +158,12 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
       </div>
 
       <div id="mobile-nav" className={`${styles["site-header__mobile-nav"]} ${menuOpen ? styles["site-header__mobile-nav--open"] : ""}`}>
-        {portfolio.navLinks.map((link) => (
+        {navLinks.map((link) => (
           <Link
             className={styles["site-header__mobile-link"]}
             key={link.href}
             href={link.href}
-            onClick={link.label.toLowerCase() === "contact" ? handleContactTrigger : () => setMenuOpen(false)}
+            onClick={() => setMenuOpen(false)}
           >
             {link.label}
           </Link>
@@ -249,7 +203,8 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
 
           <div className={styles["contact-panel__copy"]}>
             <h2>
-              Let&apos;s build something <i>amazing</i> together
+              <span>Let&apos;s build something</span>
+              <span>amazing together</span>
             </h2>
             <p>Full Stack Developer specializing in WordPress, React, Next.js and conversion-focused websites. Open to freelance, contracts and collaborations.</p>
           </div>
@@ -294,20 +249,20 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
         }`}
       aria-label="Quick navigation"
     >
-      {primaryBottomLinks.map((link) => (
+      {floatingNavLinks.map((link) => (
         <Link
-          className={`${styles["site-header__floating-link"]} ${activeSection === link.sectionId ? styles["site-header__floating-link--active"] : ""
+          className={`${styles["site-header__floating-link"]} ${pathname === link.href ? styles["site-header__floating-link--active"] : ""
             }`}
           href={link.href}
-          key={`${link.sectionId}-${link.label}`}
+          key={link.href}
         >
           {link.label}
         </Link>
       ))}
-      <button className={styles["site-header__floating-cta"]} type="button" onClick={openContactPanel}>
+      <Link className={styles["site-header__floating-cta"]} href="/contact">
         Contact
         <IconGlyph name="arrowRight" />
-      </button>
+      </Link>
     </nav>
   </>
   );

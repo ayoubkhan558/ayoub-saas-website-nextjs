@@ -60,7 +60,7 @@ function LogoAsset({ client, isOpen, onToggle }: { client: Client; isOpen: boole
       <img src={client.logo} alt={client.name} loading="lazy" />
       <span className={styles["trust-logos__review"]} id={client.reviewId} role="tooltip">
         <span className={styles["trust-logos__review-name"]}>{client.name}</span>
-        <em className={styles["trust-logos__review-text"]}>{client.review}</em>
+        <span className={styles["trust-logos__review-text"]}>{client.review}</span>
         <a className={styles["trust-logos__review-link"]} href={client.website} target="_blank" rel="noreferrer">
           Visit website
         </a>

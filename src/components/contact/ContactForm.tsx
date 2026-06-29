@@ -38,6 +38,12 @@ export function ContactForm() {
       <div className={styles["contact-form-card__header"]}>
         <span className={styles["contact-page__eyebrow"]}>Project brief</span>
         <h2>What to send.</h2>
+        <p>Give me enough context to price the next step without a long discovery call.</p>
+        <div className={styles["contact-form-card__meta"]}>
+          <span>Goal</span>
+          <span>Timeline</span>
+          <span>Budget range</span>
+        </div>
       </div>
 
       <div className={styles["contact-form-card__row"]}>

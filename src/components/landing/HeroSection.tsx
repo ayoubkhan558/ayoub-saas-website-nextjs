@@ -1,14 +1,22 @@
 import type { PortfolioData } from "@/context/PortfolioContentContext";
-import { projects } from "@/data/work";
 import { IconGlyph } from "./IconGlyph";
 import styles from "./HeroSection.module.scss";
+
+const heroToolLogos = [
+  { name: "Next.js", src: "/tools/nextjs.svg" },
+  { name: "WordPress", src: "/tools/wordpress.svg" },
+  { name: "WooCommerce", src: "/tools/woocommerce.svg" },
+  { name: "Figma", src: "/tools/figma.svg" },
+  { name: "JavaScript", src: "/tools/javascript.svg" },
+  { name: "Tailwind", src: "/tools/tailwind.svg" },
+  { name: "Sass", src: "/tools/sass.svg" },
+  { name: "MySQL", src: "/tools/mysql.svg" },
+];
 
 export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
   const proofClients = portfolio.clients.filter((client) => client.showInClientImages && client.avatar).slice(0, 4);
   const proofClient = portfolio.clients.find((client) => "proofText" in client);
   const proofText = proofClient && "proofText" in proofClient ? proofClient.proofText : "";
-  const productTools = projects.filter((project) => project.kind === "free-tool").slice(0, 2);
-  const brickify = productTools.find((tool) => tool.title === "Brickify");
   const heroTestimonial = portfolio.clients.find((client) => client.name === "Markedine") ?? portfolio.clients.find((client) => client.testimonial);
 
   return (
@@ -35,6 +43,10 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
             <p className={styles["hero__text"]}>
               I design and develop fast React, Next.js, WordPress, and WooCommerce websites that make offers clearer,
               improve trust, and turn visitors into inquiries.
+            </p>
+            <p className={styles["hero__supporting-text"]}>
+              I usually help with Figma-to-code builds, CMS pages your team can edit, store improvements, and existing
+              front-end fixes where speed, responsiveness, and clean handoff matter.
             </p>
 
             <div className={styles["hero__actions"]}>
@@ -69,8 +81,19 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
                 <img src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub" />
               </span>
               <div className={styles["hero__identity-copy"]}>
-                <strong>Muhammad Ayoub</strong>
+                <strong>M. Ayoub</strong>
                 <span>Frontend and WordPress developer</span>
+                <span className={styles["hero__experience"]}>5+ Years of Experience</span>
+              </div>
+            </div>
+            <div className={styles["hero__tool-marquee"]} aria-label="Tools and platforms">
+              <span className={styles["hero__tool-marquee-label"]}>Stack I ship with</span>
+              <div className={styles["hero__tool-marquee-track"]}>
+                {[...heroToolLogos, ...heroToolLogos].map((tool, index) => (
+                  <span className={styles["hero__tool-logo"]} key={`${tool.name}-${index}`} aria-hidden={index >= heroToolLogos.length}>
+                    <img src={tool.src} alt={index < heroToolLogos.length ? tool.name : ""} />
+                  </span>
+                ))}
               </div>
             </div>
             {heroTestimonial ? (
@@ -81,18 +104,6 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
                   <span>{heroTestimonial.role}</span>
                 </figcaption>
               </figure>
-            ) : null}
-            {brickify ? (
-              <a className={styles["hero__brickify-strip"]} href={brickify.href} target="_blank" rel="noreferrer">
-                <span className={styles["hero__tool-icon"]}>
-                  <IconGlyph name={brickify.icon} />
-                </span>
-                <strong className={styles["hero__tool-name"]}>{brickify.title}</strong>
-                <span className={styles["hero__tool-description"]}>
-                  HTML, CSS, and JS to Bricks Builder JSON.
-                </span>
-                <IconGlyph name="externalLink" />
-              </a>
             ) : null}
           </aside>
         </div>

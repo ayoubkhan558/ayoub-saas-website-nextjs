@@ -36,7 +36,7 @@ export default function ContactPage() {
                 <span className={styles["contact-page__eyebrow"]}>Contact / Hire Me</span>
                 <h1>
                   Send details.
-                  <i> I&apos;ll map it.</i>
+                  I&apos;ll map it.
                 </h1>
                 <p>
                   Share what you want built, what is currently blocking progress, and when you need it live.
@@ -71,25 +71,31 @@ export default function ContactPage() {
           <div className="section__inner">
             <div className={`container ${styles["contact-layout"]}`}>
               <div className={styles["contact-card"]}>
-                <span className={styles["contact-page__eyebrow"]}>Direct contact</span>
-                <h2>Fastest way to reach me.</h2>
-                <p className={styles["contact-card__intro"]}>
-                  Send the project goal, current URL if there is one, and the outcome you need. I reply with a clear
-                  next step, not a vague sales call.
-                </p>
+                <div className={styles["contact-card__header"]}>
+                  <span className={styles["contact-page__eyebrow"]}>Direct contact</span>
+                  <h2>Fastest way to reach me.</h2>
+                  <p className={styles["contact-card__intro"]}>
+                    Send the project goal, current URL if there is one, and the outcome you need. I reply with a clear
+                    next step.
+                  </p>
+                  <div className={styles["contact-card__meta"]}>
+                    <span>Reply within 24 hours</span>
+                    <span>{profile.location}</span>
+                  </div>
+                </div>
                 <div className={styles["contact-methods"]}>
                   <a className={styles["contact-method"]} href={`mailto:${profile.email}`}>
-                    <span>Email</span>
+                    <span className={styles["contact-method__label"]}>Email</span>
                     <strong>{profile.email}</strong>
                     <IconGlyph name="arrowRight" />
                   </a>
                   <a className={styles["contact-method"]} href={`tel:${profile.phone.replace(/\s+/g, "")}`}>
-                    <span>Phone</span>
+                    <span className={styles["contact-method__label"]}>Phone</span>
                     <strong>{profile.phone}</strong>
                     <IconGlyph name="phone" />
                   </a>
                   <a className={styles["contact-method"]} href={profile.linkedin} target="_blank" rel="noreferrer">
-                    <span>Profile</span>
+                    <span className={styles["contact-method__label"]}>Profile</span>
                     <strong>LinkedIn</strong>
                     <IconGlyph name="externalLink" />
                   </a>
@@ -136,7 +142,7 @@ export default function ContactPage() {
               <div className={styles["contact-faqs__copy"]}>
                 <span className={styles["contact-page__eyebrow"]}>FAQs</span>
                 <h2>
-                  Questions clients ask <i>before starting.</i>
+                  Questions clients ask before starting.
                 </h2>
                 <p>
                   Short answers on project fit, cost, timelines, and taking over an existing site or codebase.

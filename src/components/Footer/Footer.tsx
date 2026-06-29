@@ -42,11 +42,11 @@ export function Footer({ portfolio }: { portfolio: PortfolioData }) {
               <span className={styles["footer__built-with"]}>
                 Built with
                 <span className={styles["footer__built-with-words"]} aria-hidden="true">
-                  <i className={styles["footer__built-with-word"]}>care</i>
-                  <i className={styles["footer__built-with-word"]}>taste</i>
-                  <i className={styles["footer__built-with-word"]}>speed</i>
-                  <i className={styles["footer__built-with-word"]}>code</i>
-                  <i className={styles["footer__built-with-word"]}>focus</i>
+                  <span className={styles["footer__built-with-word"]}>care</span>
+                  <span className={styles["footer__built-with-word"]}>taste</span>
+                  <span className={styles["footer__built-with-word"]}>speed</span>
+                  <span className={styles["footer__built-with-word"]}>code</span>
+                  <span className={styles["footer__built-with-word"]}>focus</span>
                 </span>
                 from Pakistan.
               </span>
