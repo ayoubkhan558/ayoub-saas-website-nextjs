@@ -20,27 +20,69 @@ export const metadata: Metadata = {
   },
 };
 
-const principles = [
+const storyCards = [
   {
-    label: "Communication",
-    title: "No mystery during the build",
-    text: "You get clear updates, early blockers, and decisions surfaced before they become launch problems.",
+    label: "How I got into web development",
+    title: "I started in 2018 with downloaded lessons",
+    text: "In the early days I did not have an internet connection at home, so I downloaded web development videos using my friends' internet, brought them back, and watched them again and again to learn HTML, CSS, and the basics of building for the web.",
   },
   {
-    label: "Engineering",
-    title: "Code another developer can read",
-    text: "The work is structured around reusable sections, maintainable components, performance, and clean handoff.",
+    label: "What I enjoy building",
+    title: "Useful websites, product pages, and internal tools",
+    text: "I enjoy turning designs and ideas into fast React, Next.js, WordPress, and WooCommerce experiences that are clean to manage after launch.",
   },
   {
-    label: "Delivery",
-    title: "Scope, timeline, and ownership stay visible",
-    text: "The goal is not just to finish screens. The goal is to leave you with a site, store, or interface your team can keep using.",
+    label: "Who I work with",
+    title: "Founders, agencies, and product teams",
+    text: "Most of my work is with people who need dependable implementation, practical communication, and a site or interface their team can keep improving.",
   },
 ];
 
+const heroStats = [
+  { value: "2018", label: "Started learning web development" },
+  { value: "5+", label: "Years professional experience" },
+  { value: "50+", label: "Projects delivered" },
+  { value: "100%", label: "Job success" },
+];
+
+const toolbox = [
+  {
+    title: "Software:",
+    items: ["WordPress", "WooCommerce", "Shopify", "Webflow", "Bricks Builder", "Elementor"],
+  },
+  {
+    title: "Design Tools:",
+    items: ["Figma", "Adobe XD", "Responsive layout systems", "Design handoff"],
+  },
+  {
+    title: "Development Tools:",
+    items: ["React", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Sass", "Tailwind", "Bootstrap", "MySQL", "REST APIs"],
+  },
+  {
+    title: "AI Tools:",
+    items: ["ChatGPT", "Codex", "AI-assisted QA", "Workflow automation"],
+  },
+  {
+    title: "Workflow:",
+    items: ["Discovery", "Figma to code", "Reusable components", "Performance QA", "CMS handoff", "Launch support"],
+  },
+];
+
+const toolboxIcons = [
+  { name: "Next.js", src: "/tools/nextjs.svg" },
+  { name: "React", src: "/tools/javascript.svg" },
+  { name: "WordPress", src: "/tools/wordpress.svg" },
+  { name: "WooCommerce", src: "/tools/woocommerce.svg" },
+  { name: "Figma", src: "/tools/figma.svg" },
+  { name: "HTML", src: "/tools/html-5.svg" },
+  { name: "CSS", src: "/tools/css-3.svg" },
+  { name: "Tailwind", src: "/tools/tailwind.svg" },
+  { name: "Sass", src: "/tools/sass.svg" },
+  { name: "MySQL", src: "/tools/mysql.svg" },
+];
+
 export default function AboutPage() {
-  const profile = portfolio.profile;
-  const education = portfolio.recognition.find((item) => item.label === "Master of Computer Science");
+  const education = portfolio.about.education;
 
   return (
     <div className="site-shell">
@@ -52,9 +94,13 @@ export default function AboutPage() {
               <div className={styles["about-page-hero__copy"]}>
                 <span className={styles["about-page__eyebrow"]}>About / Muhammad Ayoub</span>
                 <h1>
-                  Websites, tools, <i>faster builds.</i>
+                  Self-taught developer, <i>practical builder.</i>
                 </h1>
-                <p>{portfolio.about.story}</p>
+                <p>
+                  I started learning web development in 2018 with downloaded videos, limited resources,
+                  and a lot of patience. Today I build fast React, Next.js, WordPress, and WooCommerce
+                  experiences for clients who need reliable delivery.
+                </p>
                 <div className={styles["about-page-hero__actions"]}>
                   <Link className="button button--dark" href="/contact">
                     Hire me
@@ -73,15 +119,13 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <aside className={styles["about-page-portrait-card"]} aria-label="Muhammad Ayoub profile">
-                <div className={styles["about-page-portrait-card__media"]}>
-                  <img src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub" />
-                </div>
-                <div className={styles["about-page-portrait-card__caption"]}>
-                  <span>{profile.location}</span>
-                  <strong>{profile.name}</strong>
-                  <p>{profile.role}</p>
-                </div>
+              <aside className={styles["about-page-hero-stats"]} aria-label="About Muhammad Ayoub stats">
+                {heroStats.map((stat) => (
+                  <div className={styles["about-page-hero-stat"]} key={stat.label}>
+                    <strong>{stat.value}</strong>
+                    <span>{stat.label}</span>
+                  </div>
+                ))}
               </aside>
             </div>
           </div>
@@ -89,39 +133,101 @@ export default function AboutPage() {
 
         <section className="section">
           <div className="section__inner">
-            <div className={`container ${styles["about-page-proof__inner"]}`}>
-              {portfolio.about.awards.map((award) => (
-                <div className={styles["about-page-award"]} key={award.label}>
-                  <span>{award.label}</span>
-                  <strong>{award.value}</strong>
-                </div>
+            <div className={`container ${styles["about-page-story-feature"]}`}>
+              <figure className={styles["about-page-story-portrait"]}>
+                <img src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub" />
+              </figure>
+              <div className={styles["about-page-section-header"]}>
+                <span className={styles["about-page__eyebrow"]}>My Story</span>
+                <h2>
+                  I learned the hard way, and that made me <i>patient.</i>
+                </h2>
+                <p>
+                  I started web development in 2018. In the early times, I did not have an internet
+                  connection at home, so I used my friends' internet to download tutorials, then watched
+                  them offline to learn HTML, CSS, and the fundamentals. That beginning made me
+                  self-learned, resourceful, and passionate about building useful things.
+                </p>
+              </div>
+            </div>
+            <div className={`container ${styles["about-page-story-grid"]}`}>
+              {storyCards.map((item) => (
+                <article className={styles["about-page-feature-card"]} key={item.label}>
+                  <span>{item.label}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section className={`section ${styles["about-page-story"]}`}>
+        <section className={`section ${styles["about-page-education-section"]}`}>
           <div className="section__inner">
-            <div className={`container ${styles["about-page-story__inner"]}`}>
-              <div className={styles["about-page-story__copy"]}>
-                <span className={styles["about-page__eyebrow"]}>How I think</span>
+            <div className={`container ${styles["about-page-education-layout"]}`}>
+              <div className={styles["about-page-section-header"]}>
+                <span className={styles["about-page__eyebrow"]}>Education</span>
                 <h2>
-                  Built fast is useful. Built to last is <i>better.</i>
+                  Latest <i>degree.</i>
                 </h2>
-                <p>{portfolio.about.motivation}</p> 
               </div>
-              <div className={styles["about-page-principles"]}>
-                {principles.map((item) => (
-                  <article className={styles["about-page-principle-card"]} key={item.label}>
-                    <span>{item.label}</span>
+              <article className={styles["about-page-education"]}>
+                <span>Latest degree</span>
+                <strong>{education}</strong>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="section__inner">
+            <div className={`container ${styles["about-page-section-header"]}`}>
+              <span className={styles["about-page__eyebrow"]}>Professional Experience</span>
+              <h2>
+                Roles across front-end, WordPress, and product <i>delivery.</i>
+              </h2>
+            </div>
+            <div className={`container ${styles["about-page-experience-list"]}`}>
+              {portfolio.experienceLog.map((item) => (
+                <article className={styles["about-page-experience-item"]} key={`${item.year}-${item.company}`}>
+                  <span>{item.year}</span>
+                  <div>
                     <h3>{item.title}</h3>
-                    <p>{item.text}</p>
-                  </article>
+                    <strong>{item.company}</strong>
+                    <p>{item.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className={`section ${styles["about-page-toolbox-section"]}`}>
+          <div className="section__inner">
+            <header className={`section-header section-header--center ${styles["about-page-toolbox-header"]}`}>
+              <span className="section-header__label">Toolbox</span>
+              <h2 className="section-header__title">
+                My <i>skills.</i>
+              </h2>
+            </header>
+            <div className={`container ${styles["about-page-skills-panel"]}`}>
+              <div className={styles["about-page-skill-icons"]} aria-label="Technologies and tools">
+                {toolboxIcons.map((tool) => (
+                  <div className={styles["about-page-skill-icon"]} key={tool.name}>
+                    <img src={tool.src} alt={tool.name} />
+                  </div>
+                ))}
+              </div>
+              <div className={styles["about-page-skill-list"]}>
+                {toolbox.map((group) => (
+                  <p key={group.title}>
+                    <strong>{group.title}</strong> {group.items.join(", ")}
+                  </p>
                 ))}
               </div>
             </div>
           </div>
-        </section> 
+        </section>
  
       </main>
       <ContactFooter portfolio={portfolio} />
