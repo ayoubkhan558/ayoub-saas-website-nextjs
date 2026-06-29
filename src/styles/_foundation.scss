@@ -57,7 +57,7 @@
 }
 
 :root {
-  --color-primary: #8a5266;
+  --color-primary: #cc4474;
   --color-primary-soft: rgba(138, 82, 102, 0.12);
   --color-secondary: #3f706c;
   --color-secondary-soft: rgba(63, 112, 108, 0.12);
@@ -351,8 +351,9 @@ img {
 .section-header__title {
   max-width: 820px;
   margin-top: var(--space-0);
+  font-family: var(--font-display);
   font-size: var(--text-h1);
-  // 
+  line-height: var(--leading-heading);
   letter-spacing: 0;
 }
 
@@ -367,7 +368,9 @@ h3 span[data-accent] {
   max-width: 660px;
   margin-top: var(--space-4);
   color: var(--color-plum-charcoal);
+  font-family: var(--font-body);
   font-size: var(--text-subheading);
+  font-weight: 300;
 }
 
 .section-header--center .section-header__label {

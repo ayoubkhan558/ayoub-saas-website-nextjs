@@ -2,6 +2,95 @@
   position: relative;
 }
 
+.process__expectations {
+  display: grid;
+  gap: var(--space-4);
+
+  @media (min-width: 900px) {
+    grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  }
+}
+
+.process__panel {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+  border: 1px solid var(--color-fog-border);
+  background:
+    radial-gradient(rgba(1, 1, 27, 0.04) 0.75px, transparent 0.75px),
+    rgba(255, 255, 255, 0.76);
+  background-size: 6px 6px, auto;
+  padding: var(--space-5);
+}
+
+.process__panel-label {
+  color: var(--color-ink-violet);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.process__expectation-grid {
+  display: grid;
+  gap: var(--space-2);
+
+  @media (min-width: 620px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.process__expectation {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-ink-violet);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-ui);
+  font-weight: 800;
+}
+
+.process__expectation svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  color: var(--color-primary);
+}
+
+.process__ordered-list {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  counter-reset: process-list;
+  list-style: none;
+}
+
+.process__ordered-list li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: center;
+  color: var(--color-ink-violet);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-ui);
+  font-weight: 800;
+}
+
+.process__ordered-list li::before {
+  counter-increment: process-list;
+  content: counter(process-list, decimal-leading-zero);
+  display: grid;
+  width: 34px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(49, 38, 59, 0.16);
+  background: var(--color-ink-violet);
+  color: #fff;
+  font-family: var(--font-code);
+  font-size: var(--text-2xs);
+}
+
 .process::before {
   content: "";
   position: absolute;

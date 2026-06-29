@@ -3,10 +3,8 @@
 import { ContactFooter } from "@/components/landing/ContactFooter";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { ProcessAboutSections } from "@/components/landing/ProcessAboutSections";
-import { ProblemSection } from "@/components/landing/ProblemSection";
 import { SiteHeader } from "@/components/landing/SiteHeader";
 import { TrustSections } from "@/components/landing/TrustSections";
-import { WhySection } from "@/components/landing/WhySection";
 import { WorkSections } from "@/components/landing/WorkSections";
 import { usePortfolioContent } from "@/context/PortfolioContentContext";
 
@@ -22,10 +20,10 @@ export function PortfolioLanding() {
       <main id="main">
         <HeroSection portfolio={portfolio} />
         <TrustSections portfolio={portfolio} />
-        <ProblemSection portfolio={portfolio} />
-        <WhySection portfolio={portfolio} />
         <WorkSections portfolio={portfolio} />
-        <ProcessAboutSections portfolio={portfolio} />
+        <ProcessAboutSections portfolio={portfolio} variant="proof-process" />
+        <WorkSections portfolio={portfolio} variant="showcase" />
+        <ProcessAboutSections portfolio={portfolio} variant="about-faq" />
         <ContactFooter portfolio={portfolio} />
       </main>
     </div>

@@ -73,6 +73,27 @@
   font-weight: 300;
 }
 
+.about-page-hero__copy > .about-page__eyebrow,
+.about-page-story__copy > .about-page__eyebrow,
+.about-page-section-header > .about-page__eyebrow {
+  color: var(--color-ink-violet);
+  font-family: var(--font-editorial-display);
+  font-size: var(--text-h2);
+  font-style: italic;
+  font-weight: 200;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none;
+}
+
+.about-page-hero h1,
+.about-page-story h2,
+.about-page-section-header h2 {
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  line-height: var(--leading-heading);
+}
+
 .about-page-hero__actions {
   display: flex;
   flex-wrap: wrap;

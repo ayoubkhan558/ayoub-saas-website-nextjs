@@ -49,15 +49,20 @@
 
 .footer__logo {
   width: fit-content;
-  color: var(--color-ink-violet);
-  font-family: var(--font-display-compact);
-  font-size: var(--text-h3);
-  font-weight: 800;
-  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  max-width: min(220px, 72vw);
+  line-height: 0;
 
   @media (max-width: 560px) {
-    overflow-wrap: anywhere;
+    max-width: min(196px, 78vw);
   }
+}
+
+.footer__logo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .footer__summary {

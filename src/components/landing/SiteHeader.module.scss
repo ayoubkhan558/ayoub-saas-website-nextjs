@@ -68,12 +68,16 @@
 
 .site-header__nav-brand {
   justify-self: start;
-  color: var(--color-plum-charcoal);
-  font-family: var(--font-display-compact);
-  font-size: var(--text-h3);
-  font-weight: 800;
-  line-height: 1;
-  margin-bottom: -5px;
+  display: inline-flex;
+  align-items: center;
+  width: min(174px, 42vw);
+  line-height: 0;
+}
+
+.site-header__nav-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .site-header__nav-links {

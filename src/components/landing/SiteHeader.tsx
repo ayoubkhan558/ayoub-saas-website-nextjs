@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
@@ -11,7 +12,6 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("top");
-  const [floatingNavVisible, setFloatingNavVisible] = useState(false);
   const pathname = usePathname();
   const profile = portfolio.profile;
   const referralHref = `/contact?subject=${encodeURIComponent("Referral client intro")}&details=${encodeURIComponent(
@@ -27,14 +27,15 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
     { label: "Home", href: "#top", sectionId: "top" },
     { label: "Services", href: "#services", sectionId: "services" },
     { label: "Projects", href: "#work", sectionId: "work" },
-    { label: "About", href: "#about", sectionId: "about" },
-    { label: "FAQs", href: "#faqs", sectionId: "faqs" },
+    { label: "Pricing", href: "#services", sectionId: "services" },
+    { label: "About Me", href: "#about", sectionId: "about" },
+    { label: "Testimonials", href: "#proof", sectionId: "proof" },
+    { label: "FAQ'S", href: "#faqs", sectionId: "faqs" },
   ];
-  const showFloatingNav = pathname === "/" && floatingNavVisible;
+  const showFloatingNav = pathname === "/";
 
   useEffect(() => {
     if (pathname !== "/") {
-      setFloatingNavVisible(false);
       return;
     }
 
@@ -49,7 +50,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
           }
         });
 
-        const orderedSections = ["faqs", "about", "work", "services", "top"];
+        const orderedSections = ["faqs", "proof", "about", "work", "services", "top"];
         const current = orderedSections.find((sectionId) => visibleSections.has(sectionId));
         if (current) {
           setActiveSection(current);
@@ -65,27 +66,12 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
       }
     });
 
-    const footerSection = document.getElementById("cta");
-    const updateFloatingVisibility = () => {
-      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-      const footerRect = footerSection?.getBoundingClientRect();
-      const footerVisible = Boolean(footerRect && footerRect.bottom > 0 && footerRect.top < viewportHeight);
-      const pastHeaderArea = window.scrollY > Math.min(520, viewportHeight * 0.7);
-      setFloatingNavVisible(pastHeaderArea && !footerVisible);
-    };
-
-    window.addEventListener("scroll", updateFloatingVisibility, { passive: true });
-    window.addEventListener("resize", updateFloatingVisibility);
-    updateFloatingVisibility();
-
     return () => {
       sectionObserver.disconnect();
-      window.removeEventListener("scroll", updateFloatingVisibility);
-      window.removeEventListener("resize", updateFloatingVisibility);
     };
   }, [pathname]);
 
-  return (
+  return (<>
     <header className={styles["site-header"]}>
       <div className={styles["site-header__announcement"]} aria-label="Portfolio updates">
         <div className={`${styles["site-header__announcement-inner"]} container`}>
@@ -99,7 +85,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
 
       <div className={`${styles["site-header__nav"]} container`}>
         <Link className={styles["site-header__nav-brand"]} href="/#top" aria-label={`${profile.brand} home`}>
-          {profile.brand}
+          <Image src="/mayoub-dev-logo.svg" alt="mayoub.dev" width={640} height={160} priority />
         </Link>
 
         <nav className={styles["site-header__nav-links"]} aria-label="Primary navigation">
@@ -143,29 +129,6 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
           <IconGlyph name="arrowRight" />
         </button>
       </div>
-
-      <nav
-        className={`${styles["site-header__floating-nav"]} ${
-          showFloatingNav ? styles["site-header__floating-nav--visible"] : ""
-        }`}
-        aria-label="Quick navigation"
-      >
-        {primaryBottomLinks.map((link) => (
-          <Link
-            className={`${styles["site-header__floating-link"]} ${
-              activeSection === link.sectionId ? styles["site-header__floating-link--active"] : ""
-            }`}
-            href={link.href}
-            key={link.href}
-          >
-            {link.label}
-          </Link>
-        ))}
-        <button className={styles["site-header__floating-cta"]} type="button" onClick={openContactPanel}>
-          Contact
-          <IconGlyph name="arrowRight" />
-        </button>
-      </nav>
 
       <div
         className={`${styles["contact-panel"]} ${contactOpen ? styles["contact-panel--open"] : ""}`}
@@ -231,5 +194,27 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
         </aside>
       </div>
     </header>
+
+    <nav
+      className={`${styles["site-header__floating-nav"]} ${showFloatingNav ? styles["site-header__floating-nav--visible"] : ""
+        }`}
+      aria-label="Quick navigation"
+    >
+      {primaryBottomLinks.map((link) => (
+        <Link
+          className={`${styles["site-header__floating-link"]} ${activeSection === link.sectionId ? styles["site-header__floating-link--active"] : ""
+            }`}
+          href={link.href}
+          key={link.href}
+        >
+          {link.label}
+        </Link>
+      ))}
+      <button className={styles["site-header__floating-cta"]} type="button" onClick={openContactPanel}>
+        Contact
+        <IconGlyph name="arrowRight" />
+      </button>
+    </nav>
+  </>
   );
 }

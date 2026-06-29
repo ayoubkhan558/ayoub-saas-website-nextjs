@@ -33,6 +33,22 @@
   line-height: 1.3;
 }
 
+.legal-hero__copy > .legal-page__eyebrow {
+  color: var(--color-ink-violet);
+  font-family: var(--font-editorial-display);
+  font-size: var(--text-h2);
+  font-style: italic;
+  font-weight: 200;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.legal-hero h1 {
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  line-height: var(--leading-heading);
+}
+
 .legal-hero h1 {
   max-width: 860px;
   font-size: var(--text-display);

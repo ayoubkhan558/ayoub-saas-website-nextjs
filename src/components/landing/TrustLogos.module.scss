@@ -83,7 +83,12 @@
   position: relative;
   display: inline-grid;
   place-items: center;
+  border: 0;
+  background: transparent;
   color: var(--color-ink-violet);
+  cursor: default;
+  font: inherit;
+  padding: 0;
   text-decoration: none;
   outline-offset: 6px;
 
@@ -157,19 +162,33 @@
 }
 
 .trust-logos__review-id {
-  color: var(--color-slate-iris);
-  font-family: var(--font-code);
-  font-size: var(--text-2xs);
-  text-transform: uppercase;
+  display: none;
 }
 
 .trust-logos__review-text {
   font-style: normal;
 }
 
+.trust-logos__review-link {
+  width: fit-content;
+  margin-top: var(--space-1);
+  color: var(--color-ink-violet);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.trust-logos__review-link:hover {
+  color: var(--color-primary);
+}
+
 .trust-logos__logo:hover .trust-logos__review,
-.trust-logos__logo:focus-visible .trust-logos__review {
+.trust-logos__logo:focus-visible .trust-logos__review,
+.trust-logos__logo--open .trust-logos__review {
   opacity: 1;
+  pointer-events: auto;
   transform: translate(-50%, 0);
 }
 

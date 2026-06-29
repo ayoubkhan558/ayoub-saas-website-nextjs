@@ -75,6 +75,27 @@
   font-weight: 300;
 }
 
+.hero__copy > .eyebrow,
+.sectionHeader > .eyebrow,
+.caseLink__inner .eyebrow {
+  color: var(--color-ink-violet);
+  font-family: var(--font-editorial-display);
+  font-size: var(--text-h2);
+  font-style: italic;
+  font-weight: 200;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none;
+}
+
+.hero h1,
+.sectionHeader h2,
+.caseLink h2 {
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  line-height: var(--leading-heading);
+}
+
 .hero__actions {
   display: flex;
   flex-wrap: wrap;

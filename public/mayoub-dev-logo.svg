@@ -1,0 +1,13 @@
+<svg width="640" height="160" viewBox="0 0 640 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">mayoub.dev logo</title>
+  <desc id="desc">Developer wordmark for mayoub.dev with a spaced code bracket symbol.</desc>
+  <g transform="translate(42 38)" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M36 10L6 40L36 70" stroke="#8A5266"/>
+    <path d="M92 10L122 40L92 70" stroke="#8A5266"/>
+    <path d="M76 0L58 80" stroke="#01011B"/>
+  </g>
+  <g font-family="GT Cinetype Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="62" font-weight="700" letter-spacing="0">
+    <text x="178" y="99" fill="#01011B">mayoub</text>
+    <text x="410" y="99" fill="#717A94">.dev</text>
+  </g>
+</svg>

@@ -286,3 +286,27 @@
   height: 16px;
   color: var(--color-ink-violet);
 }
+.hero__copy > .eyebrow,
+.sectionHeader > .eyebrow {
+  color: var(--color-ink-violet);
+  font-family: var(--font-editorial-display);
+  font-size: var(--text-h2);
+  font-style: italic;
+  font-weight: 200;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none;
+}
+
+.sectionHeader h2 {
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  line-height: var(--leading-heading);
+}
+
+.sectionHeader p {
+  color: var(--color-plum-charcoal);
+  font-family: var(--font-body);
+  font-size: var(--text-subheading);
+  font-weight: 300;
+}
