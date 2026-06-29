@@ -4,6 +4,8 @@ export type CaseStudyDetailData = {
   slug: string;
   client: string;
   urlLabel: string;
+  liveUrl: string;
+  timeline: string;
   eyebrow: string;
   headline: string;
   tagline: string;

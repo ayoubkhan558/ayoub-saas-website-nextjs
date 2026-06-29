@@ -343,15 +343,14 @@
 
 .overviewGrid,
 .feedbackGrid {
-  @media (min-width: 900px) {
-    grid-template-columns: minmax(0, 0.76fr) minmax(0, 1.24fr);
-    align-items: start;
-  }
+  max-width: 1080px;
+  margin-inline: auto;
 }
 
 .overviewPanel {
-  gap: var(--space-5);
-  border: 1px solid var(--color-fog-border);
+  overflow: hidden;
+  gap: 0;
+  border: 1px solid rgba(49, 38, 59, 0.18);
   background:
     radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
     #fff;
@@ -360,30 +359,52 @@
     0 0 0 1px rgba(49, 38, 59, 0.1),
     rgba(255, 255, 255, 0.78) 0 1px 0 inset,
     rgba(49, 38, 59, 0.06) 0 20px 54px;
-  padding: var(--space-5);
+  padding: 0;
 }
 
 .panelLabel {
+  display: block;
   color: var(--color-slate-iris);
+  padding: var(--space-5) var(--space-5) 0;
 }
 
-.overviewFacts {
+.overviewText {
+  margin: 0;
+  padding: var(--space-3) var(--space-5) var(--space-5);
+}
+
+.detailMatrix {
+  display: grid;
+  border-top: 1px solid rgba(49, 38, 59, 0.16);
+}
+
+.detailMatrixHeader,
+.detailMatrixRow {
   display: grid;
   gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
 
-  @media (min-width: 700px) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  @media (min-width: 820px) {
+    grid-template-columns: minmax(160px, 0.55fr) minmax(240px, 1fr) minmax(260px, 1.1fr);
   }
 }
 
-.fact {
-  display: grid;
-  gap: var(--space-2);
-  border-top: 1px solid var(--page-rail-color);
-  padding-top: var(--space-3);
+.detailMatrixHeader {
+  color: var(--color-ink-violet);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
 }
 
-.fact strong,
+.detailMatrixRow {
+  border-top: 1px solid rgba(49, 38, 59, 0.12);
+}
+
+.detailMatrixRow:first-of-type {
+  border-top-color: rgba(49, 38, 59, 0.16);
+}
+
+.detailMatrixRow strong,
 .comparisonItem strong,
 .benefitItem strong,
 .toolName {
@@ -395,11 +416,71 @@
   line-height: 1.12;
 }
 
-.fact span,
+.detailMatrixRow span,
+.detailMatrixRow p,
 .comparisonItem span,
 .benefitItem span,
 .toolMeta {
   color: var(--color-storm-mauve);
+}
+
+.detailMatrixRow span,
+.detailMatrixRow p {
+  margin: 0;
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+
+.detailMatrixRow a {
+  color: var(--color-ink-violet);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: rgba(49, 38, 59, 0.32);
+  text-underline-offset: 4px;
+}
+
+.performanceRow {
+  background:
+    linear-gradient(90deg, rgba(49, 38, 59, 0.045) 1px, transparent 1px) 0 0 / 42px 42px,
+    radial-gradient(rgba(49, 38, 59, 0.055) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
+    rgba(247, 247, 249, 0.72);
+}
+
+.performanceMetrics {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+
+  @media (min-width: 560px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.performanceMetrics div {
+  display: grid;
+  gap: var(--space-1);
+  border: 1px solid rgba(49, 38, 59, 0.12);
+  background: rgba(255, 255, 255, 0.68);
+  padding: var(--space-2);
+}
+
+.performanceMetrics dt,
+.performanceMetrics dd {
+  margin: 0;
+}
+
+.performanceMetrics dt {
+  color: var(--color-slate-iris);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+}
+
+.performanceMetrics dd {
+  color: var(--color-ink-violet);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-md);
+  font-weight: 800;
 }
 
 .splitGrid {

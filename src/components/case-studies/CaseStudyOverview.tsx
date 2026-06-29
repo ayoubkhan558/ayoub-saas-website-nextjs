@@ -1,8 +1,8 @@
 import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
-import { CaseStudySectionHeader } from "./CaseStudySectionHeader";
 import styles from "./CaseStudyOverview.module.scss";
 
 const metricLabels = [
+  ["performance", "Performance"],
   ["fcp", "FCP"],
   ["lcp", "LCP"],
   ["cls", "CLS"],
@@ -10,47 +10,59 @@ const metricLabels = [
   ["speedIndex", "Speed index"],
 ] as const;
 
+type DetailRow = {
+  label: string;
+  value: string;
+  href?: string;
+};
+
 export function CaseStudyOverview({ study }: { study: CaseStudyDetailData }) {
   const pageSpeed = study.pageSpeed?.desktop;
+  const detailRows: DetailRow[] = [
+    ...study.facts,
+    { label: "Timeline", value: study.timeline },
+    { label: "Live site", value: study.urlLabel, href: study.liveUrl },
+  ];
 
   return (
     <section className={`section ${styles.section}`}>
       <div className="section__inner">
         <div className={`container ${styles.sectionInner}`}>
           <div className={styles.overviewGrid}>
-            <CaseStudySectionHeader label="Overview" title={study.client} />
-            <article className={styles.overviewPanel}>
+            <article className={styles.overviewPanel} aria-label={`${study.client} project facts and performance`}>
               <span className={styles.panelLabel}>Client context</span>
               <p className={styles.overviewText}>{study.overview}</p>
-              <div className={styles.overviewFacts}>
-                {study.facts.map((fact) => (
-                  <div className={styles.fact} key={fact.label}>
-                    <strong>{fact.label}</strong>
-                    <span>{fact.value}</span>
+
+              <div className={styles.detailMatrix}>
+                <div className={styles.detailMatrixHeader} aria-hidden="true">
+                  <span>Detail</span>
+                  <span>Value</span>
+                  <span>Result</span>
+                </div>
+
+                {detailRows.map((row) => (
+                  <div className={styles.detailMatrixRow} key={row.label}>
+                    <strong>{row.label}</strong>
+                    <span>{row.href ? <a href={row.href} target="_blank" rel="noreferrer">{row.value}</a> : row.value}</span>
+                    <p>{row.label === "Live site" ? "Open the completed production website." : "Project context used to guide scope and delivery."}</p>
                   </div>
                 ))}
-              </div>
-              {pageSpeed ? (
-                <div className={styles.pageSpeedGrid} aria-label="PageSpeed desktop performance snapshot">
-                  <article className={styles.pageSpeedCard}>
-                    <div className={styles.pageSpeedScore}>
-                      <span>Desktop PageSpeed</span>
-                      <strong>{pageSpeed.performance}</strong>
-                    </div>
-                    <dl className={styles.pageSpeedMetrics}>
-                      {metricLabels.map(([key, metricLabel]) => (
+
+                {pageSpeed ? (
+                  <div className={`${styles.detailMatrixRow} ${styles.performanceRow}`}>
+                    <strong>Performance</strong>
+                    <span>Desktop PageSpeed</span>
+                    <dl className={styles.performanceMetrics}>
+                      {metricLabels.map(([key, label]) => (
                         <div key={key}>
-                          <dt>{metricLabel}</dt>
+                          <dt>{label}</dt>
                           <dd>{pageSpeed[key] ?? "N/A"}</dd>
                         </div>
                       ))}
                     </dl>
-                    <p className={styles.performanceNote}>
-                      Tested on {study.pageSpeed?.testedUrl}, measured {study.pageSpeed?.measuredAt}.
-                    </p>
-                  </article>
-                </div>
-              ) : null}
+                  </div>
+                ) : null}
+              </div>
             </article>
           </div>
         </div>

@@ -18,7 +18,7 @@ export function CaseStudySectionHeader({
       <span className={styles.kicker}>{label}</span>
       <h2 className={styles.sectionTitle}>
         {leadingTitle ? `${leadingTitle} ` : ""}
-        {accentWord ? <span>{accentWord}</span> : null}
+        {accentWord ? <>{accentWord}</> : null}
       </h2>
       {text ? <p className={styles.sectionText}>{text}</p> : null}
     </header>
