@@ -1,6 +1,7 @@
 import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
+import { getToolCatalogItem } from "@/data/toolCatalog";
 import { CaseStudySectionHeader } from "./CaseStudySectionHeader";
-import styles from "./Ape24ProCaseStudy.module.scss";
+import styles from "./CaseStudyTools.module.scss";
 
 export function CaseStudyTools({ study }: { study: CaseStudyDetailData }) {
   return (
@@ -17,15 +18,27 @@ export function CaseStudyTools({ study }: { study: CaseStudyDetailData }) {
           </div>
           <div className={styles.toolPanel}>
             <div className={styles.toolGrid}>
-              {study.tools.map((tool) => (
-                <article className={styles.toolCard} key={tool.name}>
-                  <span className={styles.toolMark}>{tool.mark}</span>
-                  <span>
-                    <span className={styles.toolName}>{tool.name}</span>
-                    <span className={styles.toolMeta}>{tool.meta}</span>
-                  </span>
-                </article>
-              ))}
+              {study.tools.map((toolKey) => {
+                const tool = getToolCatalogItem(toolKey);
+                const fallbackMark = tool.name
+                  .split(/\s+/)
+                  .map((word) => word[0])
+                  .join("")
+                  .slice(0, 3)
+                  .toUpperCase();
+
+                return (
+                  <article className={styles.toolCard} key={toolKey}>
+                    <span className={styles.toolLogo}>
+                      {tool.logo ? <img src={tool.logo} alt={`${tool.name} logo`} /> : fallbackMark}
+                    </span>
+                    <span>
+                      <span className={styles.toolName}>{tool.name}</span>
+                      <span className={styles.toolMeta}>{tool.description}</span>
+                    </span>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </div>

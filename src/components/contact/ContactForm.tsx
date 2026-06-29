@@ -1,6 +1,7 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
+import { useSearchParams } from "next/navigation";
 import { IconGlyph } from "@/components/landing/IconGlyph";
 import styles from "./ContactPage.module.scss";
 
@@ -13,6 +14,9 @@ const projectTypes = [
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm("mgojyyqd");
+  const searchParams = useSearchParams();
+  const subject = searchParams.get("subject") ?? "";
+  const details = searchParams.get("details") ?? "";
 
   if (state.succeeded) {
     return (
@@ -36,21 +40,23 @@ export function ContactForm() {
         <h2>What to send.</h2>
       </div>
 
-      <label>
-        <span>Name</span>
-        <input name="name" autoComplete="name" placeholder="Your name" required />
-        <ValidationError className={styles["contact-form-card__error"]} prefix="Name" field="name" errors={state.errors} />
-      </label>
+      <div className={styles["contact-form-card__row"]}>
+        <label>
+          <span>Name</span>
+          <input name="name" autoComplete="name" placeholder="Your name" required />
+          <ValidationError className={styles["contact-form-card__error"]} prefix="Name" field="name" errors={state.errors} />
+        </label>
 
-      <label>
-        <span>Email</span>
-        <input name="email" type="email" autoComplete="email" placeholder="you@company.com" required />
-        <ValidationError className={styles["contact-form-card__error"]} prefix="Email" field="email" errors={state.errors} />
-      </label>
+        <label>
+          <span>Email</span>
+          <input name="email" type="email" autoComplete="email" placeholder="you@company.com" required />
+          <ValidationError className={styles["contact-form-card__error"]} prefix="Email" field="email" errors={state.errors} />
+        </label>
+      </div>
 
       <label>
         <span>Subject</span>
-        <input name="_subject" placeholder="Website build estimate" required />
+        <input name="_subject" placeholder="Website build estimate" defaultValue={subject} required />
         <ValidationError className={styles["contact-form-card__error"]} prefix="Subject" field="_subject" errors={state.errors} />
       </label>
 
@@ -80,6 +86,7 @@ export function ContactForm() {
           name="message"
           rows={6}
           placeholder="Current URL, goal, timeline, stack, pages, integrations, or what is broken."
+          defaultValue={details}
           required
         />
         <ValidationError className={styles["contact-form-card__error"]} prefix="Message" field="message" errors={state.errors} />

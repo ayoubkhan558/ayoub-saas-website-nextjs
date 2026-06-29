@@ -7,6 +7,20 @@ export const projectsArchive = projectsArchiveJson;
 export const projectArchiveItems = projectsArchiveJson.projects as ProjectArchiveItem[];
 const verifiedLinks = new Set(projectLinkStatusJson.okLinks);
 
+export const projectArchiveFilters = [
+  { label: "All", value: "all" },
+  { label: "HTML/CSS", value: "html-css" },
+  { label: "Bricks", value: "bricks" },
+  { label: "Elementor", value: "elementor" },
+  { label: "React/Next.js", value: "react-nextjs" },
+  { label: "Shopify", value: "shopify" },
+  { label: "Live", value: "live" },
+  { label: "Redesigned", value: "redesigned" },
+  { label: "Domain expired", value: "domain-expired" },
+] as const;
+
+export type ProjectArchiveFilter = (typeof projectArchiveFilters)[number]["value"];
+
 export function compactUrl(url: string) {
   try {
     return new URL(url).hostname.replace(/^www\./, "");
@@ -40,6 +54,10 @@ export function getProjectDescription(project: ProjectArchiveItem) {
 }
 
 export function getProjectThumbnail(project: ProjectArchiveItem) {
+  if (project.screenshot) {
+    return project.screenshot;
+  }
+
   const href = normalizeHttpLink(project.websiteUrl);
 
   if (!href || !verifiedLinks.has(href)) {
@@ -62,8 +80,59 @@ export function getProjectMeta(project: ProjectArchiveItem) {
   return [
     project.categoryNiche,
     project.platformFrameworkBuilder,
-    project.date,
-  ].filter((item): item is string => Boolean(item));
+    project.projectStatus,
+  ].filter((item): item is string => Boolean(item && !/^https?:\/\//i.test(item.trim())));
+}
+
+export function normalizeProjectFilter(value: string | string[] | undefined): ProjectArchiveFilter {
+  const rawValue = Array.isArray(value) ? value[0] : value;
+
+  return projectArchiveFilters.some((filter) => filter.value === rawValue)
+    ? (rawValue as ProjectArchiveFilter)
+    : "all";
+}
+
+export function projectMatchesFilter(project: ProjectArchiveItem, filter: ProjectArchiveFilter) {
+  if (filter === "all") {
+    return true;
+  }
+
+  const stack = `${project.platformFrameworkBuilder ?? ""} ${project.projectType ?? ""} ${project.description ?? ""}`.toLowerCase();
+  const status = project.projectStatus;
+
+  if (filter === "html-css") {
+    return /html|css|bootstrap|jquery/.test(stack);
+  }
+
+  if (filter === "bricks") {
+    return /bricks/.test(stack);
+  }
+
+  if (filter === "elementor") {
+    return /elementor/.test(stack);
+  }
+
+  if (filter === "react-nextjs") {
+    return /react|next/.test(stack);
+  }
+
+  if (filter === "shopify") {
+    return /shopify/.test(stack);
+  }
+
+  if (filter === "live") {
+    return status === "Live";
+  }
+
+  if (filter === "redesigned") {
+    return status === "Redesigned by Client";
+  }
+
+  if (filter === "domain-expired") {
+    return status === "Offline (Domain Expired)";
+  }
+
+  return true;
 }
 
 export function getProjectLinks(project: ProjectArchiveItem) {

@@ -1,4 +1,4 @@
-import styles from "./Ape24ProCaseStudy.module.scss";
+import styles from "./CaseStudySectionHeader.module.scss";
 
 export function CaseStudySectionHeader({
   label,

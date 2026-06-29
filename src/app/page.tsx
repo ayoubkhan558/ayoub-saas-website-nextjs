@@ -17,6 +17,7 @@ function buildHomeSchema() {
   const siteUrl = portfolio.profile.website;
   const personId = `${siteUrl}/#person`;
   const serviceId = `${siteUrl}/#professional-service`;
+  const featuredServices = portfolio.services.filter((service) => service.featured);
   const absoluteUrl = (href: string) => {
     if (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) {
       return href;
@@ -63,11 +64,11 @@ function buildHomeSchema() {
         "telephone": portfolio.profile.phone,
         "founder": { "@id": personId },
         "areaServed": "Worldwide",
-        "serviceType": portfolio.services.map((service) => service.name),
+        "serviceType": featuredServices.map((service) => service.name),
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Web development services",
-          "itemListElement": portfolio.services.map((service) => ({
+          "itemListElement": featuredServices.map((service) => ({
             "@type": "Offer",
             "name": service.name,
             "description": service.description,

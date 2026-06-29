@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { IconGlyph } from "@/components/landing/IconGlyph";
-import { projectsArchive } from "@/data/projectsArchive";
 import styles from "./ProjectsPage.module.scss";
 
 export function ProjectsHero({ stats }: { stats: Array<{ label: string; value: string }> }) {
@@ -31,7 +30,6 @@ export function ProjectsHero({ stats }: { stats: Array<{ label: string; value: s
 
           <aside className={styles.signal} aria-label="Project showcase summary">
             <span className={styles.eyebrow}>Showcase mix</span>
-            <strong>{projectsArchive.projectCount} extracted projects from the full workbook.</strong>
             <div className={styles.signal__stats}>
               {stats.map((stat) => (
                 <div key={stat.label}>

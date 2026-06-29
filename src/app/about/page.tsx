@@ -108,14 +108,7 @@ export default function AboutPage() {
                 <h2>
                   Built fast is useful. Built to last is <i>better.</i>
                 </h2>
-                <p>{portfolio.about.motivation}</p>
-                {education ? (
-                  <div className={styles["about-page-education"]}>
-                    <span>Education</span>
-                    <strong>{education.label}</strong>
-                    <p>{education.status}</p>
-                  </div>
-                ) : null}
+                <p>{portfolio.about.motivation}</p> 
               </div>
               <div className={styles["about-page-principles"]}>
                 {principles.map((item) => (

@@ -11,15 +11,24 @@ export type CaseStudyDetailData = {
   facts: Array<{ label: string; value: string }>;
   challenges: Array<{ title: string; text: string }>;
   results: Array<{ title: string; text: string }>;
-  tools: Array<{ name: string; mark: string; meta: string }>;
+  tools: string[];
   performanceNote: string;
+  pageSpeed?: {
+    source: string;
+    testedUrl: string;
+    measuredAt: string;
+    mobile?: CaseStudyPageSpeedResult;
+    desktop?: CaseStudyPageSpeedResult;
+    mobileError?: string;
+    desktopError?: string;
+  };
   branding: {
     title: string;
     text: string;
     logoMark: string;
     fontName: string;
     fontMeta: string;
-    palette: Array<{ label: string; tone: "dark" | "gray" | "light" | "accent" }>;
+    palette: Array<{ label: string; tone?: "dark" | "gray" | "light" | "accent"; value?: string }>;
   };
   desktopPages: Array<{ name: string; type: string }>;
   responsiveBenefits: string[];
@@ -33,6 +42,15 @@ export type CaseStudyDetailData = {
     text: string;
     buttonText: string;
   };
+};
+
+export type CaseStudyPageSpeedResult = {
+  performance: number;
+  fcp: string | null;
+  lcp: string | null;
+  cls: string | null;
+  tbt: string | null;
+  speedIndex: string | null;
 };
 
 export const caseStudyDetails = caseStudyDetailsJson as Record<string, CaseStudyDetailData>;

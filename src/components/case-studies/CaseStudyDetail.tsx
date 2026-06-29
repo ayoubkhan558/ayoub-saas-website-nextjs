@@ -7,9 +7,10 @@ import { CaseStudyFeedback } from "./CaseStudyFeedback";
 import { CaseStudyHero } from "./CaseStudyHero";
 import { CaseStudyJsonLd } from "./CaseStudyJsonLd";
 import { CaseStudyOverview } from "./CaseStudyOverview";
+import { CaseStudyPageSpeed } from "./CaseStudyPageSpeed";
 import { CaseStudyResponsiveLayout } from "./CaseStudyResponsiveLayout";
 import { CaseStudyTools } from "./CaseStudyTools";
-import styles from "./Ape24ProCaseStudy.module.scss";
+import styles from "./CaseStudy.module.scss";
 
 export function CaseStudyDetail({
   portfolio,
@@ -25,6 +26,7 @@ export function CaseStudyDetail({
       <CaseStudyOverview study={study} />
       <CaseStudyChallengesResults study={study} />
       <CaseStudyTools study={study} />
+      <CaseStudyPageSpeed study={study} />
       <CaseStudyBranding study={study} />
       <CaseStudyDesktopLayout study={study} />
       <CaseStudyResponsiveLayout study={study} />

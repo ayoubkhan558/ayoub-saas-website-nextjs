@@ -1,8 +1,19 @@
 import Link from "next/link";
 import styles from "./Pagination.module.scss";
 
-function pageHref(basePath: string, page: number) {
-  return page <= 1 ? basePath : `${basePath}?page=${page}`;
+function pageHref(basePath: string, page: number, anchorId?: string) {
+  const [pathname, queryString = ""] = basePath.split("?");
+  const params = new URLSearchParams(queryString);
+
+  if (page <= 1) {
+    params.delete("page");
+  } else {
+    params.set("page", String(page));
+  }
+
+  const query = params.toString();
+  const path = query ? `${pathname}?${query}` : pathname;
+  return anchorId ? `${path}#${anchorId}` : path;
 }
 
 function getVisiblePages(currentPage: number, totalPages: number) {
@@ -15,10 +26,12 @@ function getVisiblePages(currentPage: number, totalPages: number) {
 export function Pagination({
   basePath,
   currentPage,
+  anchorId,
   totalPages,
 }: {
   basePath: string;
   currentPage: number;
+  anchorId?: string;
   totalPages: number;
 }) {
   if (totalPages <= 1) {
@@ -32,7 +45,7 @@ export function Pagination({
     <nav className={styles.pagination} aria-label="Pagination">
       <Link
         className={`${styles.pagination__link} ${currentPage <= 1 ? styles["pagination__link--disabled"] : ""}`}
-        href={pageHref(basePath, Math.max(1, currentPage - 1))}
+        href={pageHref(basePath, Math.max(1, currentPage - 1), anchorId)}
         aria-disabled={currentPage <= 1}
       >
         Previous
@@ -47,7 +60,7 @@ export function Pagination({
               {showGap ? <span className={styles.pagination__ellipsis}>...</span> : null}
               <Link
                 className={`${styles.pagination__page} ${page === currentPage ? styles["pagination__page--active"] : ""}`}
-                href={pageHref(basePath, page)}
+                href={pageHref(basePath, page, anchorId)}
                 aria-current={page === currentPage ? "page" : undefined}
               >
                 {page}
@@ -58,7 +71,7 @@ export function Pagination({
       </div>
       <Link
         className={`${styles.pagination__link} ${currentPage >= totalPages ? styles["pagination__link--disabled"] : ""}`}
-        href={pageHref(basePath, Math.min(totalPages, currentPage + 1))}
+        href={pageHref(basePath, Math.min(totalPages, currentPage + 1), anchorId)}
         aria-disabled={currentPage >= totalPages}
       >
         Next

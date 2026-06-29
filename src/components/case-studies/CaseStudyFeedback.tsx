@@ -1,7 +1,7 @@
 import { IconGlyph } from "@/components/landing/IconGlyph";
 import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
 import { CaseStudySectionHeader } from "./CaseStudySectionHeader";
-import styles from "./Ape24ProCaseStudy.module.scss";
+import styles from "./CaseStudyFeedback.module.scss";
 
 export function CaseStudyFeedback({ study }: { study: CaseStudyDetailData }) {
   return (

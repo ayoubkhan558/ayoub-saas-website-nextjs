@@ -1,6 +1,6 @@
-export const serviceIcons = ["code2", "database", "shoppingCart"];
+export const serviceIcons = ["code2", "database", "shoppingCart", "image", "monitor", "sparkles", "code"];
 
-export const serviceCardVariants = ["product", "cms", "commerce"];
+export const serviceCardVariants = ["product", "cms", "commerce", "cms", "product", "commerce", "cms"];
 
 export const proofNotes = [
   { label: "Project fit", value: "SaaS, service sites, stores, dashboards, funnels" },

@@ -8,7 +8,7 @@ import styles from "./WorkSections.module.scss";
 export function WorkSections({ portfolio }: { portfolio: PortfolioData }) {
   const featuredProjects = caseStudies.slice(0, 3);
   const showcasedProjects = projects.filter((project) => project.kind !== "free-tool");
-  const services = portfolio.services.slice(0, 3);
+  const services = portfolio.services.filter((service) => service.featured);
 
   return (
     <>
@@ -118,33 +118,25 @@ export function WorkSections({ portfolio }: { portfolio: PortfolioData }) {
               </header>
               <div className={styles["services__grid"]}>
                 {services.map((service, index) => (
-                  <article className={`${styles["services__card"]} ${service.highlight ? styles["services__card--featured"] : ""}`} key={service.name}>
+                  <article className={`${styles["services__card"]} ${service.featured ? styles["services__card--featured"] : ""}`} key={service.name}>
                     <div className={styles["services__icon"]}>
                       <IconGlyph name={index === 0 ? "globe" : index === 1 ? "cart" : "code"} />
                       <span className={styles["services__index"]}>0{index + 1}</span>
                     </div>
                     <h3 className={styles["services__card-title"]}>{service.name}</h3>
                     <p className={styles["services__card-text"]}>{service.description}</p>
-                    <dl className={styles["services__detail-list"]}>
-                      <div className={styles["services__detail"]}>
-                        <dt>What you get</dt>
-                        <dd>{service.whatYouGet}</dd>
-                      </div>
-                      <div className={styles["services__detail"]}>
-                        <dt>Timeline</dt>
-                        <dd>{service.timeline}</dd>
-                      </div>
-                      <div className={styles["services__detail"]}>
-                        <dt>Best fit</dt>
-                        <dd>{service.bestFit}</dd>
-                      </div>
-                    </dl>
                     <a className={styles["services__link"]} href={service.href}>
                       {service.cta}
                       <IconGlyph name="arrowRight" />
                     </a>
                   </article>
                 ))}
+              </div>
+              <div className={styles["services__actions"]}>
+                <Link className="button button--light" href="/services">
+                  View all services
+                  <IconGlyph name="arrowRight" />
+                </Link>
               </div>
             </div>
         </div>

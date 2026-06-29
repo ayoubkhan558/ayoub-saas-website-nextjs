@@ -1,7 +1,7 @@
 import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
 import { CaseStudyBrowserMockup } from "./CaseStudyBrowserMockup";
 import { CaseStudySectionHeader } from "./CaseStudySectionHeader";
-import styles from "./Ape24ProCaseStudy.module.scss";
+import styles from "./CaseStudyDesktopLayout.module.scss";
 
 function getPreviewImage(label: string) {
   const url = label.startsWith("http") ? label : `https://${label}`;

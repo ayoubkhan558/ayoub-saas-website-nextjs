@@ -1,4 +1,149 @@
-{ 
+{
+  "pagano-law": {
+    "slug": "pagano-law",
+    "client": "Pagano Law",
+    "urlLabel": "paganolaw.net",
+    "eyebrow": "Case study / Pagano Law",
+    "headline": "A complete law firm website rebuild with Bricks Builder, better performance, and lower operating costs.",
+    "tagline": "Redesigned from Divi, rebuilt from scratch in Bricks Builder, and simplified the client's entire website infrastructure.",
+    "overview": "Pagano Law had an outdated Divi-based website that was difficult to maintain, slower than necessary, and tied to an unnecessarily expensive hosting setup. The project involved a complete redesign and a fresh Bricks Builder development, while also consolidating hosting, domains, email, and website services into a single provider. The result was a faster, easier-to-manage website and approximately $1,000 in annual infrastructure savings.",
+    "facts": [
+      {
+        "label": "Industry",
+        "value": "Law Firm"
+      },
+      {
+        "label": "Objective",
+        "value": "Complete redesign, improve performance, simplify management, and reduce infrastructure costs"
+      },
+      {
+        "label": "Project type",
+        "value": "WordPress redesign and custom Bricks Builder development"
+      }
+    ],
+    "challenges": [
+      {
+        "title": "Heavy Divi website",
+        "text": "The existing Divi Builder website was difficult to maintain, contained unnecessary overhead, and lacked a scalable foundation for future growth."
+      },
+      {
+        "title": "Scattered infrastructure",
+        "text": "Hosting, domains, email, and related services were spread across multiple providers, making management complicated and increasing recurring costs."
+      },
+      {
+        "title": "Limited editing workflow",
+        "text": "The client needed a cleaner CMS experience that allowed content updates without dealing with bulky page-builder structures."
+      }
+    ],
+    "results": [
+      {
+        "title": "Complete Bricks Builder rebuild",
+        "text": "The website was redesigned and rebuilt from scratch using Bricks Builder with reusable components, dynamic templates, and a cleaner development architecture."
+      },
+      {
+        "title": "Around $1,000 saved annually",
+        "text": "The client's hosting, domain, email, and website services were consolidated into a single provider, eliminating unnecessary premium plans and duplicate subscriptions."
+      },
+      {
+        "title": "Simplified long-term maintenance",
+        "text": "The new CMS structure, dynamic templates, and optimized plugin stack make future updates significantly easier while improving overall performance."
+      }
+    ],
+    "tools": [
+      "bricks-builder",
+      "advanced-custom-fields",
+      "slim-seo",
+      "google-site-kit",
+      "happyfiles",
+      "wordpress"
+    ],
+    "performanceNote": "The project focused on replacing Divi with a lightweight Bricks Builder architecture, reducing unnecessary assets, improving maintainability, and creating a faster editing experience while lowering long-term infrastructure costs.",
+    "branding": {
+      "title": "Professional legal branding with modern editorial styling.",
+      "text": "The visual identity combines elegant serif typography with a clean sans-serif interface to establish trust, readability, and professionalism throughout the website.",
+      "logoMark": "PL",
+      "fontName": "Libre Baskerville + Inter",
+      "fontMeta": "Libre Baskerville is used for headings to reinforce authority, while Inter provides clean, readable body text and interface elements.",
+      "palette": [
+        {
+          "label": "Primary",
+          "value": "#877FFA"
+        },
+        {
+          "label": "Secondary",
+          "value": "#231F20"
+        },
+        {
+          "label": "Accent",
+          "value": "#F0EDE2"
+        },
+        {
+          "label": "Background",
+          "value": "#FFFFFF"
+        }
+      ]
+    },
+    "desktopPages": [
+      {
+        "name": "Home",
+        "type": "Firm overview and lead generation"
+      },
+      {
+        "name": "Practice Areas",
+        "type": "Dynamic legal service templates"
+      },
+      {
+        "name": "Attorney Profiles",
+        "type": "Dynamic team pages powered by ACF"
+      },
+      {
+        "name": "Testimonials",
+        "type": "Dynamic client review system"
+      },
+      {
+        "name": "Contact",
+        "type": "Conversion-focused inquiry page"
+      }
+    ],
+    "responsiveBenefits": [
+      "Optimized layouts across desktop, tablet, and mobile devices.",
+      "Dynamic templates reduce repetitive content management.",
+      "Cleaner editing workflow for the client.",
+      "Lower maintenance costs with fewer plugins and reusable components.",
+      "Consolidated infrastructure makes ongoing administration much easier."
+    ],
+    "testimonial": {
+      "quote": "The new website is dramatically easier to manage, noticeably faster, and consolidating our services into one provider reduced unnecessary yearly expenses.",
+      "author": "Pagano Law",
+      "meta": "Website redesign and infrastructure optimization"
+    },
+    "cta": {
+      "heading": "Need a website that's faster and costs less to maintain?",
+      "text": "Whether you're rebuilding an outdated WordPress site or migrating away from a heavy page builder, I can design, develop, and optimize a solution that's built for long-term growth.",
+      "buttonText": "Start Your Project"
+    },
+    "pageSpeed": {
+      "source": "Google PageSpeed Insights",
+      "testedUrl": "https://paganolaw.net",
+      "measuredAt": "2026-06-29",
+      "mobile": {
+        "performance": 55,
+        "fcp": "7.3 s",
+        "lcp": "11.6 s",
+        "cls": "0.054",
+        "tbt": "90 ms",
+        "speedIndex": "10.2 s"
+      },
+      "desktop": {
+        "performance": 79,
+        "fcp": "1.4 s",
+        "lcp": "2.3 s",
+        "cls": "0.03",
+        "tbt": "50 ms",
+        "speedIndex": "2.5 s"
+      }
+    }
+  },
   "5gstore": {
     "slug": "5gstore",
     "client": "5gStore",
@@ -8,9 +153,18 @@
     "tagline": "Cleaner product discovery, faster updates, and a checkout path built around intent.",
     "overview": "5gStore needed a WooCommerce site that presented products clearly, reduced friction in the shopping flow, and gave the store team a manageable Elementor and WordPress setup.",
     "facts": [
-      { "label": "Industry", "value": "E-commerce and connectivity products" },
-      { "label": "Objective", "value": "Improve product pages, shopping flow, and CMS editing" },
-      { "label": "Project type", "value": "WooCommerce customization and Elementor implementation" }
+      {
+        "label": "Industry",
+        "value": "E-commerce and connectivity products"
+      },
+      {
+        "label": "Objective",
+        "value": "Improve product pages, shopping flow, and CMS editing"
+      },
+      {
+        "label": "Project type",
+        "value": "WooCommerce customization and Elementor implementation"
+      }
     ],
     "challenges": [
       {
@@ -41,10 +195,10 @@
       }
     ],
     "tools": [
-      { "name": "WooCommerce", "mark": "WC", "meta": "Storefront and product system" },
-      { "name": "Elementor Pro", "mark": "EL", "meta": "Reusable page sections" },
-      { "name": "WordPress CMS", "mark": "WP", "meta": "Content and product management" },
-      { "name": "Performance QA", "mark": "QA", "meta": "Mobile and load-time checks" }
+      "woocommerce",
+      "elementor",
+      "wordpress",
+      "performance-qa"
     ],
     "performanceNote": "The build focused on lighter page structure, mobile-first product sections, and checkout-oriented UX so the store stayed usable across common buyer devices.",
     "branding": {
@@ -54,16 +208,37 @@
       "fontName": "System sans",
       "fontMeta": "Readable storefront typography tuned for product names, prices, specs, and checkout copy.",
       "palette": [
-        { "label": "Ink", "tone": "dark" },
-        { "label": "Steel", "tone": "gray" },
-        { "label": "White", "tone": "light" },
-        { "label": "Line", "tone": "accent" }
+        {
+          "label": "Ink",
+          "tone": "dark"
+        },
+        {
+          "label": "Steel",
+          "tone": "gray"
+        },
+        {
+          "label": "White",
+          "tone": "light"
+        },
+        {
+          "label": "Line",
+          "tone": "accent"
+        }
       ]
     },
     "desktopPages": [
-      { "name": "Storefront", "type": "Featured products and conversion routes" },
-      { "name": "Category", "type": "Product browsing and comparison" },
-      { "name": "Product", "type": "Specs, trust cues, and cart action" }
+      {
+        "name": "Storefront",
+        "type": "Featured products and conversion routes"
+      },
+      {
+        "name": "Category",
+        "type": "Product browsing and comparison"
+      },
+      {
+        "name": "Product",
+        "type": "Specs, trust cues, and cart action"
+      }
     ],
     "responsiveBenefits": [
       "Product sections stay readable on mobile screens.",
@@ -79,6 +254,27 @@
       "heading": "Like what you see? Let's make it happen for you.",
       "text": "Send the project details and I will map the build, stack, and estimate.",
       "buttonText": "Get a build estimate"
+    },
+    "pageSpeed": {
+      "source": "Google PageSpeed Insights",
+      "testedUrl": "https://5gstore.pk",
+      "measuredAt": "2026-06-29",
+      "mobile": {
+        "performance": 83,
+        "fcp": "1.6 s",
+        "lcp": "4.1 s",
+        "cls": "0",
+        "tbt": "160 ms",
+        "speedIndex": "3.8 s"
+      },
+      "desktop": {
+        "performance": 95,
+        "fcp": "0.4 s",
+        "lcp": "1.2 s",
+        "cls": "0",
+        "tbt": "40 ms",
+        "speedIndex": "1.7 s"
+      }
     }
   },
   "pin-auto": {
@@ -90,9 +286,18 @@
     "tagline": "Clear positioning, practical feature education, and a faster path from interest to inquiry.",
     "overview": "PinAuto needed a website that could explain a Pinterest automation product without making the visitor work too hard. The build focused on product positioning, integration-focused sections, clearer feature hierarchy, and a WordPress editing structure the team could keep updating.",
     "facts": [
-      { "label": "Industry", "value": "Marketing automation and Pinterest workflows" },
-      { "label": "Objective", "value": "Explain the product, clarify use cases, and improve inquiry paths" },
-      { "label": "Project type", "value": "WordPress product website with Bricks Builder implementation" }
+      {
+        "label": "Industry",
+        "value": "Marketing automation and Pinterest workflows"
+      },
+      {
+        "label": "Objective",
+        "value": "Explain the product, clarify use cases, and improve inquiry paths"
+      },
+      {
+        "label": "Project type",
+        "value": "WordPress product website with Bricks Builder implementation"
+      }
     ],
     "challenges": [
       {
@@ -131,10 +336,10 @@
       }
     ],
     "tools": [
-      { "name": "WordPress CMS", "mark": "WP", "meta": "Content management and product page publishing" },
-      { "name": "Bricks Builder", "mark": "BR", "meta": "Reusable visual builder sections and layout system" },
-      { "name": "Pinterest API Positioning", "mark": "API", "meta": "Integration-focused content and workflow explanation" },
-      { "name": "Performance QA", "mark": "QA", "meta": "Mobile, load-time, and interaction checks" }
+      "wordpress",
+      "bricks-builder",
+      "pinterest-api",
+      "performance-qa"
     ],
     "performanceNote": "The implementation focused on lean page sections, reusable builder components, and mobile-first product messaging so the page stayed clear and fast while explaining a technical automation workflow.",
     "branding": {
@@ -144,16 +349,37 @@
       "fontName": "Modern sans",
       "fontMeta": "Readable product typography tuned for feature explanations, workflow copy, and conversion sections.",
       "palette": [
-        { "label": "Product ink", "tone": "dark" },
-        { "label": "Interface gray", "tone": "gray" },
-        { "label": "Clean white", "tone": "light" },
-        { "label": "Pinterest signal", "tone": "accent" }
+        {
+          "label": "Product ink",
+          "tone": "dark"
+        },
+        {
+          "label": "Interface gray",
+          "tone": "gray"
+        },
+        {
+          "label": "Clean white",
+          "tone": "light"
+        },
+        {
+          "label": "Pinterest signal",
+          "tone": "accent"
+        }
       ]
     },
     "desktopPages": [
-      { "name": "Home", "type": "Product positioning, value proposition, and action route" },
-      { "name": "Features", "type": "Automation workflow and benefit sections" },
-      { "name": "Contact", "type": "Inquiry path and product-fit messaging" }
+      {
+        "name": "Home",
+        "type": "Product positioning, value proposition, and action route"
+      },
+      {
+        "name": "Features",
+        "type": "Automation workflow and benefit sections"
+      },
+      {
+        "name": "Contact",
+        "type": "Inquiry path and product-fit messaging"
+      }
     ],
     "responsiveBenefits": [
       "Feature explanations stay readable on mobile without long text blocks.",
@@ -169,6 +395,27 @@
       "heading": "Like what you see? Let's make it happen for you.",
       "text": "Send the project details and I will map the build, stack, and estimate.",
       "buttonText": "Get a build estimate"
+    },
+    "pageSpeed": {
+      "source": "Google PageSpeed Insights",
+      "testedUrl": "https://pin-auto.com",
+      "measuredAt": "2026-06-29",
+      "mobile": {
+        "performance": 92,
+        "fcp": "1.5 s",
+        "lcp": "2.4 s",
+        "cls": "0.052",
+        "tbt": "70 ms",
+        "speedIndex": "5.6 s"
+      },
+      "desktop": {
+        "performance": 97,
+        "fcp": "0.3 s",
+        "lcp": "0.5 s",
+        "cls": "0.003",
+        "tbt": "70 ms",
+        "speedIndex": "1.7 s"
+      }
     }
   },
   "markedine": {
@@ -180,9 +427,18 @@
     "tagline": "Cleaner service sections, stronger trust flow, and a WhatsApp-led inquiry path.",
     "overview": "Markedine needed a service website that made its offers easier to understand and gave visitors a direct way to start a conversation. The build focused on clearer service structure, stronger conversion sections, mobile readability, and WordPress editing control.",
     "facts": [
-      { "label": "Industry", "value": "Digital services and marketing" },
-      { "label": "Objective", "value": "Improve service clarity, conversion paths, and mobile contact flow" },
-      { "label": "Project type", "value": "WordPress and Elementor service website" }
+      {
+        "label": "Industry",
+        "value": "Digital services and marketing"
+      },
+      {
+        "label": "Objective",
+        "value": "Improve service clarity, conversion paths, and mobile contact flow"
+      },
+      {
+        "label": "Project type",
+        "value": "WordPress and Elementor service website"
+      }
     ],
     "challenges": [
       {
@@ -221,10 +477,10 @@
       }
     ],
     "tools": [
-      { "name": "WordPress CMS", "mark": "WP", "meta": "Content management and page publishing" },
-      { "name": "Elementor Pro", "mark": "EL", "meta": "Reusable service page sections and visual editing" },
-      { "name": "WhatsApp Flow", "mark": "WA", "meta": "Lead contact route and mobile-first inquiry action" },
-      { "name": "Performance QA", "mark": "QA", "meta": "Responsive checks and launch polish" }
+      "wordpress",
+      "elementor",
+      "whatsapp-flow",
+      "performance-qa"
     ],
     "performanceNote": "The page structure was kept practical and lightweight for a service website: clear sections, focused calls to action, responsive spacing, and direct contact routes for mobile visitors.",
     "branding": {
@@ -234,16 +490,37 @@
       "fontName": "Modern sans",
       "fontMeta": "Readable service typography for headings, short descriptions, and mobile conversion areas.",
       "palette": [
-        { "label": "Service ink", "tone": "dark" },
-        { "label": "Neutral gray", "tone": "gray" },
-        { "label": "Clean white", "tone": "light" },
-        { "label": "Contact line", "tone": "accent" }
+        {
+          "label": "Service ink",
+          "tone": "dark"
+        },
+        {
+          "label": "Neutral gray",
+          "tone": "gray"
+        },
+        {
+          "label": "Clean white",
+          "tone": "light"
+        },
+        {
+          "label": "Contact line",
+          "tone": "accent"
+        }
       ]
     },
     "desktopPages": [
-      { "name": "Home", "type": "Offer positioning and contact route" },
-      { "name": "Services", "type": "Service cards and proof sections" },
-      { "name": "Contact", "type": "WhatsApp inquiry flow and lead prompt" }
+      {
+        "name": "Home",
+        "type": "Offer positioning and contact route"
+      },
+      {
+        "name": "Services",
+        "type": "Service cards and proof sections"
+      },
+      {
+        "name": "Contact",
+        "type": "WhatsApp inquiry flow and lead prompt"
+      }
     ],
     "responsiveBenefits": [
       "Service cards stay easy to scan on mobile screens.",
@@ -259,6 +536,27 @@
       "heading": "Like what you see? Let's make it happen for you.",
       "text": "Send the project details and I will map the build, stack, and estimate.",
       "buttonText": "Get a build estimate"
+    },
+    "pageSpeed": {
+      "source": "Google PageSpeed Insights",
+      "testedUrl": "https://markedine.com",
+      "measuredAt": "2026-06-29",
+      "mobile": {
+        "performance": 32,
+        "fcp": "3.8 s",
+        "lcp": "17.9 s",
+        "cls": "0",
+        "tbt": "1,920 ms",
+        "speedIndex": "8.3 s"
+      },
+      "desktop": {
+        "performance": 59,
+        "fcp": "0.8 s",
+        "lcp": "4.3 s",
+        "cls": "0.002",
+        "tbt": "380 ms",
+        "speedIndex": "1.7 s"
+      }
     }
   },
   "xgrid-b2b": {
@@ -270,9 +568,18 @@
     "tagline": "Flexible templates, structured content, and a CMS built for ongoing campaigns.",
     "overview": "Xgrid needed a custom-coded WordPress foundation for a B2B marketing site, with flexible templates, structured fields, and a content model that could support campaign pages over time.",
     "facts": [
-      { "label": "Industry", "value": "B2B marketing and technology services" },
-      { "label": "Objective", "value": "Build a custom CMS architecture for scalable marketing pages" },
-      { "label": "Project type", "value": "Custom WordPress theme with PHP, ACF, and REST patterns" }
+      {
+        "label": "Industry",
+        "value": "B2B marketing and technology services"
+      },
+      {
+        "label": "Objective",
+        "value": "Build a custom CMS architecture for scalable marketing pages"
+      },
+      {
+        "label": "Project type",
+        "value": "Custom WordPress theme with PHP, ACF, and REST patterns"
+      }
     ],
     "challenges": [
       {
@@ -303,10 +610,10 @@
       }
     ],
     "tools": [
-      { "name": "WordPress CMS", "mark": "WP", "meta": "Publishing platform" },
-      { "name": "PHP Templates", "mark": "PHP", "meta": "Custom theme logic" },
-      { "name": "Advanced Custom Fields", "mark": "ACF", "meta": "Structured content model" },
-      { "name": "REST API Patterns", "mark": "API", "meta": "Data-aware template structure" }
+      "wordpress",
+      "php",
+      "advanced-custom-fields",
+      "rest-api"
     ],
     "performanceNote": "The custom theme approach kept the page architecture leaner than a heavy builder setup, improving maintainability and giving the team more control over campaign performance.",
     "branding": {
@@ -316,16 +623,37 @@
       "fontName": "Modern sans",
       "fontMeta": "Clean marketing typography for service pages, long-form copy, and campaign modules.",
       "palette": [
-        { "label": "Carbon", "tone": "dark" },
-        { "label": "Graphite", "tone": "gray" },
-        { "label": "Cloud", "tone": "light" },
-        { "label": "Signal", "tone": "accent" }
+        {
+          "label": "Carbon",
+          "tone": "dark"
+        },
+        {
+          "label": "Graphite",
+          "tone": "gray"
+        },
+        {
+          "label": "Cloud",
+          "tone": "light"
+        },
+        {
+          "label": "Signal",
+          "tone": "accent"
+        }
       ]
     },
     "desktopPages": [
-      { "name": "Landing", "type": "B2B campaign story and CTA flow" },
-      { "name": "Services", "type": "Offer modules and proof blocks" },
-      { "name": "Insights", "type": "CMS-driven content structure" }
+      {
+        "name": "Landing",
+        "type": "B2B campaign story and CTA flow"
+      },
+      {
+        "name": "Services",
+        "type": "Offer modules and proof blocks"
+      },
+      {
+        "name": "Insights",
+        "type": "CMS-driven content structure"
+      }
     ],
     "responsiveBenefits": [
       "Campaign sections adapt cleanly from desktop to mobile.",
@@ -341,6 +669,27 @@
       "heading": "Like what you see? Let's make it happen for you.",
       "text": "Send the project details and I will map the build, stack, and estimate.",
       "buttonText": "Get a build estimate"
+    },
+    "pageSpeed": {
+      "source": "Google PageSpeed Insights",
+      "testedUrl": "https://xgrid.co/b2b-digital-marketing-agency",
+      "measuredAt": "2026-06-29",
+      "mobile": {
+        "performance": 51,
+        "fcp": "2.2 s",
+        "lcp": "4.1 s",
+        "cls": "0.119",
+        "tbt": "800 ms",
+        "speedIndex": "15.7 s"
+      },
+      "desktop": {
+        "performance": 68,
+        "fcp": "0.6 s",
+        "lcp": "1.1 s",
+        "cls": "0.184",
+        "tbt": "290 ms",
+        "speedIndex": "6.3 s"
+      }
     }
   }
 }

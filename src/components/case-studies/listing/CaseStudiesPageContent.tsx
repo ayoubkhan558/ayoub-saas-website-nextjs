@@ -19,7 +19,7 @@ export function CaseStudiesPageContent({
   return (
     <main>
       <CaseStudiesHero caseStudyCount={caseStudies.length} />
-      <section className={`section ${styles.list}`}>
+      <section className={`section ${styles.list}`} id="case-studies-list">
         <div className="section__inner">
           <div className={`container ${styles.list__inner}`}>
             <header className={styles.sectionHeader}>
@@ -33,7 +33,12 @@ export function CaseStudiesPageContent({
               </p>
             </header>
             <CaseStudyListingGrid studies={page.items} startIndex={(page.currentPage - 1) * CASE_STUDIES_PER_PAGE} />
-            <Pagination basePath="/case-studies" currentPage={page.currentPage} totalPages={page.totalPages} />
+            <Pagination
+              basePath="/case-studies"
+              currentPage={page.currentPage}
+              totalPages={page.totalPages}
+              anchorId="case-studies-list"
+            />
           </div>
         </div>
       </section>

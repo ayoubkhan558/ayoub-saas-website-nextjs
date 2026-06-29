@@ -1,0 +1,1940 @@
+{
+  "checkedAt": "2026-06-29T05:14:46.545Z",
+  "results": [
+    {
+      "rowNumber": 2,
+      "url": "https://dalailkhairat.com/",
+      "finalUrl": "https://dalailkhairat.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [],
+      "liveStack": [
+        "WordPress",
+        "Bricks",
+        "WooCommerce"
+      ]
+    },
+    {
+      "rowNumber": 3,
+      "url": "https://paganolaw.net/",
+      "finalUrl": "https://paganolaw.net/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [],
+      "liveStack": [
+        "WordPress",
+        "Bricks",
+        "WooCommerce",
+        "React",
+        "Vue"
+      ]
+    },
+    {
+      "rowNumber": 4,
+      "url": "https://www.kingsre.ae/",
+      "finalUrl": "https://www.kingsre.ae/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [],
+      "liveStack": [
+        "WordPress",
+        "Bricks",
+        "WooCommerce"
+      ]
+    },
+    {
+      "rowNumber": 5,
+      "url": "https://edinburghptacademy.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 6,
+      "url": "https://weinberger-aesthetics.de/",
+      "finalUrl": "https://www.weinberger-aesthetics.de/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bricks"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Bricks",
+        "WooCommerce"
+      ]
+    },
+    {
+      "rowNumber": 7,
+      "url": "https://glowcore.com.pk/",
+      "finalUrl": "https://glowcore.com.pk/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Shopify"
+      ],
+      "liveStack": [
+        "Shopify",
+        "Next.js",
+        "React",
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 8,
+      "url": "https://reppit.ai/",
+      "finalUrl": "https://reppit.ai/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Bricks"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 9,
+      "url": "https://sku-auto.com/",
+      "finalUrl": "https://sku-auto.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Bricks"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Bricks",
+        "WooCommerce",
+        "Shopify"
+      ]
+    },
+    {
+      "rowNumber": 10,
+      "url": "https://rebill.shop/",
+      "finalUrl": "https://rebill.shop/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Bricks"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Bricks",
+        "WooCommerce",
+        "Shopify"
+      ]
+    },
+    {
+      "rowNumber": 11,
+      "url": "https://bulk-edit.com/",
+      "finalUrl": "https://bulk-edit.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Bricks"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Bricks",
+        "WooCommerce",
+        "Shopify"
+      ]
+    },
+    {
+      "rowNumber": 12,
+      "url": "https://shoppable-video.com/",
+      "finalUrl": "https://shoppable-video.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Bricks"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Bricks",
+        "WooCommerce",
+        "Shopify"
+      ]
+    },
+    {
+      "rowNumber": 13,
+      "url": "https://301-redirect.app/",
+      "finalUrl": "https://301-redirect.app/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Bricks"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Bricks",
+        "WooCommerce",
+        "Shopify"
+      ]
+    },
+    {
+      "rowNumber": 14,
+      "url": "https://theme-scheduler.com/",
+      "finalUrl": "https://theme-scheduler.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Bricks"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Bricks",
+        "WooCommerce",
+        "Shopify"
+      ]
+    },
+    {
+      "rowNumber": 15,
+      "url": "https://pin-auto.com/",
+      "finalUrl": "https://pin-auto.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Bricks"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Bricks",
+        "WooCommerce",
+        "Shopify"
+      ]
+    },
+    {
+      "rowNumber": 16,
+      "url": "https://webp-image.com/",
+      "finalUrl": "https://webp-image.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Bricks"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Bricks",
+        "WooCommerce",
+        "Shopify"
+      ]
+    },
+    {
+      "rowNumber": 17,
+      "url": "https://serpio.app/",
+      "finalUrl": "https://serpio.app/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Bricks"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "Bricks",
+        "WooCommerce",
+        "React",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 18,
+      "url": "https://www.carptrac.com.fj/",
+      "finalUrl": "https://www.carptrac.com.fj/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor",
+        "WooCommerce"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "WooCommerce",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 19,
+      "url": "https://www.markedine.com/",
+      "finalUrl": "https://markedine.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 23,
+      "url": "http://5gstore.pk/",
+      "finalUrl": "https://5gstore.pk/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor",
+        "WooCommerce"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "WooCommerce",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 24,
+      "url": "https://serveekay.com/",
+      "finalUrl": "https://serveekay.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Bricks"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Bricks",
+        "WooCommerce"
+      ]
+    },
+    {
+      "rowNumber": 26,
+      "url": "https://lws.academy/",
+      "finalUrl": "https://lws.academy/",
+      "httpStatus": 200,
+      "status": "redesigned",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "Next.js",
+        "React"
+      ]
+    },
+    {
+      "rowNumber": 27,
+      "url": "https://50stars.pro/",
+      "finalUrl": "https://50stars.pro/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "WooCommerce",
+        "Vue",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 28,
+      "url": "https://shininghorizon.com/",
+      "finalUrl": "https://shininghorizon.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "TailwindCSS"
+      ]
+    },
+    {
+      "rowNumber": 29,
+      "url": "http://www.babypng.com/",
+      "finalUrl": "https://babypng.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 30,
+      "url": "https://naseeha.surge.sh/",
+      "finalUrl": "https://naseeha.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 32,
+      "url": "https://www.juhayna-co.com/",
+      "status": "unreachable",
+      "reason": "CERT_HAS_EXPIRED",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 33,
+      "url": "https://waitiyi.surge.sh/",
+      "finalUrl": "https://waitiyi.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "rowNumber": 34,
+      "url": "https://waitifi-front.surge.sh/",
+      "finalUrl": "https://waitifi-front.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 35,
+      "url": "http://punisher-react.surge.sh/",
+      "finalUrl": "http://punisher-react.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "React"
+      ],
+      "liveStack": [
+        "React"
+      ]
+    },
+    {
+      "rowNumber": 36,
+      "url": "https://tembekasua.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "React",
+        "TailwindCSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 37,
+      "url": "https://mkzmart.com/",
+      "finalUrl": "https://mkzmart.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "WooCommerce",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 38,
+      "url": "https://studyly.com/",
+      "finalUrl": "https://studyly.com/at",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 39,
+      "url": "https://strain-proxies.surge.sh/",
+      "finalUrl": "https://strain-proxies.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "rowNumber": 40,
+      "url": "https://strainproxies.surge.sh/",
+      "finalUrl": "https://strainproxies.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "rowNumber": 41,
+      "url": "https://paper-prenza.surge.sh/",
+      "finalUrl": "https://paper-prenza.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "jQuery",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 43,
+      "url": "https://traffictinker.surge.sh/",
+      "finalUrl": "https://traffictinker.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "jQuery",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 44,
+      "url": "https://wallsstreetbets.surge.sh/",
+      "finalUrl": "https://wallsstreetbets.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "rowNumber": 45,
+      "url": "https://pure-for-you.surge.sh/",
+      "finalUrl": "https://pure-for-you.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "React",
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 46,
+      "url": "https://lazhora.surge.sh/",
+      "finalUrl": "https://lazhora.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 47,
+      "url": "https://leadgen-fv.surge.sh/",
+      "finalUrl": "https://leadgen-fv.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 48,
+      "url": "https://monoami.surge.sh/",
+      "finalUrl": "https://monoami.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "jQuery",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 49,
+      "url": "https://bcd-landing.surge.sh/",
+      "finalUrl": "https://bcd-landing.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 50,
+      "url": "https://assertive-industries.surge.sh/",
+      "finalUrl": "https://assertive-industries.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 51,
+      "url": "https://casino-bonuses-finder.surge.sh/",
+      "finalUrl": "https://casino-bonuses-finder.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "rowNumber": 52,
+      "url": "https://cartoon-landing.surge.sh/",
+      "finalUrl": "https://cartoon-landing.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 53,
+      "url": "https://art-digital.surge.sh/",
+      "finalUrl": "https://art-digital.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 54,
+      "url": "sixagri-front.surge.sh",
+      "usableUrl": null,
+      "status": "unknown-no-url",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 55,
+      "url": "https://yt-converter-front.surge.sh/",
+      "finalUrl": "https://yt-converter-front.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 56,
+      "url": "https://starfm.surge.sh/",
+      "finalUrl": "https://starfm.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 57,
+      "url": "https://yt-wav.surge.sh/",
+      "finalUrl": "https://yt-wav.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 58,
+      "url": "10ans.surge.sh",
+      "usableUrl": null,
+      "status": "unknown-no-url",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 59,
+      "url": "https://tokyo-ten.surge.sh/",
+      "finalUrl": "https://tokyo-ten.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 60,
+      "url": "https://jackson-cv.surge.sh/",
+      "finalUrl": "https://jackson-cv.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "React",
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 61,
+      "url": "https://fv-kodak-connect.pages.dev/",
+      "finalUrl": "https://fv-kodak-connect.pages.dev/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 62,
+      "url": "https://portoro.pages.dev/",
+      "finalUrl": "https://portoro.pages.dev/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "rowNumber": 63,
+      "url": "https://review-website.pages.dev/",
+      "finalUrl": "https://review-website.pages.dev/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 64,
+      "url": "https://refill-admin.surge.sh/",
+      "finalUrl": "https://refill-admin.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 65,
+      "url": "https://fv-bitss.pages.dev/",
+      "finalUrl": "https://fv-bitss.pages.dev/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 66,
+      "url": "https://safe-affinity.surge.sh/",
+      "finalUrl": "https://safe-affinity.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 67,
+      "url": "https://nova-markets.surge.sh/",
+      "finalUrl": "https://nova-markets.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "React",
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 68,
+      "url": "https://automovel-landing.surge.sh/",
+      "finalUrl": "https://automovel-landing.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "rowNumber": 69,
+      "url": "https://guyana-landing.surge.sh/",
+      "finalUrl": "https://guyana-landing.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Shopify",
+        "React"
+      ]
+    },
+    {
+      "rowNumber": 70,
+      "url": "liquid-garden.surge.sh",
+      "usableUrl": null,
+      "status": "unknown-no-url",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 71,
+      "url": "https://nobux.surge.sh/",
+      "finalUrl": "https://nobux.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "rowNumber": 72,
+      "url": "https://accore-pwa.surge.sh/",
+      "finalUrl": "https://accore-pwa.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "rowNumber": 73,
+      "url": "ventoy.surge.sh",
+      "usableUrl": null,
+      "status": "unknown-no-url",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 74,
+      "url": "https://free-ela.surge.sh/",
+      "finalUrl": "https://free-ela.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [],
+      "liveStack": [
+        "WordPress",
+        "React",
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 75,
+      "url": "https://www.fewcents.co/",
+      "finalUrl": "https://fewcents.co/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 76,
+      "url": "https://xnation.com/",
+      "finalUrl": "https://xnation.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "React",
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 77,
+      "url": "https://promo-intelligence-pro.netlify.app/",
+      "finalUrl": "https://promo-intelligence-pro.netlify.app/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "React",
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "rowNumber": 78,
+      "url": "https://mugnsoft.com/",
+      "finalUrl": "https://mugnsoft.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "WooCommerce",
+        "React",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 79,
+      "url": "https://polygon.sa/",
+      "finalUrl": "https://polygon.sa/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "WooCommerce",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 80,
+      "url": "https://thefinancologist.co/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 81,
+      "url": "https://assessment-intelligent.netlify.app/",
+      "finalUrl": "https://assessment-intelligent.netlify.app/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 82,
+      "url": "https://dhabas.netlify.app/",
+      "finalUrl": "https://dhabas.netlify.app/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 83,
+      "url": "https://kuza-app.netlify.app/",
+      "finalUrl": "https://kuza-app.netlify.app/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 84,
+      "url": "https://monoami.surge.sh/",
+      "finalUrl": "https://monoami.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 85,
+      "url": "https://mrchrissyservices.netlify.app/",
+      "status": "unreachable",
+      "reason": "UND_ERR_CONNECT_TIMEOUT",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 86,
+      "url": "https://www.serviceherd.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 87,
+      "url": "https://vikfougere.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 88,
+      "url": "https://tripo.netlify.app/",
+      "finalUrl": "https://tripo.netlify.app/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 89,
+      "url": "https://erepowerfl.com/",
+      "status": "unreachable",
+      "reason": "UND_ERR_CONNECT_TIMEOUT",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 90,
+      "url": "https://katy-body.netlify.app/",
+      "finalUrl": "https://katy-body.netlify.app/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 91,
+      "url": "https://www.openpantry.com.au/",
+      "status": "unreachable",
+      "reason": "UND_ERR_CONNECT_TIMEOUT",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 92,
+      "url": "https://kenmoeagency.com/",
+      "status": "offline-domain-expired",
+      "reason": "EAI_AGAIN",
+      "originalStack": [],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 93,
+      "url": "http://www.p-intelligence.com/",
+      "finalUrl": "http://www.p-intelligence.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 94,
+      "url": "https://luxurylagoondubai.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 96,
+      "url": "eningo.se",
+      "usableUrl": null,
+      "status": "unknown-no-url",
+      "originalStack": [],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 97,
+      "url": "https://www.thegoldenfork.com.mt/",
+      "finalUrl": "https://www.thegoldenfork.com.mt/",
+      "httpStatus": 403,
+      "status": "live-http-error",
+      "originalStack": [],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 98,
+      "url": "https://theinfineights.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 99,
+      "url": "https://digihub.li/",
+      "finalUrl": "https://digihub.li/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 100,
+      "url": "https://cheapzy.net/",
+      "finalUrl": "https://cheapzy.net/",
+      "httpStatus": 403,
+      "status": "live-http-error",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 101,
+      "url": "http://magnet.social/",
+      "finalUrl": "http://magnet.social/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 102,
+      "url": "https://glowupdental.co.uk/",
+      "finalUrl": "https://glowupdental.co.uk/",
+      "httpStatus": 402,
+      "status": "live-http-error",
+      "originalStack": [
+        "Shopify"
+      ],
+      "liveStack": [
+        "Shopify",
+        "React"
+      ]
+    },
+    {
+      "rowNumber": 103,
+      "url": "https://morethanbath.com/",
+      "status": "unreachable",
+      "reason": "CERT_HAS_EXPIRED",
+      "originalStack": [
+        "Shopify"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 104,
+      "url": "https://championsmortgageteam.com/",
+      "finalUrl": "https://championsmortgageteam.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "Vue",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 105,
+      "url": "https://sunshieldinsurance.com/",
+      "finalUrl": "https://www.sunshieldins.com/",
+      "httpStatus": 200,
+      "status": "redesigned",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "React",
+        "Bootstrap"
+      ]
+    },
+    {
+      "rowNumber": 106,
+      "url": "http://www.acholyte.com/",
+      "finalUrl": "http://www.acholyte.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 107,
+      "url": "https://majik.bot/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "React",
+        "TailwindCSS",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 108,
+      "url": "https://new-beea11.webflow.io/",
+      "finalUrl": "https://new-beea11.webflow.io/",
+      "httpStatus": 404,
+      "status": "unreachable",
+      "originalStack": [],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 109,
+      "url": "http://209.126.1.56/~eshipshtml",
+      "status": "unreachable",
+      "reason": "UND_ERR_CONNECT_TIMEOUT",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 110,
+      "url": "https://website-mint-landing-page.vercel.app/",
+      "finalUrl": "https://website-mint-landing-page.vercel.app/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Next.js",
+        "React",
+        "TailwindCSS",
+        "CSS"
+      ],
+      "liveStack": [
+        "Next.js",
+        "React",
+        "TailwindCSS"
+      ]
+    },
+    {
+      "rowNumber": 111,
+      "url": "https://website-mint.netlify.app/",
+      "finalUrl": "https://website-mint.netlify.app/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Next.js",
+        "React",
+        "TailwindCSS",
+        "CSS"
+      ],
+      "liveStack": [
+        "Next.js",
+        "React",
+        "TailwindCSS"
+      ]
+    },
+    {
+      "rowNumber": 112,
+      "url": "https://epicsols.com/",
+      "finalUrl": "https://epicsols.com/",
+      "httpStatus": 200,
+      "status": "redesigned",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "WordPress",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 113,
+      "url": "https://ro.gold/",
+      "finalUrl": "https://ro.gold/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "React",
+        "Bootstrap"
+      ],
+      "liveStack": [
+        "Next.js",
+        "React"
+      ]
+    },
+    {
+      "rowNumber": 114,
+      "url": "https://reyesenvironmental.com/",
+      "finalUrl": "https://reyesenvironmental.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "WooCommerce",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 115,
+      "url": "https://50stars.pro/",
+      "finalUrl": "https://50stars.pro/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "WooCommerce",
+        "Vue",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 116,
+      "url": "https://yt-solutions.surge.sh/",
+      "finalUrl": "https://yt-solutions.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap"
+      ]
+    },
+    {
+      "rowNumber": 117,
+      "url": "https://seshy.surge.sh/",
+      "finalUrl": "https://seshy.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "React",
+        "Bootstrap"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 118,
+      "url": "https://episcols.surge.sh/",
+      "finalUrl": "https://episcols.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "React",
+        "Bootstrap"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 119,
+      "url": "http://chatter-react.surge.sh/",
+      "finalUrl": "http://chatter-react.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "React",
+        "Bootstrap"
+      ],
+      "liveStack": [
+        "React"
+      ]
+    },
+    {
+      "rowNumber": 120,
+      "url": "Future Pauments Tech",
+      "usableUrl": null,
+      "status": "unknown-no-url",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 121,
+      "url": "No Link",
+      "usableUrl": null,
+      "status": "unknown-no-url",
+      "originalStack": [
+        "Next.js",
+        "TailwindCSS",
+        "CSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 122,
+      "url": "http://bunny-mint.surge.sh/",
+      "finalUrl": "http://bunny-mint.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Vue",
+        "TailwindCSS"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 123,
+      "url": "No Link",
+      "usableUrl": null,
+      "status": "unknown-no-url",
+      "originalStack": [
+        "React",
+        "Bootstrap"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 124,
+      "url": "https://digihub.li/",
+      "finalUrl": "https://digihub.li/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 125,
+      "url": "https://luxurylagoondubai.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 126,
+      "url": "https://theroyalpin.com/",
+      "finalUrl": "https://theroyalpin.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 127,
+      "url": "https://danielleballfitness.com/",
+      "finalUrl": "https://danielleballfitness.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 128,
+      "url": "https://kargokdelivery-cqxwipnq8r.live-website.com/",
+      "finalUrl": "https://kargokdelivery-cqxwipnq8r.live-website.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "WooCommerce",
+        "Vue",
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 129,
+      "url": "https://centaurivision.ca/",
+      "finalUrl": "https://www.centaurivision.ca/",
+      "httpStatus": 200,
+      "status": "redesigned",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "React"
+      ]
+    },
+    {
+      "rowNumber": 130,
+      "url": "https://smartavlasia.com/",
+      "finalUrl": "https://smartavlasia.com/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 131,
+      "url": "https://robertw264.sg-host.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 132,
+      "url": "https://thaivisaexpert.com/",
+      "finalUrl": "https://thaivisaexpert.com/",
+      "httpStatus": 403,
+      "status": "live-http-error",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 133,
+      "url": null,
+      "usableUrl": null,
+      "status": "unknown-no-url",
+      "originalStack": [],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 134,
+      "url": null,
+      "usableUrl": null,
+      "status": "unknown-no-url",
+      "originalStack": [],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 135,
+      "url": "https://mc-servers.de/",
+      "status": "unreachable",
+      "reason": "UND_ERR_CONNECT_TIMEOUT",
+      "originalStack": [],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 136,
+      "url": "http://workslighter.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 138,
+      "url": "https://tallerpr.pixelprosai.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 139,
+      "url": "https://robertw274.sg-host.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 140,
+      "url": "https://tallerpr.com/",
+      "status": "unreachable",
+      "reason": "UND_ERR_CONNECT_TIMEOUT",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 141,
+      "url": "https://mundotallerpr.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 142,
+      "url": "https://mundotaller.pixelprosai.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 143,
+      "url": "https://guaranteedgrades.net/",
+      "finalUrl": "https://guaranteedgrades.net/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "WordPress",
+        "Elementor",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 144,
+      "url": "https://pms-study.com/",
+      "finalUrl": "https://pms-study.com/Public",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 25,
+      "url": "https://lp-video-site.surge.sh/",
+      "finalUrl": "https://lp-video-site.surge.sh/",
+      "httpStatus": 200,
+      "status": "live",
+      "originalStack": [
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "liveStack": [
+        "Bootstrap",
+        "jQuery"
+      ]
+    },
+    {
+      "rowNumber": 20,
+      "url": "http://www.dongolthedev.com/",
+      "status": "offline-domain-expired",
+      "reason": "ENOTFOUND",
+      "originalStack": [
+        "WordPress",
+        "Bricks"
+      ],
+      "liveStack": []
+    },
+    {
+      "rowNumber": 22,
+      "url": "https://web-metix.com/",
+      "finalUrl": "https://web-metix.com/",
+      "httpStatus": 403,
+      "status": "live-http-error",
+      "originalStack": [
+        "WordPress",
+        "Bricks"
+      ],
+      "liveStack": []
+    }
+  ]
+}

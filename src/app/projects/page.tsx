@@ -3,7 +3,11 @@ import { ContactFooter } from "@/components/landing/ContactFooter";
 import { SiteHeader } from "@/components/landing/SiteHeader";
 import { ProjectsPageContent } from "@/components/projects/ProjectsPageContent";
 import { getPageNumber } from "@/lib/pagination";
-import { projectArchiveItems } from "@/data/projectsArchive";
+import {
+  normalizeProjectFilter,
+  projectArchiveItems,
+  projectMatchesFilter,
+} from "@/data/projectsArchive";
 import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
@@ -23,23 +27,26 @@ export const metadata: Metadata = {
 export default async function ProjectsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ page?: string | string[] }>;
+  searchParams: Promise<{ page?: string | string[]; filter?: string | string[] }>;
 }) {
   const params = await searchParams;
   const currentPage = getPageNumber(params.page);
-  const liveCount = projectArchiveItems.filter((project) => project.websiteUrl).length;
-  const stackCount = new Set(
-    projectArchiveItems.map((project) => project.platformFrameworkBuilder).filter(Boolean),
-  ).size;
+  const activeFilter = normalizeProjectFilter(params.filter);
+  const filteredProjects = projectArchiveItems.filter((project) => projectMatchesFilter(project, activeFilter));
+  const projectCount = projectArchiveItems.length;
+  const liveCount = projectArchiveItems.filter((project) => project.projectStatus === "Live").length;
+  const screenshotCount = projectArchiveItems.filter((project) => Boolean(project.screenshot)).length;
 
   return (
     <div className="site-shell">
       <SiteHeader portfolio={portfolio} />
       <ProjectsPageContent
-        projects={projectArchiveItems}
+        projects={filteredProjects}
         currentPage={currentPage}
+        activeFilter={activeFilter}
+        projectCount={projectCount}
         liveCount={liveCount}
-        stackCount={stackCount}
+        screenshotCount={screenshotCount}
       />
       <ContactFooter portfolio={portfolio} />
     </div>

@@ -1,33 +1,67 @@
 import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
 import { CaseStudySectionHeader } from "./CaseStudySectionHeader";
-import styles from "./Ape24ProCaseStudy.module.scss";
+import styles from "./CaseStudyBranding.module.scss";
 
-function swatchClass(tone: CaseStudyDetailData["branding"]["palette"][number]["tone"]) {
+function swatchClass(tone?: CaseStudyDetailData["branding"]["palette"][number]["tone"]) {
+  if (!tone) {
+    return "";
+  }
+
   return styles[`swatch${tone[0].toUpperCase()}${tone.slice(1)}`];
 }
 
 export function CaseStudyBranding({ study }: { study: CaseStudyDetailData }) {
+  const primaryFont = study.branding.fontName.split("+")[0]?.trim() || study.branding.fontName;
+  const secondaryFont = study.branding.fontName.split("+")[1]?.trim() || "Interface system";
+
   return (
     <section className={`section ${styles.section}`}>
       <div className="section__inner">
         <div className={`container ${styles.sectionInner}`}>
-          <div className={styles.brandGrid}>
+          <div className={styles.brandHeader}>
             <CaseStudySectionHeader label="Branding and logo" title={study.branding.title} text={study.branding.text} />
-            <article className={styles.brandPanel}>
-              <div className={styles.logoCard}>
-                <span className={styles.logoMark}>{study.branding.logoMark}</span>
-                <div className={styles.typeCard}>
-                  <span className={styles.typeName}>{study.branding.fontName}</span>
-                  <span className={styles.typeMeta}>{study.branding.fontMeta}</span>
-                </div>
+          </div>
+          <div className={styles.brandCards}>
+            <article className={styles.brandCard}>
+              <span className={styles.brandCardLabel}>Typography</span>
+              <div className={styles.brandTypeStack}>
+                <span>Primary font</span>
+                <strong>{primaryFont}</strong>
               </div>
-              <div className={styles.swatchGrid} aria-label={`${study.client} color palette`}>
+              <div className={styles.brandTypeStack}>
+                <span>Secondary font</span>
+                <strong>{secondaryFont}</strong>
+              </div>
+              <p>{study.branding.fontMeta}</p>
+            </article>
+
+            <article className={styles.brandCard}>
+              <span className={styles.brandCardLabel}>Colors</span>
+              <div className={styles.brandColorHero} aria-label={`${study.client} primary and secondary colors`}>
                 {study.branding.palette.map((swatch) => (
-                  <span className={styles.swatch} key={swatch.label}>
-                    <span className={`${styles.swatchColor} ${swatchClass(swatch.tone)}`} />
-                    <span className={styles.swatchLabel}>{swatch.label}</span>
+                  <span className={styles.brandColorItem} key={swatch.label}>
+                    <span
+                      className={`${styles.brandColorCircle} ${swatchClass(swatch.tone)}`}
+                      style={swatch.value ? { background: swatch.value } : undefined}
+                    />
+                    <span>{swatch.label} color</span>
+                    <strong>{swatch.value}</strong>
                   </span>
                 ))}
+              </div>
+            </article>
+
+            <article className={styles.brandCard}>
+              <span className={styles.brandCardLabel}>Logo</span>
+              <div className={styles.brandLogoStage}>
+                <span className={styles.logoMark}>{study.branding.logoMark}</span>
+              </div>
+              <div className={styles.brandLogoNote}>
+                <span className={styles.brandLogoIcon}>+</span>
+                <div>
+                  <strong>Brand system</strong>
+                  <p>{study.branding.text}</p>
+                </div>
               </div>
             </article>
           </div>

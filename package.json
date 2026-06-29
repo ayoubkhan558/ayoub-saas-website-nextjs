@@ -24,6 +24,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "cache:project-screenshots": "node scripts/cache-project-screenshots.mjs",
     "lint": "next lint"
   },
   "dependencies": {

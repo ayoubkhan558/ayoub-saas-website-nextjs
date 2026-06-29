@@ -66,6 +66,12 @@
   color: #fff;
 }
 
+.pagination__page--active:hover {
+  border-color: var(--color-ink-violet);
+  background: var(--color-ink-violet);
+  color: #fff;
+}
+
 .pagination__link--disabled {
   pointer-events: none;
   opacity: 0.42;

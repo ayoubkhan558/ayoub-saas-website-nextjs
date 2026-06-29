@@ -14,7 +14,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       className={[
         styles["services-offer-card"],
         styles[`services-offer-card--${variant}`],
-        service.highlight ? styles["services-offer-card--featured"] : "",
+        service.featured ? styles["services-offer-card--featured"] : "",
       ]
         .filter(Boolean)
         .join(" ")}
@@ -74,7 +74,7 @@ export function ServicesOffers({ services }: { services: PortfolioData["services
           <header className={styles["services-section-header"]}>
             <span className={styles["services-page__eyebrow"]}>What I build</span>
             <h2>
-              Three focused ways to <i>ship the right thing.</i>
+              Services for websites that need <i>better execution.</i>
             </h2>
             <p>
               Each service is scoped around what a buyer actually needs: outcome, timeline, best fit, and what is

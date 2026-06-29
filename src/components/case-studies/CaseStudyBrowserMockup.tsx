@@ -1,4 +1,4 @@
-import styles from "./Ape24ProCaseStudy.module.scss";
+import styles from "./CaseStudyBrowserMockup.module.scss";
 
 export function CaseStudyBrowserMockup({
   label,

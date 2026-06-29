@@ -1,6 +1,6 @@
 import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
 import { CaseStudySectionHeader } from "./CaseStudySectionHeader";
-import styles from "./Ape24ProCaseStudy.module.scss";
+import styles from "./CaseStudyChallengesResults.module.scss";
 
 export function CaseStudyChallengesResults({ study }: { study: CaseStudyDetailData }) {
   return (

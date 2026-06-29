@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { IconGlyph } from "@/components/landing/IconGlyph";
 import { ContactFooter } from "@/components/landing/ContactFooter";
@@ -19,18 +20,6 @@ export const metadata: Metadata = {
     url: "/contact",
   },
 };
-
-const responseNotes = [
-  { label: "Reply window", value: "Usually within 24 hours" },
-  { label: "Best first step", value: "Send goals, URL, timeline, and budget range" },
-  { label: "Work style", value: "Clear scope, regular updates, clean handoff" },
-];
-
-const fitChecks = [
-  "You need a site or product interface that feels polished and loads fast.",
-  "You want someone who can connect UX, implementation, CMS editing, and launch details.",
-  "You prefer clear scope and practical delivery over vague calls and surprise changes.",
-];
 
 export default function ContactPage() {
   const profile = portfolio.profile;
@@ -84,6 +73,10 @@ export default function ContactPage() {
               <div className={styles["contact-card"]}>
                 <span className={styles["contact-page__eyebrow"]}>Direct contact</span>
                 <h2>Fastest way to reach me.</h2>
+                <p className={styles["contact-card__intro"]}>
+                  Send the project goal, current URL if there is one, and the outcome you need. I reply with a clear
+                  next step, not a vague sales call.
+                </p>
                 <div className={styles["contact-methods"]}>
                   <a className={styles["contact-method"]} href={`mailto:${profile.email}`}>
                     <span>Email</span>
@@ -101,36 +94,64 @@ export default function ContactPage() {
                     <IconGlyph name="externalLink" />
                   </a>
                 </div>
+                <dl className={styles["contact-details"]}>
+                  <div>
+                    <dt>Location</dt>
+                    <dd>{profile.location}</dd>
+                  </div>
+                  <div>
+                    <dt>Availability</dt>
+                    <dd>{profile.availability}</dd>
+                  </div>
+                  <div>
+                    <dt>Typical reply</dt>
+                    <dd>Within 24 hours</dd>
+                  </div>
+                  <div>
+                    <dt>Best brief</dt>
+                    <dd>Goal, URL, timeline, stack, and budget range</dd>
+                  </div>
+                </dl>
               </div>
 
-              <ContactForm />
+              <Suspense
+                fallback={
+                  <div className={styles["contact-form-card"]}>
+                    <div className={styles["contact-form-card__header"]}>
+                      <span className={styles["contact-page__eyebrow"]}>Project brief</span>
+                      <h2>Loading form.</h2>
+                    </div>
+                  </div>
+                }
+              >
+                <ContactForm />
+              </Suspense>
             </div>
           </div>
         </section>
 
-        <section className={`section ${styles["contact-fit"]}`}>
+        <section className={`section ${styles["contact-faqs"]}`}>
           <div className="section__inner">
-            <div className={`container ${styles["contact-fit__inner"]}`}>
-              <div className={styles["contact-fit__copy"]}>
-                <span className={styles["contact-page__eyebrow"]}>Good fit</span>
+            <div className={`container ${styles["contact-faqs__inner"]}`}>
+              <div className={styles["contact-faqs__copy"]}>
+                <span className={styles["contact-page__eyebrow"]}>FAQs</span>
                 <h2>
-                  Best when you need <i>clear decisions</i> with production code.
+                  Questions clients ask <i>before starting.</i>
                 </h2>
+                <p>
+                  Short answers on project fit, cost, timelines, and taking over an existing site or codebase.
+                </p>
               </div>
-              <div className={styles["contact-fit__grid"]}>
-                {fitChecks.map((item) => (
-                  <div className={styles["contact-fit__item"]} key={item}>
-                    <IconGlyph name="check" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <div className={styles["contact-response-grid"]}>
-                {responseNotes.map((note) => (
-                  <div className={styles["contact-response-card"]} key={note.label}>
-                    <span>{note.label}</span>
-                    <strong>{note.value}</strong>
-                  </div>
+              <div className={styles["contact-faqs__grid"]}>
+                {portfolio.faqs.map((faq, index) => (
+                  <details className={styles["contact-faq-card"]} key={faq.question} open={index === 0}>
+                    <summary className={styles["contact-faq-card__question"]}>
+                      <span className={styles["contact-faq-card__index"]}>{String(index + 1).padStart(2, "0")}</span>
+                      <span className={styles["contact-faq-card__question-text"]}>{faq.question}</span>
+                      <span className={styles["contact-faq-card__toggle"]} aria-hidden="true" />
+                    </summary>
+                    <p className={styles["contact-faq-card__answer"]}>{faq.answer}</p>
+                  </details>
                 ))}
               </div>
             </div>
