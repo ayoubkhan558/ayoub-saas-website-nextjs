@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { type MouseEvent, useEffect, useRef, useState } from "react";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
 import { IconGlyph } from "./IconGlyph";
 import styles from "./SiteHeader.module.scss";
@@ -12,6 +12,8 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("top");
+  const [floatingNavAllowed, setFloatingNavAllowed] = useState(false);
+  const headerRef = useRef<HTMLElement | null>(null);
   const pathname = usePathname();
   const profile = portfolio.profile;
   const referralHref = `/contact?subject=${encodeURIComponent("Referral client intro")}&details=${encodeURIComponent(
@@ -21,6 +23,17 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   const openContactPanel = () => {
     setMenuOpen(false);
     setContactOpen(true);
+  };
+
+  const handleContactTrigger = (event?: MouseEvent<HTMLElement>) => {
+    event?.preventDefault();
+    openContactPanel();
+  };
+
+  const handleContactPanelClick = (event: MouseEvent<HTMLDivElement>) => {
+    if (event.target === event.currentTarget) {
+      setContactOpen(false);
+    }
   };
 
   useEffect(() => {
@@ -54,7 +67,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
     { label: "Testimonials", href: "#proof", sectionId: "proof" },
     { label: "FAQ'S", href: "#faqs", sectionId: "faqs" },
   ];
-  const showFloatingNav = pathname === "/";
+  const showFloatingNav = pathname === "/" && floatingNavAllowed;
 
   useEffect(() => {
     if (pathname !== "/") {
@@ -93,8 +106,48 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
     };
   }, [pathname]);
 
+  useEffect(() => {
+    if (pathname !== "/") {
+      setFloatingNavAllowed(false);
+      return;
+    }
+
+    const header = headerRef.current;
+    const footer = document.querySelector("footer");
+
+    if (!header || !footer) {
+      setFloatingNavAllowed(true);
+      return;
+    }
+
+    let footerVisible = false;
+
+    const updateFloatingNav = () => {
+      setFloatingNavAllowed(window.scrollY > header.offsetHeight && !footerVisible);
+    };
+
+    const footerObserver = new IntersectionObserver(
+      (entries) => {
+        footerVisible = entries.some((entry) => entry.isIntersecting);
+        updateFloatingNav();
+      },
+      { threshold: 0.01 },
+    );
+
+    footerObserver.observe(footer);
+    updateFloatingNav();
+    window.addEventListener("scroll", updateFloatingNav, { passive: true });
+    window.addEventListener("resize", updateFloatingNav);
+
+    return () => {
+      footerObserver.disconnect();
+      window.removeEventListener("scroll", updateFloatingNav);
+      window.removeEventListener("resize", updateFloatingNav);
+    };
+  }, [pathname]);
+
   return (<>
-    <header className={styles["site-header"]}>
+    <header ref={headerRef} className={styles["site-header"]}>
       <div className={styles["site-header__announcement"]} aria-label="Portfolio updates">
         <div className={`${styles["site-header__announcement-inner"]} container`}>
           <div className={styles["site-header__announcement-track"]}>
@@ -112,17 +165,22 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
 
         <nav className={styles["site-header__nav-links"]} aria-label="Primary navigation">
           {portfolio.navLinks.map((link) => (
-            <Link key={link.href} className={styles["site-header__nav-link"]} href={link.href}>
+            <Link
+              key={link.href}
+              className={styles["site-header__nav-link"]}
+              href={link.href}
+              onClick={link.label.toLowerCase() === "contact" ? handleContactTrigger : undefined}
+            >
               {link.label}
             </Link>
           ))}
         </nav>
 
         <div className={styles["site-header__nav-actions"]}>
-          <a className={styles["site-header__nav-login"]} href={`mailto:${profile.email}`}>
+          <button className={styles["site-header__nav-login"]} type="button" onClick={handleContactTrigger}>
             <IconGlyph name="mail" />
             Email
-          </a>
+          </button>
           <button className={`button button--small ${styles["site-header__nav-button"]}`} type="button" onClick={openContactPanel}>
             Get started
             <IconGlyph name="arrowRight" />
@@ -142,7 +200,12 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
 
       <div id="mobile-nav" className={`${styles["site-header__mobile-nav"]} ${menuOpen ? styles["site-header__mobile-nav--open"] : ""}`}>
         {portfolio.navLinks.map((link) => (
-          <Link className={styles["site-header__mobile-link"]} key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>
+          <Link
+            className={styles["site-header__mobile-link"]}
+            key={link.href}
+            href={link.href}
+            onClick={link.label.toLowerCase() === "contact" ? handleContactTrigger : () => setMenuOpen(false)}
+          >
             {link.label}
           </Link>
         ))}
@@ -155,9 +218,16 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
       <div
         className={`${styles["contact-panel"]} ${contactOpen ? styles["contact-panel--open"] : ""}`}
         aria-hidden={!contactOpen}
+        onClick={handleContactPanelClick}
       >
         <button className={styles["contact-panel__backdrop"]} type="button" aria-label="Close contact panel" onClick={() => setContactOpen(false)} />
-        <aside className={styles["contact-panel__drawer"]} aria-label="Contact Muhammad Ayoub" aria-modal="true" role="dialog">
+        <aside
+          className={styles["contact-panel__drawer"]}
+          aria-label="Contact Muhammad Ayoub"
+          aria-modal="true"
+          role="dialog"
+          onClick={(event) => event.stopPropagation()}
+        >
           <div className={styles["contact-panel__top"]}>
             <span className={styles["contact-panel__mark"]}>
               <IconGlyph name="code2" />
