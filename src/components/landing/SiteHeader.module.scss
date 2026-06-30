@@ -4,14 +4,14 @@
   z-index: 50;
   border-top: 1px solid var(--color-fog-border);
   border-bottom: 1px solid var(--color-fog-border);
-  background: rgba(255, 252, 252, 0.94);
+  background: var(--color-surface-chrome);
   backdrop-filter: blur(18px);
 }
 
 .site-header__announcement {
   overflow: hidden;
   border-bottom: 1px solid var(--color-fog-border);
-  background: #e8e8e8b8;
+  background: color-mix(in srgb, var(--color-bone-mist) 76%, transparent);
 }
 
 .site-header__announcement-inner {
@@ -78,6 +78,10 @@
   height: auto;
 }
 
+:global(:root[data-theme="dark"]) .site-header__nav-brand img {
+  filter: invert(1) brightness(1.12);
+}
+
 .site-header__nav-links {
   display: none;
   align-items: center;
@@ -89,7 +93,8 @@
 }
 
 .site-header__nav-link,
-.site-header__nav-login {
+.site-header__nav-login,
+.site-header__theme-toggle {
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
@@ -109,8 +114,23 @@
   height: 15px;
 }
 
+.site-header__theme-toggle {
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-fog-border);
+  background: var(--color-surface);
+  padding: 0;
+}
+
+.site-header__theme-toggle svg {
+  width: 17px;
+  height: 17px;
+}
+
 .site-header__nav-link:hover,
-.site-header__nav-login:hover {
+.site-header__nav-login:hover,
+.site-header__theme-toggle:hover {
   background: var(--color-bone-mist);
 }
 
@@ -153,7 +173,7 @@
   place-items: center;
   border: 1px solid var(--color-fog-border);
   border-radius: var(--radius-buttons);
-  background: #fff;
+  background: var(--color-surface);
   color: var(--color-ink-violet);
   cursor: pointer;
 
@@ -173,7 +193,7 @@
   margin: var(--space-2) auto var(--space-3);
   border: 1px solid var(--color-fog-border);
   border-radius: var(--radius-cards);
-  background: #fff;
+  background: var(--color-surface);
   box-shadow: var(--shadow-product-light);
 
   @media (min-width: 860px) {
@@ -229,11 +249,11 @@
   border: 1px solid rgba(49, 38, 59, 0.18);
   border-radius: 999px;
   background:
-    radial-gradient(rgba(1, 1, 27, 0.055) 0.75px, transparent 0.75px),
-    rgba(255, 252, 252, 0.9);
+    radial-gradient(var(--surface-dot-light) 0.75px, transparent 0.75px),
+    var(--color-surface-chrome);
   background-size: 6px 6px, auto;
   box-shadow:
-    rgba(255, 255, 255, 0.84) 0 1px 0 inset,
+    var(--surface-inset-light) 0 1px 0 inset,
     rgba(49, 38, 59, 0.14) 0 14px 38px;
   opacity: 0;
   padding: 4px;
@@ -289,7 +309,7 @@
 
 .site-header__floating-cta {
   background: var(--color-ink-violet);
-  color: #fff;
+  color: var(--color-on-dark);
   margin-left: var(--space-1);
 }
 
@@ -336,8 +356,8 @@
   border-right: 1px solid rgba(49, 38, 59, 0.18);
   border-top: 1px solid var(--color-fog-border);
   background:
-    radial-gradient(rgba(1, 1, 27, 0.055) 0.75px, transparent 0.75px),
-    linear-gradient(180deg, rgba(255, 252, 252, 0.98), rgba(236, 237, 242, 0.96));
+    radial-gradient(var(--surface-dot-light) 0.75px, transparent 0.75px),
+    linear-gradient(180deg, var(--color-surface-raised), var(--color-bone-mist));
   background-size: 6px 6px, auto;
   box-shadow: rgba(1, 1, 27, 0.22) 28px 0 80px;
   padding: var(--space-5);
@@ -402,7 +422,7 @@
 
 .contact-panel__close:hover {
   border-color: rgba(49, 38, 59, 0.32);
-  background: #fff;
+  background: var(--color-surface);
   transform: translateY(-1px);
 }
 
@@ -456,7 +476,7 @@
   align-items: center;
   border: 1px solid rgba(49, 38, 59, 0.16);
   border-radius: var(--radius-cards);
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--color-surface-muted);
   color: var(--color-ink-violet);
   padding: var(--space-3);
   transition:
@@ -467,7 +487,7 @@
 
 .contact-panel__method:hover {
   border-color: rgba(49, 38, 59, 0.34);
-  background: #fff;
+  background: var(--color-surface);
   transform: translateY(-2px);
 }
 
@@ -477,7 +497,7 @@
   border: 1px solid rgba(49, 38, 59, 0.18);
   border-radius: var(--radius-buttons);
   background: var(--color-ink-violet);
-  color: #fff;
+  color: var(--color-on-dark);
   padding: 8px;
 }
 
@@ -526,7 +546,7 @@
 
 .contact-panel__social a:hover {
   border-color: rgba(49, 38, 59, 0.32);
-  background: #fff;
+  background: var(--color-surface);
   color: var(--color-primary);
   transform: translateY(-2px);
 }
@@ -547,7 +567,7 @@
   border: 0;
   border-radius: var(--radius-buttons);
   background: var(--color-ink-violet);
-  color: #fff;
+  color: var(--color-on-dark);
   font-family: var(--font-display-compact);
   font-size: var(--text-ui);
   font-weight: 900;
