@@ -8,12 +8,12 @@ import portfolio from "@/data/portfolio.json";
 import styles from "@/components/contact/ContactPage.module.scss";
 
 export const metadata: Metadata = {
-  title: "Hire a WordPress Developer",
+  title: "Hire Muhammad Ayoub Khan",
   description:
-    "Hire Muhammad Ayoub for WordPress development, website design, WooCommerce, React, Next.js, Bricks Builder, Elementor, and conversion-focused frontend projects.",
+    "Hire Muhammad Ayoub Khan, also known as Ayoub Khan, M Ayoub Khan, and Mayoub, for WordPress development, website design, WooCommerce, React, Next.js, Bricks Builder, Elementor, and conversion-focused frontend projects.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Hire a WordPress Developer | Muhammad Ayoub",
+    title: "Hire Muhammad Ayoub Khan | WordPress Developer",
     description:
       "Send project details, request a build estimate, or contact Muhammad Ayoub for freelance WordPress, website design, and front-end development work.",
     type: "website",
