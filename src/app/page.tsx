@@ -7,14 +7,14 @@ import { caseStudies, projects } from "@/data/work";
 import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
-  title: "Freelance WordPress Developer & Website Developer",
+  title: "Muhammad Ayoub Khan, Freelance WordPress Developer",
   description:
-    "Hire Muhammad Ayoub for WordPress development, website design, WooCommerce stores, Bricks Builder, Elementor, React, and Next.js websites for growing businesses.",
+    "Find and hire Muhammad Ayoub Khan, also searched as Ayoub, Ayoub Khan, M Ayoub Khan, and Mayoub, for WordPress, website design, WooCommerce, React, and Next.js development.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Freelance WordPress Developer & Website Developer",
+    title: "Muhammad Ayoub Khan, Freelance WordPress Developer",
     description:
-      "WordPress developer and front-end website developer building fast, responsive business websites, WooCommerce stores, and Next.js front ends.",
+      "WordPress developer and front-end website developer Muhammad Ayoub Khan builds fast, responsive business websites, WooCommerce stores, and Next.js front ends.",
     type: "website",
     url: "/",
   },
@@ -32,6 +32,10 @@ function buildHomeSchema() {
   const siteUrl = portfolio.profile.website;
   const personId = `${siteUrl}/#person`;
   const serviceId = `${siteUrl}/#professional-service`;
+  const websiteId = `${siteUrl}/#website`;
+  const reviews = portfolio.clients
+    .filter((client) => client.showInTestimonials && client.testimonial)
+    .slice(0, 12);
   const featuredServices = portfolio.services.filter((service) => service.featured);
   const absoluteUrl = (href: string) => {
     if (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) {
@@ -52,33 +56,65 @@ function buildHomeSchema() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": `${siteUrl}/#website`,
+        "@id": websiteId,
         "url": siteUrl,
-        "name": portfolio.profile.brand,
-        "description": portfolio.profile.summary,
+        "name": "Muhammad Ayoub Khan Website Developer Portfolio",
+        "alternateName": ["Muhammad Ayoub", "Ayoub Khan", "M Ayoub Khan", "Mayoub", "MAYOUB.DEV"],
+        "description": "Portfolio and service website for Muhammad Ayoub Khan, a WordPress, website, React, and Next.js developer.",
         "publisher": { "@id": personId },
       },
       {
         "@type": "Person",
         "@id": personId,
-        "name": portfolio.profile.name,
+        "name": "Muhammad Ayoub Khan",
+        "alternateName": ["Muhammad Ayoub", "Ayoub", "Ayoub Khan", "M Ayoub Khan", "Mayoub"],
         "url": siteUrl,
-        "jobTitle": portfolio.profile.role,
+        "jobTitle": "Freelance WordPress Developer and Front-End Website Developer",
+        "description": "Muhammad Ayoub Khan is a freelance WordPress developer, website developer, React developer, and Next.js developer based in Faisalabad, Pakistan.",
         "email": portfolio.profile.email,
         "telephone": portfolio.profile.phone,
-        "sameAs": [portfolio.profile.linkedin],
-        "knowsAbout": portfolio.expertise.slice(0, 10).map((item) => item.name),
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Faisalabad",
+          "addressCountry": "PK",
+        },
+        "sameAs": [portfolio.profile.linkedin, portfolio.profile.github],
+        "knowsAbout": [
+          "WordPress development",
+          "Website design",
+          "Website development",
+          "Frontend development",
+          "React development",
+          "Next.js development",
+          "WooCommerce development",
+          "Bricks Builder",
+          "Elementor",
+          "Figma to code",
+          ...portfolio.expertise.slice(0, 10).map((item) => item.name),
+        ],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Website Developer",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "Worldwide",
+          },
+          "skills": "WordPress, Website Design, React, Next.js, WooCommerce, Bricks Builder, Elementor, JavaScript, TypeScript",
+        },
       },
       {
         "@type": "ProfessionalService",
         "@id": serviceId,
-        "name": `${portfolio.profile.name} Front-End Development`,
+        "name": "Muhammad Ayoub Khan Website Development Services",
+        "alternateName": ["Ayoub Khan Web Developer", "Mayoub Website Developer", "M Ayoub Khan WordPress Developer"],
         "url": siteUrl,
-        "description": portfolio.profile.summary,
+        "description": "WordPress development, website design, WooCommerce, React, Next.js, Bricks Builder, Elementor, and front-end development services by Muhammad Ayoub Khan.",
         "email": portfolio.profile.email,
         "telephone": portfolio.profile.phone,
         "founder": { "@id": personId },
+        "image": `${siteUrl}/ayoub-about-v2.jpg`,
         "areaServed": "Worldwide",
+        "priceRange": "Custom project pricing",
         "serviceType": [
           "WordPress development",
           "Website design and development",
@@ -92,7 +128,7 @@ function buildHomeSchema() {
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Web development services",
+          "name": "Website design and development services",
           "itemListElement": featuredServices.map((service) => ({
             "@type": "Offer",
             "name": service.name,
@@ -100,6 +136,16 @@ function buildHomeSchema() {
             "url": `${siteUrl}${service.href === "#cta" ? "/#cta" : service.href}`,
           })),
         },
+        "review": reviews.map((client) => ({
+          "@type": "Review",
+          "reviewBody": client.testimonial,
+          "author": {
+            "@type": "Organization",
+            "name": client.name,
+            "url": client.website,
+          },
+          "itemReviewed": { "@id": serviceId },
+        })),
       },
       {
         "@type": "FAQPage",
@@ -123,6 +169,26 @@ function buildHomeSchema() {
           "url": absoluteUrl(item.href),
           "name": item.title,
           "description": item.description,
+        })),
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${siteUrl}/#client-reviews`,
+        "name": "Client reviews for Muhammad Ayoub Khan",
+        "itemListElement": reviews.map((client, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "Review",
+            "name": `${client.name} review for Muhammad Ayoub Khan`,
+            "reviewBody": client.testimonial,
+            "author": {
+              "@type": "Organization",
+              "name": client.name,
+              "url": client.website,
+            },
+            "itemReviewed": { "@id": serviceId },
+          },
         })),
       },
     ],

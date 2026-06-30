@@ -7,11 +7,11 @@ const siteUrl = portfolio.profile.website;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Muhammad Ayoub | WordPress Developer & Website Developer",
+    default: "Muhammad Ayoub Khan | WordPress Developer & Website Developer",
     template: "%s | Muhammad Ayoub",
   },
   description:
-    "Hire Muhammad Ayoub, a freelance WordPress developer, website developer, and front-end developer building fast business websites with Next.js, WooCommerce, Bricks, and Elementor.",
+    "Hire Muhammad Ayoub Khan, also known as Ayoub, Ayoub Khan, M Ayoub Khan, and Mayoub, for WordPress development, website design, Next.js, WooCommerce, Bricks, and Elementor.",
   alternates: {
     canonical: "/",
   },
@@ -21,6 +21,13 @@ export const metadata: Metadata = {
   category: "Web Development",
   keywords: [
     "WordPress developer",
+    "Muhammad Ayoub",
+    "Muhammad Ayoub Khan",
+    "Ayoub",
+    "Ayoub Khan",
+    "M Ayoub Khan",
+    "Mayoub",
+    "mayoub.dev",
     "website developer",
     "website designer",
     "freelance web developer",
@@ -35,18 +42,18 @@ export const metadata: Metadata = {
     "responsive website design",
   ],
   openGraph: {
-    title: "Muhammad Ayoub | WordPress Developer & Website Developer",
+    title: "Muhammad Ayoub Khan | WordPress Developer & Website Developer",
     description:
-      "Freelance WordPress, website, WooCommerce, React, and Next.js development for fast, maintainable business websites.",
+      "Freelance WordPress, website, WooCommerce, React, and Next.js development by Muhammad Ayoub Khan for fast, maintainable business websites.",
     type: "website",
     url: "/",
     siteName: portfolio.profile.brand,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Ayoub | WordPress Developer & Website Developer",
+    title: "Muhammad Ayoub Khan | WordPress Developer & Website Developer",
     description:
-      "Freelance WordPress developer and website developer for business websites, WooCommerce stores, and Next.js front ends.",
+      "Freelance WordPress developer and website developer Muhammad Ayoub Khan for business websites, WooCommerce stores, and Next.js front ends.",
   },
   verification: {
     google: "duyYeALQEH1wUm9zAIqqTeYPJIdo3ENxkYGdgIsc274",
