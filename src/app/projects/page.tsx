@@ -8,6 +8,7 @@ import {
   projectArchiveItems,
   projectMatchesFilter,
 } from "@/data/projectsArchive";
+import { buildProjectsSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
@@ -44,9 +45,15 @@ export default async function ProjectsPage({
   const projectCount = projectArchiveItems.length;
   const liveCount = projectArchiveItems.filter((project) => project.projectStatus === "Live").length;
   const screenshotCount = projectArchiveItems.filter((project) => Boolean(project.screenshot)).length;
+  const schema = buildProjectsSchema();
 
   return (
     <div className="site-shell">
+      <script
+        type="application/ld+json"
+        id="projects-json-ld"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(schema) }}
+      />
       <SiteHeader portfolio={portfolio} />
       <ProjectsPageContent
         projects={filteredProjects}
