@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContactFooter } from "@/components/landing/ContactFooter";
 import { SiteHeader } from "@/components/landing/SiteHeader";
 import { ServicesPageContent } from "@/components/services/ServicesPageContent";
+import { buildServicesSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
@@ -37,8 +38,15 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  const schema = buildServicesSchema();
+
   return (
     <div className="site-shell">
+      <script
+        type="application/ld+json"
+        id="services-json-ld"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(schema) }}
+      />
       <SiteHeader portfolio={portfolio} />
       <ServicesPageContent portfolio={portfolio} />
       <ContactFooter portfolio={portfolio} />

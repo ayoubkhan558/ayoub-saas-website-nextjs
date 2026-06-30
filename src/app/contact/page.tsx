@@ -4,6 +4,7 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { IconGlyph } from "@/components/landing/IconGlyph";
 import { ContactFooter } from "@/components/landing/ContactFooter";
 import { SiteHeader } from "@/components/landing/SiteHeader";
+import { buildContactSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 import styles from "@/components/contact/ContactPage.module.scss";
 
@@ -32,9 +33,15 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   const profile = portfolio.profile;
   const mailto = `mailto:${profile.email}?subject=Project%20details%20for%20Muhammad%20Ayoub`;
+  const schema = buildContactSchema();
 
   return (
     <div className="site-shell">
+      <script
+        type="application/ld+json"
+        id="contact-json-ld"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(schema) }}
+      />
       <SiteHeader portfolio={portfolio} />
       <main>
         <section className={`section ${styles["contact-hero"]}`}>

@@ -4,6 +4,7 @@ import { IconGlyph } from "@/components/landing/IconGlyph";
 import { ContactFooter } from "@/components/landing/ContactFooter";
 import { SiteHeader } from "@/components/landing/SiteHeader";
 import { LogoMarquee } from "@/components/shared/LogoMarquee";
+import { buildAboutSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 import toolCatalog from "@/data/toolCatalog.json";
 import styles from "@/components/about/AboutPage.module.scss";
@@ -123,9 +124,15 @@ const companyLogos: Record<string, string> = {
 
 export default function AboutPage() {
   const education = portfolio.about.education;
+  const schema = buildAboutSchema();
 
   return (
     <div className="site-shell">
+      <script
+        type="application/ld+json"
+        id="about-json-ld"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(schema) }}
+      />
       <SiteHeader portfolio={portfolio} />
       <main>
         <section className={`section ${styles["about-page-hero"]}`}>

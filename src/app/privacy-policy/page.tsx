@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal/LegalPage";
+import { buildLegalPageSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
@@ -106,20 +107,33 @@ const sections = [
 ];
 
 export default function PrivacyPolicyPage() {
+  const schema = buildLegalPageSchema(
+    "/privacy-policy",
+    "Privacy Policy",
+    "How contact details, project information, analytics, and privacy requests are handled.",
+  );
+
   return (
-    <LegalPage
-      portfolio={portfolio}
-      label="Privacy"
-      title="Privacy Policy"
-      description="How contact details, project information, analytics, and support records are handled."
-      lastUpdated="June 28, 2026"
-      highlights={[
-        { label: "Data collected", value: "Only what is needed for inquiries, estimates, delivery, and support." },
-        { label: "Sharing", value: "Limited to services needed for project work, payment, hosting, or compliance." },
-        { label: "Retention", value: "Kept only while useful for work, records, support, or legal needs." },
-        { label: "Requests", value: "You can ask for access, correction, or deletion where applicable." },
-      ]}
-      sections={sections}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        id="privacy-policy-json-ld"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(schema) }}
+      />
+      <LegalPage
+        portfolio={portfolio}
+        label="Privacy"
+        title="Privacy Policy"
+        description="How contact details, project information, analytics, and support records are handled."
+        lastUpdated="June 28, 2026"
+        highlights={[
+          { label: "Data collected", value: "Only what is needed for inquiries, estimates, delivery, and support." },
+          { label: "Sharing", value: "Limited to services needed for project work, payment, hosting, or compliance." },
+          { label: "Retention", value: "Kept only while useful for work, records, support, or legal needs." },
+          { label: "Requests", value: "You can ask for access, correction, or deletion where applicable." },
+        ]}
+        sections={sections}
+      />
+    </>
   );
 }

@@ -3,6 +3,7 @@ import { CaseStudiesPageContent } from "@/components/case-studies/listing/CaseSt
 import { ContactFooter } from "@/components/landing/ContactFooter";
 import { SiteHeader } from "@/components/landing/SiteHeader";
 import { getPageNumber } from "@/lib/pagination";
+import { buildCaseStudiesSchema, jsonLdScript } from "@/lib/seo-schema";
 import { caseStudies } from "@/data/work";
 import portfolio from "@/data/portfolio.json";
 
@@ -35,9 +36,15 @@ export default async function CaseStudiesPage({
 }) {
   const params = await searchParams;
   const currentPage = getPageNumber(params.page);
+  const schema = buildCaseStudiesSchema();
 
   return (
     <div className="site-shell">
+      <script
+        type="application/ld+json"
+        id="case-studies-json-ld"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(schema) }}
+      />
       <SiteHeader portfolio={portfolio} />
       <CaseStudiesPageContent caseStudies={caseStudies} currentPage={currentPage} />
       <ContactFooter portfolio={portfolio} />

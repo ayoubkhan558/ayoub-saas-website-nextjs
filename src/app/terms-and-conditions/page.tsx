@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal/LegalPage";
+import { buildLegalPageSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
@@ -121,20 +122,33 @@ const sections = [
 ];
 
 export default function TermsAndConditionsPage() {
+  const schema = buildLegalPageSchema(
+    "/terms-and-conditions",
+    "Terms and Conditions",
+    "General terms for website use, project scope, payment, delivery, support, and ownership.",
+  );
+
   return (
-    <LegalPage
-      portfolio={portfolio}
-      label="Terms"
-      title="Terms and Conditions"
-      description="General terms for website use, project scope, payment, delivery, ownership, and support."
-      lastUpdated="June 28, 2026"
-      highlights={[
-        { label: "Scope", value: "Deliverables, price, timeline, and assumptions are confirmed before work starts." },
-        { label: "Payment", value: "Work may pause when payments, assets, access, or approvals are delayed." },
-        { label: "Ownership", value: "Custom deliverables transfer after final payment unless agreed otherwise." },
-        { label: "Support", value: "Launch checks are included when agreed; ongoing maintenance is separate." },
-      ]}
-      sections={sections}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        id="terms-and-conditions-json-ld"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(schema) }}
+      />
+      <LegalPage
+        portfolio={portfolio}
+        label="Terms"
+        title="Terms and Conditions"
+        description="General terms for website use, project scope, payment, delivery, ownership, and support."
+        lastUpdated="June 28, 2026"
+        highlights={[
+          { label: "Scope", value: "Deliverables, price, timeline, and assumptions are confirmed before work starts." },
+          { label: "Payment", value: "Work may pause when payments, assets, access, or approvals are delayed." },
+          { label: "Ownership", value: "Custom deliverables transfer after final payment unless agreed otherwise." },
+          { label: "Support", value: "Launch checks are included when agreed; ongoing maintenance is separate." },
+        ]}
+        sections={sections}
+      />
+    </>
   );
 }
