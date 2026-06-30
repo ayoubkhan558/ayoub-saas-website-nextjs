@@ -54,7 +54,11 @@ export function CaseStudyBranding({ study }: { study: CaseStudyDetailData }) {
             <article className={styles.brandCard}>
               <span className={styles.brandCardLabel}>Logo</span>
               <div className={styles.brandLogoStage}>
-                <span className={styles.logoMark}>{study.branding.logoMark}</span>
+                {study.branding.logoImage ? (
+                  <img className={styles.logoImage} src={study.branding.logoImage} alt={`${study.client} logo`} loading="lazy" />
+                ) : (
+                  <span className={styles.logoMark}>{study.branding.logoMark}</span>
+                )}
               </div>
               <div className={styles.brandLogoNote}>
                 <span className={styles.brandLogoIcon}>+</span>

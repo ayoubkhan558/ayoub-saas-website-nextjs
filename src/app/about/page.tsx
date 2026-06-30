@@ -99,7 +99,7 @@ export default function AboutPage() {
               <div className={styles["about-page-hero__copy"]}>
                 <span className={styles["about-page__eyebrow"]}>About / Muhammad Ayoub</span>
                 <h1>
-                  Self-taught developer, practical builder.
+                  Self-taught developer, building with purpose.
                 </h1>
                 <p>
                   I started learning web development in 2018 with downloaded videos, limited resources,

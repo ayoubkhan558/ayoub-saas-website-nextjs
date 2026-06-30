@@ -28,6 +28,7 @@ export type CaseStudyDetailData = {
     title: string;
     text: string;
     logoMark: string;
+    logoImage?: string;
     fontName: string;
     fontMeta: string;
     palette: Array<{ label: string; tone?: "dark" | "gray" | "light" | "accent"; value?: string }>;

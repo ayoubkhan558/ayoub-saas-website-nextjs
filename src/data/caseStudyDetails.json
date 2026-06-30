@@ -64,6 +64,7 @@
       "title": "Professional legal branding with modern editorial styling.",
       "text": "The visual identity combines elegant serif typography with a clean sans-serif interface to establish trust, readability, and professionalism throughout the website.",
       "logoMark": "PL",
+      "logoImage": "/client/paganolaw-logo.png",
       "fontName": "Libre Baskerville + Inter",
       "fontMeta": "Libre Baskerville is used for headings to reinforce authority, while Inter provides clean, readable body text and interface elements.",
       "palette": [
@@ -209,6 +210,7 @@
       "title": "A storefront style that puts products first.",
       "text": "The visual system keeps the interface clean and commercial, with readable product typography, neutral surfaces, and concise action areas for shopping intent.",
       "logoMark": "5G",
+      "logoImage": "/client/logo-5g-store.png",
       "fontName": "System sans",
       "fontMeta": "Readable storefront typography tuned for product names, prices, specs, and checkout copy.",
       "palette": [
@@ -352,6 +354,7 @@
       "title": "A product-led website system for automation buyers.",
       "text": "The visual direction keeps the product story clean and practical: strong contrast, direct feature blocks, readable content sections, and action areas that support signup or inquiry intent.",
       "logoMark": "PA",
+      "logoImage": "https://www.google.com/s2/favicons?domain=pin-auto.com&sz=128",
       "fontName": "Modern sans",
       "fontMeta": "Readable product typography tuned for feature explanations, workflow copy, and conversion sections.",
       "palette": [
@@ -495,6 +498,7 @@
       "title": "A service-led design system with clear contact intent.",
       "text": "The visual system keeps the page focused on service understanding and contact: neutral surfaces, concise headings, scan-friendly cards, and strong action hierarchy.",
       "logoMark": "MD",
+      "logoImage": "/client/markedine-logo.png",
       "fontName": "Modern sans",
       "fontMeta": "Readable service typography for headings, short descriptions, and mobile conversion areas.",
       "palette": [
@@ -630,6 +634,7 @@
       "title": "A technical marketing look with structured content underneath.",
       "text": "The design direction supports B2B credibility: restrained colors, clear section hierarchy, and typography that works for technical service messaging.",
       "logoMark": "XG",
+      "logoImage": "/comapnies/xgrid-logo.svg",
       "fontName": "Modern sans",
       "fontMeta": "Clean marketing typography for service pages, long-form copy, and campaign modules.",
       "palette": [

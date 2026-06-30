@@ -20,20 +20,18 @@ export function CaseStudyHero({ study }: { study: CaseStudyDetailData }) {
             <span className={styles.eyebrow}>Case study</span>
             <h1 className={styles.title}>{study.client} project</h1>
             <p className={styles.tagline}>{projectType}</p>
-            <dl className={styles.heroMeta}>
-              <div>
-                <dt>Timeline</dt>
-                <dd>{study.timeline}</dd>
-              </div>
-              <div>
-                <dt>Project</dt>
-                <dd>{study.client}</dd>
-              </div>
-            </dl>
-            <a className={styles.liveSiteLink} href={study.liveUrl} target="_blank" rel="noreferrer">
-              Visit live site
-              <IconGlyph name="externalLink" />
-            </a>
+            <div className={styles.heroActions}>
+              <dl className={styles.heroMeta}>
+                <div>
+                  <dt>Timeline</dt>
+                  <dd>{study.timeline}</dd>
+                </div>
+              </dl>
+              <a className={styles.liveSiteLink} href={study.liveUrl} target="_blank" rel="noreferrer">
+                Visit live site
+                <IconGlyph name="externalLink" />
+              </a>
+            </div>
           </div>
           <aside className={styles.heroVisual} aria-label={`${study.client} final website design shown inside a laptop mockup`}>
             <div className={styles.laptopFrame}>

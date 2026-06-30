@@ -777,6 +777,13 @@
   line-height: 1;
 }
 
+.logoImage {
+  display: block;
+  width: min(260px, 70%);
+  max-height: 120px;
+  object-fit: contain;
+}
+
 .brandLogoNote {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
