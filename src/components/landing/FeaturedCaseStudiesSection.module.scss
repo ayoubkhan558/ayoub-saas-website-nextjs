@@ -19,7 +19,7 @@
   background:
     radial-gradient(circle at 14% 12%, rgba(205, 89, 115, 0.13), transparent 11rem),
     radial-gradient(circle at 92% 0%, rgba(33, 145, 140, 0.1), transparent 10rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 243, 244, 0.9));
+    linear-gradient(180deg, var(--color-surface-raised), var(--color-surface-muted));
   box-shadow:
     rgba(255, 255, 255, 0.74) 0 1px 0 inset,
     rgba(49, 38, 59, 0.07) 0 26px 70px;
@@ -28,6 +28,17 @@
     border-color 160ms ease,
     transform 160ms ease,
     box-shadow 160ms ease;
+}
+
+:global(:root[data-theme="dark"]) .work__project-card {
+  border-color: rgba(248, 244, 255, 0.16);
+  background:
+    radial-gradient(circle at 14% 12%, rgba(240, 120, 168, 0.14), transparent 11rem),
+    radial-gradient(circle at 92% 0%, rgba(121, 210, 203, 0.1), transparent 10rem),
+    linear-gradient(180deg, rgba(21, 18, 29, 0.96), rgba(18, 16, 25, 0.94));
+  box-shadow:
+    rgba(255, 255, 255, 0.07) 0 1px 0 inset,
+    rgba(0, 0, 0, 0.38) 0 26px 70px;
 }
 
 .work__project-card::before {
@@ -45,12 +56,25 @@
   pointer-events: none;
 }
 
+:global(:root[data-theme="dark"]) .work__project-card::before {
+  background-image:
+    radial-gradient(rgba(248, 244, 255, 0.065) 0.75px, transparent 0.75px),
+    linear-gradient(115deg, transparent 0 48%, rgba(248, 244, 255, 0.04) 48% 49%, transparent 49% 100%);
+}
+
 .work__project-card:hover {
   border-color: rgba(49, 38, 59, 0.32);
   box-shadow:
     rgba(255, 255, 255, 0.82) 0 1px 0 inset,
     rgba(49, 38, 59, 0.12) 0 34px 84px;
   transform: translateY(-4px);
+}
+
+:global(:root[data-theme="dark"]) .work__project-card:hover {
+  border-color: rgba(248, 244, 255, 0.3);
+  box-shadow:
+    rgba(255, 255, 255, 0.09) 0 1px 0 inset,
+    rgba(0, 0, 0, 0.46) 0 34px 84px;
 }
 
 .work__project-topline,
@@ -67,6 +91,10 @@
   gap: var(--space-3);
   border-bottom: 1px solid rgba(49, 38, 59, 0.12);
   padding: var(--space-3) var(--space-4);
+}
+
+:global(:root[data-theme="dark"]) .work__project-topline {
+  border-bottom-color: rgba(248, 244, 255, 0.12);
 }
 
 .work__project-index,
@@ -102,6 +130,10 @@
   inset: 0;
   border: 1px solid rgba(255, 255, 255, 0.52);
   pointer-events: none;
+}
+
+:global(:root[data-theme="dark"]) .work__project-image::after {
+  border-color: rgba(248, 244, 255, 0.16);
 }
 
 .work__project-image img {
@@ -159,6 +191,10 @@
   line-height: 1;
   padding-inline: 7px;
   box-shadow: rgba(255, 255, 255, 0.78) 0 1px 0 inset;
+}
+
+:global(:root[data-theme="dark"]) .work__tech-logo {
+  box-shadow: rgba(255, 255, 255, 0.08) 0 1px 0 inset;
 }
 
 .work__tech-logo--react {

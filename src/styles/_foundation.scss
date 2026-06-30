@@ -352,6 +352,14 @@ img {
   background-size: 4px 4px;
 }
 
+:root[data-theme="dark"] .section__inner {
+  background-color: var(--color-surface) !important;
+  background-image:
+    radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
+    linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
+  background-size: 6px 6px, auto !important;
+}
+
 .section:not(.section--hero) {}
 
 .section:last-of-type {

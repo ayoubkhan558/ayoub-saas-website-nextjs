@@ -11,7 +11,7 @@
   background:
     radial-gradient(circle at 82% 0%, rgba(205, 89, 115, 0.12), transparent 24rem),
     radial-gradient(rgba(49, 38, 59, 0.045) 1px, transparent 1px) 0 0 / 7px 7px,
-    #fff;
+    var(--color-surface);
   box-shadow: var(--shadow-product-light);
   padding: var(--space-6) var(--space-5);
 
@@ -22,6 +22,13 @@
   @media (min-width: 560px) {
     padding: var(--space-7);
   }
+}
+
+:global(:root[data-theme="dark"]) .cta__inner {
+  background:
+    radial-gradient(circle at 82% 0%, rgba(240, 120, 168, 0.12), transparent 24rem),
+    radial-gradient(rgba(248, 244, 255, 0.055) 1px, transparent 1px) 0 0 / 7px 7px,
+    rgba(21, 18, 29, 0.96);
 }
 
 .cta__inner::before,

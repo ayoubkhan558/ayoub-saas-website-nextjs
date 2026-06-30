@@ -28,6 +28,11 @@
     transform 160ms ease;
 }
 
+:global(:root[data-theme="dark"]) .problem__pain-card {
+  border-color: rgba(248, 244, 255, 0.26);
+  background: rgba(21, 18, 29, 0.92);
+}
+
 .problem__pain-card::before {
   content: "";
   position: absolute;
@@ -41,6 +46,10 @@
   transform: translateY(-2px);
 }
 
+:global(:root[data-theme="dark"]) .problem__pain-card:hover {
+  background: rgba(36, 30, 47, 0.96);
+}
+
 .problem__pain-index {
   grid-column: 1 / -1;
   width: fit-content;
@@ -52,6 +61,11 @@
   line-height: 1;
   padding: var(--space-1) var(--space-2);
   text-transform: uppercase;
+}
+
+:global(:root[data-theme="dark"]) .problem__pain-index {
+  border-color: rgba(248, 244, 255, 0.18);
+  background: rgba(248, 244, 255, 0.1);
 }
 
 .problem__pain-title {
@@ -69,7 +83,7 @@
   place-items: center;
   border: 1px solid rgba(49, 38, 59, 0.22);
   background: var(--color-ink-violet);
-  color: #fff;
+  color: var(--color-on-dark);
 }
 
 .problem__pain-action svg {

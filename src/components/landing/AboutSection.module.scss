@@ -195,14 +195,27 @@
   --about-grain-b: rgba(1, 1, 27, 0.035);
   --about-surface: rgba(255, 255, 255, 0.82);
   --about-surface-strong: rgba(255, 255, 255, 0.94);
+  --about-section-bg: #eeeeef;
+  --about-section-gradient: linear-gradient(180deg, #f5f5f6, #e9e9eb);
+  --about-vignette: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent 18%, transparent 82%, rgba(255, 255, 255, 0.84));
+}
+
+:global(:root[data-theme="dark"]) .about {
+  --about-grain-a: rgba(248, 244, 255, 0.07);
+  --about-grain-b: rgba(248, 244, 255, 0.035);
+  --about-surface: rgba(26, 22, 35, 0.82);
+  --about-surface-strong: rgba(21, 18, 29, 0.94);
+  --about-section-bg: #121019;
+  --about-section-gradient: linear-gradient(180deg, #17131f, #100e16);
+  --about-vignette: linear-gradient(90deg, rgba(14, 13, 20, 0.78), transparent 18%, transparent 82%, rgba(14, 13, 20, 0.82));
 }
 
 .about :global(.section__inner) {
   overflow: hidden;
-  background-color: #eeeeef;
+  background-color: var(--about-section-bg);
   background-image:
-    radial-gradient(rgba(1, 1, 27, 0.07) 0.75px, transparent 0.75px),
-    linear-gradient(180deg, #f5f5f6, #e9e9eb);
+    radial-gradient(var(--about-grain-a) 0.75px, transparent 0.75px),
+    var(--about-section-gradient);
   background-size:
     6px 6px,
     auto;
@@ -237,7 +250,7 @@
 .about :global(.section__inner)::after {
   z-index: 0;
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent 18%, transparent 82%, rgba(255, 255, 255, 0.84)),
+    var(--about-vignette),
     radial-gradient(ellipse at 50% 50%, transparent 0 48%, rgba(1, 1, 27, 0.065) 100%);
 }
 
@@ -430,8 +443,8 @@
   overflow: hidden;
   border: 1px solid rgba(49, 38, 59, 0.14);
   background:
-    radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
-    rgba(255, 255, 255, 0.86);
+    radial-gradient(var(--about-grain-b) 0.75px, transparent 0.75px),
+    var(--about-surface-strong);
   background-size: 6px 6px, auto;
   color: var(--color-ink-violet);
   padding: var(--space-5) var(--space-4) var(--space-3);

@@ -127,7 +127,7 @@ export default function AboutPage() {
   const schema = buildAboutSchema();
 
   return (
-    <div className="site-shell">
+    <div className={`site-shell ${styles["about-page"]}`}>
       <script
         type="application/ld+json"
         id="about-json-ld"

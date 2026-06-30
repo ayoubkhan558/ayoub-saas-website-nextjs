@@ -8,11 +8,18 @@
   background:
     linear-gradient(90deg, rgba(49, 38, 59, 0.05) 1px, transparent 1px) 0 0 / 96px 96px,
     radial-gradient(rgba(49, 38, 59, 0.065) 1px, transparent 1px) 0 0 / 7px 7px,
-    rgba(255, 252, 252, 0.72);
+    var(--color-surface-muted);
   overflow: visible;
 
   @include clamp-prop(padding-right, 18px, 72px);
   @include clamp-prop(padding-left, 18px, 72px);
+}
+
+:global(:root[data-theme="dark"]) .trust-logos {
+  background:
+    linear-gradient(90deg, rgba(248, 244, 255, 0.045) 1px, transparent 1px) 0 0 / 96px 96px,
+    radial-gradient(rgba(248, 244, 255, 0.06) 1px, transparent 1px) 0 0 / 7px 7px,
+    rgba(21, 18, 29, 0.82);
 }
 
 .trust-logos::before,
@@ -129,7 +136,7 @@
   border: 1px solid var(--color-fog-border);
   background:
     radial-gradient(rgba(49, 38, 59, 0.055) 1px, transparent 1px) 0 0 / 7px 7px,
-    #fff;
+    var(--color-surface);
   box-shadow: var(--shadow-product-light);
   padding: var(--space-3);
   color: var(--color-storm-mauve);

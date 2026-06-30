@@ -78,12 +78,23 @@
   border-radius: var(--radius-cards);
   background:
     radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
-    #fff;
+    var(--color-surface);
   background-size: 6px 6px, auto;
   box-shadow:
     rgba(255, 255, 255, 0.74) 0 1px 0 inset,
     rgba(49, 38, 59, 0.06) 0 20px 54px;
   color: var(--color-ink-violet);
+}
+
+:global(:root[data-theme="dark"]) .summary,
+:global(:root[data-theme="dark"]) .card {
+  border-color: rgba(248, 244, 255, 0.16);
+  background:
+    radial-gradient(rgba(248, 244, 255, 0.06) 0.75px, transparent 0.75px),
+    rgba(21, 18, 29, 0.96);
+  box-shadow:
+    rgba(255, 255, 255, 0.07) 0 1px 0 inset,
+    rgba(0, 0, 0, 0.34) 0 20px 54px;
 }
 
 .summary::before,
@@ -134,6 +145,13 @@
     rgba(236, 237, 242, 0.48);
   background-size: 6px 6px, auto;
   transform: translateY(-2px);
+}
+
+:global(:root[data-theme="dark"]) .summary:hover {
+  border-color: rgba(248, 244, 255, 0.28);
+  background:
+    radial-gradient(rgba(248, 244, 255, 0.075) 0.75px, transparent 0.75px),
+    rgba(32, 27, 42, 0.98);
 }
 
 .summary strong {
