@@ -56,12 +56,13 @@ function LogoAsset({ client, isOpen, onToggle }: { client: Client; isOpen: boole
       aria-expanded={isOpen}
       type="button"
       onClick={onToggle}
+      title={`Read ${client.name} client review`}
     >
-      <img src={client.logo} alt={client.name} loading="lazy" />
+      <img src={client.logo} alt={`${client.name} logo`} title={`${client.name} logo`} loading="lazy" />
       <span className={styles["trust-logos__review"]} id={client.reviewId} role="tooltip">
         <span className={styles["trust-logos__review-name"]}>{client.name}</span>
         <span className={styles["trust-logos__review-text"]}>{client.review}</span>
-        <a className={styles["trust-logos__review-link"]} href={client.website} target="_blank" rel="noreferrer">
+        <a className={styles["trust-logos__review-link"]} href={client.website} target="_blank" rel="noreferrer" title={`Visit ${client.name} website`}>
           Visit website
         </a>
       </span>

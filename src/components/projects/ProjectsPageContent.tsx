@@ -59,6 +59,7 @@ export function ProjectsPageContent({
                   <Link
                     className={`${styles.filters__link} ${isActive ? styles["filters__link--active"] : ""}`}
                     href={href}
+                    title={`Filter projects by ${filter.label}`}
                     aria-current={isActive ? "page" : undefined}
                     key={filter.value}
                   >
@@ -87,7 +88,7 @@ export function ProjectsPageContent({
                 Case studies show the decision work.
               </h2>
             </div>
-            <Link className="button button--dark" href="/case-studies">
+            <Link className="button button--dark" href="/case-studies" title="View case studies">
               View case studies
               <IconGlyph name="arrowRight" />
             </Link>

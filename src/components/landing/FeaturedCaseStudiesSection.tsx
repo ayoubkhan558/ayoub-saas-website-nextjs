@@ -16,13 +16,13 @@ export function FeaturedCaseStudiesSection({ projects }: { projects: CaseStudyCa
           />
           <div className={styles["work__portfolio-grid"]}>
             {projects.map((project, index) => (
-              <Link className={styles["work__project-card"]} key={project.title} href={project.href}>
+              <Link className={styles["work__project-card"]} key={project.title} href={project.href} title={`Read ${project.title} case study`}>
                 <span className={styles["work__project-topline"]}>
                   <span className={styles["work__project-index"]}>0{index + 1}</span>
                   <span className={styles["work__project-kind"]}>{project.tag.replace("_", " ")}</span>
                 </span>
                 <span className={styles["work__project-image"]}>
-                  <img src={project.image} alt={project.imageAlt} loading="lazy" />
+                  <img src={project.image} alt={project.imageAlt} title={project.imageAlt} loading="lazy" />
                 </span>
                 <span className={styles["work__project-content"]}>
                   <span className={styles["work__project-heading"]}>

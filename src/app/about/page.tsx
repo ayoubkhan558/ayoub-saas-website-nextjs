@@ -133,7 +133,7 @@ export default function AboutPage() {
                   delivery, clean implementation, and practical communication.
                 </p>
                 <div className={styles["about-page-hero__actions"]}>
-                  <Link className="button button--dark" href="/contact">
+                  <Link className="button button--dark" href="/contact" title="Hire Muhammad Ayoub">
                     Hire me
                     <IconGlyph name="arrowRight" />
                   </Link>
@@ -143,6 +143,7 @@ export default function AboutPage() {
                     target="_blank"
                     rel="noreferrer"
                     download
+                    title="Download Muhammad Ayoub resume"
                   >
                     <IconGlyph name="download" />
                     Download resume
@@ -166,7 +167,7 @@ export default function AboutPage() {
           <div className="section__inner">
             <div className={`container ${styles["about-page-story-feature"]}`}>
               <figure className={styles["about-page-story-portrait"]}>
-                <img src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub" />
+                <img src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub Khan website developer" title="Muhammad Ayoub Khan website developer" />
               </figure>
               <div className={styles["about-page-section-header"]}>
                 <span className={styles["about-page__eyebrow"]}>My Story</span>
@@ -212,7 +213,7 @@ export default function AboutPage() {
                     <span className={styles["about-page-experience-item__year"]}>{item.year}</span>
                     {companyLogos[item.company] ? (
                       <span className={styles["about-page-experience-item__logo"]}>
-                        <img src={companyLogos[item.company]} alt={`${item.company} logo`} loading="lazy" />
+                        <img src={companyLogos[item.company]} alt={`${item.company} logo`} title={`${item.company} logo`} loading="lazy" />
                       </span>
                     ) : null}
                   </div>

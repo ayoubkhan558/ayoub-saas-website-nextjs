@@ -22,7 +22,7 @@ export function PortfolioLanding() {
 
   return (
     <div className="site-shell">
-      <a className="skip-link" href="#main">
+      <a className="skip-link" href="#main" title="Skip to main content">
         Skip to main content
       </a>
       <SiteHeader portfolio={portfolio} />

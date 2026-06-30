@@ -40,7 +40,7 @@ export function LogoMarquee({
       <Marquee autoFill direction={direction} gradient={false} pauseOnHover speed={speed}>
         {items.map((item) => (
           <span className={itemClasses} key={item.name}>
-            <img className={imageClasses} src={item.src} alt={item.name} loading="lazy" />
+            <img className={imageClasses} src={item.src} alt={item.name} title={item.name} loading="lazy" />
           </span>
         ))}
       </Marquee>

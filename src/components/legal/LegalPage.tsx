@@ -70,7 +70,7 @@ export function LegalPage({
                 <span className={styles["legal-page__eyebrow"]}>On this page</span>
                 <nav>
                   {sections.map((section) => (
-                    <a href={`#${slugify(section.title)}`} key={section.title}>
+                    <a href={`#${slugify(section.title)}`} key={section.title} title={`Jump to ${section.title}`}>
                       {section.title}
                     </a>
                   ))}

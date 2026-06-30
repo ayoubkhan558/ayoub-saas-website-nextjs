@@ -17,6 +17,21 @@ export const metadata: Metadata = {
       "WordPress developer and front-end website developer Muhammad Ayoub Khan builds fast, responsive business websites, WooCommerce stores, and Next.js front ends.",
     type: "website",
     url: "/",
+    images: [
+      {
+        url: "/ayoub-about-v2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Ayoub Khan WordPress developer and website developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Muhammad Ayoub Khan, Freelance WordPress Developer",
+    description:
+      "Find and hire Muhammad Ayoub Khan for WordPress, website design, WooCommerce, React, and Next.js development.",
+    images: ["/ayoub-about-v2.jpg"],
   },
 };
 
@@ -133,7 +148,7 @@ function buildHomeSchema() {
             "@type": "Offer",
             "name": service.name,
             "description": service.description,
-            "url": `${siteUrl}${service.href === "#cta" ? "/#cta" : service.href}`,
+            "url": `${siteUrl}${service.href === "#cta" ? "/contact" : service.href}`,
           })),
         },
         "review": reviews.map((client) => ({
