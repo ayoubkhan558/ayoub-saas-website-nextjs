@@ -66,9 +66,9 @@ export function ContactForm() {
         <ValidationError className={styles["contact-form-card__error"]} prefix="Subject" field="_subject" errors={state.errors} />
       </label>
 
-      <label>
+      <label htmlFor="projectType">
         <span>Project type</span>
-        <select name="projectType" defaultValue="" required>
+        <select id="projectType" name="projectType" defaultValue="" required>
           <option value="" disabled>
             Choose one
           </option>

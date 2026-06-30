@@ -97,6 +97,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="image_src" href={`${siteUrl}/ayoub-about-v2.jpg`} />
+        <meta itemProp="image" content={`${siteUrl}/ayoub-about-v2.jpg`} />
+      </head>
       <body suppressHydrationWarning itemScope itemType="https://schema.org/WebPage">
         {children}
       </body>

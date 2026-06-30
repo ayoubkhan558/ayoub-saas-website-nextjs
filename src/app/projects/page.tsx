@@ -21,6 +21,14 @@ export const metadata: Metadata = {
       "A structured showcase of client websites, WordPress builds, WooCommerce stores, product pages, and front-end implementation work.",
     type: "website",
     url: "/projects",
+    images: [
+      {
+        url: "/ayoub-about-v2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Ayoub Khan website design and development portfolio",
+      },
+    ],
   },
 };
 

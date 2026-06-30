@@ -17,6 +17,14 @@ export const metadata: Metadata = {
       "Detailed project breakdowns covering challenge, stack, execution, responsive layouts, branding, and client outcomes.",
     type: "website",
     url: "/case-studies",
+    images: [
+      {
+        url: "/ayoub-about-v2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Ayoub Khan website development case studies",
+      },
+    ],
   },
 };
 
