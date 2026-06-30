@@ -314,13 +314,13 @@
 
 .kicker {
   color: var(--color-ink-violet);
-  font-family: var(--font-code);
-  font-size: var(--text-xs);
-  font-style: normal;
-  font-weight: 700;
+  font-family: var(--font-editorial-display);
+  font-size: var(--text-h2);
   letter-spacing: 0;
-  line-height: 1.2;
-  text-transform: uppercase;
+  text-transform: none;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1;
 }
 
 .sectionTitle {
@@ -623,7 +623,7 @@
   font-family: var(--font-display);
   font-size: clamp(3.6rem, 9vw, 7rem);
   font-weight: 800;
-  
+
 }
 
 .pageSpeedMetrics {

@@ -84,20 +84,45 @@
     "logo": "/tools/javascript.svg",
     "description": "Interactive behavior and front-end logic."
   },
+  "typescript": {
+    "name": "TypeScript",
+    "logo": "/tools/TypeScript.svg",
+    "description": "Typed JavaScript for maintainable front-end applications."
+  },
   "nextjs": {
     "name": "Next.js",
     "logo": "/tools/nextjs.svg",
     "description": "React framework for production web applications."
+  },
+  "redux": {
+    "name": "Redux",
+    "logo": "/tools/Redux.svg",
+    "description": "Predictable state management for complex interfaces."
+  },
+  "material-ui": {
+    "name": "Material UI",
+    "logo": "/tools/Material-UI.svg",
+    "description": "React component system for structured product interfaces."
   },
   "bootstrap": {
     "name": "Bootstrap",
     "logo": "/tools/bootstrap.svg",
     "description": "Responsive UI foundation for practical builds."
   },
+  "bulma": {
+    "name": "Bulma",
+    "logo": "/tools/Bulma.svg",
+    "description": "CSS framework for lightweight responsive layouts."
+  },
   "tailwind": {
     "name": "Tailwind CSS",
     "logo": "/tools/tailwind.svg",
     "description": "Utility-first styling for custom interfaces."
+  },
+  "postcss": {
+    "name": "PostCSS",
+    "logo": "/tools/PostCSS.svg",
+    "description": "CSS transformation tooling for modern front-end builds."
   },
   "sass": {
     "name": "Sass",
@@ -118,6 +143,36 @@
     "name": "Vite",
     "logo": "/tools/vitejs.svg",
     "description": "Fast front-end tooling for modern app development."
+  },
+  "vercel": {
+    "name": "Vercel",
+    "logo": "/tools/vercel-logo.svg",
+    "description": "Deployment platform for Next.js and front-end applications."
+  },
+  "git": {
+    "name": "Git",
+    "logo": "/tools/git-logo.svg",
+    "description": "Version control for collaborative development."
+  },
+  "npm": {
+    "name": "NPM",
+    "logo": "/tools/NPM.svg",
+    "description": "Package management for JavaScript projects."
+  },
+  "postman": {
+    "name": "Postman",
+    "logo": "/tools/Postman.svg",
+    "description": "API testing and request workflow tooling."
+  },
+  "json": {
+    "name": "JSON",
+    "logo": "/tools/JSON.svg",
+    "description": "Structured data format for APIs and configuration."
+  },
+  "vs-code": {
+    "name": "VS Code",
+    "logo": "/tools/vs-code.svg",
+    "description": "Code editor for daily development workflows."
   },
   "mysql": {
     "name": "MySQL",

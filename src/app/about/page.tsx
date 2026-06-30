@@ -3,7 +3,9 @@ import Link from "next/link";
 import { IconGlyph } from "@/components/landing/IconGlyph";
 import { ContactFooter } from "@/components/landing/ContactFooter";
 import { SiteHeader } from "@/components/landing/SiteHeader";
+import { LogoMarquee } from "@/components/shared/LogoMarquee";
 import portfolio from "@/data/portfolio.json";
+import toolCatalog from "@/data/toolCatalog.json";
 import styles from "@/components/about/AboutPage.module.scss";
 
 export const metadata: Metadata = {
@@ -23,8 +25,8 @@ export const metadata: Metadata = {
 const storyCards = [
   {
     label: "How I got into web development",
-    title: "I started in 2018 with downloaded lessons",
-    text: "In the early days I did not have an internet connection at home, so I downloaded web development videos using my friends' internet, brought them back, and watched them again and again to learn HTML, CSS, and the basics of building for the web.",
+    title: "Self-learning shaped how I build",
+    text: "That start taught me to be patient, resourceful, and practical when learning new tools or solving project problems.",
   },
   {
     label: "What I enjoy building",
@@ -39,7 +41,7 @@ const storyCards = [
 ];
 
 const heroStats = [
-  { value: "2018", label: "Started learning web development" },
+  { value: "2018", label: "Career Started" },
   { value: "5+", label: "Years professional experience" },
   { value: "50+", label: "Projects delivered" },
   { value: "100%", label: "Job success" },
@@ -68,23 +70,48 @@ const toolbox = [
   },
 ];
 
-const toolboxIcons = [
-  { name: "Next.js", src: "/tools/nextjs.svg" },
-  { name: "React", src: "/tools/javascript.svg" },
-  { name: "WordPress", src: "/tools/wordpress.svg" },
-  { name: "WooCommerce", src: "/tools/woocommerce.svg" },
-  { name: "Figma", src: "/tools/figma.svg" },
-  { name: "HTML", src: "/tools/html-5.svg" },
-  { name: "CSS", src: "/tools/css-3.svg" },
-  { name: "Tailwind", src: "/tools/tailwind.svg" },
-  { name: "Sass", src: "/tools/sass.svg" },
-  { name: "MySQL", src: "/tools/mysql.svg" },
-];
+const toolboxIconKeys = [
+  "nextjs",
+  "typescript",
+  "javascript",
+  "redux",
+  "material-ui",
+  "wordpress",
+  "woocommerce",
+  "figma",
+  "html",
+  "css",
+  "tailwind",
+  "sass",
+  "bootstrap",
+  "bulma",
+  "postcss",
+  "git",
+  "npm",
+  "postman",
+  "json",
+  "vercel",
+  "vs-code",
+  "mysql",
+  "phpmyadmin",
+] as const;
+
+const toolboxIcons = toolboxIconKeys
+  .map((key) => toolCatalog[key as keyof typeof toolCatalog])
+  .filter((tool): tool is { name: string; logo: string; description: string } => Boolean(tool?.logo))
+  .map((tool) => ({ name: tool.name, src: tool.logo }));
 
 const toolboxIconRows = [
-  toolboxIcons,
-  [...toolboxIcons].reverse(),
+  toolboxIcons.filter((_, index) => index % 2 === 0),
+  toolboxIcons.filter((_, index) => index % 2 === 1),
 ];
+
+const companyLogos: Record<string, string> = {
+  Xgrid: "/comapnies/xgrid-logo.svg",
+  Epicsols: "/comapnies/epicsols-logo.jpg",
+  "Hawk ITs & Consultancy Provider": "/comapnies/hawk-it-logo.jpg",
+  "AWSOL Web Technologies": "/comapnies/awsol-logo.png",
+};
 
 export default function AboutPage() {
   const education = portfolio.about.education;
@@ -98,13 +125,12 @@ export default function AboutPage() {
             <div className={`container ${styles["about-page-hero__inner"]}`}>
               <div className={styles["about-page-hero__copy"]}>
                 <span className={styles["about-page__eyebrow"]}>About / Muhammad Ayoub</span>
-                <h1>
+                <h1 className={styles["about-page-hero__title"]}>
                   Self-taught developer, building with purpose.
                 </h1>
-                <p>
-                  I started learning web development in 2018 with downloaded videos, limited resources,
-                  and a lot of patience. Today I build fast React, Next.js, WordPress, and WooCommerce
-                  experiences for clients who need reliable delivery.
+                <p className={styles["about-page-hero__text"]}>
+                  I build fast React, Next.js, WordPress, and WooCommerce experiences for clients who need reliable
+                  delivery, clean implementation, and practical communication.
                 </p>
                 <div className={styles["about-page-hero__actions"]}>
                   <Link className="button button--dark" href="/contact">
@@ -144,10 +170,10 @@ export default function AboutPage() {
               </figure>
               <div className={styles["about-page-section-header"]}>
                 <span className={styles["about-page__eyebrow"]}>My Story</span>
-                <h2>
+                <h2 className={styles["about-page-section-header__title"]}>
                   I learned the hard way, and that made me patient.
                 </h2>
-                <p>
+                <p className={styles["about-page-section-header__text"]}>
                   I started web development in 2018. In the early times, I did not have an internet
                   connection at home, so I used my friends' internet to download tutorials, then watched
                   them offline to learn HTML, CSS, and the fundamentals. That beginning made me
@@ -162,9 +188,9 @@ export default function AboutPage() {
             <div className={`container ${styles["about-page-story-grid"]}`}>
               {storyCards.map((item) => (
                 <article className={styles["about-page-feature-card"]} key={item.label}>
-                  <span>{item.label}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
+                  <span className={styles["about-page-feature-card__label"]}>{item.label}</span>
+                  <h3 className={styles["about-page-feature-card__title"]}>{item.title}</h3>
+                  <p className={styles["about-page-feature-card__text"]}>{item.text}</p>
                 </article>
               ))}
             </div>
@@ -175,18 +201,25 @@ export default function AboutPage() {
           <div className="section__inner">
             <div className={`container ${styles["about-page-section-header"]}`}>
               <span className={styles["about-page__eyebrow"]}>Professional Experience</span>
-              <h2>
+              <h2 className={styles["about-page-section-header__title"]}>
                 Roles across front-end, WordPress, and product delivery.
               </h2>
             </div>
             <div className={`container ${styles["about-page-experience-list"]}`}>
               {portfolio.experienceLog.map((item) => (
                 <article className={styles["about-page-experience-item"]} key={`${item.year}-${item.company}`}>
-                  <span>{item.year}</span>
-                  <div>
-                    <h3>{item.title}</h3>
-                    <strong>{item.company}</strong>
-                    <p>{item.description}</p>
+                  <div className={styles["about-page-experience-item__meta"]}>
+                    <span className={styles["about-page-experience-item__year"]}>{item.year}</span>
+                    {companyLogos[item.company] ? (
+                      <span className={styles["about-page-experience-item__logo"]}>
+                        <img src={companyLogos[item.company]} alt={`${item.company} logo`} loading="lazy" />
+                      </span>
+                    ) : null}
+                  </div>
+                  <div className={styles["about-page-experience-item__body"]}>
+                    <h3 className={styles["about-page-experience-item__title"]}>{item.title}</h3>
+                    <strong className={styles["about-page-experience-item__company"]}>{item.company}</strong>
+                    <p className={styles["about-page-experience-item__text"]}>{item.description}</p>
                   </div>
                 </article>
               ))}
@@ -203,25 +236,24 @@ export default function AboutPage() {
               </h2>
             </header>
             <div className={`container ${styles["about-page-skills-panel"]}`}>
-              <div className={styles["about-page-skill-marquee"]} aria-label="Technologies and tools">
+              <div className={styles["about-page-skill-marquee"]}>
                 {toolboxIconRows.map((row, rowIndex) => (
-                  <div className={styles["about-page-skill-marquee__row"]} key={`tool-row-${rowIndex}`}>
-                    {[...row, ...row].map((tool, index) => (
-                      <div
-                        className={styles["about-page-skill-icon"]}
-                        key={`${tool.name}-${rowIndex}-${index}`}
-                        aria-hidden={index >= row.length}
-                      >
-                        <img src={tool.src} alt={index < row.length ? tool.name : ""} />
-                      </div>
-                    ))}
-                  </div>
+                  <LogoMarquee
+                    ariaLabel={rowIndex === 0 ? "Technologies and tools" : "More technologies and tools"}
+                    className={styles["about-page-skill-marquee__row"]}
+                    direction={rowIndex % 2 === 0 ? "left" : "right"}
+                    imageClassName={styles["about-page-skill-icon__image"]}
+                    itemClassName={styles["about-page-skill-icon"]}
+                    items={row}
+                    key={`tool-row-${rowIndex}`}
+                    speed={rowIndex % 2 === 0 ? 16 : 14}
+                  />
                 ))}
               </div>
               <div className={styles["about-page-skill-list"]}>
                 {toolbox.map((group) => (
-                  <p key={group.title}>
-                    <strong>{group.title}</strong> {group.items.join(", ")}
+                  <p className={styles["about-page-skill-list__item"]} key={group.title}>
+                    <strong className={styles["about-page-skill-list__label"]}>{group.title}</strong> {group.items.join(", ")}
                   </p>
                 ))}
               </div>

@@ -147,9 +147,6 @@
 }
 
 .outcomes__track {
-  display: flex;
-  width: max-content;
-  animation: outcomes-scroll 34s linear infinite;
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
   font-weight: 800;
@@ -183,14 +180,4 @@
   border-radius: 50%;
   background: var(--color-primary);
   transform: translateY(-50%);
-}
-
-@keyframes outcomes-scroll {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
 }

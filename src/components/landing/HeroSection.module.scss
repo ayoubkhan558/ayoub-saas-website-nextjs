@@ -213,15 +213,7 @@
 }
 
 .hero__tool-marquee-track {
-  display: flex;
-  width: max-content;
-  gap: var(--space-2);
-  animation: hero-tools-marquee 24s linear infinite;
-  will-change: transform;
-}
-
-.hero__tool-marquee:hover .hero__tool-marquee-track {
-  animation-play-state: paused;
+  width: 100%;
 }
 
 .hero__tool-logo {
@@ -236,20 +228,10 @@
     #fff;
 }
 
-.hero__tool-logo img {
+.hero__tool-logo-image {
   width: 27px;
   height: 27px;
   object-fit: contain;
-}
-
-@keyframes hero-tools-marquee {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(-50% - (var(--space-2) / 2)));
-  }
 }
 
 .hero__tool-topline,
@@ -453,12 +435,6 @@
   font-weight: 800;
   line-height: 1.2;
   padding: 0.42rem 0.52rem;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero__tool-marquee-track {
-    animation: none;
-  }
 }
 
 .hero__client-proof {

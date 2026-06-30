@@ -1,4 +1,5 @@
 import type { PortfolioData } from "@/context/PortfolioContentContext";
+import { LogoMarquee } from "@/components/shared/LogoMarquee";
 import { IconGlyph } from "./IconGlyph";
 import styles from "./HeroSection.module.scss";
 
@@ -88,13 +89,14 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
             </div>
             <div className={styles["hero__tool-marquee"]} aria-label="Tools and platforms">
               <span className={styles["hero__tool-marquee-label"]}>Stack I ship with</span>
-              <div className={styles["hero__tool-marquee-track"]}>
-                {[...heroToolLogos, ...heroToolLogos].map((tool, index) => (
-                  <span className={styles["hero__tool-logo"]} key={`${tool.name}-${index}`} aria-hidden={index >= heroToolLogos.length}>
-                    <img src={tool.src} alt={index < heroToolLogos.length ? tool.name : ""} />
-                  </span>
-                ))}
-              </div>
+              <LogoMarquee
+                ariaLabel="Tools and platforms"
+                className={styles["hero__tool-marquee-track"]}
+                imageClassName={styles["hero__tool-logo-image"]}
+                itemClassName={styles["hero__tool-logo"]}
+                items={heroToolLogos}
+                speed={14}
+              />
             </div>
             {heroTestimonial ? (
               <figure className={styles["hero__quote-card"]}>

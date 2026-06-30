@@ -1,4 +1,5 @@
 import type { PortfolioData } from "@/context/PortfolioContentContext";
+import { TextMarquee } from "@/components/shared/TextMarquee";
 import { IconGlyph } from "./IconGlyph";
 import { SectionHeader } from "./SectionHeader";
 import styles from "./WhySection.module.scss";
@@ -59,7 +60,7 @@ export function WhySection({ portfolio }: { portfolio: PortfolioData }) {
       <section className={`${styles["outcomes"]} section`} aria-label="Results and outcomes">
         <div className="section__inner" style={{ padding: 0}}>
           <div className={styles["outcomes__marquee"]}>
-            <div className={styles["outcomes__track"]}>
+            <TextMarquee className={styles["outcomes__track"]} speed={15}>
               <div className={styles["outcomes__group"]}>
                 {portfolio.outcomes.map((item) => (
                   <span className={styles["outcomes__item"]} key={item}>
@@ -67,14 +68,7 @@ export function WhySection({ portfolio }: { portfolio: PortfolioData }) {
                   </span>
                 ))}
               </div>
-              <div className={styles["outcomes__group"]} aria-hidden="true">
-                {portfolio.outcomes.map((item) => (
-                  <span className={styles["outcomes__item"]} key={item}>
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
+            </TextMarquee>
           </div>
         </div>
       </section>

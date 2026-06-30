@@ -22,14 +22,14 @@ export function CaseStudyHero({ study }: { study: CaseStudyDetailData }) {
             <p className={styles.tagline}>{projectType}</p>
             <div className={styles.heroActions}>
               <dl className={styles.heroMeta}>
-                <div>
-                  <dt>Timeline</dt>
-                  <dd>{study.timeline}</dd>
+                <div className={styles.heroMeta__item}>
+                  <dt className={styles.heroMeta__label}>Timeline</dt>
+                  <dd className={styles.heroMeta__value}>{study.timeline}</dd>
                 </div>
               </dl>
               <a className={styles.liveSiteLink} href={study.liveUrl} target="_blank" rel="noreferrer">
                 Visit live site
-                <IconGlyph name="externalLink" />
+                <IconGlyph className={styles.liveSiteLink__icon} name="externalLink" />
               </a>
             </div>
           </div>

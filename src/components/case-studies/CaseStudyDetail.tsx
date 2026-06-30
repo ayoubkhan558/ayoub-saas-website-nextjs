@@ -7,6 +7,7 @@ import { CaseStudyFeedback } from "./CaseStudyFeedback";
 import { CaseStudyHero } from "./CaseStudyHero";
 import { CaseStudyJsonLd } from "./CaseStudyJsonLd";
 import { CaseStudyOverview } from "./CaseStudyOverview";
+import { CaseStudyPager } from "./CaseStudyPager";
 import { CaseStudyTools } from "./CaseStudyTools";
 import styles from "./CaseStudy.module.scss";
 
@@ -27,6 +28,7 @@ export function CaseStudyDetail({
       <CaseStudyBranding study={study} />
       <CaseStudyDesktopLayout study={study} />
       <CaseStudyFeedback study={study} />
+      <CaseStudyPager study={study} />
     </main>
   );
 }
