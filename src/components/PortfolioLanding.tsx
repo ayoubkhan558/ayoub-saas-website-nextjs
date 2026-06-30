@@ -5,6 +5,7 @@ import { FeaturedCaseStudiesSection } from "@/components/landing/FeaturedCaseStu
 import { HeroSection } from "@/components/landing/HeroSection";
 import { AboutSection } from "@/components/landing/AboutSection";
 import { ProjectShowcaseSection } from "@/components/landing/ProjectShowcaseSection";
+import { ProblemSection } from "@/components/landing/ProblemSection";
 import { ProcessSection } from "@/components/landing/ProcessSection";
 import { ProofSection } from "@/components/landing/ProofSection";
 import { FaqSection } from "@/components/landing/FaqSection";
@@ -28,12 +29,13 @@ export function PortfolioLanding() {
       <main id="main">
         <HeroSection portfolio={portfolio} />
         <TrustSections portfolio={portfolio} />
-        <AboutSection portfolio={portfolio} />
-        <ProcessSection portfolio={portfolio} />
-        <ProjectShowcaseSection projects={projects} />
+        <ProblemSection portfolio={portfolio} />
         <ServicesSection services={featuredServices} />
+        <ProjectShowcaseSection projects={projects} />
         <FeaturedCaseStudiesSection projects={featuredCaseStudies} />
         <ProofSection portfolio={portfolio} />
+        <AboutSection portfolio={portfolio} />
+        <ProcessSection portfolio={portfolio} />
         <FaqSection portfolio={portfolio} />
         <ContactFooter portfolio={portfolio} />
       </main>
