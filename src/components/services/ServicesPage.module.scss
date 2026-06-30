@@ -225,6 +225,29 @@
 }
 
 .services-offer-grid {
+  --services-offer-card-bg: rgba(243, 240, 241, 0.76);
+  --services-offer-card-border: transparent;
+  --services-offer-card-hover-bg: var(--color-surface-chrome);
+  --services-offer-card-hover-border: rgba(49, 38, 59, 0.24);
+  --services-offer-card-hover-shadow: inset 0 0 0 4px rgba(236, 237, 242, 0.74);
+  --services-offer-feature-bg: rgba(255, 255, 255, 0.7);
+  --services-offer-feature-border: rgba(49, 38, 59, 0.12);
+  --services-offer-feature-color: var(--color-plum-charcoal);
+  --services-offer-tabs-bg: var(--color-surface-muted);
+  --services-offer-tabs-border: rgba(49, 38, 59, 0.13);
+  --services-offer-tab-active-bg: rgba(236, 237, 242, 0.74);
+  --services-offer-tab-active-border: rgba(49, 38, 59, 0.14);
+  --services-offer-tab-panel-bg: var(--color-surface-muted);
+  --services-offer-tab-panel-border: rgba(49, 38, 59, 0.12);
+  --services-offer-illustration-bg: linear-gradient(90deg, rgba(49, 38, 59, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(49, 38, 59, 0.08) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(236, 237, 242, 0.74));
+  --services-offer-illustration-border: rgba(49, 38, 59, 0.12);
+  --services-offer-illustration-node-bg: var(--color-surface);
+  --services-offer-illustration-node-border: rgba(49, 38, 59, 0.18);
+  --services-offer-illustration-rail-bg: var(--color-surface-muted);
+  --services-offer-illustration-line: rgba(49, 38, 59, 0.22);
+  --services-offer-link-border: rgba(49, 38, 59, 0.14);
   position: relative;
   display: grid;
   gap: var(--space-4);
@@ -234,6 +257,36 @@
   }
 }
 
+:global(:root[data-theme="dark"]) .services-offer-grid {
+  --services-offer-card-bg: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    rgba(20, 17, 28, 0.94);
+  --services-offer-card-border: rgba(255, 255, 255, 0.12);
+  --services-offer-card-hover-bg: linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    rgba(25, 21, 34, 0.98);
+  --services-offer-card-hover-border: rgba(255, 255, 255, 0.2);
+  --services-offer-card-hover-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --services-offer-feature-bg: rgba(255, 255, 255, 0.055);
+  --services-offer-feature-border: rgba(255, 255, 255, 0.12);
+  --services-offer-feature-color: var(--color-text);
+  --services-offer-tabs-bg: rgba(255, 255, 255, 0.055);
+  --services-offer-tabs-border: rgba(255, 255, 255, 0.12);
+  --services-offer-tab-active-bg: rgba(255, 255, 255, 0.1);
+  --services-offer-tab-active-border: rgba(255, 255, 255, 0.14);
+  --services-offer-tab-panel-bg: rgba(14, 12, 22, 0.78);
+  --services-offer-tab-panel-border: rgba(255, 255, 255, 0.1);
+  --services-offer-illustration-bg: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    rgba(14, 12, 22, 0.56);
+  --services-offer-illustration-border: rgba(255, 255, 255, 0.12);
+  --services-offer-illustration-node-bg: rgba(255, 255, 255, 0.065);
+  --services-offer-illustration-node-border: rgba(255, 255, 255, 0.14);
+  --services-offer-illustration-rail-bg: rgba(255, 255, 255, 0.065);
+  --services-offer-illustration-line: rgba(255, 255, 255, 0.12);
+  --services-offer-link-border: rgba(255, 255, 255, 0.12);
+}
+
 .services-offer-card {
   display: grid;
   grid-template-rows: auto auto auto 1fr auto;
@@ -241,8 +294,8 @@
   align-content: start;
   height: 100%;
   min-height: 560px;
-  border-color: transparent;
-  background: rgba(243, 240, 241, 0.76);
+  border-color: var(--services-offer-card-border);
+  background: var(--services-offer-card-bg);
   padding: var(--space-5);
   transition:
     background-color 160ms ease,
@@ -256,21 +309,21 @@
 }
 
 .services-offer-card:hover {
-  border-color: rgba(49, 38, 59, 0.24);
-  background: var(--color-surface-chrome);
-  box-shadow: inset 0 0 0 4px rgba(236, 237, 242, 0.74);
+  border-color: var(--services-offer-card-hover-border);
+  background: var(--services-offer-card-hover-bg);
+  box-shadow: var(--services-offer-card-hover-shadow);
   transform: translateY(-2px);
 }
 
 .services-offer-card--featured {
-  background: rgba(236, 237, 242, 0.92);
+  background: var(--services-offer-card-bg);
 }
 
 .services-offer-card--product {
-  border-color: rgba(49, 38, 59, 0.28);
+  border-color: var(--services-offer-card-border);
   background:
     radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
-    #fff;
+    var(--services-offer-card-bg);
   background-size: 6px 6px, auto;
 }
 
@@ -282,7 +335,7 @@
   background:
     linear-gradient(rgba(49, 38, 59, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(49, 38, 59, 0.045) 1px, transparent 1px),
-    rgba(255, 255, 255, 0.96);
+    var(--services-offer-card-bg);
   background-size:
     56px 56px,
     56px 56px,
@@ -295,10 +348,10 @@
 }
 
 .services-offer-card--commerce {
-  border-color: rgba(49, 38, 59, 0.22);
+  border-color: var(--services-offer-card-border);
   background:
     radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
-    rgba(236, 237, 242, 0.82);
+    var(--services-offer-card-bg);
   background-size: 6px 6px, auto;
 }
 
@@ -374,8 +427,8 @@
   display: grid;
   grid-template-columns: 118px minmax(0, 1fr);
   gap: var(--space-3);
-  border: 1px solid rgba(49, 38, 59, 0.13);
-  background: var(--color-surface-muted);
+  border: 1px solid var(--services-offer-tabs-border);
+  background: var(--services-offer-tabs-bg);
   padding: var(--space-2);
 
   @media (max-width: 560px) {
@@ -400,7 +453,7 @@
   justify-content: flex-start;
   border: 1px solid transparent;
   background: transparent;
-  color: var(--color-ink-violet);
+  color: var(--color-heading);
   cursor: pointer;
   font-family: var(--font-display-compact);
   font-size: var(--text-ui);
@@ -421,8 +474,8 @@
 
 .services-offer-tab--active,
 .services-offer-tab:hover {
-  border-color: rgba(49, 38, 59, 0.14);
-  background: rgba(236, 237, 242, 0.74);
+  border-color: var(--services-offer-tab-active-border);
+  background: var(--services-offer-tab-active-bg);
 }
 
 .services-offer-tab:focus-visible {
@@ -432,8 +485,8 @@
 
 .services-offer-card__tab-panel {
   min-height: 142px;
-  border: 1px solid rgba(49, 38, 59, 0.12);
-  background: var(--color-surface-muted);
+  border: 1px solid var(--services-offer-tab-panel-border);
+  background: var(--services-offer-tab-panel-bg);
   padding: var(--space-4);
 }
 
@@ -475,9 +528,9 @@
   display: inline-flex;
   gap: var(--space-2);
   align-items: center;
-  border: 1px solid rgba(49, 38, 59, 0.12);
-  background: rgba(255, 255, 255, 0.7);
-  color: var(--color-plum-charcoal);
+  border: 1px solid var(--services-offer-feature-border);
+  background: var(--services-offer-feature-bg);
+  color: var(--services-offer-feature-color);
   font-size: var(--text-sm);
   font-weight: 700;
   line-height: 1.25;
@@ -496,11 +549,8 @@
   display: grid;
   min-height: 96px;
   overflow: hidden;
-  border: 1px solid rgba(49, 38, 59, 0.12);
-  background:
-    linear-gradient(90deg, rgba(49, 38, 59, 0.08) 1px, transparent 1px),
-    linear-gradient(rgba(49, 38, 59, 0.08) 1px, transparent 1px),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(236, 237, 242, 0.74));
+  border: 1px solid var(--services-offer-illustration-border);
+  background: var(--services-offer-illustration-bg);
   background-size:
     28px 28px,
     28px 28px,
@@ -514,8 +564,8 @@
   bottom: var(--space-3);
   width: 42%;
   height: 42px;
-  border: 1px solid rgba(49, 38, 59, 0.16);
-  background: var(--color-surface-muted);
+  border: 1px solid var(--services-offer-illustration-node-border);
+  background: var(--services-offer-illustration-rail-bg);
 }
 
 .services-offer-card__illustration-node {
@@ -523,8 +573,8 @@
   display: block;
   width: 42px;
   height: 42px;
-  border: 1px solid rgba(49, 38, 59, 0.18);
-  background: var(--color-surface);
+  border: 1px solid var(--services-offer-illustration-node-border);
+  background: var(--services-offer-illustration-node-bg);
 }
 
 .services-offer-card__illustration-node:nth-child(1) {
@@ -550,12 +600,12 @@
   right: 20%;
   top: 45%;
   height: 1px;
-  background: rgba(49, 38, 59, 0.22);
+  background: var(--services-offer-illustration-line);
 }
 
 .services-offer-card__link {
   align-self: end;
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid var(--services-offer-link-border);
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
   font-size: var(--text-ui);

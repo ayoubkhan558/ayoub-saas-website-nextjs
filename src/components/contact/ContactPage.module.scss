@@ -1,10 +1,16 @@
 .contact-hero :global(.section__inner) {
   padding-block: var(--space-9) var(--space-7);
-  background-color: #eeeeef;
+  background-color: var(--color-section-tint-bg);
   background-image:
     radial-gradient(rgba(1, 1, 27, 0.07) 0.75px, transparent 0.75px),
-    linear-gradient(180deg, #f6f6f7, #e9e9eb);
+    var(--color-section-tint-gradient);
   background-size: 6px 6px, auto;
+}
+
+:global(:root[data-theme="dark"]) .contact-hero :global(.section__inner) {
+  background-image:
+    radial-gradient(rgba(248, 244, 255, 0.07) 0.75px, transparent 0.75px),
+    var(--color-section-tint-gradient);
 }
 
 .contact-hero__inner,
@@ -99,12 +105,12 @@
   border: 1px solid var(--color-fog-border);
   border-radius: var(--radius-cards);
   background:
-    radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
-    #fff;
+    radial-gradient(var(--surface-dot-light) 0.75px, transparent 0.75px),
+    var(--color-surface);
   background-size: 6px 6px, auto;
   box-shadow:
-    rgba(255, 255, 255, 0.74) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.06) 0 20px 54px;
+    var(--surface-inset-light) 0 1px 0 inset,
+    var(--color-card-shadow);
 }
 
 .contact-signal-panel::before,
@@ -116,8 +122,8 @@
   inset: 0;
   z-index: 0;
   background-image:
-    radial-gradient(rgba(49, 38, 59, 0.045) 0.75px, transparent 0.75px),
-    linear-gradient(115deg, transparent 0 48%, rgba(49, 38, 59, 0.035) 48% 49%, transparent 49% 100%);
+    radial-gradient(var(--surface-grid-light) 0.75px, transparent 0.75px),
+    linear-gradient(115deg, transparent 0 48%, var(--surface-grid-light) 48% 49%, transparent 49% 100%);
   background-size:
     8px 8px,
     44px 44px;
@@ -154,10 +160,10 @@
 }
 
 .contact-signal-panel:hover {
-  border-color: rgba(49, 38, 59, 0.28);
+  border-color: var(--color-fog-border);
   background:
-    radial-gradient(rgba(1, 1, 27, 0.055) 0.75px, transparent 0.75px),
-    rgba(236, 237, 242, 0.48);
+    radial-gradient(var(--surface-dot-light) 0.75px, transparent 0.75px),
+    var(--color-surface-muted);
   background-size: 6px 6px, auto;
   transform: translateY(-2px);
 }
@@ -195,14 +201,14 @@
 .contact-card,
 .contact-form-card {
   align-content: start;
-  border-color: rgba(49, 38, 59, 0.18);
+  border-color: var(--color-fog-border);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(247, 247, 249, 0.88)),
-    radial-gradient(rgba(1, 1, 27, 0.04) 0.75px, transparent 0.75px);
+    var(--color-card-gradient),
+    radial-gradient(var(--surface-dot-light) 0.75px, transparent 0.75px);
   background-size: auto, 6px 6px;
   box-shadow:
-    rgba(255, 255, 255, 0.74) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.08) 0 24px 68px;
+    var(--surface-inset-light) 0 1px 0 inset,
+    var(--color-card-shadow-strong);
 }
 
 .contact-card::after,
@@ -258,8 +264,8 @@
 
 .contact-card__meta span,
 .contact-form-card__meta span {
-  border: 1px solid rgba(76, 114, 106, 0.22);
-  background: rgba(236, 247, 244, 0.72);
+  border: 1px solid var(--color-secondary-soft);
+  background: var(--color-chip-surface);
   color: var(--color-ink-violet);
   font-family: var(--font-code);
   font-size: var(--text-xs);
@@ -271,7 +277,7 @@
 .contact-methods {
   display: grid;
   gap: var(--space-2);
-  border-block: 1px solid rgba(49, 38, 59, 0.12);
+  border-block: 1px solid var(--color-fog-border);
   padding-block: var(--space-3);
 }
 
@@ -282,9 +288,7 @@
   align-items: center;
   min-height: 88px;
   border: 1px solid transparent;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.86), rgba(247, 247, 249, 0.72)),
-    rgba(255, 255, 255, 0.72);
+  background: var(--color-surface-raised);
   color: var(--color-ink-violet);
   padding: var(--space-3) var(--space-2) var(--space-3) var(--space-3);
   transition:
@@ -295,9 +299,9 @@
 }
 
 .contact-method:hover {
-  border-color: rgba(76, 114, 106, 0.34);
+  border-color: var(--color-secondary-soft);
   background: var(--color-surface);
-  box-shadow: rgba(49, 38, 59, 0.08) 0 14px 32px;
+  box-shadow: var(--color-card-shadow);
   transform: translateY(-2px);
 }
 
@@ -324,7 +328,7 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0;
   margin: 0;
-  border: 1px solid rgba(49, 38, 59, 0.12);
+  border: 1px solid var(--color-fog-border);
 
   @media (max-width: 560px) {
     grid-template-columns: 1fr;
@@ -335,9 +339,10 @@
   display: grid;
   gap: var(--space-1);
   min-height: 92px;
-  border-right: 1px solid rgba(49, 38, 59, 0.1);
-  border-bottom: 1px solid rgba(49, 38, 59, 0.1);
-  background: var(--color-surface-muted);
+  border-right: 1px solid var(--color-fog-border);
+  border-bottom: 1px solid var(--color-fog-border);
+  background: var(--color-band-surface);
+  color: var(--color-band-on);
   padding: var(--space-3);
 }
 
@@ -346,11 +351,15 @@
   margin: 0;
 }
 
+.contact-details dt {
+  color: var(--color-band-muted);
+}
+
 .contact-details dd {
+  color: var(--color-band-on);
   font-family: var(--font-display-compact);
   font-size: var(--text-h6);
   font-weight: 800;
-  
 }
 
 .contact-form-card__row {
@@ -371,9 +380,9 @@
 .contact-form-card select,
 .contact-form-card textarea {
   width: 100%;
-  border: 1px solid rgba(49, 38, 59, 0.16);
+  border: 1px solid var(--color-fog-border);
   border-radius: 2px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--color-input-surface);
   color: var(--color-ink-violet);
   font-size: var(--text-body);
   padding: var(--space-3);
@@ -423,11 +432,11 @@
 .contact-faqs__grid {
   display: grid;
   gap: 0;
-  border-bottom: 1px solid rgba(49, 38, 59, 0.16);
+  border-bottom: 1px solid var(--color-fog-border);
 }
 
 .contact-faq-card {
-  border-top: 1px solid rgba(49, 38, 59, 0.16);
+  border-top: 1px solid var(--color-fog-border);
   border-right: 0;
   border-bottom: 0;
   border-left: 0;
@@ -440,11 +449,11 @@
 }
 
 .contact-faq-card[open] {
-  background: rgba(236, 233, 236, 0.78);
+  background: var(--color-item-active);
 }
 
 .contact-faq-card:hover {
-  background: rgba(236, 233, 236, 0.52);
+  background: var(--color-item-active-hover);
 }
 
 .contact-faq-card::before,
@@ -512,6 +521,7 @@
   max-width: 78ch;
   margin: var(--space-0) var(--space-5);
   padding-bottom: var(--space-3);
+  color: var(--color-storm-mauve);
   font-size: var(--text-md);
   line-height: 1.35;
 }

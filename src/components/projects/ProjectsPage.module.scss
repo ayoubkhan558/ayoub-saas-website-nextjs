@@ -1,11 +1,19 @@
 .hero :global(.section__inner),
 .archive :global(.section__inner),
 .caseLink :global(.section__inner) {
-  background-color: #eeeeef;
+  background-color: var(--color-section-tint-bg);
   background-image:
     radial-gradient(rgba(1, 1, 27, 0.07) 0.75px, transparent 0.75px),
-    linear-gradient(180deg, #f6f6f7, #e9e9eb);
+    var(--color-section-tint-gradient);
   background-size: 6px 6px, auto;
+}
+
+:global(:root[data-theme="dark"]) .hero :global(.section__inner),
+:global(:root[data-theme="dark"]) .archive :global(.section__inner),
+:global(:root[data-theme="dark"]) .caseLink :global(.section__inner) {
+  background-image:
+    radial-gradient(rgba(248, 244, 255, 0.07) 0.75px, transparent 0.75px),
+    var(--color-section-tint-gradient);
 }
 
 .hero :global(.section__inner) {
@@ -218,6 +226,14 @@
 }
 
 .filters {
+  --project-filter-border: rgba(49, 38, 59, 0.16);
+  --project-filter-bg: var(--color-surface-muted);
+  --project-filter-color: var(--color-ink-violet);
+  --project-filter-hover-border: rgba(49, 38, 59, 0.34);
+  --project-filter-hover-bg: var(--color-surface);
+  --project-filter-active-border: var(--color-ink-violet);
+  --project-filter-active-bg: var(--color-ink-violet);
+  --project-filter-active-color: #fff;
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
@@ -227,14 +243,25 @@
   padding-block: var(--space-3);
 }
 
+:global(:root[data-theme="dark"]) .filters {
+  --project-filter-border: rgba(255, 255, 255, 0.12);
+  --project-filter-bg: rgba(255, 255, 255, 0.055);
+  --project-filter-color: var(--color-heading);
+  --project-filter-hover-border: rgba(255, 255, 255, 0.22);
+  --project-filter-hover-bg: rgba(255, 255, 255, 0.1);
+  --project-filter-active-border: rgba(255, 125, 170, 0.7);
+  --project-filter-active-bg: rgba(255, 77, 136, 0.16);
+  --project-filter-active-color: var(--color-heading);
+}
+
 .filters__link {
   display: inline-flex;
   min-height: 34px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(49, 38, 59, 0.16);
-  background: var(--color-surface-muted);
-  color: var(--color-ink-violet);
+  border: 1px solid var(--project-filter-border);
+  background: var(--project-filter-bg);
+  color: var(--project-filter-color);
   font-family: var(--font-code);
   font-size: var(--text-xs);
   line-height: 1;
@@ -248,16 +275,16 @@
 }
 
 .filters__link:hover {
-  border-color: rgba(49, 38, 59, 0.34);
-  background: var(--color-surface);
+  border-color: var(--project-filter-hover-border);
+  background: var(--project-filter-hover-bg);
   transform: translateY(-1px);
 }
 
 .filters__link--active,
 .filters__link--active:hover {
-  border-color: var(--color-ink-violet);
-  background: var(--color-ink-violet);
-  color: #fff;
+  border-color: var(--project-filter-active-border);
+  background: var(--project-filter-active-bg);
+  color: var(--project-filter-active-color);
 }
 
 .grid {
@@ -446,34 +473,34 @@
 
 .caseLink__inner {
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid var(--color-fog-border);
   background:
-    radial-gradient(rgba(255, 255, 255, 0.08) 0.75px, transparent 0.75px),
-    var(--color-ink-violet);
+    radial-gradient(var(--surface-dot-light) 0.75px, transparent 0.75px),
+    var(--color-band-surface);
   background-size: 7px 7px, auto;
-  box-shadow: rgba(1, 1, 27, 0.18) 0 28px 72px;
-  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.28) 0 28px 72px;
+  color: var(--color-band-on);
   padding: var(--space-6);
 }
 
 .caseLink__inner .eyebrow,
 .caseLink__inner p {
-  color: rgba(255, 255, 255, 0.68);
+  color: var(--color-band-muted);
 }
 
 .caseLink__inner h2,
 .caseLink__inner h2 i {
-  color: #fff;
+  color: var(--color-band-on);
 }
 
 .caseLink__inner :global(.button--dark) {
-  border-color: #fff;
+  border-color: var(--color-band-on);
   background: var(--color-surface);
   color: var(--color-ink-violet);
 }
 
 .caseLink__inner :global(.button--dark:hover) {
-  border-color: rgba(255, 255, 255, 0.82);
+  border-color: var(--color-fog-border);
   background: var(--color-surface-muted);
   color: var(--color-ink-violet);
 }

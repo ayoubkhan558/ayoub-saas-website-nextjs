@@ -16,7 +16,15 @@
   background:
     linear-gradient(90deg, rgba(49, 38, 59, 0.12) 1px, transparent 1px) 0 0 / 48px 100%,
     radial-gradient(rgba(49, 38, 59, 0.045) 1px, transparent 1px) 0 0 / 7px 7px,
-    rgba(255, 252, 252, 0.52);
+    var(--color-surface-muted);
+}
+
+:global(:root[data-theme="dark"]) .footer__top-rule {
+  border-top-color: rgba(248, 244, 255, 0.2);
+  background:
+    linear-gradient(90deg, rgba(248, 244, 255, 0.08) 1px, transparent 1px) 0 0 / 48px 100%,
+    radial-gradient(rgba(248, 244, 255, 0.045) 1px, transparent 1px) 0 0 / 7px 7px,
+    rgba(21, 18, 29, 0.74);
 }
 
 .footer__inner {

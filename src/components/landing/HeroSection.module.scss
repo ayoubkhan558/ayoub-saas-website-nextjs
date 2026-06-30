@@ -188,6 +188,9 @@
 }
 
 .hero__tool-marquee {
+  --hero-tool-tile-border: rgba(49, 38, 59, 0.14);
+  --hero-tool-tile-bg: linear-gradient(180deg, var(--color-surface-raised), var(--color-bone-mist)),
+    var(--color-surface);
   position: relative;
   z-index: 2;
   display: grid;
@@ -202,6 +205,12 @@
     rgba(49, 38, 59, 0.08) 0 12px 32px;
   padding: var(--space-3);
   text-align: left;
+}
+
+:global(:root[data-theme="dark"]) .hero__tool-marquee {
+  --hero-tool-tile-border: rgba(255, 255, 255, 0.08);
+  --hero-tool-tile-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015)),
+    rgba(15, 13, 22, 0.74);
 }
 
 .hero__tool-marquee-label {
@@ -222,10 +231,8 @@
   aspect-ratio: 1;
   flex: 0 0 auto;
   place-items: center;
-  border: 1px solid rgba(49, 38, 59, 0.14);
-  background:
-    linear-gradient(180deg, var(--color-surface-raised), var(--color-bone-mist)),
-    var(--color-surface);
+  border: 1px solid var(--hero-tool-tile-border);
+  background: var(--hero-tool-tile-bg);
 }
 
 .hero__tool-logo-image {
