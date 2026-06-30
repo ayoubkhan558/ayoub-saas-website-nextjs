@@ -7,6 +7,7 @@
     "phone": "+92 334 781 2124",
     "email": "ayoubkhan558@hotmail.com",
     "linkedin": "https://linkedin.com/in/ayoubkhan558",
+    "github": "https://github.com/ayoubkhan558",
     "website": "https://mayoub.dev",
     "upwork": "#cta",
     "availability": "Open for new projects",
@@ -17,11 +18,26 @@
     "offer": "Refer a client — get 15% off your next project"
   },
   "navLinks": [
-    { "label": "About", "href": "/about" },
-    { "label": "Services", "href": "/services" },
-    { "label": "Projects", "href": "/projects" },
-    { "label": "Case Studies", "href": "/case-studies" },
-    { "label": "Contact", "href": "/contact" }
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Services",
+      "href": "/services"
+    },
+    {
+      "label": "Projects",
+      "href": "/projects"
+    },
+    {
+      "label": "Case Studies",
+      "href": "/case-studies"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
   ],
   "sections": {
     "whyWork": {
@@ -72,8 +88,14 @@
     "primaryCta": "Start a project",
     "secondaryCta": "See what I've built",
     "badges": [
-      { "icon": "star", "label": "Top Rated on Upwork" },
-      { "icon": "users", "label": "Open for new projects" }
+      {
+        "icon": "star",
+        "label": "Top Rated on Upwork"
+      },
+      {
+        "icon": "users",
+        "label": "Open for new projects"
+      }
     ],
     "trustMetrics": [
       {
@@ -145,23 +167,59 @@
     ]
   },
   "trustMarquee": [
-    { "name": "SaaS", "icon": "rocket" },
-    { "name": "E-Commerce", "icon": "cart" },
-    { "name": "Marketing", "icon": "globe" },
-    { "name": "Education", "icon": "layers" },
-    { "name": "Healthcare", "icon": "shield" },
-    { "name": "Real Estate", "icon": "search" },
-    { "name": "5gStore", "icon": "cart" },
-    { "name": "Xgrid", "icon": "code" },
-    { "name": "PinAuto", "icon": "gauge" },
-    { "name": "Markedine", "icon": "sparkles" },
-    { "name": "Mortgage", "icon": "lock" },
-    { "name": "Serveekay", "icon": "users" }
+    {
+      "name": "SaaS",
+      "icon": "rocket"
+    },
+    {
+      "name": "E-Commerce",
+      "icon": "cart"
+    },
+    {
+      "name": "Marketing",
+      "icon": "globe"
+    },
+    {
+      "name": "Education",
+      "icon": "layers"
+    },
+    {
+      "name": "Healthcare",
+      "icon": "shield"
+    },
+    {
+      "name": "Real Estate",
+      "icon": "search"
+    },
+    {
+      "name": "5gStore",
+      "icon": "cart"
+    },
+    {
+      "name": "Xgrid",
+      "icon": "code"
+    },
+    {
+      "name": "PinAuto",
+      "icon": "gauge"
+    },
+    {
+      "name": "Markedine",
+      "icon": "sparkles"
+    },
+    {
+      "name": "Mortgage",
+      "icon": "lock"
+    },
+    {
+      "name": "Serveekay",
+      "icon": "users"
+    }
   ],
   "painPoints": [
-    "Designs stuck in Figma, never shipped",
-    "UI that's slow and hard to maintain",
-    "Live — but not converting"
+    "Your Visitors Drop In, But Don't Engage",
+    "Your Website Lacks Uniqueness",
+    "Your Competitor Stealing the Spotlight"
   ],
   "problemsSolved": [
     "Figma designs that never make it to production cleanly",
@@ -345,9 +403,18 @@
       "title": "Discovery",
       "description": "Goals, users, and blockers mapped before a line of code is written.",
       "metrics": [
-        { "label": "Goals", "value": "Mapped" },
-        { "label": "Scope", "value": "Clear" },
-        { "label": "Needs", "value": "Defined" }
+        {
+          "label": "Goals",
+          "value": "Mapped"
+        },
+        {
+          "label": "Scope",
+          "value": "Clear"
+        },
+        {
+          "label": "Needs",
+          "value": "Defined"
+        }
       ]
     },
     {
@@ -356,9 +423,18 @@
       "title": "Planning",
       "description": "Component structure, milestones, and review checkpoints set upfront — no surprises mid-build.",
       "metrics": [
-        { "label": "Structure", "value": "Planned" },
-        { "label": "Milestones", "value": "Set" },
-        { "label": "Risk", "value": "Handled" }
+        {
+          "label": "Structure",
+          "value": "Planned"
+        },
+        {
+          "label": "Milestones",
+          "value": "Set"
+        },
+        {
+          "label": "Risk",
+          "value": "Handled"
+        }
       ]
     },
     {
@@ -367,9 +443,18 @@
       "title": "Development",
       "description": "Built in tight iterations. You see real progress — not a big reveal at the end.",
       "metrics": [
-        { "label": "UI", "value": "Active" },
-        { "label": "Logic", "value": "Active" },
-        { "label": "Review", "value": "Open" }
+        {
+          "label": "UI",
+          "value": "Active"
+        },
+        {
+          "label": "Logic",
+          "value": "Active"
+        },
+        {
+          "label": "Review",
+          "value": "Open"
+        }
       ]
     },
     {
@@ -378,9 +463,18 @@
       "title": "Launch & Handoff",
       "description": "QA, deployment, and clean handoff. Your team gets full access and owns it from day one.",
       "metrics": [
-        { "label": "QA", "value": "Pass" },
-        { "label": "Deploy", "value": "Ready" },
-        { "label": "Handoff", "value": "Clean" }
+        {
+          "label": "QA",
+          "value": "Pass"
+        },
+        {
+          "label": "Deploy",
+          "value": "Ready"
+        },
+        {
+          "label": "Handoff",
+          "value": "Clean"
+        }
       ]
     }
   ],
@@ -391,11 +485,26 @@
     "signature": "Muhammad Ayoub",
     "resumeHref": "/ATS-react-front-Ayoub-CV_Resume.pdf",
     "awards": [
-      { "label": "Projects delivered", "value": "50+" },
-      { "label": "Job success", "value": "100%" },
-      { "label": "Freelancer status", "value": "Top Rated" },
-      { "label": "Experience", "value": "5+ Years" },
-      { "label": "Happy clients", "value": "20+" }
+      {
+        "label": "Projects delivered",
+        "value": "50+"
+      },
+      {
+        "label": "Job success",
+        "value": "100%"
+      },
+      {
+        "label": "Freelancer status",
+        "value": "Top Rated"
+      },
+      {
+        "label": "Experience",
+        "value": "5+ Years"
+      },
+      {
+        "label": "Happy clients",
+        "value": "20+"
+      }
     ]
   },
   "testimonials": [
@@ -446,10 +555,22 @@
     }
   ],
   "recognition": [
-    { "label": "Top Rated Freelancer", "status": "Verified" },
-    { "label": "100% Job Success", "status": "Trusted" },
-    { "label": "Master of Computer Science", "status": "University of Sahiwal" },
-    { "label": "Currently Building", "status": "Brickify" }
+    {
+      "label": "Top Rated Freelancer",
+      "status": "Verified"
+    },
+    {
+      "label": "100% Job Success",
+      "status": "Trusted"
+    },
+    {
+      "label": "Master of Computer Science",
+      "status": "University of Sahiwal"
+    },
+    {
+      "label": "Currently Building",
+      "status": "Brickify"
+    }
   ],
   "expertise": [
     {
@@ -577,27 +698,60 @@
     {
       "title": "Sections",
       "links": [
-        { "label": "Services", "href": "/services" },
-        { "label": "Projects", "href": "/projects" },
-        { "label": "Case Studies", "href": "/case-studies" }
+        {
+          "label": "Services",
+          "href": "/services"
+        },
+        {
+          "label": "Projects",
+          "href": "/projects"
+        },
+        {
+          "label": "Case Studies",
+          "href": "/case-studies"
+        }
       ]
     },
     {
       "title": "Projects",
       "links": [
-        { "label": "Brickify", "href": "https://brickify.netlify.app" },
-        { "label": "5gStore", "href": "https://5gstore.pk" },
-        { "label": "PinAuto", "href": "https://pin-auto.com" },
-        { "label": "Clampy", "href": "https://clampy.netlify.app" }
+        {
+          "label": "Brickify",
+          "href": "https://brickify.netlify.app"
+        },
+        {
+          "label": "5gStore",
+          "href": "https://5gstore.pk"
+        },
+        {
+          "label": "PinAuto",
+          "href": "https://pin-auto.com"
+        },
+        {
+          "label": "Clampy",
+          "href": "https://clampy.netlify.app"
+        }
       ]
     },
     {
       "title": "Contact",
       "links": [
-        { "label": "Email", "href": "mailto:ayoubkhan558@hotmail.com" },
-        { "label": "Phone", "href": "tel:+923347812124" },
-        { "label": "LinkedIn", "href": "https://linkedin.com/in/ayoubkhan558" },
-        { "label": "Hire Me", "href": "#cta" }
+        {
+          "label": "Email",
+          "href": "mailto:ayoubkhan558@hotmail.com"
+        },
+        {
+          "label": "Phone",
+          "href": "tel:+923347812124"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://linkedin.com/in/ayoubkhan558"
+        },
+        {
+          "label": "Hire Me",
+          "href": "#cta"
+        }
       ]
     }
   ],
