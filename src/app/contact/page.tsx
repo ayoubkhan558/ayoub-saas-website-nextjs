@@ -10,7 +10,7 @@ import styles from "@/components/contact/ContactPage.module.scss";
 export const metadata: Metadata = {
   title: "Hire Muhammad Ayoub Khan",
   description:
-    "Hire Muhammad Ayoub Khan, also known as Ayoub Khan, M Ayoub Khan, and Mayoub, for WordPress development, website design, WooCommerce, React, Next.js, Bricks Builder, Elementor, and conversion-focused frontend projects.",
+    "Hire Muhammad Ayoub Khan for WordPress, website design, WooCommerce, React, Next.js, Bricks Builder, Elementor, and frontend projects.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Hire Muhammad Ayoub Khan | WordPress Developer",
@@ -18,6 +18,14 @@ export const metadata: Metadata = {
       "Send project details, request a build estimate, or contact Muhammad Ayoub for freelance WordPress, website design, and front-end development work.",
     type: "website",
     url: "/contact",
+    images: [
+      {
+        url: "/ayoub-about-v2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hire Muhammad Ayoub Khan WordPress developer",
+      },
+    ],
   },
 };
 

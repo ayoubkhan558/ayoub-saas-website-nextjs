@@ -11,7 +11,7 @@ import styles from "@/components/about/AboutPage.module.scss";
 export const metadata: Metadata = {
   title: "About Muhammad Ayoub Khan, Freelance Web Developer",
   description:
-    "About Muhammad Ayoub Khan, also searched as Ayoub Khan, M Ayoub Khan, and Mayoub, a freelance web developer and WordPress developer building React, Next.js, WooCommerce, Bricks Builder, Elementor, and reliable business websites.",
+    "About Muhammad Ayoub Khan, a freelance WordPress and web developer building React, Next.js, WooCommerce, Bricks, Elementor, and business websites.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Muhammad Ayoub Khan, Freelance Web Developer",
@@ -19,6 +19,14 @@ export const metadata: Metadata = {
       "Learn about Muhammad Ayoub's WordPress, front-end, website design, and website development experience, workflow, and practical delivery approach.",
     type: "profile",
     url: "/about",
+    images: [
+      {
+        url: "/ayoub-about-v2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Ayoub Khan freelance web developer",
+      },
+    ],
   },
 };
 

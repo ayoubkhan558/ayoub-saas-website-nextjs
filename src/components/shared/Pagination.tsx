@@ -47,6 +47,7 @@ export function Pagination({
         className={`${styles.pagination__link} ${currentPage <= 1 ? styles["pagination__link--disabled"] : ""}`}
         href={pageHref(basePath, Math.max(1, currentPage - 1), anchorId)}
         aria-disabled={currentPage <= 1}
+        title="Go to previous page"
       >
         Previous
       </Link>
@@ -62,6 +63,7 @@ export function Pagination({
                 className={`${styles.pagination__page} ${page === currentPage ? styles["pagination__page--active"] : ""}`}
                 href={pageHref(basePath, page, anchorId)}
                 aria-current={page === currentPage ? "page" : undefined}
+                title={`Go to page ${page}`}
               >
                 {page}
               </Link>
@@ -73,6 +75,7 @@ export function Pagination({
         className={`${styles.pagination__link} ${currentPage >= totalPages ? styles["pagination__link--disabled"] : ""}`}
         href={pageHref(basePath, Math.min(totalPages, currentPage + 1), anchorId)}
         aria-disabled={currentPage >= totalPages}
+        title="Go to next page"
       >
         Next
       </Link>

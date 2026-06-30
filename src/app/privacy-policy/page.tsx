@@ -11,6 +11,14 @@ export const metadata: Metadata = {
     description: "How contact details, project information, analytics, and privacy requests are handled.",
     type: "website",
     url: "/privacy-policy",
+    images: [
+      {
+        url: "/ayoub-about-v2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Ayoub Khan privacy policy",
+      },
+    ],
   },
 };
 

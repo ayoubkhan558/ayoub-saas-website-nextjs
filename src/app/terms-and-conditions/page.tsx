@@ -11,6 +11,14 @@ export const metadata: Metadata = {
     description: "General terms for website use, project scope, payment, delivery, support, and ownership.",
     type: "website",
     url: "/terms-and-conditions",
+    images: [
+      {
+        url: "/ayoub-about-v2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Ayoub Khan terms and conditions",
+      },
+    ],
   },
 };
 

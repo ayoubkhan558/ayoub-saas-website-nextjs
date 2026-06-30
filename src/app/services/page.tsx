@@ -7,7 +7,7 @@ import portfolio from "@/data/portfolio.json";
 export const metadata: Metadata = {
   title: "Website Development Services",
   description:
-    "Website development services for businesses: WordPress development, website design, WooCommerce, Bricks Builder, Elementor, React, Next.js, CMS setup, and performance improvements.",
+    "WordPress, website design, WooCommerce, Bricks Builder, Elementor, React, Next.js, CMS setup, and performance services.",
   alternates: { canonical: "/services" },
   keywords: [
     "website development services",
@@ -25,6 +25,14 @@ export const metadata: Metadata = {
       "Frontend, WordPress, WooCommerce, website design, and website improvement services for businesses that need clean delivery and measurable outcomes.",
     type: "website",
     url: "/services",
+    images: [
+      {
+        url: "/ayoub-about-v2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Ayoub Khan website development services",
+      },
+    ],
   },
 };
 

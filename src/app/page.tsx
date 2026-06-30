@@ -9,7 +9,7 @@ import portfolio from "@/data/portfolio.json";
 export const metadata: Metadata = {
   title: "Muhammad Ayoub Khan, Freelance WordPress Developer",
   description:
-    "Find and hire Muhammad Ayoub Khan, also searched as Ayoub, Ayoub Khan, M Ayoub Khan, and Mayoub, for WordPress, website design, WooCommerce, React, and Next.js development.",
+    "Hire Muhammad Ayoub Khan for WordPress, website design, WooCommerce, React, and Next.js development.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Muhammad Ayoub Khan, Freelance WordPress Developer",
