@@ -32,7 +32,7 @@ export function ProblemSection({ portfolio }: { portfolio: PortfolioData }) {
                 <strong className={styles["problem__ticker-item"]} key={problem}>{problem}</strong>
               ))}
             </div>
-            <a className={`button ${styles["problem__ticker-button"]}`} href="#cta">
+            <a className={`button ${styles["problem__ticker-button"]}`} href="/contact" title="Contact Muhammad Ayoub to fix my website">
               Let&apos;s fix my site <IconGlyph name="arrowRight" />
             </a>
           </div>

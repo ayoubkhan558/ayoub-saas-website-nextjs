@@ -6,6 +6,8 @@ import styles from "./ServicesSection.module.scss";
 type Service = PortfolioData["services"][number];
 
 export function ServicesSection({ services }: { services: Service[] }) {
+  const serviceHref = (href: string) => (href === "#cta" ? "/contact" : href);
+
   return (
     <section className="section" id="services">
       <div className="section__inner">
@@ -31,7 +33,7 @@ export function ServicesSection({ services }: { services: Service[] }) {
                 </div>
                 <h3 className={styles["services__card-title"]}>{service.name}</h3>
                 <p className={styles["services__card-text"]}>{service.description}</p>
-                <a className={styles["services__link"]} href={service.href}>
+                <a className={styles["services__link"]} href={serviceHref(service.href)} title={`${service.cta} with Muhammad Ayoub`}>
                   {service.cta}
                   <IconGlyph name="arrowRight" />
                 </a>
@@ -39,7 +41,7 @@ export function ServicesSection({ services }: { services: Service[] }) {
             ))}
           </div>
           <div className={styles["services__actions"]}>
-            <Link className="button button--light" href="/services">
+            <Link className="button button--light" href="/services" title="View all website development services">
               View all services
               <IconGlyph name="arrowRight" />
             </Link>

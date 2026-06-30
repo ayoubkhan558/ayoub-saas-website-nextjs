@@ -46,10 +46,10 @@ export function ClientTestimonials({ clients }: { clients: Client[] }) {
                   aria-pressed={isActive}
                 >
                   {client.avatar ? (
-                    <img src={client.avatar} alt="" loading="lazy" />
+                    <img src={client.avatar} alt={`${client.name} client testimonial avatar`} title={`${client.name} client testimonial avatar`} loading="lazy" />
                   ) : (
                     <span className={styles["testimonials__logo-fallback"]}>
-                      <img src={client.logo} alt="" loading="lazy" />
+                      <img src={client.logo} alt={`${client.name} logo`} title={`${client.name} logo`} loading="lazy" />
                     </span>
                   )}
                 </button>
@@ -80,7 +80,7 @@ export function ClientTestimonials({ clients }: { clients: Client[] }) {
 
         <figure className={styles["testimonials__quote-card"]} key={activeClient.name}>
           <div className={styles["testimonials__quote-logo"]} aria-hidden="true">
-            <img src={activeClient.logo} alt="" />
+            <img src={activeClient.logo} alt={`${activeClient.name} logo`} title={`${activeClient.name} logo`} />
           </div>
           <blockquote className={styles["testimonials__quote"]}>
             <span className={styles["testimonials__quote-mark"]} aria-hidden="true">"</span>
@@ -89,9 +89,9 @@ export function ClientTestimonials({ clients }: { clients: Client[] }) {
           <figcaption className={styles["testimonials__author"]}>
             <span className={styles["testimonials__author-image"]}>
               {activeClient.avatar ? (
-                <img src={activeClient.avatar} alt="" loading="lazy" />
+                <img src={activeClient.avatar} alt={`${activeClient.name} client testimonial avatar`} title={`${activeClient.name} client testimonial avatar`} loading="lazy" />
               ) : (
-                <img src={activeClient.logo} alt="" loading="lazy" />
+                <img src={activeClient.logo} alt={`${activeClient.name} logo`} title={`${activeClient.name} logo`} loading="lazy" />
               )}
             </span>
             <strong className={styles["testimonials__author-name"]}>{activeClient.name}</strong>

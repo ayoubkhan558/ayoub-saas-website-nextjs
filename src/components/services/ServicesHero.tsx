@@ -24,11 +24,11 @@ export function ServicesHero() {
               conversion-focused e-commerce improvements.
             </p>
             <div className={styles["services-page-hero__actions"]}>
-              <Link className="button button--dark" href="/contact">
+              <Link className="button button--dark" href="/contact" title="Hire Muhammad Ayoub for website development">
                 Send project details
                 <IconGlyph name="arrowRight" />
               </Link>
-              <Link className="button button--ghost" href="/case-studies">
+              <Link className="button button--ghost" href="/case-studies" title="View Muhammad Ayoub case studies">
                 View case studies
                 <IconGlyph name="arrowRight" />
               </Link>

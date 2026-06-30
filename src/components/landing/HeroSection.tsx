@@ -51,11 +51,11 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
             </p>
 
             <div className={styles["hero__actions"]}>
-              <a className="button" href="#cta">
+              <a className="button" href="/contact" title="Start a website project with Muhammad Ayoub">
                 {portfolio.hero.primaryCta}
                 <IconGlyph name="arrowRight" />
               </a>
-              <a className="button button--ghost" href="#work">
+              <a className="button button--ghost" href="#work" title="View Muhammad Ayoub website projects">
                 {portfolio.hero.secondaryCta}
                 <IconGlyph name="layers" />
               </a>
@@ -65,7 +65,7 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
               <div className={styles["hero__client-photos"]} aria-hidden="true">
                 {proofClients.map((client) => (
                   <span className={styles["hero__client-photo"]} key={client.name}>
-                    {client.avatar ? <img src={client.avatar} alt="" loading="lazy" /> : client.initials}
+                    {client.avatar ? <img src={client.avatar} alt={`${client.name} client avatar`} title={`${client.name} client avatar`} loading="lazy" /> : client.initials}
                   </span>
                 ))}
               </div>
@@ -79,7 +79,7 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
           <aside className={styles["hero__profile-panel"]} aria-label="Muhammad Ayoub profile and testimonial">
             <div className={styles["hero__identity"]} aria-label="Muhammad Ayoub profile">
               <span className={styles["hero__portrait"]}>
-                <img src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub" />
+                <img src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub Khan website developer" title="Muhammad Ayoub Khan website developer" />
               </span>
               <div className={styles["hero__identity-copy"]}>
                 <strong>M. Ayoub</strong>

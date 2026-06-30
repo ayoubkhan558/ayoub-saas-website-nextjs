@@ -32,11 +32,11 @@ export function CaseStudyResponsiveLayout({ study }: { study: CaseStudyDetailDat
             <div className={styles.deviceStage} aria-label={`${study.client} responsive tablet and mobile mockups`}>
               <div className={styles.tablet}>
                 <span className={styles.deviceLabel}>Tablet</span>
-                <img src={previewImage} alt="" loading="lazy" />
+                <img src={previewImage} alt={`${study.client} responsive website desktop preview`} title={`${study.client} responsive website desktop preview`} loading="lazy" />
               </div>
               <div className={styles.phone}>
                 <span className={styles.deviceLabel}>Mobile</span>
-                <img src={previewImage} alt="" loading="lazy" />
+                <img src={previewImage} alt={`${study.client} responsive website mobile preview`} title={`${study.client} responsive website mobile preview`} loading="lazy" />
               </div>
             </div>
           </div>

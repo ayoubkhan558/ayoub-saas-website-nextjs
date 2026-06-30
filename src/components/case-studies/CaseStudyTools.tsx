@@ -30,7 +30,7 @@ export function CaseStudyTools({ study }: { study: CaseStudyDetailData }) {
                 return (
                   <article className={styles.toolCard} key={toolKey}>
                     <span className={styles.toolLogo}>
-                      {tool.logo ? <img src={tool.logo} alt={`${tool.name} logo`} /> : fallbackMark}
+                      {tool.logo ? <img src={tool.logo} alt={`${tool.name} logo`} title={`${tool.name} logo`} /> : fallbackMark}
                     </span>
                     <span>
                       <span className={styles.toolName}>{tool.name}</span>

@@ -14,17 +14,17 @@ export function Footer({ portfolio }: { portfolio: PortfolioData }) {
           <div className={styles["footer__inner"]}>
             <div className={styles["footer__masthead"]}>
               <div className={styles["footer__brand-block"]}>
-                <a className={styles["footer__logo"]} href="/#top">
-                  <Image src="/mayoub-dev-logo.svg" alt="mayoub.dev" width={640} height={160} />
+                <a className={styles["footer__logo"]} href="/#top" title="MAYOUB.DEV home">
+                  <Image src="/mayoub-dev-logo.svg" alt="mayoub.dev logo" title="mayoub.dev logo" width={640} height={160} />
                 </a>
                 <p className={styles["footer__summary"]}>{profile.summary}</p>
               </div>
               <div className={styles["footer__contact-card"]}>
                 <span className={styles["footer__contact-label"]}>{profile.availability}</span>
-                <a className={styles["footer__contact-link"]} href={`mailto:${profile.email}`}>
+                <a className={styles["footer__contact-link"]} href={`mailto:${profile.email}`} title="Email Muhammad Ayoub">
                   {profile.email}
                 </a>
-                <a className={styles["footer__contact-link"]} href={`tel:${profile.phone.replace(/\s+/g, "")}`}>
+                <a className={styles["footer__contact-link"]} href={`tel:${profile.phone.replace(/\s+/g, "")}`} title="Call Muhammad Ayoub">
                   {profile.phone}
                 </a>
               </div>
@@ -32,10 +32,10 @@ export function Footer({ portfolio }: { portfolio: PortfolioData }) {
 
             <div className={styles["footer__bottom"]}>
               <nav className={styles["footer__legal"]} aria-label="Legal links">
-                <a className={styles["footer__bottom-link"]} href="/terms-and-conditions">
+                <a className={styles["footer__bottom-link"]} href="/terms-and-conditions" title="Read terms and conditions">
                   Terms and Conditions
                 </a>
-                <a className={styles["footer__bottom-link"]} href="/privacy-policy">
+                <a className={styles["footer__bottom-link"]} href="/privacy-policy" title="Read privacy policy">
                   Privacy Policy
                 </a>
               </nav>

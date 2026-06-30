@@ -48,12 +48,21 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: portfolio.profile.brand,
+    images: [
+      {
+        url: "/ayoub-about-v2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Ayoub Khan WordPress developer and website developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Muhammad Ayoub Khan | WordPress Developer & Website Developer",
     description:
       "Freelance WordPress developer and website developer Muhammad Ayoub Khan for business websites, WooCommerce stores, and Next.js front ends.",
+    images: ["/ayoub-about-v2.jpg"],
   },
   verification: {
     google: "duyYeALQEH1wUm9zAIqqTeYPJIdo3ENxkYGdgIsc274",
@@ -88,7 +97,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning itemScope itemType="https://schema.org/WebPage">
+        {children}
+      </body>
     </html>
   );
 }

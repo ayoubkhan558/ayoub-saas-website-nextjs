@@ -74,9 +74,10 @@ export function ProjectShowcaseSection({ projects }: { projects: ProjectCard[] }
                     href={project.href}
                     target="_blank"
                     rel="noreferrer"
+                    title={`View ${project.title}`}
                   >
                     <span className={styles["showcase__media"]}>
-                      <img src={project.image} alt={project.imageAlt} loading="lazy" />
+                      <img src={project.image} alt={project.imageAlt} title={project.imageAlt} loading="lazy" />
                     </span>
                     <span className={styles["showcase__content"]}>
                       <span className={styles["showcase__badge"]}>

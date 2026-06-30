@@ -99,7 +99,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
         <span className={styles["services-offer-card__illustration-line"]} />
       </div>
 
-      <Link className={styles["services-offer-card__link"]} href="/contact">
+      <Link className={styles["services-offer-card__link"]} href="/contact" title={`Request ${service.name}`}>
         {service.cta}
         <IconGlyph name="arrowRight" />
       </Link>

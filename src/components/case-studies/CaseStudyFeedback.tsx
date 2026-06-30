@@ -29,7 +29,7 @@ export function CaseStudyFeedback({ study }: { study: CaseStudyDetailData }) {
               <figcaption className={styles.feedbackAuthor}>
                 <span className={styles.feedbackAuthorImage}>
                   {clientImage ? (
-                    <img src={clientImage} alt={`${study.testimonial.author} logo`} loading="lazy" />
+                    <img src={clientImage} alt={`${study.testimonial.author} logo`} title={`${study.testimonial.author} logo`} loading="lazy" />
                   ) : (
                     study.testimonial.author.slice(0, 2)
                   )}

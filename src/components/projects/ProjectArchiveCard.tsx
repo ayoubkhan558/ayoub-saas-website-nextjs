@@ -22,7 +22,7 @@ export function ProjectArchiveCard({ project }: { project: ProjectArchiveItem })
     <article className={styles.card}>
       <div className={styles.card__media}>
         {thumbnail ? (
-          <img src={thumbnail} alt={`Screenshot preview for ${title}`} loading="lazy" />
+          <img src={thumbnail} alt={`Screenshot preview for ${title}`} title={`Screenshot preview for ${title}`} loading="lazy" />
         ) : (
           <span className={styles.card__placeholder}>{getProjectInitials(project)}</span>
         )}
@@ -50,7 +50,7 @@ export function ProjectArchiveCard({ project }: { project: ProjectArchiveItem })
         <div className={styles.card__actions}>
           {links.length ? (
             links.map((link) => (
-              <a className={styles.card__link} href={link.href} target="_blank" rel="noreferrer" key={`${link.kind}-${link.href}`}>
+              <a className={styles.card__link} href={link.href} target="_blank" rel="noreferrer" key={`${link.kind}-${link.href}`} title={`${link.label} for ${title}`}>
                 {link.label}
                 <IconGlyph name="externalLink" />
               </a>

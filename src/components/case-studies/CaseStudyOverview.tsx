@@ -43,7 +43,7 @@ export function CaseStudyOverview({ study }: { study: CaseStudyDetailData }) {
                 {detailRows.map((row) => (
                   <div className={styles.detailMatrixRow} key={row.label}>
                     <strong>{row.label}</strong>
-                    <span>{row.href ? <a href={row.href} target="_blank" rel="noreferrer">{row.value}</a> : row.value}</span>
+                    <span>{row.href ? <a href={row.href} target="_blank" rel="noreferrer" title={`Open ${row.label}`}>{row.value}</a> : row.value}</span>
                     <p>{row.label === "Live site" ? "Open the completed production website." : "Project context used to guide scope and delivery."}</p>
                   </div>
                 ))}

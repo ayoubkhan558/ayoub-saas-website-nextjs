@@ -18,7 +18,7 @@ export function CaseStudyPager({ study }: { study: CaseStudyDetailData }) {
     <nav className={`section ${styles["case-study-pager"]}`} aria-label="Case study navigation">
       <div className="section__inner">
         <div className={`container ${styles["case-study-pager__inner"]}`}>
-          <Link className={styles["case-study-pager__link"]} href={previousStudy.href}>
+          <Link className={styles["case-study-pager__link"]} href={previousStudy.href} title={`Read previous case study: ${previousStudy.title}`}>
             <IconGlyph className={styles["case-study-pager__icon"]} name="arrowLeft" />
             <span className={styles["case-study-pager__copy"]}>
               <span className={styles["case-study-pager__label"]}>Previous case study</span>
@@ -26,7 +26,7 @@ export function CaseStudyPager({ study }: { study: CaseStudyDetailData }) {
             </span>
           </Link>
 
-          <Link className={`${styles["case-study-pager__link"]} ${styles["case-study-pager__link--next"]}`} href={nextStudy.href}>
+          <Link className={`${styles["case-study-pager__link"]} ${styles["case-study-pager__link--next"]}`} href={nextStudy.href} title={`Read next case study: ${nextStudy.title}`}>
             <span className={styles["case-study-pager__copy"]}>
               <span className={styles["case-study-pager__label"]}>Next case study</span>
               <strong className={styles["case-study-pager__title"]}>{nextStudy.title}</strong>

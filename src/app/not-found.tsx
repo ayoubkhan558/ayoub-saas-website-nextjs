@@ -30,11 +30,11 @@ export default function NotFound() {
                   to contact me.
                 </p>
                 <div className={styles["not-found-page__actions"]}>
-                  <Link className="button button--dark" href="/">
+                  <Link className="button button--dark" href="/" title="Go to homepage">
                     Back home
                     <IconGlyph name="arrowRight" />
                   </Link>
-                  <Link className="button button--ghost" href="/contact">
+                  <Link className="button button--ghost" href="/contact" title="Contact Muhammad Ayoub">
                     Contact / hire me
                     <IconGlyph name="arrowRight" />
                   </Link>
@@ -43,7 +43,7 @@ export default function NotFound() {
               <nav className={styles["not-found-page__panel"]} aria-label="Helpful pages">
                 <span className={styles["not-found-page__eyebrow"]}>Useful routes</span>
                 {paths.map((path) => (
-                  <Link href={path.href} key={path.href}>
+                  <Link href={path.href} key={path.href} title={`Go to ${path.label}`}>
                     <span>{path.label}</span>
                     <IconGlyph name="arrowRight" />
                   </Link>

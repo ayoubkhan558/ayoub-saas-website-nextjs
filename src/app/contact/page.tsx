@@ -43,11 +43,11 @@ export default function ContactPage() {
                   I will respond with the practical next step.
                 </p>
                 <div className={styles["contact-hero__actions"]}>
-                  <a className="button button--dark" href={mailto}>
+                  <a className="button button--dark" href={mailto} title="Send project details to Muhammad Ayoub">
                     Send project details
                     <IconGlyph name="arrowRight" />
                   </a>
-                  <a className="button button--ghost" href={`mailto:${profile.email}?subject=Build%20estimate%20request`}>
+                  <a className="button button--ghost" href={`mailto:${profile.email}?subject=Build%20estimate%20request`} title="Request a website build estimate">
                     Get a build estimate
                     <IconGlyph name="arrowRight" />
                   </a>
@@ -84,17 +84,17 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className={styles["contact-methods"]}>
-                  <a className={styles["contact-method"]} href={`mailto:${profile.email}`}>
+                  <a className={styles["contact-method"]} href={`mailto:${profile.email}`} title="Email Muhammad Ayoub">
                     <span className={styles["contact-method__label"]}>Email</span>
                     <strong>{profile.email}</strong>
                     <IconGlyph name="arrowRight" />
                   </a>
-                  <a className={styles["contact-method"]} href={`tel:${profile.phone.replace(/\s+/g, "")}`}>
+                  <a className={styles["contact-method"]} href={`tel:${profile.phone.replace(/\s+/g, "")}`} title="Call Muhammad Ayoub">
                     <span className={styles["contact-method__label"]}>Phone</span>
                     <strong>{profile.phone}</strong>
                     <IconGlyph name="phone" />
                   </a>
-                  <a className={styles["contact-method"]} href={profile.linkedin} target="_blank" rel="noreferrer">
+                  <a className={styles["contact-method"]} href={profile.linkedin} target="_blank" rel="noreferrer" title="Visit Muhammad Ayoub LinkedIn profile">
                     <span className={styles["contact-method__label"]}>Profile</span>
                     <strong>LinkedIn</strong>
                     <IconGlyph name="externalLink" />

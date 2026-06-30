@@ -21,27 +21,27 @@ export function ContactFooter({ portfolio }: { portfolio: PortfolioData }) {
                   step for WordPress, WooCommerce, React, or Next.js work.
                 </p>
                 <div className={styles["cta__intent-actions"]}>
-                  <a className="button button--dark" href={`mailto:${profile.email}?subject=Project%20details`}>
+                  <a className="button button--dark" href={`mailto:${profile.email}?subject=Project%20details`} title="Send project details to Muhammad Ayoub">
                     Send project details
                     <IconGlyph name="arrowRight" />
                   </a>
-                  <a className="button button--ghost" href={`mailto:${profile.email}?subject=Build%20estimate%20request`}>
+                  <a className="button button--ghost" href={`mailto:${profile.email}?subject=Build%20estimate%20request`} title="Request a website build estimate">
                     Get a build estimate
                     <IconGlyph name="arrowRight" />
                   </a>
                 </div>
               </div>
               <div className={styles["cta__actions"]}>
-                <a className={styles["cta__primary-contact"]} href={`mailto:${profile.email}`}>
+                <a className={styles["cta__primary-contact"]} href={`mailto:${profile.email}`} title="Email Muhammad Ayoub">
                   <span className={styles["cta__contact-label"]}>Email</span>
                   <strong className={styles["cta__contact-value"]}>{profile.email}</strong>
                   <IconGlyph name="arrowRight" />
                 </a>
-                <a className={styles["cta__secondary-contact"]} href={`tel:${profile.phone.replace(/\s+/g, "")}`}>
+                <a className={styles["cta__secondary-contact"]} href={`tel:${profile.phone.replace(/\s+/g, "")}`} title="Call Muhammad Ayoub">
                   <IconGlyph name="phone" />
                   {profile.phone}
                 </a>
-                <a className={styles["cta__secondary-contact"]} href={profile.linkedin} target="_blank" rel="noreferrer">
+                <a className={styles["cta__secondary-contact"]} href={profile.linkedin} target="_blank" rel="noreferrer" title="Visit Muhammad Ayoub LinkedIn profile">
                   <IconGlyph name="externalLink" />
                   LinkedIn
                 </a>

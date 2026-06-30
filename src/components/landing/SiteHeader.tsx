@@ -165,7 +165,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
       <div className={styles["site-header__announcement"]} aria-label="Portfolio updates">
         <div className={`${styles["site-header__announcement-inner"]} container`}>
           <div className={styles["site-header__announcement-track"]}>
-            <Link className={styles["site-header__announcement-item"]} href={referralHref}>
+            <Link className={styles["site-header__announcement-item"]} href={referralHref} title="Refer a website development client">
               {portfolio.topbar.offer}
             </Link>
           </div>
@@ -173,8 +173,8 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
       </div>
 
       <div className={`${styles["site-header__nav"]} container`}>
-        <Link className={styles["site-header__nav-brand"]} href="/" aria-label={`${profile.brand} home`}>
-          <Image src="/mayoub-dev-logo.svg" alt="mayoub.dev" width={640} height={160} priority />
+        <Link className={styles["site-header__nav-brand"]} href="/" aria-label={`${profile.brand} home`} title="MAYOUB.DEV home">
+          <Image src="/mayoub-dev-logo.svg" alt="mayoub.dev logo" title="mayoub.dev logo" width={640} height={160} priority />
         </Link>
 
         <nav className={styles["site-header__nav-links"]} aria-label="Primary navigation">
@@ -183,6 +183,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
               key={link.href}
               className={styles["site-header__nav-link"]}
               href={link.href}
+              title={`Go to ${link.label}`}
             >
               {link.label}
             </Link>
@@ -218,6 +219,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
             key={link.href}
             href={link.href}
             onClick={() => setMenuOpen(false)}
+            title={`Go to ${link.label}`}
           >
             {link.label}
           </Link>
@@ -263,7 +265,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
             <p>Full Stack Developer specializing in WordPress, React, Next.js and conversion-focused websites. Open to freelance, contracts and collaborations.</p>
           </div>
 
-          <a className={styles["contact-panel__method"]} href={`mailto:${profile.email}`}>
+          <a className={styles["contact-panel__method"]} href={`mailto:${profile.email}`} title="Email Muhammad Ayoub">
             <IconGlyph name="mail" />
             <span>
               <small>Email me</small>
@@ -275,19 +277,19 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
           <div className={styles["contact-panel__social"]} aria-label="Find me online">
             <span>Find me on</span>
             <div>
-              <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="Muhammad Ayoub on LinkedIn">
                 <IconGlyph name="linkedin" />
               </a>
-              <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+              <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" title="Muhammad Ayoub on GitHub">
                 <IconGlyph name="github" />
               </a>
-              <a href={whatsappHref} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+              <a href={whatsappHref} target="_blank" rel="noreferrer" aria-label="WhatsApp" title="Message Muhammad Ayoub on WhatsApp">
                 <IconGlyph name="messageCircle" />
               </a>
             </div>
           </div>
 
-          <Link className={styles["contact-panel__hire"]} href="/contact" onClick={() => setContactOpen(false)}>
+          <Link className={styles["contact-panel__hire"]} href="/contact" onClick={() => setContactOpen(false)} title="Hire Muhammad Ayoub">
             Hire Me
             <IconGlyph name="arrowRight" />
           </Link>
@@ -307,11 +309,12 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
           href={link.href}
           key={link.href}
           aria-current={activeSection === link.sectionId ? "true" : undefined}
+          title={`Jump to ${link.label}`}
         >
           {link.label}
         </Link>
       ))}
-      <Link className={styles["site-header__floating-cta"]} href="/contact">
+      <Link className={styles["site-header__floating-cta"]} href="/contact" title="Contact Muhammad Ayoub">
         Contact
         <IconGlyph name="arrowRight" />
       </Link>

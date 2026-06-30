@@ -5,13 +5,13 @@ import styles from "./CaseStudiesListing.module.scss";
 
 export function CaseStudyListingCard({ study, index }: { study: CaseStudyCard; index: number }) {
   return (
-    <Link className={styles.card} href={study.href}>
+    <Link className={styles.card} href={study.href} title={`Read ${study.title} case study`}>
       <span className={styles.card__topline}>
         <span>{String(index + 1).padStart(2, "0")}</span>
         <span>{study.tag.replace("_", " ")}</span>
       </span>
       <span className={styles.card__image}>
-        <img src={study.image} alt={study.imageAlt} loading="lazy" />
+        <img src={study.image} alt={study.imageAlt} title={study.imageAlt} loading="lazy" />
       </span>
       <span className={styles.card__content}>
         <span className={styles.card__heading}>

@@ -21,7 +21,7 @@ export function CaseStudyBrowserMockup({
       </div>
       {imageSrc ? (
         <div className={styles.realPreview}>
-          <img src={imageSrc} alt="" loading="lazy" />
+          <img src={imageSrc} alt={`Website preview for ${label}`} title={`Website preview for ${label}`} loading="lazy" />
         </div>
       ) : (
         <div className={styles.mockSite} aria-hidden="true">
