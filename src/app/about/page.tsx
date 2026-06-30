@@ -9,14 +9,14 @@ import toolCatalog from "@/data/toolCatalog.json";
 import styles from "@/components/about/AboutPage.module.scss";
 
 export const metadata: Metadata = {
-  title: "About Muhammad Ayoub | Front-End Engineer",
+  title: "About Muhammad Ayoub, Freelance Web Developer",
   description:
-    "About Muhammad Ayoub, a front-end engineer building React, Next.js, WordPress, WooCommerce, and reliable web experiences.",
+    "About Muhammad Ayoub, a freelance web developer and WordPress developer building React, Next.js, WooCommerce, Bricks Builder, Elementor, and reliable business websites.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Muhammad Ayoub | Front-End Engineer",
+    title: "About Muhammad Ayoub, Freelance Web Developer",
     description:
-      "Learn about Muhammad Ayoub's experience, workflow, technical capabilities, and practical frontend development approach.",
+      "Learn about Muhammad Ayoub's WordPress, front-end, website design, and website development experience, workflow, and practical delivery approach.",
     type: "profile",
     url: "/about",
   },

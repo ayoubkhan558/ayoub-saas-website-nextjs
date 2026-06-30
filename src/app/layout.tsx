@@ -1,26 +1,66 @@
 import type { Metadata } from "next";
+import portfolio from "@/data/portfolio.json";
 import "./globals.scss";
 
+const siteUrl = portfolio.profile.website;
+
 export const metadata: Metadata = {
-  title: "Muhammad Ayoub - WordPress Developer & Front-End Developer",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Muhammad Ayoub | WordPress Developer & Website Developer",
+    template: "%s | Muhammad Ayoub",
+  },
   description:
-    "Portfolio of Muhammad Ayoub, a WordPress, CMS, WooCommerce, React.js, and Next.js developer building fast, conversion-focused websites.",
+    "Hire Muhammad Ayoub, a freelance WordPress developer, website developer, and front-end developer building fast business websites with Next.js, WooCommerce, Bricks, and Elementor.",
+  alternates: {
+    canonical: "/",
+  },
+  authors: [{ name: portfolio.profile.name, url: siteUrl }],
+  creator: portfolio.profile.name,
+  publisher: portfolio.profile.brand,
+  category: "Web Development",
   keywords: [
-    "WordPress Developer",
-    "Front-End Developer",
-    "WooCommerce",
-    "React.js",
-    "Next.js",
-    "Elementor Pro",
+    "WordPress developer",
+    "website developer",
+    "website designer",
+    "freelance web developer",
+    "front-end developer",
+    "Next.js developer",
+    "React developer",
+    "WooCommerce developer",
+    "Bricks Builder developer",
+    "Elementor developer",
+    "Figma to WordPress",
+    "business website development",
+    "responsive website design",
   ],
   openGraph: {
-    title: "Muhammad Ayoub - WordPress Developer & Front-End Developer",
+    title: "Muhammad Ayoub | WordPress Developer & Website Developer",
     description:
-      "WordPress, CMS, WooCommerce, React.js, and Next.js development for fast, maintainable business websites.",
+      "Freelance WordPress, website, WooCommerce, React, and Next.js development for fast, maintainable business websites.",
     type: "website",
+    url: "/",
+    siteName: portfolio.profile.brand,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Muhammad Ayoub | WordPress Developer & Website Developer",
+    description:
+      "Freelance WordPress developer and website developer for business websites, WooCommerce stores, and Next.js front ends.",
   },
   verification: {
     google: "duyYeALQEH1wUm9zAIqqTeYPJIdo3ENxkYGdgIsc274",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   icons: {
     icon: [
