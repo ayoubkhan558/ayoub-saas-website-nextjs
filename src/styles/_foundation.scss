@@ -144,6 +144,56 @@
   --section-grain-color: rgba(49, 38, 59, 0.026);
   --section-grain-color-soft: rgba(49, 38, 59, 0.015);
   --section-grid-color: rgba(49, 38, 59, 0.012);
+  --color-surface: #fff;
+  --color-surface-soft: #fffafa;
+  --color-surface-muted: rgba(255, 255, 255, 0.74);
+  --color-surface-raised: rgba(255, 255, 255, 0.86);
+  --color-surface-chrome: rgba(255, 252, 252, 0.94);
+  --color-on-dark: #fff;
+  --surface-grid-light: rgba(49, 38, 59, 0.035);
+  --surface-dot-light: rgba(49, 38, 59, 0.055);
+  --surface-inset-light: rgba(255, 255, 255, 0.82);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-primary: #f078a8;
+  --color-primary-soft: rgba(240, 120, 168, 0.16);
+  --color-secondary: #79d2cb;
+  --color-secondary-soft: rgba(121, 210, 203, 0.15);
+  --color-ink-violet: #f8f4ff;
+  --color-plum-charcoal: #ddd3ea;
+  --color-storm-mauve: #c8bdd4;
+  --color-slate-iris: #a89fb8;
+  --color-ash-lavender: #958ba2;
+  --color-parchment: #0e0d14;
+  --color-bone-mist: #201b2a;
+  --color-fog-border: rgba(234, 224, 246, 0.16);
+  --color-twilight-plum: #b8a9ff;
+  --color-amethyst: #a99bf4;
+  --color-wisteria: #d4c9ff;
+  --page-rail-color: rgba(234, 224, 246, 0.16);
+  --page-corner-color: rgba(248, 244, 255, 0.72);
+  --page-gutter-bg: #14111c;
+  --section-grain-color: rgba(248, 244, 255, 0.035);
+  --section-grain-color-soft: rgba(248, 244, 255, 0.02);
+  --section-grid-color: rgba(248, 244, 255, 0.026);
+  --color-surface: #15121d;
+  --color-surface-soft: #121019;
+  --color-surface-muted: rgba(26, 22, 35, 0.76);
+  --color-surface-raised: rgba(26, 22, 35, 0.88);
+  --color-surface-chrome: rgba(14, 13, 20, 0.9);
+  --color-on-dark: #0e0d14;
+  --surface-grid-light: rgba(248, 244, 255, 0.045);
+  --surface-dot-light: rgba(248, 244, 255, 0.08);
+  --surface-inset-light: rgba(255, 255, 255, 0.08);
+  --shadow-product: rgba(0, 0, 0, 0.42) 0 0 0 1px,
+    rgba(0, 0, 0, 0.48) 0 40px 92px 0,
+    rgba(0, 0, 0, 0.34) 0 18px 42px 0;
+  --shadow-product-light: rgba(0, 0, 0, 0.34) 0 0 0 1px,
+    rgba(0, 0, 0, 0.32) 0 20px 46px 0;
+  --shadow-inset: rgba(248, 244, 255, 0.12) 0 0 0 1px inset;
+  --shadow-focus: rgba(240, 120, 168, 0.26) 0 0 0 4px;
 }
 
 *,
@@ -232,7 +282,7 @@ img {
   transform: translateY(-160%);
   border: 1px solid var(--color-plum-charcoal);
   border-radius: var(--radius-buttons);
-  background: #fff;
+  background: var(--color-surface);
   padding: var(--space-2) var(--space-3);
   color: var(--color-ink-violet);
 }
@@ -246,8 +296,8 @@ img {
   min-height: 100vh;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 50% 8%, rgba(205, 160, 165, 0.2), transparent 22rem),
-    linear-gradient(180deg, rgba(236, 237, 242, 0.34), transparent 42rem),
+    radial-gradient(circle at 50% 8%, var(--color-primary-soft), transparent 22rem),
+    linear-gradient(180deg, var(--color-bone-mist), transparent 42rem),
     var(--color-parchment);
 }
 
@@ -270,7 +320,11 @@ img {
   //   radial-gradient(var(--section-grain-color) 1px, transparent 1px),
   //   radial-gradient(var(--section-grain-color-soft) 1px, transparent 1px),
   //   linear-gradient(90deg, var(--section-grid-color) 1px, transparent 1px);
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'><rect width='2' height='2' fill='%23e8e4e6'/><rect x='2' y='2' width='2' height='2' fill='%23e8e4e6'/></svg>"); // background: linear-gradient(red, green);
+  background-image:
+    linear-gradient(45deg, var(--section-grain-color) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--section-grain-color) 75%);
+  background-position: 0 0, 2px 2px;
+  background-size: 4px 4px;
 
   padding: 0 var(--space-0);
 
@@ -290,8 +344,12 @@ img {
   border-top: 1px solid var(--page-rail-color);
   border-right: 1px solid var(--page-rail-color);
   border-left: 1px solid var(--page-rail-color);
-  background-color: #fff;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'><rect width='2' height='2' fill='%23f5f3f4'/><rect x='2' y='2' width='2' height='2' fill='%23f5f3f4'/></svg>"); // background: linear-gradient(red, green);
+  background-color: var(--color-surface);
+  background-image:
+    linear-gradient(45deg, var(--section-grain-color-soft) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--section-grain-color-soft) 75%);
+  background-position: 0 0, 2px 2px;
+  background-size: 4px 4px;
 }
 
 .section:not(.section--hero) {}

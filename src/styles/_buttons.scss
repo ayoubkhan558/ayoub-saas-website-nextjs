@@ -18,7 +18,7 @@
       rgba(192, 105, 127, 0.2) calc(100% - 1px),
       rgba(192, 105, 127, 0.2) 100%
   ),
-    #fff;
+    var(--color-surface);
   color: var(--color-ink-violet);
   font-size: var(--text-ui);
   font-weight: 600;
@@ -75,12 +75,12 @@
 }
 
 .button:not(.button--ghost):hover {
-  background: #fff;
+  background: var(--color-surface);
 }
 
 .button--dark:not(.button--ghost):hover {
   background: var(--color-plum-charcoal);
-  color: #fff;
+  color: var(--color-on-dark);
 }
 
 .button:not(.button--ghost):hover::before {
@@ -100,13 +100,13 @@
 .button--dark {
   border-color: var(--color-ink-violet);
   background: var(--color-ink-violet);
-  color: #fff;
+  color: var(--color-on-dark);
 }
 
 .button--dark:hover {
   border-color: var(--color-ink-violet);
   background: var(--color-plum-charcoal);
-  color: #fff;
+  color: var(--color-on-dark);
 }
 
 .button--dark::before {
@@ -121,22 +121,35 @@
   border-color: rgba(49, 38, 59, 0.18);
   background:
     linear-gradient(90deg, rgba(49, 38, 59, 0.08) 0 1px, transparent 1px calc(100% - 1px), rgba(49, 38, 59, 0.08) calc(100% - 1px)),
-    rgba(255, 252, 252, 0.54);
-  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.82);
+    var(--color-surface-muted);
+  box-shadow: inset 0 0 0 4px var(--surface-inset-light);
   color: var(--color-plum-charcoal);
 }
 
 .button--ghost:hover {
   border-color: var(--color-plum-charcoal);
-  background: #fff;
+  background: var(--color-surface);
   color: var(--color-ink-violet);
 }
 
 .card {
   border: 1px solid var(--color-fog-border);
   border-radius: var(--radius-cards);
-  background: #fff;
+  background: var(--color-surface);
   box-shadow: var(--shadow-inset);
+}
+
+:root[data-theme="dark"] .button--dark {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #120d15;
+}
+
+:root[data-theme="dark"] .button--dark:hover,
+:root[data-theme="dark"] .button--dark:not(.button--ghost):hover {
+  border-color: #ff9abd;
+  background: #ff9abd;
+  color: #120d15;
 }
 
 

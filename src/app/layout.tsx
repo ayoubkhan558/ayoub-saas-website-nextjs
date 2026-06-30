@@ -96,8 +96,24 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => {
+  try {
+    const storedTheme = localStorage.getItem("theme");
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    const theme = storedTheme === "dark" || storedTheme === "light" ? storedTheme : systemTheme;
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+  } catch {
+    document.documentElement.dataset.theme = "light";
+    document.documentElement.style.colorScheme = "light";
+  }
+})();`,
+          }}
+        />
         <link rel="image_src" href={`${siteUrl}/ayoub-about-v2.jpg`} />
         <meta itemProp="image" content={`${siteUrl}/ayoub-about-v2.jpg`} />
       </head>

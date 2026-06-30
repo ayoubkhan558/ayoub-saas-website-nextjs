@@ -37,7 +37,24 @@ export function CaseStudyJsonLd({
         industry,
       },
       {
-        "@type": ["CreativeWork", "WebPage"],
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: `${study.client} project case study`,
+        headline: study.headline,
+        description: study.overview,
+        image: previewImage,
+        inLanguage: "en",
+        dateModified: study.pageSpeed?.measuredAt,
+        mainEntity: {
+          "@id": `${pageUrl}#case-study`,
+        },
+        about: {
+          "@id": `${study.liveUrl}#client`,
+        },
+      },
+      {
+        "@type": "CreativeWork",
         "@id": `${pageUrl}#case-study`,
         url: pageUrl,
         name: `${study.client} project case study`,
@@ -46,6 +63,9 @@ export function CaseStudyJsonLd({
         image: previewImage,
         inLanguage: "en",
         dateModified: study.pageSpeed?.measuredAt,
+        mainEntityOfPage: {
+          "@id": `${pageUrl}#webpage`,
+        },
         creator: {
           "@id": `${portfolio.profile.website}#person`,
         },

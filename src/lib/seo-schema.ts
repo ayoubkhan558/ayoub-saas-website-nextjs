@@ -249,11 +249,11 @@ export function buildProjectsSchema() {
       "name": "Website design and development projects",
       "itemListElement": visibleProjects.map((project, index) => {
         const link = getProjectLinks(project)[0]?.href;
+        const projectUrl = link || `${siteUrl}/projects`;
 
         return {
           "@type": "ListItem",
           "position": index + 1,
-          "url": link || `${siteUrl}/projects`,
           "name": getProjectTitle(project),
           "description": getProjectDescription(project),
           "item": {
@@ -262,7 +262,7 @@ export function buildProjectsSchema() {
             "description": getProjectDescription(project),
             "genre": getProjectType(project),
             "creator": { "@id": personId },
-            "url": link || `${siteUrl}/projects`,
+            "url": projectUrl,
           },
         };
       }),
