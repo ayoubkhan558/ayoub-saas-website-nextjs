@@ -25,6 +25,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   const contactDrawerRef = useRef<HTMLElement | null>(null);
   const pathname = usePathname();
   const profile = portfolio.profile;
+  const whatsappHref = `https://wa.me/${profile.phone.replace(/\D/g, "")}`;
   const referralHref = `/contact?subject=${encodeURIComponent("Referral client intro")}&details=${encodeURIComponent(
     "I want to refer a client for a website or front-end project.\n\nClient name:\nClient email:\nProject type:\nCurrent website URL:\nWhat they need help with:\nTimeline:"
   )}`;
@@ -277,14 +278,11 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
               <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
                 <IconGlyph name="linkedin" />
               </a>
-              <a href={profile.website} target="_blank" rel="noreferrer" aria-label="Website">
-                <IconGlyph name="globe" />
+              <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+                <IconGlyph name="github" />
               </a>
-              <a href={profile.upwork} target="_blank" rel="noreferrer" aria-label="Upwork">
-                <IconGlyph name="externalLink" />
-              </a>
-              <a href="/contact" aria-label="Contact form">
-                <IconGlyph name="mail" />
+              <a href={whatsappHref} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                <IconGlyph name="messageCircle" />
               </a>
             </div>
           </div>

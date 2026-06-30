@@ -10,6 +10,7 @@ import database from "@iconify/icons-lucide/database";
 import download from "@iconify/icons-lucide/download";
 import externalLink from "@iconify/icons-lucide/external-link";
 import gauge from "@iconify/icons-lucide/gauge";
+import github from "@iconify/icons-lucide/github";
 import globe2 from "@iconify/icons-lucide/globe-2";
 import imageIcon from "@iconify/icons-lucide/image";
 import layers from "@iconify/icons-lucide/layers";
@@ -17,6 +18,7 @@ import linkedin from "@iconify/icons-lucide/linkedin";
 import lockKeyhole from "@iconify/icons-lucide/lock-keyhole";
 import mail from "@iconify/icons-lucide/mail";
 import menu from "@iconify/icons-lucide/menu";
+import messageCircle from "@iconify/icons-lucide/message-circle";
 import monitor from "@iconify/icons-lucide/monitor";
 import phone from "@iconify/icons-lucide/phone";
 import rocket from "@iconify/icons-lucide/rocket";
@@ -41,6 +43,7 @@ const iconMap = {
   download,
   externalLink,
   gauge,
+  github,
   globe: globe2,
   image: imageIcon,
   layers,
@@ -48,6 +51,7 @@ const iconMap = {
   lock: lockKeyhole,
   mail,
   menu,
+  messageCircle,
   monitor,
   phone,
   rocket,
