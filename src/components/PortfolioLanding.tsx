@@ -28,12 +28,12 @@ export function PortfolioLanding() {
       <main id="main">
         <HeroSection portfolio={portfolio} />
         <TrustSections portfolio={portfolio} />
-        <ServicesSection services={featuredServices} />
-        <FeaturedCaseStudiesSection projects={featuredCaseStudies} />
-        <ProjectShowcaseSection projects={projects} />
-        <ProofSection portfolio={portfolio} />
         <AboutSection portfolio={portfolio} />
         <ProcessSection portfolio={portfolio} />
+        <ProjectShowcaseSection projects={projects} />
+        <ServicesSection services={featuredServices} />
+        <FeaturedCaseStudiesSection projects={featuredCaseStudies} />
+        <ProofSection portfolio={portfolio} />
         <FaqSection portfolio={portfolio} />
         <ContactFooter portfolio={portfolio} />
       </main>

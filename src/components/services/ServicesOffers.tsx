@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { IconGlyph } from "@/components/landing/IconGlyph";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
@@ -8,6 +11,14 @@ type Service = PortfolioData["services"][number];
 
 function ServiceCard({ service, index }: { service: Service; index: number }) {
   const variant = serviceCardVariants[index] ?? "product";
+  const [activeTab, setActiveTab] = useState(0);
+  const detailTabs = [
+    { label: "Scope", value: service.whatYouGet },
+    { label: "Timeline", value: service.timeline },
+    { label: "Fit", value: service.bestFit },
+  ];
+  const visibleFeatures = service.features.slice(0, 2);
+  const activeDetail = detailTabs[activeTab] ?? detailTabs[0];
 
   return (
     <article
@@ -19,44 +30,74 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
         .filter(Boolean)
         .join(" ")}
     >
-      <div className={styles["services-offer-card__top"]}>
-        <span className={styles["services-offer-card__level"]}>{service.level}</span>
-        <span className={styles["services-offer-card__icon"]}>
-          <IconGlyph name={serviceIcons[index]} />
-        </span>
+      <div className={styles["services-offer-card__header"]}>
+        <div className={styles["services-offer-card__meta"]}>
+          <span className={styles["services-offer-card__level"]}>{service.level}</span>
+          <span className={styles["services-offer-card__icon"]}>
+            <IconGlyph name={serviceIcons[index]} />
+          </span>
+        </div>
+        <div className={styles["services-offer-card__title-row"]}>
+          <h3 className={styles["services-offer-card__title"]}>{service.name}</h3>
+          <span className={styles["services-offer-card__price"]}>
+            {service.price}
+            <small>{service.period}</small>
+          </span>
+        </div>
+        <p className={styles["services-offer-card__description"]}>{service.description}</p>
       </div>
-      <div className={styles["services-offer-card__title-row"]}>
-        <h3>{service.name}</h3>
-        <span>
-          {service.price}
-          <small>{service.period}</small>
-        </span>
+
+      <div className={styles["services-offer-card__tabs"]}>
+        <div className={styles["services-offer-card__tab-list"]} role="tablist" aria-label={`${service.name} details`}>
+          {detailTabs.map((tab, tabIndex) => (
+            <button
+              aria-controls={`service-panel-${index}-${tabIndex}`}
+              aria-selected={activeTab === tabIndex}
+              className={[
+                styles["services-offer-tab"],
+                activeTab === tabIndex ? styles["services-offer-tab--active"] : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              id={`service-tab-${index}-${tabIndex}`}
+              key={tab.label}
+              onClick={() => setActiveTab(tabIndex)}
+              role="tab"
+              type="button"
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        <section
+          aria-labelledby={`service-tab-${index}-${activeTab}`}
+          className={styles["services-offer-card__tab-panel"]}
+          id={`service-panel-${index}-${activeTab}`}
+          role="tabpanel"
+        >
+          <h4 className={styles["services-offer-card__tab-title"]}>{activeDetail.label}</h4>
+          <p className={styles["services-offer-card__tab-text"]}>{activeDetail.value}</p>
+        </section>
       </div>
-      <p className={styles["services-offer-card__description"]}>{service.description}</p>
 
-      <dl className={styles["services-offer-card__details"]}>
-        <div>
-          <dt>What you get</dt>
-          <dd>{service.whatYouGet}</dd>
-        </div>
-        <div>
-          <dt>Timeline</dt>
-          <dd>{service.timeline}</dd>
-        </div>
-        <div>
-          <dt>Best fit</dt>
-          <dd>{service.bestFit}</dd>
-        </div>
-      </dl>
+      <div className={styles["services-offer-card__feature-block"]}>
+        <span className={styles["services-offer-card__feature-label"]}>Included</span>
+        <ul className={styles["services-offer-card__features"]}>
+          {visibleFeatures.map((feature) => (
+            <li key={feature}>
+              <IconGlyph name="check" />
+              <span>{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-      <ul className={styles["services-offer-card__features"]}>
-        {service.features.map((feature) => (
-          <li key={feature}>
-            <IconGlyph name="check" />
-            <span>{feature}</span>
-          </li>
-        ))}
-      </ul>
+      <div className={styles["services-offer-card__illustration"]} aria-hidden="true">
+        <span className={styles["services-offer-card__illustration-node"]} />
+        <span className={styles["services-offer-card__illustration-node"]} />
+        <span className={styles["services-offer-card__illustration-node"]} />
+        <span className={styles["services-offer-card__illustration-line"]} />
+      </div>
 
       <Link className={styles["services-offer-card__link"]} href="/contact">
         {service.cta}

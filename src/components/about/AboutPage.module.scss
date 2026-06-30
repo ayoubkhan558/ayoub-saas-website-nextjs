@@ -816,13 +816,18 @@
 }
 
 .about-page-skill-marquee__row {
+  --logo-marquee-padding: var(--space-6);
+  --logo-marquee-gap: var(--space-3);
+
   width: 100%;
 }
 
 .about-page-skill-icon {
   flex: 0 0 86px;
   display: grid;
-  min-height: 86px;
+  padding: var(--space-3);
+  // min-height: 86px;
+  // min-width: 86px;
   place-items: center;
   border: 1px solid rgba(49, 38, 59, 0.13);
   border-radius: 8px;

@@ -348,6 +348,14 @@
   text-align: center;
 }
 
+.feedbackHeader {
+  display: grid;
+  justify-items: center;
+  max-width: 780px;
+  margin-inline: auto;
+  text-align: center;
+}
+
 .overviewPanel {
   gap: var(--space-5);
   border: 1px solid var(--color-fog-border);
@@ -931,8 +939,9 @@
 
 .feedbackPanel {
   position: relative;
+  display: grid;
   justify-items: center;
-  gap: var(--space-4);
+  gap: var(--space-5);
   border: 1px solid var(--color-fog-border);
   background:
     radial-gradient(rgba(49, 38, 59, 0.04) 1px, transparent 1px) 0 0 / 7px 7px,
@@ -953,11 +962,15 @@
   gap: var(--space-1);
 }
 
-.stars svg {
+.starIcon {
+  display: inline-grid;
   width: var(--space-4);
   height: var(--space-4);
+  place-items: center;
   color: #cd5973;
-  fill: rgba(205, 89, 115, 0.12);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-h5);
+  line-height: 1;
 }
 
 .feedbackQuote {
@@ -970,14 +983,60 @@
   line-height: 1.45;
 }
 
-.feedbackPanel figcaption {
-  display: grid;
-  gap: var(--space-1);
-  justify-items: center;
+.feedbackAuthor {
+  display: inline-flex;
+  max-width: min(100%, 520px);
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  border: 1px solid rgba(49, 38, 59, 0.13);
+  background: rgba(255, 255, 255, 0.72);
+  padding: var(--space-3) var(--space-4);
+
+  @media (max-width: 540px) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+  }
 }
 
-.feedbackPanel figcaption strong {
+.feedbackAuthorImage {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(49, 38, 59, 0.14);
+  background: #fff;
+  color: var(--color-ink-violet);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-ui);
+  font-weight: 800;
+}
+
+.feedbackAuthorImage img {
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.feedbackAuthorCopy {
+  display: grid;
+  gap: var(--space-1);
+  text-align: left;
+}
+
+.feedbackAuthorName {
   font-family: var(--font-display-compact);
   font-size: var(--text-h5);
   font-weight: 800;
+}
+
+.clientMeta {
+  color: var(--color-ink-violet);
+  font-family: var(--font-code);
+  font-size: var(--text-2xs);
+  line-height: 1.35;
+  text-transform: uppercase;
 }
