@@ -1,9 +1,24 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import type { Metadata } from "next";
 import { PortfolioLanding } from "@/components/PortfolioLanding";
 import { PortfolioContentProvider } from "@/context/PortfolioContentContext";
 import { caseStudies, projects } from "@/data/work";
 import portfolio from "@/data/portfolio.json";
+
+export const metadata: Metadata = {
+  title: "Freelance WordPress Developer & Website Developer",
+  description:
+    "Hire Muhammad Ayoub for WordPress development, website design, WooCommerce stores, Bricks Builder, Elementor, React, and Next.js websites for growing businesses.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Freelance WordPress Developer & Website Developer",
+    description:
+      "WordPress developer and front-end website developer building fast, responsive business websites, WooCommerce stores, and Next.js front ends.",
+    type: "website",
+    url: "/",
+  },
+};
 
 function readMarkdownFile(pathname: string) {
   return existsSync(pathname) ? readFileSync(pathname, "utf8") : "";
@@ -64,7 +79,17 @@ function buildHomeSchema() {
         "telephone": portfolio.profile.phone,
         "founder": { "@id": personId },
         "areaServed": "Worldwide",
-        "serviceType": featuredServices.map((service) => service.name),
+        "serviceType": [
+          "WordPress development",
+          "Website design and development",
+          "Frontend development",
+          "Next.js development",
+          "React development",
+          "WooCommerce development",
+          "Bricks Builder development",
+          "Elementor development",
+          ...featuredServices.map((service) => service.name),
+        ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Web development services",

@@ -5,14 +5,24 @@ import { ServicesPageContent } from "@/components/services/ServicesPageContent";
 import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
-  title: "Services | Muhammad Ayoub",
+  title: "Website Development Services",
   description:
-    "React, Next.js, WordPress, WooCommerce, CMS, and conversion-focused website services by Muhammad Ayoub.",
+    "Website development services for businesses: WordPress development, website design, WooCommerce, Bricks Builder, Elementor, React, Next.js, CMS setup, and performance improvements.",
   alternates: { canonical: "/services" },
+  keywords: [
+    "website development services",
+    "WordPress development services",
+    "website design services",
+    "WooCommerce developer",
+    "Next.js developer",
+    "React website developer",
+    "Bricks Builder developer",
+    "Elementor developer",
+  ],
   openGraph: {
-    title: "Services | Muhammad Ayoub",
+    title: "Website Development Services | Muhammad Ayoub",
     description:
-      "Frontend, WordPress, WooCommerce, and website improvement services for businesses that need clean delivery and measurable outcomes.",
+      "Frontend, WordPress, WooCommerce, website design, and website improvement services for businesses that need clean delivery and measurable outcomes.",
     type: "website",
     url: "/services",
   },

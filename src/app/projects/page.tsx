@@ -11,14 +11,14 @@ import {
 import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
-  title: "Projects | Muhammad Ayoub",
+  title: "Website Design & Development Portfolio",
   description:
-    "Selected React, WordPress, WooCommerce, Bricks Builder, and client website projects by Muhammad Ayoub.",
+    "Website design and development portfolio by Muhammad Ayoub, including WordPress, WooCommerce, Bricks Builder, Elementor, React, Next.js, and business website projects.",
   alternates: { canonical: "/projects" },
   openGraph: {
-    title: "Projects | Muhammad Ayoub",
+    title: "Website Design & Development Portfolio | Muhammad Ayoub",
     description:
-      "A structured showcase of client websites, WordPress builds, product pages, and implementation work.",
+      "A structured showcase of client websites, WordPress builds, WooCommerce stores, product pages, and front-end implementation work.",
     type: "website",
     url: "/projects",
   },
