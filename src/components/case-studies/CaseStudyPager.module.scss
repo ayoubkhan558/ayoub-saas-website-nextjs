@@ -30,7 +30,7 @@
 
 .case-study-pager__link:hover {
   border-color: rgba(49, 38, 59, 0.34);
-  background-color: #fff;
+  background-color: var(--color-surface);
   transform: translateY(-1px);
 }
 

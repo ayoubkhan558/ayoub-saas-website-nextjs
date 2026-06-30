@@ -116,7 +116,7 @@
 .process__timeline {
   display: grid;
   border: 1px solid var(--color-fog-border);
-  background: rgba(255, 252, 252, 0.58);
+  background: var(--color-surface-chrome);
 
   @media (min-width: 860px) {
     grid-template-columns: repeat(4, 1fr);

@@ -100,7 +100,7 @@
 .cta__primary-contact,
 .cta__secondary-contact {
   border: 1px solid var(--color-fog-border);
-  background: rgba(255, 255, 255, 0.78);
+  background: var(--color-surface-muted);
   color: var(--color-ink-violet);
   transition:
     border-color 160ms ease,
@@ -111,7 +111,7 @@
 .cta__primary-contact:hover,
 .cta__secondary-contact:hover {
   border-color: var(--color-plum-charcoal);
-  background: #fff;
+  background: var(--color-surface);
   transform: translateY(-2px);
 }
 

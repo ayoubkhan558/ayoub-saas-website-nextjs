@@ -54,7 +54,7 @@
   place-items: center;
   border: 1px solid var(--color-fog-border);
   border-radius: var(--radius-buttons);
-  background: rgba(255, 255, 255, 0.86);
+  background: var(--color-surface-muted);
   padding: var(--space-1);
   transition:
     border-color 160ms ease,
@@ -132,7 +132,7 @@
   place-items: center;
   border: 1px solid var(--color-fog-border);
   border-radius: var(--radius-buttons);
-  background: #fff;
+  background: var(--color-surface);
   color: var(--color-ink-violet);
 }
 

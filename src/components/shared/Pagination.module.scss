@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(49, 38, 59, 0.16);
-  background: rgba(255, 255, 255, 0.78);
+  background: var(--color-surface-muted);
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
   font-size: var(--text-ui);
@@ -56,7 +56,7 @@
 .pagination__link:hover,
 .pagination__page:hover {
   border-color: var(--color-plum-charcoal);
-  background: #fff;
+  background: var(--color-surface);
   transform: translateY(-2px);
 }
 

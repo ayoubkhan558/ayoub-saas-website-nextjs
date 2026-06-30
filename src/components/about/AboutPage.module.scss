@@ -534,7 +534,7 @@
 .about-page-feature-card__label {
   width: fit-content;
   border: 1px solid rgba(49, 38, 59, 0.12);
-  background: rgba(255, 255, 255, 0.82);
+  background: var(--color-surface-muted);
   padding: 0.5rem 0.7rem;
 }
 
@@ -663,7 +663,7 @@
   height: 10px;
   border: 2px solid var(--color-secondary);
   border-radius: 50%;
-  background: #fff;
+  background: var(--color-surface);
   box-shadow: 0 0 0 6px rgba(63, 112, 108, 0.1);
 
   @media (min-width: 760px) {
@@ -674,7 +674,7 @@
 }
 
 .about-page-experience-item:hover {
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--color-surface-muted);
   transform: translateX(2px);
 }
 
@@ -692,7 +692,7 @@
 .about-page-experience-item__year {
   width: fit-content;
   border: 1px solid rgba(49, 38, 59, 0.12);
-  background: rgba(255, 255, 255, 0.78);
+  background: var(--color-surface-muted);
   padding: 0.55rem 0.7rem;
 }
 
@@ -709,7 +709,7 @@
   flex: 0 0 auto;
   place-items: center;
   border: 1px solid rgba(49, 38, 59, 0.12);
-  background: rgba(255, 255, 255, 0.78);
+  background: var(--color-surface-muted);
   padding: var(--space-2);
 }
 

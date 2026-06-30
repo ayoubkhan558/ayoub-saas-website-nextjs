@@ -1,10 +1,10 @@
 .hero :global(.section__inner) {
   padding-block: var(--space-9) var(--space-7);
-  background-color: #fffafa;
+  background-color: var(--color-surface-soft);
   background-image:
-    radial-gradient(rgba(49, 38, 59, 0.075) 1px, transparent 1px),
-    linear-gradient(rgba(49, 38, 59, 0.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(49, 38, 59, 0.028) 1px, transparent 1px);
+    radial-gradient(var(--surface-dot-light) 1px, transparent 1px),
+    linear-gradient(var(--section-grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--section-grid-color) 1px, transparent 1px);
   background-position:
     0 0,
     center top,
@@ -20,9 +20,9 @@
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(49, 38, 59, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(49, 38, 59, 0.035) 1px, transparent 1px),
-    radial-gradient(rgba(49, 38, 59, 0.08) 1px, transparent 1px);
+    linear-gradient(var(--surface-grid-light) 1px, transparent 1px),
+    linear-gradient(90deg, var(--surface-grid-light) 1px, transparent 1px),
+    radial-gradient(var(--surface-dot-light) 1px, transparent 1px);
   background-position: center, center, center;
   background-size: 96px 96px, 96px 96px, 7px 7px;
   mask-image: linear-gradient(#000 78%, transparent);
@@ -195,10 +195,10 @@
   width: 100%;
   overflow: hidden;
   border: 1px solid rgba(49, 38, 59, 0.16);
-  background: rgba(255, 255, 255, 0.82);
+  background: var(--color-surface-raised);
   color: var(--color-ink-violet);
   box-shadow:
-    rgba(255, 255, 255, 0.82) 0 1px 0 inset,
+    var(--surface-inset-light) 0 1px 0 inset,
     rgba(49, 38, 59, 0.08) 0 12px 32px;
   padding: var(--space-3);
   text-align: left;
@@ -224,8 +224,8 @@
   place-items: center;
   border: 1px solid rgba(49, 38, 59, 0.14);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(236, 237, 242, 0.52)),
-    #fff;
+    linear-gradient(180deg, var(--color-surface-raised), var(--color-bone-mist)),
+    var(--color-surface);
 }
 
 .hero__tool-logo-image {
@@ -252,7 +252,7 @@
   place-items: center;
   border: 1px solid rgba(49, 38, 59, 0.14);
   background: var(--color-ink-violet);
-  color: #fff;
+  color: var(--color-on-dark);
 }
 
 .hero__tool-icon svg {
@@ -309,8 +309,8 @@
   margin: 0;
   border: 1px solid rgba(49, 38, 59, 0.22);
   background:
-    radial-gradient(rgba(1, 1, 27, 0.06) 0.75px, transparent 0.75px),
-    #fff;
+    radial-gradient(var(--surface-dot-light) 0.75px, transparent 0.75px),
+    var(--color-surface);
   background-size: 5px 5px, auto;
   padding: var(--space-5) var(--space-4) var(--space-4);
 }
@@ -368,7 +368,7 @@
   align-items: center;
   gap: var(--space-4);
   border: 1px solid rgba(49, 38, 59, 0.14);
-  background: rgba(255, 255, 255, 0.74);
+  background: var(--color-surface-muted);
   color: var(--color-ink-violet);
   padding: var(--space-4);
 
@@ -463,7 +463,7 @@
   height: 34px;
   margin-left: calc(var(--space-2) * -1);
   place-items: center;
-  border: 1px solid #fff;
+  border: 1px solid var(--color-surface);
   border-radius: 999px;
   background: var(--color-bone-mist);
   color: var(--color-ink-violet);
@@ -494,7 +494,7 @@
   position: relative;
   display: grid;
   border: 1px solid var(--color-fog-border);
-  background: rgba(255, 255, 255, 0.86);
+  background: var(--color-surface-raised);
   box-shadow: var(--shadow-product);
 }
 
@@ -507,7 +507,7 @@
     linear-gradient(135deg, rgba(49, 38, 59, 0.1), transparent 42%),
     linear-gradient(90deg, rgba(49, 38, 59, 0.05) 1px, transparent 1px) 0 0 / 44px 44px,
     linear-gradient(180deg, rgba(49, 38, 59, 0.04) 1px, transparent 1px) 0 0 / 44px 44px,
-    #fbf8f8;
+    var(--color-surface-soft);
   padding: var(--space-5);
 }
 
