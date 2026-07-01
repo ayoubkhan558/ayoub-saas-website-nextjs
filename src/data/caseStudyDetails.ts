@@ -1,5 +1,16 @@
 import caseStudyDetailsJson from "./caseStudyDetails.json";
 
+type CaseStudyPageShowcase = {
+  label: string;
+  title: string;
+  text: string;
+  items: Array<{
+    label: string;
+    image: string;
+    caption?: string;
+  }>;
+};
+
 export type CaseStudyDetailData = {
   slug: string;
   client: string;
@@ -20,16 +31,7 @@ export type CaseStudyDetailData = {
     image: string;
     imageAlt: string;
   };
-  homepageShowcase?: {
-    label: string;
-    title: string;
-    text: string;
-    items: Array<{
-      label: string;
-      image: string;
-      caption?: string;
-    }>;
-  };
+  pageShowcase?: CaseStudyPageShowcase;
   heroMockup?: string;
   eyebrow: string;
   headline: string;

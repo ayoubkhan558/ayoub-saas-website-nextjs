@@ -831,7 +831,7 @@
   scroll-snap-type: x mandatory;
 }
 
-.comparisonGrid {
+.showcaseGrid {
   display: grid;
   gap: var(--space-4);
 
@@ -840,13 +840,13 @@
   }
 }
 
-.comparisonGridSingle {
+.showcaseGridSingle {
   @media (min-width: 880px) {
     grid-template-columns: minmax(0, 1fr);
   }
 }
 
-.comparisonItem {
+.showcaseItem {
   min-width: 0;
 }
 
