@@ -33,8 +33,7 @@
   --header-action-size: 40px;
   --header-announcement-height: 29px;
   --header-announcement-opacity: 1;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 50;
   border-top: 1px solid var(--header-glass-border);
   border-bottom: 1px solid var(--header-glass-border);
@@ -75,6 +74,8 @@
 }
 
 .site-header--scrolled {
+  position: sticky;
+  top: 0;
   --header-glass-bg: color-mix(in srgb, var(--color-surface-chrome) 72%, transparent);
   --header-glass-border: color-mix(in srgb, var(--color-fog-border) 82%, transparent);
   --header-glass-shadow: rgba(1, 1, 27, 0.12) 0 16px 42px;

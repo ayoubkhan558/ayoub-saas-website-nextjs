@@ -203,8 +203,9 @@
   background: var(--color-ink-violet);
 }
 
-.signal:hover {
-  border-color: var(--project-card-hover-border);
+.signal:hover,
+.signal:focus-within {
+  border-color: var(--color-primary);
   background:
     radial-gradient(var(--project-card-hover-dot) 0.75px, transparent 0.75px),
     var(--project-card-hover-bg);
@@ -281,10 +282,18 @@
     transform 160ms ease;
 }
 
-.filters__link:hover {
-  border-color: var(--project-filter-hover-border);
+.filters__link:hover,
+.filters__link:focus-visible,
+.filters__link:active {
+  border-color: var(--color-primary);
   background: var(--project-filter-hover-bg);
+  color: var(--color-primary);
   transform: translateY(-1px);
+}
+
+.filters__link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .filters__link--active,
@@ -319,12 +328,18 @@
     transform 160ms ease;
 }
 
-.card:hover {
-  border-color: var(--project-card-hover-border);
+.card:hover,
+.card:focus-within {
+  border-color: var(--color-primary);
   box-shadow:
     var(--project-card-hover-inset) 0 1px 0 inset,
     var(--project-card-hover-shadow);
   transform: translateY(-3px);
+}
+
+.card:focus-within {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .card__media {
@@ -353,7 +368,8 @@
   transition: transform 260ms ease;
 }
 
-.card:hover img {
+.card:hover img,
+.card:focus-within img {
   transform: scale(1.04);
 }
 
@@ -467,6 +483,15 @@
   width: 16px;
   height: 16px;
   color: var(--color-ink-violet);
+}
+
+.card__link:hover,
+.card__link:focus-visible,
+.card__link:active,
+.card__link:hover svg,
+.card__link:focus-visible svg,
+.card__link:active svg {
+  color: var(--color-primary);
 }
 
 .card__unavailable {

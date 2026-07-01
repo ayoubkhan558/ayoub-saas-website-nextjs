@@ -16,6 +16,8 @@ const floatingNavLinks = [
   { label: "Working Style", href: "#process", sectionId: "process" },
 ];
 
+const stickyHeaderScrollY = 300;
+
 export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
@@ -49,7 +51,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
 
   useEffect(() => {
     const updateScrolledState = () => {
-      setIsScrolled(window.scrollY > 12);
+      setIsScrolled(window.scrollY > stickyHeaderScrollY);
     };
 
     updateScrolledState();

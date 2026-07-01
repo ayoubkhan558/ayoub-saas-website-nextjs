@@ -36,10 +36,18 @@
     transform 160ms ease;
 }
 
-.showcase__controls button:hover:not(:disabled) {
-  border-color: rgba(49, 38, 59, 0.34);
+.showcase__controls button:hover:not(:disabled),
+.showcase__controls button:focus-visible:not(:disabled),
+.showcase__controls button:active:not(:disabled) {
+  border-color: var(--color-primary);
   background: var(--color-surface);
+  color: var(--color-primary);
   transform: translateY(-1px);
+}
+
+.showcase__controls button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .showcase__controls button:disabled {
@@ -126,6 +134,18 @@
       linear-gradient(135deg, rgba(36, 30, 47, 0.72), transparent 42%),
       rgba(21, 18, 29, 0.96);
   }
+
+  .showcase__action {
+    border-color: rgba(248, 244, 255, 0.2);
+    background: rgba(248, 244, 255, 0.08);
+    color: var(--color-heading);
+  }
+
+  .showcase__card:hover .showcase__action {
+    border-color: rgba(248, 244, 255, 0.36);
+    background: var(--color-heading);
+    color: var(--color-ink-violet);
+  }
 }
 
 .showcase__card--tool {
@@ -160,9 +180,16 @@
   color: var(--color-secondary);
 }
 
-.showcase__card:hover {
-  border-color: var(--color-plum-charcoal);
+.showcase__card:hover,
+.showcase__card:focus-visible,
+.showcase__card:active {
+  border-color: var(--color-primary);
   transform: translateY(-2px);
+}
+
+.showcase__card:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .showcase__media {
@@ -288,7 +315,9 @@
   height: 15px;
 }
 
-.showcase__card:hover .showcase__action {
+.showcase__card:hover .showcase__action,
+.showcase__card:focus-visible .showcase__action,
+.showcase__card:active .showcase__action {
   background: var(--color-ink-violet);
   color: #fff;
   transform: translate(2px, -2px);
