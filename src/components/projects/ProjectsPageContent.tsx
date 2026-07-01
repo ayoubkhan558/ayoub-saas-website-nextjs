@@ -30,7 +30,6 @@ export function ProjectsPageContent({
   const stats = [
     { label: "Projects", value: `${projectCount}` },
     { label: "Live projects", value: `${liveCount}` },
-    { label: "Cached shots", value: `${screenshotCount}` },
   ];
 
   return (
