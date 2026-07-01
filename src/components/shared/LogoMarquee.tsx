@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import styles from "./LogoMarquee.module.scss";
 
@@ -17,6 +18,7 @@ export function LogoMarquee({
   className,
   itemClassName,
   imageClassName,
+  imageSize = 64,
   ariaLabel,
 }: {
   items: LogoMarqueeItem[];
@@ -25,6 +27,7 @@ export function LogoMarquee({
   className?: string;
   itemClassName?: string;
   imageClassName?: string;
+  imageSize?: number;
   ariaLabel?: string;
 }) {
   if (!items.length) {
@@ -40,7 +43,17 @@ export function LogoMarquee({
       <Marquee autoFill direction={direction} gradient={false} pauseOnHover speed={speed}>
         {items.map((item) => (
           <span className={itemClasses} key={item.name}>
-            <img className={imageClasses} src={item.src} alt={item.name} title={item.name} loading="lazy" />
+            <Image
+              className={imageClasses}
+              src={item.src}
+              alt={item.name}
+              title={item.name}
+              width={imageSize}
+              height={imageSize}
+              loading="lazy"
+              // Tool icons are vector SVGs; serve them directly instead of proxying through the optimizer.
+              unoptimized={item.src.endsWith(".svg")}
+            />
           </span>
         ))}
       </Marquee>
