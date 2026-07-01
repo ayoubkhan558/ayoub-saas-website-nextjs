@@ -179,10 +179,14 @@
   --color-card-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(247, 247, 249, 0.88));
   --color-card-shadow: rgba(49, 38, 59, 0.06) 0 20px 54px;
   --color-card-shadow-strong: rgba(49, 38, 59, 0.08) 0 24px 68px;
-  --section-inner-bg: var(--color-surface);
-  --section-inner-bg-image: linear-gradient(45deg, var(--section-grain-color-soft) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, var(--section-grain-color-soft) 75%);
-  --section-inner-bg-size: 4px 4px;
+  --section-inner-bg: #fbfbfc;
+  --section-inner-bg-image:
+    linear-gradient(118deg, rgba(255, 255, 255, 0.88), rgba(238, 239, 244, 0.5) 46%, rgba(255, 255, 255, 0.92)),
+    linear-gradient(rgba(49, 38, 59, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(49, 38, 59, 0.03) 1px, transparent 1px),
+    radial-gradient(rgba(49, 38, 59, 0.055) 0.75px, transparent 0.75px),
+    radial-gradient(rgba(63, 112, 108, 0.075) 0.75px, transparent 0.75px);
+  --section-inner-bg-size: auto, 32px 32px, 32px 32px, 7px 7px, 43px 43px;
   --color-heading: var(--color-ink-violet);
   --color-text: var(--color-plum-charcoal);
 
@@ -245,9 +249,13 @@
   --color-card-shadow: rgba(0, 0, 0, 0.34) 0 20px 54px;
   --color-card-shadow-strong: rgba(0, 0, 0, 0.42) 0 24px 68px;
   --section-inner-bg: var(--color-surface);
-  --section-inner-bg-image: radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
-    linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96));
-  --section-inner-bg-size: 6px 6px, auto;
+  --section-inner-bg-image:
+    linear-gradient(118deg, rgba(32, 27, 42, 0.82), rgba(18, 16, 25, 0.92) 48%, rgba(13, 11, 20, 0.98)),
+    linear-gradient(rgba(248, 244, 255, 0.042) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(248, 244, 255, 0.035) 1px, transparent 1px),
+    radial-gradient(rgba(248, 244, 255, 0.06) 0.75px, transparent 0.75px),
+    radial-gradient(rgba(121, 210, 203, 0.09) 0.75px, transparent 0.75px);
+  --section-inner-bg-size: auto, 32px 32px, 32px 32px, 7px 7px, 43px 43px;
   --color-heading: var(--color-ink-violet);
   --color-text: var(--color-storm-mauve);
   --shadow-product: rgba(0, 0, 0, 0.42) 0 0 0 1px,
@@ -416,7 +424,7 @@ img {
   border-right: 1px solid var(--page-rail-color);
   border-left: 1px solid var(--page-rail-color);
   background-color: var(--section-inner-bg);
-  background-image: var(--section-inner-bg-image);
+  // background-image: var(--section-inner-bg-image);
   background-position: 0 0, 2px 2px;
   background-size: var(--section-inner-bg-size);
 }
