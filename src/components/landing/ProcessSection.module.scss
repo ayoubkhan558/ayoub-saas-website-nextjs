@@ -1,5 +1,14 @@
 .process {
+  --process-step-chip-border: rgba(49, 38, 59, 0.16);
+  --process-step-chip-bg: var(--color-ink-violet);
+  --process-step-chip-color: #fff;
   position: relative;
+}
+
+:global(:root[data-theme="dark"]) .process {
+  --process-step-chip-border: rgba(255, 255, 255, 0.12);
+  --process-step-chip-bg: rgba(255, 255, 255, 0.055);
+  --process-step-chip-color: var(--color-text);
 }
 
 .process__expectations {
@@ -90,9 +99,9 @@
   width: 34px;
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgba(49, 38, 59, 0.16);
-  background: var(--color-ink-violet);
-  color: #fff;
+  border: 1px solid var(--process-step-chip-border);
+  background: var(--process-step-chip-bg);
+  color: var(--process-step-chip-color);
   font-family: var(--font-code);
   font-size: var(--text-2xs);
 }
