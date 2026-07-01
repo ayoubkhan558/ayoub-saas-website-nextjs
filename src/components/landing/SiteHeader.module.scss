@@ -27,12 +27,21 @@
   --header-glass-bg: var(--color-surface-chrome);
   --header-glass-border: var(--color-fog-border);
   --header-glass-shadow: none;
+  --header-scrolled-glass-bg: color-mix(in srgb, var(--color-surface-chrome) 72%, transparent);
+  --header-scrolled-glass-border: color-mix(in srgb, var(--color-fog-border) 82%, transparent);
+  --header-scrolled-glass-shadow: rgba(1, 1, 27, 0.12) 0 16px 42px;
   --header-nav-height: 64px;
+  --header-scrolled-nav-height: 46px;
   --header-nav-padding-block: 0px;
+  --header-scrolled-nav-padding-block: 3px;
   --header-logo-width: min(174px, 42vw);
+  --header-scrolled-logo-width: min(128px, 36vw);
   --header-action-size: 40px;
+  --header-scrolled-action-size: 32px;
   --header-announcement-height: 29px;
+  --header-scrolled-announcement-height: 0px;
   --header-announcement-opacity: 1;
+  --header-scrolled-announcement-opacity: 0;
   position: relative;
   z-index: 50;
   border-top: 1px solid var(--header-glass-border);
@@ -72,20 +81,23 @@
   --contact-panel-hire-color: var(--color-heading);
   --contact-panel-hire-shadow: inset 0 0 0 1px rgba(255, 125, 170, 0.55);
   --header-logo-filter: invert(1) brightness(1.12);
+  --header-scrolled-glass-bg: rgba(14, 12, 22, 0.82);
+  --header-scrolled-glass-border: rgba(255, 255, 255, 0.1);
+  --header-scrolled-glass-shadow: rgba(0, 0, 0, 0.28) 0 16px 42px;
 }
 
 .site-header--scrolled {
   position: sticky;
   top: 0;
-  --header-glass-bg: color-mix(in srgb, var(--color-surface-chrome) 72%, transparent);
-  --header-glass-border: color-mix(in srgb, var(--color-fog-border) 82%, transparent);
-  --header-glass-shadow: rgba(1, 1, 27, 0.12) 0 16px 42px;
-  --header-nav-height: 46px;
-  --header-nav-padding-block: 3px;
-  --header-logo-width: min(128px, 36vw);
-  --header-action-size: 32px;
-  --header-announcement-height: 0px;
-  --header-announcement-opacity: 0;
+  --header-glass-bg: var(--header-scrolled-glass-bg);
+  --header-glass-border: var(--header-scrolled-glass-border);
+  --header-glass-shadow: var(--header-scrolled-glass-shadow);
+  --header-nav-height: var(--header-scrolled-nav-height);
+  --header-nav-padding-block: var(--header-scrolled-nav-padding-block);
+  --header-logo-width: var(--header-scrolled-logo-width);
+  --header-action-size: var(--header-scrolled-action-size);
+  --header-announcement-height: var(--header-scrolled-announcement-height);
+  --header-announcement-opacity: var(--header-scrolled-announcement-opacity);
   animation: site-header-stick-in 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
