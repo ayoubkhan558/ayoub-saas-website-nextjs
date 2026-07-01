@@ -35,10 +35,18 @@
     rgba(21, 18, 29, 0.92);
 }
 
-.case-study-pager__link:hover {
-  border-color: rgba(49, 38, 59, 0.34);
+.case-study-pager__link:hover,
+.case-study-pager__link:focus-visible,
+.case-study-pager__link:active {
+  border-color: var(--color-primary);
   background-color: var(--color-surface);
+  color: var(--color-primary);
   transform: translateY(-1px);
+}
+
+.case-study-pager__link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .case-study-pager__link--next {
