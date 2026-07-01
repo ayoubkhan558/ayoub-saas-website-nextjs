@@ -443,6 +443,10 @@
     transform 160ms ease;
 }
 
+.showcase__all-link span {
+  transform: translateY(0.06em);
+}
+
 .showcase__all-link:hover,
 .showcase__all-link:focus-visible,
 .showcase__all-link:active {

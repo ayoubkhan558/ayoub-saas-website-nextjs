@@ -290,10 +290,12 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-nav-height, 64px);
 }
 
 body {
   margin: 0;
+  padding-top: var(--header-nav-height, 64px);
   background: var(--color-parchment);
   color: var(--color-ink-violet);
   font-family: var(--font-body);
