@@ -1,5 +1,9 @@
 .footer {
   --footer-logo-filter: none;
+  --footer-top-rule-border-top: rgba(49, 38, 59, 0.34);
+  --footer-top-rule-bg: linear-gradient(90deg, rgba(49, 38, 59, 0.12) 1px, transparent 1px) 0 0 / 48px 100%,
+    radial-gradient(rgba(49, 38, 59, 0.045) 1px, transparent 1px) 0 0 / 7px 7px,
+    var(--color-surface-muted);
   border-top: 1px solid var(--color-fog-border);
   color: var(--color-plum-charcoal);
   padding-block: 0 var(--space-4);
@@ -7,6 +11,10 @@
 
 :global(:root[data-theme="dark"]) .footer {
   --footer-logo-filter: invert(1) brightness(1.14);
+  --footer-top-rule-border-top: rgba(248, 244, 255, 0.2);
+  --footer-top-rule-bg: linear-gradient(90deg, rgba(248, 244, 255, 0.08) 1px, transparent 1px) 0 0 / 48px 100%,
+    radial-gradient(rgba(248, 244, 255, 0.045) 1px, transparent 1px) 0 0 / 7px 7px,
+    rgba(21, 18, 29, 0.74);
 }
 
 .footer :global(.section__inner) {
@@ -16,20 +24,9 @@
 .footer__top-rule {
   height: 46px;
   margin: 0 calc(var(--space-5) * -1) var(--space-5);
-  border-top: 1px solid rgba(49, 38, 59, 0.34);
+  border-top: 1px solid var(--footer-top-rule-border-top);
   border-bottom: 1px solid var(--color-fog-border);
-  background:
-    linear-gradient(90deg, rgba(49, 38, 59, 0.12) 1px, transparent 1px) 0 0 / 48px 100%,
-    radial-gradient(rgba(49, 38, 59, 0.045) 1px, transparent 1px) 0 0 / 7px 7px,
-    var(--color-surface-muted);
-}
-
-:global(:root[data-theme="dark"]) .footer__top-rule {
-  border-top-color: rgba(248, 244, 255, 0.2);
-  background:
-    linear-gradient(90deg, rgba(248, 244, 255, 0.08) 1px, transparent 1px) 0 0 / 48px 100%,
-    radial-gradient(rgba(248, 244, 255, 0.045) 1px, transparent 1px) 0 0 / 7px 7px,
-    rgba(21, 18, 29, 0.74);
+  background: var(--footer-top-rule-bg);
 }
 
 .footer__inner {

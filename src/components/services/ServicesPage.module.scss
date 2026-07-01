@@ -220,6 +220,11 @@
   --services-offer-feature-bg: rgba(255, 255, 255, 0.7);
   --services-offer-feature-border: rgba(49, 38, 59, 0.12);
   --services-offer-feature-color: var(--color-plum-charcoal);
+  --services-offer-icon-border: rgba(49, 38, 59, 0.18);
+  --services-offer-icon-bg: var(--color-ink-violet);
+  --services-offer-icon-color: #fff;
+  --services-offer-icon-cms-bg: var(--color-surface);
+  --services-offer-icon-cms-color: var(--color-ink-violet);
   --services-offer-link-border: rgba(49, 38, 59, 0.14);
   position: relative;
   display: grid;
@@ -252,6 +257,11 @@
     --services-offer-feature-bg: rgba(255, 255, 255, 0.055);
     --services-offer-feature-border: rgba(255, 255, 255, 0.12);
     --services-offer-feature-color: var(--color-text);
+    --services-offer-icon-border: rgba(248, 244, 255, 0.2);
+    --services-offer-icon-bg: rgba(248, 244, 255, 0.08);
+    --services-offer-icon-color: var(--color-heading);
+    --services-offer-icon-cms-bg: rgba(248, 244, 255, 0.08);
+    --services-offer-icon-cms-color: var(--color-heading);
     --services-offer-link-border: rgba(255, 255, 255, 0.12);
   }
 }
@@ -303,7 +313,7 @@
 }
 
 .services-offer-card--product .services-offer-card__icon {
-  background: var(--color-ink-violet);
+  background: var(--services-offer-icon-bg);
 }
 
 .services-offer-card--cms {
@@ -318,8 +328,8 @@
 }
 
 .services-offer-card--cms .services-offer-card__icon {
-  background: var(--color-surface);
-  color: var(--color-ink-violet);
+  background: var(--services-offer-icon-cms-bg);
+  color: var(--services-offer-icon-cms-color);
 }
 
 .services-offer-card--commerce {
@@ -335,13 +345,7 @@
 }
 
 .services-offer-card--commerce .services-offer-card__icon {
-  background: var(--color-ink-violet);
-}
-
-:global(:root[data-theme="dark"]) .services-offer-card__icon {
-  border-color: rgba(248, 244, 255, 0.2);
-  background: rgba(248, 244, 255, 0.08);
-  color: var(--color-heading);
+  background: var(--services-offer-icon-bg);
 }
 
 .services-offer-card__header,
@@ -369,9 +373,9 @@
   width: var(--space-7);
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgba(49, 38, 59, 0.18);
-  background: var(--color-ink-violet);
-  color: #fff;
+  border: 1px solid var(--services-offer-icon-border);
+  background: var(--services-offer-icon-bg);
+  color: var(--services-offer-icon-color);
 }
 
 .services-offer-card__icon svg,
