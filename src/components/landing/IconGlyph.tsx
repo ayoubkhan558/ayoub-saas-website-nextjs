@@ -12,6 +12,7 @@ import externalLink from "@iconify/icons-lucide/external-link";
 import gauge from "@iconify/icons-lucide/gauge";
 import github from "@iconify/icons-lucide/github";
 import globe2 from "@iconify/icons-lucide/globe-2";
+import graduationCap from "@iconify/icons-lucide/graduation-cap";
 import imageIcon from "@iconify/icons-lucide/image";
 import layers from "@iconify/icons-lucide/layers";
 import linkedin from "@iconify/icons-lucide/linkedin";
@@ -22,6 +23,7 @@ import messageCircle from "@iconify/icons-lucide/message-circle";
 import monitor from "@iconify/icons-lucide/monitor";
 import moon from "@iconify/icons-lucide/moon";
 import phone from "@iconify/icons-lucide/phone";
+import penTool from "@iconify/icons-lucide/pen-tool";
 import rocket from "@iconify/icons-lucide/rocket";
 import search from "@iconify/icons-lucide/search";
 import shieldCheck from "@iconify/icons-lucide/shield-check";
@@ -47,6 +49,7 @@ const iconMap = {
   gauge,
   github,
   globe: globe2,
+  "graduation-cap": graduationCap,
   image: imageIcon,
   layers,
   linkedin,
@@ -56,6 +59,7 @@ const iconMap = {
   messageCircle,
   monitor,
   moon,
+  "pen-tool": penTool,
   phone,
   rocket,
   search,

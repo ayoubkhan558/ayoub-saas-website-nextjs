@@ -620,23 +620,6 @@
       ]
     },
     {
-      "rowNumber": 48,
-      "url": "https://monoami.surge.sh/",
-      "finalUrl": "https://monoami.surge.sh/",
-      "httpStatus": 200,
-      "status": "live",
-      "originalStack": [
-        "Bootstrap",
-        "jQuery",
-        "HTML",
-        "CSS"
-      ],
-      "liveStack": [
-        "Bootstrap",
-        "jQuery"
-      ]
-    },
-    {
       "rowNumber": 49,
       "url": "https://bcd-landing.surge.sh/",
       "finalUrl": "https://bcd-landing.surge.sh/",

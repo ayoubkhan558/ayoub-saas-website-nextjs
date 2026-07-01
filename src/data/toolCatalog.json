@@ -14,6 +14,16 @@
     "logo": "/tools/slim-seo.svg",
     "description": "Lightweight SEO setup for technical foundations."
   },
+  "seopress": {
+    "name": "SEOPress",
+    "logo": "/tools/slim-seo.svg",
+    "description": "WordPress SEO setup for metadata, indexing, and technical foundations."
+  },
+  "fluent-smtp": {
+    "name": "FluentSMTP",
+    "logo": "/tools/fluent-smtp-logo.svg",
+    "description": "Reliable WordPress SMTP delivery for website forms and notifications."
+  },
   "google-site-kit": {
     "name": "Google Site Kit",
     "logo": "/tools/google-search-console.svg",
@@ -23,6 +33,16 @@
     "name": "HappyFiles",
     "logo": "/tools/happyfiles-logo.svg",
     "description": "WordPress media organization for cleaner libraries."
+  },
+  "happyfiles-pro": {
+    "name": "HappyFiles Pro",
+    "logo": "/tools/happyfiles-logo.svg",
+    "description": "WordPress media organization for larger client content libraries."
+  },
+  "wpc-admin-columns": {
+    "name": "Admin Columns",
+    "logo": null,
+    "description": "WordPress admin column management for cleaner content workflows."
   },
   "wordpress": {
     "name": "WordPress CMS",
@@ -118,6 +138,31 @@
     "name": "Tailwind CSS",
     "logo": "/tools/tailwind.svg",
     "description": "Utility-first styling for custom interfaces."
+  },
+  "gsap": {
+    "name": "GSAP",
+    "logo": "/tools/gsap.svg",
+    "description": "Animation library for polished scroll and interface motion."
+  },
+  "swiperjs": {
+    "name": "Swiper",
+    "logo": "/tools/swiper-logo.svg",
+    "description": "Touch-friendly sliders and carousels for responsive content."
+  },
+  "plyr": {
+    "name": "Plyr",
+    "logo": "/tools/plyr-io-logo.png",
+    "description": "Accessible media player controls for video and audio experiences."
+  },
+  "scrollreveal": {
+    "name": "ScrollReveal",
+    "logo": "/tools/scrollreveal.svg",
+    "description": "Viewport-based reveal effects for lightweight page motion."
+  },
+  "jquery": {
+    "name": "jQuery",
+    "logo": "/tools/jquery-icon.svg",
+    "description": "DOM interaction helper used for legacy-compatible frontend behavior."
   },
   "postcss": {
     "name": "PostCSS",

@@ -599,7 +599,7 @@
   color: var(--color-slate-iris);
   font-family: var(--font-code);
   font-size: var(--text-xs);
-  line-height: 1.2;
+  
   text-transform: uppercase;
 }
 
@@ -829,6 +829,25 @@
   overflow-x: auto;
   padding-bottom: var(--space-3);
   scroll-snap-type: x mandatory;
+}
+
+.comparisonGrid {
+  display: grid;
+  gap: var(--space-4);
+
+  @media (min-width: 880px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.comparisonGridSingle {
+  @media (min-width: 880px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.comparisonItem {
+  min-width: 0;
 }
 
 .carouselItem {

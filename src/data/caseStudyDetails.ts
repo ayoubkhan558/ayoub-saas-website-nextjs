@@ -6,6 +6,31 @@ export type CaseStudyDetailData = {
   urlLabel: string;
   liveUrl: string;
   timeline: string;
+  caseType: string;
+  listing: {
+    tag: string;
+    icon: string;
+    title: string;
+    description: string;
+    result: string;
+    achievement: string;
+    stack: string[];
+    href: string;
+    liveUrl: string;
+    image: string;
+    imageAlt: string;
+  };
+  homepageShowcase?: {
+    label: string;
+    title: string;
+    text: string;
+    items: Array<{
+      label: string;
+      image: string;
+      caption?: string;
+    }>;
+  };
+  heroMockup?: string;
   eyebrow: string;
   headline: string;
   tagline: string;
@@ -29,7 +54,9 @@ export type CaseStudyDetailData = {
     text: string;
     logoMark: string;
     logoImage?: string;
+    clientImage?: string;
     fontName: string;
+    fontFamilies?: string[];
     fontMeta: string;
     palette: Array<{ label: string; tone?: "dark" | "gray" | "light" | "accent"; value?: string }>;
   };

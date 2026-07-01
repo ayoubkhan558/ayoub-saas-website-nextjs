@@ -220,6 +220,13 @@
   border-bottom: 1px solid var(--color-plum-charcoal);
 }
 
+.heroMockupImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .screen {
   overflow: hidden;
   border: 1px solid rgba(49, 38, 59, 0.22);
@@ -674,7 +681,7 @@
   color: var(--color-slate-iris);
   font-family: var(--font-code);
   font-size: var(--text-xs);
-  line-height: 1.2;
+  
   text-transform: uppercase;
 }
 

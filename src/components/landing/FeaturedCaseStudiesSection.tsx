@@ -6,7 +6,7 @@ import styles from "./FeaturedCaseStudiesSection.module.scss";
 
 export function FeaturedCaseStudiesSection({ projects }: { projects: CaseStudyCard[] }) {
   return (
-    <section className="section" id="work">
+    <section className={`section ${styles["home-work"]}`} id="showcase">
       <div className="section__inner">
         <div className="container">
           <SectionHeader

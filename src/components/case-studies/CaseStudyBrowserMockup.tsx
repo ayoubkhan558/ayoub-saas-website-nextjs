@@ -4,13 +4,15 @@ export function CaseStudyBrowserMockup({
   label,
   compact = false,
   imageSrc,
+  scrollOnHover = false,
 }: {
   label: string;
   compact?: boolean;
   imageSrc?: string;
+  scrollOnHover?: boolean;
 }) {
   return (
-    <div className={`${styles.screen} ${compact ? styles.screenCompact : ""}`}>
+    <div className={`${styles.screen} ${compact ? styles.screenCompact : ""} ${scrollOnHover ? styles.screenScrollOnHover : ""}`}>
       <div className={styles.browserTop}>
         <div className={styles.browserDots} aria-hidden="true">
           <span />
