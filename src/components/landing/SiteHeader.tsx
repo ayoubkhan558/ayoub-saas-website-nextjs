@@ -2,32 +2,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { type MouseEvent, useEffect, useRef, useState } from "react";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
 import { IconGlyph } from "./IconGlyph";
 import styles from "./SiteHeader.module.scss";
 
-const floatingNavLinks = [
-  { label: "Services", href: "#services", sectionId: "services" },
-  { label: "Case Studies", href: "#work", sectionId: "work" },
-  { label: "Projects", href: "#showcase", sectionId: "showcase" },
-  { label: "About", href: "#about", sectionId: "about" },
-  { label: "Working Style", href: "#process", sectionId: "process" },
-];
-
-const stickyHeaderScrollY = 300;
-
 export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
-  const [floatingNavAllowed, setFloatingNavAllowed] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
   const [theme, setTheme] = useState<"light" | "dark">("light");
-  const [isScrolled, setIsScrolled] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
   const contactDrawerRef = useRef<HTMLElement | null>(null);
-  const pathname = usePathname();
   const profile = portfolio.profile;
   const whatsappHref = `https://wa.me/${profile.phone.replace(/\D/g, "")}`;
   const referralHref = `/contact?subject=${encodeURIComponent("Referral client intro")}&details=${encodeURIComponent(
@@ -47,23 +32,6 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   useEffect(() => {
     const activeTheme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
     setTheme(activeTheme);
-  }, []);
-
-  useEffect(() => {
-    const updateScrolledState = () => {
-      setIsScrolled(window.scrollY > stickyHeaderScrollY);
-    };
-
-    updateScrolledState();
-    window.addEventListener("scroll", updateScrolledState, { passive: true });
-    document.addEventListener("scroll", updateScrolledState, { passive: true });
-    window.addEventListener("resize", updateScrolledState);
-
-    return () => {
-      window.removeEventListener("scroll", updateScrolledState);
-      document.removeEventListener("scroll", updateScrolledState);
-      window.removeEventListener("resize", updateScrolledState);
-    };
   }, []);
 
   const toggleTheme = () => {
@@ -111,108 +79,9 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   }, [contactOpen]);
 
   const navLinks = portfolio.navLinks;
-  const showFloatingNav = pathname === "/" && floatingNavAllowed;
-
-  useEffect(() => {
-    if (pathname !== "/") {
-      setFloatingNavAllowed(false);
-      return;
-    }
-
-    const header = headerRef.current;
-    const footer = document.querySelector("footer");
-
-    if (!header || !footer) {
-      setFloatingNavAllowed(true);
-      return;
-    }
-
-    let footerVisible = false;
-
-    const updateFloatingNav = () => {
-      setFloatingNavAllowed(window.scrollY > header.offsetHeight && !footerVisible);
-    };
-
-    const footerObserver = new IntersectionObserver(
-      (entries) => {
-        footerVisible = entries.some((entry) => entry.isIntersecting);
-        updateFloatingNav();
-      },
-      { threshold: 0.01 },
-    );
-
-    footerObserver.observe(footer);
-    updateFloatingNav();
-    window.addEventListener("scroll", updateFloatingNav, { passive: true });
-    window.addEventListener("resize", updateFloatingNav);
-
-    return () => {
-      footerObserver.disconnect();
-      window.removeEventListener("scroll", updateFloatingNav);
-      window.removeEventListener("resize", updateFloatingNav);
-    };
-  }, [pathname]);
-
-  useEffect(() => {
-    if (pathname !== "/") {
-      return;
-    }
-
-    const sectionIds = floatingNavLinks.map((link) => link.sectionId);
-    const sections = sectionIds
-      .map((sectionId) => document.getElementById(sectionId))
-      .filter((section): section is HTMLElement => Boolean(section));
-
-    if (!sections.length) {
-      return;
-    }
-
-    const sectionScores = new Map<string, number>();
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          sectionScores.set(entry.target.id, entry.intersectionRatio);
-        });
-
-        const visibleSection = sectionIds
-          .map((sectionId) => ({
-            sectionId,
-            score: sectionScores.get(sectionId) ?? 0,
-          }))
-          .filter((section) => section.score > 0)
-          .sort((first, second) => second.score - first.score)[0];
-
-        setActiveSection(visibleSection?.sectionId ?? "");
-      },
-      {
-        rootMargin: "-42% 0px -44% 0px",
-        threshold: [0, 0.1, 0.2, 0.35, 0.5, 0.75, 1],
-      },
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [pathname]);
 
   return (<>
-    <header
-      ref={headerRef}
-      className={`${styles["site-header"]} ${isScrolled ? styles["site-header--scrolled"] : ""}`}
-    >
-      <div className={styles["site-header__announcement"]} aria-label="Portfolio updates">
-        <div className={`${styles["site-header__announcement-inner"]} container`}>
-          <div className={styles["site-header__announcement-track"]}>
-            <Link className={styles["site-header__announcement-item"]} href={referralHref} title="Refer a website development client">
-              {portfolio.topbar.offer}
-            </Link>
-          </div>
-        </div>
-      </div>
-
+    <header ref={headerRef} className={styles["site-header"]}>
       <div className={`${styles["site-header__nav"]} container`}>
         <Link className={styles["site-header__nav-brand"]} href="/" aria-label={`${profile.brand} home`} title="MAYOUB.DEV home">
           <Image src="/mayoub-dev-logo.svg" alt="mayoub.dev logo" title="mayoub.dev logo" width={640} height={160} priority />
@@ -348,28 +217,12 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
       </div>
     </header>
 
-    <nav
-      className={`${styles["site-header__floating-nav"]} ${showFloatingNav ? styles["site-header__floating-nav--visible"] : ""
-        }`}
-      aria-label="Quick navigation"
-    >
-      {floatingNavLinks.map((link) => (
-        <Link
-          className={`${styles["site-header__floating-link"]} ${activeSection === link.sectionId ? styles["site-header__floating-link--active"] : ""
-            }`}
-          href={link.href}
-          key={link.href}
-          aria-current={activeSection === link.sectionId ? "true" : undefined}
-          title={`Jump to ${link.label}`}
-        >
-          {link.label}
-        </Link>
-      ))}
-      <Link className={styles["site-header__floating-cta"]} href="/contact" title="Contact Muhammad Ayoub">
-        Contact
+    <div className={styles["site-header__floating-offer"]} aria-label="Portfolio updates">
+      <Link className={styles["site-header__floating-offer-link"]} href={referralHref} title="Refer a website development client">
+        <span>{portfolio.topbar.offer}</span>
         <IconGlyph name="arrowRight" />
       </Link>
-    </nav>
+    </div>
   </>
   );
 }
