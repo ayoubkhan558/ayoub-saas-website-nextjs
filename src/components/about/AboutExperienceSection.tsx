@@ -10,7 +10,7 @@ export function AboutExperienceSection({
   companyLogos: Record<string, string>;
 }) {
   return (
-    <section className="section">
+    <section className={`section ${styles["about-page-experience-section"]}`}>
       <div className="section__inner">
         <div className={`container ${styles["about-page-section-header"]}`}>
           <span className={styles["about-page__eyebrow"]}>Professional Experience</span>
