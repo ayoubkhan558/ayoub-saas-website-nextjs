@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import { ContactFaqsSection } from "@/components/contact/ContactFaqsSection";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { ContactHeroSection } from "@/components/contact/ContactHeroSection";
 import { IconGlyph } from "@/components/landing/IconGlyph";
 import { ContactFooter } from "@/components/landing/ContactFooter";
 import { SiteHeader } from "@/components/landing/SiteHeader";
@@ -32,7 +34,6 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const profile = portfolio.profile;
-  const mailto = `mailto:${profile.email}?subject=Project%20details%20for%20Muhammad%20Ayoub`;
   const schema = buildContactSchema();
 
   return (
@@ -44,43 +45,7 @@ export default function ContactPage() {
       />
       <SiteHeader portfolio={portfolio} />
       <main>
-        <section className={`section ${styles["contact-hero"]}`}>
-          <div className="section__inner">
-            <div className={`container ${styles["contact-hero__inner"]}`}>
-              <div className={styles["contact-hero__copy"]}>
-                <span className={styles["contact-page__eyebrow"]}>Contact / Hire Me</span>
-                <h1>
-                  Send details.
-                  I&apos;ll map it.
-                </h1>
-                <p>
-                  Share what you want built, what is currently blocking progress, and when you need it live.
-                  I will respond with the practical next step.
-                </p>
-                <div className={styles["contact-hero__actions"]}>
-                  <a className="button button--dark" href={mailto} title="Send project details to Muhammad Ayoub">
-                    Send project details
-                    <IconGlyph name="arrowRight" />
-                  </a>
-                  <a className="button button--ghost" href={`mailto:${profile.email}?subject=Build%20estimate%20request`} title="Request a website build estimate">
-                    Get a build estimate
-                    <IconGlyph name="arrowRight" />
-                  </a>
-                </div>
-              </div>
-
-              <aside className={styles["contact-signal-panel"]} aria-label="Project contact summary">
-                <span className={styles["contact-signal-panel__label"]}>Available for</span>
-                <strong>{profile.availability}</strong>
-                <p>{profile.summary}</p>
-                <div className={styles["contact-signal-panel__meta"]}>
-                  <span>{profile.location}</span>
-                  <span>{profile.role}</span>
-                </div>
-              </aside>
-            </div>
-          </div>
-        </section>
+        <ContactHeroSection profile={profile} />
 
         <section className="section">
           <div className="section__inner">
@@ -151,33 +116,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className={`section ${styles["contact-faqs"]}`}>
-          <div className="section__inner">
-            <div className={`container ${styles["contact-faqs__inner"]}`}>
-              <div className={styles["contact-faqs__copy"]}>
-                <span className={styles["contact-page__eyebrow"]}>FAQs</span>
-                <h2>
-                  Questions clients ask before starting.
-                </h2>
-                <p>
-                  Short answers on project fit, cost, timelines, and taking over an existing site or codebase.
-                </p>
-              </div>
-              <div className={styles["contact-faqs__grid"]}>
-                {portfolio.faqs.map((faq, index) => (
-                  <details className={styles["contact-faq-card"]} key={faq.question} open={index === 0}>
-                    <summary className={styles["contact-faq-card__question"]}>
-                      <span className={styles["contact-faq-card__index"]}>{String(index + 1).padStart(2, "0")}</span>
-                      <span className={styles["contact-faq-card__question-text"]}>{faq.question}</span>
-                      <span className={styles["contact-faq-card__toggle"]} aria-hidden="true" />
-                    </summary>
-                    <p className={styles["contact-faq-card__answer"]}>{faq.answer}</p>
-                  </details>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        <ContactFaqsSection faqs={portfolio.faqs} />
       </main>
       <ContactFooter portfolio={portfolio} />
     </div>
