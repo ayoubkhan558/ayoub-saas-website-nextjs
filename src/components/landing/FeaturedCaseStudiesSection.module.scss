@@ -9,20 +9,30 @@
 }
 
 .work__project-card {
+  /* Theme-flipping values hoisted here; one dark override below covers the whole card. */
+  --card-tint-a: rgba(205, 89, 115, 0.13);
+  --card-tint-b: rgba(33, 145, 140, 0.1);
+  --card-bg: linear-gradient(180deg, var(--color-surface-raised), var(--color-surface-muted));
+  --card-shadow: rgba(49, 38, 59, 0.07) 0 26px 70px;
+  --card-shadow-hover: rgba(49, 38, 59, 0.12) 0 34px 84px;
+  --card-grain-dot: var(--ink-fill-soft);
+  --card-grain-line: rgba(49, 38, 59, 0.045);
+  --card-image-edge: rgba(255, 255, 255, 0.52);
+
   position: relative;
   display: grid;
   grid-template-rows: auto auto 1fr;
   overflow: hidden;
   min-height: 520px;
-  border: 1px solid rgba(49, 38, 59, 0.16);
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius-cards);
   background:
-    radial-gradient(circle at 14% 12%, rgba(205, 89, 115, 0.13), transparent 11rem),
-    radial-gradient(circle at 92% 0%, rgba(33, 145, 140, 0.1), transparent 10rem),
-    linear-gradient(180deg, var(--color-surface-raised), var(--color-surface-muted));
+    radial-gradient(circle at 14% 12%, var(--card-tint-a), transparent 11rem),
+    radial-gradient(circle at 92% 0%, var(--card-tint-b), transparent 10rem),
+    var(--card-bg);
   box-shadow:
-    rgba(255, 255, 255, 0.74) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.07) 0 26px 70px;
+    var(--inset-highlight) 0 1px 0 inset,
+    var(--card-shadow);
   color: var(--color-ink-violet);
   transition:
     border-color 160ms ease,
@@ -31,14 +41,13 @@
 }
 
 :global(:root[data-theme="dark"]) .work__project-card {
-  border-color: rgba(248, 244, 255, 0.16);
-  background:
-    radial-gradient(circle at 14% 12%, rgba(240, 120, 168, 0.14), transparent 11rem),
-    radial-gradient(circle at 92% 0%, rgba(121, 210, 203, 0.1), transparent 10rem),
-    linear-gradient(180deg, rgba(21, 18, 29, 0.96), rgba(18, 16, 25, 0.94));
-  box-shadow:
-    rgba(255, 255, 255, 0.07) 0 1px 0 inset,
-    rgba(0, 0, 0, 0.38) 0 26px 70px;
+  --card-tint-a: rgba(240, 120, 168, 0.14);
+  --card-tint-b: rgba(121, 210, 203, 0.1);
+  --card-bg: linear-gradient(180deg, rgba(21, 18, 29, 0.96), rgba(18, 16, 25, 0.94));
+  --card-shadow: rgba(0, 0, 0, 0.38) 0 26px 70px;
+  --card-shadow-hover: rgba(0, 0, 0, 0.46) 0 34px 84px;
+  --card-grain-line: rgba(248, 244, 255, 0.04);
+  --card-image-edge: rgba(248, 244, 255, 0.16);
 }
 
 .work__project-card::before {
@@ -47,8 +56,8 @@
   inset: 0;
   z-index: 0;
   background-image:
-    radial-gradient(rgba(49, 38, 59, 0.06) 0.75px, transparent 0.75px),
-    linear-gradient(115deg, transparent 0 48%, rgba(49, 38, 59, 0.045) 48% 49%, transparent 49% 100%);
+    radial-gradient(var(--card-grain-dot) 0.75px, transparent 0.75px),
+    linear-gradient(115deg, transparent 0 48%, var(--card-grain-line) 48% 49%, transparent 49% 100%);
   background-size:
     8px 8px,
     44px 44px;
@@ -56,25 +65,12 @@
   pointer-events: none;
 }
 
-:global(:root[data-theme="dark"]) .work__project-card::before {
-  background-image:
-    radial-gradient(rgba(248, 244, 255, 0.065) 0.75px, transparent 0.75px),
-    linear-gradient(115deg, transparent 0 48%, rgba(248, 244, 255, 0.04) 48% 49%, transparent 49% 100%);
-}
-
 .work__project-card:hover {
-  border-color: rgba(49, 38, 59, 0.32);
+  border-color: var(--border-strong);
   box-shadow:
-    rgba(255, 255, 255, 0.82) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.12) 0 34px 84px;
+    var(--inset-highlight) 0 1px 0 inset,
+    var(--card-shadow-hover);
   transform: translateY(-4px);
-}
-
-:global(:root[data-theme="dark"]) .work__project-card:hover {
-  border-color: rgba(248, 244, 255, 0.3);
-  box-shadow:
-    rgba(255, 255, 255, 0.09) 0 1px 0 inset,
-    rgba(0, 0, 0, 0.46) 0 34px 84px;
 }
 
 .work__project-topline,
@@ -89,12 +85,8 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
-  border-bottom: 1px solid rgba(49, 38, 59, 0.12);
+  border-bottom: 1px solid var(--border-line);
   padding: var(--space-3) var(--space-4);
-}
-
-:global(:root[data-theme="dark"]) .work__project-topline {
-  border-bottom-color: rgba(248, 244, 255, 0.12);
 }
 
 .work__project-index,
@@ -117,7 +109,7 @@
   position: relative;
   overflow: hidden;
   margin: var(--space-4) var(--space-4) var(--space-0);
-  border: 1px solid rgba(49, 38, 59, 0.14);
+  border: 1px solid var(--border-soft);
   background:
     linear-gradient(135deg, rgba(1, 1, 27, 0.1), transparent 44%),
     var(--color-bone-mist);
@@ -128,12 +120,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  border: 1px solid rgba(255, 255, 255, 0.52);
+  border: 1px solid var(--card-image-edge);
   pointer-events: none;
-}
-
-:global(:root[data-theme="dark"]) .work__project-image::after {
-  border-color: rgba(248, 244, 255, 0.16);
 }
 
 .work__project-image img {
@@ -182,7 +170,7 @@
   min-width: 34px;
   height: 28px;
   place-items: center;
-  border: 1px solid rgba(49, 38, 59, 0.16);
+  border: 1px solid var(--border-soft);
   background: var(--color-surface-muted);
   color: var(--color-ink-violet);
   font-family: var(--font-code);
@@ -190,11 +178,7 @@
   font-weight: 700;
   line-height: 1;
   padding-inline: 7px;
-  box-shadow: rgba(255, 255, 255, 0.78) 0 1px 0 inset;
-}
-
-:global(:root[data-theme="dark"]) .work__tech-logo {
-  box-shadow: rgba(255, 255, 255, 0.08) 0 1px 0 inset;
+  box-shadow: var(--inset-highlight) 0 1px 0 inset;
 }
 
 .work__tech-logo--react {
@@ -242,7 +226,7 @@
   align-self: end;
   min-height: 64px;
   margin-top: var(--space-2);
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid var(--border-soft);
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
   font-size: var(--text-ui);

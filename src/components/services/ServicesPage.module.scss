@@ -137,24 +137,21 @@
 }
 
 .services-signal-panel {
+  --services-signal-bg: radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
+    var(--color-surface);
+  --services-signal-hover-border: rgba(49, 38, 59, 0.28);
+  --services-signal-hover-bg: radial-gradient(rgba(1, 1, 27, 0.055) 0.75px, transparent 0.75px),
+    rgba(236, 237, 242, 0.48);
   display: grid;
   gap: var(--space-4);
   min-height: 320px;
-  background:
-    radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
-    var(--color-surface);
+  background: var(--services-signal-bg);
   background-size: 6px 6px, auto;
   padding: var(--space-5);
   transition:
     background-color 160ms ease,
     border-color 160ms ease,
     transform 160ms ease;
-}
-
-:global(:root[data-theme="dark"]) .services-signal-panel {
-  background:
-    radial-gradient(rgba(248, 244, 255, 0.06) 0.75px, transparent 0.75px),
-    rgba(21, 18, 29, 0.96);
 }
 
 .services-signal-panel::after {
@@ -166,19 +163,10 @@
 }
 
 .services-signal-panel:hover {
-  border-color: rgba(49, 38, 59, 0.28);
-  background:
-    radial-gradient(rgba(1, 1, 27, 0.055) 0.75px, transparent 0.75px),
-    rgba(236, 237, 242, 0.48);
+  border-color: var(--services-signal-hover-border);
+  background: var(--services-signal-hover-bg);
   background-size: 6px 6px, auto;
   transform: translateY(-2px);
-}
-
-:global(:root[data-theme="dark"]) .services-signal-panel:hover {
-  border-color: rgba(248, 244, 255, 0.28);
-  background:
-    radial-gradient(rgba(248, 244, 255, 0.075) 0.75px, transparent 0.75px),
-    rgba(32, 27, 42, 0.98);
 }
 
 .services-signal-panel strong {
@@ -257,34 +245,44 @@
   }
 }
 
-:global(:root[data-theme="dark"]) .services-offer-grid {
-  --services-offer-card-bg: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    rgba(20, 17, 28, 0.94);
-  --services-offer-card-border: rgba(255, 255, 255, 0.12);
-  --services-offer-card-hover-bg: linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-    rgba(25, 21, 34, 0.98);
-  --services-offer-card-hover-border: rgba(255, 255, 255, 0.2);
-  --services-offer-card-hover-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-  --services-offer-feature-bg: rgba(255, 255, 255, 0.055);
-  --services-offer-feature-border: rgba(255, 255, 255, 0.12);
-  --services-offer-feature-color: var(--color-text);
-  --services-offer-tabs-bg: rgba(255, 255, 255, 0.055);
-  --services-offer-tabs-border: rgba(255, 255, 255, 0.12);
-  --services-offer-tab-active-bg: rgba(255, 255, 255, 0.1);
-  --services-offer-tab-active-border: rgba(255, 255, 255, 0.14);
-  --services-offer-tab-panel-bg: rgba(14, 12, 22, 0.78);
-  --services-offer-tab-panel-border: rgba(255, 255, 255, 0.1);
-  --services-offer-illustration-bg: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    rgba(14, 12, 22, 0.56);
-  --services-offer-illustration-border: rgba(255, 255, 255, 0.12);
-  --services-offer-illustration-node-bg: rgba(255, 255, 255, 0.065);
-  --services-offer-illustration-node-border: rgba(255, 255, 255, 0.14);
-  --services-offer-illustration-rail-bg: rgba(255, 255, 255, 0.065);
-  --services-offer-illustration-line: rgba(255, 255, 255, 0.12);
-  --services-offer-link-border: rgba(255, 255, 255, 0.12);
+:global(:root[data-theme="dark"]) {
+  .services-signal-panel {
+    --services-signal-bg: radial-gradient(rgba(248, 244, 255, 0.06) 0.75px, transparent 0.75px),
+      rgba(21, 18, 29, 0.96);
+    --services-signal-hover-border: rgba(248, 244, 255, 0.28);
+    --services-signal-hover-bg: radial-gradient(rgba(248, 244, 255, 0.075) 0.75px, transparent 0.75px),
+      rgba(32, 27, 42, 0.98);
+  }
+
+  .services-offer-grid {
+    --services-offer-card-bg: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      rgba(20, 17, 28, 0.94);
+    --services-offer-card-border: rgba(255, 255, 255, 0.12);
+    --services-offer-card-hover-bg: linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+      rgba(25, 21, 34, 0.98);
+    --services-offer-card-hover-border: rgba(255, 255, 255, 0.2);
+    --services-offer-card-hover-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    --services-offer-feature-bg: rgba(255, 255, 255, 0.055);
+    --services-offer-feature-border: rgba(255, 255, 255, 0.12);
+    --services-offer-feature-color: var(--color-text);
+    --services-offer-tabs-bg: rgba(255, 255, 255, 0.055);
+    --services-offer-tabs-border: rgba(255, 255, 255, 0.12);
+    --services-offer-tab-active-bg: rgba(255, 255, 255, 0.1);
+    --services-offer-tab-active-border: rgba(255, 255, 255, 0.14);
+    --services-offer-tab-panel-bg: rgba(14, 12, 22, 0.78);
+    --services-offer-tab-panel-border: rgba(255, 255, 255, 0.1);
+    --services-offer-illustration-bg: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      rgba(14, 12, 22, 0.56);
+    --services-offer-illustration-border: rgba(255, 255, 255, 0.12);
+    --services-offer-illustration-node-bg: rgba(255, 255, 255, 0.065);
+    --services-offer-illustration-node-border: rgba(255, 255, 255, 0.14);
+    --services-offer-illustration-rail-bg: rgba(255, 255, 255, 0.065);
+    --services-offer-illustration-line: rgba(255, 255, 255, 0.12);
+    --services-offer-link-border: rgba(255, 255, 255, 0.12);
+  }
 }
 
 .services-offer-card {

@@ -1,4 +1,11 @@
 .button {
+  --button-bg: var(--color-surface);
+  --button-dark-bg: var(--color-ink-violet);
+  --button-dark-border: var(--color-ink-violet);
+  --button-dark-color: var(--color-on-dark);
+  --button-dark-hover-bg: var(--color-plum-charcoal);
+  --button-dark-hover-border: var(--color-ink-violet);
+  --button-dark-hover-color: var(--color-on-dark);
   display: inline-flex;
   position: relative;
   isolation: isolate;
@@ -18,7 +25,7 @@
       rgba(192, 105, 127, 0.2) calc(100% - 1px),
       rgba(192, 105, 127, 0.2) 100%
   ),
-    var(--color-surface);
+    var(--button-bg);
   color: var(--color-ink-violet);
   font-size: var(--text-ui);
   font-weight: 600;
@@ -75,12 +82,12 @@
 }
 
 .button:not(.button--ghost):hover {
-  background: var(--color-surface);
+  background: var(--button-bg);
 }
 
 .button--dark:not(.button--ghost):hover {
-  background: var(--color-plum-charcoal);
-  color: var(--color-on-dark);
+  background: var(--button-dark-hover-bg);
+  color: var(--button-dark-hover-color);
 }
 
 .button:not(.button--ghost):hover::before {
@@ -98,15 +105,15 @@
 }
 
 .button--dark {
-  border-color: var(--color-ink-violet);
-  background: var(--color-ink-violet);
-  color: var(--color-on-dark);
+  border-color: var(--button-dark-border);
+  background: var(--button-dark-bg);
+  color: var(--button-dark-color);
 }
 
 .button--dark:hover {
-  border-color: var(--color-ink-violet);
-  background: var(--color-plum-charcoal);
-  color: var(--color-on-dark);
+  border-color: var(--button-dark-hover-border);
+  background: var(--button-dark-hover-bg);
+  color: var(--button-dark-hover-color);
 }
 
 .button--dark::before {
@@ -139,17 +146,13 @@
   box-shadow: var(--shadow-inset);
 }
 
-:root[data-theme="dark"] .button--dark {
-  border-color: var(--color-primary);
-  background: var(--color-primary);
-  color: #120d15;
-}
-
-:root[data-theme="dark"] .button--dark:hover,
-:root[data-theme="dark"] .button--dark:not(.button--ghost):hover {
-  border-color: #ff9abd;
-  background: #ff9abd;
-  color: #120d15;
+:root[data-theme="dark"] .button {
+  --button-dark-bg: var(--color-primary);
+  --button-dark-border: var(--color-primary);
+  --button-dark-color: #120d15;
+  --button-dark-hover-bg: #ff9abd;
+  --button-dark-hover-border: #ff9abd;
+  --button-dark-hover-color: #120d15;
 }
 
 

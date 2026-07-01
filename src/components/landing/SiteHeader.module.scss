@@ -23,13 +23,28 @@
   --contact-panel-hire-hover-bg: var(--color-plum-charcoal);
   --contact-panel-hire-color: var(--color-on-dark);
   --contact-panel-hire-shadow: var(--shadow-product-light);
+  --header-logo-filter: none;
+  --header-glass-bg: var(--color-surface-chrome);
+  --header-glass-border: var(--color-fog-border);
+  --header-glass-shadow: none;
+  --header-nav-height: 64px;
+  --header-nav-padding-block: 0px;
+  --header-logo-width: min(174px, 42vw);
+  --header-action-size: 40px;
+  --header-announcement-height: 29px;
+  --header-announcement-opacity: 1;
   position: sticky;
   top: 0;
   z-index: 50;
-  border-top: 1px solid var(--color-fog-border);
-  border-bottom: 1px solid var(--color-fog-border);
-  background: var(--color-surface-chrome);
-  backdrop-filter: blur(18px);
+  border-top: 1px solid var(--header-glass-border);
+  border-bottom: 1px solid var(--header-glass-border);
+  background: var(--header-glass-bg);
+  box-shadow: var(--header-glass-shadow);
+  backdrop-filter: blur(18px) saturate(1.08);
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
 :global(:root[data-theme="dark"]) .site-header {
@@ -56,12 +71,39 @@
   --contact-panel-hire-hover-bg: rgba(255, 77, 136, 0.18);
   --contact-panel-hire-color: var(--color-heading);
   --contact-panel-hire-shadow: inset 0 0 0 1px rgba(255, 125, 170, 0.55);
+  --header-logo-filter: invert(1) brightness(1.12);
+}
+
+.site-header--scrolled {
+  --header-glass-bg: color-mix(in srgb, var(--color-surface-chrome) 72%, transparent);
+  --header-glass-border: color-mix(in srgb, var(--color-fog-border) 82%, transparent);
+  --header-glass-shadow: rgba(1, 1, 27, 0.12) 0 16px 42px;
+  --header-nav-height: 52px;
+  --header-nav-padding-block: 4px;
+  --header-logo-width: min(142px, 38vw);
+  --header-action-size: 34px;
+  --header-announcement-height: 0px;
+  --header-announcement-opacity: 0;
 }
 
 .site-header__announcement {
   overflow: hidden;
   border-bottom: 1px solid var(--color-fog-border);
   background: color-mix(in srgb, var(--color-bone-mist) 76%, transparent);
+  max-height: var(--header-announcement-height);
+  opacity: var(--header-announcement-opacity);
+  pointer-events: var(--header-announcement-pointer, auto);
+  transition:
+    max-height 180ms ease,
+    opacity 140ms ease,
+    border-color 180ms ease;
+}
+
+.site-header--scrolled .site-header__announcement {
+  border-bottom-color: transparent;
+  border-bottom-width: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .site-header__announcement-inner {
@@ -103,11 +145,15 @@
 
 .site-header__nav {
   display: grid;
-  min-height: 64px;
+  min-height: var(--header-nav-height);
   grid-template-columns: 1fr auto;
   align-items: center;
   column-gap: var(--space-4);
   padding-inline: var(--space-5);
+  padding-block: var(--header-nav-padding-block);
+  transition:
+    min-height 180ms ease,
+    padding 180ms ease;
 
   @media (min-width: 860px) {
     grid-template-columns: auto 1fr auto;
@@ -118,18 +164,16 @@
   justify-self: start;
   display: inline-flex;
   align-items: center;
-  width: min(174px, 42vw);
+  width: var(--header-logo-width);
   line-height: 1;
+  transition: width 180ms ease;
 }
 
 .site-header__nav-brand img {
   display: block;
   width: 100%;
   height: auto;
-}
-
-:global(:root[data-theme="dark"]) .site-header__nav-brand img {
-  filter: invert(1) brightness(1.12);
+  filter: var(--header-logo-filter);
 }
 
 .site-header__nav-links {
@@ -166,8 +210,8 @@
 
 .site-header__theme-toggle {
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: var(--header-action-size);
+  height: var(--header-action-size);
   border: 1px solid var(--color-fog-border);
   background: var(--color-surface);
   color: var(--color-primary);
@@ -219,8 +263,8 @@
 
 .site-header__nav-toggle {
   display: grid;
-  width: 40px;
-  height: 40px;
+  width: var(--header-action-size);
+  height: var(--header-action-size);
   place-items: center;
   border: 1px solid var(--color-fog-border);
   border-radius: var(--radius-buttons);

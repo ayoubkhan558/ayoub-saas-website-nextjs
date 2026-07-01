@@ -22,6 +22,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   const [floatingNavAllowed, setFloatingNavAllowed] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [isScrolled, setIsScrolled] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
   const contactDrawerRef = useRef<HTMLElement | null>(null);
   const pathname = usePathname();
@@ -44,6 +45,23 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   useEffect(() => {
     const activeTheme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
     setTheme(activeTheme);
+  }, []);
+
+  useEffect(() => {
+    const updateScrolledState = () => {
+      setIsScrolled(window.scrollY > 12);
+    };
+
+    updateScrolledState();
+    window.addEventListener("scroll", updateScrolledState, { passive: true });
+    document.addEventListener("scroll", updateScrolledState, { passive: true });
+    window.addEventListener("resize", updateScrolledState);
+
+    return () => {
+      window.removeEventListener("scroll", updateScrolledState);
+      document.removeEventListener("scroll", updateScrolledState);
+      window.removeEventListener("resize", updateScrolledState);
+    };
   }, []);
 
   const toggleTheme = () => {
@@ -179,7 +197,10 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   }, [pathname]);
 
   return (<>
-    <header ref={headerRef} className={styles["site-header"]}>
+    <header
+      ref={headerRef}
+      className={`${styles["site-header"]} ${isScrolled ? styles["site-header--scrolled"] : ""}`}
+    >
       <div className={styles["site-header__announcement"]} aria-label="Portfolio updates">
         <div className={`${styles["site-header__announcement-inner"]} container`}>
           <div className={styles["site-header__announcement-track"]}>

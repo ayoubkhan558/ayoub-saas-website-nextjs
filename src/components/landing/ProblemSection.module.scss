@@ -13,6 +13,11 @@
 }
 
 .problem__pain-card {
+  --problem-card-border: var(--color-plum-charcoal);
+  --problem-card-bg: var(--color-surface);
+  --problem-card-hover-bg: rgba(236, 237, 242, 0.58);
+  --problem-index-border: rgba(49, 38, 59, 0.18);
+  --problem-index-bg: rgba(236, 237, 242, 0.72);
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -20,8 +25,8 @@
   min-height: 154px;
   gap: var(--space-4);
   overflow: hidden;
-  border: 1px solid var(--color-plum-charcoal);
-  background: var(--color-surface);
+  border: 1px solid var(--problem-card-border);
+  background: var(--problem-card-bg);
   padding: var(--space-4);
   transition:
     background-color 160ms ease,
@@ -29,8 +34,11 @@
 }
 
 :global(:root[data-theme="dark"]) .problem__pain-card {
-  border-color: rgba(248, 244, 255, 0.26);
-  background: rgba(21, 18, 29, 0.92);
+  --problem-card-border: rgba(248, 244, 255, 0.26);
+  --problem-card-bg: rgba(21, 18, 29, 0.92);
+  --problem-card-hover-bg: rgba(36, 30, 47, 0.96);
+  --problem-index-border: rgba(248, 244, 255, 0.18);
+  --problem-index-bg: rgba(248, 244, 255, 0.1);
 }
 
 .problem__pain-card::before {
@@ -42,30 +50,21 @@
 }
 
 .problem__pain-card:hover {
-  background: rgba(236, 237, 242, 0.58);
+  background: var(--problem-card-hover-bg);
   transform: translateY(-2px);
-}
-
-:global(:root[data-theme="dark"]) .problem__pain-card:hover {
-  background: rgba(36, 30, 47, 0.96);
 }
 
 .problem__pain-index {
   grid-column: 1 / -1;
   width: fit-content;
-  border: 1px solid rgba(49, 38, 59, 0.18);
-  background: rgba(236, 237, 242, 0.72);
+  border: 1px solid var(--problem-index-border);
+  background: var(--problem-index-bg);
   color: var(--color-primary);
   font-family: var(--font-code);
   font-size: var(--text-2xs);
   line-height: 1;
   padding: var(--space-1) var(--space-2);
   text-transform: uppercase;
-}
-
-:global(:root[data-theme="dark"]) .problem__pain-index {
-  border-color: rgba(248, 244, 255, 0.18);
-  background: rgba(248, 244, 255, 0.1);
 }
 
 .problem__pain-title {

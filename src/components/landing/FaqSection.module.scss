@@ -5,10 +5,22 @@
   position: relative;
 }
 
-:global(:root[data-theme="dark"]) .process {
-  --process-step-chip-border: rgba(255, 255, 255, 0.12);
-  --process-step-chip-bg: rgba(255, 255, 255, 0.055);
-  --process-step-chip-color: var(--color-text);
+:global(:root[data-theme="dark"]) {
+  .process {
+    --process-step-chip-border: rgba(255, 255, 255, 0.12);
+    --process-step-chip-bg: rgba(255, 255, 255, 0.055);
+    --process-step-chip-color: var(--color-text);
+  }
+
+  .about {
+    --about-grain-a: rgba(248, 244, 255, 0.07);
+    --about-grain-b: rgba(248, 244, 255, 0.035);
+    --about-surface: rgba(26, 22, 35, 0.82);
+    --about-surface-strong: rgba(21, 18, 29, 0.94);
+    --about-section-bg: #121019;
+    --about-section-gradient: linear-gradient(180deg, #17131f, #100e16);
+    --about-vignette: linear-gradient(90deg, rgba(14, 13, 20, 0.78), transparent 18%, transparent 82%, rgba(14, 13, 20, 0.82));
+  }
 }
 
 .process__expectations {
@@ -207,16 +219,6 @@
   --about-section-bg: #eeeeef;
   --about-section-gradient: linear-gradient(180deg, #f5f5f6, #e9e9eb);
   --about-vignette: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent 18%, transparent 82%, rgba(255, 255, 255, 0.84));
-}
-
-:global(:root[data-theme="dark"]) .about {
-  --about-grain-a: rgba(248, 244, 255, 0.07);
-  --about-grain-b: rgba(248, 244, 255, 0.035);
-  --about-surface: rgba(26, 22, 35, 0.82);
-  --about-surface-strong: rgba(21, 18, 29, 0.94);
-  --about-section-bg: #121019;
-  --about-section-gradient: linear-gradient(180deg, #17131f, #100e16);
-  --about-vignette: linear-gradient(90deg, rgba(14, 13, 20, 0.78), transparent 18%, transparent 82%, rgba(14, 13, 20, 0.82));
 }
 
 .about :global(.section__inner) {

@@ -1,7 +1,12 @@
 .footer {
+  --footer-logo-filter: none;
   border-top: 1px solid var(--color-fog-border);
   color: var(--color-plum-charcoal);
   padding-block: 0 var(--space-4);
+}
+
+:global(:root[data-theme="dark"]) .footer {
+  --footer-logo-filter: invert(1) brightness(1.14);
 }
 
 .footer :global(.section__inner) {
@@ -65,6 +70,7 @@
   display: block;
   width: 100%;
   height: auto;
+  filter: var(--footer-logo-filter);
 }
 
 .footer__summary {

@@ -1,19 +1,45 @@
 .hero :global(.section__inner),
 .archive :global(.section__inner),
 .caseLink :global(.section__inner) {
+  --proj-tint-dot: rgba(1, 1, 27, 0.07);
   background-color: var(--color-section-tint-bg);
   background-image:
-    radial-gradient(rgba(1, 1, 27, 0.07) 0.75px, transparent 0.75px),
+    radial-gradient(var(--proj-tint-dot) 0.75px, transparent 0.75px),
     var(--color-section-tint-gradient);
   background-size: 6px 6px, auto;
 }
 
-:global(:root[data-theme="dark"]) .hero :global(.section__inner),
-:global(:root[data-theme="dark"]) .archive :global(.section__inner),
-:global(:root[data-theme="dark"]) .caseLink :global(.section__inner) {
-  background-image:
-    radial-gradient(rgba(248, 244, 255, 0.07) 0.75px, transparent 0.75px),
-    var(--color-section-tint-gradient);
+:global(:root[data-theme="dark"]) {
+  .hero :global(.section__inner),
+  .archive :global(.section__inner),
+  .caseLink :global(.section__inner) {
+    --proj-tint-dot: rgba(248, 244, 255, 0.07);
+  }
+
+  .signal,
+  .card {
+    --project-card-border: rgba(248, 244, 255, 0.16);
+    --project-card-dot: rgba(248, 244, 255, 0.06);
+    --project-card-bg: rgba(21, 18, 29, 0.96);
+    --project-card-inset: rgba(255, 255, 255, 0.07);
+    --project-card-shadow: rgba(0, 0, 0, 0.34) 0 20px 54px;
+    --project-card-hover-border: rgba(248, 244, 255, 0.28);
+    --project-card-hover-dot: rgba(248, 244, 255, 0.075);
+    --project-card-hover-bg: rgba(32, 27, 42, 0.98);
+    --project-card-hover-inset: rgba(255, 255, 255, 0.09);
+    --project-card-hover-shadow: rgba(0, 0, 0, 0.46) 0 34px 84px;
+  }
+
+  .filters {
+    --project-filter-border: rgba(255, 255, 255, 0.12);
+    --project-filter-bg: rgba(255, 255, 255, 0.055);
+    --project-filter-color: var(--color-heading);
+    --project-filter-hover-border: rgba(255, 255, 255, 0.22);
+    --project-filter-hover-bg: rgba(255, 255, 255, 0.1);
+    --project-filter-active-border: rgba(255, 125, 170, 0.7);
+    --project-filter-active-bg: rgba(255, 77, 136, 0.16);
+    --project-filter-active-color: var(--color-heading);
+  }
 }
 
 .hero :global(.section__inner) {
@@ -112,29 +138,28 @@
 
 .signal,
 .card {
+  --project-card-border: var(--color-fog-border);
+  --project-card-dot: rgba(1, 1, 27, 0.045);
+  --project-card-bg: var(--color-surface);
+  --project-card-inset: rgba(255, 255, 255, 0.74);
+  --project-card-shadow: rgba(49, 38, 59, 0.06) 0 20px 54px;
+  --project-card-hover-border: rgba(49, 38, 59, 0.28);
+  --project-card-hover-dot: rgba(1, 1, 27, 0.055);
+  --project-card-hover-bg: rgba(236, 237, 242, 0.48);
+  --project-card-hover-inset: rgba(255, 255, 255, 0.82);
+  --project-card-hover-shadow: rgba(49, 38, 59, 0.12) 0 34px 84px;
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--color-fog-border);
+  border: 1px solid var(--project-card-border);
   border-radius: var(--radius-cards);
   background:
-    radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
-    var(--color-surface);
+    radial-gradient(var(--project-card-dot) 0.75px, transparent 0.75px),
+    var(--project-card-bg);
   background-size: 6px 6px, auto;
   box-shadow:
-    rgba(255, 255, 255, 0.74) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.06) 0 20px 54px;
+    var(--project-card-inset) 0 1px 0 inset,
+    var(--project-card-shadow);
   color: var(--color-ink-violet);
-}
-
-:global(:root[data-theme="dark"]) .signal,
-:global(:root[data-theme="dark"]) .card {
-  border-color: rgba(248, 244, 255, 0.16);
-  background:
-    radial-gradient(rgba(248, 244, 255, 0.06) 0.75px, transparent 0.75px),
-    rgba(21, 18, 29, 0.96);
-  box-shadow:
-    rgba(255, 255, 255, 0.07) 0 1px 0 inset,
-    rgba(0, 0, 0, 0.34) 0 20px 54px;
 }
 
 .signal::before,
@@ -179,19 +204,12 @@
 }
 
 .signal:hover {
-  border-color: rgba(49, 38, 59, 0.28);
+  border-color: var(--project-card-hover-border);
   background:
-    radial-gradient(rgba(1, 1, 27, 0.055) 0.75px, transparent 0.75px),
-    rgba(236, 237, 242, 0.48);
+    radial-gradient(var(--project-card-hover-dot) 0.75px, transparent 0.75px),
+    var(--project-card-hover-bg);
   background-size: 6px 6px, auto;
   transform: translateY(-2px);
-}
-
-:global(:root[data-theme="dark"]) .signal:hover {
-  border-color: rgba(248, 244, 255, 0.28);
-  background:
-    radial-gradient(rgba(248, 244, 255, 0.075) 0.75px, transparent 0.75px),
-    rgba(32, 27, 42, 0.98);
 }
 
 .signal > strong {
@@ -207,7 +225,7 @@
 }
 
 .signal__stats div {
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid var(--border-soft);
   padding-top: var(--space-3);
 }
 
@@ -238,20 +256,9 @@
   flex-wrap: wrap;
   gap: var(--space-2);
   align-items: center;
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid var(--border-soft);
   border-bottom: 1px solid rgba(49, 38, 59, 0.14);
   padding-block: var(--space-3);
-}
-
-:global(:root[data-theme="dark"]) .filters {
-  --project-filter-border: rgba(255, 255, 255, 0.12);
-  --project-filter-bg: rgba(255, 255, 255, 0.055);
-  --project-filter-color: var(--color-heading);
-  --project-filter-hover-border: rgba(255, 255, 255, 0.22);
-  --project-filter-hover-bg: rgba(255, 255, 255, 0.1);
-  --project-filter-active-border: rgba(255, 125, 170, 0.7);
-  --project-filter-active-bg: rgba(255, 77, 136, 0.16);
-  --project-filter-active-color: var(--color-heading);
 }
 
 .filters__link {
@@ -313,10 +320,10 @@
 }
 
 .card:hover {
-  border-color: rgba(49, 38, 59, 0.32);
+  border-color: var(--project-card-hover-border);
   box-shadow:
-    rgba(255, 255, 255, 0.82) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.12) 0 34px 84px;
+    var(--project-card-hover-inset) 0 1px 0 inset,
+    var(--project-card-hover-shadow);
   transform: translateY(-3px);
 }
 
@@ -371,7 +378,7 @@
   width: fit-content;
   align-items: center;
   gap: var(--space-1);
-  border: 1px solid rgba(49, 38, 59, 0.16);
+  border: 1px solid var(--border-soft);
   background: var(--color-surface-muted);
   padding: var(--space-1) var(--space-2);
 }
@@ -398,7 +405,7 @@
 .card__client {
   display: grid;
   gap: var(--space-1);
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid var(--border-soft);
   background: var(--color-surface-muted);
   padding: var(--space-3) var(--space-0) var(--space-0);
 }
@@ -430,7 +437,7 @@
 .meta span {
   max-width: 100%;
   overflow-wrap: anywhere;
-  border: 1px solid rgba(49, 38, 59, 0.16);
+  border: 1px solid var(--border-soft);
   background: var(--color-surface-muted);
   color: var(--color-ink-violet);
   font-weight: 700;
@@ -448,7 +455,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-2);
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid var(--border-soft);
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
   font-size: var(--text-ui);
@@ -463,7 +470,7 @@
 }
 
 .card__unavailable {
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid var(--border-soft);
   color: var(--color-ash-lavender);
   font-family: var(--font-code);
   font-size: var(--text-xs);

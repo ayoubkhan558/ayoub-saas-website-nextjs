@@ -16,14 +16,19 @@
 }
 
 .testimonials__client-picker {
+  --picker-grain: rgba(49, 38, 59, 0.045);
+  --picker-bg: var(--color-surface-muted);
+  --testimonial-logo-filter: grayscale(1) contrast(1.18);
+  --testimonial-logo-opacity: 0.82;
+
   position: relative;
   display: grid;
   align-content: start;
   gap: var(--space-5);
   border: 1px solid var(--color-fog-border);
   background:
-    radial-gradient(rgba(49, 38, 59, 0.045) 1px, transparent 1px) 0 0 / 7px 7px,
-    var(--color-surface-muted);
+    radial-gradient(var(--picker-grain) 1px, transparent 1px) 0 0 / 7px 7px,
+    var(--picker-bg);
   padding: var(--space-5);
 
   @media (min-width: 980px) {
@@ -31,10 +36,19 @@
   }
 }
 
-:global(:root[data-theme="dark"]) .testimonials__client-picker {
-  background:
-    radial-gradient(rgba(248, 244, 255, 0.055) 1px, transparent 1px) 0 0 / 7px 7px,
-    rgba(21, 18, 29, 0.86);
+:global(:root[data-theme="dark"]) {
+  .testimonials__client-picker {
+    --picker-grain: rgba(248, 244, 255, 0.055);
+    --picker-bg: rgba(21, 18, 29, 0.86);
+    --testimonial-logo-filter: grayscale(1) invert(1) contrast(1.02) brightness(1.05);
+    --testimonial-logo-opacity: 0.78;
+  }
+
+  .testimonials__quote-card {
+    --quote-glow: rgba(248, 244, 255, 0.08);
+    --quote-bg: rgba(21, 18, 29, 0.92);
+    --testimonial-quote-logo-filter: grayscale(1) invert(1) contrast(1.02) brightness(1.05);
+  }
 }
 
 .testimonials__client-grid {
@@ -96,17 +110,10 @@
   height: auto;
   max-width: 100%;
   max-height: 44px;
-  filter: grayscale(1) contrast(1.18);
+  filter: var(--testimonial-logo-filter);
   object-fit: contain;
-  opacity: 0.82;
+  opacity: var(--testimonial-logo-opacity);
   transition: opacity 160ms ease, filter 160ms ease;
-}
-
-// Dark monochrome logo artwork disappears on dark tiles; invert it so the
-// marks read as light trust marks instead of near-black on near-black.
-:global(:root[data-theme="dark"]) .testimonials__logo-fallback img {
-  filter: grayscale(1) invert(1) contrast(1.02) brightness(1.05);
-  opacity: 0.78;
 }
 
 .testimonials__client-button:hover .testimonials__logo-fallback img,
@@ -173,6 +180,9 @@
 }
 
 .testimonials__quote-card {
+  --testimonial-quote-logo-filter: grayscale(1) contrast(1.24);
+  --quote-glow: rgba(236, 237, 242, 0.72);
+  --quote-bg: var(--color-surface-raised);
   position: relative;
   display: grid;
   min-height: 390px;
@@ -182,16 +192,10 @@
   border: 1px solid var(--color-fog-border);
   border-radius: var(--radius-cards);
   background:
-    radial-gradient(circle at 18% 0%, rgba(236, 237, 242, 0.72), transparent 20rem),
-    var(--color-surface-raised);
+    radial-gradient(circle at 18% 0%, var(--quote-glow), transparent 20rem),
+    var(--quote-bg);
   box-shadow: var(--shadow-product-light);
   padding: var(--space-7);
-}
-
-:global(:root[data-theme="dark"]) .testimonials__quote-card {
-  background:
-    radial-gradient(circle at 18% 0%, rgba(248, 244, 255, 0.08), transparent 20rem),
-    rgba(21, 18, 29, 0.92);
 }
 
 .testimonials__quote-logo {
@@ -206,12 +210,8 @@
   height: auto;
   max-width: 72px;
   max-height: 42px;
-  filter: grayscale(1) contrast(1.24);
+  filter: var(--testimonial-quote-logo-filter);
   object-fit: contain;
-}
-
-:global(:root[data-theme="dark"]) .testimonials__quote-logo img {
-  filter: grayscale(1) invert(1) contrast(1.02) brightness(1.05);
 }
 
 .testimonials__quote {
