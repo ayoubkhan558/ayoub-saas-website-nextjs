@@ -117,8 +117,8 @@ const toolboxIconRows = [
 
 const companyLogos: Record<string, string> = {
   Xgrid: "/comapnies/xgrid-logo.svg",
-  Epicsols: "/comapnies/epicsols-logo.jpg",
-  "Hawk ITs & Consultancy Provider": "/comapnies/hawk-it-logo.jpg",
+  Epicsols: "/comapnies/epicsols-logo.png",
+  "Hawk ITs & Consultancy Provider": "/comapnies/hawk-it-logo.png",
   "AWSOL Web Technologies": "/comapnies/awsol-logo.png",
 };
 

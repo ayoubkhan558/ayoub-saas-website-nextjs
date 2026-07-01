@@ -25,6 +25,9 @@
   --about-grid-line: rgba(49, 38, 59, 0.07);
   --about-feature-gradient: linear-gradient(180deg, var(--color-surface-raised), var(--color-bone-mist));
   --about-icon-shadow: rgba(49, 38, 59, 0.05) 0 14px 30px;
+  --about-logo-plate-bg: #ffffff;
+  --about-logo-plate-border: rgba(49, 38, 59, 0.12);
+  --about-logo-plate-shadow: rgba(49, 38, 59, 0.08) 0 1px 2px;
 }
 
 :global(:root[data-theme="dark"]) .about-page {
@@ -49,6 +52,10 @@
   --about-grid-line: rgba(248, 244, 255, 0.08);
   --about-feature-gradient: linear-gradient(180deg, var(--color-surface-raised), var(--color-surface-muted));
   --about-icon-shadow: rgba(0, 0, 0, 0.28) 0 14px 30px;
+  /* Brand logos are dark-on-transparent; keep them on a soft light plate so they stay legible in dark mode. */
+  --about-logo-plate-bg: #f1eff6;
+  --about-logo-plate-border: rgba(248, 244, 255, 0.16);
+  --about-logo-plate-shadow: rgba(0, 0, 0, 0.34) 0 2px 10px;
 }
 
 .about-page-hero :global(.section__inner) {
@@ -752,18 +759,21 @@
 
 .about-page-experience-item__logo {
   display: grid;
-  width: 110px;
-  height: 72px;
+  width: 132px;
+  height: 76px;
   flex: 0 0 auto;
   place-items: center;
-  border: 1px solid var(--about-border-faint);
-  background: var(--about-card-muted);
-  padding: var(--space-2);
+  border: 1px solid var(--about-logo-plate-border);
+  background: var(--about-logo-plate-bg);
+  padding: 0.75rem 0.9rem;
+  box-shadow: var(--about-logo-plate-shadow);
 }
 
 .about-page-experience-item__logo img {
   display: block;
-  width: 100%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
