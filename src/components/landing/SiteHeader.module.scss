@@ -41,9 +41,10 @@
   box-shadow: var(--header-glass-shadow);
   backdrop-filter: blur(18px) saturate(1.08);
   transition:
-    background-color 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease;
+    background-color 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease,
+    backdrop-filter 240ms ease;
 }
 
 :global(:root[data-theme="dark"]) .site-header {
@@ -79,12 +80,23 @@
   --header-glass-bg: color-mix(in srgb, var(--color-surface-chrome) 72%, transparent);
   --header-glass-border: color-mix(in srgb, var(--color-fog-border) 82%, transparent);
   --header-glass-shadow: rgba(1, 1, 27, 0.12) 0 16px 42px;
-  --header-nav-height: 52px;
-  --header-nav-padding-block: 4px;
-  --header-logo-width: min(142px, 38vw);
-  --header-action-size: 34px;
+  --header-nav-height: 46px;
+  --header-nav-padding-block: 3px;
+  --header-logo-width: min(128px, 36vw);
+  --header-action-size: 32px;
   --header-announcement-height: 0px;
   --header-announcement-opacity: 0;
+  animation: site-header-stick-in 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes site-header-stick-in {
+  from {
+    transform: translateY(-8px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 .site-header__announcement {
@@ -95,9 +107,9 @@
   opacity: var(--header-announcement-opacity);
   pointer-events: var(--header-announcement-pointer, auto);
   transition:
-    max-height 180ms ease,
-    opacity 140ms ease,
-    border-color 180ms ease;
+    max-height 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 180ms ease,
+    border-color 240ms ease;
 }
 
 .site-header--scrolled .site-header__announcement {
@@ -153,8 +165,8 @@
   padding-inline: var(--space-5);
   padding-block: var(--header-nav-padding-block);
   transition:
-    min-height 180ms ease,
-    padding 180ms ease;
+    min-height 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    padding 240ms cubic-bezier(0.22, 1, 0.36, 1);
 
   @media (min-width: 860px) {
     grid-template-columns: auto 1fr auto;
@@ -167,7 +179,7 @@
   align-items: center;
   width: var(--header-logo-width);
   line-height: 1;
-  transition: width 180ms ease;
+  transition: width 240ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .site-header__nav-brand img {
