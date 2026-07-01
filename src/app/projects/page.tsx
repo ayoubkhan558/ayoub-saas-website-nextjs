@@ -7,6 +7,7 @@ import {
   normalizeProjectFilter,
   projectArchiveItems,
   projectMatchesFilter,
+  sortProjectsByLiveStatus,
 } from "@/data/projectsArchive";
 import { buildProjectsSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
@@ -41,7 +42,9 @@ export default async function ProjectsPage({
   const params = await searchParams;
   const currentPage = getPageNumber(params.page);
   const activeFilter = normalizeProjectFilter(params.filter);
-  const filteredProjects = projectArchiveItems.filter((project) => projectMatchesFilter(project, activeFilter));
+  const filteredProjects = sortProjectsByLiveStatus(
+    projectArchiveItems.filter((project) => projectMatchesFilter(project, activeFilter)),
+  );
   const projectCount = projectArchiveItems.length;
   const liveCount = projectArchiveItems.filter((project) => project.projectStatus === "Live").length;
   const screenshotCount = projectArchiveItems.filter((project) => Boolean(project.screenshot)).length;

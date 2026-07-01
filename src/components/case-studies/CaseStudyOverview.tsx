@@ -19,6 +19,7 @@ type DetailRow = {
 export function CaseStudyOverview({ study }: { study: CaseStudyDetailData }) {
   const pageSpeed = study.pageSpeed?.desktop;
   const detailRows: DetailRow[] = [
+    { label: "Case type", value: study.caseType },
     ...study.facts,
     { label: "Timeline", value: study.timeline },
     { label: "Live site", value: study.urlLabel, href: study.liveUrl },

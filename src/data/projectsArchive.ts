@@ -135,6 +135,37 @@ export function projectMatchesFilter(project: ProjectArchiveItem, filter: Projec
   return true;
 }
 
+export function sortProjectsByLiveStatus(projects: ProjectArchiveItem[]) {
+  return [...projects].sort((a, b) => {
+    const aRank = getProjectAvailabilityRank(a);
+    const bRank = getProjectAvailabilityRank(b);
+
+    if (aRank === bRank) {
+      return 0;
+    }
+
+    return aRank - bRank;
+  });
+}
+
+function getProjectAvailabilityRank(project: ProjectArchiveItem) {
+  const href = normalizeHttpLink(project.websiteUrl);
+
+  if (href && verifiedLinks.has(href)) {
+    return 0;
+  }
+
+  if (project.screenshot && project.projectStatus === "Live") {
+    return 1;
+  }
+
+  if (project.projectStatus === "Live") {
+    return 2;
+  }
+
+  return 3;
+}
+
 export function getProjectLinks(project: ProjectArchiveItem) {
   const links = [
     { href: normalizeHttpLink(project.websiteUrl), label: "Open website", kind: "website" as const },

@@ -1,4 +1,4 @@
-import caseStudiesJson from "./caseStudies.json";
+import { caseStudyDetails } from "./caseStudyDetails";
 import projectsJson from "./projects.json";
 
 export type CaseStudyCard = {
@@ -15,6 +15,10 @@ export type CaseStudyCard = {
   imageAlt: string;
 };
 
+export const caseStudies = Object.values(caseStudyDetails).map(
+  (study) => study.listing,
+) as CaseStudyCard[];
+
 export type ProjectCard = {
   icon: string;
   title: string;
@@ -30,5 +34,4 @@ export type ProjectCard = {
   imageAlt: string;
 };
 
-export const caseStudies = caseStudiesJson as CaseStudyCard[];
 export const projects = projectsJson as ProjectCard[];

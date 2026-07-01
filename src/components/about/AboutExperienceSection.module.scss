@@ -1,3 +1,28 @@
+.about-page-experience-section :global(.section__inner) {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page-experience-section :global(.section__inner)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, var(--about-experience-grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--about-experience-grid-line) 1px, transparent 1px);
+  background-size: 20px 20px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%);
+  opacity: var(--about-experience-grid-opacity);
+  pointer-events: none;
+}
+
+.about-page-experience-section :global(.section__inner)>* {
+  position: relative;
+  z-index: 1;
+}
+
 .about-page-section-header {
   display: grid;
   gap: var(--space-4);
@@ -103,7 +128,7 @@
   color: var(--color-ink-violet);
   font-family: var(--font-code);
   font-size: var(--text-xs);
-  line-height: 1.2;
+  
   text-transform: uppercase;
 }
 

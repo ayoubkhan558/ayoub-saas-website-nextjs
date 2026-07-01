@@ -5,6 +5,42 @@
     "urlLabel": "paganolaw.net",
     "liveUrl": "https://paganolaw.net",
     "timeline": "4 weeks",
+    "caseType": "redesign",
+    "listing": {
+      "tag": "CASE_01",
+      "icon": "scale",
+      "title": "Pagano Law",
+      "description": "Complete law firm website redesign and rebuild from Divi to Bricks Builder with dynamic ACF templates, performance improvements, and infrastructure optimization.",
+      "result": "Faster website, reusable CMS, and simplified long-term management",
+      "achievement": "Saved the client approximately $1,000 annually by consolidating hosting, domains, and email services",
+      "stack": [
+        "Bricks",
+        "WordPress",
+        "ACF"
+      ],
+      "href": "/case-studies/pagano-law",
+      "liveUrl": "https://paganolaw.net",
+      "image": "/case-study/paganolaw-thumbnail.jpg",
+      "imageAlt": "Screenshot preview of the Pagano Law website"
+    },
+    "homepageShowcase": {
+      "label": "Homepage comparison",
+      "title": "Old Divi homepage and new Bricks rebuild",
+      "text": "A side-by-side desktop view of the original Divi homepage and the rebuilt Bricks Builder experience.",
+      "items": [
+        {
+          "label": "Old Divi homepage",
+          "image": "/case-study/paganolaw-old.jpg",
+          "caption": "Before redesign"
+        },
+        {
+          "label": "New Bricks homepage",
+          "image": "/case-study/paganolaw-new.jpg",
+          "caption": "After rebuild"
+        }
+      ]
+    },
+    "heroMockup": "/case-study/paganolaw-mocup.png",
     "eyebrow": "Case study / Pagano Law",
     "headline": "A complete law firm website rebuild with Bricks Builder, better performance, and lower operating costs.",
     "tagline": "Redesigned from Divi, rebuilt from scratch in Bricks Builder, and simplified the client's entire website infrastructure.",
@@ -65,7 +101,12 @@
       "text": "The visual identity combines elegant serif typography with a clean sans-serif interface to establish trust, readability, and professionalism throughout the website.",
       "logoMark": "PL",
       "logoImage": "/client/paganolaw-logo.png",
+      "clientImage": "/client/paganolaw-gregory-j-agano-client.jpg",
       "fontName": "Libre Baskerville + Inter",
+      "fontFamilies": [
+        "Libre Baskerville",
+        "Inter"
+      ],
       "fontMeta": "Libre Baskerville is used for headings to reinforce authority, while Inter provides clean, readable body text and interface elements.",
       "palette": [
         {
@@ -131,580 +172,514 @@
       "measuredAt": "2026-06-29",
       "mobile": {
         "performance": 55,
-        "fcp": "7.3 s",
-        "lcp": "11.6 s",
+        "fcp": "7.3 s",
+        "lcp": "11.6 s",
         "cls": "0.054",
-        "tbt": "90 ms",
-        "speedIndex": "10.2 s"
+        "tbt": "90 ms",
+        "speedIndex": "10.2 s"
       },
       "desktop": {
         "performance": 79,
-        "fcp": "1.4 s",
-        "lcp": "2.3 s",
+        "fcp": "1.4 s",
+        "lcp": "2.3 s",
         "cls": "0.03",
-        "tbt": "50 ms",
-        "speedIndex": "2.5 s"
+        "tbt": "50 ms",
+        "speedIndex": "2.5 s"
       }
     }
   },
-  "5gstore": {
-    "slug": "5gstore",
-    "client": "5gStore",
-    "urlLabel": "5gstore.pk",
-    "liveUrl": "https://5gstore.pk",
-    "timeline": "3 weeks",
-    "eyebrow": "Case study / 5gStore",
-    "headline": "A WooCommerce storefront structured for easier shopping and management.",
-    "tagline": "Cleaner product discovery, faster updates, and a checkout path built around intent.",
-    "overview": "5gStore needed a WooCommerce site that presented products clearly, reduced friction in the shopping flow, and gave the store team a manageable Elementor and WordPress setup.",
-    "facts": [
-      {
-        "label": "Industry",
-        "value": "E-commerce and connectivity products"
-      },
-      {
-        "label": "Objective",
-        "value": "Improve product pages, shopping flow, and CMS editing"
-      },
-      {
-        "label": "Project type",
-        "value": "WooCommerce customization and Elementor implementation"
-      }
-    ],
-    "challenges": [
-      {
-        "title": "Dense product information",
-        "text": "Product content needed to be easier to scan while still giving buyers enough detail to make a decision."
-      },
-      {
-        "title": "Checkout friction",
-        "text": "The storefront needed clearer paths from browsing to cart actions without burying important buying cues."
-      },
-      {
-        "title": "Store-team editing",
-        "text": "The client needed reusable CMS sections so product and page updates could happen without rebuilding layouts."
-      }
-    ],
-    "results": [
-      {
-        "title": "Cleaner buying flow",
-        "text": "Product, category, and checkout sections were organized around quick comparison and clearer next actions."
-      },
-      {
-        "title": "Monthly inquiries improved",
-        "text": "The storefront structure made product discovery and contact paths easier for ready-to-buy visitors."
-      },
-      {
-        "title": "Editable WooCommerce foundation",
-        "text": "Elementor and WordPress patterns gave the team a more practical way to maintain pages after launch."
-      }
-    ],
-    "tools": [
-      "woocommerce",
-      "elementor",
-      "wordpress",
-      "performance-qa"
-    ],
-    "performanceNote": "The build focused on lighter page structure, mobile-first product sections, and checkout-oriented UX so the store stayed usable across common buyer devices.",
-    "branding": {
-      "title": "A storefront style that puts products first.",
-      "text": "The visual system keeps the interface clean and commercial, with readable product typography, neutral surfaces, and concise action areas for shopping intent.",
-      "logoMark": "5G",
-      "logoImage": "/client/logo-5g-store.png",
-      "fontName": "System sans",
-      "fontMeta": "Readable storefront typography tuned for product names, prices, specs, and checkout copy.",
-      "palette": [
+  "weinberger-aesthetics": {
+    "slug": "weinberger-aesthetics",
+    "client": "Weinberger Aesthetics",
+    "urlLabel": "weinberger-aesthetics.de",
+    "liveUrl": "https://www.weinberger-aesthetics.de/",
+    "timeline": "4 weeks",
+    "caseType": "rebuild",
+    "listing": {
+      "tag": "CASE_02",
+      "icon": "sparkles",
+      "title": "Weinberger Aesthetics",
+      "description": "Premium aesthetic surgery clinic website converted from Figma into a custom Bricks Builder build with dynamic WordPress content and a clean CMS structure.",
+      "result": "Modern clinic website with flexible CMS and polished responsive layouts",
+      "achievement": "Converted a full Figma design into a client-manageable Bricks Builder website",
+      "stack": [
+        "Bricks",
+        "WordPress",
+        "ACF"
+      ],
+      "href": "/case-studies/weinberger-aesthetics",
+      "liveUrl": "https://www.weinberger-aesthetics.de/",
+      "image": "/case-study/weinberger-thumbnail.jpg",
+      "imageAlt": "Screenshot preview of the Weinberger Aesthetics clinic website"
+    },
+    "homepageShowcase": {
+      "label": "Homepage comparison",
+      "title": "Old custom homepage and new Bricks build",
+      "text": "A side-by-side desktop view of the previous custom WordPress homepage and the new Bricks Builder implementation.",
+      "items": [
         {
-          "label": "Ink",
-          "tone": "dark"
+          "label": "Old custom WordPress homepage",
+          "image": "/case-study/weinberger-old.jpg",
+          "caption": "Before rebuild"
         },
         {
-          "label": "Steel",
-          "tone": "gray"
-        },
-        {
-          "label": "White",
-          "tone": "light"
-        },
-        {
-          "label": "Line",
-          "tone": "accent"
+          "label": "New Bricks homepage",
+          "image": "/case-study/weinberger-new.jpg",
+          "caption": "After rebuild"
         }
       ]
     },
-    "desktopPages": [
-      {
-        "name": "Storefront",
-        "type": "Featured products and conversion routes"
-      },
-      {
-        "name": "Category",
-        "type": "Product browsing and comparison"
-      },
-      {
-        "name": "Product",
-        "type": "Specs, trust cues, and cart action"
-      }
-    ],
-    "responsiveBenefits": [
-      "Product sections stay readable on mobile screens.",
-      "Cart and inquiry actions remain visible in the shopping flow.",
-      "Reusable CMS sections make store updates easier after launch."
-    ],
-    "testimonial": {
-      "quote": "The store became easier to manage and the product pages feel much clearer for customers.",
-      "author": "5gStore",
-      "meta": "WooCommerce storefront improvements"
-    },
-    "cta": {
-      "heading": "Like what you see? Let's make it happen for you.",
-      "text": "Send the project details and I will map the build, stack, and estimate.",
-      "buttonText": "Get a build estimate"
-    },
-    "pageSpeed": {
-      "source": "Google PageSpeed Insights",
-      "testedUrl": "https://5gstore.pk",
-      "measuredAt": "2026-06-29",
-      "mobile": {
-        "performance": 83,
-        "fcp": "1.6 s",
-        "lcp": "4.1 s",
-        "cls": "0",
-        "tbt": "160 ms",
-        "speedIndex": "3.8 s"
-      },
-      "desktop": {
-        "performance": 95,
-        "fcp": "0.4 s",
-        "lcp": "1.2 s",
-        "cls": "0",
-        "tbt": "40 ms",
-        "speedIndex": "1.7 s"
-      }
-    }
-  },
-  "pin-auto": {
-    "slug": "pin-auto",
-    "client": "PinAuto",
-    "urlLabel": "pin-auto.com",
-    "liveUrl": "https://pin-auto.com",
-    "timeline": "3 weeks",
-    "eyebrow": "Case study / PinAuto",
-    "headline": "A product website for a Pinterest automation service.",
-    "tagline": "Clear positioning, practical feature education, and a faster path from interest to inquiry.",
-    "overview": "PinAuto needed a website that could explain a Pinterest automation product without making the visitor work too hard. The build focused on product positioning, integration-focused sections, clearer feature hierarchy, and a WordPress editing structure the team could keep updating.",
+    "heroMockup": "/case-study/weinberger-mocup.png",
+    "eyebrow": "Case study / Weinberger Aesthetics",
+    "headline": "A premium clinic website rebuilt in Bricks Builder from a custom Figma design.",
+    "tagline": "Converted from Figma into a refined Bricks Builder website for a plastic, aesthetic, and hand surgery clinic in Kassel.",
+    "overview": "Weinberger Aesthetics had an existing custom WordPress website that needed to be replaced with a more refined, modern, and easier-to-manage experience. The new design was provided in Figma and converted into a responsive Bricks Builder website with dynamic WordPress sections, reusable layouts, and a cleaner CMS structure. The result is a polished clinic website that presents treatments clearly, supports patient trust, and gives the team a more practical way to manage content.",
     "facts": [
       {
         "label": "Industry",
-        "value": "Marketing automation and Pinterest workflows"
+        "value": "Plastic, aesthetic, and hand surgery clinic"
       },
       {
         "label": "Objective",
-        "value": "Explain the product, clarify use cases, and improve inquiry paths"
+        "value": "Convert Figma design into a responsive Bricks Builder website with flexible content management"
       },
       {
         "label": "Project type",
-        "value": "WordPress product website with Bricks Builder implementation"
+        "value": "Custom WordPress rebuild and Figma to Bricks Builder development"
       }
     ],
     "challenges": [
       {
-        "title": "Complex product explanation",
-        "text": "The automation workflow needed to be explained clearly for users who may not already understand Pinterest scheduling or API-based posting."
+        "title": "Old custom WordPress setup",
+        "text": "The previous website was built on a custom WordPress setup that needed a more modern, editable, and scalable structure."
       },
       {
-        "title": "Weak signup path",
-        "text": "Visitors needed a more direct path from understanding the offer to taking the next inquiry or signup action."
+        "title": "Detailed treatment content",
+        "text": "The clinic offers a wide range of surgical and non-surgical treatments, so the content needed to be organized clearly without overwhelming visitors."
       },
       {
-        "title": "Feature hierarchy",
-        "text": "Important benefits, workflow details, and integration points needed a tighter structure so the page did not feel like a long feature dump."
-      },
-      {
-        "title": "Editable product pages",
-        "text": "The site needed reusable WordPress sections so product messaging could evolve without rebuilding every block."
+        "title": "Premium medical presentation",
+        "text": "The website needed to feel elegant, professional, discreet, and trustworthy while still staying easy to read across all devices."
       }
     ],
     "results": [
       {
-        "title": "Clearer product story",
-        "text": "The content structure now introduces the problem, workflow, benefit, and next action in a more logical order."
+        "title": "Figma to Bricks implementation",
+        "text": "The supplied Figma design was converted into a responsive Bricks Builder website with accurate layouts, spacing, typography, and visual structure."
       },
       {
-        "title": "Improved inquiry path",
-        "text": "Primary actions and contact routes were positioned around product interest instead of buried below general information."
+        "title": "Cleaner treatment structure",
+        "text": "Treatment pages and clinic content were organized to make services easier to explore, from aesthetic procedures to hand surgery and medical cosmetic treatments."
       },
       {
-        "title": "Reusable page system",
-        "text": "Bricks Builder sections gave the team a practical system for updating product copy, sections, and supporting pages."
-      },
-      {
-        "title": "Faster production workflow",
-        "text": "The build reused structured builder patterns to reduce manual layout work and keep future edits consistent."
+        "title": "Editable WordPress foundation",
+        "text": "ACF-powered content areas, reusable Bricks sections, and a cleaner plugin stack made the site easier to update and maintain after launch."
       }
     ],
     "tools": [
-      "wordpress",
       "bricks-builder",
-      "pinterest-api",
-      "performance-qa"
+      "advanced-custom-fields",
+      "seopress",
+      "fluent-smtp",
+      "happyfiles-pro",
+      "wordpress"
     ],
-    "performanceNote": "The implementation focused on lean page sections, reusable builder components, and mobile-first product messaging so the page stayed clear and fast while explaining a technical automation workflow.",
+    "performanceNote": "The build focused on translating the Figma design into a lightweight Bricks Builder structure with reusable sections, clean responsive layouts, organized media, reliable email delivery, and SEO-ready WordPress foundations.",
     "branding": {
-      "title": "A product-led website system for automation buyers.",
-      "text": "The visual direction keeps the product story clean and practical: strong contrast, direct feature blocks, readable content sections, and action areas that support signup or inquiry intent.",
-      "logoMark": "PA",
-      "logoImage": "https://www.google.com/s2/favicons?domain=pin-auto.com&sz=128",
-      "fontName": "Modern sans",
-      "fontMeta": "Readable product typography tuned for feature explanations, workflow copy, and conversion sections.",
+      "title": "A calm, premium visual system for a modern aesthetic clinic.",
+      "text": "The visual direction uses deep green, soft neutrals, and clean typography to create a discreet, professional, and patient-focused experience.",
+      "logoMark": "WA",
+      "logoImage": "/client/weinberger-aesthetics-logo.svg",
+      "fontName": "Source Sans Pro",
+      "fontFamilies": [
+        "Source Sans Pro"
+      ],
+      "fontMeta": "Source Sans Pro is used across the website for clean readability, polished interface text, and a modern medical aesthetic.",
       "palette": [
         {
-          "label": "Product ink",
-          "tone": "dark"
+          "label": "Primary",
+          "value": "hsl(163 100% 13%)"
         },
         {
-          "label": "Interface gray",
-          "tone": "gray"
+          "label": "Secondary",
+          "value": "hsl(34, 2%, 55%)"
         },
         {
-          "label": "Clean white",
-          "tone": "light"
+          "label": "Accent",
+          "value": "hsl(0, 0%, 88%)"
         },
         {
-          "label": "Pinterest signal",
-          "tone": "accent"
+          "label": "Background",
+          "value": "#F2F3F4"
         }
       ]
     },
     "desktopPages": [
       {
         "name": "Home",
-        "type": "Product positioning, value proposition, and action route"
+        "type": "Clinic overview and patient trust"
+      },
+      {
+        "name": "Treatments",
+        "type": "Surgical and non-surgical service structure"
+      },
+      {
+        "name": "Treatment Detail",
+        "type": "Procedure information and consultation-focused content"
+      },
+      {
+        "name": "About",
+        "type": "Doctor profile, clinic values, and professional trust"
+      },
+      {
+        "name": "Contact",
+        "type": "Appointment and inquiry-focused page"
+      }
+    ],
+    "responsiveBenefits": [
+      "Figma layouts were carefully adapted for desktop, tablet, and mobile screens.",
+      "Treatment content stays readable and structured on smaller devices.",
+      "Reusable Bricks sections make future page updates easier.",
+      "ACF fields support cleaner content management for clinic and treatment information.",
+      "The refined visual system creates a consistent premium experience across the site."
+    ],
+    "testimonial": {
+      "quote": "The new website feels premium, structured, and much easier to manage while presenting our clinic and treatments in a professional way.",
+      "author": "Weinberger Aesthetics",
+      "meta": "Figma to Bricks Builder clinic website"
+    },
+    "cta": {
+      "heading": "Need a premium clinic website built from Figma?",
+      "text": "I can convert your design into a responsive, fast, and easy-to-manage WordPress website using Bricks Builder and a clean CMS structure.",
+      "buttonText": "Start Your Project"
+    }
+  },
+  "studyly": {
+    "slug": "studyly",
+    "client": "Studyly",
+    "urlLabel": "studyly.com/at",
+    "liveUrl": "https://studyly.com/at",
+    "timeline": "2 weeks",
+    "caseType": "first-time design-to-code build",
+    "listing": {
+      "tag": "CASE_04",
+      "icon": "graduation-cap",
+      "title": "Studyly",
+      "description": "Pixel-perfect Figma to HTML implementation for an AI-powered mathematics learning platform using Tailwind CSS and modern frontend libraries.",
+      "result": "Responsive landing pages with smooth animations and excellent visual fidelity",
+      "achievement": "Converted complex Figma designs into production-ready frontend components",
+      "stack": [
+        "HTML",
+        "Tailwind",
+        "JavaScript"
+      ],
+      "href": "/case-studies/studyly",
+      "liveUrl": "https://studyly.com/at",
+      "image": "/case-study/studyly-thumbnail.jpg",
+      "imageAlt": "Screenshot preview of the Studyly website"
+    },
+    "heroMockup": "/case-study/studyly-mockup.png",
+    "homepageShowcase": {
+      "label": "Delivered homepage",
+      "title": "New Studyly desktop homepage",
+      "text": "A full desktop view of the first-build homepage delivered from the supplied Figma design.",
+      "items": [
+        {
+          "label": "New Studyly homepage",
+          "image": "/case-study/studyly-home.jpg",
+          "caption": "First-time frontend build"
+        }
+      ]
+    },
+    "eyebrow": "Case study / Studyly",
+    "headline": "A pixel-perfect Figma-to-code implementation for an AI-powered education platform.",
+    "tagline": "Modern frontend development with responsive layouts, interactive animations, and production-ready HTML components.",
+    "overview": "Studyly is an AI-powered mathematics learning platform used by more than 800 schools. The project involved converting detailed Figma designs into responsive HTML, Tailwind CSS, and JavaScript while maintaining visual accuracy, smooth interactions, and excellent performance across devices.",
+    "facts": [
+      {
+        "label": "Industry",
+        "value": "EdTech"
+      },
+      {
+        "label": "Objective",
+        "value": "Convert Figma designs into responsive production-ready frontend"
+      },
+      {
+        "label": "Project type",
+        "value": "Figma to HTML, Tailwind CSS, and JavaScript"
+      }
+    ],
+    "challenges": [
+      {
+        "title": "Pixel-perfect implementation",
+        "text": "Every section needed to match the supplied Figma design precisely while remaining fully responsive across all screen sizes."
+      },
+      {
+        "title": "Interactive user experience",
+        "text": "Animations, sliders, media components, and scroll effects had to feel smooth without affecting page performance."
+      },
+      {
+        "title": "Scalable frontend architecture",
+        "text": "The codebase needed reusable components, clean utility classes, and an organized structure for future development."
+      }
+    ],
+    "results": [
+      {
+        "title": "Accurate Figma implementation",
+        "text": "Every layout, spacing, typography, and component was translated into responsive HTML with high visual accuracy."
+      },
+      {
+        "title": "Modern interactive experience",
+        "text": "GSAP animations, Swiper sliders, media playback, and scroll interactions created a polished user experience."
+      },
+      {
+        "title": "Clean developer-friendly code",
+        "text": "The frontend was built with reusable Tailwind utilities and maintainable JavaScript for easy future expansion."
+      }
+    ],
+    "tools": [
+      "html",
+      "css",
+      "javascript",
+      "tailwind",
+      "gsap",
+      "swiperjs",
+      "plyr",
+      "scrollreveal",
+      "jquery"
+    ],
+    "performanceNote": "The frontend focused on lightweight responsive layouts, optimized assets, reusable Tailwind components, and hardware-accelerated animations to deliver a smooth browsing experience.",
+    "branding": {
+      "title": "Modern educational design with approachable technology.",
+      "text": "The interface combines clean typography, spacious layouts, and vibrant blue accents to create a trustworthy and engaging learning experience.",
+      "logoMark": "ST",
+      "logoImage": "/client/studyly-logo.svg",
+      "fontName": "Poppins",
+      "fontFamilies": [
+        "Poppins"
+      ],
+      "fontMeta": "Poppins provides clean geometric typography that improves readability while reinforcing the platform's modern educational identity.",
+      "palette": [
+        {
+          "label": "Primary",
+          "value": "#3481B4"
+        },
+        {
+          "label": "Background",
+          "value": "#E9F1F7"
+        },
+        {
+          "label": "Dark",
+          "value": "#0C2435"
+        },
+        {
+          "label": "Accent",
+          "value": "#E5A346"
+        }
+      ]
+    },
+    "desktopPages": [
+      {
+        "name": "Landing Page",
+        "type": "Product overview and feature highlights"
       },
       {
         "name": "Features",
-        "type": "Automation workflow and benefit sections"
+        "type": "Interactive platform capabilities"
+      },
+      {
+        "name": "Schools",
+        "type": "Education-focused marketing sections"
+      },
+      {
+        "name": "Pricing",
+        "type": "Subscription and platform information"
       },
       {
         "name": "Contact",
-        "type": "Inquiry path and product-fit messaging"
+        "type": "Lead generation and inquiries"
       }
     ],
     "responsiveBenefits": [
-      "Feature explanations stay readable on mobile without long text blocks.",
-      "Primary actions remain easy to find across smaller screens.",
-      "Reusable WordPress sections keep future product-page edits consistent."
+      "Pixel-perfect layouts across desktop, tablet, and mobile.",
+      "Smooth GSAP and scroll-based animations.",
+      "Reusable Tailwind components simplify future development.",
+      "Optimized media playback using Plyr.",
+      "Interactive sliders enhance content presentation."
     ],
     "testimonial": {
-      "quote": "The site made the product easier to understand and gave us a cleaner path for interested users to take action.",
-      "author": "PinAuto",
-      "meta": "Pinterest automation product website"
+      "quote": "The final implementation matched the Figma designs with excellent responsiveness and smooth interactions across every device.",
+      "author": "Studyly",
+      "meta": "Figma to HTML frontend implementation"
     },
     "cta": {
-      "heading": "Like what you see? Let's make it happen for you.",
-      "text": "Send the project details and I will map the build, stack, and estimate.",
-      "buttonText": "Get a build estimate"
-    },
-    "pageSpeed": {
-      "source": "Google PageSpeed Insights",
-      "testedUrl": "https://pin-auto.com",
-      "measuredAt": "2026-06-29",
-      "mobile": {
-        "performance": 92,
-        "fcp": "1.5 s",
-        "lcp": "2.4 s",
-        "cls": "0.052",
-        "tbt": "70 ms",
-        "speedIndex": "5.6 s"
-      },
-      "desktop": {
-        "performance": 97,
-        "fcp": "0.3 s",
-        "lcp": "0.5 s",
-        "cls": "0.003",
-        "tbt": "70 ms",
-        "speedIndex": "1.7 s"
-      }
+      "heading": "Need a Figma design turned into production-ready code?",
+      "text": "I build fast, responsive, pixel-perfect websites using modern frontend technologies and clean, maintainable code.",
+      "buttonText": "Let's Build It"
     }
   },
-  "markedine": {
-    "slug": "markedine",
-    "client": "Markedine",
-    "urlLabel": "markedine.com",
-    "liveUrl": "https://markedine.com",
-    "timeline": "2 weeks",
-    "eyebrow": "Case study / Markedine",
-    "headline": "A service website built around clearer offers and faster contact.",
-    "tagline": "Cleaner service sections, stronger trust flow, and a WhatsApp-led inquiry path.",
-    "overview": "Markedine needed a service website that made its offers easier to understand and gave visitors a direct way to start a conversation. The build focused on clearer service structure, stronger conversion sections, mobile readability, and WordPress editing control.",
+  "serveekay": {
+    "slug": "serveekay",
+    "client": "SerVeekay",
+    "urlLabel": "serveekay.com",
+    "liveUrl": "https://serveekay.com",
+    "timeline": "3 weeks",
+    "caseType": "first-time Figma to WordPress build",
+    "listing": {
+      "tag": "CASE_05",
+      "icon": "pen-tool",
+      "title": "SerVeekay",
+      "description": "Figma to Bricks Builder WordPress portfolio website for a UI/UX and product designer with service pages, portfolio sections, pricing, and lead-focused CTAs.",
+      "result": "Premium designer portfolio with editable CMS and responsive Bricks layouts",
+      "achievement": "Converted a detailed Figma design into a polished WordPress website using Bricks Builder",
+      "stack": [
+        "Bricks",
+        "WordPress",
+        "ACF"
+      ],
+      "href": "/case-studies/serveekay",
+      "liveUrl": "https://serveekay.com",
+      "image": "/case-study/serveekay-thumbnail.jpg",
+      "imageAlt": "Screenshot preview of the SerVeekay portfolio website"
+    },
+    "heroMockup": "/case-study/serveekay-mockup.png",
+    "homepageShowcase": {
+      "label": "Delivered homepage",
+      "title": "New SerVeekay desktop homepage",
+      "text": "A full desktop view of the first-build portfolio homepage converted from Figma into Bricks Builder.",
+      "items": [
+        {
+          "label": "New SerVeekay homepage",
+          "image": "/case-study/serveekay-home.jpg",
+          "caption": "First-time WordPress build"
+        }
+      ]
+    },
+    "eyebrow": "Case study / SerVeekay",
+    "headline": "A premium Figma-to-Bricks portfolio website for a product designer.",
+    "tagline": "Converted from Figma into a responsive Bricks Builder WordPress website built to attract startups, founders, and product teams.",
+    "overview": "SerVeekay is a personal portfolio and freelance services website for Waleed, a UI/UX and product designer. The goal was to convert a detailed Figma design into a polished WordPress website using Bricks Builder, while keeping the site responsive, editable, and focused on lead generation. The final website presents services, portfolio projects, pricing options, testimonials, FAQs, and discovery-call CTAs in a clean, conversion-focused structure.",
     "facts": [
       {
         "label": "Industry",
-        "value": "Digital services and marketing"
+        "value": "UI/UX design and product design services"
       },
       {
         "label": "Objective",
-        "value": "Improve service clarity, conversion paths, and mobile contact flow"
+        "value": "Convert Figma design into a responsive Bricks Builder WordPress website"
       },
       {
         "label": "Project type",
-        "value": "WordPress and Elementor service website"
+        "value": "Figma to Bricks Builder WordPress development"
       }
     ],
     "challenges": [
       {
-        "title": "Service clarity",
-        "text": "The site needed to explain services quickly so visitors could understand what was offered without reading dense paragraphs."
+        "title": "Detailed portfolio structure",
+        "text": "The website needed to present services, case studies, pricing, testimonials, FAQs, and personal branding without making the page feel crowded."
       },
       {
-        "title": "Lead contact friction",
-        "text": "Interested visitors needed a shorter path to contact, especially on mobile where WhatsApp is often the fastest action."
+        "title": "Strong visual accuracy",
+        "text": "The Figma design used custom typography, dark visual sections, gradients, rounded cards, and spacing systems that needed to be implemented accurately in Bricks Builder."
       },
       {
-        "title": "Section consistency",
-        "text": "Service, proof, and contact sections needed a consistent layout system instead of one-off page blocks."
-      },
-      {
-        "title": "Mobile presentation",
-        "text": "The browsing experience needed stronger spacing, readable cards, and clear actions on smaller devices."
+        "title": "Lead-focused user flow",
+        "text": "The site had to guide startup founders and businesses from portfolio browsing toward booking a discovery call or starting a project."
       }
     ],
     "results": [
       {
-        "title": "Clearer service pages",
-        "text": "Service content was grouped into easier sections with direct headings, shorter explanations, and stronger action areas."
+        "title": "Figma to Bricks conversion",
+        "text": "The design was converted into a responsive Bricks Builder WordPress website with accurate typography, spacing, layout structure, and visual styling."
       },
       {
-        "title": "Lead contact flow improved",
-        "text": "WhatsApp-led contact routes made it easier for ready visitors to start a conversation from the page."
+        "title": "Editable portfolio foundation",
+        "text": "WordPress, ACF, and reusable Bricks sections made portfolio content, service information, and page sections easier to manage."
       },
       {
-        "title": "Editable Elementor system",
-        "text": "Reusable Elementor sections gave the client a cleaner way to update services and campaign content."
-      },
-      {
-        "title": "Better mobile readability",
-        "text": "Spacing, cards, and action hierarchy were adjusted around the way service buyers scan on phones."
+        "title": "Conversion-focused presentation",
+        "text": "Services, pricing, testimonials, portfolio projects, FAQs, and CTAs were structured to support trust-building and lead generation."
       }
     ],
     "tools": [
-      "wordpress",
-      "elementor",
-      "whatsapp-flow",
-      "performance-qa"
+      "bricks-builder",
+      "advanced-custom-fields",
+      "seopress",
+      "google-site-kit",
+      "happyfiles",
+      "wpc-admin-columns",
+      "wordpress"
     ],
-    "performanceNote": "The page structure was kept practical and lightweight for a service website: clear sections, focused calls to action, responsive spacing, and direct contact routes for mobile visitors.",
+    "performanceNote": "The build focused on clean Bricks Builder structure, reusable sections, responsive layouts, organized CMS fields, and a lightweight plugin stack for easier long-term maintenance.",
     "branding": {
-      "title": "A service-led design system with clear contact intent.",
-      "text": "The visual system keeps the page focused on service understanding and contact: neutral surfaces, concise headings, scan-friendly cards, and strong action hierarchy.",
-      "logoMark": "MD",
-      "logoImage": "/client/markedine-logo.png",
-      "fontName": "Modern sans",
-      "fontMeta": "Readable service typography for headings, short descriptions, and mobile conversion areas.",
+      "title": "A bold, premium portfolio style for a product designer.",
+      "text": "The visual system uses dark backgrounds, warm peach highlights, custom typography, soft gradients, and rounded layouts to create a modern designer-led brand experience.",
+      "logoMark": "SV",
+      "logoImage": "/client/serveekay-logo.svg",
+      "clientImage": "/client/serveekay-waleed-client.jpg",
+      "fontName": "Neue Haas Grotesk Display Pro + Bricolage Grotesque",
+      "fontFamilies": [
+        "Neue Haas Grotesk Display Pro",
+        "Bricolage Grotesque"
+      ],
+      "fontMeta": "Neue Haas Grotesk Display Pro creates a premium display feel, while Bricolage Grotesque supports expressive, modern interface typography.",
       "palette": [
         {
-          "label": "Service ink",
-          "tone": "dark"
+          "label": "Primary",
+          "value": "#F1B890"
         },
         {
-          "label": "Neutral gray",
-          "tone": "gray"
+          "label": "Background",
+          "value": "#2F363C"
         },
         {
-          "label": "Clean white",
-          "tone": "light"
+          "label": "Text",
+          "value": "#FFFFFF"
         },
         {
-          "label": "Contact line",
-          "tone": "accent"
+          "label": "Muted",
+          "value": "#9FA6AC"
         }
       ]
     },
     "desktopPages": [
       {
         "name": "Home",
-        "type": "Offer positioning and contact route"
+        "type": "Personal brand, services, and lead generation"
+      },
+      {
+        "name": "Portfolio",
+        "type": "Project showcase across product design and digital platforms"
       },
       {
         "name": "Services",
-        "type": "Service cards and proof sections"
+        "type": "UI/UX consulting, design systems, web, app, and branding services"
       },
       {
-        "name": "Contact",
-        "type": "WhatsApp inquiry flow and lead prompt"
+        "name": "Pricing",
+        "type": "Monthly design partnership and fixed project options"
+      },
+      {
+        "name": "FAQ",
+        "type": "Workflow, process, and client decision support"
       }
     ],
     "responsiveBenefits": [
-      "Service cards stay easy to scan on mobile screens.",
-      "WhatsApp contact actions remain close to buying intent.",
-      "Reusable Elementor sections make future service updates easier."
+      "Figma layouts were adapted carefully for desktop, tablet, and mobile.",
+      "Portfolio projects stay visually strong and readable across screen sizes.",
+      "Reusable Bricks sections make content updates easier.",
+      "ACF supports cleaner management for portfolio and service content.",
+      "Lead-generation CTAs remain visible throughout the browsing journey."
     ],
     "testimonial": {
-      "quote": "The new structure made our services easier to understand and gave visitors a much simpler way to contact us.",
-      "author": "Markedine",
-      "meta": "Service website and lead-flow improvements"
+      "quote": "The website now presents my portfolio, services, pricing, and process in a polished way that feels premium and easy to update.",
+      "author": "SerVeekay",
+      "meta": "Figma to Bricks Builder portfolio website"
     },
     "cta": {
-      "heading": "Like what you see? Let's make it happen for you.",
-      "text": "Send the project details and I will map the build, stack, and estimate.",
-      "buttonText": "Get a build estimate"
-    },
-    "pageSpeed": {
-      "source": "Google PageSpeed Insights",
-      "testedUrl": "https://markedine.com",
-      "measuredAt": "2026-06-29",
-      "mobile": {
-        "performance": 32,
-        "fcp": "3.8 s",
-        "lcp": "17.9 s",
-        "cls": "0",
-        "tbt": "1,920 ms",
-        "speedIndex": "8.3 s"
-      },
-      "desktop": {
-        "performance": 59,
-        "fcp": "0.8 s",
-        "lcp": "4.3 s",
-        "cls": "0.002",
-        "tbt": "380 ms",
-        "speedIndex": "1.7 s"
-      }
-    }
-  },
-  "xgrid-b2b": {
-    "slug": "xgrid-b2b",
-    "client": "Xgrid B2B Marketing",
-    "urlLabel": "xgrid.co/b2b-digital-marketing-agency",
-    "liveUrl": "https://xgrid.co/b2b-digital-marketing-agency",
-    "timeline": "4 weeks",
-    "eyebrow": "Case study / Xgrid B2B",
-    "headline": "A custom WordPress marketing system for a B2B growth team.",
-    "tagline": "Flexible templates, structured content, and a CMS built for ongoing campaigns.",
-    "overview": "Xgrid needed a custom-coded WordPress foundation for a B2B marketing site, with flexible templates, structured fields, and a content model that could support campaign pages over time.",
-    "facts": [
-      {
-        "label": "Industry",
-        "value": "B2B marketing and technology services"
-      },
-      {
-        "label": "Objective",
-        "value": "Build a custom CMS architecture for scalable marketing pages"
-      },
-      {
-        "label": "Project type",
-        "value": "Custom WordPress theme with PHP, ACF, and REST patterns"
-      }
-    ],
-    "challenges": [
-      {
-        "title": "Template flexibility",
-        "text": "The marketing team needed pages that could adapt to multiple offers without becoming one-off hardcoded layouts."
-      },
-      {
-        "title": "Structured content",
-        "text": "Content blocks, fields, and page sections needed a reliable CMS structure for repeatable updates."
-      },
-      {
-        "title": "Performance for campaigns",
-        "text": "The site needed to support conversion-focused pages without dragging down load speed or maintainability."
-      }
-    ],
-    "results": [
-      {
-        "title": "Custom CMS architecture",
-        "text": "ACF-powered content models gave the team repeatable page sections and cleaner publishing control."
-      },
-      {
-        "title": "Traffic quality improved",
-        "text": "The page structure supported clearer campaign messaging and more focused visitor journeys."
-      },
-      {
-        "title": "Performance increased",
-        "text": "Custom theme implementation reduced unnecessary builder overhead and kept templates easier to optimize."
-      }
-    ],
-    "tools": [
-      "wordpress",
-      "php",
-      "advanced-custom-fields",
-      "rest-api"
-    ],
-    "performanceNote": "The custom theme approach kept the page architecture leaner than a heavy builder setup, improving maintainability and giving the team more control over campaign performance.",
-    "branding": {
-      "title": "A technical marketing look with structured content underneath.",
-      "text": "The design direction supports B2B credibility: restrained colors, clear section hierarchy, and typography that works for technical service messaging.",
-      "logoMark": "XG",
-      "logoImage": "/comapnies/xgrid-logo.svg",
-      "fontName": "Modern sans",
-      "fontMeta": "Clean marketing typography for service pages, long-form copy, and campaign modules.",
-      "palette": [
-        {
-          "label": "Carbon",
-          "tone": "dark"
-        },
-        {
-          "label": "Graphite",
-          "tone": "gray"
-        },
-        {
-          "label": "Cloud",
-          "tone": "light"
-        },
-        {
-          "label": "Signal",
-          "tone": "accent"
-        }
-      ]
-    },
-    "desktopPages": [
-      {
-        "name": "Landing",
-        "type": "B2B campaign story and CTA flow"
-      },
-      {
-        "name": "Services",
-        "type": "Offer modules and proof blocks"
-      },
-      {
-        "name": "Insights",
-        "type": "CMS-driven content structure"
-      }
-    ],
-    "responsiveBenefits": [
-      "Campaign sections adapt cleanly from desktop to mobile.",
-      "ACF modules keep page creation consistent for future pages.",
-      "Custom templates reduce editing complexity for marketing updates."
-    ],
-    "testimonial": {
-      "quote": "The custom WordPress setup gave us the flexibility to manage marketing pages without losing structure.",
-      "author": "Xgrid B2B Marketing",
-      "meta": "Custom WordPress architecture"
-    },
-    "cta": {
-      "heading": "Like what you see? Let's make it happen for you.",
-      "text": "Send the project details and I will map the build, stack, and estimate.",
-      "buttonText": "Get a build estimate"
-    },
-    "pageSpeed": {
-      "source": "Google PageSpeed Insights",
-      "testedUrl": "https://xgrid.co/b2b-digital-marketing-agency",
-      "measuredAt": "2026-06-29",
-      "mobile": {
-        "performance": 51,
-        "fcp": "2.2 s",
-        "lcp": "4.1 s",
-        "cls": "0.119",
-        "tbt": "800 ms",
-        "speedIndex": "15.7 s"
-      },
-      "desktop": {
-        "performance": 68,
-        "fcp": "0.6 s",
-        "lcp": "1.1 s",
-        "cls": "0.184",
-        "tbt": "290 ms",
-        "speedIndex": "6.3 s"
-      }
+      "heading": "Need your Figma design converted into WordPress?",
+      "text": "I can turn your design into a responsive, editable, and conversion-focused Bricks Builder website with clean structure and reusable sections.",
+      "buttonText": "Start Your Project"
     }
   }
 }

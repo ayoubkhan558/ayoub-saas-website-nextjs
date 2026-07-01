@@ -11,8 +11,10 @@ function swatchClass(tone?: CaseStudyDetailData["branding"]["palette"][number]["
 }
 
 export function CaseStudyBranding({ study }: { study: CaseStudyDetailData }) {
-  const primaryFont = study.branding.fontName.split("+")[0]?.trim() || study.branding.fontName;
-  const secondaryFont = study.branding.fontName.split("+")[1]?.trim() || "Interface system";
+  const fontFamilies =
+    study.branding.fontFamilies?.length
+      ? study.branding.fontFamilies
+      : study.branding.fontName.split("+").map((font) => font.trim()).filter(Boolean);
 
   return (
     <section className={`section ${styles.section}`}>
@@ -24,14 +26,12 @@ export function CaseStudyBranding({ study }: { study: CaseStudyDetailData }) {
           <div className={styles.brandCards}>
             <article className={styles.brandCard}>
               <span className={styles.brandCardLabel}>Typography</span>
-              <div className={styles.brandTypeStack}>
-                <span>Primary font</span>
-                <strong>{primaryFont}</strong>
-              </div>
-              <div className={styles.brandTypeStack}>
-                <span>Secondary font</span>
-                <strong>{secondaryFont}</strong>
-              </div>
+              {fontFamilies.map((font, index) => (
+                <div className={styles.brandTypeStack} key={font}>
+                  <span>{index === 0 ? "Primary font" : `Font ${index + 1}`}</span>
+                  <strong>{font}</strong>
+                </div>
+              ))}
               <p>{study.branding.fontMeta}</p>
             </article>
 

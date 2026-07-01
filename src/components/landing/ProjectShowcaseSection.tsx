@@ -44,7 +44,7 @@ export function ProjectShowcaseSection({ projects }: { projects: ProjectCard[] }
   }, [emblaApi, updateScrollState]);
 
   return (
-    <section className="section" id="showcase">
+    <section className={`section ${styles["home-showcase"]}`} id="showcase">
       <div className="section__inner">
         <div className="container">
           <div className={styles["showcase__top"]}>

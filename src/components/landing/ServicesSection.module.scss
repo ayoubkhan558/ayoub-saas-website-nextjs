@@ -44,7 +44,7 @@
 
 .services__card {
   --services-card-border: transparent;
-  --services-card-bg: var(--color-surface-muted);
+  --services-card-bg: var(--surface-grid-light);
   --services-card-hover-border: var(--color-primary);
   --services-card-hover-bg: var(--color-surface-chrome);
   --services-card-hover-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-primary) 34%, transparent);

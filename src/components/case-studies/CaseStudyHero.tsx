@@ -23,6 +23,10 @@ export function CaseStudyHero({ study }: { study: CaseStudyDetailData }) {
             <div className={styles.heroActions}>
               <dl className={styles.heroMeta}>
                 <div className={styles.heroMeta__item}>
+                  <dt className={styles.heroMeta__label}>Project</dt>
+                  <dd className={styles.heroMeta__value}>{study.caseType}</dd>
+                </div>
+                <div className={styles.heroMeta__item}>
                   <dt className={styles.heroMeta__label}>Timeline</dt>
                   <dd className={styles.heroMeta__value}>{study.timeline}</dd>
                 </div>
@@ -34,9 +38,13 @@ export function CaseStudyHero({ study }: { study: CaseStudyDetailData }) {
             </div>
           </div>
           <aside className={styles.heroVisual} aria-label={`${study.client} final website design shown inside a laptop mockup`}>
-            <div className={styles.laptopFrame}>
-              <CaseStudyBrowserMockup label={study.urlLabel} imageSrc={previewImage} />
-            </div>
+            {study.heroMockup ? (
+              <img className={styles.heroMockupImage} src={study.heroMockup} alt={`${study.client} responsive website mockup`} title={`${study.client} responsive website mockup`} />
+            ) : (
+              <div className={styles.laptopFrame}>
+                <CaseStudyBrowserMockup label={study.urlLabel} imageSrc={previewImage} />
+              </div>
+            )}
           </aside>
         </div>
       </div>

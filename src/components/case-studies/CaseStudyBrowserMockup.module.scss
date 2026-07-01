@@ -211,8 +211,52 @@
   min-height: clamp(240px, 30vw, 390px);
 }
 
+.screenScrollOnHover {
+  --comparison-preview-height: clamp(340px, 38vw, 520px);
+}
+
+.screenScrollOnHover .realPreview {
+  position: relative;
+  height: var(--comparison-preview-height);
+  background: #fff;
+}
+
+.screenScrollOnHover .realPreview img {
+  position: absolute;
+  inset: 0 auto auto 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: top center;
+  transition: transform 12s linear;
+}
+
+.screenScrollOnHover:hover .realPreview img,
+.screenScrollOnHover:focus-within .realPreview img {
+  transform: translateY(calc(-100% + var(--comparison-preview-height)));
+}
+
 .screenCompact .mockSite {
   min-height: clamp(240px, 30vw, 390px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screenScrollOnHover .realPreview {
+    overflow-y: auto;
+  }
+
+  .screenScrollOnHover .realPreview img {
+    position: static;
+    transition: none;
+  }
+
+  .screenScrollOnHover:hover .realPreview img,
+  .screenScrollOnHover:focus-within .realPreview img {
+    transform: none;
+  }
 }
 
 .mockNav,
@@ -599,7 +643,7 @@
   color: var(--color-slate-iris);
   font-family: var(--font-code);
   font-size: var(--text-xs);
-  line-height: 1.2;
+  
   text-transform: uppercase;
 }
 

@@ -1235,22 +1235,7 @@
       "description": "Client project is a business website built with HTML, CSS, Bootstrap to make the offer easier to scan across devices.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-kuza-app-netlify.jpg"
-    },
-    {
-      "rowNumber": 84,
-      "websiteName": null,
-      "categoryNiche": null,
-      "websiteUrl": "https://monoami.surge.sh/",
-      "figmaLink": null,
-      "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
-      "client": "",
-      "notes": null,
-      "date": null,
-      "projectType": "Business website",
-      "description": "Client project is a business website built with HTML, CSS, Bootstrap to turn the brand into a faster production-ready web presence.",
-      "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-monoami-surge.jpg"
-    },
+    }, 
     {
       "rowNumber": 85,
       "websiteName": null,

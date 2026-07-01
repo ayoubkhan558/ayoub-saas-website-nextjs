@@ -3,7 +3,10 @@ import { CaseStudySectionHeader } from "./CaseStudySectionHeader";
 import styles from "./CaseStudyFeedback.module.scss";
 
 export function CaseStudyFeedback({ study }: { study: CaseStudyDetailData }) {
-  const clientImage = study.branding.logoImage;
+  const authorImage = study.branding.clientImage ?? study.branding.logoImage;
+  const authorImageAlt = study.branding.clientImage
+    ? `${study.testimonial.author} client photo`
+    : `${study.testimonial.author} logo`;
 
   return (
     <section className={`section ${styles.section}`}>
@@ -27,9 +30,9 @@ export function CaseStudyFeedback({ study }: { study: CaseStudyDetailData }) {
               </div>
               <blockquote className={styles.feedbackQuote}>"{study.testimonial.quote}"</blockquote>
               <figcaption className={styles.feedbackAuthor}>
-                <span className={styles.feedbackAuthorImage}>
-                  {clientImage ? (
-                    <img src={clientImage} alt={`${study.testimonial.author} logo`} title={`${study.testimonial.author} logo`} loading="lazy" />
+                <span className={`${styles.feedbackAuthorImage} ${study.branding.clientImage ? styles.feedbackAuthorImagePhoto : ""}`}>
+                  {authorImage ? (
+                    <img src={authorImage} alt={authorImageAlt} title={authorImageAlt} loading="lazy" />
                   ) : (
                     study.testimonial.author.slice(0, 2)
                   )}
