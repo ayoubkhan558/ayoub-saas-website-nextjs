@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { IconGlyph } from "@/components/landing/IconGlyph";
 import { ContactFooter } from "@/components/landing/ContactFooter";
@@ -117,8 +118,8 @@ const toolboxIconRows = [
 
 const companyLogos: Record<string, string> = {
   Xgrid: "/comapnies/xgrid-logo.svg",
-  Epicsols: "/comapnies/epicsols-logo.jpg",
-  "Hawk ITs & Consultancy Provider": "/comapnies/hawk-it-logo.jpg",
+  Epicsols: "/comapnies/epicsols-logo.png",
+  "Hawk ITs & Consultancy Provider": "/comapnies/hawk-it-logo.png",
   "AWSOL Web Technologies": "/comapnies/awsol-logo.png",
 };
 
@@ -127,7 +128,7 @@ export default function AboutPage() {
   const schema = buildAboutSchema();
 
   return (
-    <div className="site-shell">
+    <div className={`site-shell ${styles["about-page"]}`}>
       <script
         type="application/ld+json"
         id="about-json-ld"
@@ -228,7 +229,14 @@ export default function AboutPage() {
                     <span className={styles["about-page-experience-item__year"]}>{item.year}</span>
                     {companyLogos[item.company] ? (
                       <span className={styles["about-page-experience-item__logo"]}>
-                        <img src={companyLogos[item.company]} alt={`${item.company} logo`} title={`${item.company} logo`} loading="lazy" />
+                        <Image
+                          src={companyLogos[item.company]}
+                          alt={`${item.company} logo`}
+                          title={`${item.company} logo`}
+                          fill
+                          sizes="132px"
+                          className={styles["about-page-experience-item__logo-img"]}
+                        />
                       </span>
                     ) : null}
                   </div>

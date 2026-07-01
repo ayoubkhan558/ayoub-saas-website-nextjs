@@ -52,14 +52,14 @@ export function ServicesHero() {
                 />
               </strong>
             </div>
-            <div className={styles["services-signal-panel__grid"]}>
+            {/* <div className={styles["services-signal-panel__grid"]}>
               {proofNotes.map((note) => (
                 <div key={note.label}>
                   <span>{note.label}</span>
                   <p>{note.value}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </aside>
         </div>
       </div>

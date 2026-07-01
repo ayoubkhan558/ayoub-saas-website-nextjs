@@ -144,6 +144,102 @@
   --section-grain-color: rgba(49, 38, 59, 0.026);
   --section-grain-color-soft: rgba(49, 38, 59, 0.015);
   --section-grid-color: rgba(49, 38, 59, 0.012);
+  --color-surface: #fff;
+  --color-surface-soft: #fffafa;
+  --color-surface-muted: rgba(255, 255, 255, 0.74);
+  --color-surface-raised: rgba(255, 255, 255, 0.86);
+  --color-surface-chrome: rgba(255, 252, 252, 0.94);
+  --color-on-dark: #fff;
+  --surface-grid-light: rgba(49, 38, 59, 0.035);
+  --surface-dot-light: rgba(49, 38, 59, 0.055);
+  --surface-inset-light: rgba(255, 255, 255, 0.82);
+  --color-band-surface: #01011b;
+  --color-band-on: #fff;
+  --color-band-muted: rgba(255, 255, 255, 0.68);
+  --color-item-active: rgba(236, 233, 236, 0.78);
+  --color-item-active-hover: rgba(236, 233, 236, 0.52);
+  --color-section-tint-bg: #eeeeef;
+  --color-section-tint-gradient: linear-gradient(180deg, #f6f6f7, #e9e9eb);
+  --color-input-surface: rgba(255, 255, 255, 0.9);
+  --color-chip-surface: rgba(236, 247, 244, 0.72);
+  --color-card-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(247, 247, 249, 0.88));
+  --color-card-shadow: rgba(49, 38, 59, 0.06) 0 20px 54px;
+  --color-card-shadow-strong: rgba(49, 38, 59, 0.08) 0 24px 68px;
+  --color-heading: var(--color-ink-violet);
+  --color-text: var(--color-plum-charcoal);
+
+  /* Semantic ink scale — flips automatically in the dark block below.
+     Use these instead of raw rgba(49,38,59,a) / rgba(248,244,255,a) so theming lives in one place. */
+  --border-hairline: rgba(49, 38, 59, 0.08);
+  --border-line: rgba(49, 38, 59, 0.12);
+  --border-soft: rgba(49, 38, 59, 0.16);
+  --border-strong: rgba(49, 38, 59, 0.28);
+  --inset-highlight: rgba(255, 255, 255, 0.8);
+  --inset-highlight-strong: rgba(255, 255, 255, 0.94);
+  --ink-fill-soft: rgba(49, 38, 59, 0.06);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-primary: #f078a8;
+  --color-primary-soft: rgba(240, 120, 168, 0.16);
+  --color-secondary: #79d2cb;
+  --color-secondary-soft: rgba(121, 210, 203, 0.15);
+  --color-ink-violet: #f8f4ff;
+  --color-plum-charcoal: #ddd3ea;
+  --color-storm-mauve: #c8bdd4;
+  --color-slate-iris: #a89fb8;
+  --color-ash-lavender: #958ba2;
+  --color-parchment: #0e0d14;
+  --color-bone-mist: #201b2a;
+  --color-fog-border: rgba(234, 224, 246, 0.16);
+  --color-twilight-plum: #b8a9ff;
+  --color-amethyst: #a99bf4;
+  --color-wisteria: #d4c9ff;
+  --page-rail-color: rgba(234, 224, 246, 0.16);
+  --page-corner-color: rgba(248, 244, 255, 0.72);
+  --page-gutter-bg: #14111c;
+  --section-grain-color: rgba(248, 244, 255, 0.035);
+  --section-grain-color-soft: rgba(248, 244, 255, 0.02);
+  --section-grid-color: rgba(248, 244, 255, 0.026);
+  --color-surface: #15121d;
+  --color-surface-soft: #121019;
+  --color-surface-muted: rgba(26, 22, 35, 0.76);
+  --color-surface-raised: rgba(26, 22, 35, 0.88);
+  --color-surface-chrome: rgba(14, 13, 20, 0.9);
+  --color-on-dark: #0e0d14;
+  --surface-grid-light: rgba(248, 244, 255, 0.045);
+  --surface-dot-light: rgba(248, 244, 255, 0.08);
+  --surface-inset-light: rgba(255, 255, 255, 0.08);
+  --color-band-surface: #121019;
+  --color-band-on: #f8f4ff;
+  --color-band-muted: rgba(200, 189, 212, 0.72);
+  --color-item-active: rgba(32, 27, 42, 0.92);
+  --color-item-active-hover: rgba(32, 27, 42, 0.68);
+  --color-section-tint-bg: #121019;
+  --color-section-tint-gradient: linear-gradient(180deg, #17131f, #100e16);
+  --color-input-surface: rgba(21, 18, 29, 0.92);
+  --color-chip-surface: rgba(32, 27, 42, 0.88);
+  --color-card-gradient: linear-gradient(180deg, var(--color-surface-raised), var(--color-surface-muted));
+  --color-card-shadow: rgba(0, 0, 0, 0.34) 0 20px 54px;
+  --color-card-shadow-strong: rgba(0, 0, 0, 0.42) 0 24px 68px;
+  --color-heading: var(--color-ink-violet);
+  --color-text: var(--color-storm-mauve);
+  --shadow-product: rgba(0, 0, 0, 0.42) 0 0 0 1px,
+    rgba(0, 0, 0, 0.48) 0 40px 92px 0,
+    rgba(0, 0, 0, 0.34) 0 18px 42px 0;
+  --shadow-product-light: rgba(0, 0, 0, 0.34) 0 0 0 1px,
+    rgba(0, 0, 0, 0.32) 0 20px 46px 0;
+  --shadow-inset: rgba(248, 244, 255, 0.12) 0 0 0 1px inset;
+  --shadow-focus: rgba(240, 120, 168, 0.26) 0 0 0 4px;
+
+  --border-hairline: rgba(248, 244, 255, 0.08);
+  --border-line: rgba(248, 244, 255, 0.12);
+  --border-soft: rgba(248, 244, 255, 0.16);
+  --border-strong: rgba(248, 244, 255, 0.28);
+  --inset-highlight: rgba(255, 255, 255, 0.08);
+  --inset-highlight-strong: rgba(255, 255, 255, 0.1);
+  --ink-fill-soft: rgba(248, 244, 255, 0.06);
 }
 
 *,
@@ -232,7 +328,7 @@ img {
   transform: translateY(-160%);
   border: 1px solid var(--color-plum-charcoal);
   border-radius: var(--radius-buttons);
-  background: #fff;
+  background: var(--color-surface);
   padding: var(--space-2) var(--space-3);
   color: var(--color-ink-violet);
 }
@@ -244,10 +340,10 @@ img {
 .site-shell {
   position: relative;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
   background:
-    radial-gradient(circle at 50% 8%, rgba(205, 160, 165, 0.2), transparent 22rem),
-    linear-gradient(180deg, rgba(236, 237, 242, 0.34), transparent 42rem),
+    radial-gradient(circle at 50% 8%, var(--color-primary-soft), transparent 22rem),
+    linear-gradient(180deg, var(--color-bone-mist), transparent 42rem),
     var(--color-parchment);
 }
 
@@ -270,7 +366,11 @@ img {
   //   radial-gradient(var(--section-grain-color) 1px, transparent 1px),
   //   radial-gradient(var(--section-grain-color-soft) 1px, transparent 1px),
   //   linear-gradient(90deg, var(--section-grid-color) 1px, transparent 1px);
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'><rect width='2' height='2' fill='%23e8e4e6'/><rect x='2' y='2' width='2' height='2' fill='%23e8e4e6'/></svg>"); // background: linear-gradient(red, green);
+  background-image:
+    linear-gradient(45deg, var(--section-grain-color) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--section-grain-color) 75%);
+  background-position: 0 0, 2px 2px;
+  background-size: 4px 4px;
 
   padding: 0 var(--space-0);
 
@@ -290,8 +390,20 @@ img {
   border-top: 1px solid var(--page-rail-color);
   border-right: 1px solid var(--page-rail-color);
   border-left: 1px solid var(--page-rail-color);
-  background-color: #fff;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'><rect width='2' height='2' fill='%23f5f3f4'/><rect x='2' y='2' width='2' height='2' fill='%23f5f3f4'/></svg>"); // background: linear-gradient(red, green);
+  background-color: var(--color-surface);
+  background-image:
+    linear-gradient(45deg, var(--section-grain-color-soft) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--section-grain-color-soft) 75%);
+  background-position: 0 0, 2px 2px;
+  background-size: 4px 4px;
+}
+
+:root[data-theme="dark"] .section__inner {
+  background-color: var(--color-surface) !important;
+  background-image:
+    radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
+    linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
+  background-size: 6px 6px, auto !important;
 }
 
 .section:not(.section--hero) {}

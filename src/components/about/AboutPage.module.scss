@@ -1,10 +1,70 @@
+.about-page {
+  --about-hero-bg: #eeeeef;
+  --about-hero-gradient: linear-gradient(180deg, #f5f5f6, #e9e9eb);
+  --about-grain-a: rgba(1, 1, 27, 0.07);
+  --about-grain-b: rgba(1, 1, 27, 0.045);
+  --about-grain-subtle: rgba(49, 38, 59, 0.045);
+  --about-border: rgba(49, 38, 59, 0.16);
+  --about-border-soft: rgba(49, 38, 59, 0.14);
+  --about-border-faint: rgba(49, 38, 59, 0.12);
+  --about-border-hover: rgba(49, 38, 59, 0.28);
+  --about-card-surface: var(--color-surface);
+  --about-card-raised: var(--color-surface-raised);
+  --about-card-muted: var(--color-surface-muted);
+  --about-card-gradient: linear-gradient(180deg, var(--color-surface-raised), var(--color-surface-muted));
+  --about-card-inset: var(--surface-inset-light);
+  --about-card-shadow: rgba(49, 38, 59, 0.06) 0 20px 54px;
+  --about-card-shadow-hover: rgba(49, 38, 59, 0.09) 0 24px 54px;
+  --about-card-ring: rgba(49, 38, 59, 0.1);
+  --about-panel-section-bg: var(--color-bone-mist);
+  --about-decor-number: rgba(49, 38, 59, 0.11);
+  --about-decor-block: rgba(49, 38, 59, 0.08);
+  --about-photo-bg: #d9d9dc;
+  --about-photo-vignette: #94847f;
+  --about-secondary-glow: rgba(63, 112, 108, 0.1);
+  --about-grid-line: rgba(49, 38, 59, 0.07);
+  --about-feature-gradient: linear-gradient(180deg, var(--color-surface-raised), var(--color-bone-mist));
+  --about-icon-shadow: rgba(49, 38, 59, 0.05) 0 14px 30px;
+  --about-logo-plate-bg: #ffffff;
+  --about-logo-plate-border: rgba(49, 38, 59, 0.12);
+  --about-logo-plate-shadow: rgba(49, 38, 59, 0.08) 0 1px 2px;
+}
+
+:global(:root[data-theme="dark"]) .about-page {
+  --about-hero-bg: #121019;
+  --about-hero-gradient: linear-gradient(180deg, #17131f, #100e16);
+  --about-grain-a: rgba(248, 244, 255, 0.07);
+  --about-grain-b: rgba(248, 244, 255, 0.045);
+  --about-grain-subtle: rgba(248, 244, 255, 0.045);
+  --about-border: rgba(248, 244, 255, 0.16);
+  --about-border-soft: rgba(248, 244, 255, 0.14);
+  --about-border-faint: rgba(248, 244, 255, 0.12);
+  --about-border-hover: rgba(248, 244, 255, 0.28);
+  --about-card-shadow: rgba(0, 0, 0, 0.34) 0 20px 54px;
+  --about-card-shadow-hover: rgba(0, 0, 0, 0.42) 0 24px 54px;
+  --about-card-ring: rgba(248, 244, 255, 0.1);
+  --about-panel-section-bg: rgba(26, 22, 35, 0.5);
+  --about-decor-number: rgba(248, 244, 255, 0.12);
+  --about-decor-block: rgba(248, 244, 255, 0.08);
+  --about-photo-bg: #2a2435;
+  --about-photo-vignette: #5a4f66;
+  --about-secondary-glow: rgba(121, 210, 203, 0.14);
+  --about-grid-line: rgba(248, 244, 255, 0.08);
+  --about-feature-gradient: linear-gradient(180deg, var(--color-surface-raised), var(--color-surface-muted));
+  --about-icon-shadow: rgba(0, 0, 0, 0.28) 0 14px 30px;
+  /* Brand logos are dark-on-transparent; keep them on a soft light plate so they stay legible in dark mode. */
+  --about-logo-plate-bg: #f1eff6;
+  --about-logo-plate-border: rgba(248, 244, 255, 0.16);
+  --about-logo-plate-shadow: rgba(0, 0, 0, 0.34) 0 2px 10px;
+}
+
 .about-page-hero :global(.section__inner) {
   overflow: hidden;
   padding-block: var(--space-9) var(--space-7);
-  background-color: #eeeeef;
+  background-color: var(--about-hero-bg);
   background-image:
-    radial-gradient(rgba(1, 1, 27, 0.07) 0.75px, transparent 0.75px),
-    linear-gradient(180deg, #f5f5f6, #e9e9eb);
+    radial-gradient(var(--about-grain-a) 0.75px, transparent 0.75px),
+    var(--about-hero-gradient);
   background-size:
     6px 6px,
     auto;
@@ -106,15 +166,13 @@
   min-height: 150px;
   align-content: space-between;
   overflow: hidden;
-  border: 1px solid rgba(49, 38, 59, 0.16);
+  border: 1px solid var(--about-border);
   border-radius: 8px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(236, 237, 242, 0.78)),
-    #fff;
+  background: var(--about-card-gradient), var(--about-card-surface);
   padding: var(--space-4);
   box-shadow:
-    rgba(255, 255, 255, 0.86) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.08) 0 18px 44px;
+    var(--about-card-inset) 0 1px 0 inset,
+    var(--about-card-shadow);
 }
 
 .about-page-hero-stat::before {
@@ -122,8 +180,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(90deg, rgba(49, 38, 59, 0.07) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(49, 38, 59, 0.07) 1px, transparent 1px);
+    linear-gradient(90deg, var(--about-grid-line) 1px, transparent 1px),
+    linear-gradient(180deg, var(--about-grid-line) 1px, transparent 1px);
   background-size: 24px 24px;
   opacity: 0.28;
   pointer-events: none;
@@ -162,13 +220,13 @@
   border: 1px solid var(--color-fog-border);
   border-radius: var(--radius-cards);
   background:
-    radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
-    #fff;
+    radial-gradient(var(--about-grain-b) 0.75px, transparent 0.75px),
+    var(--about-card-surface);
   background-size: 6px 6px, auto;
   box-shadow:
-    0 0 0 1px rgba(49, 38, 59, 0.1),
-    rgba(255, 255, 255, 0.74) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.06) 0 20px 54px;
+    0 0 0 1px var(--about-card-ring),
+    var(--about-card-inset) 0 1px 0 inset,
+    var(--about-card-shadow);
 }
 
 .about-page-portrait-card::before,
@@ -183,8 +241,8 @@
   inset: 0;
   z-index: 0;
   background-image:
-    radial-gradient(rgba(49, 38, 59, 0.045) 0.75px, transparent 0.75px),
-    linear-gradient(115deg, transparent 0 48%, rgba(49, 38, 59, 0.035) 48% 49%, transparent 49% 100%);
+    radial-gradient(var(--about-grain-subtle) 0.75px, transparent 0.75px),
+    linear-gradient(115deg, transparent 0 48%, var(--about-decor-block) 48% 49%, transparent 49% 100%);
   background-size:
     8px 8px,
     44px 44px;
@@ -211,8 +269,8 @@
 
 .about-page-portrait-card__media {
   overflow: hidden;
-  border: 1px solid rgba(1, 1, 27, 0.2);
-  background: #d9d9dc;
+  border: 1px solid var(--about-border);
+  background: var(--about-photo-bg);
 }
 
 .about-page-portrait-card__media img {
@@ -254,7 +312,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: var(--space-3);
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid var(--about-border-soft);
   padding-top: var(--space-5);
   counter-reset: about-recognition;
 }
@@ -264,10 +322,10 @@
   position: relative;
   overflow: hidden;
   min-height: 78px;
-  border: 1px solid rgba(49, 38, 59, 0.14);
+  border: 1px solid var(--about-border-soft);
   background:
-    radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
-    rgba(255, 255, 255, 0.86);
+    radial-gradient(var(--about-grain-b) 0.75px, transparent 0.75px),
+    var(--about-card-raised);
   background-size: 6px 6px, auto;
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
@@ -299,16 +357,16 @@
   bottom: calc(var(--space-5) * -1);
   width: 74px;
   height: 74px;
-  border: 1px solid rgba(49, 38, 59, 0.08);
-  background: rgba(1, 1, 27, 0.04);
+  border: 1px solid var(--about-decor-block);
+  background: var(--about-grain-b);
 }
 
 .about-page-award:hover {
   transform: translateY(-2px);
-  border-color: rgba(49, 38, 59, 0.24);
+  border-color: var(--about-border-hover);
   box-shadow:
-    rgba(255, 255, 255, 0.82) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.09) 0 24px 54px;
+    var(--about-card-inset) 0 1px 0 inset,
+    var(--about-card-shadow-hover);
 }
 
 .about-page-award strong,
@@ -369,10 +427,10 @@
 }
 
 .about-page-principle-card:hover {
-  border-color: rgba(49, 38, 59, 0.28);
+  border-color: var(--about-border-hover);
   background:
-    radial-gradient(rgba(1, 1, 27, 0.055) 0.75px, transparent 0.75px),
-    rgba(236, 237, 242, 0.48);
+    radial-gradient(var(--about-grain-b) 0.75px, transparent 0.75px),
+    var(--about-card-muted);
   background-size: 6px 6px, auto;
   transform: translateY(-2px);
 }
@@ -392,10 +450,10 @@
   gap: var(--space-2);
   align-content: start;
   min-height: 128px;
-  border: 1px solid rgba(49, 38, 59, 0.14);
+  border: 1px solid var(--about-border-soft);
   background:
-    radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
-    rgba(255, 255, 255, 0.78);
+    radial-gradient(var(--about-grain-b) 0.75px, transparent 0.75px),
+    var(--about-card-raised);
   background-size: 6px 6px, auto;
   box-shadow: none;
   padding: var(--space-4);
@@ -451,12 +509,12 @@
   position: relative;
   overflow: hidden;
   margin: 0;
-  border: 1px solid rgba(49, 38, 59, 0.16);
+  border: 1px solid var(--about-border);
   border-radius: 8px;
-  background: #d9d9dc;
+  background: var(--about-photo-bg);
   box-shadow:
-    rgba(255, 255, 255, 0.74) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.1) 0 28px 66px;
+    var(--about-card-inset) 0 1px 0 inset,
+    var(--about-card-shadow);
 }
 
 .about-page-story-portrait::after {
@@ -464,7 +522,7 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, transparent 58%, #94847f),
+    linear-gradient(180deg, transparent 58%, var(--about-photo-vignette)),
     radial-gradient(circle at 20% 12%, rgba(255, 255, 255, 0.18), transparent 14rem);
   pointer-events: none;
 }
@@ -502,18 +560,16 @@
   counter-increment: story-card;
   min-height: 300px;
   border-radius: 8px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 247, 249, 0.9)),
-    #fff;
+  background: var(--about-feature-gradient), var(--about-card-surface);
   box-shadow:
     inset 0 5px 0 var(--color-ink-violet),
-    rgba(49, 38, 59, 0.07) 0 18px 48px;
+    var(--about-card-shadow);
 }
 
 .about-page-feature-card::before {
   background-image:
-    linear-gradient(90deg, rgba(49, 38, 59, 0.08) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(49, 38, 59, 0.08) 1px, transparent 1px);
+    linear-gradient(90deg, var(--about-grid-line) 1px, transparent 1px),
+    linear-gradient(180deg, var(--about-grid-line) 1px, transparent 1px);
   background-size: 28px 28px;
   opacity: 0.32;
 }
@@ -523,7 +579,7 @@
   position: absolute;
   right: var(--space-4);
   bottom: var(--space-3);
-  color: rgba(49, 38, 59, 0.11);
+  color: var(--about-decor-number);
   font-family: var(--font-display-compact);
   font-size: clamp(3.5rem, 8vw, 5.8rem);
   font-weight: 800;
@@ -533,23 +589,24 @@
 
 .about-page-feature-card__label {
   width: fit-content;
-  border: 1px solid rgba(49, 38, 59, 0.12);
-  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--about-border-faint);
+  background: var(--about-card-muted);
   padding: 0.5rem 0.7rem;
 }
 
 .about-page-feature-card__title {
   max-width: 15ch;
   font-size: var(--text-h4);
+  color: var(--color-ink-violet);
 }
 
 .about-page-feature-card:hover,
 .about-page-toolbox-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(49, 38, 59, 0.28);
+  border-color: var(--about-border-hover);
   box-shadow:
-    rgba(255, 255, 255, 0.82) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.09) 0 24px 54px;
+    var(--about-card-inset) 0 1px 0 inset,
+    var(--about-card-shadow-hover);
 }
 
 .about-page-feature-card__text,
@@ -562,8 +619,8 @@
 .about-page-education-section :global(.section__inner),
 .about-page-toolbox-section :global(.section__inner) {
   background:
-    radial-gradient(rgba(1, 1, 27, 0.04) 0.75px, transparent 0.75px),
-    rgba(236, 237, 242, 0.38);
+    radial-gradient(var(--about-grain-b) 0.75px, transparent 0.75px),
+    var(--about-panel-section-bg);
   background-size: 7px 7px, auto;
 }
 
@@ -617,14 +674,12 @@
   display: grid;
   gap: 0;
   margin-top: var(--space-6);
-  border: 1px solid rgba(49, 38, 59, 0.14);
+  border: 1px solid var(--about-border-soft);
   border-radius: 8px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(236, 237, 242, 0.42)),
-    #fff;
+  background: var(--about-card-gradient), var(--about-card-surface);
   box-shadow:
-    rgba(255, 255, 255, 0.82) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.07) 0 24px 64px;
+    var(--about-card-inset) 0 1px 0 inset,
+    var(--about-card-shadow);
 }
 
 .about-page-experience-item {
@@ -647,7 +702,7 @@
 }
 
 .about-page-experience-item + .about-page-experience-item {
-  border-top: 1px solid rgba(49, 38, 59, 0.12);
+  border-top: 1px solid var(--about-border-faint);
 }
 
 .about-page-experience-item::before {
@@ -663,8 +718,8 @@
   height: 10px;
   border: 2px solid var(--color-secondary);
   border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 0 0 6px rgba(63, 112, 108, 0.1);
+  background: var(--about-card-surface);
+  box-shadow: 0 0 0 6px var(--about-secondary-glow);
 
   @media (min-width: 760px) {
     top: 50%;
@@ -674,7 +729,7 @@
 }
 
 .about-page-experience-item:hover {
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--about-card-muted);
   transform: translateX(2px);
 }
 
@@ -691,33 +746,32 @@
 
 .about-page-experience-item__year {
   width: fit-content;
-  border: 1px solid rgba(49, 38, 59, 0.12);
-  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--about-border-faint);
+  background: var(--about-card-muted);
   padding: 0.55rem 0.7rem;
 }
 
 .about-page-experience-item__title {
   max-width: 640px;
   font-size: var(--text-h4);
-
+  color: var(--color-ink-violet);
 }
 
 .about-page-experience-item__logo {
-  display: grid;
-  width: 110px;
-  height: 72px;
+  position: relative;
+  width: 132px;
+  height: 76px;
   flex: 0 0 auto;
-  place-items: center;
-  border: 1px solid rgba(49, 38, 59, 0.12);
-  background: rgba(255, 255, 255, 0.78);
-  padding: var(--space-2);
+  overflow: hidden;
+  border: 1px solid var(--about-logo-plate-border);
+  background: var(--about-logo-plate-bg);
+  box-shadow: var(--about-logo-plate-shadow);
 }
 
-.about-page-experience-item__logo img {
-  display: block;
-  width: 100%;
-  max-height: 100%;
+.about-page-experience-item__logo-img {
   object-fit: contain;
+  /* Inset padding on the fill image keeps logos off the plate edges. */
+  padding: 0.85rem 1rem;
 }
 
 .about-page-experience-item__company {
@@ -740,17 +794,17 @@
   gap: var(--space-6);
   overflow: hidden;
   margin-top: var(--space-6);
-  border: 1px solid rgba(49, 38, 59, 0.16);
+  border: 1px solid var(--about-border);
   border-radius: 8px;
   background:
-    radial-gradient(rgba(1, 1, 27, 0.038) 0.75px, transparent 0.75px),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(236, 237, 242, 0.62)),
-    #fff;
+    radial-gradient(var(--about-grain-b) 0.75px, transparent 0.75px),
+    var(--about-card-gradient),
+    var(--about-card-surface);
   background-size: 7px 7px, auto, auto;
   padding: var(--space-6);
   box-shadow:
-    rgba(255, 255, 255, 0.84) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.08) 0 26px 70px;
+    var(--about-card-inset) 0 1px 0 inset,
+    var(--about-card-shadow);
 
   @media (min-width: 960px) {
     grid-template-columns: minmax(320px, 0.88fr) minmax(0, 1fr);
@@ -767,8 +821,8 @@
 }
 
 .about-page-skills-panel::before {
-  top: -45px;
-  right: -45px;
+  top: var(--space-5);
+  right: var(--space-5);
   width: 132px;
   height: 132px;
   border: 1px solid rgba(63, 112, 108, 0.24);
@@ -787,7 +841,7 @@
 .about-page-skills-panel::after {
   inset: var(--space-6) 50% var(--space-6) auto;
   width: 1px;
-  background: rgba(49, 38, 59, 0.14);
+  background: var(--about-border-faint);
 
   @media (max-width: 959px) {
     display: none;
@@ -804,39 +858,34 @@
   display: grid;
   gap: var(--space-4);
   overflow: hidden;
-  margin-inline: calc(var(--space-6) * -1);
   padding-block: var(--space-2);
-  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 
   @media (min-width: 960px) {
-    margin-left: calc(var(--space-6) * -1);
-    margin-right: 0;
     padding-right: var(--space-6);
   }
 }
 
 .about-page-skill-marquee__row {
-  --logo-marquee-padding: var(--space-6);
+  --logo-marquee-padding: 0;
   --logo-marquee-gap: var(--space-3);
 
   width: 100%;
 }
 
 .about-page-skill-icon {
-  flex: 0 0 86px;
   display: grid;
-  padding: var(--space-3);
-  // min-height: 86px;
-  // min-width: 86px;
+  width: 82px;
+  height: 82px;
+  flex: 0 0 82px;
+  aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgba(49, 38, 59, 0.13);
+  border: 1px solid var(--about-border-faint);
   border-radius: 8px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(236, 237, 242, 0.54)),
-    #fff;
+  background: var(--about-card-gradient), var(--about-card-surface);
   box-shadow:
-    rgba(255, 255, 255, 0.74) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.05) 0 14px 30px;
+    var(--about-card-inset) 0 1px 0 inset,
+    var(--about-icon-shadow);
   transition:
     border-color 160ms ease,
     transform 160ms ease,
@@ -845,10 +894,10 @@
 
 .about-page-skill-icon:hover {
   transform: translateY(-2px);
-  border-color: rgba(49, 38, 59, 0.26);
+  border-color: var(--about-border-hover);
   box-shadow:
-    rgba(255, 255, 255, 0.84) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.09) 0 20px 42px;
+    var(--about-card-inset) 0 1px 0 inset,
+    var(--about-card-shadow-hover);
 }
 
 .about-page-skill-icon__image {

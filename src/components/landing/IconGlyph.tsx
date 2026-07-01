@@ -20,6 +20,7 @@ import mail from "@iconify/icons-lucide/mail";
 import menu from "@iconify/icons-lucide/menu";
 import messageCircle from "@iconify/icons-lucide/message-circle";
 import monitor from "@iconify/icons-lucide/monitor";
+import moon from "@iconify/icons-lucide/moon";
 import phone from "@iconify/icons-lucide/phone";
 import rocket from "@iconify/icons-lucide/rocket";
 import search from "@iconify/icons-lucide/search";
@@ -28,6 +29,7 @@ import shoppingCart from "@iconify/icons-lucide/shopping-cart";
 import shuffle from "@iconify/icons-lucide/shuffle";
 import sparkles from "@iconify/icons-lucide/sparkles";
 import star from "@iconify/icons-lucide/star";
+import sun from "@iconify/icons-lucide/sun";
 import users from "@iconify/icons-lucide/users";
 import x from "@iconify/icons-lucide/x";
 
@@ -53,6 +55,7 @@ const iconMap = {
   menu,
   messageCircle,
   monitor,
+  moon,
   phone,
   rocket,
   search,
@@ -62,6 +65,7 @@ const iconMap = {
   shuffle,
   sparkles,
   star,
+  sun,
   users,
   x,
 };

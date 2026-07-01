@@ -19,7 +19,7 @@
   border: 1px solid rgba(49, 38, 59, 0.16);
   background:
     radial-gradient(rgba(49, 38, 59, 0.04) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
-    rgba(255, 255, 255, 0.86);
+    var(--color-surface-raised);
   color: var(--color-ink-violet);
   padding: var(--space-4);
   transition:
@@ -28,9 +28,16 @@
     transform 160ms ease;
 }
 
+:global(:root[data-theme="dark"]) .case-study-pager__link {
+  border-color: rgba(248, 244, 255, 0.16);
+  background:
+    radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
+    rgba(21, 18, 29, 0.92);
+}
+
 .case-study-pager__link:hover {
   border-color: rgba(49, 38, 59, 0.34);
-  background-color: #fff;
+  background-color: var(--color-surface);
   transform: translateY(-1px);
 }
 
