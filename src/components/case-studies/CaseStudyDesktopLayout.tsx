@@ -10,17 +10,17 @@ function getPreviewImage(label: string) {
 
 export function CaseStudyDesktopLayout({ study }: { study: CaseStudyDetailData }) {
   const fallbackImage = getPreviewImage(study.urlLabel);
-  const homepageShowcase =
-    study.homepageShowcase ??
+  const pageShowcase =
+    study.pageShowcase ??
     {
-      label: "Desktop homepage",
-      title: "Delivered desktop homepage view",
-      text: "A focused desktop view of the homepage delivered for this project.",
+      label: "Delivered pages",
+      title: "Selected desktop page views",
+      text: "A focused look at the key desktop screens delivered for this project.",
       items: [
         {
-          label: "Homepage",
+          label: "Primary page",
           image: study.listing.image || fallbackImage,
-          caption: "Delivered homepage",
+          caption: "Delivered page view",
         },
       ],
     };
@@ -30,20 +30,20 @@ export function CaseStudyDesktopLayout({ study }: { study: CaseStudyDetailData }
       <div className="section__inner">
         <div className={`container ${styles.sectionInner}`}>
           <CaseStudySectionHeader
-            label={homepageShowcase.label}
-            title={homepageShowcase.title}
-            text={homepageShowcase.text}
+            label={pageShowcase.label}
+            title={pageShowcase.title}
+            text={pageShowcase.text}
           />
           <div
-            className={`${styles.comparisonGrid} ${homepageShowcase.items.length === 1 ? styles.comparisonGridSingle : ""}`}
-            aria-label={`${study.client} homepage showcase`}
+            className={`${styles.showcaseGrid} ${pageShowcase.items.length === 1 ? styles.showcaseGridSingle : ""}`}
+            aria-label={`${study.client} page showcase`}
           >
-            {homepageShowcase.items.map((item) => (
-              <article className={styles.comparisonItem} key={item.label}>
+            {pageShowcase.items.map((item) => (
+              <article className={styles.showcaseItem} key={item.label}>
                 <CaseStudyBrowserMockup label={`${study.urlLabel} / ${item.label.toLowerCase()}`} compact scrollOnHover imageSrc={item.image} />
                 <div className={styles.carouselCaption}>
                   <strong>{item.label}</strong>
-                  <span>{item.caption ?? "Desktop homepage capture"}</span>
+                  <span>{item.caption ?? "Desktop page capture"}</span>
                 </div>
               </article>
             ))}

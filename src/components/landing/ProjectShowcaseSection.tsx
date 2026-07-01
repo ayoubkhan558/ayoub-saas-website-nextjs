@@ -106,6 +106,12 @@ export function ProjectShowcaseSection({ projects }: { projects: ProjectCard[] }
               })}
             </div>
           </div>
+          <div className={styles["showcase__footer"]}>
+            <a className={styles["showcase__all-link"]} href="/projects" title="View all projects">
+              <span>View all projects</span>
+              <IconGlyph name="arrowRight" />
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -23,7 +23,7 @@
       "image": "/case-study/paganolaw-thumbnail.jpg",
       "imageAlt": "Screenshot preview of the Pagano Law website"
     },
-    "homepageShowcase": {
+    "pageShowcase": {
       "label": "Homepage comparison",
       "title": "Old Divi homepage and new Bricks rebuild",
       "text": "A side-by-side desktop view of the original Divi homepage and the rebuilt Bricks Builder experience.",
@@ -212,7 +212,7 @@
       "image": "/case-study/weinberger-thumbnail.jpg",
       "imageAlt": "Screenshot preview of the Weinberger Aesthetics clinic website"
     },
-    "homepageShowcase": {
+    "pageShowcase": {
       "label": "Homepage comparison",
       "title": "Old custom homepage and new Bricks build",
       "text": "A side-by-side desktop view of the previous custom WordPress homepage and the new Bricks Builder implementation.",
@@ -379,15 +379,15 @@
       "imageAlt": "Screenshot preview of the Studyly website"
     },
     "heroMockup": "/case-study/studyly-mockup.png",
-    "homepageShowcase": {
-      "label": "Delivered homepage",
-      "title": "New Studyly desktop homepage",
-      "text": "A full desktop view of the first-build homepage delivered from the supplied Figma design.",
+    "pageShowcase": {
+      "label": "Delivered pages",
+      "title": "Selected Studyly desktop page views",
+      "text": "A focused look at the main desktop pages delivered from the supplied Figma design.",
       "items": [
         {
-          "label": "New Studyly homepage",
+          "label": "Studyly landing page",
           "image": "/case-study/studyly-home.jpg",
-          "caption": "First-time frontend build"
+          "caption": "First-time frontend page build"
         }
       ]
     },
@@ -543,15 +543,15 @@
       "imageAlt": "Screenshot preview of the SerVeekay portfolio website"
     },
     "heroMockup": "/case-study/serveekay-mockup.png",
-    "homepageShowcase": {
-      "label": "Delivered homepage",
-      "title": "New SerVeekay desktop homepage",
-      "text": "A full desktop view of the first-build portfolio homepage converted from Figma into Bricks Builder.",
+    "pageShowcase": {
+      "label": "Delivered pages",
+      "title": "Selected SerVeekay desktop page views",
+      "text": "A focused look at the portfolio pages converted from Figma into Bricks Builder.",
       "items": [
         {
-          "label": "New SerVeekay homepage",
+          "label": "SerVeekay landing page",
           "image": "/case-study/serveekay-home.jpg",
-          "caption": "First-time WordPress build"
+          "caption": "First-time WordPress page build"
         }
       ]
     },
