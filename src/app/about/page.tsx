@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { IconGlyph } from "@/components/landing/IconGlyph";
 import { ContactFooter } from "@/components/landing/ContactFooter";
@@ -228,7 +229,14 @@ export default function AboutPage() {
                     <span className={styles["about-page-experience-item__year"]}>{item.year}</span>
                     {companyLogos[item.company] ? (
                       <span className={styles["about-page-experience-item__logo"]}>
-                        <img src={companyLogos[item.company]} alt={`${item.company} logo`} title={`${item.company} logo`} loading="lazy" />
+                        <Image
+                          src={companyLogos[item.company]}
+                          alt={`${item.company} logo`}
+                          title={`${item.company} logo`}
+                          fill
+                          sizes="132px"
+                          className={styles["about-page-experience-item__logo-img"]}
+                        />
                       </span>
                     ) : null}
                   </div>

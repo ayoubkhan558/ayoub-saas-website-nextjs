@@ -758,24 +758,20 @@
 }
 
 .about-page-experience-item__logo {
-  display: grid;
+  position: relative;
   width: 132px;
   height: 76px;
   flex: 0 0 auto;
-  place-items: center;
+  overflow: hidden;
   border: 1px solid var(--about-logo-plate-border);
   background: var(--about-logo-plate-bg);
-  padding: 0.75rem 0.9rem;
   box-shadow: var(--about-logo-plate-shadow);
 }
 
-.about-page-experience-item__logo img {
-  display: block;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
+.about-page-experience-item__logo-img {
   object-fit: contain;
+  /* Inset padding on the fill image keeps logos off the plate edges. */
+  padding: 0.85rem 1rem;
 }
 
 .about-page-experience-item__company {
