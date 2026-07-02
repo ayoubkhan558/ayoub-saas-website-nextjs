@@ -21,9 +21,9 @@ export function AboutPage() {
       <SiteHeader portfolio={portfolio} />
       <main>
         <AboutHero portfolio={portfolio} />
-        <AboutStorySection about={portfolio.about} />
-        <AboutExperienceSection experienceLog={portfolio.experienceLog} companyLogos={portfolio.about.companyLogos} />
-        <AboutToolboxSection about={portfolio.about} />
+        <AboutStorySection about={portfolio?.about} />
+        <AboutExperienceSection experienceLog={portfolio?.experienceLog} companyLogos={portfolio?.about.companyLogos} />
+        <AboutToolboxSection about={portfolio?.about} />
       </main>
       <ContactFooter portfolio={portfolio} />
     </div>

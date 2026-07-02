@@ -7,7 +7,7 @@ export function TrustSections({ portfolio }: { portfolio: PortfolioData }) {
     <section className={`${styles["trust-sections"]} section section--intro`} id="trust">
       <div className="section__inner">
           <div className={`${styles["trust-sections__logos"]} container container--fluid`}>
-            <TrustLogos clients={portfolio.clients} />
+            <TrustLogos clients={portfolio?.clients} />
           </div>
       </div>
     </section>

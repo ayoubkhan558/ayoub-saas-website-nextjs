@@ -101,7 +101,7 @@ const sections = [
     title: "Changes and contact",
     paragraphs: [
       "I may update this policy when the website, tools, or workflow changes. The updated date on this page shows the latest version.",
-      `For privacy questions or requests, contact ${portfolio.profile.email}.`,
+      `For privacy questions or requests, contact ${portfolio?.profile.email}.`,
     ],
   },
 ];

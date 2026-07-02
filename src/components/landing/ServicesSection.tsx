@@ -13,7 +13,7 @@ export function ServicesSection({ services }: { services: Service[] }) {
       <div className="section__inner">
         <div className={`container ${styles["services"]}`}>
           <header className="section-header section-header--center">
-            <span className="section-header__label">Productized solutions</span>
+            <span className="section-header__label">Solutions</span>
             <h2 className="section-header__title">
               What you can hire me for
             </h2>

@@ -119,7 +119,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <ContactFaqsSection faqs={portfolio.faqs} />
+        <ContactFaqsSection faqs={portfolio?.faqs} />
       </main>
       <ContactFooter portfolio={portfolio} />
     </div>

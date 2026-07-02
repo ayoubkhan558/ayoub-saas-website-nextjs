@@ -20,6 +20,8 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
   const proofClient = portfolio.clients.find((client) => "proofText" in client);
   const proofText = proofClient && "proofText" in proofClient ? proofClient.proofText : "";
   const heroTestimonial = portfolio.clients.find((client) => client.name === "Markedine") ?? portfolio.clients.find((client) => client.testimonial);
+  const primaryExperience = portfolio.about.awards.find((award) => /experience|year/i.test(award.label));
+  const projectsDelivered = portfolio.about.awards.find((award) => /project|deliver/i.test(award.label));
 
   return (
     <section id="top" className={`${styles["hero"]} section section--hero`}>
@@ -29,36 +31,31 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
           <div className={styles["hero__copy"]}>
             <h1 className={styles["hero__title"]}>
               <span className={`${styles["hero__title-line"]} ${styles["hero__title-line--intro"]}`}>Hi, I&apos;m M Ayoub.</span>
-              <span className={styles["hero__title-line"]}>{portfolio.hero.headlineLineOne}</span>
-              <span className={styles["hero__title-line"]} data-accent>{portfolio.hero.headlineLineTwo}</span>
+              <span className={styles["hero__title-line"]}>{portfolio?.hero.headlineLineOne}</span>
+              {/* <span className={styles["hero__title-line"]} data-accent>{portfolio?.hero.headlineLineTwo}</span> */}
             </h1>
 
             <p className={styles["hero__text"]}>
-              {portfolio.hero.subheadline}
+              {portfolio?.hero.subheadline}
             </p>
 
             <div className={styles["hero__actions"]}>
               <a className="button" href="/contact" title="Start a website project with Muhammad Ayoub">
-                {portfolio.hero.primaryCta}
+                {portfolio?.hero.primaryCta}
                 <IconGlyph name="arrowRight" />
               </a>
               <a className="button button--ghost" href="/case-studies" title="View Muhammad Ayoub case studies">
-                {portfolio.hero.secondaryCta}
+                {portfolio?.hero.secondaryCta}
                 <IconGlyph name="layers" />
               </a>
             </div>
 
             <div className={styles["hero__proof-row"]}>
-              {heroTestimonial ? (
-                <figure className={styles["hero__quote-card"]}>
-                  <blockquote>{heroTestimonial.testimonial}</blockquote>
-                </figure>
-              ) : null}
               <div className={styles["hero__client-proof"]} aria-label="Client reviews">
                 <div className={styles["hero__client-photos"]} aria-hidden="true">
                   {proofClients.map((client) => (
                     <span className={styles["hero__client-photo"]} key={client.name}>
-                      {client.avatar ? <img src={client.avatar} alt={`${client.name} client avatar`} title={`${client.name} client avatar`} loading="lazy" /> : client.initials}
+                      {client.avatar ? <img className={styles["hero__client-photo-img"]} src={client.avatar} alt={`${client.name} client avatar`} title={`${client.name} client avatar`} loading="lazy" /> : client.initials}
                     </span>
                   ))}
                 </div>
@@ -72,24 +69,31 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
 
           <aside className={styles["hero__profile-panel"]} aria-label="Muhammad Ayoub profile and testimonial">
             <div className={styles["hero__identity"]} aria-label="Muhammad Ayoub profile">
-              <span className={styles["hero__portrait"]}>
-                <img src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub Khan website developer" title="Muhammad Ayoub Khan website developer" />
-              </span>
-              <div className={styles["hero__identity-copy"]}>
-                <strong>M. Ayoub</strong>
-                <span>Frontend and WordPress developer</span>
-                <span className={styles["hero__experience"]}>5+ Years of Experience</span>
-              </div>
-              <div className={styles["hero__badges"]} aria-label="Availability and trust badges">
-                {portfolio.hero.badges.map((badge) => (
-                  <span className={`badge ${styles["hero__badge"]}`} key={badge.label}>
-                    <IconGlyph name={badge.icon} />
-                    {badge.label}
+              <div className={styles["hero__identity-head"]}>
+                <span className={styles["hero__portrait"]}>
+                  <img className={styles["hero__portrait-img"]} src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub Khan website developer" title="Muhammad Ayoub Khan website developer" />
+                  <span className={styles["hero__portrait-status"]} aria-hidden="true" />
+                </span>
+                <div className={styles["hero__identity-copy"]}>
+                  <strong className={styles["hero__identity-name"]}>M. Ayoub</strong>
+                  <span className={styles["hero__identity-role"]}>Frontend &amp; WordPress Developer</span>
+                  <span className={styles["hero__identity-availability"]}>
+                    <span className={styles["hero__identity-availability-dot"]} aria-hidden="true" />
+                    Open for projects
                   </span>
-                ))}
+                  <div className={styles["hero__badges"]} aria-label="Availability and trust badges">
+                    {portfolio?.hero.badges.map((badge) => (
+                      <span className={`badge ${styles["hero__badge"]}`} key={badge.label}>
+                        <IconGlyph name={badge.icon} className={styles["hero__badge-icon"]} />
+                        {badge.label}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
+
             </div>
-            <div className={styles["hero__tool-marquee"]} aria-label="Tools and platforms">
+            {/* <div className={styles["hero__tool-marquee"]} aria-label="Tools and platforms">
               <span className={styles["hero__tool-marquee-label"]}>Stack I ship with</span>
               <LogoMarquee
                 ariaLabel="Tools and platforms"
@@ -99,8 +103,8 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
                 items={heroToolLogos}
                 speed={14}
               />
-            </div>
-            <SocialProofStats awards={portfolio.about.awards} className={styles["hero__stats"]} />
+            </div> */}
+            <SocialProofStats awards={portfolio?.about.awards} className={styles["hero__stats"]} />
           </aside>
         </div>
       </div>

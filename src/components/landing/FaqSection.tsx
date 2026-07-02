@@ -18,7 +18,7 @@ export function FaqSection({ portfolio }: { portfolio: PortfolioData }) {
             />
           </div>
           <div className={styles["faq__list"]}>
-            {portfolio.faqs.map((faq, index) => {
+            {portfolio?.faqs.map((faq, index) => {
               const isOpen = activeFaqIndex === index;
               const answerId = `faq-answer-${index + 1}`;
 

@@ -62,7 +62,7 @@ export function ServicesOffers({ services }: { services: PortfolioData["services
           <header className={styles["services-section-header"]}>
             <span className={styles["services-page__eyebrow"]}>Solutions I provide</span>
             <h2>
-              Productized solutions for business website problems.
+              Solutions for business website problems.
             </h2>
             <p>
               Each solution starts with the business pain point, then uses the right development approach behind the scenes.

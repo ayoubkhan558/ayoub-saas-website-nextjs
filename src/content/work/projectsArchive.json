@@ -1477,7 +1477,7 @@
       "client": " | Epicsols",
       "notes": null,
       "date": "2023-06-08",
-      "dateRaw": "45085.0",
+      "dateRaw": "45084.7+",
       "projectType": "E-commerce website",
       "description": "GlowUpDental is an e-commerce website translated from Figma with Shopify to turn the brand into a faster production-ready web presence.",
       "projectStatus": "Live"
@@ -1595,7 +1595,7 @@
       "client": " | Epicsols",
       "notes": "https://github.com/epicsols/website-mint",
       "date": "2023-07-18",
-      "dateRaw": "45125.0",
+      "dateRaw": "45124.7+",
       "projectType": "Web app interface",
       "description": "AppMint is a web app interface translated from Figma with Reactjs NextJs, TailwindCSS to ship a focused front-end experience from design to launch.",
       "projectStatus": "Live",

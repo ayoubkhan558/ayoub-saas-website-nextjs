@@ -1,9 +1,6 @@
 @use "../../styles/mixins" as *;
 
 .trust-logos {
-  --trust-logos-bg: linear-gradient(90deg, rgba(49, 38, 59, 0.05) 1px, transparent 1px) 0 0 / 96px 96px,
-    radial-gradient(rgba(49, 38, 59, 0.065) 1px, transparent 1px) 0 0 / 7px 7px,
-    var(--color-surface-muted);
   --trust-logos-label-bg: var(--color-parchment);
   --trust-logos-label-color: var(--color-plum-charcoal);
   --trust-logos-logo-filter: grayscale(1) contrast(1.2);
@@ -23,10 +20,6 @@
 }
 
 :global(:root[data-theme="dark"]) .trust-logos {
-  --trust-logos-bg:
-    linear-gradient(90deg, rgba(248, 244, 255, 0.045) 1px, transparent 1px) 0 0 / 96px 96px,
-    radial-gradient(rgba(248, 244, 255, 0.06) 1px, transparent 1px) 0 0 / 7px 7px,
-    rgba(21, 18, 29, 0.82);
   --trust-logos-label-bg: #121019;
   --trust-logos-label-color: var(--color-heading);
   --trust-logos-logo-filter: grayscale(1) invert(1) brightness(1.15) contrast(0.95);
@@ -105,7 +98,7 @@
   border: unset;
   position: relative;
   display: inline-grid;
-  min-width: 118px;
+  // min-width: 118px;
   min-height: 58px;
   place-items: center;
   border-radius: var(--radius-buttons);
@@ -125,7 +118,6 @@
   height: auto;
   filter: var(--trust-logos-logo-filter);
   mix-blend-mode: var(--trust-logos-logo-blend);
-  opacity: var(--trust-logos-logo-opacity);
   object-fit: contain;
   object-position: center;
   max-width: 82px;
@@ -138,14 +130,10 @@
 }
 
 :global(:root[data-theme="dark"]) .trust-logos__logo:hover img {
-  filter: var(--trust-logos-logo-filter);
+  mix-blend-mode: normal;
 }
 
-.trust-logos__logo:hover img {
-  filter: grayscale(0) contrast(1);
-  mix-blend-mode: normal;
-  opacity: 1;
-}
+.trust-logos__logo:hover img {}
 
 .trust-logos__review {
   position: absolute;

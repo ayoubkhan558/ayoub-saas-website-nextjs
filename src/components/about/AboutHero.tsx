@@ -18,7 +18,7 @@ export function AboutHero({ portfolio }: { portfolio: PortfolioData }) {
               Self-taught developer, building with purpose.
             </h1>
             <p className={styles["about-page-hero__text"]}>
-              {portfolio.profile.summary}
+              {portfolio?.profile.summary}
             </p>
             <div className={styles["about-page-hero__actions"]}>
               <Link className="button" href="/contact" title={`Hire ${fullName}`}>
@@ -27,7 +27,7 @@ export function AboutHero({ portfolio }: { portfolio: PortfolioData }) {
               </Link>
               <a
                 className="button button--ghost"
-                href={portfolio.about.resumeHref}
+                href={portfolio?.about.resumeHref}
                 target="_blank"
                 rel="noreferrer"
                 download

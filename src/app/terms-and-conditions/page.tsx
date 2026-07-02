@@ -116,7 +116,7 @@ const sections = [
   {
     title: "Contact",
     paragraphs: [
-      `For questions about these terms, contact ${portfolio.profile.email}.`,
+      `For questions about these terms, contact ${portfolio?.profile.email}.`,
     ],
   },
 ];

@@ -14,9 +14,7 @@
     "currentlyBuilding": "Brickify workflows",
     "summary": "I help businesses turn unclear, slow, or outdated websites into sharper digital experiences that build trust, explain the offer, and turn visitors into qualified inquiries."
   },
-  "topbar": {
-    "offer": "Refer a client \u2014 get 15% off your next project"
-  },
+  "offer": "Refer a client \u2014 get 15% off your next project",
   "navLinks": [
     {
       "label": "About",
@@ -82,8 +80,8 @@
     }
   },
   "hero": {
-    "headlineLineOne": "I build websites that sell.",
-    "headlineLineTwo": "Clear offers. More trust. Better leads.",
+    "headlineLineOne": "I built websites that convert visitors into leads.",
+    "headlineLineTwo": "",
     "subheadline": "Hi, I\u2019m M Ayoub \u2014 I help businesses turn unclear, outdated websites into focused pages that explain the offer and move visitors toward action.",
     "primaryCta": "Book a discovery call",
     "secondaryCta": "View case studies",
@@ -91,10 +89,6 @@
       {
         "icon": "star",
         "label": "Top Rated on Upwork"
-      },
-      {
-        "icon": "users",
-        "label": "Open for new projects"
       }
     ],
     "trustMetrics": [
@@ -554,11 +548,11 @@
     "awards": [
       {
         "label": "Projects delivered",
-        "value": "50+"
+        "value": "4.7+"
       },
       {
         "label": "Rating",
-        "value": "4.9/5"
+        "value": "4.7+"
       },
       {
         "label": "Experience",
@@ -721,7 +715,7 @@
       "status": "Verified"
     },
     {
-      "label": "4.9/5 Rating",
+      "label": "4.7+ Rating",
       "status": "Trusted"
     },
     {
@@ -929,6 +923,7 @@
       "name": "Weinberger Aesthetics",
       "role": "Aesthetics practice client",
       "logo": "/client/weinberger-aesthetics-logo.svg",
+      "logoDark": "/client/weinberger-aesthetics-logo-no-color.svg",
       "website": "https://weinbergeraesthetics.com/",
       "reviewId": "review-weinbergeraesthetics-01",
       "review": "Aesthetic practice pages tuned for premium trust and appointment intent.",
@@ -943,6 +938,7 @@
       "name": "Studyly",
       "role": "Education product client",
       "logo": "/client/studyly-logo.svg",
+      "logoDark": "/client/studyly-logo-no-color.svg",
       "website": "https://studyly.com/",
       "reviewId": "review-studyly-01",
       "review": "Education product UI shaped around simple onboarding and readable content.",
@@ -957,6 +953,7 @@
       "name": "Sunshield Insurance",
       "role": "Insurance website client",
       "logo": "/client/sunshieldins-logo.svg",
+      "logoDark": "/client/sunshieldins-logo-no-color.svg",
       "website": "https://sunshieldins.com/",
       "reviewId": "review-sunshieldins-01",
       "review": "Insurance pages organized for faster quote intent and clearer service paths.",
@@ -971,6 +968,7 @@
       "name": "Kings RE",
       "role": "Real estate client",
       "logo": "/client/kingsre-logo.png",
+      "logoDark": "/client/kingsre-logo-no-color.png",
       "website": "https://www.kingsrealestate.com/",
       "reviewId": "review-kingsre-01",
       "review": "Real estate pages structured for trust, clarity, and lead capture.",
@@ -985,6 +983,7 @@
       "name": "LWS Academy",
       "role": "Education platform client",
       "logo": "/client/lws-academy-logo.png",
+      "logoDark": "/client/lws-academy-logo-no-color.png",
       "website": "https://lws.academy/",
       "reviewId": "review-lwsacademy-01",
       "review": "Learning-site interface work with cleaner content structure and navigation.",
@@ -999,6 +998,7 @@
       "name": "Markedine",
       "role": "Marketing website client",
       "logo": "/client/markedine-logo.png",
+      "logoDark": "/client/markedine-logo-no-color.png",
       "website": "https://markedine.com/",
       "reviewId": "review-markedine-01",
       "review": "Marketing pages refined for sharper positioning and conversion paths.",
@@ -1013,6 +1013,7 @@
       "name": "Pagano Law",
       "role": "Professional services client",
       "logo": "/client/paganolaw-logo.png",
+      "logoDark": "/client/paganolaw-logo.png",
       "website": "https://paganolaw.com/",
       "reviewId": "review-paganolaw-01",
       "review": "Professional service pages built around credibility and clear inquiry paths.",
@@ -1027,6 +1028,7 @@
       "name": "RO Gold",
       "role": "Commerce client",
       "logo": "/client/ro-gold-logo.png",
+      "logoDark": "/client/ro-gold-logo-no-color.png",
       "website": "https://rogold.com/",
       "reviewId": "review-rogold-01",
       "review": "Commerce presentation polished for product confidence and premium feel.",
@@ -1041,6 +1043,7 @@
       "name": "Serveekay",
       "role": "Service business client",
       "logo": "/client/serveekay-logo.svg",
+      "logoDark": "/client/serveekay-logo-no-color.svg",
       "website": "https://serveekay.com/",
       "reviewId": "review-serveekay-01",
       "review": "Service-site delivery with better hierarchy, speed, and maintainability.",
@@ -1055,6 +1058,7 @@
       "name": "Baby PNG",
       "role": "Image tooling client",
       "logo": "/client/baby-png-logo.svg",
+      "logoDark": "/client/baby-png-logo-no-color.svg",
       "website": "https://babypng.com/",
       "reviewId": "review-babypng-01",
       "review": "Image tooling UI delivered with cleaner flows and faster conversion paths.",
@@ -1071,6 +1075,7 @@
       "name": "Carptrac",
       "role": "Service website client",
       "logo": "/client/carptrac-Logo.svg",
+      "logoDark": "/client/carptrac-Logo-no-color.svg",
       "website": "https://www.carptrac.com.fj/",
       "reviewId": "review-carptrac-01",
       "review": "A practical website build that made product and service discovery easier.",
@@ -1085,6 +1090,7 @@
       "name": "5G Store",
       "role": "E-commerce client",
       "logo": "/client/logo-5g-store.png",
+      "logoDark": "/client/logo-5g-store-no-color.png",
       "website": "https://5gstore.com/",
       "reviewId": "review-5gstore-01",
       "review": "E-commerce improvements focused on product clarity and technical buyers.",
@@ -1099,6 +1105,7 @@
       "name": "Serpio",
       "role": "Product interface client",
       "logo": "/client/serpio-logo.png",
+      "logoDark": "/client/serpio-logo-no-color.png",
       "website": "https://serpio.com/",
       "reviewId": "review-serpio-01",
       "review": "Product interface work focused on usability, structure, and launch quality.",
@@ -1113,6 +1120,7 @@
       "name": "The Royal Pin",
       "role": "Brand commerce client",
       "logo": "/client/theroyalpin-logo.png",
+      "logoDark": "/client/theroyalpin-logo-no-color.png",
       "website": "https://theroyalpin.com/",
       "reviewId": "review-theroyalpin-01",
       "review": "Brand-led site work with stronger product storytelling and polish.",
@@ -1127,6 +1135,7 @@
       "name": "Shinning Horizon",
       "role": "Brand website client",
       "logo": "/client/shinning-horizon-logo.png",
+      "logoDark": "/client/shinning-horizon-logo-no-color.png",
       "website": "https://shinninghorizon.com/",
       "reviewId": "review-shinninghorizon-01",
       "review": "A cleaner web presence with stronger section flow and visual consistency.",
