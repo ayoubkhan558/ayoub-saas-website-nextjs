@@ -15,7 +15,7 @@ export function ProblemSection({ portfolio }: { portfolio: PortfolioData }) {
             eyebrow="Your site should build trust before your prospect ever books a call."
           />
           <div className={styles["problem__pain-grid"]}>
-            {portfolio.painPoints.map((point, index) => (
+            {portfolio?.painPoints.map((point, index) => (
               <article className={styles["problem__pain-card"]} key={point}>
                 <span className={styles["problem__pain-index"]}>Issue 0{index + 1}</span>
                 <h3 className={styles["problem__pain-title"]}>{point}</h3>
@@ -25,10 +25,24 @@ export function ProblemSection({ portfolio }: { portfolio: PortfolioData }) {
               </article>
             ))}
           </div>
+          {"bestFit" in portfolio ? (
+            <div className={styles["problem__fit"]}>
+              <span className={styles["problem__ticker-label"]}>Best fit for</span>
+              <div className={styles["problem__fit-grid"]}>
+                {(portfolio.bestFit as string[]).map((item) => (
+                  <span className={styles["problem__fit-item"]} key={item}>
+                    <IconGlyph name="check" />
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
           <div className={styles["problem__ticker"]}>
             <span className={styles["problem__ticker-label"]}>Problems I solve</span>
             <div className={styles["problem__ticker-track"]}>
-              {portfolio.problemsSolved.map((problem) => (
+              {portfolio?.problemsSolved.map((problem) => (
                 <strong className={styles["problem__ticker-item"]} key={problem}>{problem}</strong>
               ))}
             </div>

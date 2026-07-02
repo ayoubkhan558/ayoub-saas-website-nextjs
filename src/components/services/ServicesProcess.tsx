@@ -18,7 +18,7 @@ export function ServicesProcess({ process }: { process: PortfolioData["process"]
           </header>
 
           <div className={styles["services-process__grid"]}>
-            {process.slice(0, 4).map((step, index) => (
+            {process.map((step, index) => (
               <article className={styles["services-process-card"]} key={step.title}>
                 {/* <span className={styles["services-process-card__index"]}>{String(index + 1).padStart(2, "0")}</span> */}
                 <IconGlyph name={step.icon} />

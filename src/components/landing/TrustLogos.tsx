@@ -58,7 +58,7 @@ function LogoAsset({ client, isOpen, onToggle }: { client: Client; isOpen: boole
       onClick={onToggle}
       title={`Read ${client.name} client review`}
     >
-      <img src={client.logo} alt={`${client.name} logo`} title={`${client.name} logo`} loading="lazy" />
+      <img src={client.logoDark} alt={`${client.name} logo`} title={`${client.name} logo`} loading="lazy" />
       <span className={styles["trust-logos__review"]} id={client.reviewId} role="tooltip">
         <span className={styles["trust-logos__review-name"]}>{client.name}</span>
         <span className={styles["trust-logos__review-text"]}>{client.review}</span>

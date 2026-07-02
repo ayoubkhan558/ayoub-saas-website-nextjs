@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { buildLegalPageSchema, jsonLdScript } from "@/lib/seo-schema";
-import portfolio from "@/data/portfolio.json";
+import portfolio from "@/content/portfolio/portfolio.json";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Muhammad Ayoub",
@@ -27,7 +27,7 @@ const sections = [
   {
     title: "Who this policy applies to",
     paragraphs: [
-      "This policy applies when you visit this website, contact me about a project, request an estimate, or work with me on web design, WordPress, WooCommerce, React, or Next.js development.",
+      "This policy applies when you visit this website, contact me about a project, request an estimate, or work with me on web design, custom React.js, HTML/CSS, JavaScript, or Next.js development.",
       "It is written for a small freelance development business. A separate project agreement may add more specific privacy or confidentiality terms.",
     ],
   },
@@ -101,7 +101,7 @@ const sections = [
     title: "Changes and contact",
     paragraphs: [
       "I may update this policy when the website, tools, or workflow changes. The updated date on this page shows the latest version.",
-      `For privacy questions or requests, contact ${portfolio.profile.email}.`,
+      `For privacy questions or requests, contact ${portfolio?.profile.email}.`,
     ],
   },
 ];

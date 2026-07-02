@@ -24,7 +24,7 @@ export function ProjectArchiveSection({
     <section className={`section ${styles.archive}`} id="projects-list">
       <div className="section__inner">
         <div className={`container ${styles.archive__inner}`}>
-          <header className={styles.sectionHeader}>
+          <header className={styles["section-header"]}>
             <span className={styles.eyebrow}>Selected work</span>
             <h2>Project archive.</h2>
             <p>

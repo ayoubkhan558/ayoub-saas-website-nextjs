@@ -11,7 +11,7 @@ export function CaseStudyJsonLd({
   const projectType = study.facts.find((fact) => fact.label.toLowerCase() === "project type")?.value;
   const industry = study.facts.find((fact) => fact.label.toLowerCase() === "industry")?.value;
   const objective = study.facts.find((fact) => fact.label.toLowerCase() === "objective")?.value;
-  const pageUrl = `${portfolio.profile.website}/case-studies/${study.slug}`;
+  const pageUrl = `${portfolio?.profile.website}/case-studies/${study.slug}`;
   const previewImage = `https://s.wordpress.com/mshots/v1/${encodeURIComponent(study.liveUrl)}?w=1200`;
 
   const jsonLd = {
@@ -19,7 +19,7 @@ export function CaseStudyJsonLd({
     "@graph": [
       {
         "@type": "Person",
-        "@id": `${portfolio.profile.website}#person`,
+        "@id": `${portfolio?.profile.website}#person`,
         name: portfolio.profile.name,
         url: portfolio.profile.website,
         email: portfolio.profile.email,
@@ -67,7 +67,7 @@ export function CaseStudyJsonLd({
           "@id": `${pageUrl}#webpage`,
         },
         creator: {
-          "@id": `${portfolio.profile.website}#person`,
+          "@id": `${portfolio?.profile.website}#person`,
         },
         about: {
           "@id": `${study.liveUrl}#client`,
@@ -77,7 +77,7 @@ export function CaseStudyJsonLd({
           name: projectType,
           serviceType: projectType,
           provider: {
-            "@id": `${portfolio.profile.website}#person`,
+            "@id": `${portfolio?.profile.website}#person`,
           },
           areaServed: "Worldwide",
           audience: {

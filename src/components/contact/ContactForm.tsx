@@ -6,14 +6,20 @@ import { IconGlyph } from "@/components/landing/IconGlyph";
 import styles from "./ContactPage.module.scss";
 
 const projectTypes = [
-  "React / Next.js build",
-  "WordPress or WooCommerce",
+  "Business website redesign",
+  "WordPress / Bricks Builder build",
+  "WooCommerce store improvement",
+  "React / Next.js front end",
   "Landing page or funnel",
-  "Existing site cleanup",
+  "Existing site speed or cleanup",
 ];
 
+const budgetRanges = ["Under $1,000", "$1,000 - $3,000", "$3,000 - $7,500", "$7,500+", "Not sure yet"];
+const timelines = ["ASAP", "2-4 weeks", "1-2 months", "Flexible / planning ahead"];
+const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? "mgojyyqd";
+
 export function ContactForm() {
-  const [state, handleSubmit] = useForm("mgojyyqd");
+  const [state, handleSubmit] = useForm(formspreeId);
   const searchParams = useSearchParams();
   const subject = searchParams.get("subject") ?? "";
   const details = searchParams.get("details") ?? "";
@@ -39,11 +45,11 @@ export function ContactForm() {
         <span className={styles["contact-page__eyebrow"]}>Project brief</span>
         <h2>What to send.</h2>
         <p>Give me enough context to price the next step without a long discovery call.</p>
-        <div className={styles["contact-form-card__meta"]}>
+        {/* <div className={styles["contact-form-card__meta"]}>
           <span>Goal</span>
           <span>Timeline</span>
           <span>Budget range</span>
-        </div>
+        </div> */}
       </div>
 
       <div className={styles["contact-form-card__row"]}>
@@ -86,6 +92,42 @@ export function ContactForm() {
         />
       </label>
 
+
+      <div className={styles["contact-form-card__row"]}>
+        <label htmlFor="budgetRange">
+          <span>Budget range</span>
+          <select id="budgetRange" name="budgetRange" defaultValue="">
+            <option value="" disabled>
+              Choose one
+            </option>
+            {budgetRanges.map((range) => (
+              <option value={range} key={range}>
+                {range}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label htmlFor="timeline">
+          <span>Timeline</span>
+          <select id="timeline" name="timeline" defaultValue="">
+            <option value="" disabled>
+              Choose one
+            </option>
+            {timelines.map((timeline) => (
+              <option value={timeline} key={timeline}>
+                {timeline}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      <label>
+        <span>Existing website URL</span>
+        <input name="websiteUrl" type="url" placeholder="https://example.com" />
+      </label>
+
       <label>
         <span>Project details</span>
         <textarea
@@ -100,7 +142,7 @@ export function ContactForm() {
 
       <ValidationError className={styles["contact-form-card__error"]} errors={state.errors} />
 
-      <button className="button button--dark" type="submit" disabled={state.submitting}>
+      <button className="button" type="submit" disabled={state.submitting}>
         {state.submitting ? "Sending..." : "Send project brief"}
         <IconGlyph name="arrowRight" />
       </button>

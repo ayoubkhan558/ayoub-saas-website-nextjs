@@ -20,7 +20,7 @@ export function ContactHeroSection({ profile }: { profile: PortfolioData["profil
               I will respond with the practical next step.
             </p>
             <div className={styles["contact-hero__actions"]}>
-              <a className="button button--dark" href={mailto} title="Send project details to Muhammad Ayoub">
+              <a className="button" href={mailto} title="Send project details to Muhammad Ayoub">
                 Send project details
                 <IconGlyph name="arrowRight" />
               </a>

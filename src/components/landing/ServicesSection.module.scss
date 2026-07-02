@@ -141,7 +141,7 @@
 .services__link svg {
   width: 15px;
   height: 15px;
-  color: var(--color-twilight-plum);
+  color: var(--color-primary);
 }
 
 .services__link:hover,
@@ -151,4 +151,12 @@
 .services__link:focus-visible svg,
 .services__link:active svg {
   color: var(--color-primary);
+}
+
+.services__price {
+  display: block;
+  margin-top: var(--space-3);
+  color: var(--color-primary);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-lg);
 }

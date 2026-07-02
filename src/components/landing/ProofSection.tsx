@@ -7,7 +7,7 @@ export function ProofSection({ portfolio }: { portfolio: PortfolioData }) {
     <section className={`section ${styles["proof"]}`} id="proof">
       <div className="section__inner">
         <div className="container">
-          <ClientTestimonials clients={portfolio.clients} />
+          <ClientTestimonials clients={portfolio?.clients} />
         </div>
       </div>
     </section>

@@ -1,8 +1,7 @@
-import type { PortfolioData } from "@/context/PortfolioContentContext";
 import { IconGlyph } from "./IconGlyph";
 import styles from "./ProcessSection.module.scss";
 
-export function ProcessSection({ portfolio }: { portfolio: PortfolioData }) {
+export function ProcessSection() {
   const expectations = [
     "Business-first thinking",
     "Conversion-focused solutions",
@@ -15,11 +14,11 @@ export function ProcessSection({ portfolio }: { portfolio: PortfolioData }) {
     "Long-term partnership",
   ];
   const clientFirstProcess = [
-    "Discovery and requirements",
-    "Planning and strategy",
-    "Development and feedback",
-    "Testing and optimization",
-    "Launch and ongoing support",
+    "Discovery",
+    "Planning",
+    "Development",
+    "Testing",
+    "Deployment + Support",
   ];
 
   return (
@@ -28,9 +27,9 @@ export function ProcessSection({ portfolio }: { portfolio: PortfolioData }) {
         <div className={`container ${styles["process"]}`}>
           <header className="section-header section-header--center">
             <span className="section-header__label">Working style</span>
-            <h2 className="section-header__title">Why clients enjoy working with me</h2>
+            <h2 className="section-header__title">My development process</h2>
             <p className="section-header__text">
-              A quick look at how I approach every project, from our first conversation to long-term support.
+              A developer-led process built around planning, architecture, development, testing, deployment, and long-term support.
             </p>
           </header>
           <div className={styles["process__expectations"]}>
@@ -46,24 +45,13 @@ export function ProcessSection({ portfolio }: { portfolio: PortfolioData }) {
               </div>
             </article>
             <article className={styles["process__panel"]}>
-              <span className={styles["process__panel-label"]}>My client-first process</span>
+              <span className={styles["process__panel-label"]}>Process I Follow</span>
               <ol className={styles["process__ordered-list"]}>
                 {clientFirstProcess.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ol>
             </article>
-          </div>
-          <div className={styles["process__timeline"]}>
-            {portfolio.process.slice(0, 4).map((step) => (
-              <article className={styles["process__step"]} key={step.tag}>
-                <div className={styles["process__icon"]}>
-                  <IconGlyph name={step.icon} />
-                </div>
-                <h3 className={styles["process__step-title"]}>{step.title}</h3>
-                <p className={styles["process__step-text"]}>{step.description}</p>
-              </article>
-            ))}
           </div>
         </div>
       </div>

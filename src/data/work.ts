@@ -1,5 +1,5 @@
 import { caseStudyDetails } from "./caseStudyDetails";
-import projectsJson from "./projects.json";
+import projectsJson from "../content/work/projects.json";
 
 export type CaseStudyCard = {
   tag: string;

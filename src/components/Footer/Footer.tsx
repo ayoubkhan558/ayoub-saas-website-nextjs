@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import styles from "./Footer.module.scss";
 
 export function Footer({ portfolio }: { portfolio: PortfolioData }) {
@@ -15,7 +15,7 @@ export function Footer({ portfolio }: { portfolio: PortfolioData }) {
             <div className={styles["footer__masthead"]}>
               <div className={styles["footer__brand-block"]}>
                 <a className={styles["footer__logo"]} href="/#top" title="MAYOUB.DEV home">
-                  <Image src="/mayoub-dev-logo.svg" alt="mayoub.dev logo" title="mayoub.dev logo" width={640} height={160} />
+                  <BrandLogo />
                 </a>
                 <p className={styles["footer__summary"]}>{profile.summary}</p>
               </div>

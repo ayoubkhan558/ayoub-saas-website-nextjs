@@ -17,7 +17,7 @@ export function ProjectsHero({ stats }: { stats: Array<{ label: string; value: s
               project tracker.
             </p>
             <div className={styles.hero__actions}>
-              <Link className="button button--dark" href="/contact" title="Contact Muhammad Ayoub about a project">
+              <Link className="button" href="/contact" title="Contact Muhammad Ayoub about a project">
                 Start a project
                 <IconGlyph name="arrowRight" />
               </Link>

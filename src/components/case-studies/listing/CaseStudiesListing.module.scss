@@ -26,7 +26,7 @@
 }
 
 .hero__copy,
-.sectionHeader {
+.section-header {
   display: grid;
   gap: var(--space-4);
   max-width: var(--page-section-header-max);
@@ -48,14 +48,14 @@
   
 }
 
-.sectionHeader h2 {
+.section-header h2 {
   max-width: 820px;
   font-size: var(--page-section-title-size);
   
 }
 
 .hero h1 i,
-.sectionHeader h2 i {
+.section-header h2 i {
   color: var(--color-ink-violet);
   font-family: var(--font-editorial-display);
   font-style: normal;
@@ -63,7 +63,7 @@
 }
 
 .hero p,
-.sectionHeader p {
+.section-header p {
   max-width: var(--page-hero-text-max);
   color: var(--color-storm-mauve);
   font-size: var(--page-section-copy-size);
@@ -321,7 +321,7 @@
   color: var(--color-primary);
 }
 .hero__copy > .eyebrow,
-.sectionHeader > .eyebrow {
+.section-header > .eyebrow {
   color: var(--color-ink-violet);
   font-family: var(--font-editorial-display);
   font-size: var(--page-section-kicker-size);
@@ -332,13 +332,13 @@
   text-transform: none;
 }
 
-.sectionHeader h2 {
+.section-header h2 {
   font-family: var(--font-display);
   letter-spacing: 0;
   line-height: var(--leading-heading);
 }
 
-.sectionHeader p {
+.section-header p {
   color: var(--color-plum-charcoal);
   font-family: var(--font-body);
   font-size: var(--text-subheading);

@@ -20,6 +20,8 @@
   --picker-bg: var(--color-surface-muted);
   --testimonial-logo-filter: grayscale(1) contrast(1.18);
   --testimonial-logo-opacity: 0.82;
+  --testimonial-logo-tile-bg: rgba(255, 255, 255, 0.92);
+  --testimonial-logo-tile-border: rgba(49, 38, 59, 0.14);
 
   position: relative;
   display: grid;
@@ -42,6 +44,8 @@
     --picker-bg: rgba(21, 18, 29, 0.86);
     --testimonial-logo-filter: grayscale(1) invert(1) contrast(1.02) brightness(1.05);
     --testimonial-logo-opacity: 0.78;
+    --testimonial-logo-tile-bg: rgba(255, 255, 255, 0.92);
+    --testimonial-logo-tile-border: rgba(255, 255, 255, 0.16);
   }
 
   .testimonials__quote-card {
@@ -102,6 +106,9 @@
   width: 100%;
   height: 100%;
   place-items: center;
+  border: 1px solid var(--testimonial-logo-tile-border);
+  border-radius: calc(var(--radius-buttons) - 1px);
+  background: var(--testimonial-logo-tile-bg);
   padding: var(--space-2);
 }
 

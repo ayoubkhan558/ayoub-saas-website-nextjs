@@ -20,8 +20,8 @@ export function AboutSection({ portfolio }: { portfolio: PortfolioData }) {
       <div className="section__inner">
         <div className={`container ${styles["about__grid"]}`}>
           <div className={styles["about__copy"]}>
-            <SectionHeader label="About me" title="About Ayoub" eyebrow={portfolio.about.story} />
-            <p className={styles["about__text"]}>{portfolio.about.motivation}</p>
+            <SectionHeader label="About me" title="About Ayoub" eyebrow={portfolio?.about.story} />
+            <p className={styles["about__text"]}>{portfolio?.about.motivation}</p>
             {education ? (
               <div className={styles["about__education"]}>
                 <span className={styles["about__education-label"]}>Education</span>
@@ -30,11 +30,11 @@ export function AboutSection({ portfolio }: { portfolio: PortfolioData }) {
               </div>
             ) : null}
             <div className={styles["about__actions"]}>
-              <a className="button" href={portfolio.about.resumeHref} target="_blank" rel="noreferrer" download title="Download Muhammad Ayoub resume">
+              <a className="button" href={portfolio?.about.resumeHref} target="_blank" rel="noreferrer" download title="Download Muhammad Ayoub resume">
                 <IconGlyph name="download" />
                 Download resume
               </a>
-              <a className="button button--ghost" href={portfolio.profile.linkedin} target="_blank" rel="noreferrer" title="Visit Muhammad Ayoub LinkedIn profile">
+              <a className="button button--ghost" href={portfolio?.profile.linkedin} target="_blank" rel="noreferrer" title="Visit Muhammad Ayoub LinkedIn profile">
                 <IconGlyph name="linkedin" />
                 LinkedIn
               </a>
@@ -42,7 +42,7 @@ export function AboutSection({ portfolio }: { portfolio: PortfolioData }) {
                 <IconGlyph name="externalLink" />
                 Upwork profile
               </a>
-              <span className={styles["about__signature"]} aria-label={portfolio.about.signature}>
+              <span className={styles["about__signature"]} aria-label={portfolio?.about.signature}>
                 <img src="/mayoub-signature.png" alt="Muhammad Ayoub signature" title="Muhammad Ayoub signature" loading="lazy" />
               </span>
             </div>
@@ -61,14 +61,6 @@ export function AboutSection({ portfolio }: { portfolio: PortfolioData }) {
               </div>
             </div>
           </aside>
-        </div>
-        <div className={`container ${styles["about__recognition-row"]}`} aria-label="Awards recognition and certifications">
-          {portfolio.about.awards.map((award) => (
-            <span className={styles["about__recognition-item"]} key={award.label}>
-              <span className={styles["about__recognition-label"]}>{award.label}</span>
-              <strong className={styles["about__recognition-value"]}>{award.value}</strong>
-            </span>
-          ))}
         </div>
       </div>
     </section>
