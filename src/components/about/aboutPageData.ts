@@ -1,5 +1,5 @@
 import type { PortfolioData } from "@/context/PortfolioContentContext";
-import toolCatalog from "@/content/tools/toolCatalog.json";
+import { toolCatalog, type ToolCatalogItem } from "@/data/toolCatalog";
 
 export function getAboutHeroStats(portfolio: PortfolioData) {
   const careerStart = portfolio.experienceLog.at(-1)?.year;
@@ -18,9 +18,9 @@ export function getAboutHeroStats(portfolio: PortfolioData) {
 
 export function getToolboxIconRows(iconKeys: PortfolioData["about"]["toolboxIconKeys"]) {
   const toolboxIcons = iconKeys
-    .map((key) => toolCatalog[key as keyof typeof toolCatalog])
-  .filter((tool): tool is { name: string; logo: string; description: string } => Boolean(tool?.logo))
-  .map((tool) => ({ name: tool.name, src: tool.logo }));
+    .map((key) => toolCatalog[key])
+    .filter((tool): tool is ToolCatalogItem & { logo: string } => Boolean(tool?.logo))
+    .map((tool) => ({ name: tool.name, src: tool.logo }));
 
   return [
     toolboxIcons.filter((_, index) => index % 2 === 0),
