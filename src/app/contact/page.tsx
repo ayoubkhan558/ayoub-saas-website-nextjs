@@ -7,7 +7,7 @@ import { IconGlyph } from "@/components/landing/IconGlyph";
 import { ContactFooter } from "@/components/landing/ContactFooter";
 import { SiteHeader } from "@/components/landing/SiteHeader";
 import { buildContactSchema, jsonLdScript } from "@/lib/seo-schema";
-import portfolio from "@/data/portfolio.json";
+import portfolio from "@/content/portfolio/portfolio.json";
 import styles from "@/components/contact/ContactPage.module.scss";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Hire Muhammad Ayoub Khan for WordPress, website design, WooCommerce, React, Next.js, Bricks Builder, Elementor, and frontend projects.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Hire Muhammad Ayoub Khan | WordPress Developer",
+    title: "Hire Muhammad Ayoub Khan | Front-End Developer",
     description:
       "Send project details, request a build estimate, or contact Muhammad Ayoub for freelance WordPress, website design, and front-end development work.",
     type: "website",
@@ -35,6 +35,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   const profile = portfolio.profile;
   const schema = buildContactSchema();
+  const jsonLd = { __html: jsonLdScript(schema) };
 
   return (
     <div className="site-shell">
@@ -55,8 +56,10 @@ export default function ContactPage() {
                   <span className={styles["contact-page__eyebrow"]}>Direct contact</span>
                   <h2>Fastest way to reach me.</h2>
                   <p className={styles["contact-card__intro"]}>
-                    Send the project goal, current URL if there is one, and the outcome you need. I reply with a clear
-                    next step.
+                    Every project starts with understanding your goals.  <br />
+                    Send your project details, website URL (if applicable), timeline, and the results you want to achieve.
+                    <br />
+                    I'll review everything personally and provide honest feedback, suggested solutions, and a clear roadmap for getting started.
                   </p>
                   <div className={styles["contact-card__meta"]}>
                     <span>Reply within 24 hours</span>
@@ -70,7 +73,7 @@ export default function ContactPage() {
                     <IconGlyph name="arrowRight" />
                   </a>
                   <a className={styles["contact-method"]} href={`tel:${profile.phone.replace(/\s+/g, "")}`} title="Call Muhammad Ayoub">
-                    <span className={styles["contact-method__label"]}>Phone</span>
+                    <span className={styles["contact-method__label"]}>Phone / Whatsapp</span>
                     <strong>{profile.phone}</strong>
                     <IconGlyph name="phone" />
                   </a>
@@ -86,16 +89,16 @@ export default function ContactPage() {
                     <dd>{profile.location}</dd>
                   </div>
                   <div>
+                    <dt>Time zone</dt>
+                    <dd>Pakistan Standard Time</dd>
+                  </div>
+                  <div>
                     <dt>Availability</dt>
                     <dd>{profile.availability}</dd>
                   </div>
                   <div>
                     <dt>Typical reply</dt>
                     <dd>Within 24 hours</dd>
-                  </div>
-                  <div>
-                    <dt>Best brief</dt>
-                    <dd>Goal, URL, timeline, stack, and budget range</dd>
                   </div>
                 </dl>
               </div>

@@ -18,10 +18,10 @@ export function ContactFooter({ portfolio }: { portfolio: PortfolioData }) {
                 </h2>
                 <p className={styles["cta__text"]}>
                   Share your goals, current site, and timeline. I will respond with a practical next
-                  step for WordPress, WooCommerce, React, or Next.js work.
+                  step for custom React.js, HTML/CSS, JavaScript, or Next.js work.
                 </p>
                 <div className={styles["cta__intent-actions"]}>
-                  <a className="button button--dark" href={`mailto:${profile.email}?subject=Project%20details`} title="Send project details to Muhammad Ayoub">
+                  <a className="button" href={`mailto:${profile.email}?subject=Project%20details`} title="Send project details to Muhammad Ayoub">
                     Send project details
                     <IconGlyph name="arrowRight" />
                   </a>

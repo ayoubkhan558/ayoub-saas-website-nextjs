@@ -19,7 +19,7 @@ export function CaseStudyDetail({
   study: CaseStudyDetailData;
 }) {
   return (
-    <main className={styles.caseStudy}>
+    <main className={styles["case-study"]}>
       <CaseStudyJsonLd portfolio={portfolio} study={study} />
       <CaseStudyHero study={study} />
       <CaseStudyOverview study={study} />

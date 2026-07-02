@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { type MouseEvent, useEffect, useRef, useState } from "react";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
 import { IconGlyph } from "./IconGlyph";
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import styles from "./SiteHeader.module.scss";
 
 export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
@@ -84,7 +84,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
     <header ref={headerRef} className={styles["site-header"]}>
       <div className={`${styles["site-header__nav"]} container`}>
         <Link className={styles["site-header__nav-brand"]} href="/" aria-label={`${profile.brand} home`} title="MAYOUB.DEV home">
-          <Image src="/mayoub-dev-logo.svg" alt="mayoub.dev logo" title="mayoub.dev logo" width={640} height={160} priority />
+          <BrandLogo />
         </Link>
 
         <nav className={styles["site-header__nav-links"]} aria-label="Primary navigation">
@@ -116,7 +116,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
             Email
           </button>
           <button className={`button button--small ${styles["site-header__nav-button"]}`} type="button" onClick={openContactPanel}>
-            Get started
+            Book a call
             <IconGlyph name="arrowRight" />
           </button>
           <button
@@ -149,11 +149,12 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
           <IconGlyph name="arrowRight" />
         </button>
       </div>
+    </header>
 
-      <div
-        className={`${styles["contact-panel"]} ${contactOpen ? styles["contact-panel--open"] : ""}`}
-        aria-hidden={!contactOpen}
-      >
+    <div
+      className={`${styles["contact-panel"]} ${contactOpen ? styles["contact-panel--open"] : ""}`}
+      aria-hidden={!contactOpen}
+    >
         <button
           className={styles["contact-panel__backdrop"]}
           type="button"
@@ -209,15 +210,17 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
             </div>
           </div>
 
-          <Link className={styles["contact-panel__hire"]} href="/contact" onClick={() => setContactOpen(false)} title="Hire Muhammad Ayoub">
+          <Link className={`button ${styles["contact-panel__hire"]}`} href="/contact" onClick={() => setContactOpen(false)} title="Hire Muhammad Ayoub">
             Hire Me
             <IconGlyph name="arrowRight" />
           </Link>
         </aside>
-      </div>
-    </header>
+    </div>
 
-    <div className={styles["site-header__floating-offer"]} aria-label="Portfolio updates">
+    <div
+      className={`${styles["site-header__floating-offer"]} ${contactOpen ? styles["site-header__floating-offer--hidden"] : ""}`}
+      aria-label="Portfolio updates"
+    >
       <Link className={styles["site-header__floating-offer-link"]} href={referralHref} title="Refer a website development client">
         <span>{portfolio.topbar.offer}</span>
         <IconGlyph name="arrowRight" />

@@ -21,7 +21,7 @@ export function AboutHero({ portfolio }: { portfolio: PortfolioData }) {
               {portfolio.profile.summary}
             </p>
             <div className={styles["about-page-hero__actions"]}>
-              <Link className="button button--dark" href="/contact" title={`Hire ${fullName}`}>
+              <Link className="button" href="/contact" title={`Hire ${fullName}`}>
                 Hire me
                 <IconGlyph name="arrowRight" />
               </Link>

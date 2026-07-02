@@ -1,6 +1,6 @@
 # Muhammad Ayoub Portfolio
 
-Personal portfolio website for Muhammad Ayoub, focused on React, Next.js, WordPress, WooCommerce, case studies, project listings, services, and lead capture.
+Personal portfolio website for Muhammad Ayoub, focused on custom React.js, Next.js, HTML, CSS, JavaScript, conversion-focused landing pages, with WordPress as a secondary CMS service, case studies, project listings, services, and lead capture.
 
 ## Stack
 
@@ -47,12 +47,12 @@ npm run lint     # Run lint checks
 
 ## Content Files
 
-- `src/data/portfolio.json` - Homepage/profile/services/testimonials/global content
-- `src/data/projects.json` - Featured projects
-- `src/data/projectsArchive.json` - Full projects archive rendered on `/projects`
-- `src/data/caseStudies.json` - Case-study listing cards
-- `src/data/caseStudyDetails.json` - Full case-study detail content
-- `src/data/projectLinkStatus.json` - Link status/reference data for project URLs
+- `src/content/portfolio/portfolio.json` - Homepage/profile/services/testimonials/global content
+- `src/content/work/projects.json` - Featured projects
+- `src/content/work/projectsArchive.json` - Full projects archive rendered on `/projects`
+- `src/data/work.ts` - Project and case-study listing cards
+- `src/content/work/caseStudyDetails.json` - Full case-study detail content
+- `src/content/work/projectLinkStatus.json` - Link status/reference data for project URLs
 
 Project and case-study content is intentionally separated so detailed pages do not bloat the homepage data file.
 
@@ -78,11 +78,7 @@ Page-specific styling is kept in component-level Sass modules. The visual system
 
 ## Contact Form
 
-The contact form uses Formspree with the configured form id:
-
-```txt
-mgojyyqd
-```
+The contact form uses Formspree. Configure it with `NEXT_PUBLIC_FORMSPREE_ID` in `.env.local` (see `.env.example`).
 
 Implementation:
 

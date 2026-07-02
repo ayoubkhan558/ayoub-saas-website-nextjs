@@ -1,0 +1,232 @@
+{
+  "bricks-builder": {
+    "name": "Bricks Builder",
+    "logo": "/tools/bricks-logo.svg",
+    "description": "Visual WordPress builder for fast custom layouts."
+  },
+  "advanced-custom-fields": {
+    "name": "Advanced Custom Fields",
+    "logo": "/tools/acf.svg",
+    "description": "Structured WordPress fields for editable content."
+  },
+  "slim-seo": {
+    "name": "Slim SEO",
+    "logo": "/tools/slim-seo.svg",
+    "description": "Lightweight SEO setup for technical foundations."
+  },
+  "seopress": {
+    "name": "SEOPress",
+    "logo": "/tools/slim-seo.svg",
+    "description": "WordPress SEO setup for metadata, indexing, and technical foundations."
+  },
+  "fluent-smtp": {
+    "name": "FluentSMTP",
+    "logo": "/tools/fluent-smtp-logo.svg",
+    "description": "Reliable WordPress SMTP delivery for website forms and notifications."
+  },
+  "google-site-kit": {
+    "name": "Google Site Kit",
+    "logo": "/tools/google-search-console.svg",
+    "description": "Google reporting for Search Console and analytics."
+  },
+  "happyfiles": {
+    "name": "HappyFiles",
+    "logo": "/tools/happyfiles-logo.svg",
+    "description": "WordPress media organization for cleaner libraries."
+  },
+  "happyfiles-pro": {
+    "name": "HappyFiles Pro",
+    "logo": "/tools/happyfiles-logo.svg",
+    "description": "WordPress media organization for larger client content libraries."
+  },
+  "wpc-admin-columns": {
+    "name": "Admin Columns",
+    "logo": null,
+    "description": "WordPress admin column management for cleaner content workflows."
+  },
+  "wordpress": {
+    "name": "WordPress CMS",
+    "logo": "/tools/wordpress.svg",
+    "description": "Content management for editable marketing websites."
+  },
+  "woocommerce": {
+    "name": "WooCommerce",
+    "logo": "/tools/woocommerce.svg",
+    "description": "Product, cart, and checkout system for WordPress stores."
+  },
+  "elementor": {
+    "name": "Elementor Pro",
+    "logo": "/tools/elementor.svg",
+    "description": "Visual page builder for reusable service sections."
+  },
+  "performance-qa": {
+    "name": "Performance QA",
+    "logo": null,
+    "description": "Responsive, load-time, and interaction quality checks."
+  },
+  "pinterest-api": {
+    "name": "Pinterest API Positioning",
+    "logo": "/tools/pinterest.svg",
+    "description": "Integration-focused messaging for Pinterest workflows."
+  },
+  "whatsapp-flow": {
+    "name": "WhatsApp Flow",
+    "logo": "/tools/whatsapp.svg",
+    "description": "Mobile-first lead route for direct customer inquiries."
+  },
+  "php": {
+    "name": "PHP Templates",
+    "logo": "/tools/php.svg",
+    "description": "Custom WordPress theme logic and template structure."
+  },
+  "rest-api": {
+    "name": "REST API Patterns",
+    "logo": null,
+    "description": "Data-aware structures for scalable CMS templates."
+  },
+  "figma": {
+    "name": "Figma",
+    "logo": "/tools/figma.svg",
+    "description": "Design handoff and interface planning."
+  },
+  "html": {
+    "name": "HTML",
+    "logo": "/tools/html-5.svg",
+    "description": "Semantic page structure for accessible websites."
+  },
+  "css": {
+    "name": "CSS",
+    "logo": "/tools/css-3.svg",
+    "description": "Responsive styling, layout, and visual polish."
+  },
+  "javascript": {
+    "name": "JavaScript",
+    "logo": "/tools/javascript.svg",
+    "description": "Interactive behavior and front-end logic."
+  },
+  "typescript": {
+    "name": "TypeScript",
+    "logo": "/tools/TypeScript.svg",
+    "description": "Typed JavaScript for maintainable front-end applications."
+  },
+  "nextjs": {
+    "name": "Next.js",
+    "logo": "/tools/nextjs.svg",
+    "description": "React framework for production web applications."
+  },
+  "redux": {
+    "name": "Redux",
+    "logo": "/tools/Redux.svg",
+    "description": "Predictable state management for complex interfaces."
+  },
+  "material-ui": {
+    "name": "Material UI",
+    "logo": "/tools/Material-UI.svg",
+    "description": "React component system for structured product interfaces."
+  },
+  "bootstrap": {
+    "name": "Bootstrap",
+    "logo": "/tools/bootstrap.svg",
+    "description": "Responsive UI foundation for practical builds."
+  },
+  "bulma": {
+    "name": "Bulma",
+    "logo": "/tools/Bulma.svg",
+    "description": "CSS framework for lightweight responsive layouts."
+  },
+  "tailwind": {
+    "name": "Tailwind CSS",
+    "logo": "/tools/tailwind.svg",
+    "description": "Utility-first styling for custom interfaces."
+  },
+  "gsap": {
+    "name": "GSAP",
+    "logo": "/tools/gsap.svg",
+    "description": "Animation library for polished scroll and interface motion."
+  },
+  "swiperjs": {
+    "name": "Swiper",
+    "logo": "/tools/swiper-logo.svg",
+    "description": "Touch-friendly sliders and carousels for responsive content."
+  },
+  "plyr": {
+    "name": "Plyr",
+    "logo": "/tools/plyr-io-logo.png",
+    "description": "Accessible media player controls for video and audio experiences."
+  },
+  "scrollreveal": {
+    "name": "ScrollReveal",
+    "logo": "/tools/scrollreveal.svg",
+    "description": "Viewport-based reveal effects for lightweight page motion."
+  },
+  "jquery": {
+    "name": "jQuery",
+    "logo": "/tools/jquery-icon.svg",
+    "description": "DOM interaction helper used for legacy-compatible frontend behavior."
+  },
+  "postcss": {
+    "name": "PostCSS",
+    "logo": "/tools/PostCSS.svg",
+    "description": "CSS transformation tooling for modern front-end builds."
+  },
+  "sass": {
+    "name": "Sass",
+    "logo": "/tools/sass.svg",
+    "description": "Structured CSS authoring for maintainable styles."
+  },
+  "shopify": {
+    "name": "Shopify",
+    "logo": "/tools/shopify.svg",
+    "description": "Commerce platform for storefront and product systems."
+  },
+  "webflow": {
+    "name": "Webflow",
+    "logo": "/tools/webflow-icon.svg",
+    "description": "Visual website builder for marketing pages."
+  },
+  "vite": {
+    "name": "Vite",
+    "logo": "/tools/vitejs.svg",
+    "description": "Fast front-end tooling for modern app development."
+  },
+  "vercel": {
+    "name": "Vercel",
+    "logo": "/tools/vercel-logo.svg",
+    "description": "Deployment platform for Next.js and front-end applications."
+  },
+  "git": {
+    "name": "Git",
+    "logo": "/tools/git-logo.svg",
+    "description": "Version control for collaborative development."
+  },
+  "npm": {
+    "name": "NPM",
+    "logo": "/tools/NPM.svg",
+    "description": "Package management for JavaScript projects."
+  },
+  "postman": {
+    "name": "Postman",
+    "logo": "/tools/Postman.svg",
+    "description": "API testing and request workflow tooling."
+  },
+  "json": {
+    "name": "JSON",
+    "logo": "/tools/JSON.svg",
+    "description": "Structured data format for APIs and configuration."
+  },
+  "vs-code": {
+    "name": "VS Code",
+    "logo": "/tools/vs-code.svg",
+    "description": "Code editor for daily development workflows."
+  },
+  "mysql": {
+    "name": "MySQL",
+    "logo": "/tools/mysql.svg",
+    "description": "Relational database for content and application data."
+  },
+  "phpmyadmin": {
+    "name": "phpMyAdmin",
+    "logo": "/tools/phpmyadmin.svg",
+    "description": "Database administration for MySQL projects."
+  }
+}

@@ -60,12 +60,12 @@ export function ServicesOffers({ services }: { services: PortfolioData["services
       <div className="section__inner">
         <div className={`container ${styles["services-offers__inner"]}`}>
           <header className={styles["services-section-header"]}>
-            <span className={styles["services-page__eyebrow"]}>What I build</span>
+            <span className={styles["services-page__eyebrow"]}>Solutions I provide</span>
             <h2>
-              Services for websites that need better execution.
+              Productized solutions for business website problems.
             </h2>
             <p>
-              Each service is scoped around what a buyer actually needs: outcome, fit, and what is included.
+              Each solution starts with the business pain point, then uses the right development approach behind the scenes.
             </p>
           </header>
 

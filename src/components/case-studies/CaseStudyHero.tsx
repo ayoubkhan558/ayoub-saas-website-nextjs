@@ -15,33 +15,33 @@ export function CaseStudyHero({ study }: { study: CaseStudyDetailData }) {
   return (
     <section className={`section ${styles.hero}`}>
       <div className="section__inner">
-        <div className={`container ${styles.heroInner}`}>
-          <div className={styles.heroCopy}>
+        <div className={`container ${styles["hero-inner"]}`}>
+          <div className={styles["hero-copy"]}>
             <span className={styles.eyebrow}>Case study</span>
             <h1 className={styles.title}>{study.client} project</h1>
             <p className={styles.tagline}>{projectType}</p>
-            <div className={styles.heroActions}>
-              <dl className={styles.heroMeta}>
-                <div className={styles.heroMeta__item}>
-                  <dt className={styles.heroMeta__label}>Project</dt>
-                  <dd className={styles.heroMeta__value}>{study.caseType}</dd>
+            <div className={styles["hero-actions"]}>
+              <dl className={styles["hero-meta"]}>
+                <div className={styles["hero-meta__item"]}>
+                  <dt className={styles["hero-meta__label"]}>Project</dt>
+                  <dd className={styles["hero-meta__value"]}>{study.caseType}</dd>
                 </div>
-                <div className={styles.heroMeta__item}>
-                  <dt className={styles.heroMeta__label}>Timeline</dt>
-                  <dd className={styles.heroMeta__value}>{study.timeline}</dd>
+                <div className={styles["hero-meta__item"]}>
+                  <dt className={styles["hero-meta__label"]}>Timeline</dt>
+                  <dd className={styles["hero-meta__value"]}>{study.timeline}</dd>
                 </div>
               </dl>
-              <a className={styles.liveSiteLink} href={study.liveUrl} target="_blank" rel="noreferrer" title={`Visit ${study.client} live website`}>
+              <a className={styles["live-site-link"]} href={study.liveUrl} target="_blank" rel="noreferrer" title={`Visit ${study.client} live website`}>
                 Visit live site
-                <IconGlyph className={styles.liveSiteLink__icon} name="externalLink" />
+                <IconGlyph className={styles["live-site-link__icon"]} name="externalLink" />
               </a>
             </div>
           </div>
-          <aside className={styles.heroVisual} aria-label={`${study.client} final website design shown inside a laptop mockup`}>
+          <aside className={styles["hero-visual"]} aria-label={`${study.client} final website design shown inside a laptop mockup`}>
             {study.heroMockup ? (
-              <img className={styles.heroMockupImage} src={study.heroMockup} alt={`${study.client} responsive website mockup`} title={`${study.client} responsive website mockup`} />
+              <img className={styles["hero-mockup-image"]} src={study.heroMockup} alt={`${study.client} responsive website mockup`} title={`${study.client} responsive website mockup`} />
             ) : (
-              <div className={styles.laptopFrame}>
+              <div className={styles["laptop-frame"]}>
                 <CaseStudyBrowserMockup label={study.urlLabel} imageSrc={previewImage} />
               </div>
             )}

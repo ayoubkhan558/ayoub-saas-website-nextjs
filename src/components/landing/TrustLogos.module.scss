@@ -9,6 +9,8 @@
   --trust-logos-logo-filter: grayscale(1) contrast(1.2);
   --trust-logos-logo-blend: multiply;
   --trust-logos-logo-opacity: 1;
+  --trust-logos-tile-bg: rgba(255, 255, 255, 0.92);
+  --trust-logos-tile-border: rgba(49, 38, 59, 0.14);
   position: relative;
   width: 100%;
   border-top: 1px solid var(--color-fog-border);
@@ -30,6 +32,8 @@
   --trust-logos-logo-filter: grayscale(1) invert(1) brightness(1.15) contrast(0.95);
   --trust-logos-logo-blend: normal;
   --trust-logos-logo-opacity: 0.72;
+  --trust-logos-tile-bg: rgba(255, 255, 255, 0.92);
+  --trust-logos-tile-border: rgba(255, 255, 255, 0.16);
 }
 
 .trust-logos::before,
@@ -64,7 +68,7 @@
   color: var(--trust-logos-label-color);
   font-family: var(--font-code);
   font-size: var(--text-2xs);
-  
+
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -97,15 +101,18 @@
 }
 
 .trust-logos__logo {
+  background: unset;
+  border: unset;
   position: relative;
   display: inline-grid;
+  min-width: 118px;
+  min-height: 58px;
   place-items: center;
-  border: 0;
-  background: transparent;
+  border-radius: var(--radius-buttons);
   color: var(--color-ink-violet);
   cursor: default;
   font: inherit;
-  padding: 0;
+  padding: var(--space-2) var(--space-3);
   text-decoration: none;
   outline-offset: 6px;
 
@@ -121,13 +128,17 @@
   opacity: var(--trust-logos-logo-opacity);
   object-fit: contain;
   object-position: center;
-  max-width: 65px;
-  max-height: 38px;
+  max-width: 82px;
+  max-height: 34px;
 
   @media (min-width: 768px) {
-    max-width: 118px;
-    max-height: 48px;
+    max-width: 112px;
+    max-height: 38px;
   }
+}
+
+:global(:root[data-theme="dark"]) .trust-logos__logo:hover img {
+  filter: var(--trust-logos-logo-filter);
 }
 
 .trust-logos__logo:hover img {

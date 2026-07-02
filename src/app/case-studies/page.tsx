@@ -5,12 +5,12 @@ import { SiteHeader } from "@/components/landing/SiteHeader";
 import { getPageNumber } from "@/lib/pagination";
 import { buildCaseStudiesSchema, jsonLdScript } from "@/lib/seo-schema";
 import { caseStudies } from "@/data/work";
-import portfolio from "@/data/portfolio.json";
+import portfolio from "@/content/portfolio/portfolio.json";
 
 export const metadata: Metadata = {
   title: "Case Studies | Muhammad Ayoub",
   description:
-    "Case studies showing WordPress, WooCommerce, React, performance, SEO, and CMS results delivered by Muhammad Ayoub.",
+    "Case studies showing custom React.js, HTML/CSS, JavaScript, Next.js, performance, SEO, and conversion results delivered by Muhammad Ayoub.",
   alternates: { canonical: "/case-studies" },
   openGraph: {
     title: "Case Studies | Muhammad Ayoub",
@@ -37,6 +37,7 @@ export default async function CaseStudiesPage({
   const params = await searchParams;
   const currentPage = getPageNumber(params.page);
   const schema = buildCaseStudiesSchema();
+  const jsonLd = { __html: jsonLdScript(schema) };
 
   return (
     <div className="site-shell">

@@ -1,5 +1,5 @@
 import type { PortfolioData } from "@/context/PortfolioContentContext";
-import toolCatalog from "@/data/toolCatalog.json";
+import toolCatalog from "@/content/tools/toolCatalog.json";
 
 export function getAboutHeroStats(portfolio: PortfolioData) {
   const careerStart = portfolio.experienceLog.at(-1)?.year;

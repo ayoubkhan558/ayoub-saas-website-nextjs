@@ -1,31 +1,31 @@
 {
-  "name": "headless-woo-landing",
+  "name": "muhammad-ayoub-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "A modern portfolio and case-study website built with Next.js 16, React 19, and Tailwind CSS v4.",
-  "author": "msrbuilds",
+  "description": "Personal portfolio for Muhammad Ayoub Khan, custom React.js, HTML/CSS, JavaScript, and Next.js front-end developer.",
+  "author": "Muhammad Ayoub Khan",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/msrbuilds/headless-woo-landing.git"
+    "url": "https://github.com/ayoubkhan558/muhammad-ayoub-portfolio.git"
   },
-  "homepage": "https://github.com/msrbuilds/headless-woo-landing#readme",
+  "homepage": "https://mayoub.dev",
   "keywords": [
+    "portfolio",
+    "wordpress-developer",
+    "woocommerce",
     "nextjs",
     "react",
-    "tailwindcss",
-    "landing-page",
-    "woocommerce",
-    "headless",
-    "template",
-    "animation"
+    "bricks-builder",
+    "frontend-developer",
+    "freelance-web-developer"
   ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "cache:project-screenshots": "node scripts/cache-project-screenshots.mjs",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
@@ -35,8 +35,8 @@
     "next": "^16.2.9",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-fast-marquee": "^1.6.5",
-    "react-simple-typewriter": "^5.0.1"
+    "react-simple-typewriter": "^5.0.1",
+    "react-fast-marquee": "^1.6.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.1",
@@ -46,6 +46,8 @@
     "playwright": "^1.61.0",
     "sass": "^1.101.0",
     "tailwindcss": "^4.3.1",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.2.9"
   }
 }

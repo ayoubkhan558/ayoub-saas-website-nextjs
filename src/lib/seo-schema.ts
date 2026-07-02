@@ -1,4 +1,4 @@
-import portfolio from "@/data/portfolio.json";
+import portfolio from "@/content/portfolio/portfolio.json";
 import { caseStudies, projects } from "@/data/work";
 import {
   getProjectDescription,
@@ -36,7 +36,7 @@ function basePersonSchema(): GraphNode {
     "alternateName": ["Muhammad Ayoub", "Ayoub", "Ayoub Khan", "M Ayoub Khan", "Mayoub"],
     "url": siteUrl,
     "image": imageUrl,
-    "jobTitle": "Freelance WordPress Developer and Front-End Website Developer",
+    "jobTitle": "Freelance Front-End Developer and Front-End Website Developer",
     "description": "Muhammad Ayoub Khan is a freelance WordPress developer, website developer, React developer, and Next.js developer based in Faisalabad, Pakistan.",
     "email": portfolio.profile.email,
     "telephone": portfolio.profile.phone,
@@ -101,7 +101,7 @@ function professionalServiceSchema(): GraphNode {
     "@type": "ProfessionalService",
     "@id": serviceId,
     "name": "Muhammad Ayoub Khan Website Development Services",
-    "alternateName": ["Ayoub Khan Web Developer", "Mayoub Website Developer", "M Ayoub Khan WordPress Developer"],
+    "alternateName": ["Ayoub Khan Web Developer", "Mayoub Website Developer", "M Ayoub Khan Front-End Developer"],
     "url": siteUrl,
     "description": "WordPress development, website design, WooCommerce, React, Next.js, Bricks Builder, Elementor, and front-end development services by Muhammad Ayoub Khan.",
     "email": portfolio.profile.email,
@@ -277,7 +277,7 @@ export function buildCaseStudiesSchema() {
     webpageSchema(
       "/case-studies",
       "Case Studies",
-      "Case studies showing WordPress, WooCommerce, React, performance, SEO, and CMS results delivered by Muhammad Ayoub.",
+      "Case studies showing custom React.js, HTML/CSS, JavaScript, Next.js, performance, SEO, and conversion results delivered by Muhammad Ayoub.",
       "CollectionPage",
     ),
     {

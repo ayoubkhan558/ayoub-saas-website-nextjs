@@ -1,16 +1,16 @@
-export const serviceIcons = ["code2", "database", "shoppingCart", "image", "monitor", "sparkles", "code"];
+export const serviceIcons = ["code2", "database", "shoppingCart", "image", "monitor", "sparkles", "code", "gauge"];
 
-export const serviceCardVariants = ["product", "cms", "commerce", "cms", "product", "commerce", "cms"];
+export const serviceCardVariants = ["product", "cms", "commerce", "cms", "product", "commerce", "cms", "product"];
 
 export const proofNotes = [
-  { label: "Project fit", value: "SaaS, service sites, stores, dashboards, funnels" },
+  { label: "Project fit", value: "Unclear offers, weak landing pages, redesigns, product UI, store friction" },
   { label: "Delivery style", value: "Scoped clearly, shipped in useful milestones" },
-  { label: "Handoff", value: "Editable CMS, documented components, clean structure" },
+  { label: "Handoff", value: "Clear sections, maintainable build, editable content only when needed" },
 ];
 
 export const outcomes = [
-  "A site that explains the offer clearly",
-  "Reusable sections instead of one-off pages",
+  "A website that explains the offer clearly",
+  "Reusable sections for future offers and campaigns",
   "Mobile and performance checked before launch",
-  "CMS or codebase your team can keep using",
+  "A handoff your team or next developer can keep using",
 ];

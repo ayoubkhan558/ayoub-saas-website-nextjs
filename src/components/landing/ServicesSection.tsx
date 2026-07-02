@@ -13,12 +13,12 @@ export function ServicesSection({ services }: { services: Service[] }) {
       <div className="section__inner">
         <div className={`container ${styles["services"]}`}>
           <header className="section-header section-header--center">
-            <span className="section-header__label">Services</span>
+            <span className="section-header__label">Productized solutions</span>
             <h2 className="section-header__title">
-              for growing <span>websites</span>
+              What you can hire me for
             </h2>
             <p className="section-header__text">
-              Three ways I help businesses move from scattered site problems to maintained systems.
+              Business problems first, implementation details second. Pick the outcome you need and I will choose the right build path.
             </p>
           </header>
           <div className={styles["services__grid"]}>
@@ -33,6 +33,7 @@ export function ServicesSection({ services }: { services: Service[] }) {
                 </div>
                 <h3 className={styles["services__card-title"]}>{service.name}</h3>
                 <p className={styles["services__card-text"]}>{service.description}</p>
+                <strong className={styles["services__price"]}>{service.price}</strong>
                 <a className={styles["services__link"]} href={serviceHref(service.href)} title={`${service.cta} with Muhammad Ayoub`}>
                   {service.cta}
                   <IconGlyph name="arrowRight" />

@@ -1,4 +1,4 @@
-import toolCatalogJson from "./toolCatalog.json";
+import toolCatalogJson from "../content/tools/toolCatalog.json";
 
 export type ToolCatalogItem = {
   name: string;

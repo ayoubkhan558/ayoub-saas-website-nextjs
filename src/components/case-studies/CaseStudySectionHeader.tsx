@@ -14,13 +14,13 @@ export function CaseStudySectionHeader({
   const leadingTitle = words.join(" ");
 
   return (
-    <header className={styles.sectionHeader}>
+    <header className={styles["section-header"]}>
       <span className={styles.kicker}>{label}</span>
-      <h2 className={styles.sectionTitle}>
+      <h2 className={styles["section-title"]}>
         {leadingTitle ? `${leadingTitle} ` : ""}
         {accentWord ? <>{accentWord}</> : null}
       </h2>
-      {text ? <p className={styles.sectionText}>{text}</p> : null}
+      {text ? <p className={styles["section-text"]}>{text}</p> : null}
     </header>
   );
 }

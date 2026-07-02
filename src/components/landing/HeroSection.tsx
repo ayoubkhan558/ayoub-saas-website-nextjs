@@ -1,5 +1,6 @@
 import type { PortfolioData } from "@/context/PortfolioContentContext";
 import { LogoMarquee } from "@/components/shared/LogoMarquee";
+import { SocialProofStats } from "./SocialProofStats";
 import { IconGlyph } from "./IconGlyph";
 import styles from "./HeroSection.module.scss";
 
@@ -26,28 +27,14 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
       <div className="section__inner">
         <div className={`container ${styles["hero__grid"]}`}>
           <div className={styles["hero__copy"]}>
-            <div className={styles["hero__badges"]} aria-label="Availability and trust badges">
-              {portfolio.hero.badges.map((badge) => (
-                <span className={`badge ${styles["hero__badge"]}`} key={badge.label}>
-                  <IconGlyph name={badge.icon} />
-                  {badge.label}
-                </span>
-              ))}
-            </div>
             <h1 className={styles["hero__title"]}>
               <span className={`${styles["hero__title-line"]} ${styles["hero__title-line--intro"]}`}>Hi, I&apos;m M Ayoub.</span>
-              <span className={styles["hero__title-line"]}>
-                I build websites that bring more <span data-accent>leads.</span>
-              </span>
+              <span className={styles["hero__title-line"]}>{portfolio.hero.headlineLineOne}</span>
+              <span className={styles["hero__title-line"]} data-accent>{portfolio.hero.headlineLineTwo}</span>
             </h1>
 
             <p className={styles["hero__text"]}>
-              I design and develop fast React, Next.js, WordPress, and WooCommerce websites that make offers clearer,
-              improve trust, and turn visitors into inquiries.
-            </p>
-            <p className={styles["hero__supporting-text"]}>
-              I usually help with Figma-to-code builds, CMS pages your team can edit, store improvements, and existing
-              front-end fixes where speed, responsiveness, and clean handoff matter.
+              {portfolio.hero.subheadline}
             </p>
 
             <div className={styles["hero__actions"]}>
@@ -55,23 +42,30 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
                 {portfolio.hero.primaryCta}
                 <IconGlyph name="arrowRight" />
               </a>
-              <a className="button button--ghost" href="#work" title="View Muhammad Ayoub website projects">
+              <a className="button button--ghost" href="/case-studies" title="View Muhammad Ayoub case studies">
                 {portfolio.hero.secondaryCta}
                 <IconGlyph name="layers" />
               </a>
             </div>
 
-            <div className={styles["hero__client-proof"]} aria-label="Client reviews">
-              <div className={styles["hero__client-photos"]} aria-hidden="true">
-                {proofClients.map((client) => (
-                  <span className={styles["hero__client-photo"]} key={client.name}>
-                    {client.avatar ? <img src={client.avatar} alt={`${client.name} client avatar`} title={`${client.name} client avatar`} loading="lazy" /> : client.initials}
-                  </span>
-                ))}
-              </div>
-              <div className={styles["hero__client-copy"]}>
-                <span className={styles["hero__client-stars"]}>5.0 rating</span>
-                <strong className={styles["hero__client-text"]}>{proofText}</strong>
+            <div className={styles["hero__proof-row"]}>
+              {heroTestimonial ? (
+                <figure className={styles["hero__quote-card"]}>
+                  <blockquote>{heroTestimonial.testimonial}</blockquote>
+                </figure>
+              ) : null}
+              <div className={styles["hero__client-proof"]} aria-label="Client reviews">
+                <div className={styles["hero__client-photos"]} aria-hidden="true">
+                  {proofClients.map((client) => (
+                    <span className={styles["hero__client-photo"]} key={client.name}>
+                      {client.avatar ? <img src={client.avatar} alt={`${client.name} client avatar`} title={`${client.name} client avatar`} loading="lazy" /> : client.initials}
+                    </span>
+                  ))}
+                </div>
+                <div className={styles["hero__client-copy"]}>
+                  <span className={styles["hero__client-stars"]}>5.0 rating</span>
+                  <strong className={styles["hero__client-text"]}>{proofText}</strong>
+                </div>
               </div>
             </div>
           </div>
@@ -86,6 +80,14 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
                 <span>Frontend and WordPress developer</span>
                 <span className={styles["hero__experience"]}>5+ Years of Experience</span>
               </div>
+              <div className={styles["hero__badges"]} aria-label="Availability and trust badges">
+                {portfolio.hero.badges.map((badge) => (
+                  <span className={`badge ${styles["hero__badge"]}`} key={badge.label}>
+                    <IconGlyph name={badge.icon} />
+                    {badge.label}
+                  </span>
+                ))}
+              </div>
             </div>
             <div className={styles["hero__tool-marquee"]} aria-label="Tools and platforms">
               <span className={styles["hero__tool-marquee-label"]}>Stack I ship with</span>
@@ -98,15 +100,7 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
                 speed={14}
               />
             </div>
-            {heroTestimonial ? (
-              <figure className={styles["hero__quote-card"]}>
-                <blockquote>{heroTestimonial.testimonial}</blockquote>
-                <figcaption>
-                  <strong>{heroTestimonial.name}</strong>
-                  <span>{heroTestimonial.role}</span>
-                </figcaption>
-              </figure>
-            ) : null}
+            <SocialProofStats awards={portfolio.about.awards} className={styles["hero__stats"]} />
           </aside>
         </div>
       </div>

@@ -18,3 +18,9 @@
   height: 100%;
   object-fit: contain;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee :global(.rfm-marquee) {
+    animation-play-state: paused !important;
+  }
+}

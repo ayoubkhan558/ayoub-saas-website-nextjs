@@ -4,17 +4,17 @@ import type { Metadata } from "next";
 import { PortfolioLanding } from "@/components/PortfolioLanding";
 import { PortfolioContentProvider } from "@/context/PortfolioContentContext";
 import { buildHomeSchema, jsonLdScript } from "@/lib/seo-schema";
-import portfolio from "@/data/portfolio.json";
+import portfolio from "@/content/portfolio/portfolio.json";
 
 export const metadata: Metadata = {
-  title: "Muhammad Ayoub Khan, Freelance WordPress Developer",
+  title: "Muhammad Ayoub Khan | Custom React.js, HTML/CSS & Front-End Developer",
   description:
-    "Hire Muhammad Ayoub Khan for WordPress, website design, WooCommerce, React, and Next.js development.",
+    "Hire Muhammad Ayoub Khan for custom React.js, HTML, CSS, JavaScript, and Next.js websites built for leads, speed, and clean conversion paths.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Muhammad Ayoub Khan, Freelance WordPress Developer",
+    title: "Muhammad Ayoub Khan | Custom React.js, HTML/CSS & Front-End Developer",
     description:
-      "WordPress developer and front-end website developer Muhammad Ayoub Khan builds fast, responsive business websites, WooCommerce stores, and Next.js front ends.",
+      "Front-end developer Muhammad Ayoub Khan builds custom React.js, HTML, CSS, JavaScript, and Next.js websites focused on speed, clarity, and conversions.",
     type: "website",
     url: "/",
     images: [
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Ayoub Khan, Freelance WordPress Developer",
+    title: "Muhammad Ayoub Khan | Custom React.js, HTML/CSS & Front-End Developer",
     description:
-      "Find and hire Muhammad Ayoub Khan for WordPress, website design, WooCommerce, React, and Next.js development.",
+      "Find and hire Muhammad Ayoub Khan for custom React.js, HTML, CSS, JavaScript, Next.js, and front-end development.",
     images: ["/ayoub-about-v2.jpg"],
   },
 };
@@ -42,9 +42,10 @@ function readMarkdownFile(pathname: string) {
 export default function Home() {
   const markdown = {
     product: readMarkdownFile(join(process.cwd(), "PRODUCT.md")),
-    design: readMarkdownFile("C:/Users/NCS/Downloads/DESIGN.md"),
+    design: readMarkdownFile(join(process.cwd(), "DESIGN.md")),
   };
   const schema = buildHomeSchema();
+  const jsonLd = { __html: jsonLdScript(schema) };
 
   return (
     <>

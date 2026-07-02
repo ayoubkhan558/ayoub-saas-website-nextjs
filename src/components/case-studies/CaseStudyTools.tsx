@@ -7,17 +7,17 @@ export function CaseStudyTools({ study }: { study: CaseStudyDetailData }) {
   return (
     <section className={`section ${styles.section}`}>
       <div className="section__inner">
-        <div className={`container ${styles.sectionInner}`}>
-          <div className={styles.toolsIntro}>
+        <div className={`container ${styles["section-inner"]}`}>
+          <div className={styles["tools-intro"]}>
             <CaseStudySectionHeader
               label="Tools"
               title="Stack matched the workflow"
               text="Each tool had a specific job: editing, layout production, content structure, SEO, security, or performance."
             />
-            <p className={styles.performanceNote}>{study.performanceNote}</p>
+            <p className={styles["performance-note"]}>{study.performanceNote}</p>
           </div>
-          <div className={styles.toolPanel}>
-            <div className={styles.toolGrid}>
+          <div className={styles["tool-panel"]}>
+            <div className={styles["tool-grid"]}>
               {study.tools.map((toolKey) => {
                 const tool = getToolCatalogItem(toolKey);
                 const fallbackMark = tool.name
@@ -28,13 +28,13 @@ export function CaseStudyTools({ study }: { study: CaseStudyDetailData }) {
                   .toUpperCase();
 
                 return (
-                  <article className={styles.toolCard} key={toolKey}>
-                    <span className={styles.toolLogo}>
+                  <article className={styles["tool-card"]} key={toolKey}>
+                    <span className={styles["tool-logo"]}>
                       {tool.logo ? <img src={tool.logo} alt={`${tool.name} logo`} title={`${tool.name} logo`} /> : fallbackMark}
                     </span>
                     <span>
-                      <span className={styles.toolName}>{tool.name}</span>
-                      <span className={styles.toolMeta}>{tool.description}</span>
+                      <span className={styles["tool-name"]}>{tool.name}</span>
+                      <span className={styles["tool-meta"]}>{tool.description}</span>
                     </span>
                   </article>
                 );

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import portfolio from "@/data/portfolio.json";
+import portfolio from "@/content/portfolio/portfolio.json";
 import "./globals.scss";
 
 const siteUrl = portfolio.profile.website;
@@ -7,7 +7,7 @@ const siteUrl = portfolio.profile.website;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Muhammad Ayoub Khan | WordPress Developer & Website Developer",
+    default: "Muhammad Ayoub Khan | Custom React.js, HTML/CSS & Front-End Developer",
     template: "%s | Muhammad Ayoub",
   },
   description:
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "responsive website design",
   ],
   openGraph: {
-    title: "Muhammad Ayoub Khan | WordPress Developer & Website Developer",
+    title: "Muhammad Ayoub Khan | Custom React.js, HTML/CSS & Front-End Developer",
     description:
       "Freelance WordPress, website, WooCommerce, React, and Next.js development by Muhammad Ayoub Khan for fast, maintainable business websites.",
     type: "website",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Ayoub Khan | WordPress Developer & Website Developer",
+    title: "Muhammad Ayoub Khan | Custom React.js, HTML/CSS & Front-End Developer",
     description:
       "Freelance WordPress developer and website developer Muhammad Ayoub Khan for business websites, WooCommerce stores, and Next.js front ends.",
     images: ["/ayoub-about-v2.jpg"],

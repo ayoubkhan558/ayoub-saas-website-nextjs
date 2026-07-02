@@ -1,0 +1,72 @@
+[
+  {
+    "icon": "layers",
+    "title": "Brickify",
+    "kind": "free-tool",
+    "badge": "Free web tool",
+    "description": "React.js based tool that accepts HTML, CSS, and JS, then converts it into Bricks Builder JSON.",
+    "impact": "Saves development time when building Bricks Builder websites from existing front-end structure.",
+    "stack": "HTML/CSS/JS to Bricks Builder JSON",
+    "technologies": ["React", "Bricks", "JSON"],
+    "cta": "Open tool",
+    "href": "https://brickify.netlify.app",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fbrickify.netlify.app?w=900",
+    "imageAlt": "Screenshot preview of the Brickify developer tool"
+  },
+  {
+    "icon": "gauge",
+    "title": "PinAuto",
+    "kind": "client-site",
+    "badge": "WordPress product",
+    "description": "Pinterest automation website built around clear product positioning, WordPress structure, and integration-focused pages.",
+    "impact": "Clearer product story and easier path toward signup or inquiry.",
+    "stack": "Bricks Builder, WordPress",
+    "technologies": ["WordPress", "Bricks", "Pinterest API"],
+    "cta": "View Live",
+    "href": "/case-studies/pin-auto",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fpin-auto.com?w=900",
+    "imageAlt": "Screenshot preview of the PinAuto website"
+  },
+  {
+    "icon": "rocket",
+    "title": "Clampy",
+    "kind": "free-tool",
+    "badge": "Free CSS tool",
+    "description": "A small utility for generating responsive CSS clamp() values without manual viewport math.",
+    "impact": "Makes responsive spacing and typography tokens faster to create and easier to repeat.",
+    "stack": "CSS clamp value generator",
+    "technologies": ["React", "CSS", "Clamp"],
+    "cta": "Open tool",
+    "href": "https://clampy.netlify.app",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fclampy.netlify.app?w=900",
+    "imageAlt": "Screenshot preview of the Clampy web app"
+  },
+  {
+    "icon": "sparkles",
+    "title": "Markedine",
+    "kind": "client-site",
+    "badge": "Service website",
+    "description": "WordPress and Elementor service site with clearer sections, conversion paths, and WhatsApp contact flow.",
+    "impact": "Improved service clarity and easier lead contact path.",
+    "stack": "Elementor Pro, WordPress",
+    "technologies": ["WordPress", "Elementor Pro", "WhatsApp"],
+    "cta": "View Live",
+    "href": "/case-studies/markedine",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmarkedine.com?w=900",
+    "imageAlt": "Screenshot preview of the Markedine website"
+  },
+  {
+    "icon": "code2",
+    "title": "Xgrid B2B",
+    "kind": "client-site",
+    "badge": "Custom theme",
+    "description": "Custom WordPress B2B marketing site using PHP templates, ACF content architecture, and REST API patterns.",
+    "impact": "Custom CMS foundation for scalable marketing pages.",
+    "stack": "Custom WordPress theme",
+    "technologies": ["PHP", "ACF", "REST API"],
+    "cta": "View Live",
+    "href": "/case-studies/xgrid-b2b",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fxgrid.co%2Fb2b-digital-marketing-agency?w=900",
+    "imageAlt": "Screenshot preview of the Xgrid B2B marketing website"
+  }
+]

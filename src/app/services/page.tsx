@@ -3,7 +3,7 @@ import { ContactFooter } from "@/components/landing/ContactFooter";
 import { SiteHeader } from "@/components/landing/SiteHeader";
 import { ServicesPageContent } from "@/components/services/ServicesPageContent";
 import { buildServicesSchema, jsonLdScript } from "@/lib/seo-schema";
-import portfolio from "@/data/portfolio.json";
+import portfolio from "@/content/portfolio/portfolio.json";
 
 export const metadata: Metadata = {
   title: "Website Development Services",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Website Development Services | Muhammad Ayoub",
     description:
-      "Frontend, WordPress, WooCommerce, website design, and website improvement services for businesses that need clean delivery and measurable outcomes.",
+      "Front-end, React.js, HTML/CSS, JavaScript, landing page, and website improvement services for businesses that need clean delivery and measurable outcomes.",
     type: "website",
     url: "/services",
     images: [
@@ -39,6 +39,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   const schema = buildServicesSchema();
+  const jsonLd = { __html: jsonLdScript(schema) };
 
   return (
     <div className="site-shell">

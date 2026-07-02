@@ -22,7 +22,7 @@ export function CaseStudiesPageContent({
       <section className={`section ${styles.list}`} id="case-studies-list">
         <div className="section__inner">
           <div className={`container ${styles.list__inner}`}>
-            <header className={styles.sectionHeader}>
+            <header className={styles["section-header"]}>
               <span className={styles.eyebrow}>Selected cases</span>
               <h2>
                 Detailed work with proof.

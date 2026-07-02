@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { buildLegalPageSchema, jsonLdScript } from "@/lib/seo-schema";
-import portfolio from "@/data/portfolio.json";
+import portfolio from "@/content/portfolio/portfolio.json";
 
 export const metadata: Metadata = {
   title: "Terms and Conditions | Muhammad Ayoub",

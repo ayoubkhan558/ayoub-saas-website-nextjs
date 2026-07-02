@@ -2,7 +2,7 @@ import Link from "next/link";
 import { IconGlyph } from "@/components/landing/IconGlyph";
 import { ContactFooter } from "@/components/landing/ContactFooter";
 import { SiteHeader } from "@/components/landing/SiteHeader";
-import portfolio from "@/data/portfolio.json";
+import portfolio from "@/content/portfolio/portfolio.json";
 import styles from "./not-found.module.scss";
 
 const paths = [
@@ -30,7 +30,7 @@ export default function NotFound() {
                   to contact me.
                 </p>
                 <div className={styles["not-found-page__actions"]}>
-                  <Link className="button button--dark" href="/" title="Go to homepage">
+                  <Link className="button" href="/" title="Go to homepage">
                     Back home
                     <IconGlyph name="arrowRight" />
                   </Link>

@@ -51,7 +51,7 @@ export function LogoMarquee({
               width={imageSize}
               height={imageSize}
               loading="lazy"
-              // Tool icons are vector SVGs; serve them directly instead of proxying through the optimizer.
+              decoding="async"
               unoptimized={item.src.endsWith(".svg")}
             />
           </span>

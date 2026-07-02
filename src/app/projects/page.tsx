@@ -10,7 +10,7 @@ import {
   sortProjectsByLiveStatus,
 } from "@/data/projectsArchive";
 import { buildProjectsSchema, jsonLdScript } from "@/lib/seo-schema";
-import portfolio from "@/data/portfolio.json";
+import portfolio from "@/content/portfolio/portfolio.json";
 
 export const metadata: Metadata = {
   title: "Website Design & Development Portfolio",
@@ -49,6 +49,7 @@ export default async function ProjectsPage({
   const liveCount = projectArchiveItems.filter((project) => project.projectStatus === "Live").length;
   const screenshotCount = projectArchiveItems.filter((project) => Boolean(project.screenshot)).length;
   const schema = buildProjectsSchema();
+  const jsonLd = { __html: jsonLdScript(schema) };
 
   return (
     <div className="site-shell">

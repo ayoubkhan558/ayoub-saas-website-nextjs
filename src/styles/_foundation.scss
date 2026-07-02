@@ -348,9 +348,14 @@ h6 {
   font-family: var(--font-display);
   font-weight: 700;
   line-height: var(--leading-heading);
-  letter-spacing: 0;
+  letter-spacing: -1px;
   text-wrap: balance;
 }
+
+h2 {
+  letter-spacing: -1px;
+}
+
 
 p {
   margin: 0;
@@ -439,7 +444,7 @@ img {
   padding: 0 var(--space-0);
 
   @media (min-width: 760px) {
-  padding: 0 var(--space-5);
+    padding: 0 var(--space-5);
   }
 }
 
@@ -486,7 +491,7 @@ img {
   font-size: var(--text-sm);
   font-weight: 500;
   letter-spacing: 0;
-  
+
 }
 
 .section-header {
@@ -520,10 +525,9 @@ img {
   font-family: var(--font-display);
   font-size: var(--text-h1);
   line-height: var(--leading-heading);
-  letter-spacing: 0;
 }
 
-.section-header__title > span,
+.section-header__title>span,
 h1 span[data-accent],
 h2 span[data-accent],
 h3 span[data-accent] {
@@ -546,4 +550,256 @@ h3 span[data-accent] {
   font-style: italic;
   font-weight: 200;
   line-height: 1;
+}
+
+/* Dark contrast pass: brighter text, stronger surfaces, clearer borders/focus. */
+:root[data-theme="dark"] {
+  --color-primary: #ff8ab8;
+  --color-primary-soft: rgba(255, 138, 184, 0.22);
+  --color-secondary: #8ee8df;
+  --color-secondary-soft: rgba(142, 232, 223, 0.2);
+  --color-ink-violet: #fff8ff;
+  --color-plum-charcoal: #f0e8f7;
+  --color-storm-mauve: #ded3ea;
+  --color-slate-iris: #c9bfd6;
+  --color-ash-lavender: #b8aec5;
+  --color-parchment: #09080d;
+  --color-bone-mist: #211b2c;
+  --color-fog-border: rgba(255, 248, 255, 0.28);
+  --color-twilight-plum: #c8bbff;
+  --color-amethyst: #c0b4ff;
+  --color-wisteria: #e2d8ff;
+
+  --page-rail-color: rgba(255, 248, 255, 0.24);
+  --page-corner-color: rgba(255, 248, 255, 0.86);
+  --page-gutter-bg: #0d0b13;
+
+  --color-surface: #17131f;
+  --color-surface-soft: #100d17;
+  --color-surface-muted: rgba(30, 25, 40, 0.94);
+  --color-surface-raised: rgba(38, 32, 50, 0.98);
+  --color-surface-chrome: rgba(13, 11, 18, 0.96);
+  --color-input-surface: rgba(24, 20, 32, 0.98);
+  --color-chip-surface: rgba(42, 35, 55, 0.98);
+
+  --color-band-surface: #0d0b13;
+  --color-band-on: #fff8ff;
+  --color-band-muted: rgba(240, 232, 247, 0.82);
+  --color-item-active: rgba(48, 40, 62, 0.98);
+  --color-item-active-hover: rgba(58, 48, 74, 0.98);
+
+  --color-section-tint-bg: #0f0c16;
+  --color-section-tint-gradient: linear-gradient(180deg, #1a1524, #0c0a11);
+  --section-inner-bg: #14101c;
+  --section-inner-bg-image:
+    linear-gradient(118deg, rgba(38, 32, 50, 0.96), rgba(19, 16, 27, 0.98) 48%, rgba(9, 8, 13, 1)),
+    linear-gradient(rgba(255, 248, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 248, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(255, 248, 255, 0.075) 0.75px, transparent 0.75px),
+    radial-gradient(rgba(142, 232, 223, 0.12) 0.75px, transparent 0.75px);
+
+  --color-heading: #fff8ff;
+  --color-text: #ded3ea;
+  --border-hairline: rgba(255, 248, 255, 0.14);
+  --border-line: rgba(255, 248, 255, 0.2);
+  --border-soft: rgba(255, 248, 255, 0.28);
+  --border-strong: rgba(255, 248, 255, 0.42);
+  --inset-highlight: rgba(255, 255, 255, 0.12);
+  --inset-highlight-strong: rgba(255, 255, 255, 0.18);
+  --ink-fill-soft: rgba(255, 248, 255, 0.1);
+  --shadow-focus: rgba(255, 138, 184, 0.42) 0 0 0 4px;
+}
+
+:root[data-theme="dark"] body {
+  color: var(--color-text);
+  background: radial-gradient(circle at 50% 0%, rgba(255, 138, 184, 0.12), transparent 26rem), var(--color-parchment);
+}
+
+:root[data-theme="dark"] a:not(.button) {
+  color: var(--color-ink-violet);
+  text-underline-offset: 0.18em;
+}
+
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] textarea,
+:root[data-theme="dark"] select {
+  border-color: var(--border-soft);
+  background: var(--color-input-surface);
+  color: var(--color-ink-violet);
+}
+
+:root[data-theme="dark"] input::placeholder,
+:root[data-theme="dark"] textarea::placeholder {
+  color: rgba(222, 211, 234, 0.72);
+}
+
+:root[data-theme="dark"] :focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Route-specific page transitions. Each top-level page gets a distinct entrance, while reduced motion remains static. */
+.route-transition[data-route-transition] :where(main, footer) {
+  animation-duration: var(--route-transition-duration, 420ms);
+  animation-name: var(--route-transition-name, page-enter);
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+  transform-origin: var(--route-transition-origin, 50% 0);
+}
+
+.route-transition[data-route-transition="home"] {
+  --route-transition-name: page-enter-home;
+  --route-transition-duration: 520ms;
+}
+
+.route-transition[data-route-transition="about"] {
+  --route-transition-name: page-enter-about;
+  --route-transition-duration: 460ms;
+  --route-transition-origin: 0 50%;
+}
+
+.route-transition[data-route-transition="services"] {
+  --route-transition-name: page-enter-services;
+  --route-transition-duration: 440ms;
+}
+
+.route-transition[data-route-transition="projects"] {
+  --route-transition-name: page-enter-projects;
+  --route-transition-duration: 480ms;
+}
+
+.route-transition[data-route-transition="case-list"] {
+  --route-transition-name: page-enter-case-list;
+  --route-transition-duration: 460ms;
+}
+
+.route-transition[data-route-transition="case-detail"] {
+  --route-transition-name: page-enter-case-detail;
+  --route-transition-duration: 500ms;
+}
+
+.route-transition[data-route-transition="contact"] {
+  --route-transition-name: page-enter-contact;
+  --route-transition-duration: 430ms;
+  --route-transition-origin: 50% 100%;
+}
+
+.route-transition[data-route-transition="legal"] {
+  --route-transition-name: page-enter-legal;
+  --route-transition-duration: 360ms;
+}
+
+@keyframes page-enter-home {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(18px) scale(0.992);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes page-enter-about {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateX(-18px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes page-enter-services {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    clip-path: inset(0 0 8% 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0);
+  }
+}
+
+@keyframes page-enter-projects {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(10px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes page-enter-case-list {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes page-enter-case-detail {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-enter-contact {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-enter-legal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-transition[data-route-transition] :where(main, footer) {
+    animation: none;
+    clip-path: none;
+    filter: none;
+    transform: none;
+  }
 }

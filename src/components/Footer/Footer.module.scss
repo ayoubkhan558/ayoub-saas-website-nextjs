@@ -63,7 +63,7 @@
   }
 }
 
-.footer__logo img {
+.footer__logo :where(img, svg) {
   display: block;
   width: 100%;
   height: auto;

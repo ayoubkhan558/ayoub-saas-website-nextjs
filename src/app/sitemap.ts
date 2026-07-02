@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import portfolio from "@/data/portfolio.json";
+import portfolio from "@/content/portfolio/portfolio.json";
 import { caseStudies } from "@/data/work";
 
 const siteUrl = portfolio.profile.website.replace(/\/$/, "");

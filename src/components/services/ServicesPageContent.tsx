@@ -9,6 +9,7 @@ export function ServicesPageContent({ portfolio }: { portfolio: PortfolioData })
     <main>
       <ServicesHero />
       <ServicesOffers services={portfolio.services} />
+      <ServicesProcess process={portfolio.process} />
       <ServicesOutcomes />
     </main>
   );

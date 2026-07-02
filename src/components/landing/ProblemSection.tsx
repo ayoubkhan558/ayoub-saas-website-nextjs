@@ -25,6 +25,20 @@ export function ProblemSection({ portfolio }: { portfolio: PortfolioData }) {
               </article>
             ))}
           </div>
+          {"bestFit" in portfolio ? (
+            <div className={styles["problem__fit"]}>
+              <span className={styles["problem__ticker-label"]}>Best fit for</span>
+              <div className={styles["problem__fit-grid"]}>
+                {(portfolio.bestFit as string[]).map((item) => (
+                  <span className={styles["problem__fit-item"]} key={item}>
+                    <IconGlyph name="check" />
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
           <div className={styles["problem__ticker"]}>
             <span className={styles["problem__ticker-label"]}>Problems I solve</span>
             <div className={styles["problem__ticker-track"]}>

@@ -12,36 +12,36 @@ export function CaseStudyBrowserMockup({
   scrollOnHover?: boolean;
 }) {
   return (
-    <div className={`${styles.screen} ${compact ? styles.screenCompact : ""} ${scrollOnHover ? styles.screenScrollOnHover : ""}`}>
-      <div className={styles.browserTop}>
-        <div className={styles.browserDots} aria-hidden="true">
+    <div className={`${styles.screen} ${compact ? styles["screen-compact"] : ""} ${scrollOnHover ? styles["screen-scroll-on-hover"] : ""}`}>
+      <div className={styles["browser-top"]}>
+        <div className={styles["browser-dots"]} aria-hidden="true">
           <span />
           <span />
           <span />
         </div>
-        <div className={styles.browserUrl}>{label}</div>
+        <div className={styles["browser-url"]}>{label}</div>
       </div>
       {imageSrc ? (
-        <div className={styles.realPreview}>
+        <div className={styles["real-preview"]}>
           <img src={imageSrc} alt={`Website preview for ${label}`} title={`Website preview for ${label}`} loading="lazy" />
         </div>
       ) : (
-        <div className={styles.mockSite} aria-hidden="true">
-          <div className={styles.mockNav}>
-            <span className={styles.mockLogo} />
-            <span className={styles.mockButton} />
+        <div className={styles["mock-site"]} aria-hidden="true">
+          <div className={styles["mock-nav"]}>
+            <span className={styles["mock-logo"]} />
+            <span className={styles["mock-button"]} />
           </div>
-          <div className={styles.mockHero}>
-            <span className={styles.mockLine} />
-            <span className={styles.mockLine} />
-            <span className={styles.mockShortLine} />
+          <div className={styles["mock-hero"]}>
+            <span className={styles["mock-line"]} />
+            <span className={styles["mock-line"]} />
+            <span className={styles["mock-short-line"]} />
           </div>
-          <div className={styles.mockGrid}>
-            <span className={styles.mockCard} />
-            <span className={styles.mockCard} />
-            <span className={styles.mockCard} />
+          <div className={styles["mock-grid"]}>
+            <span className={styles["mock-card"]} />
+            <span className={styles["mock-card"]} />
+            <span className={styles["mock-card"]} />
           </div>
-          <div className={styles.mockFooter} />
+          <div className={styles["mock-footer"]} />
         </div>
       )}
     </div>
