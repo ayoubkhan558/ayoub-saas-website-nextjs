@@ -1,3 +1,5 @@
+@use "../../styles/mixins" as *;
+
 .hero :global(.section__inner) {
   overflow: hidden;
   padding-block: var(--space-9) var(--space-7);
@@ -91,12 +93,15 @@
 
 .hero-meta {
   display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
   margin: 0;
 }
 
 .hero-meta__item {
   display: inline-flex;
   align-items: center;
+  flex: 1 1 132px;
   min-width: 132px;
   gap: var(--space-1);
   border: 1px solid rgba(49, 38, 59, 0.14);
@@ -168,7 +173,7 @@
     radial-gradient(rgba(49, 38, 59, 0.045) 1px, transparent 1px) 0 0 / 7px 7px,
     #fff;
   box-shadow: var(--shadow-product-light);
-  padding: clamp(var(--space-3), 2vw, var(--space-5));
+  padding: clamp-val(12px, 32px);
 }
 
 .laptop-frame::before,

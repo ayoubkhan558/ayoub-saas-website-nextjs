@@ -61,6 +61,7 @@
   display: grid;
   gap: var(--space-3);
   align-self: stretch;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   @media (min-width: 640px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -103,9 +104,13 @@
 .about-page-hero-stat strong {
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
-  font-size: clamp(2.15rem, 4vw, 3.4rem);
+  font-size: var(--text-h2);
   font-weight: 800;
   line-height: 1;
+
+  @media (min-width: 768px) {
+    font-size: var(--text-h1);
+  }
 }
 
 .about-page-hero-stat span {

@@ -3,17 +3,12 @@
 $clamp-mobile-minimum: 390px !default;
 $clamp-desktop-maximum: 1440px !default;
 
-@function fluid-clamp($min, $max) {
-  $slope: math.div($max - $min, $clamp-desktop-maximum - $clamp-mobile-minimum);
-  $intersection: $min - ($clamp-mobile-minimum * $slope);
-
-  @return clamp(#{$min}, calc(#{$intersection} + #{$slope * 100vw}), #{$max});
+@function clamp-val($min, $max, $min-vw: $clamp-mobile-minimum, $max-vw: $clamp-desktop-maximum) {
+  $slope: math.div($max - $min, $max-vw - $min-vw);
+  $intercept: $min - $slope * $min-vw;
+  @return clamp(#{$min}, #{$intercept} + #{$slope * 100}vw, #{$max});
 }
 
-@mixin clamp-prop($property, $min, $max) {
-  #{$property}: fluid-clamp($min, $max);
-}
 
-@mixin clamp-var($name, $min, $max) {
-  #{$name}: fluid-clamp($min, $max);
-}
+// font-size: clamp-val(14px, 24px);
+// --text-lg-size: #{clamp-val(14px, 24px)};

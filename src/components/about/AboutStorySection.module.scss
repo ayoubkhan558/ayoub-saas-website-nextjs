@@ -1,3 +1,5 @@
+@use "../../styles/mixins" as *;
+
 .about-page-section-header {
   display: grid;
   gap: var(--space-4);
@@ -178,7 +180,7 @@
   bottom: var(--space-3);
   color: var(--about-decor-number);
   font-family: var(--font-display-compact);
-  font-size: clamp(3.5rem, 8vw, 5.8rem);
+  font-size: clamp-val(56px, 93px);
   font-weight: 800;
   line-height: 1;
   pointer-events: none;

@@ -514,8 +514,10 @@
 }
 
 .faq__header {
-  position: sticky;
-  top: calc(92px + var(--space-5));
+  @media (min-width: 860px) {
+    position: sticky;
+    top: calc(92px + var(--space-5));
+  }
 }
 
 .faq__header :global(.section-header) {

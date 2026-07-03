@@ -80,45 +80,45 @@
   --font-code: "GT Cinetype Mono", ui-monospace, SFMono-Regular, Consolas,
     monospace;
 
-  @include clamp-var(--text-2xs, 10px, 11px);
-  @include clamp-var(--text-xs, 11px, 12px);
-  @include clamp-var(--text-sm, 12px, 14px);
-  @include clamp-var(--text-ui, 13px, 14px);
-  @include clamp-var(--text-md, 14px, 15px);
-  @include clamp-var(--text-body, 15px, 16px);
-  @include clamp-var(--text-lg, 16px, 18px);
-  @include clamp-var(--text-subheading, 18px, 20px);
-  @include clamp-var(--text-h5, 18px, 20px);
-  @include clamp-var(--text-h4, 18px, 22px);
-  @include clamp-var(--text-h3, 22px, 26px);
-  @include clamp-var(--text-h2, 26px, 36px);
-  @include clamp-var(--text-h1, 30px, 42px);
-  @include clamp-var(--text-hero, 34px, 54px);
-  @include clamp-var(--text-display, 34px, 72px);
+  --text-2xs: #{clamp-val(10px, 11px)};
+  --text-xs: #{clamp-val(11px, 12px)};
+  --text-sm: #{clamp-val(12px, 14px)};
+  --text-ui: #{clamp-val(13px, 14px)};
+  --text-md: #{clamp-val(14px, 15px)};
+  --text-body: #{clamp-val(15px, 16px)};
+  --text-lg: #{clamp-val(16px, 18px)};
+  --text-subheading: #{clamp-val(18px, 20px)};
+  --text-h5: #{clamp-val(18px, 20px)};
+  --text-h4: #{clamp-val(18px, 22px)};
+  --text-h3: #{clamp-val(22px, 26px)};
+  --text-h2: #{clamp-val(26px, 36px)};
+  --text-h1: #{clamp-val(30px, 42px)};
+  --text-hero: #{clamp-val(34px, 54px)};
+  --text-display: #{clamp-val(34px, 72px)};
 
   --leading-body: 1.6;
   --leading-heading: 1.35;
 
-  @include clamp-var(--space-0, 0px, 0px);
-  @include clamp-var(--space-1, 4px, 6px);
-  @include clamp-var(--space-2, 8px, 10px);
-  @include clamp-var(--space-3, 12px, 16px);
-  @include clamp-var(--space-4, 16px, 24px);
-  @include clamp-var(--space-5, 20px, 32px);
-  @include clamp-var(--space-6, 24px, 40px);
-  @include clamp-var(--space-7, 32px, 48px);
-  @include clamp-var(--space-8, 48px, 72px);
-  @include clamp-var(--space-9, 64px, 96px);
-  @include clamp-var(--space-10, 80px, 120px);
-  @include clamp-var(--space-11, 96px, 144px);
+  --space-0: #{clamp-val(0px, 0px)};
+  --space-1: #{clamp-val(4px, 6px)};
+  --space-2: #{clamp-val(8px, 10px)};
+  --space-3: #{clamp-val(12px, 16px)};
+  --space-4: #{clamp-val(16px, 24px)};
+  --space-5: #{clamp-val(20px, 32px)};
+  --space-6: #{clamp-val(24px, 40px)};
+  --space-7: #{clamp-val(32px, 48px)};
+  --space-8: #{clamp-val(48px, 72px)};
+  --space-9: #{clamp-val(64px, 96px)};
+  --space-10: #{clamp-val(80px, 120px)};
+  --space-11: #{clamp-val(96px, 144px)};
 
   --page-max-width: min(1500px, 95%);
-  --size-logo-height: clamp(23px, 2vw, 31px);
-  --size-logo-height-compact: clamp(24px, 1.8vw, 29px);
-  --size-hero-title: clamp(40px, 4vw, 54px);
-  --size-hero-media-height: clamp(560px, 60vw, 704px);
-  --size-stat-number: clamp(36px, 4vw, 48px);
-  --size-signature: clamp(34px, 4vw, 56px);
+  --size-logo-height: clamp-val(23px, 31px);
+  --size-logo-height-compact: clamp-val(24px, 29px);
+  --size-hero-title: clamp-val(40px, 54px);
+  --size-hero-media-height: clamp-val(560px, 704px);
+  --size-stat-number: clamp-val(36px, 48px);
+  --size-signature: clamp-val(34px, 56px);
 
   --radius-buttons: 3px;
   --radius-cards: 6px;

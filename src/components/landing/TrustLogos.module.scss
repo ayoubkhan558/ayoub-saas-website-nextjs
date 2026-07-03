@@ -15,8 +15,8 @@
   background: var(--trust-logos-bg);
   overflow: visible;
 
-  @include clamp-prop(padding-right, 18px, 72px);
-  @include clamp-prop(padding-left, 18px, 72px);
+  padding-right: clamp-val(18px, 72px);
+  padding-left: clamp-val(18px, 72px);
 }
 
 :global(:root[data-theme="dark"]) .trust-logos {

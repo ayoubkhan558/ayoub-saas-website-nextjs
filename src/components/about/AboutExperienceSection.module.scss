@@ -88,8 +88,8 @@
 .about-page-experience-item::after {
   content: "";
   position: absolute;
-  top: var(--space-5);
-  left: var(--space-5);
+  top: var(--space-3);
+  left: var(--space-3);
   width: 10px;
   height: 10px;
   border: 2px solid var(--color-secondary);
@@ -113,11 +113,7 @@
   display: grid;
   gap: var(--space-3);
   justify-items: start;
-  margin-left: var(--space-5);
-
-  @media (min-width: 760px) {
-    margin-left: 0;
-  }
+  margin-left: 0;
 }
 
 .about-page-experience-item__year {
