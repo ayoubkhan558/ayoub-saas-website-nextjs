@@ -34,7 +34,6 @@
 .brand-card {
   align-content: start;
   gap: var(--space-4);
-  min-height: 340px;
   padding: var(--space-7) var(--space-5);
   background: #f3f0f1c2;
   border: 1px solid #0000;
@@ -185,30 +184,30 @@
 
 :global(:root[data-theme="dark"]) {
   .section :global(.section__inner) {
-      background-color: var(--color-surface) !important;
-      background-image:
-        radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
-        linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
-      background-size: 6px 6px, auto !important;
-    }
+    background-color: var(--color-surface) !important;
+    background-image:
+      radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
+      linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
+    background-size: 6px 6px, auto !important;
+  }
 
   .brand-card {
-      border-color: rgba(248, 244, 255, 0.16);
-      background:
-        radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
-        rgba(21, 18, 29, 0.9);
-    }
+    border-color: rgba(248, 244, 255, 0.16);
+    background:
+      radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
+      rgba(21, 18, 29, 0.9);
+  }
 
   .brand-card:hover {
-      border-color: rgba(248, 244, 255, 0.28);
-      background: rgba(32, 27, 42, 0.96);
-      box-shadow: inset 0 0 0 4px rgba(248, 244, 255, 0.05);
-    }
+    border-color: rgba(248, 244, 255, 0.28);
+    background: rgba(32, 27, 42, 0.96);
+    box-shadow: inset 0 0 0 4px rgba(248, 244, 255, 0.05);
+  }
 
   .brand-card-label,
   .brand-logo-icon {
-      background:
-        linear-gradient(90deg, rgba(240, 120, 168, 0.16), transparent),
-        rgba(32, 27, 42, 0.92);
-    }
+    background:
+      linear-gradient(90deg, rgba(240, 120, 168, 0.16), transparent),
+      rgba(32, 27, 42, 0.92);
+  }
 }

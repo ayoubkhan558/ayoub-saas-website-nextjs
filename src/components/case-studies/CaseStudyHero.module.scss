@@ -100,6 +100,7 @@
 
 .hero-meta__item {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   flex: 1 1 132px;
   min-width: 132px;
@@ -107,6 +108,10 @@
   border: 1px solid rgba(49, 38, 59, 0.14);
   background: var(--color-surface-muted);
   padding: var(--space-2) var(--space-3);
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .hero-meta__label,
@@ -208,33 +213,33 @@
 
 :global(:root[data-theme="dark"]) {
   .hero :global(.section__inner) {
-      background-color: var(--color-surface) !important;
-      background-image:
-        radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
-        linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
-      background-size: 6px 6px, auto !important;
-    }
+    background-color: var(--color-surface) !important;
+    background-image:
+      radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
+      linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
+    background-size: 6px 6px, auto !important;
+  }
 
   .hero :global(.section__inner)::before {
-      background-image:
-        radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
-        linear-gradient(115deg, transparent 0 44%, rgba(248, 244, 255, 0.035) 44% 45%, transparent 45% 100%);
-      mix-blend-mode: screen;
-    }
+    background-image:
+      radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
+      linear-gradient(115deg, transparent 0 44%, rgba(248, 244, 255, 0.035) 44% 45%, transparent 45% 100%);
+    mix-blend-mode: screen;
+  }
 
   .hero :global(.section__inner)::after {
-      background:
-        linear-gradient(90deg, rgba(14, 13, 20, 0.72), transparent 18%, transparent 82%, rgba(14, 13, 20, 0.76)),
-        radial-gradient(ellipse at 48% 30%, transparent 0 48%, rgba(248, 244, 255, 0.045) 100%);
-    }
+    background:
+      linear-gradient(90deg, rgba(14, 13, 20, 0.72), transparent 18%, transparent 82%, rgba(14, 13, 20, 0.76)),
+      radial-gradient(ellipse at 48% 30%, transparent 0 48%, rgba(248, 244, 255, 0.045) 100%);
+  }
 
   .laptop-frame {
-      border-color: rgba(248, 244, 255, 0.16);
-      background:
-        radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
-        rgba(21, 18, 29, 0.94);
-      box-shadow:
-        0 0 0 1px rgba(248, 244, 255, 0.08),
-        rgba(0, 0, 0, 0.34) 0 20px 54px;
-    }
+    border-color: rgba(248, 244, 255, 0.16);
+    background:
+      radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
+      rgba(21, 18, 29, 0.94);
+    box-shadow:
+      0 0 0 1px rgba(248, 244, 255, 0.08),
+      rgba(0, 0, 0, 0.34) 0 20px 54px;
+  }
 }

@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef } from "react";
 import styles from "./CaseStudyBrowserMockup.module.scss";
 
 export function CaseStudyBrowserMockup({
@@ -11,37 +14,54 @@ export function CaseStudyBrowserMockup({
   imageSrc?: string;
   scrollOnHover?: boolean;
 }) {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  const handleEnter = () => {
+    if (!wrapperRef.current || !imageRef.current) return;
+
+    const containerHeight = wrapperRef.current.clientHeight;
+    const imageHeight = imageRef.current.clientHeight;
+    const distance = Math.max(imageHeight - containerHeight, 0);
+
+    imageRef.current.style.transform = `translateY(-${distance}px)`;
+  };
+
+  const handleLeave = () => {
+    if (imageRef.current) {
+      imageRef.current.style.transform = "translateY(0)";
+    }
+  };
+
   return (
-    <div className={`${styles.screen} ${compact ? styles["screen-compact"] : ""} ${scrollOnHover ? styles["screen-scroll-on-hover"] : ""}`}>
+    <div
+      className={`${styles.screen} ${
+        compact ? styles["screen-compact"] : ""
+      } ${scrollOnHover ? styles["screen-scroll-on-hover"] : ""}`}
+    >
       <div className={styles["browser-top"]}>
-        <div className={styles["browser-dots"]} aria-hidden="true">
+        <div className={styles["browser-dots"]}>
           <span />
           <span />
           <span />
         </div>
+
         <div className={styles["browser-url"]}>{label}</div>
       </div>
-      {imageSrc ? (
-        <div className={styles["real-preview"]}>
-          <img src={imageSrc} alt={`Website preview for ${label}`} title={`Website preview for ${label}`} loading="lazy" />
-        </div>
-      ) : (
-        <div className={styles["mock-site"]} aria-hidden="true">
-          <div className={styles["mock-nav"]}>
-            <span className={styles["mock-logo"]} />
-            <span className={styles["mock-button"]} />
-          </div>
-          <div className={styles["mock-hero"]}>
-            <span className={styles["mock-line"]} />
-            <span className={styles["mock-line"]} />
-            <span className={styles["mock-short-line"]} />
-          </div>
-          <div className={styles["mock-grid"]}>
-            <span className={styles["mock-card"]} />
-            <span className={styles["mock-card"]} />
-            <span className={styles["mock-card"]} />
-          </div>
-          <div className={styles["mock-footer"]} />
+
+      {imageSrc && (
+        <div
+          ref={wrapperRef}
+          className={styles["real-preview"]}
+          onMouseEnter={scrollOnHover ? handleEnter : undefined}
+          onMouseLeave={scrollOnHover ? handleLeave : undefined}
+        >
+          <img
+            ref={imageRef}
+            src={imageSrc}
+            alt={label}
+            loading="lazy"
+          />
         </div>
       )}
     </div>
