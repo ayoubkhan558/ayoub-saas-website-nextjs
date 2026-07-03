@@ -1,12 +1,7 @@
 @use "../../../styles/mixins" as *;
 
 .contact-hero :global(.section__inner) {
-  padding-block: var(--page-hero-padding-block);
-  background-color: var(--page-hero-bg);
-  background-image:
-    radial-gradient(var(--page-hero-dot) 0.75px, transparent 0.75px),
-    var(--page-hero-gradient);
-  background-size: 6px 6px, auto;
+  @include page-hero-surface;
 }
 
 .contact-hero__inner {
@@ -20,10 +15,8 @@
 }
 
 .contact-hero__copy {
-  display: grid;
+  @include hero-copy;
   align-content: start;
-  gap: var(--space-4);
-  max-width: var(--page-section-header-max);
 }
 
 .contact-page__eyebrow,
@@ -36,34 +29,19 @@
 }
 
 .contact-hero__copy>.contact-page__eyebrow {
-  font-family: var(--font-editorial-display);
-  font-size: var(--page-section-kicker-size);
-  font-style: normal;
-  font-weight: 200;
-  letter-spacing: 0;
-  line-height: 1;
-  text-transform: none;
+  @include hero-eyebrow;
 }
 
 .contact-hero h1 {
-  max-width: var(--page-hero-title-max);
-  font-family: var(--font-display);
-  font-size: var(--text-display);
-  letter-spacing: 0;
-  line-height: var(--leading-heading);
+  @include hero-title;
 }
 
 .contact-hero p {
-  max-width: var(--page-hero-text-max);
-  color: var(--color-storm-mauve);
-  font-size: var(--page-section-copy-size);
-  font-weight: 300;
+  @include hero-text;
 }
 
 .contact-hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
+  @include hero-actions;
 }
 
 .contact-signal-panel {
