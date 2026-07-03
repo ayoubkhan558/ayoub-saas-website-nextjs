@@ -27,11 +27,14 @@
   }
 }
 
-.showcase-item {
+.showcase-carousel {
   min-width: 0;
+  // Native-CSS fallback so the preview box always has a real height,
+  // even if the mockup's scroll-on-hover height variable fails to resolve.
+  --comparison-preview-height: clamp(340px, 42vw, 520px);
 }
 
-.carousel-caption {
+.showcase-carousel-caption {
   display: grid;
   gap: var(--space-2);
   margin-top: var(--space-3);
@@ -42,7 +45,7 @@
   padding-left: var(--space-3);
 }
 
-.carousel-caption strong {
+.showcase-carousel-caption strong {
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
   font-size: var(--text-md);

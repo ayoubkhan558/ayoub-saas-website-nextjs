@@ -11,26 +11,26 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background: #1f1f28;
   padding: var(--space-2) var(--space-3);
+  background: #1f1f28;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .browser-dots {
   display: flex;
   gap: var(--space-1);
-}
 
-.browser-dots span {
-  width: var(--space-2);
-  aspect-ratio: 1;
-  border-radius: var(--radius-pills);
-  background: rgba(255, 255, 255, 0.38);
+  span {
+    width: var(--space-2);
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.38);
+  }
 }
 
 .browser-url {
-  min-width: 0;
   flex: 1;
+  min-width: 0;
   overflow: hidden;
   color: rgba(255, 255, 255, 0.62);
   font-family: var(--font-code);
@@ -43,28 +43,35 @@
   display: grid;
   gap: var(--space-4);
   min-height: clamp-val(320px, 620px);
+  padding: var(--space-5);
+
   background:
     radial-gradient(rgba(255, 255, 255, 0.07) 0.75px, transparent 0.75px) 0 0 / 7px 7px,
     #15151c;
-  padding: var(--space-5);
 }
 
+/* ---------------- REAL PREVIEW ---------------- */
+
 .real-preview {
+  position: relative;
   overflow: hidden;
   background: #f4f4f5;
+  max-height: clamp-val(260px, 480px);
 }
 
 .real-preview img {
-  aspect-ratio: 16 / 10;
+  display: block;
   width: 100%;
-  min-height: clamp-val(260px, 480px);
-  object-fit: contain;
-  object-position: top;
+  height: auto;
 }
 
-.screen-compact .real-preview img {
+/* ---------------- COMPACT ---------------- */
+
+.screen-compact .real-preview {
   min-height: clamp-val(240px, 390px);
 }
+
+/* ---------------- HOVER SCROLL ---------------- */
 
 .screen-scroll-on-hover {
   --comparison-preview-height: clamp-val(340px, 520px);
@@ -73,20 +80,17 @@
 .screen-scroll-on-hover .real-preview {
   position: relative;
   height: var(--comparison-preview-height);
-  background: #fff;
+  overflow: hidden;
 }
 
 .screen-scroll-on-hover .real-preview img {
-  position: absolute;
-  inset: 0 auto auto 0;
   display: block;
   width: 100%;
   height: auto;
-  min-height: 0;
-  aspect-ratio: auto;
-  object-fit: contain;
-  object-position: top center;
+
+  transform: translateY(0);
   transition: transform 12s linear;
+  will-change: transform;
 }
 
 .screen-scroll-on-hover:hover .real-preview img,
@@ -94,9 +98,7 @@
   transform: translateY(calc(-100% + var(--comparison-preview-height)));
 }
 
-.screen-compact .mock-site {
-  min-height: clamp-val(240px, 390px);
-}
+/* ---------------- REDUCED MOTION ---------------- */
 
 @media (prefers-reduced-motion: reduce) {
   .screen-scroll-on-hover .real-preview {
@@ -104,15 +106,12 @@
   }
 
   .screen-scroll-on-hover .real-preview img {
-    position: static;
     transition: none;
-  }
-
-  .screen-scroll-on-hover:hover .real-preview img,
-  .screen-scroll-on-hover:focus-within .real-preview img {
     transform: none;
   }
 }
+
+/* ---------------- MOCK UI ---------------- */
 
 .mock-nav,
 .mock-hero,
@@ -176,7 +175,7 @@
 
 .mock-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-3);
   padding: var(--space-3);
 }
@@ -195,6 +194,6 @@
 
 :global(:root[data-theme="dark"]) {
   .real-preview {
-      background: #111018;
-    }
+    background: #111018;
+  }
 }

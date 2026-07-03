@@ -9,6 +9,11 @@
   font-family: var(--font-code);
   font-size: var(--text-xs);
   text-transform: uppercase;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline-flex;
+  }
 }
 
 .section :global(.section__inner) {
@@ -27,7 +32,7 @@
   font-family: var(--font-display-compact);
   font-size: var(--text-md);
   font-weight: 800;
-  line-height: 1.12;
+  
 }
 
 .tool-meta {
@@ -69,9 +74,9 @@
 }
 
 .tool-card {
-  align-content: end;
   color: var(--color-ink-violet);
   display: grid;
+  // align-content: start;
   position: relative;
   gap: var(--space-2);
   padding: var(--space-5) var(--space-4) var(--space-3);
@@ -130,17 +135,17 @@
 
 :global(:root[data-theme="dark"]) {
   .section :global(.section__inner) {
-      background-color: var(--color-surface) !important;
-      background-image:
-        radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
-        linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
-      background-size: 6px 6px, auto !important;
-    }
+    background-color: var(--color-surface) !important;
+    background-image:
+      radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
+      linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
+    background-size: 6px 6px, auto !important;
+  }
 
   .tool-card {
-      border-color: rgba(248, 244, 255, 0.16);
-      background:
-        radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
-        rgba(21, 18, 29, 0.9);
-    }
+    border-color: rgba(248, 244, 255, 0.16);
+    background:
+      radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
+      rgba(21, 18, 29, 0.9);
+  }
 }

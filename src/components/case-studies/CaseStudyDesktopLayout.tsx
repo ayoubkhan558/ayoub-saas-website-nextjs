@@ -39,9 +39,9 @@ export function CaseStudyDesktopLayout({ study }: { study: CaseStudyDetailData }
             aria-label={`${study.client} page showcase`}
           >
             {pageShowcase.items.map((item) => (
-              <article className={styles["showcase-item"]} key={item.label}>
+              <article className={styles["showcase-carousel"]} key={item.label}>
                 <CaseStudyBrowserMockup label={`${study.urlLabel} / ${item.label.toLowerCase()}`} compact scrollOnHover imageSrc={item.image} />
-                <div className={styles["carousel-caption"]}>
+                <div className={styles["showcase-carousel-caption"]}>
                   <strong>{item.label}</strong>
                   <span>{item.caption ?? "Desktop page capture"}</span>
                 </div>
