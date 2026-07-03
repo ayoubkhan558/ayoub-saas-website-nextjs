@@ -38,20 +38,20 @@
   color: var(--color-ink-violet);
   font-family: var(--font-code);
   font-size: var(--text-xs);
-  
+
   text-transform: uppercase;
 }
 
 .hero h1 {
   max-width: var(--page-hero-title-max);
-  font-size: var(--page-hero-title-size);
-  
+  font-size: var(--text-display);
+
 }
 
 .section-header h2 {
   max-width: 820px;
   font-size: var(--page-section-title-size);
-  
+
 }
 
 .hero h1 i,
@@ -92,6 +92,7 @@
 }
 
 :global(:root[data-theme="dark"]) {
+
   .summary,
   .card {
     --case-list-card-border: rgba(248, 244, 255, 0.16);
@@ -122,8 +123,8 @@
   pointer-events: none;
 }
 
-.summary > *,
-.card > * {
+.summary>*,
+.card>* {
   position: relative;
   z-index: 1;
 }
@@ -131,7 +132,6 @@
 .summary {
   display: grid;
   gap: var(--space-4);
-  min-height: 320px;
   padding: var(--space-5);
   transition:
     background-color 160ms ease,
@@ -159,7 +159,7 @@
   font-family: var(--font-display-compact);
   font-size: var(--text-h3);
   font-weight: 800;
-  
+
 }
 
 .summary p {
@@ -258,7 +258,7 @@
   font-family: var(--font-display-compact);
   font-size: var(--text-h3);
   font-weight: 800;
-  
+
 }
 
 .stack {
@@ -288,7 +288,7 @@
   font-family: var(--font-display-compact);
   font-size: var(--text-sm);
   font-weight: 800;
-  
+
   padding: var(--space-2) var(--space-3);
 }
 
@@ -320,8 +320,9 @@
 .card__link:active svg {
   color: var(--color-primary);
 }
-.hero__copy > .eyebrow,
-.section-header > .eyebrow {
+
+.hero__copy>.eyebrow,
+.section-header>.eyebrow {
   color: var(--color-ink-violet);
   font-family: var(--font-editorial-display);
   font-size: var(--page-section-kicker-size);

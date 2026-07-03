@@ -15,7 +15,7 @@
   box-shadow: var(--shadow-product-light);
   padding: var(--space-6) var(--space-5);
 
-  @media (min-width: 860px) {
+  @media (min-width: 768px) {
     grid-template-columns: minmax(0, 1fr) minmax(320px, 0.46fr);
   }
 

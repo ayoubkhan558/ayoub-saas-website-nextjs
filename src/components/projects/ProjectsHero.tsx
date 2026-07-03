@@ -29,7 +29,6 @@ export function ProjectsHero({ stats }: { stats: Array<{ label: string; value: s
           </div>
 
           <aside className={styles.signal} aria-label="Project showcase summary">
-            <span className={styles.eyebrow}>Showcase mix</span>
             <div className={styles.signal__stats}>
               {stats.map((stat) => (
                 <div key={stat.label}>

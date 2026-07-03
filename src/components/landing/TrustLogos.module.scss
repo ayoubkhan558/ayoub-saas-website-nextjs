@@ -99,18 +99,19 @@
   position: relative;
   display: inline-grid;
   // min-width: 118px;
-  min-height: 58px;
+  // min-height: 58px;
   place-items: center;
   border-radius: var(--radius-buttons);
   color: var(--color-ink-violet);
   cursor: default;
   font: inherit;
-  padding: var(--space-2) var(--space-3);
   text-decoration: none;
   outline-offset: 6px;
+  padding: var(--space-1);
 
-
-  @media (min-width: 1040px) {}
+  @media (min-width: 1040px) {
+    padding: var(--space-2);
+  }
 }
 
 .trust-logos__logo img {
@@ -120,8 +121,8 @@
   mix-blend-mode: var(--trust-logos-logo-blend);
   object-fit: contain;
   object-position: center;
-  max-width: 82px;
-  max-height: 34px;
+  max-width: 70px;
+  max-height: 32px;
 
   @media (min-width: 768px) {
     max-width: 112px;
