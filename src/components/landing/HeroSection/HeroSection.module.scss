@@ -298,7 +298,7 @@
 }
 
 /* 4. Respect accessibility standard rules matching your example */
-@media (prefers-reduced-motion: reduce) {
+@include reduced-motion {
   .hero__portrait::before {
     animation: none;
   }

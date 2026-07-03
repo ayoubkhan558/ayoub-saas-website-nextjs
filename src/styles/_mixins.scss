@@ -30,6 +30,12 @@ $breakpoints: (
   }
 }
 
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
 
 // font-size: clamp-val(14px, 24px);
 // --text-lg-size: #{clamp-val(14px, 24px)};

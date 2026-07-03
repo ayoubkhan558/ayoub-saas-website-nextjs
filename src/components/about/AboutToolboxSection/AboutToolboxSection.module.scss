@@ -156,7 +156,7 @@
   object-fit: contain;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@include reduced-motion {
   .about-page-skill-marquee {
     overflow-x: auto;
     mask-image: none;

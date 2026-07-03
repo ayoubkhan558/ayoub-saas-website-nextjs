@@ -100,7 +100,7 @@
 
 /* ---------------- REDUCED MOTION ---------------- */
 
-@media (prefers-reduced-motion: reduce) {
+@include reduced-motion {
   .screen-scroll-on-hover .real-preview {
     overflow-y: auto;
   }

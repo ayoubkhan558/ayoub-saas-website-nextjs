@@ -159,7 +159,7 @@
   transform: translateY(80%);
   animation: footer-word-rotate 10s infinite;
 
-  @media (prefers-reduced-motion: reduce) {
+  @include reduced-motion {
     animation: none;
   }
 }
@@ -181,7 +181,7 @@
 }
 
 .footer__built-with-word:first-child {
-  @media (prefers-reduced-motion: reduce) {
+  @include reduced-motion {
     opacity: 1;
     transform: translateY(0);
   }

@@ -1,3 +1,5 @@
+@use "../../../styles/mixins" as *;
+
 .logo-marquee {
   width: 100%;
   min-width: 0;
@@ -19,7 +21,7 @@
   object-fit: contain;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@include reduced-motion {
   .logo-marquee :global(.rfm-marquee) {
     animation-play-state: paused !important;
   }

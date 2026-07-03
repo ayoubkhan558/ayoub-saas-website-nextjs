@@ -256,7 +256,7 @@
   height: 18px;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@include reduced-motion {
   .contact-panel__backdrop,
   .contact-panel__drawer {
     transition-duration: 0.001ms;
