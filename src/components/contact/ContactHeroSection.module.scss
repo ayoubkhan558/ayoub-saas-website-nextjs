@@ -29,11 +29,11 @@
   color: var(--color-ink-violet);
   font-family: var(--font-code);
   font-size: var(--text-xs);
-  
+
   text-transform: uppercase;
 }
 
-.contact-hero__copy > .contact-page__eyebrow {
+.contact-hero__copy>.contact-page__eyebrow {
   font-family: var(--font-editorial-display);
   font-size: var(--page-section-kicker-size);
   font-style: normal;
@@ -46,7 +46,7 @@
 .contact-hero h1 {
   max-width: var(--page-hero-title-max);
   font-family: var(--font-display);
-  font-size: var(--page-hero-title-size);
+  font-size: var(--text-display);
   letter-spacing: 0;
   line-height: var(--leading-heading);
 }
@@ -67,7 +67,6 @@
 .contact-signal-panel {
   position: relative;
   display: grid;
-  min-height: 320px;
   align-self: end;
   gap: var(--space-3);
   overflow: hidden;
@@ -108,7 +107,7 @@
   background: var(--color-ink-violet);
 }
 
-.contact-signal-panel > * {
+.contact-signal-panel>* {
   position: relative;
   z-index: 1;
 }

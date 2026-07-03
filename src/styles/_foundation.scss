@@ -94,7 +94,7 @@
   --text-h2: #{clamp-val(26px, 36px)};
   --text-h1: #{clamp-val(30px, 42px)};
   --text-hero: #{clamp-val(34px, 54px)};
-  --text-display: #{clamp-val(34px, 72px)};
+  --text-display: #{clamp-val(34px, 54px)};
 
   --leading-body: 1.6;
   --leading-heading: 1.35;
@@ -161,7 +161,6 @@
   --page-hero-copy-max: 840px;
   --page-hero-title-max: 940px;
   --page-hero-text-max: 700px;
-  --page-hero-title-size: var(--text-display);
   --page-section-title-size: var(--text-h2);
   --page-section-header-max: 820px;
   --page-section-kicker-size: var(--text-h2);

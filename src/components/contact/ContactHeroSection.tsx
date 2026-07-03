@@ -34,11 +34,6 @@ export function ContactHeroSection({ profile }: { profile: PortfolioData["profil
           <aside className={styles["contact-signal-panel"]} aria-label="Project contact summary">
             <span className={styles["contact-signal-panel__label"]}>Available for</span>
             <strong>{profile.availability}</strong>
-            <p>{profile.summary}</p>
-            <div className={styles["contact-signal-panel__meta"]}>
-              <span>{profile.location}</span>
-              <span>{profile.role}</span>
-            </div>
           </aside>
         </div>
       </div>
