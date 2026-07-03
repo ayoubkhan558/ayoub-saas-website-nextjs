@@ -3,7 +3,7 @@
 .hero {
   /* component-scoped tokens so no raw values live in the rules below */
   --hero-icon-sm: 15px;
-  --hero-portrait-size: clamp-val(120px, 150px);
+  --hero-portrait-size: 100%;
   --hero-avatar-size: 34px;
   --hero-quote-mark-size: 3.5rem;
 }
@@ -194,24 +194,27 @@
 .hero__profile-panel {
   position: relative;
   z-index: 2;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-4);
   align-content: center;
-  width: min(100%, 520px);
-  max-width: 520px;
   margin-inline: auto;
 
   @media (min-width: 860px) {
+    display: grid;
     margin-inline: 0;
     justify-self: end;
     text-align: left;
+    width: min(100%, 520px);
+    max-width: 520px;
   }
 }
 
 /* ---------- "M. Ayoub" identity card ---------- */
 
 .hero__identity {
-  display: grid;
+  display: flex;
+  justify-content: center;
   gap: var(--space-4);
   border: 1px solid var(--border-line);
   border-top: var(--space-1) solid var(--color-primary);
@@ -225,13 +228,16 @@
 
 .hero__identity-head {
   display: grid;
-  grid-template-columns: 3fr 4fr;
+  grid-template-columns: 1fr;
   justify-items: center;
   text-align: center;
   gap: var(--space-4);
 
-  @media (min-width: 430px) {
+  @media (min-width: 768px) {
+    grid-template-columns: 3fr 4fr;
     align-items: center;
+    justify-items: start;
+    text-align: left;
   }
 }
 
@@ -244,19 +250,23 @@
 
 .hero__portrait {
   position: relative;
-  overflow: visible;
   display: grid;
-  width: var(--hero-portrait-size);
-  aspect-ratio: 1;
   place-items: center;
+  aspect-ratio: 8 / 11;
+
+  width: clamp-val(102px, 120px);
+  max-width: 75%;
+  margin-inline: auto;
+
   border-radius: var(--radius-pills);
   padding: var(--space-1);
-
-  /* Establish an isolated stacking context so the pseudo-element doesn't sit on top of content */
   isolation: isolate;
-
-  /* Fallback or base background color */
   background: var(--color-bone-mist);
+
+  @media (min-width: 980px) {
+    width: 100%;
+    // height: clamp-val(72px, 120px);
+  }
 }
 
 /* 2. Mimic the floating-offer structure using a pseudo-element for the animated gradient */
@@ -298,7 +308,7 @@
 .hero__portrait-img {
   width: 100%;
   height: 100%;
-  border-radius: var(--radius-pills);
+  border-radius: inherit;
   object-fit: cover;
 }
 
