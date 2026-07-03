@@ -43,7 +43,7 @@
   gap: var(--space-8);
   align-items: center;
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     grid-template-columns: minmax(0, 1fr) minmax(300px, 0.46fr);
   }
 }
@@ -58,7 +58,7 @@
   margin-inline: auto;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     justify-items: start;
     margin-inline: 0;
     text-align: left;
@@ -70,7 +70,7 @@
   gap: var(--space-2);
   font-size: var(--text-hero);
 
-  @media (min-width: 768px) {}
+  @include mq(md) {}
 }
 
 .hero__title-line {
@@ -98,7 +98,7 @@
   justify-content: center;
   gap: var(--space-3);
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     justify-content: flex-start;
   }
 }
@@ -111,7 +111,7 @@
   justify-items: center;
   gap: var(--space-3);
 
-  @media (min-width: 720px) {
+  @include mq(720px) {
     grid-template-columns: minmax(0, 1.35fr) minmax(210px, 0.65fr);
     align-items: stretch;
     justify-items: stretch;
@@ -131,7 +131,7 @@
   text-align: center;
   margin-top: var(--space-3);
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     justify-content: flex-start;
     text-align: left;
   }
@@ -169,7 +169,7 @@
   gap: var(--space-1);
   justify-items: center;
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     justify-items: start;
   }
 }
@@ -198,7 +198,7 @@
   align-content: center;
   margin-inline: auto;
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     display: grid;
     margin-inline: 0;
     justify-self: end;
@@ -231,7 +231,7 @@
   text-align: center;
   gap: var(--space-4);
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     grid-template-columns: 3fr 4fr;
     align-items: center;
     justify-items: start;
@@ -261,7 +261,7 @@
   isolation: isolate;
   background: var(--color-bone-mist);
 
-  @media (min-width: 980px) {
+  @include mq(980px) {
     width: 100%;
     max-width: 100%;
     // height: clamp-val(72px, 120px);

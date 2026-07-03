@@ -35,7 +35,7 @@
   gap: var(--space-6);
   align-items: stretch;
 
-  @media (min-width: 980px) {
+  @include mq(980px) {
     grid-template-columns: minmax(300px, 0.48fr) minmax(0, 1fr);
     gap: var(--space-6);
   }
@@ -52,7 +52,7 @@
     var(--picker-bg);
   padding: var(--space-5);
 
-  @media (min-width: 980px) {
+  @include mq(980px) {
     min-height: 404px;
   }
 }
@@ -62,11 +62,11 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-3);
 
-  @media (min-width: 760px) {
+  @include mq(md) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  @media (min-width: 980px) {
+  @include mq(980px) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
@@ -225,7 +225,7 @@
   margin: 0;
   color: var(--color-plum-charcoal);
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     grid-template-columns: auto minmax(0, 1fr);
   }
 }
@@ -245,7 +245,7 @@
   font-weight: 300;
   line-height: 1.48;
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     font-size: var(--text-h2);
     border-left: 1px solid var(--color-fog-border);
     padding-left: var(--space-5);

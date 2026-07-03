@@ -87,7 +87,7 @@
   margin-inline: auto;
   padding-block: var(--space-5);
 
-  @media (min-width: 1040px) {
+  @include mq(1040px) {
     grid-template-columns: repeat(7, minmax(132px, 1fr));
     gap: var(--space-6) var(--space-5);
   }
@@ -109,7 +109,7 @@
   outline-offset: 6px;
   padding: var(--space-1);
 
-  @media (min-width: 1040px) {
+  @include mq(1040px) {
     padding: var(--space-2);
   }
 }
@@ -124,7 +124,7 @@
   max-width: 70px;
   max-height: 32px;
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     max-width: 112px;
     max-height: 38px;
   }

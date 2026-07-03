@@ -1,3 +1,5 @@
+@use "../../../styles/mixins" as *;
+
 .lead-magnet {}
 
 .lead-magnet :global(.section__inner) {
@@ -11,7 +13,7 @@
   box-shadow: var(--shadow-product-light);
   padding: var(--space-6) var(--space-5);
 
-  @media (min-width: 560px) {
+  @include mq(sm) {
     padding: var(--space-7);
   }
 }
@@ -21,7 +23,7 @@
   flex-direction: column;
   gap: var(--space-6);
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +40,7 @@
   flex-shrink: 0;
   align-self: flex-start;
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     align-self: center;
   }
 }

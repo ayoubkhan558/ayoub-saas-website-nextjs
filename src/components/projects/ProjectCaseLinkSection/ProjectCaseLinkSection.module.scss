@@ -1,3 +1,5 @@
+@use "../../../styles/mixins" as *;
+
 .case-link :global(.section__inner) {
   background-color: var(--page-hero-bg);
   background-image:
@@ -19,7 +21,7 @@
   color: var(--color-band-on);
   padding: var(--space-6);
 
-  @media (min-width: 920px) {
+  @include mq(lg) {
     grid-template-columns: minmax(0, 0.92fr) minmax(340px, 0.52fr);
   }
 }

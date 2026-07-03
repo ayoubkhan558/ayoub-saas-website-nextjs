@@ -1,3 +1,5 @@
+@use "../../../styles/mixins" as *;
+
 .cta :global(.section__inner) {
   padding-block: var(--space-8) var(--space-0);
 }
@@ -15,11 +17,11 @@
   box-shadow: var(--shadow-product-light);
   padding: var(--space-6) var(--space-5);
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     grid-template-columns: minmax(0, 1fr) minmax(320px, 0.46fr);
   }
 
-  @media (min-width: 560px) {
+  @include mq(sm) {
     padding: var(--space-7);
   }
 }
@@ -46,7 +48,7 @@
   border-top: 1px solid var(--color-plum-charcoal);
   border-left: 1px solid var(--color-plum-charcoal);
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     left: var(--space-4);
   }
 }

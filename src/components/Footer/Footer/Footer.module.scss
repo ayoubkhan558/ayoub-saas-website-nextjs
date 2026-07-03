@@ -45,7 +45,7 @@
   border-bottom: 1px solid var(--color-fog-border);
   padding-bottom: var(--space-5);
 
-  @media (min-width: 760px) {
+  @include mq(md) {
     grid-template-columns: minmax(0, 1fr) minmax(260px, 0.34fr);
   }
 }
@@ -81,7 +81,7 @@
   border-left: 0;
   padding-left: 0;
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     border-left: 1px solid var(--color-fog-border);
     padding-left: var(--space-4);
   }

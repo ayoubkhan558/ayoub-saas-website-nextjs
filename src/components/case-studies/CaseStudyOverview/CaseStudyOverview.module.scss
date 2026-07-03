@@ -1,3 +1,5 @@
+@use "../../../styles/mixins" as *;
+
 .section-inner,
 .overview-panel {
   display: grid;
@@ -73,7 +75,7 @@
   gap: var(--space-3);
   padding: var(--space-4) var(--space-5);
 
-  @media (min-width: 820px) {
+  @include mq(820px) {
     grid-template-columns: minmax(160px, 0.55fr) minmax(240px, 1fr) minmax(260px, 1.1fr);
   }
 }
@@ -134,7 +136,7 @@
   gap: var(--space-2);
   margin: 0;
 
-  @media (min-width: 560px) {
+  @include mq(sm) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

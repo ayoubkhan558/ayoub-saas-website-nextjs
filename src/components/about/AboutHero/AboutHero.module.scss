@@ -1,3 +1,5 @@
+@use "../../../styles/mixins" as *;
+
 .about-page-hero :global(.section__inner) {
   overflow: hidden;
   padding-block: var(--page-hero-padding-block);
@@ -12,7 +14,7 @@
   display: grid;
   gap: var(--page-hero-grid-gap);
 
-  @media (min-width: 920px) {
+  @include mq(lg) {
     grid-template-columns: minmax(0, 1fr) minmax(340px, 0.58fr);
     align-items: start;
   }
@@ -63,7 +65,7 @@
   align-self: stretch;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  @media (min-width: 640px) {
+  @include mq(640px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -108,7 +110,7 @@
   font-weight: 800;
   line-height: 1;
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     font-size: var(--text-h1);
   }
 }

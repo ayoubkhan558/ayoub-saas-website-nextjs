@@ -1,3 +1,5 @@
+@use "../../../styles/mixins" as *;
+
 .process {
   --process-step-chip-border: rgba(49, 38, 59, 0.16);
   --process-step-chip-bg: var(--color-ink-violet);
@@ -28,13 +30,13 @@
   gap: var(--space-7);
   align-items: start;
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr);
   }
 }
 
 .faq__header {
-  @media (min-width: 768px) {
+  @include mq(md) {
     position: sticky;
     top: calc(92px + var(--space-5));
   }
@@ -49,7 +51,7 @@
   gap: 0;
   border-bottom: 1px solid var(--color-fog-border);
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     padding-top: var(--space-2);
   }
 }

@@ -1,3 +1,5 @@
+@use "../../../styles/mixins" as *;
+
 .section-inner,
 .comparison-panel {
   display: grid;
@@ -43,7 +45,7 @@
 }
 
 .split-grid {
-  @media (min-width: 900px) {
+  @include mq(lg) {
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     align-items: stretch;
   }

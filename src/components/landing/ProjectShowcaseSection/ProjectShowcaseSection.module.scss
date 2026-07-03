@@ -1,3 +1,5 @@
+@use "../../../styles/mixins" as *;
+
 .home-showcase :global(.section__inner) {
   background-color: var(--section-grain-color-soft);
   background-image:
@@ -73,7 +75,7 @@
   gap: var(--space-4);
   align-items: end;
 
-  @media (min-width: 760px) {
+  @include mq(md) {
     grid-template-columns: minmax(0, 1fr) auto;
   }
 }
@@ -84,7 +86,7 @@
   justify-self: start;
   margin-bottom: var(--space-7);
 
-  @media (min-width: 760px) {
+  @include mq(md) {
     justify-self: end;
   }
 }
@@ -178,12 +180,12 @@
     line-height: 1;
   }
 
-  @media (min-width: 760px) {
+  @include mq(md) {
     flex-basis: min(46vw, 430px);
     min-height: 430px;
   }
 
-  @media (min-width: 1080px) {
+  @include mq(1080px) {
     flex-basis: min(31vw, 455px);
   }
 }

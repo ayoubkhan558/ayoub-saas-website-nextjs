@@ -38,7 +38,7 @@
   gap: var(--space-6);
   align-items: center;
 
-  @media (min-width: 920px) {
+  @include mq(lg) {
     grid-template-columns: minmax(280px, 0.52fr) minmax(0, 1fr);
   }
 }
@@ -142,7 +142,7 @@
   margin-top: var(--space-5);
   counter-reset: story-card;
 
-  @media (min-width: 768px) {
+  @include mq(md) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

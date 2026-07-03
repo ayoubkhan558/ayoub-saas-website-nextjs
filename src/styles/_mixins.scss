@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "sass:map";
 
 $clamp-mobile-minimum: 390px !default;
 $clamp-desktop-maximum: 1440px !default;
@@ -7,6 +8,26 @@ $clamp-desktop-maximum: 1440px !default;
   $slope: math.div($max - $min, $max-vw - $min-vw);
   $intercept: $min - $slope * $min-vw;
   @return clamp(#{$min}, #{$intercept} + #{$slope * 100}vw, #{$max});
+}
+
+// Canonical responsive breakpoints. Near-duplicate raw queries (760/768,
+// 900/920) collapse onto these tiers; off-scale values pass through as a
+// raw length, e.g. `@include mq(720px)`, so everything routes through one API.
+$breakpoints: (
+  sm: 560px,
+  md: 768px,
+  lg: 920px,
+  xl: 1120px,
+);
+
+@mixin mq($bp) {
+  $val: $bp;
+  @if map.has-key($breakpoints, $bp) {
+    $val: map.get($breakpoints, $bp);
+  }
+  @media (min-width: $val) {
+    @content;
+  }
 }
 
 

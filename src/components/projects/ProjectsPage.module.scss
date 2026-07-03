@@ -1,3 +1,5 @@
+@use "../../styles/mixins" as *;
+
 .hero :global(.section__inner) {
   --proj-tint-dot: rgba(1, 1, 27, 0.07);
   background-color: var(--page-hero-bg);
@@ -36,7 +38,7 @@
   display: grid;
   gap: var(--page-hero-grid-gap);
 
-  @media (min-width: 920px) {
+  @include mq(lg) {
     grid-template-columns: minmax(0, 0.92fr) minmax(340px, 0.52fr);
     align-items: end;
   }
@@ -209,11 +211,11 @@
   display: grid;
   gap: var(--space-4);
 
-  @media (min-width: 720px) {
+  @include mq(720px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @media (min-width: 1120px) {
+  @include mq(xl) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
