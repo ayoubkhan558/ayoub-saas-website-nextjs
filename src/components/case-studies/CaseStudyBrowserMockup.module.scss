@@ -1,3 +1,5 @@
+@use "../../styles/mixins" as *;
+
 .screen {
   overflow: hidden;
   border: 1px solid rgba(49, 38, 59, 0.22);
@@ -40,7 +42,7 @@
 .mock-site {
   display: grid;
   gap: var(--space-4);
-  min-height: clamp(320px, 42vw, 620px);
+  min-height: clamp-val(320px, 620px);
   background:
     radial-gradient(rgba(255, 255, 255, 0.07) 0.75px, transparent 0.75px) 0 0 / 7px 7px,
     #15151c;
@@ -55,17 +57,17 @@
 .real-preview img {
   aspect-ratio: 16 / 10;
   width: 100%;
-  min-height: clamp(260px, 34vw, 480px);
+  min-height: clamp-val(260px, 480px);
   object-fit: contain;
   object-position: top;
 }
 
 .screen-compact .real-preview img {
-  min-height: clamp(240px, 30vw, 390px);
+  min-height: clamp-val(240px, 390px);
 }
 
 .screen-scroll-on-hover {
-  --comparison-preview-height: clamp(340px, 38vw, 520px);
+  --comparison-preview-height: clamp-val(340px, 520px);
 }
 
 .screen-scroll-on-hover .real-preview {
@@ -93,7 +95,7 @@
 }
 
 .screen-compact .mock-site {
-  min-height: clamp(240px, 30vw, 390px);
+  min-height: clamp-val(240px, 390px);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -151,12 +153,12 @@
   display: grid;
   align-content: center;
   gap: var(--space-3);
-  min-height: clamp(140px, 20vw, 270px);
+  min-height: clamp-val(140px, 270px);
   padding: var(--space-5);
 }
 
 .screen-compact .mock-hero {
-  min-height: clamp(96px, 14vw, 180px);
+  min-height: clamp-val(96px, 180px);
 }
 
 .mock-line,
@@ -180,11 +182,11 @@
 }
 
 .mock-card {
-  min-height: clamp(64px, 8vw, 140px);
+  min-height: clamp-val(64px, 140px);
 }
 
 .screen-compact .mock-card {
-  min-height: clamp(48px, 6vw, 96px);
+  min-height: clamp-val(48px, 96px);
 }
 
 .mock-footer {

@@ -1,7 +1,9 @@
+@use "../../styles/mixins" as *;
+
 .hero {
   /* component-scoped tokens so no raw values live in the rules below */
   --hero-icon-sm: 15px;
-  --hero-portrait-size: clamp(120px, 12vw, 150px);
+  --hero-portrait-size: clamp-val(120px, 150px);
   --hero-avatar-size: 34px;
   --hero-quote-mark-size: 3.5rem;
 }
@@ -215,7 +217,7 @@
   border-top: var(--space-1) solid var(--color-primary);
   border-radius: var(--radius-cards);
   background: radial-gradient(120% 90% at 100% 0, var(--color-primary-soft), transparent 46%), var(--color-card-gradient);
-  background:  var(--color-card-gradient);
+  background: var(--color-card-gradient);
   box-shadow: var(--color-card-shadow);
   color: var(--color-ink-violet);
   padding: var(--space-4) var(--space-3);
@@ -223,14 +225,14 @@
 
 .hero__identity-head {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: center;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
   gap: var(--space-4);
 
-  @media (max-width: 430px) {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
+  @media (min-width: 430px) {
+    grid-template-columns: 3fr 4fr;
+    align-items: center;
   }
 }
 

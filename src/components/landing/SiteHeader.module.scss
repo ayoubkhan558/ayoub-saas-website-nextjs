@@ -1,3 +1,7 @@
+@use "../../styles/mixins" as *;
+
+
+
 .site-header {
   --header-floating-border: rgba(49, 38, 59, 0.18);
   --header-floating-bg: radial-gradient(var(--surface-dot) 0.90px, transparent 0.95px),
@@ -83,15 +87,15 @@
   justify-self: start;
   display: inline-flex;
   align-items: center;
-  width: clamp(125px, 26vw, 170px);
   transition: width 240ms cubic-bezier(0.22, 1, 0.36, 1);
 
-  @media (max-width: 420px) {}
+  @media (min-width: 420px) {}
 
-  img {
+  img,
+  svg {
     display: block;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: clamp-val(26px, 34px);
   }
 }
 

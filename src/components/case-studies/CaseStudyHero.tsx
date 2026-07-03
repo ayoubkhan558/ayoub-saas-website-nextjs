@@ -31,7 +31,7 @@ export function CaseStudyHero({ study }: { study: CaseStudyDetailData }) {
                   <dd className={styles["hero-meta__value"]}>{study.timeline}</dd>
                 </div>
               </dl>
-              <a className={styles["live-site-link"]} href={study.liveUrl} target="_blank" rel="noreferrer" title={`Visit ${study.client} live website`}>
+              <a className="button" href={study.liveUrl} target="_blank" rel="noreferrer" title={`Visit ${study.client} live website`}>
                 Visit live site
                 <IconGlyph className={styles["live-site-link__icon"]} name="externalLink" />
               </a>

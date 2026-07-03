@@ -49,7 +49,7 @@ export function ClientTestimonials({ clients }: { clients: Client[] }) {
                     <img src={client.avatar} alt={`${client.name} client testimonial avatar`} title={`${client.name} client testimonial avatar`} loading="lazy" />
                   ) : (
                     <span className={styles["testimonials__logo-fallback"]}>
-                      <img src={client.logo} alt={`${client.name} logo`} title={`${client.name} logo`} loading="lazy" />
+                      <img src={client.logoDark ?? client.logo} alt={`${client.name} logo`} title={`${client.name} logo`} loading="lazy" />
                     </span>
                   )}
                 </button>
@@ -91,7 +91,7 @@ export function ClientTestimonials({ clients }: { clients: Client[] }) {
               {activeClient.avatar ? (
                 <img src={activeClient.avatar} alt={`${activeClient.name} client testimonial avatar`} title={`${activeClient.name} client testimonial avatar`} loading="lazy" />
               ) : (
-                <img src={activeClient.logo} alt={`${activeClient.name} logo`} title={`${activeClient.name} logo`} loading="lazy" />
+                <img src={activeClient.logoDark ?? activeClient.logo} alt={`${activeClient.name} logo`} title={`${activeClient.name} logo`} loading="lazy" />
               )}
             </span>
             <strong className={styles["testimonials__author-name"]}>{activeClient.name}</strong>

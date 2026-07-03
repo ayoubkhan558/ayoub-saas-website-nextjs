@@ -223,13 +223,13 @@
 
 .testimonials__quote {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--space-4);
   margin: 0;
   color: var(--color-plum-charcoal);
 
-  @media (max-width: 560px) {
-    grid-template-columns: 1fr;
+  @media (min-width: 768px) {
+    grid-template-columns: auto minmax(0, 1fr);
   }
 }
 
@@ -242,16 +242,16 @@
 
 .testimonials__quote-text {
   max-width: 780px;
-  border-left: 1px solid var(--color-fog-border);
-  padding-left: var(--space-5);
-  font-size: var(--text-h2);
+  padding-left: 0;
+  border-left: 0;
+  font-size: var(--text-h4);
   font-weight: 300;
   line-height: 1.48;
 
-  @media (max-width: 560px) {
-    padding-left: 0;
-    border-left: 0;
-    font-size: var(--text-h4);
+  @media (min-width: 768px) {
+    font-size: var(--text-h2);
+    border-left: 1px solid var(--color-fog-border);
+    padding-left: var(--space-5);
   }
 }
 
