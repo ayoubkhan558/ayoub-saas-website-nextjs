@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { CaseStudiesPageContent } from "@/components/case-studies/listing/CaseStudiesPageContent";
-import { ContactFooter } from "@/components/landing/ContactFooter";
-import { SiteHeader } from "@/components/landing/SiteHeader";
+import { CaseStudiesPageContent } from "@/components/case-studies/listing/CaseStudiesPageContent/CaseStudiesPageContent";
+import { ContactFooter } from "@/components/landing/ContactFooter/ContactFooter";
+import { SiteHeader } from "@/components/landing/SiteHeader/SiteHeader";
 import { getPageNumber } from "@/lib/pagination";
 import { buildCaseStudiesSchema, jsonLdScript } from "@/lib/seo-schema";
 import { caseStudies } from "@/data/work";

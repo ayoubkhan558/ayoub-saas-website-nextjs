@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { ContactFooter } from "@/components/landing/ContactFooter";
-import { SiteHeader } from "@/components/landing/SiteHeader";
-import { ProjectsPageContent } from "@/components/projects/ProjectsPageContent";
+import { ContactFooter } from "@/components/landing/ContactFooter/ContactFooter";
+import { SiteHeader } from "@/components/landing/SiteHeader/SiteHeader";
+import { ProjectsPageContent } from "@/components/projects/ProjectsPageContent/ProjectsPageContent";
 import { getPageNumber } from "@/lib/pagination";
 import {
   normalizeProjectFilter,

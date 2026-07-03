@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { LegalPage } from "@/components/legal/LegalPage";
+import { LegalPage } from "@/components/legal/LegalPage/LegalPage";
 import { buildLegalPageSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/content/portfolio/portfolio.json";
 

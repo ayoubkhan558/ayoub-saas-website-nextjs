@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SiteHeader } from "@/components/landing/SiteHeader";
-import { ContactFooter } from "@/components/landing/ContactFooter";
-import { CaseStudyDetail } from "@/components/case-studies/CaseStudyDetail";
+import { SiteHeader } from "@/components/landing/SiteHeader/SiteHeader";
+import { ContactFooter } from "@/components/landing/ContactFooter/ContactFooter";
+import { CaseStudyDetail } from "@/components/case-studies/CaseStudyDetail/CaseStudyDetail";
 import { caseStudyDetails } from "@/data/caseStudyDetails";
 import { caseStudies } from "@/data/work";
 import portfolio from "@/content/portfolio/portfolio.json";
