@@ -45,9 +45,7 @@
 }
 
 .hero__copy {
-  display: grid;
-  gap: var(--space-4);
-  max-width: var(--page-section-header-max);
+  @include hero-copy;
 }
 
 .eyebrow,
@@ -75,21 +73,11 @@
 }
 
 .hero p {
-  max-width: var(--page-hero-text-max);
-  color: var(--color-storm-mauve);
-  font-size: var(--page-section-copy-size);
-  font-weight: 300;
+  @include hero-text;
 }
 
 .hero__copy>.eyebrow {
-  color: var(--color-ink-violet);
-  font-family: var(--font-editorial-display);
-  font-size: var(--page-section-kicker-size);
-  font-style: normal;
-  font-weight: 200;
-  letter-spacing: 0;
-  line-height: 1;
-  text-transform: none;
+  @include hero-eyebrow;
 }
 
 .hero h1 {
@@ -99,9 +87,7 @@
 }
 
 .hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
+  @include hero-actions;
 }
 
 .signal,
