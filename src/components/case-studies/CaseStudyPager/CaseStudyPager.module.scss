@@ -18,9 +18,9 @@
   grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: var(--space-3);
-  border: 1px solid rgba(49, 38, 59, 0.16);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
   background:
-    radial-gradient(rgba(49, 38, 59, 0.04) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 4%, transparent) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
     var(--color-surface-raised);
   color: var(--color-ink-violet);
   padding: var(--space-4);

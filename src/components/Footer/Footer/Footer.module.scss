@@ -1,9 +1,9 @@
 @use "../../../styles/mixins" as *;
 
 .footer {
-  --footer-top-rule-border-top: rgba(49, 38, 59, 0.34);
-  --footer-top-rule-bg: linear-gradient(90deg, rgba(49, 38, 59, 0.12) 1px, transparent 1px) 0 0 / 48px 100%,
-    radial-gradient(rgba(49, 38, 59, 0.045) 1px, transparent 1px) 0 0 / 7px 7px,
+  --footer-top-rule-border-top: color-mix(in srgb, var(--color-plum-charcoal) 34%, transparent);
+  --footer-top-rule-bg: linear-gradient(90deg, color-mix(in srgb, var(--color-plum-charcoal) 12%, transparent) 1px, transparent 1px) 0 0 / 48px 100%,
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 4.5%, transparent) 1px, transparent 1px) 0 0 / 7px 7px,
     var(--color-surface-muted);
   border-top: 1px solid var(--color-fog-border);
   color: var(--color-plum-charcoal);
@@ -13,9 +13,9 @@
 }
 
 :global(:root[data-theme="dark"]) .footer {
-  --footer-top-rule-border-top: rgba(248, 244, 255, 0.2);
-  --footer-top-rule-bg: linear-gradient(90deg, rgba(248, 244, 255, 0.08) 1px, transparent 1px) 0 0 / 48px 100%,
-    radial-gradient(rgba(248, 244, 255, 0.045) 1px, transparent 1px) 0 0 / 7px 7px,
+  --footer-top-rule-border-top: color-mix(in srgb, var(--color-lavender-mist) 20%, transparent);
+  --footer-top-rule-bg: linear-gradient(90deg, color-mix(in srgb, var(--color-lavender-mist) 8%, transparent) 1px, transparent 1px) 0 0 / 48px 100%,
+    radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 4.5%, transparent) 1px, transparent 1px) 0 0 / 7px 7px,
     rgba(21, 18, 29, 0.74);
   --header-logo-color-soft: #88888d;
   --header-logo-color: var(--color-heading);

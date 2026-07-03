@@ -3,7 +3,7 @@
 .home-showcase :global(.section__inner) {
   background-color: var(--section-grain-color-soft);
   background-image:
-    radial-gradient(rgba(49, 38, 59, 0.032) 0.75px, transparent 0.75px),
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 3.2%, transparent) 0.75px, transparent 0.75px),
     linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(246, 245, 248, 0.9));
   background-size: 7px 7px, auto;
   box-shadow: var(--about-toolbox-section-shadow);
@@ -12,7 +12,7 @@
 :global(:root[data-theme="dark"]) .home-showcase :global(.section__inner) {
   background-color: #121019;
   background-image:
-    radial-gradient(rgba(248, 244, 255, 0.06) 0.75px, transparent 0.75px),
+    radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 6%, transparent) 0.75px, transparent 0.75px),
     linear-gradient(180deg, #14111d, #111018);
 }
 
@@ -96,7 +96,7 @@
   width: 42px;
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgba(49, 38, 59, 0.18);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 18%, transparent);
   border-radius: var(--radius-buttons);
   background: var(--color-surface-muted);
   color: var(--color-ink-violet);
@@ -147,7 +147,7 @@
 }
 
 .showcase__card {
-  --showcase-card-border: rgba(49, 38, 59, 0.22);
+  --showcase-card-border: color-mix(in srgb, var(--color-plum-charcoal) 22%, transparent);
   --showcase-card-bg: radial-gradient(circle at 88% 12%, rgba(205, 89, 115, 0.12), transparent 18rem),
     linear-gradient(135deg, rgba(236, 237, 242, 0.7), transparent 42%),
     var(--color-surface);
@@ -174,7 +174,7 @@
     position: absolute;
     top: var(--space-3);
     right: var(--space-3);
-    color: rgba(49, 38, 59, 0.34);
+    color: color-mix(in srgb, var(--color-plum-charcoal) 34%, transparent);
     font-family: var(--font-code);
     font-size: var(--text-xs);
     line-height: 1;
@@ -193,13 +193,13 @@
 :global(:root[data-theme="dark"]) {
   .home-showcase :global(.section__inner)::before {
     background-image:
-      linear-gradient(to right, rgba(248, 244, 255, 0.16) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(248, 244, 255, 0.16) 1px, transparent 1px);
+      linear-gradient(to right, color-mix(in srgb, var(--color-lavender-mist) 16%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, var(--color-lavender-mist) 16%, transparent) 1px, transparent 1px);
     opacity: 0.32;
   }
 
   .showcase__card {
-    --showcase-card-border: rgba(248, 244, 255, 0.18);
+    --showcase-card-border: color-mix(in srgb, var(--color-lavender-mist) 18%, transparent);
     --showcase-card-bg: radial-gradient(circle at 88% 12%, rgba(240, 120, 168, 0.13), transparent 18rem),
       linear-gradient(135deg, rgba(36, 30, 47, 0.72), transparent 42%),
       rgba(21, 18, 29, 0.96);
@@ -215,8 +215,8 @@
   }
 
   .showcase__action {
-    border-color: rgba(248, 244, 255, 0.2);
-    background: rgba(248, 244, 255, 0.08);
+    border-color: color-mix(in srgb, var(--color-lavender-mist) 20%, transparent);
+    background: color-mix(in srgb, var(--color-lavender-mist) 8%, transparent);
     color: var(--color-heading);
   }
 
@@ -229,8 +229,8 @@
   }
 
   .showcase__all-link {
-    border-color: rgba(248, 244, 255, 0.2);
-    background: rgba(248, 244, 255, 0.08);
+    border-color: color-mix(in srgb, var(--color-lavender-mist) 20%, transparent);
+    background: color-mix(in srgb, var(--color-lavender-mist) 8%, transparent);
     color: var(--color-heading);
   }
 
@@ -292,7 +292,7 @@
   overflow: hidden;
   display: block;
   min-height: 190px;
-  border: 1px solid rgba(49, 38, 59, 0.14);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   background:
     linear-gradient(135deg, rgba(1, 1, 27, 0.1), transparent 48%),
     var(--color-bone-mist);
@@ -392,7 +392,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-1);
-  border: 1px solid rgba(49, 38, 59, 0.24);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 24%, transparent);
   background: var(--color-surface-muted);
   color: var(--color-primary);
   font-family: var(--font-display-compact);
@@ -430,7 +430,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  border: 1px solid rgba(49, 38, 59, 0.24);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 24%, transparent);
   background: var(--color-surface);
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);

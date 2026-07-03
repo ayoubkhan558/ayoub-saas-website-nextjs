@@ -18,7 +18,7 @@
   --problem-card-border: var(--color-plum-charcoal);
   --problem-card-bg: var(--color-surface);
   --problem-card-hover-bg: rgba(236, 237, 242, 0.58);
-  --problem-index-border: rgba(49, 38, 59, 0.18);
+  --problem-index-border: color-mix(in srgb, var(--color-plum-charcoal) 18%, transparent);
   --problem-index-bg: rgba(236, 237, 242, 0.72);
   position: relative;
   display: grid;
@@ -36,11 +36,11 @@
 }
 
 :global(:root[data-theme="dark"]) .problem__pain-card {
-  --problem-card-border: rgba(248, 244, 255, 0.26);
+  --problem-card-border: color-mix(in srgb, var(--color-lavender-mist) 26%, transparent);
   --problem-card-bg: rgba(21, 18, 29, 0.92);
   --problem-card-hover-bg: rgba(36, 30, 47, 0.96);
-  --problem-index-border: rgba(248, 244, 255, 0.18);
-  --problem-index-bg: rgba(248, 244, 255, 0.1);
+  --problem-index-border: color-mix(in srgb, var(--color-lavender-mist) 18%, transparent);
+  --problem-index-bg: color-mix(in srgb, var(--color-lavender-mist) 10%, transparent);
 }
 
 .problem__pain-card::before {
@@ -82,7 +82,7 @@
   width: 34px;
   height: 34px;
   place-items: center;
-  border: 1px solid rgba(49, 38, 59, 0.22);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 22%, transparent);
   background: var(--color-ink-violet);
   color: var(--color-on-dark);
 }

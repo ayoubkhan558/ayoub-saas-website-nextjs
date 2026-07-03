@@ -1,7 +1,7 @@
 @use "../../../styles/mixins" as *;
 
 .process {
-  --process-step-chip-border: rgba(49, 38, 59, 0.16);
+  --process-step-chip-border: color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
   --process-step-chip-bg: var(--color-ink-violet);
   --process-step-chip-color: #fff;
   --process-panel-bg: radial-gradient(rgba(1, 1, 27, 0.04) 0.75px, transparent 0.75px),
@@ -14,7 +14,7 @@
     --process-step-chip-border: rgba(255, 255, 255, 0.12);
     --process-step-chip-bg: rgba(255, 255, 255, 0.055);
     --process-step-chip-color: var(--color-text);
-    --process-panel-bg: radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
+    --process-panel-bg: radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 5.5%, transparent) 0.75px, transparent 0.75px),
       rgba(21, 18, 29, 0.88);
   }
 }

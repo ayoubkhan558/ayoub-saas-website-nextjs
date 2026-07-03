@@ -1,12 +1,12 @@
 @use "../../../styles/mixins" as *;
 
 :root {
-  --picker-grain: rgba(49, 38, 59, 0.045);
+  --picker-grain: color-mix(in srgb, var(--color-plum-charcoal) 4.5%, transparent);
   --picker-bg: var(--color-surface-muted);
   --testimonial-logo-filter: grayscale(1) contrast(1.18);
   --testimonial-logo-opacity: 0.82;
   --testimonial-logo-tile-bg: rgba(255, 255, 255, 0.92);
-  --testimonial-logo-tile-border: rgba(49, 38, 59, 0.14);
+  --testimonial-logo-tile-border: color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   --testimonial-quote-logo-filter: grayscale(1) contrast(1.24);
   --quote-glow: rgba(236, 237, 242, 0.12);
   --quote-bg: var(--color-surface-raised);
@@ -14,13 +14,13 @@
 
 :global(:root[data-theme="dark"]) {
   :root {
-    --picker-grain: rgba(248, 244, 255, 0.055);
+    --picker-grain: color-mix(in srgb, var(--color-lavender-mist) 5.5%, transparent);
     --picker-bg: rgba(21, 18, 29, 0.86);
     --testimonial-logo-filter: grayscale(1) invert(1) contrast(1.02) brightness(1.05);
     --testimonial-logo-opacity: 0.78;
     --testimonial-logo-tile-bg: rgba(255, 255, 255, 0.92);
     --testimonial-logo-tile-border: rgba(255, 255, 255, 0.16);
-    --quote-glow: rgba(248, 244, 255, 0.08);
+    --quote-glow: color-mix(in srgb, var(--color-lavender-mist) 8%, transparent);
     --quote-bg: rgba(21, 18, 29, 0.42);
     --testimonial-quote-logo-filter: grayscale(1) invert(1) contrast(1.02) brightness(1.05);
   }

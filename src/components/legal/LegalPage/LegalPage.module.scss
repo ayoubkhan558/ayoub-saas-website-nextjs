@@ -85,7 +85,7 @@
   background-size: 6px 6px, auto;
   box-shadow:
     rgba(255, 255, 255, 0.74) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.06) 0 20px 54px;
+    color-mix(in srgb, var(--color-plum-charcoal) 6%, transparent) 0 20px 54px;
 }
 
 .legal-summary-card::before,
@@ -96,8 +96,8 @@
   inset: 0;
   z-index: 0;
   background-image:
-    radial-gradient(rgba(49, 38, 59, 0.045) 0.75px, transparent 0.75px),
-    linear-gradient(115deg, transparent 0 48%, rgba(49, 38, 59, 0.035) 48% 49%, transparent 49% 100%);
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 4.5%, transparent) 0.75px, transparent 0.75px),
+    linear-gradient(115deg, transparent 0 48%, color-mix(in srgb, var(--color-plum-charcoal) 3.5%, transparent) 48% 49%, transparent 49% 100%);
   background-size:
     8px 8px,
     44px 44px;
@@ -149,9 +149,9 @@
   display: grid;
   gap: var(--space-4);
   box-shadow:
-    0 0 0 1px rgba(49, 38, 59, 0.1),
+    0 0 0 1px color-mix(in srgb, var(--color-plum-charcoal) 10%, transparent),
     rgba(255, 255, 255, 0.74) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.06) 0 20px 54px;
+    color-mix(in srgb, var(--color-plum-charcoal) 6%, transparent) 0 20px 54px;
   padding: var(--space-4);
 
   @include mq(md) {
@@ -168,7 +168,7 @@
 
 .legal-toc a {
   display: block;
-  border-top: 1px solid rgba(49, 38, 59, 0.12);
+  border-top: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 12%, transparent);
   color: var(--color-plum-charcoal);
   padding-top: var(--space-2);
   transition: color 160ms ease;
@@ -180,7 +180,7 @@
 
 .legal-content {
   gap: var(--space-4);
-  border-bottom: 1px solid rgba(49, 38, 59, 0.16);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
 }
 
 .legal-section-card {
@@ -188,7 +188,7 @@
   gap: var(--space-3);
   overflow: visible;
   border: 0;
-  border-top: 1px solid rgba(49, 38, 59, 0.16);
+  border-top: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
   border-radius: 0;
   background: transparent;
   box-shadow: none;

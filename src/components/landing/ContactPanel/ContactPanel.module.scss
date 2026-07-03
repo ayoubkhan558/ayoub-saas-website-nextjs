@@ -4,10 +4,10 @@
   --header-nav-height: 64px;
   --contact-panel-drawer-bg: radial-gradient(var(--surface-dot-light) 0.75px, transparent 0.75px),
     linear-gradient(180deg, var(--color-surface-raised), var(--color-bone-mist));
-  --contact-panel-border: rgba(49, 38, 59, 0.16);
+  --contact-panel-border: color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
   --contact-panel-control-bg: var(--color-surface-muted);
   --contact-panel-control-hover-bg: var(--color-surface);
-  --contact-panel-control-hover-border: rgba(49, 38, 59, 0.32);
+  --contact-panel-control-hover-border: color-mix(in srgb, var(--color-plum-charcoal) 32%, transparent);
   --contact-panel-control-color: var(--color-ink-violet);
   --contact-panel-hire-bg: var(--color-ink-violet);
   --contact-panel-hire-hover-bg: var(--color-plum-charcoal);
@@ -133,7 +133,7 @@
 .contact-panel__copy {
   display: grid;
   gap: var(--space-3);
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   padding-top: var(--space-5);
 }
 
@@ -195,7 +195,7 @@
 .contact-panel__method>svg:first-child {
   width: 34px;
   height: 34px;
-  border: 1px solid rgba(49, 38, 59, 0.18);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 18%, transparent);
   border-radius: var(--radius-buttons);
   background: var(--color-ink-violet);
   color: var(--color-on-dark);
@@ -224,7 +224,7 @@
 .contact-panel__social {
   display: grid;
   gap: var(--space-3);
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   padding-top: var(--space-4);
 }
 

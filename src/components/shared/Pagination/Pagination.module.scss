@@ -1,5 +1,5 @@
 .pagination {
-  --pagination-item-border: rgba(49, 38, 59, 0.16);
+  --pagination-item-border: color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
   --pagination-item-bg: var(--color-surface-muted);
   --pagination-item-color: var(--color-ink-violet);
   --pagination-item-hover-border: var(--color-plum-charcoal);

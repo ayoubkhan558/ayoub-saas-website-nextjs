@@ -3,10 +3,10 @@
 
 
 .site-header {
-  --header-floating-border: rgba(49, 38, 59, 0.18);
+  --header-floating-border: color-mix(in srgb, var(--color-plum-charcoal) 18%, transparent);
   --header-floating-bg: radial-gradient(var(--surface-dot) 0.90px, transparent 0.95px),
     var(--color-surface-chrome);
-  --header-floating-shadow: var(--surface-inset-light) 0 1px 0 inset, rgba(49, 38, 59, 0.14) 0 14px 38px;
+  --header-floating-shadow: var(--surface-inset-light) 0 1px 0 inset, color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent) 0 14px 38px;
   --header-floating-link-bg: transparent;
   --header-floating-link-color: var(--color-plum-charcoal);
   --header-floating-link-hover-bg: rgba(236, 237, 242, 0.86);

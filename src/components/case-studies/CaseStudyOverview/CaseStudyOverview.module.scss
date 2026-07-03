@@ -14,7 +14,7 @@
 
 .section :global(.section__inner) {
   background:
-    radial-gradient(rgba(49, 38, 59, 0.032) 1px, transparent 1px) 0 0 / 7px 7px,
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 3.2%, transparent) 1px, transparent 1px) 0 0 / 7px 7px,
     #fff;
 }
 
@@ -41,15 +41,15 @@
 .overview-panel {
   overflow: hidden;
   gap: 0;
-  border: 1px solid rgba(49, 38, 59, 0.18);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 18%, transparent);
   background:
     radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
     #fff;
   background-size: 6px 6px, auto;
   box-shadow:
-    0 0 0 1px rgba(49, 38, 59, 0.1),
+    0 0 0 1px color-mix(in srgb, var(--color-plum-charcoal) 10%, transparent),
     rgba(255, 255, 255, 0.78) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.06) 0 20px 54px;
+    color-mix(in srgb, var(--color-plum-charcoal) 6%, transparent) 0 20px 54px;
   padding: 0;
 }
 
@@ -66,7 +66,7 @@
 
 .detail-matrix {
   display: grid;
-  border-top: 1px solid rgba(49, 38, 59, 0.16);
+  border-top: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
 }
 
 .detail-matrix-header,
@@ -88,11 +88,11 @@
 }
 
 .detail-matrix-row {
-  border-top: 1px solid rgba(49, 38, 59, 0.12);
+  border-top: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 12%, transparent);
 }
 
 .detail-matrix-row:first-of-type {
-  border-top-color: rgba(49, 38, 59, 0.16);
+  border-top-color: color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
 }
 
 .detail-matrix-row strong {
@@ -120,14 +120,14 @@
   color: var(--color-ink-violet);
   font-weight: 800;
   text-decoration: underline;
-  text-decoration-color: rgba(49, 38, 59, 0.32);
+  text-decoration-color: color-mix(in srgb, var(--color-plum-charcoal) 32%, transparent);
   text-underline-offset: 4px;
 }
 
 .performance-row {
   background:
-    linear-gradient(90deg, rgba(49, 38, 59, 0.045) 1px, transparent 1px) 0 0 / 42px 42px,
-    radial-gradient(rgba(49, 38, 59, 0.055) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
+    linear-gradient(90deg, color-mix(in srgb, var(--color-plum-charcoal) 4.5%, transparent) 1px, transparent 1px) 0 0 / 42px 42px,
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 5.5%, transparent) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
     rgba(247, 247, 249, 0.72);
 }
 
@@ -144,7 +144,7 @@
 .performance-metrics div {
   display: grid;
   gap: var(--space-1);
-  border: 1px solid rgba(49, 38, 59, 0.12);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 12%, transparent);
   background: var(--color-surface-muted);
   padding: var(--space-2);
 }
@@ -172,25 +172,25 @@
   .section :global(.section__inner) {
       background-color: var(--color-surface) !important;
       background-image:
-        radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
+        radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 5.5%, transparent) 0.75px, transparent 0.75px),
         linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
       background-size: 6px 6px, auto !important;
     }
 
   .overview-panel {
-      border-color: rgba(248, 244, 255, 0.16);
+      border-color: color-mix(in srgb, var(--color-lavender-mist) 16%, transparent);
       background:
-        radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
+        radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 5.5%, transparent) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
         rgba(21, 18, 29, 0.94);
       box-shadow:
-        0 0 0 1px rgba(248, 244, 255, 0.08),
+        0 0 0 1px color-mix(in srgb, var(--color-lavender-mist) 8%, transparent),
         rgba(0, 0, 0, 0.34) 0 20px 54px;
     }
 
   .performance-row {
       background:
-        linear-gradient(90deg, rgba(248, 244, 255, 0.045) 1px, transparent 1px) 0 0 / 42px 42px,
-        radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
+        linear-gradient(90deg, color-mix(in srgb, var(--color-lavender-mist) 4.5%, transparent) 1px, transparent 1px) 0 0 / 42px 42px,
+        radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 5.5%, transparent) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
         rgba(32, 27, 42, 0.78);
     }
 }

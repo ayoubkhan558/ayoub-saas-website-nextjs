@@ -14,7 +14,7 @@
 
 .section :global(.section__inner) {
   background:
-    radial-gradient(rgba(49, 38, 59, 0.032) 1px, transparent 1px) 0 0 / 7px 7px,
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 3.2%, transparent) 1px, transparent 1px) 0 0 / 7px 7px,
     #fff;
 }
 
@@ -48,11 +48,11 @@
   gap: var(--space-5);
   border: 1px solid var(--color-fog-border);
   background:
-    radial-gradient(rgba(49, 38, 59, 0.04) 1px, transparent 1px) 0 0 / 7px 7px,
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 4%, transparent) 1px, transparent 1px) 0 0 / 7px 7px,
     rgba(255, 255, 255, 0.8);
   box-shadow:
-    0 0 0 1px rgba(49, 38, 59, 0.1),
-    rgba(49, 38, 59, 0.06) 0 20px 54px;
+    0 0 0 1px color-mix(in srgb, var(--color-plum-charcoal) 10%, transparent),
+    color-mix(in srgb, var(--color-plum-charcoal) 6%, transparent) 0 20px 54px;
   padding: var(--space-5);
 }
 
@@ -100,7 +100,7 @@
   justify-content: flex-start;
   width: 100%;
   gap: var(--space-3);
-  border: 1px solid rgba(49, 38, 59, 0.13);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 13%, transparent);
   background: var(--color-surface-muted);
   padding: var(--space-3) var(--space-4);
 
@@ -117,7 +117,7 @@
   height: 54px;
   flex: 0 0 auto;
   place-items: center;
-  border: 1px solid rgba(49, 38, 59, 0.14);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   background: var(--color-surface);
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
@@ -165,18 +165,18 @@
   .section :global(.section__inner) {
     background-color: var(--color-surface) !important;
     background-image:
-      radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
+      radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 5.5%, transparent) 0.75px, transparent 0.75px),
       linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
     background-size: 6px 6px, auto !important;
   }
 
   .feedback-panel {
-    border-color: rgba(248, 244, 255, 0.16);
+    border-color: color-mix(in srgb, var(--color-lavender-mist) 16%, transparent);
     background:
-      radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
+      radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 5.5%, transparent) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
       rgba(21, 18, 29, 0.94);
     box-shadow:
-      0 0 0 1px rgba(248, 244, 255, 0.08),
+      0 0 0 1px color-mix(in srgb, var(--color-lavender-mist) 8%, transparent),
       rgba(0, 0, 0, 0.34) 0 20px 54px;
   }
 }

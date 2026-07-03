@@ -6,7 +6,7 @@
 
 .section :global(.section__inner) {
   background:
-    radial-gradient(rgba(49, 38, 59, 0.032) 1px, transparent 1px) 0 0 / 7px 7px,
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 3.2%, transparent) 1px, transparent 1px) 0 0 / 7px 7px,
     #fff;
 }
 
@@ -110,7 +110,7 @@
 .brand-color-circle {
   width: min(100%, 82px);
   aspect-ratio: 1;
-  border: 1px solid rgba(49, 38, 59, 0.14);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   border-radius: 50%;
   background: var(--color-surface);
 }
@@ -145,7 +145,7 @@
   grid-template-columns: auto minmax(0, 1fr);
   gap: var(--space-3);
   align-items: start;
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   padding-top: var(--space-4);
 }
 
@@ -154,7 +154,7 @@
   width: 34px;
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgba(49, 38, 59, 0.16);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
   background: rgba(236, 237, 242, 0.92);
   color: var(--color-ink-violet);
   font-family: var(--font-code);
@@ -188,22 +188,22 @@
   .section :global(.section__inner) {
     background-color: var(--color-surface) !important;
     background-image:
-      radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
+      radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 5.5%, transparent) 0.75px, transparent 0.75px),
       linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
     background-size: 6px 6px, auto !important;
   }
 
   .brand-card {
-    border-color: rgba(248, 244, 255, 0.16);
+    border-color: color-mix(in srgb, var(--color-lavender-mist) 16%, transparent);
     background:
-      radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
+      radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 5.5%, transparent) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
       rgba(21, 18, 29, 0.9);
   }
 
   .brand-card:hover {
-    border-color: rgba(248, 244, 255, 0.28);
+    border-color: color-mix(in srgb, var(--color-lavender-mist) 28%, transparent);
     background: rgba(32, 27, 42, 0.96);
-    box-shadow: inset 0 0 0 4px rgba(248, 244, 255, 0.05);
+    box-shadow: inset 0 0 0 4px color-mix(in srgb, var(--color-lavender-mist) 5%, transparent);
   }
 
   .brand-card-label,

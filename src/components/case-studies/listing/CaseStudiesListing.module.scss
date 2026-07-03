@@ -78,11 +78,11 @@
   --case-list-card-bg: radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
     var(--color-surface);
   --case-list-card-shadow: rgba(255, 255, 255, 0.74) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.06) 0 20px 54px;
+    color-mix(in srgb, var(--color-plum-charcoal) 6%, transparent) 0 20px 54px;
   --case-list-summary-hover-bg: radial-gradient(rgba(1, 1, 27, 0.055) 0.75px, transparent 0.75px),
     rgba(236, 237, 242, 0.48);
   --case-list-card-hover-shadow: rgba(255, 255, 255, 0.82) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.12) 0 34px 84px;
+    color-mix(in srgb, var(--color-plum-charcoal) 12%, transparent) 0 34px 84px;
   position: relative;
   overflow: hidden;
   border: 1px solid var(--case-list-card-border);
@@ -97,12 +97,12 @@
 
   .summary,
   .card {
-    --case-list-card-border: rgba(248, 244, 255, 0.16);
-    --case-list-card-bg: radial-gradient(rgba(248, 244, 255, 0.06) 0.75px, transparent 0.75px),
+    --case-list-card-border: color-mix(in srgb, var(--color-lavender-mist) 16%, transparent);
+    --case-list-card-bg: radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 6%, transparent) 0.75px, transparent 0.75px),
       rgba(21, 18, 29, 0.96);
     --case-list-card-shadow: rgba(255, 255, 255, 0.07) 0 1px 0 inset,
       rgba(0, 0, 0, 0.34) 0 20px 54px;
-    --case-list-summary-hover-bg: radial-gradient(rgba(248, 244, 255, 0.075) 0.75px, transparent 0.75px),
+    --case-list-summary-hover-bg: radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 7.5%, transparent) 0.75px, transparent 0.75px),
       rgba(32, 27, 42, 0.98);
     --case-list-card-hover-shadow: rgba(255, 255, 255, 0.08) 0 1px 0 inset,
       rgba(0, 0, 0, 0.42) 0 34px 84px;
@@ -116,8 +116,8 @@
   inset: 0;
   z-index: 0;
   background-image:
-    radial-gradient(rgba(49, 38, 59, 0.045) 0.75px, transparent 0.75px),
-    linear-gradient(115deg, transparent 0 48%, rgba(49, 38, 59, 0.035) 48% 49%, transparent 49% 100%);
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 4.5%, transparent) 0.75px, transparent 0.75px),
+    linear-gradient(115deg, transparent 0 48%, color-mix(in srgb, var(--color-plum-charcoal) 3.5%, transparent) 48% 49%, transparent 49% 100%);
   background-size:
     8px 8px,
     44px 44px;
@@ -216,17 +216,17 @@
   display: flex;
   justify-content: space-between;
   gap: var(--space-3);
-  border-bottom: 1px solid rgba(49, 38, 59, 0.12);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 12%, transparent);
   padding: var(--space-1) var(--space-1) var(--space-3);
 }
 
 .card__image {
   overflow: hidden;
-  border: 1px solid rgba(49, 38, 59, 0.14);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   background:
     linear-gradient(135deg, rgba(1, 1, 27, 0.1), transparent 44%),
     var(--color-bone-mist);
-  box-shadow: rgba(49, 38, 59, 0.12) 0 18px 42px;
+  box-shadow: color-mix(in srgb, var(--color-plum-charcoal) 12%, transparent) 0 18px 42px;
 }
 
 .card__image img {
@@ -270,7 +270,7 @@
 }
 
 .stack span {
-  border: 1px solid rgba(49, 38, 59, 0.16);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
   background: var(--color-surface-muted);
   color: var(--color-ink-violet);
   font-weight: 700;
@@ -283,8 +283,8 @@
 }
 
 .card__achievement {
-  border: 1px solid rgba(49, 38, 59, 0.18);
-  box-shadow: inset 0 0 0 3px rgba(49, 38, 59, 0.045);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 18%, transparent);
+  box-shadow: inset 0 0 0 3px color-mix(in srgb, var(--color-plum-charcoal) 4.5%, transparent);
   background: var(--color-surface-muted);
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
@@ -300,7 +300,7 @@
   justify-content: space-between;
   gap: var(--space-2);
   align-self: end;
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
   font-size: var(--text-ui);

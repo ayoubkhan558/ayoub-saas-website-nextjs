@@ -48,7 +48,7 @@
 }
 
 .filters {
-  --project-filter-border: rgba(49, 38, 59, 0.16);
+  --project-filter-border: color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
   --project-filter-bg: var(--color-surface-muted);
   --project-filter-color: var(--color-ink-violet);
   --project-filter-hover-bg: var(--color-surface);
@@ -60,7 +60,7 @@
   gap: var(--space-2);
   align-items: center;
   border-top: 1px solid var(--border-soft);
-  border-bottom: 1px solid rgba(49, 38, 59, 0.14);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   padding-block: var(--space-3);
 }
 

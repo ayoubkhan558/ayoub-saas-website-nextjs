@@ -6,7 +6,7 @@
 
 .section :global(.section__inner) {
   background:
-    radial-gradient(rgba(49, 38, 59, 0.032) 1px, transparent 1px) 0 0 / 7px 7px,
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 3.2%, transparent) 1px, transparent 1px) 0 0 / 7px 7px,
     #fff;
 }
 
@@ -58,7 +58,7 @@
   .section :global(.section__inner) {
       background-color: var(--color-surface) !important;
       background-image:
-        radial-gradient(rgba(248, 244, 255, 0.055) 0.75px, transparent 0.75px),
+        radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 5.5%, transparent) 0.75px, transparent 0.75px),
         linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
       background-size: 6px 6px, auto !important;
     }

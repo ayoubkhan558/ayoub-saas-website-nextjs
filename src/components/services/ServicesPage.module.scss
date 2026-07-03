@@ -128,8 +128,8 @@
   inset: 0;
   z-index: 0;
   background-image:
-    radial-gradient(rgba(49, 38, 59, 0.045) 0.75px, transparent 0.75px),
-    linear-gradient(115deg, transparent 0 48%, rgba(49, 38, 59, 0.035) 48% 49%, transparent 49% 100%);
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 4.5%, transparent) 0.75px, transparent 0.75px),
+    linear-gradient(115deg, transparent 0 48%, color-mix(in srgb, var(--color-plum-charcoal) 3.5%, transparent) 48% 49%, transparent 49% 100%);
   background-size:
     8px 8px,
     44px 44px;
@@ -146,7 +146,7 @@
 .services-signal-panel {
   --services-signal-bg: radial-gradient(rgba(1, 1, 27, 0.045) 0.75px, transparent 0.75px),
     var(--color-surface);
-  --services-signal-hover-border: rgba(49, 38, 59, 0.28);
+  --services-signal-hover-border: color-mix(in srgb, var(--color-plum-charcoal) 28%, transparent);
   --services-signal-hover-bg: radial-gradient(rgba(1, 1, 27, 0.055) 0.75px, transparent 0.75px),
     rgba(236, 237, 242, 0.48);
   display: grid;
@@ -185,7 +185,7 @@
 .services-industries {
   display: grid;
   gap: var(--space-2);
-  border: 1px solid rgba(49, 38, 59, 0.14);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   background: var(--color-surface-muted);
   padding: var(--space-4);
 }
@@ -205,7 +205,7 @@
 }
 
 .services-signal-panel__grid div {
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   padding-top: var(--space-3);
 }
 
@@ -224,14 +224,14 @@
   --services-offer-card-hover-border: var(--color-primary);
   --services-offer-card-hover-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-primary) 34%, transparent);
   --services-offer-feature-bg: rgba(255, 255, 255, 0.7);
-  --services-offer-feature-border: rgba(49, 38, 59, 0.12);
+  --services-offer-feature-border: color-mix(in srgb, var(--color-plum-charcoal) 12%, transparent);
   --services-offer-feature-color: var(--color-plum-charcoal);
-  --services-offer-icon-border: rgba(49, 38, 59, 0.18);
+  --services-offer-icon-border: color-mix(in srgb, var(--color-plum-charcoal) 18%, transparent);
   --services-offer-icon-bg: var(--color-ink-violet);
   --services-offer-icon-color: #fff;
   --services-offer-icon-cms-bg: var(--color-surface);
   --services-offer-icon-cms-color: var(--color-ink-violet);
-  --services-offer-link-border: rgba(49, 38, 59, 0.14);
+  --services-offer-link-border: color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   position: relative;
   display: grid;
   gap: var(--space-4);
@@ -243,10 +243,10 @@
 
 :global(:root[data-theme="dark"]) {
   .services-signal-panel {
-    --services-signal-bg: radial-gradient(rgba(248, 244, 255, 0.06) 0.75px, transparent 0.75px),
+    --services-signal-bg: radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 6%, transparent) 0.75px, transparent 0.75px),
       rgba(21, 18, 29, 0.96);
-    --services-signal-hover-border: rgba(248, 244, 255, 0.28);
-    --services-signal-hover-bg: radial-gradient(rgba(248, 244, 255, 0.075) 0.75px, transparent 0.75px),
+    --services-signal-hover-border: color-mix(in srgb, var(--color-lavender-mist) 28%, transparent);
+    --services-signal-hover-bg: radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 7.5%, transparent) 0.75px, transparent 0.75px),
       rgba(32, 27, 42, 0.98);
   }
 
@@ -263,10 +263,10 @@
     --services-offer-feature-bg: rgba(255, 255, 255, 0.055);
     --services-offer-feature-border: rgba(255, 255, 255, 0.12);
     --services-offer-feature-color: var(--color-text);
-    --services-offer-icon-border: rgba(248, 244, 255, 0.2);
-    --services-offer-icon-bg: rgba(248, 244, 255, 0.08);
+    --services-offer-icon-border: color-mix(in srgb, var(--color-lavender-mist) 20%, transparent);
+    --services-offer-icon-bg: color-mix(in srgb, var(--color-lavender-mist) 8%, transparent);
     --services-offer-icon-color: var(--color-heading);
-    --services-offer-icon-cms-bg: rgba(248, 244, 255, 0.08);
+    --services-offer-icon-cms-bg: color-mix(in srgb, var(--color-lavender-mist) 8%, transparent);
     --services-offer-icon-cms-color: var(--color-heading);
     --services-offer-link-border: rgba(255, 255, 255, 0.12);
   }
@@ -324,8 +324,8 @@
 
 .services-offer-card--cms {
   background:
-    linear-gradient(rgba(49, 38, 59, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(49, 38, 59, 0.045) 1px, transparent 1px),
+    linear-gradient(color-mix(in srgb, var(--color-plum-charcoal) 4.5%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-plum-charcoal) 4.5%, transparent) 1px, transparent 1px),
     var(--services-offer-card-bg);
   background-size:
     56px 56px,
@@ -485,7 +485,7 @@
   gap: var(--space-4);
   align-items: start;
   min-height: 0;
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   padding-top: var(--space-4);
 }
 

@@ -65,7 +65,7 @@
 }
 
 :global(:root[data-theme="dark"]) .services__card {
-  --services-card-border: rgba(248, 244, 255, 0.14);
+  --services-card-border: color-mix(in srgb, var(--color-lavender-mist) 14%, transparent);
   --services-card-bg:
     radial-gradient(circle at 18% 0%, rgba(240, 120, 168, 0.08), transparent 11rem),
     rgba(21, 18, 29, 0.94);

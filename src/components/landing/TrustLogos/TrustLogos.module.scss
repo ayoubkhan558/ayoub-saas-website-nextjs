@@ -7,7 +7,7 @@
   --trust-logos-logo-blend: multiply;
   --trust-logos-logo-opacity: 1;
   --trust-logos-tile-bg: rgba(255, 255, 255, 0.92);
-  --trust-logos-tile-border: rgba(49, 38, 59, 0.14);
+  --trust-logos-tile-border: color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   position: relative;
   width: 100%;
   border-top: 1px solid var(--color-fog-border);
@@ -147,7 +147,7 @@
   transform: translate(-50%, 8px);
   border: 1px solid var(--color-fog-border);
   background:
-    radial-gradient(rgba(49, 38, 59, 0.055) 1px, transparent 1px) 0 0 / 7px 7px,
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 5.5%, transparent) 1px, transparent 1px) 0 0 / 7px 7px,
     var(--color-surface);
   box-shadow: var(--shadow-product-light);
   padding: var(--space-3);

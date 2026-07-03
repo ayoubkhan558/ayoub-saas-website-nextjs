@@ -1,7 +1,7 @@
 @use "../../../styles/mixins" as *;
 
 .process {
-  --process-step-chip-border: rgba(49, 38, 59, 0.16);
+  --process-step-chip-border: color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
   --process-step-chip-bg: var(--color-ink-violet);
   --process-step-chip-color: #fff;
   position: relative;
@@ -15,8 +15,8 @@
   }
 
   .about {
-    --about-grain-a: rgba(248, 244, 255, 0.07);
-    --about-grain-b: rgba(248, 244, 255, 0.035);
+    --about-grain-a: color-mix(in srgb, var(--color-lavender-mist) 7%, transparent);
+    --about-grain-b: color-mix(in srgb, var(--color-lavender-mist) 3.5%, transparent);
     --about-surface: rgba(26, 22, 35, 0.82);
     --about-surface-strong: rgba(21, 18, 29, 0.94);
     --about-section-bg: #121019;
@@ -291,7 +291,7 @@
   width: fit-content;
   gap: var(--space-1);
   margin-top: var(--space-5);
-  border: 1px solid rgba(49, 38, 59, 0.14);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   background: var(--about-surface);
   padding: var(--space-3) var(--space-4);
 }
@@ -447,7 +447,7 @@
   position: relative;
   z-index: 1;
   margin-top: var(--space-7);
-  border-top: 1px solid rgba(49, 38, 59, 0.14);
+  border-top: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   padding-top: var(--space-5);
   counter-reset: about-recognition;
 }
@@ -459,7 +459,7 @@
   position: relative;
   min-height: 92px;
   overflow: hidden;
-  border: 1px solid rgba(49, 38, 59, 0.14);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   background:
     radial-gradient(var(--about-grain-b) 0.75px, transparent 0.75px),
     var(--about-surface-strong);
@@ -479,7 +479,7 @@
   bottom: calc(var(--space-5) * -1);
   width: 74px;
   height: 74px;
-  border: 1px solid rgba(49, 38, 59, 0.08);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 8%, transparent);
   background: rgba(1, 1, 27, 0.04);
 }
 
@@ -489,10 +489,10 @@
 
 .about__recognition-item:hover {
   transform: translateY(-2px);
-  border-color: rgba(49, 38, 59, 0.24);
+  border-color: color-mix(in srgb, var(--color-plum-charcoal) 24%, transparent);
   box-shadow:
     rgba(255, 255, 255, 0.82) 0 1px 0 inset,
-    rgba(49, 38, 59, 0.09) 0 24px 54px;
+    color-mix(in srgb, var(--color-plum-charcoal) 9%, transparent) 0 24px 54px;
 }
 
 .about__recognition-label {
