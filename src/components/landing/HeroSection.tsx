@@ -77,10 +77,7 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
                 <div className={styles["hero__identity-copy"]}>
                   <strong className={styles["hero__identity-name"]}>M. Ayoub</strong>
                   <span className={styles["hero__identity-role"]}>Frontend &amp; WordPress Developer</span>
-                  <span className={styles["hero__identity-availability"]}>
-                    <span className={styles["hero__identity-availability-dot"]} aria-hidden="true" />
-                    Open for projects
-                  </span>
+
                   <div className={styles["hero__badges"]} aria-label="Availability and trust badges">
                     {portfolio?.hero.badges.map((badge) => (
                       <span className={`badge ${styles["hero__badge"]}`} key={badge.label}>
@@ -89,6 +86,10 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
                       </span>
                     ))}
                   </div>
+                  <span className={styles["hero__identity-availability"]}>
+                    <span className={styles["hero__identity-availability-dot"]} aria-hidden="true" />
+                    Open for projects
+                  </span>
                 </div>
               </div>
 

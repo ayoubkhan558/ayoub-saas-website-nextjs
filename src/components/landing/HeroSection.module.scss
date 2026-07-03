@@ -43,7 +43,7 @@
   gap: var(--space-8);
   align-items: center;
 
-  @media (min-width: 860px) {
+  @media (min-width: 768px) {
     grid-template-columns: minmax(0, 1fr) minmax(300px, 0.46fr);
   }
 }
@@ -58,7 +58,7 @@
   margin-inline: auto;
   text-align: center;
 
-  @media (min-width: 860px) {
+  @media (min-width: 768px) {
     justify-items: start;
     margin-inline: 0;
     text-align: left;
@@ -70,9 +70,7 @@
   gap: var(--space-2);
   font-size: var(--text-hero);
 
-  @media (min-width: 860px) {
-    font-size: var(--size-hero-title);
-  }
+  @media (min-width: 768px) {}
 }
 
 .hero__title-line {
@@ -100,7 +98,7 @@
   justify-content: center;
   gap: var(--space-3);
 
-  @media (min-width: 860px) {
+  @media (min-width: 768px) {
     justify-content: flex-start;
   }
 }
@@ -133,7 +131,7 @@
   text-align: center;
   margin-top: var(--space-3);
 
-  @media (min-width: 860px) {
+  @media (min-width: 768px) {
     justify-content: flex-start;
     text-align: left;
   }
@@ -171,7 +169,7 @@
   gap: var(--space-1);
   justify-items: center;
 
-  @media (min-width: 860px) {
+  @media (min-width: 768px) {
     justify-items: start;
   }
 }
@@ -200,7 +198,7 @@
   align-content: center;
   margin-inline: auto;
 
-  @media (min-width: 860px) {
+  @media (min-width: 768px) {
     display: grid;
     margin-inline: 0;
     justify-self: end;
@@ -265,6 +263,7 @@
 
   @media (min-width: 980px) {
     width: 100%;
+    max-width: 100%;
     // height: clamp-val(72px, 120px);
   }
 }
@@ -394,8 +393,8 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: var(--space-2) var(--space-3);
-  border-top: 1px solid var(--border-line);
-  padding-top: var(--space-4);
+  border-bottom: 1px solid var(--border-line);
+  padding-block: var(--space-2);
 }
 
 .hero__badge {

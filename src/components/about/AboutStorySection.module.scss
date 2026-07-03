@@ -142,7 +142,7 @@
   margin-top: var(--space-5);
   counter-reset: story-card;
 
-  @media (min-width: 860px) {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

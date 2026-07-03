@@ -29,7 +29,7 @@
   display: grid;
   gap: var(--space-4);
 
-  @media (min-width: 860px) {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
   }
 }

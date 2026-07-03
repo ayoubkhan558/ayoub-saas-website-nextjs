@@ -7,7 +7,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (min-width: 860px) {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -98,7 +98,7 @@
   border-top: 1px solid var(--color-fog-border);
   padding-top: var(--space-5);
 
-  @media (min-width: 860px) {
+  @media (min-width: 768px) {
     grid-template-columns: auto 1fr auto;
   }
 }
