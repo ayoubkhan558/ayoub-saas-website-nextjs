@@ -1,15 +1,5 @@
 .section-header {
   display: grid;
-}
-
-.kicker {
-  color: var(--color-ink-violet);
-  font-family: var(--font-code);
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-}
-
-.section-header {
   gap: var(--space-3);
   max-width: 820px;
 }
