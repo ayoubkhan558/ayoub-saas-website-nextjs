@@ -1,4 +1,4 @@
-import caseStudyDetailsJson from "../content/work/caseStudyDetails.json";
+import caseStudyDetailsJson from "./caseStudyDetails.json";
 
 type CaseStudyPageShowcase = {
   label: string;

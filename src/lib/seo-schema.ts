@@ -1,4 +1,4 @@
-import portfolio from "@/content/portfolio/portfolio.json";
+import portfolio from "@/data/portfolio.json";
 import { caseStudies, projects } from "@/data/work";
 import {
   getProjectDescription,

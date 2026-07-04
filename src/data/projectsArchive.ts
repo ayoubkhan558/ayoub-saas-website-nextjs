@@ -1,5 +1,5 @@
-import projectsArchiveJson from "../content/work/projectsArchive.json";
-import projectLinkStatusJson from "../content/work/projectLinkStatus.json";
+import projectsArchiveJson from "./projectsArchive.json";
+import projectLinkStatusJson from "./projectLinkStatus.json";
 
 export type ProjectArchiveItem = (typeof projectsArchiveJson.projects)[number];
 

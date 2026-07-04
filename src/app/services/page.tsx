@@ -3,7 +3,7 @@ import { ContactFooter } from "@/components/landing/ContactFooter/ContactFooter"
 import { SiteHeader } from "@/components/landing/SiteHeader/SiteHeader";
 import { ServicesPageContent } from "@/components/services/ServicesPageContent/ServicesPageContent";
 import { buildServicesSchema, jsonLdScript } from "@/lib/seo-schema";
-import portfolio from "@/content/portfolio/portfolio.json";
+import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
   title: "Website Development Services",

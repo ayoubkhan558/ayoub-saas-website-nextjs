@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
-import portfolio from "@/content/portfolio/portfolio.json";
+import portfolio from "@/data/portfolio.json";
 import { Typewriter } from "react-simple-typewriter";
 import { proofNotes } from "../servicesPageData";
 import styles from "../ServicesPage.module.scss";

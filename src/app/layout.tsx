@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import portfolio from "@/content/portfolio/portfolio.json";
+import portfolio from "@/data/portfolio.json";
 import "./globals.scss";
 
 const siteUrl = portfolio.profile.website;

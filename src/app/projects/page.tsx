@@ -10,7 +10,7 @@ import {
   sortProjectsByLiveStatus,
 } from "@/data/projectsArchive";
 import { buildProjectsSchema, jsonLdScript } from "@/lib/seo-schema";
-import portfolio from "@/content/portfolio/portfolio.json";
+import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
   title: "Website Design & Development Portfolio",

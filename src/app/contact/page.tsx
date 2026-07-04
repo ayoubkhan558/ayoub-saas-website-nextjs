@@ -7,7 +7,7 @@ import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
 import { ContactFooter } from "@/components/landing/ContactFooter/ContactFooter";
 import { SiteHeader } from "@/components/landing/SiteHeader/SiteHeader";
 import { buildContactSchema, jsonLdScript } from "@/lib/seo-schema";
-import portfolio from "@/content/portfolio/portfolio.json";
+import portfolio from "@/data/portfolio.json";
 import styles from "@/components/contact/ContactPage.module.scss";
 
 export const metadata: Metadata = {

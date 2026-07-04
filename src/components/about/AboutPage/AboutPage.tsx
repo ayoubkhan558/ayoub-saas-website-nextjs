@@ -1,6 +1,6 @@
 import { ContactFooter } from "@/components/landing/ContactFooter/ContactFooter";
 import { SiteHeader } from "@/components/landing/SiteHeader/SiteHeader";
-import portfolio from "@/content/portfolio/portfolio.json";
+import portfolio from "@/data/portfolio.json";
 import { buildAboutSchema, jsonLdScript } from "@/lib/seo-schema";
 import { AboutExperienceSection } from "../AboutExperienceSection/AboutExperienceSection";
 import { AboutHero } from "../AboutHero/AboutHero";

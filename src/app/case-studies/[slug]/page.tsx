@@ -5,7 +5,7 @@ import { ContactFooter } from "@/components/landing/ContactFooter/ContactFooter"
 import { CaseStudyDetail } from "@/components/case-studies/CaseStudyDetail/CaseStudyDetail";
 import { caseStudyDetails } from "@/data/caseStudyDetails";
 import { caseStudies } from "@/data/work";
-import portfolio from "@/content/portfolio/portfolio.json";
+import portfolio from "@/data/portfolio.json";
 
 export function generateStaticParams() {
   return caseStudies.map((entry) => ({ slug: entry.href.replace(/^\/case-studies\//, "") }));
