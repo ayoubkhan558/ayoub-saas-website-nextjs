@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { ContactFooter } from "@/components/landing/ContactFooter";
-import { SiteHeader } from "@/components/landing/SiteHeader";
-import { ProjectsPageContent } from "@/components/projects/ProjectsPageContent";
+import { ContactFooter } from "@/components/landing/ContactFooter/ContactFooter";
+import { SiteHeader } from "@/components/landing/SiteHeader/SiteHeader";
+import { ProjectsPageContent } from "@/components/projects/ProjectsPageContent/ProjectsPageContent";
 import { getPageNumber } from "@/lib/pagination";
 import {
   normalizeProjectFilter,
@@ -10,7 +10,7 @@ import {
   sortProjectsByLiveStatus,
 } from "@/data/projectsArchive";
 import { buildProjectsSchema, jsonLdScript } from "@/lib/seo-schema";
-import portfolio from "@/content/portfolio/portfolio.json";
+import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
   title: "Website Design & Development Portfolio",

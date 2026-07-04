@@ -1,0 +1,97 @@
+.pagination {
+  --pagination-item-border: color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
+  --pagination-item-bg: var(--color-surface-muted);
+  --pagination-item-color: var(--color-ink-violet);
+  --pagination-item-hover-border: var(--color-plum-charcoal);
+  --pagination-item-hover-bg: var(--color-surface);
+  --pagination-active-border: var(--color-ink-violet);
+  --pagination-active-bg: var(--color-ink-violet);
+  --pagination-active-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--page-rail-color);
+  padding-top: var(--space-4);
+}
+
+:global(:root[data-theme="dark"]) .pagination {
+  --pagination-item-border: rgba(255, 255, 255, 0.12);
+  --pagination-item-bg: rgba(255, 255, 255, 0.055);
+  --pagination-item-color: var(--color-heading);
+  --pagination-item-hover-border: rgba(255, 255, 255, 0.22);
+  --pagination-item-hover-bg: rgba(255, 255, 255, 0.1);
+  --pagination-active-border: rgba(255, 125, 170, 0.7);
+  --pagination-active-bg: rgba(255, 77, 136, 0.16);
+  --pagination-active-color: var(--color-heading);
+}
+
+.pagination__pages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.pagination__group {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.pagination__ellipsis {
+  display: inline-flex;
+  min-width: 24px;
+  justify-content: center;
+  color: var(--color-storm-mauve);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+}
+
+.pagination__link,
+.pagination__page {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--pagination-item-border);
+  background: var(--pagination-item-bg);
+  color: var(--pagination-item-color);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-ui);
+  font-weight: 800;
+  padding: var(--space-2) var(--space-3);
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.pagination__page {
+  width: 42px;
+  padding-inline: var(--space-2);
+}
+
+.pagination__link:hover,
+.pagination__page:hover {
+  border-color: var(--pagination-item-hover-border);
+  background: var(--pagination-item-hover-bg);
+  transform: translateY(-2px);
+}
+
+.pagination__page--active {
+  border-color: var(--pagination-active-border);
+  background: var(--pagination-active-bg);
+  color: var(--pagination-active-color);
+}
+
+.pagination__page--active:hover {
+  border-color: var(--pagination-active-border);
+  background: var(--pagination-active-bg);
+  color: var(--pagination-active-color);
+}
+
+.pagination__link--disabled {
+  pointer-events: none;
+  opacity: 0.42;
+}

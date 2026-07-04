@@ -1,0 +1,107 @@
+@use "../../../styles/mixins" as *;
+
+.screen {
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 22%, transparent);
+  background: #101016;
+  box-shadow: rgba(1, 1, 27, 0.18) 0 26px 52px;
+}
+
+.browser-top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: #1f1f28;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.browser-dots {
+  display: flex;
+  gap: var(--space-1);
+
+  span {
+    width: var(--space-2);
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.38);
+  }
+}
+
+.browser-url {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.62);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------------- REAL PREVIEW ---------------- */
+
+.real-preview {
+  position: relative;
+  overflow: hidden;
+  background: #f4f4f5;
+  max-height: clamp-val(260px, 480px);
+}
+
+.real-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------------- COMPACT ---------------- */
+
+.screen-compact .real-preview {
+  min-height: clamp-val(240px, 390px);
+}
+
+/* ---------------- HOVER SCROLL ---------------- */
+
+.screen-scroll-on-hover {
+  --comparison-preview-height: clamp-val(340px, 520px);
+}
+
+.screen-scroll-on-hover .real-preview {
+  position: relative;
+  height: var(--comparison-preview-height);
+  overflow: hidden;
+}
+
+.screen-scroll-on-hover .real-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  transform: translateY(0);
+  transition: transform 12s linear;
+  will-change: transform;
+}
+
+.screen-scroll-on-hover:hover .real-preview img,
+.screen-scroll-on-hover:focus-within .real-preview img {
+  transform: translateY(calc(-100% + var(--comparison-preview-height)));
+}
+
+/* ---------------- REDUCED MOTION ---------------- */
+
+@include reduced-motion {
+  .screen-scroll-on-hover .real-preview {
+    overflow-y: auto;
+  }
+
+  .screen-scroll-on-hover .real-preview img {
+    transition: none;
+    transform: none;
+  }
+}
+
+:global(:root[data-theme="dark"]) {
+  .real-preview {
+    background: #111018;
+  }
+}

@@ -1,10 +1,10 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Metadata } from "next";
-import { PortfolioLanding } from "@/components/PortfolioLanding";
+import { PortfolioLanding } from "@/components/PortfolioLanding/PortfolioLanding";
 import { PortfolioContentProvider } from "@/context/PortfolioContentContext";
 import { buildHomeSchema, jsonLdScript } from "@/lib/seo-schema";
-import portfolio from "@/content/portfolio/portfolio.json";
+import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
   title: "Muhammad Ayoub Khan | Custom React.js, HTML/CSS & Front-End Developer",

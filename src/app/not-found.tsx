@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { IconGlyph } from "@/components/landing/IconGlyph";
-import { ContactFooter } from "@/components/landing/ContactFooter";
-import { SiteHeader } from "@/components/landing/SiteHeader";
-import portfolio from "@/content/portfolio/portfolio.json";
+import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
+import { ContactFooter } from "@/components/landing/ContactFooter/ContactFooter";
+import { SiteHeader } from "@/components/landing/SiteHeader/SiteHeader";
+import portfolio from "@/data/portfolio.json";
 import styles from "./not-found.module.scss";
 
 const paths = [

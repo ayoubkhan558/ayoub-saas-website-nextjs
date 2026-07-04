@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, type ReactNode } from "react";
-import defaultPortfolio from "@/content/portfolio/portfolio.json";
+import defaultPortfolio from "@/data/portfolio.json";
 
 export type PortfolioData = typeof defaultPortfolio;
 

@@ -1,0 +1,72 @@
+.about-page {
+  --about-hero-bg: #eeeeef;
+  --about-hero-gradient: linear-gradient(180deg, #f5f5f6, #e9e9eb);
+  --about-grain-a: rgba(1, 1, 27, 0.07);
+  --about-grain-b: rgba(1, 1, 27, 0.045);
+  --about-grain-subtle: color-mix(in srgb, var(--color-plum-charcoal) 4.5%, transparent);
+  --about-border: color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
+  --about-border-soft: color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
+  --about-border-faint: color-mix(in srgb, var(--color-plum-charcoal) 12%, transparent);
+  --about-border-hover: color-mix(in srgb, var(--color-plum-charcoal) 28%, transparent);
+  --about-card-surface: var(--color-surface);
+  --about-card-raised: var(--color-surface-raised);
+  --about-card-muted: var(--color-surface-muted);
+  --about-card-gradient: linear-gradient(180deg, var(--color-surface-raised), var(--color-surface-muted));
+  --about-card-inset: var(--surface-inset-light);
+  --about-card-shadow: color-mix(in srgb, var(--color-plum-charcoal) 6%, transparent) 0 20px 54px;
+  --about-card-shadow-hover: color-mix(in srgb, var(--color-plum-charcoal) 9%, transparent) 0 24px 54px;
+  --about-card-ring: color-mix(in srgb, var(--color-plum-charcoal) 10%, transparent);
+  --about-panel-section-bg: var(--color-bone-mist);
+  --about-toolbox-section-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 color-mix(in srgb, var(--color-plum-charcoal) 8%, transparent);
+  --about-experience-grid-line: #e2e8f0;
+  --about-experience-grid-opacity: 0.72;
+  --about-toolbox-section-bg: #fff;
+  --about-toolbox-grid-line: rgba(0, 0, 0, 0.03);
+  --about-toolbox-dot: rgba(51, 65, 85, 0.2);
+  --about-decor-number: color-mix(in srgb, var(--color-plum-charcoal) 6%, transparent);
+  --about-decor-block: color-mix(in srgb, var(--color-plum-charcoal) 8%, transparent);
+  --about-photo-bg: #d9d9dc;
+  --about-photo-vignette: #94847f;
+  --about-secondary-glow: rgba(63, 112, 108, 0.1);
+  --about-grid-line: color-mix(in srgb, var(--color-plum-charcoal) 7%, transparent);
+  --about-feature-gradient: linear-gradient(180deg, var(--color-surface-raised), var(--color-bone-mist));
+  --about-icon-shadow: color-mix(in srgb, var(--color-plum-charcoal) 5%, transparent) 0 14px 30px;
+  --about-logo-plate-bg: #ffffff;
+  --about-logo-plate-border: color-mix(in srgb, var(--color-plum-charcoal) 12%, transparent);
+  --about-logo-plate-shadow: color-mix(in srgb, var(--color-plum-charcoal) 8%, transparent) 0 1px 2px;
+}
+
+:global(:root[data-theme="dark"]) .about-page {
+  --about-hero-bg: #121019;
+  --about-hero-gradient: linear-gradient(180deg, #17131f, #100e16);
+  --about-grain-a: color-mix(in srgb, var(--color-lavender-mist) 7%, transparent);
+  --about-grain-b: color-mix(in srgb, var(--color-lavender-mist) 4.5%, transparent);
+  --about-grain-subtle: color-mix(in srgb, var(--color-lavender-mist) 4.5%, transparent);
+  --about-border: color-mix(in srgb, var(--color-lavender-mist) 16%, transparent);
+  --about-border-soft: color-mix(in srgb, var(--color-lavender-mist) 14%, transparent);
+  --about-border-faint: color-mix(in srgb, var(--color-lavender-mist) 12%, transparent);
+  --about-border-hover: color-mix(in srgb, var(--color-lavender-mist) 28%, transparent);
+  --about-card-shadow: rgba(0, 0, 0, 0.34) 0 20px 54px;
+  --about-card-shadow-hover: rgba(0, 0, 0, 0.42) 0 24px 54px;
+  --about-card-ring: color-mix(in srgb, var(--color-lavender-mist) 10%, transparent);
+  --about-panel-section-bg: rgba(26, 22, 35, 0.5);
+  --about-toolbox-section-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+  --about-experience-grid-line: color-mix(in srgb, var(--color-lavender-mist) 8%, transparent);
+  --about-experience-grid-opacity: 0.54;
+  --about-toolbox-section-bg: #121019;
+  --about-toolbox-grid-line: color-mix(in srgb, var(--color-lavender-mist) 4.5%, transparent);
+  --about-toolbox-dot: rgba(121, 210, 203, 0.14);
+  --about-decor-number: color-mix(in srgb, var(--color-lavender-mist) 12%, transparent);
+  --about-decor-block: color-mix(in srgb, var(--color-lavender-mist) 8%, transparent);
+  --about-photo-bg: #2a2435;
+  --about-photo-vignette: #5a4f66;
+  --about-secondary-glow: rgba(121, 210, 203, 0.14);
+  --about-grid-line: color-mix(in srgb, var(--color-lavender-mist) 8%, transparent);
+  --about-feature-gradient: linear-gradient(180deg, var(--color-surface-raised), var(--color-surface-muted));
+  --about-icon-shadow: rgba(0, 0, 0, 0.28) 0 14px 30px;
+  --about-logo-plate-bg: #f1eff6;
+  --about-logo-plate-border: color-mix(in srgb, var(--color-lavender-mist) 16%, transparent);
+  --about-logo-plate-shadow: rgba(0, 0, 0, 0.34) 0 2px 10px;
+}

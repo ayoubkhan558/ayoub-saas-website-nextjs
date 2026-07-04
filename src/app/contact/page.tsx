@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { ContactFaqsSection } from "@/components/contact/ContactFaqsSection";
-import { ContactForm } from "@/components/contact/ContactForm";
-import { ContactHeroSection } from "@/components/contact/ContactHeroSection";
-import { IconGlyph } from "@/components/landing/IconGlyph";
-import { ContactFooter } from "@/components/landing/ContactFooter";
-import { SiteHeader } from "@/components/landing/SiteHeader";
+import { ContactFaqsSection } from "@/components/contact/ContactFaqsSection/ContactFaqsSection";
+import { ContactForm } from "@/components/contact/ContactForm/ContactForm";
+import { ContactHeroSection } from "@/components/contact/ContactHeroSection/ContactHeroSection";
+import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
+import { ContactFooter } from "@/components/landing/ContactFooter/ContactFooter";
+import { SiteHeader } from "@/components/landing/SiteHeader/SiteHeader";
 import { buildContactSchema, jsonLdScript } from "@/lib/seo-schema";
-import portfolio from "@/content/portfolio/portfolio.json";
+import portfolio from "@/data/portfolio.json";
 import styles from "@/components/contact/ContactPage.module.scss";
 
 export const metadata: Metadata = {

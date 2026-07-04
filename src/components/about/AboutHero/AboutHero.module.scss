@@ -1,0 +1,100 @@
+@use "../../../styles/mixins" as *;
+
+.about-page-hero :global(.section__inner) {
+  overflow: hidden;
+  @include page-hero-surface;
+}
+
+.about-page-hero__inner {
+  display: grid;
+  gap: var(--page-hero-grid-gap);
+
+  @include mq(lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.58fr);
+    align-items: start;
+  }
+}
+
+.about-page-hero__copy {
+  @include hero-copy;
+}
+
+.about-page__eyebrow {
+  @include hero-eyebrow;
+}
+
+.about-page-hero__title {
+  @include hero-title;
+  color: var(--color-ink-violet);
+}
+
+.about-page-hero__text {
+  @include hero-text;
+}
+
+.about-page-hero__actions {
+  @include hero-actions;
+}
+
+.about-page-hero-stats {
+  display: grid;
+  gap: var(--space-3);
+  align-self: stretch;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  @include mq(640px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.about-page-hero-stat {
+  position: relative;
+  display: grid;
+  min-height: 150px;
+  align-content: space-between;
+  overflow: hidden;
+  border: 1px solid var(--about-border);
+  border-radius: 8px;
+  background: var(--about-card-gradient), var(--about-card-surface);
+  padding: var(--space-4);
+  box-shadow:
+    var(--about-card-inset) 0 1px 0 inset,
+    var(--about-card-shadow);
+}
+
+.about-page-hero-stat::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, var(--about-grid-line) 1px, transparent 1px),
+    linear-gradient(180deg, var(--about-grid-line) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.about-page-hero-stat strong,
+.about-page-hero-stat span {
+  position: relative;
+  z-index: 1;
+}
+
+.about-page-hero-stat strong {
+  color: var(--color-ink-violet);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-h2);
+  font-weight: 800;
+  line-height: 1;
+
+  @include mq(md) {
+    font-size: var(--text-h1);
+  }
+}
+
+.about-page-hero-stat span {
+  max-width: 15ch;
+  color: var(--color-storm-mauve);
+  font-size: var(--text-ui);
+  line-height: 1.25;
+}

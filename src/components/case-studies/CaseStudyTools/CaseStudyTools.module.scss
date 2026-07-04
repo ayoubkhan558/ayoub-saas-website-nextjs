@@ -1,0 +1,153 @@
+@use "../../../styles/mixins" as *;
+
+.section-inner,
+.tools-intro,
+.tool-panel {
+  display: grid;
+}
+
+.tool-meta {
+  color: var(--color-ink-violet);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  display: none;
+
+  @include mq(md) {
+    display: inline-flex;
+  }
+}
+
+.section :global(.section__inner) {
+  background:
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 3.2%, transparent) 1px, transparent 1px) 0 0 / 7px 7px,
+    #fff;
+}
+
+.section-inner {
+  gap: var(--space-6);
+}
+
+.tool-name {
+  display: block;
+  color: var(--color-ink-violet);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-md);
+  font-weight: 800;
+  
+}
+
+.tool-meta {
+  color: var(--color-storm-mauve);
+}
+
+.tool-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tools-intro {
+  gap: var(--space-4);
+
+  @include mq(lg) {
+    grid-template-columns: minmax(0, 0.8fr) minmax(320px, 0.48fr);
+    align-items: end;
+  }
+}
+
+.performance-note {
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 18%, transparent);
+  box-shadow: inset 0 0 0 3px color-mix(in srgb, var(--color-plum-charcoal) 4.5%, transparent);
+  background: var(--color-surface-muted);
+  color: var(--color-storm-mauve);
+  font-size: var(--text-body);
+  padding: var(--space-4);
+}
+
+.tool-panel {
+  gap: var(--space-4);
+}
+
+.tool-grid {
+  @include mq(720px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.tool-card {
+  color: var(--color-ink-violet);
+  display: grid;
+  // align-content: start;
+  position: relative;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-4) var(--space-3);
+  background: radial-gradient(rgba(1, 1, 27, 0.043) 0.75px, rgba(0, 0, 0, 0) 0.75px) 0px 0px / 6px 6px, rgba(255, 255, 255, 0.86);
+  border-width: 1px;
+  border-style: solid;
+  border-color: color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
+  border-image: initial;
+  transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    z-index: 0;
+    right: calc(var(--space-4) * -1);
+    top: calc(var(--space-5) * -1);
+    width: 74px;
+    height: 74px;
+    position: absolute;
+    background: rgba(1, 1, 27, 0.04);
+    border-width: 1px;
+    border-style: solid;
+    border-color: color-mix(in srgb, var(--color-plum-charcoal) 8%, transparent);
+    border-image: initial;
+  }
+}
+
+.tool-card:nth-child(even) {
+  // background:
+  //   radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 4%, transparent) 1px, transparent 1px) 0 0 / 7px 7px,
+  //   rgba(247, 247, 248, 0.9);
+}
+
+.tool-logo {
+  display: inline-flex;
+  justify-self: start;
+  color: var(--color-ink-violet);
+  position: relative;
+  z-index: 1;
+  margin-bottom: var(--space-3);
+}
+
+.tool-logo img {
+  display: block;
+  width: 100%;
+  max-width: 96px;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+.tool-card>span:last-child {
+  display: grid;
+  gap: var(--space-2);
+  align-content: end;
+}
+
+:global(:root[data-theme="dark"]) {
+  .section :global(.section__inner) {
+    background-color: var(--color-surface) !important;
+    background-image:
+      radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 5.5%, transparent) 0.75px, transparent 0.75px),
+      linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
+    background-size: 6px 6px, auto !important;
+  }
+
+  .tool-card {
+    border-color: color-mix(in srgb, var(--color-lavender-mist) 16%, transparent);
+    background:
+      radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 5.5%, transparent) 0.75px, transparent 0.75px) 0 0 / 6px 6px,
+      rgba(21, 18, 29, 0.9);
+  }
+}

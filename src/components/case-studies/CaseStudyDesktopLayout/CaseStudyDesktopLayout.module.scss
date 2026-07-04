@@ -1,0 +1,65 @@
+@use "../../../styles/mixins" as *;
+
+.section-inner {
+  display: grid;
+}
+
+.section :global(.section__inner) {
+  background:
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 3.2%, transparent) 1px, transparent 1px) 0 0 / 7px 7px,
+    #fff;
+}
+
+.section-inner {
+  gap: var(--space-6);
+}
+
+.showcase-grid {
+  display: grid;
+  gap: var(--space-4);
+
+  @include mq(880px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.showcase-grid-single {
+  @include mq(880px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.showcase-carousel {
+  min-width: 0;
+  // Native-CSS fallback so the preview box always has a real height,
+  // even if the mockup's scroll-on-hover height variable fails to resolve.
+  --comparison-preview-height: clamp(340px, 42vw, 520px);
+}
+
+.showcase-carousel-caption {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  border-left: 1px solid var(--color-plum-charcoal);
+  color: var(--color-storm-mauve);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+  padding-left: var(--space-3);
+}
+
+.showcase-carousel-caption strong {
+  color: var(--color-ink-violet);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-md);
+  font-weight: 800;
+}
+
+:global(:root[data-theme="dark"]) {
+  .section :global(.section__inner) {
+      background-color: var(--color-surface) !important;
+      background-image:
+        radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 5.5%, transparent) 0.75px, transparent 0.75px),
+        linear-gradient(180deg, rgba(21, 18, 29, 0.98), rgba(14, 13, 20, 0.96)) !important;
+      background-size: 6px 6px, auto !important;
+    }
+}

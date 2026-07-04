@@ -1,0 +1,239 @@
+@use "../../../styles/mixins" as *;
+
+:global(:root[data-theme="dark"]) {
+  .about {
+    --about-grain-a: color-mix(in srgb, var(--color-lavender-mist) 7%, transparent);
+    --about-grain-b: color-mix(in srgb, var(--color-lavender-mist) 3.5%, transparent);
+    --about-surface: rgba(26, 22, 35, 0.82);
+    --about-surface-strong: rgba(21, 18, 29, 0.94);
+    --about-section-bg: #121019;
+    --about-section-gradient: linear-gradient(180deg, #17131f, #100e16);
+    --about-vignette: linear-gradient(90deg, rgba(14, 13, 20, 0.78), transparent 18%, transparent 82%, rgba(14, 13, 20, 0.82));
+  }
+}
+
+.about__grid {
+  display: grid;
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.about {
+  --about-grain-a: rgba(1, 1, 27, 0.075);
+  --about-grain-b: rgba(1, 1, 27, 0.035);
+  --about-surface: rgba(255, 255, 255, 0.82);
+  --about-surface-strong: rgba(255, 255, 255, 0.94);
+  --about-section-bg: #eeeeef;
+  --about-section-gradient: linear-gradient(180deg, #f5f5f6, #e9e9eb);
+  --about-vignette: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent 18%, transparent 82%, rgba(255, 255, 255, 0.84));
+}
+
+.about :global(.section__inner) {
+  overflow: hidden;
+  background-color: var(--about-section-bg);
+  background-image:
+    radial-gradient(var(--about-grain-a) 0.75px, transparent 0.75px),
+    var(--about-section-gradient);
+  background-size:
+    6px 6px,
+    auto;
+}
+
+.about :global(.section__inner)::before,
+.about :global(.section__inner)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.about :global(.section__inner)::before {
+  z-index: 0;
+  background-image:
+    radial-gradient(var(--about-grain-a) 0.75px, transparent 0.75px),
+    radial-gradient(var(--about-grain-b) 0.85px, transparent 0.85px),
+    linear-gradient(115deg, transparent 0 44%, rgba(1, 1, 27, 0.045) 44% 45%, transparent 45% 100%);
+  background-position:
+    0 0,
+    13px 17px,
+    0 0;
+  background-size:
+    7px 7px,
+    11px 11px,
+    38px 38px;
+  opacity: 0.72;
+  mix-blend-mode: multiply;
+}
+
+.about :global(.section__inner)::after {
+  z-index: 0;
+  background:
+    var(--about-vignette),
+    radial-gradient(ellipse at 50% 50%, transparent 0 48%, rgba(1, 1, 27, 0.065) 100%);
+}
+
+.about__grid {
+  position: relative;
+  z-index: 1;
+
+  @include mq(md) {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.7fr);
+  }
+}
+
+.about__copy :global(.section-header) {
+  margin-bottom: var(--space-5);
+}
+
+.about__text {
+  max-width: 720px;
+  color: var(--color-storm-mauve);
+  font-size: var(--text-subheading);
+}
+
+.about__education {
+  display: grid;
+  width: fit-content;
+  gap: var(--space-1);
+  margin-top: var(--space-5);
+  border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
+  background: var(--about-surface);
+  padding: var(--space-3) var(--space-4);
+}
+
+.about__education-label,
+.about__education-meta {
+  color: var(--color-slate-iris);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+  line-height: 1;
+}
+
+.about__education-label {
+  text-transform: uppercase;
+}
+
+.about__education-title {
+  color: var(--color-ink-violet);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-h6);
+  font-weight: 800;
+}
+
+.about__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  margin-top: var(--space-5);
+}
+
+.about__signature {
+  display: inline-flex;
+  width: 152px;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+}
+
+.about__signature img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+:global(:root[data-theme="dark"]) .about__signature {
+  filter: invert(1);
+}
+
+.about__panel {
+  position: relative;
+  display: grid;
+  border: 1px solid rgba(1, 1, 27, 0.22);
+  background:
+    radial-gradient(rgba(1, 1, 27, 0.06) 0.75px, transparent 0.75px),
+    var(--about-surface-strong);
+  background-size: 6px 6px, auto;
+  padding: var(--space-3);
+}
+
+.about__portrait {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(1, 1, 27, 0.2);
+  background: #d9d9dc;
+}
+
+.about__portrait::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  // background: radial-gradient(circle at var(--spotlight-x, 50%) var(--spotlight-y, 42%), rgba(255, 255, 255, 0.14) 0 6%, rgba(0, 0, 0, 0.18) 16%, rgba(0, 0, 0, 0.5) 38%);
+  background: rgba(0, 0, 0, 0.015);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.about__portrait img {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  filter: grayscale(1) contrast(1.04);
+  background: #d9d9dc;
+  object-fit: cover;
+  object-position: center 36%;
+  transition: filter 240ms ease, transform 300ms ease;
+}
+
+.about__portrait img+img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  filter: grayscale(0) contrast(1.06) saturate(1.02);
+  // filter: contrast(1.06) saturate(1.02);
+  opacity: 0;
+  clip-path: circle(0 at var(--spotlight-x, 50%) var(--spotlight-y, 42%));
+  transition:
+    clip-path 90ms linear,
+    opacity 180ms ease,
+    transform 300ms ease;
+}
+
+.about__portrait:hover::before {
+  opacity: 1;
+}
+
+.about__portrait:hover img {
+  // transform: scale(1.025);
+}
+
+.about__portrait:hover img+img {
+  opacity: 1;
+  clip-path: circle(18% at var(--spotlight-x, 50%) var(--spotlight-y, 42%));
+}
+
+.about__portrait-caption {
+  position: absolute;
+  right: var(--space-3);
+  bottom: var(--space-3);
+  left: var(--space-3);
+  z-index: 3;
+  display: grid;
+  gap: var(--space-2);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(1, 1, 27, 0.88);
+  padding: var(--space-3);
+}
+
+.about__portrait-caption strong {
+  color: #fff;
+  font-family: var(--font-display-compact);
+  font-size: var(--text-h5);
+  font-weight: 800;
+}
+
+.about__portrait-caption span {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: var(--text-sm);
+}
+

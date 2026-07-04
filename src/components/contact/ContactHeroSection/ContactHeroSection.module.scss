@@ -1,0 +1,111 @@
+@use "../../../styles/mixins" as *;
+
+.contact-hero :global(.section__inner) {
+  @include page-hero-surface;
+}
+
+.contact-hero__inner {
+  display: grid;
+  gap: var(--page-hero-grid-gap);
+
+  @include mq(lg) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+.contact-hero__copy {
+  @include hero-copy;
+  align-content: start;
+}
+
+.contact-page__eyebrow,
+.contact-signal-panel__label {
+  color: var(--color-ink-violet);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+
+  text-transform: uppercase;
+}
+
+.contact-hero__copy>.contact-page__eyebrow {
+  @include hero-eyebrow;
+}
+
+.contact-hero h1 {
+  @include hero-title;
+}
+
+.contact-hero p {
+  @include hero-text;
+}
+
+.contact-hero__actions {
+  @include hero-actions;
+}
+
+.contact-signal-panel {
+  position: relative;
+  display: grid;
+  align-self: end;
+  gap: var(--space-3);
+  overflow: hidden;
+  border: 1px solid var(--color-fog-border);
+  border-radius: var(--radius-cards);
+  background:
+    radial-gradient(var(--surface-dot-light) 0.75px, transparent 0.75px),
+    var(--color-surface);
+  background-size: 6px 6px, auto;
+  padding: var(--space-5);
+  box-shadow:
+    var(--surface-inset-light) 0 1px 0 inset,
+    var(--color-card-shadow);
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.contact-signal-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    radial-gradient(var(--surface-grid-light) 0.75px, transparent 0.75px),
+    linear-gradient(115deg, transparent 0 48%, var(--surface-grid-light) 48% 49%, transparent 49% 100%);
+  background-size: 8px 8px, 44px 44px;
+  opacity: 0.46;
+  pointer-events: none;
+}
+
+.contact-signal-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--space-1);
+  background: var(--color-ink-violet);
+}
+
+.contact-signal-panel>* {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-signal-panel:hover {
+  border-color: var(--color-fog-border);
+  background:
+    radial-gradient(var(--surface-dot-light) 0.75px, transparent 0.75px),
+    var(--color-surface-muted);
+  background-size: 6px 6px, auto;
+  transform: translateY(-2px);
+}
+
+.contact-signal-panel strong {
+  font-family: var(--font-display-compact);
+  font-size: var(--text-h3);
+}
+
+.contact-signal-panel p {
+  color: var(--color-storm-mauve);
+}
