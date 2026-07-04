@@ -518,6 +518,188 @@
       "buttonText": "Let's Build It"
     }
   },
+  "kingsre": {
+    "slug": "kingsre",
+    "client": "Kings Real Estate",
+    "urlLabel": "kingsre.ae",
+    "liveUrl": "https://kingsre.ae",
+    "timeline": "4 weeks",
+    "caseType": "custom Bricks Builder WordPress development",
+    "listing": {
+      "tag": "CASE_06",
+      "icon": "building-2",
+      "title": "Kings Real Estate",
+      "description": "Custom WordPress website for a luxury real estate agency in Ras Al Khaimah featuring premium property listings, off-plan developments, market insights, and lead generation.",
+      "result": "Modern real estate website with editable CMS, responsive layouts, and optimized lead generation",
+      "achievement": "Built a premium real estate platform from scratch using Bricks Builder and WordPress",
+      "stack": [
+        "Bricks",
+        "WordPress",
+        "ACF"
+      ],
+      "href": "/case-studies/kingsre",
+      "liveUrl": "https://kingsre.ae",
+      "image": "/case-study/kingsre-thumbnail.jpg",
+      "imageAlt": "Screenshot preview of the Kings Real Estate website"
+    },
+    "heroMockup": "/case-study/kingsre-mockup.png",
+    "pageShowcase": {
+      "label": "Delivered pages",
+      "title": "Selected Kings Real Estate desktop page views",
+      "text": "A showcase of the premium real estate website designed and developed using Bricks Builder.",
+      "items": [
+        {
+          "label": "homepage",
+          "image": "/case-study/kingsre-home.jpg",
+          "caption": "Custom Bricks Builder WordPress development"
+        },
+        {
+          "label": "About Us Page",
+          "image": "/case-study/kingsre-about.jpg",
+          "caption": "Custom Bricks Builder WordPress development"
+        }
+      ]
+    },
+    "eyebrow": "Case study / Kings Real Estate",
+    "headline": "A premium real estate website built from scratch with Bricks Builder.",
+    "tagline": "Designed to showcase luxury properties, attract international investors, and simplify property inquiries through an editable WordPress CMS.",
+    "overview": "Kings Real Estate is a boutique real estate agency based in Ras Al Khaimah, UAE, specializing in luxury property sales, rentals, investments, and off-plan developments. The objective was to build a modern WordPress website from scratch using Bricks Builder, providing a premium browsing experience while making it easy for the team to manage listings, pages, blogs, and marketing content. The final solution highlights exclusive developments, investment opportunities, property services, and market insights while supporting lead generation and long-term content management.",
+    "facts": [
+      {
+        "label": "Industry",
+        "value": "Luxury real estate and property investment"
+      },
+      {
+        "label": "Objective",
+        "value": "Build a premium real estate website from scratch using Bricks Builder"
+      },
+      {
+        "label": "Project type",
+        "value": "Custom WordPress and Bricks Builder development"
+      }
+    ],
+    "challenges": [
+      {
+        "title": "Luxury brand presentation",
+        "text": "The website needed to reflect the premium nature of the agency while presenting luxury developments, investment opportunities, and property services in a clean and trustworthy way."
+      },
+      {
+        "title": "Scalable content management",
+        "text": "Property information, blog content, service pages, and future marketing campaigns needed to be easily managed through WordPress using reusable sections and custom fields."
+      },
+      {
+        "title": "Lead generation",
+        "text": "Every page was designed to encourage inquiries through strategically placed contact forms, property CTAs, free property valuation offers, and consultation requests."
+      }
+    ],
+    "results": [
+      {
+        "title": "Custom Bricks Builder website",
+        "text": "Developed a fully responsive WordPress website from scratch with reusable Bricks Builder components and clean page architecture."
+      },
+      {
+        "title": "Flexible CMS",
+        "text": "Advanced Custom Fields and reusable templates provide an efficient editing experience for listings, service pages, blog articles, and marketing content."
+      },
+      {
+        "title": "Professional online presence",
+        "text": "The finished website positions Kings Real Estate as a trusted luxury property agency while supporting investor education, lead generation, and long-term scalability."
+      }
+    ],
+    "tools": [
+      "bricks-builder",
+      "advanced-custom-fields",
+      "happyfiles-pro",
+      "admin-columns-pro",
+      "chaty",
+      "fluent-smtp",
+      "litespeed-cache",
+      "seopress",
+      "google-site-kit",
+      "microsoft-clarity",
+      "meta-pixel",
+      "wordpress"
+    ],
+    "performanceNote": "The website was built with clean Bricks Builder architecture, reusable templates, optimized caching through LiteSpeed Cache, organized CMS fields, and a lightweight plugin stack for maintainability and performance.",
+    "branding": {
+      "title": "A premium visual identity inspired by luxury real estate.",
+      "text": "The interface combines elegant serif typography, modern sans-serif text, warm gold highlights, deep blue branding, and spacious layouts to reinforce trust and exclusivity.",
+      "logoMark": "KR",
+      "logoImage": "/client/kingsre-logo.png",
+      "clientImage": "/client/inshad-arshad-bajwa-client.jpg",
+      "fontName": "Plus Jakarta Sans + Lora",
+      "fontFamilies": [
+        "Plus Jakarta Sans",
+        "Lora"
+      ],
+      "fontMeta": "Plus Jakarta Sans provides modern readability for interfaces while Lora adds an elegant editorial feel suited for luxury real estate branding.",
+      "palette": [
+        {
+          "label": "Primary",
+          "value": "#B6966E"
+        },
+        {
+          "label": "Secondary",
+          "value": "#1E3F71"
+        },
+        {
+          "label": "Background",
+          "value": "#FFFFFF"
+        },
+        {
+          "label": "Text",
+          "value": "#07234B"
+        }
+      ]
+    },
+    "desktopPages": [
+      {
+        "name": "Home",
+        "type": "Luxury real estate overview and featured developments"
+      },
+      {
+        "name": "Properties",
+        "type": "Property listings and investment opportunities"
+      },
+      {
+        "name": "Property Details",
+        "type": "Individual property showcase with inquiry forms"
+      },
+      {
+        "name": "About",
+        "type": "Company profile, values, and local expertise"
+      },
+      {
+        "name": "Services",
+        "type": "Buying, selling, renting, and investment services"
+      },
+      {
+        "name": "Blog",
+        "type": "Market insights and investment guides"
+      },
+      {
+        "name": "Contact",
+        "type": "Lead generation and consultation requests"
+      }
+    ],
+    "responsiveBenefits": [
+      "Luxury property layouts remain consistent across desktop, tablet, and mobile.",
+      "Reusable Bricks Builder components simplify future website updates.",
+      "ACF makes content management faster for listings and marketing pages.",
+      "Performance optimization improves browsing speed and SEO.",
+      "Lead-generation CTAs remain accessible throughout the customer journey."
+    ],
+    "testimonial": {
+      "quote": "The website provides a premium online presence that showcases our properties professionally while making it simple for our team to manage content and generate new leads.",
+      "author": "Kings Real Estate",
+      "meta": "Custom Bricks Builder WordPress website"
+    },
+    "cta": {
+      "heading": "Need a premium real estate website built with WordPress?",
+      "text": "I build fast, responsive, and fully editable Bricks Builder websites designed for real estate agencies, property developers, and investment companies.",
+      "buttonText": "Start Your Project"
+    }
+  },
   "serveekay": {
     "slug": "serveekay",
     "client": "SerVeekay",
