@@ -524,14 +524,14 @@
     "urlLabel": "kingsre.ae",
     "liveUrl": "https://kingsre.ae",
     "timeline": "1 week",
-    "caseType": "Elementor to Bricks Builder migration",
+    "caseType": "Elementor → Bricks  ",
     "listing": {
       "tag": "CASE_06",
       "icon": "building-2",
       "title": "Kings Real Estate",
       "description": "Migrated the Kings Real Estate website from Elementor to Bricks Builder while preserving the existing design and improving performance, maintainability, and editing experience.",
       "result": "Faster, cleaner, and fully editable Bricks Builder website with the same design",
-      "achievement": "Elementor to Bricks Builder migration with 40% better performance.",
+      "achievement": "Elementor → Bricks   with 40% better performance.",
       "stack": [
         "Bricks",
         "WordPress",
@@ -688,7 +688,7 @@
     "testimonial": {
       "quote": "The migration to Bricks Builder preserved our website's appearance while giving us a faster, cleaner, and much easier platform to manage.",
       "author": "Kings Real Estate",
-      "meta": "Elementor to Bricks Builder migration"
+      "meta": "Elementor → Bricks  "
     },
     "cta": {
       "heading": "Need to migrate your Elementor website to Bricks Builder?",
