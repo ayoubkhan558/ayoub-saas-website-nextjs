@@ -582,51 +582,57 @@
     ],
     "toolbox": [
       {
-        "title": "Strategy:",
+        "title": "React",
         "items": [
-          "Offer clarity",
-          "Buyer journey mapping",
-          "Conversion flow",
-          "CTA planning",
-          "Proof placement"
+          "React.js Ecosystem",
+          "Component-Driven Architecture",
+          "State Management & Hooks",
+          "REST APIs Integration"
         ]
       },
       {
-        "title": "Design:",
+        "title": "Styling",
         "items": [
-          "Responsive layout systems",
-          "Visual hierarchy",
-          "Figma handoff",
-          "UX cleanup",
-          "Mobile-first QA"
+          "Tailwind CSS",
+          "Sass / SCSS",
+          "Responsive Layout Systems",
+          "Figma-to-Code Implementation"
         ]
       },
       {
-        "title": "Build:",
+        "title": "Builders",
         "items": [
-          "Reusable front-end sections",
-          "Performance-focused pages",
-          "Forms",
-          "APIs",
-          "Tracking-ready implementation"
+          "Bricks Builder",
+          "Elementor Pro",
+          "Dynamic Templates",
+          "Custom Widget Integration"
         ]
       },
       {
-        "title": "Systems:",
+        "title": "Dynamic",
         "items": [
-          "Editable content where needed",
-          "CMS handoff",
-          "Component documentation",
-          "Launch support"
+          "Advanced Custom Fields (ACF)",
+          "Custom Post Types (CPTs)",
+          "WooCommerce Development",
+          "Flexible Content Layouts"
         ]
       },
       {
-        "title": "AI-assisted workflow:",
+        "title": "Performance",
         "items": [
-          "Faster QA",
-          "Content structure support",
-          "Automation checks",
-          "Repeatable delivery"
+          "Core Web Vitals Optimization",
+          "Speed & Asset Optimization",
+          "Clean & Scalable Codebase",
+          "Mobile-First QA Testing"
+        ]
+      },
+      {
+        "title": "Strategy",
+        "items": [
+          "Technical SEO Optimization",
+          "Conversion Flow & CTA Planning",
+          "Tracking-Ready Analytics",
+          "CMS Handoff & Documentation"
         ]
       }
     ],

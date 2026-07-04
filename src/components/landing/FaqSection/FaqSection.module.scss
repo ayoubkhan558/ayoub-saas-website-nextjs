@@ -1,30 +1,5 @@
 @use "../../../styles/mixins" as *;
 
-.process {
-  --process-step-chip-border: color-mix(in srgb, var(--color-plum-charcoal) 16%, transparent);
-  --process-step-chip-bg: var(--color-ink-violet);
-  --process-step-chip-color: #fff;
-  position: relative;
-}
-
-:global(:root[data-theme="dark"]) {
-  .process {
-    --process-step-chip-border: rgba(255, 255, 255, 0.12);
-    --process-step-chip-bg: rgba(255, 255, 255, 0.055);
-    --process-step-chip-color: var(--color-text);
-  }
-
-  .about {
-    --about-grain-a: color-mix(in srgb, var(--color-lavender-mist) 7%, transparent);
-    --about-grain-b: color-mix(in srgb, var(--color-lavender-mist) 3.5%, transparent);
-    --about-surface: rgba(26, 22, 35, 0.82);
-    --about-surface-strong: rgba(21, 18, 29, 0.94);
-    --about-section-bg: #121019;
-    --about-section-gradient: linear-gradient(180deg, #17131f, #100e16);
-    --about-vignette: linear-gradient(90deg, rgba(14, 13, 20, 0.78), transparent 18%, transparent 82%, rgba(14, 13, 20, 0.82));
-  }
-}
-
 .faq__grid {
   display: grid;
   gap: var(--space-7);

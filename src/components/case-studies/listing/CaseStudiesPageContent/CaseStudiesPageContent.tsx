@@ -5,7 +5,7 @@ import { CaseStudyListingGrid } from "../CaseStudyListingGrid/CaseStudyListingGr
 import { CaseStudiesHero } from "../CaseStudiesHero/CaseStudiesHero";
 import styles from "../CaseStudiesListing.module.scss";
 
-const CASE_STUDIES_PER_PAGE = 3;
+const CASE_STUDIES_PER_PAGE = 6;
 
 export function CaseStudiesPageContent({
   caseStudies,

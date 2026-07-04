@@ -39,17 +39,6 @@
   white-space: nowrap;
 }
 
-.mock-site {
-  display: grid;
-  gap: var(--space-4);
-  min-height: clamp-val(320px, 620px);
-  padding: var(--space-5);
-
-  background:
-    radial-gradient(rgba(255, 255, 255, 0.07) 0.75px, transparent 0.75px) 0 0 / 7px 7px,
-    #15151c;
-}
-
 /* ---------------- REAL PREVIEW ---------------- */
 
 .real-preview {
@@ -109,87 +98,6 @@
     transition: none;
     transform: none;
   }
-}
-
-/* ---------------- MOCK UI ---------------- */
-
-.mock-nav,
-.mock-hero,
-.mock-grid,
-.mock-footer {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.mock-nav {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-3);
-  padding: var(--space-3);
-}
-
-.mock-logo,
-.mock-button,
-.mock-line,
-.mock-short-line,
-.mock-card {
-  background: rgba(255, 255, 255, 0.16);
-}
-
-.mock-logo {
-  width: 18%;
-  min-width: 92px;
-  height: var(--space-4);
-}
-
-.mock-button {
-  width: 18%;
-  min-width: 86px;
-  height: var(--space-4);
-}
-
-.mock-hero {
-  display: grid;
-  align-content: center;
-  gap: var(--space-3);
-  min-height: clamp-val(140px, 270px);
-  padding: var(--space-5);
-}
-
-.screen-compact .mock-hero {
-  min-height: clamp-val(96px, 180px);
-}
-
-.mock-line,
-.mock-short-line {
-  height: var(--space-3);
-}
-
-.mock-line {
-  width: min(560px, 72%);
-}
-
-.mock-short-line {
-  width: min(360px, 52%);
-}
-
-.mock-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-3);
-  padding: var(--space-3);
-}
-
-.mock-card {
-  min-height: clamp-val(64px, 140px);
-}
-
-.screen-compact .mock-card {
-  min-height: clamp-val(48px, 96px);
-}
-
-.mock-footer {
-  min-height: var(--space-7);
 }
 
 :global(:root[data-theme="dark"]) {

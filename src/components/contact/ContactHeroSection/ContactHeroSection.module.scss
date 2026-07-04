@@ -106,15 +106,6 @@
   font-size: var(--text-h3);
 }
 
-.contact-signal-panel p,
-.contact-signal-panel__meta {
+.contact-signal-panel p {
   color: var(--color-storm-mauve);
-}
-
-.contact-signal-panel__meta {
-  display: grid;
-  gap: var(--space-2);
-  border-top: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
-  padding-top: var(--space-3);
-  font-size: var(--text-ui);
 }

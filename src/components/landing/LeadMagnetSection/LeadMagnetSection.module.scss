@@ -36,15 +36,6 @@
   min-width: 0;
 }
 
-.lead-magnet__container > .button {
-  flex-shrink: 0;
-  align-self: flex-start;
-
-  @include mq(md) {
-    align-self: center;
-  }
-}
-
 .lead-magnet__label {
   color: var(--color-primary);
   font-family: var(--font-code);

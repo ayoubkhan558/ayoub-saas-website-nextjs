@@ -133,30 +133,6 @@
   font-weight: 800;
 }
 
-.live-site-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  min-height: 42px;
-  border: 1px solid var(--case-study-live-link-border);
-  background: var(--case-study-live-link-bg);
-  color: var(--case-study-live-link-color);
-  font-family: var(--font-display-compact);
-  font-size: var(--text-ui);
-  font-weight: 800;
-  padding: 0 var(--space-3);
-  white-space: nowrap;
-  transition:
-    background-color 160ms ease,
-    transform 160ms ease;
-}
-
-.live-site-link:hover {
-  background: var(--case-study-live-link-hover-bg);
-  transform: translateY(-1px);
-}
-
 .live-site-link__icon {
   width: 15px;
   height: 15px;
