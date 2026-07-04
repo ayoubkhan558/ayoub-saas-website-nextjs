@@ -523,15 +523,15 @@
     "client": "Kings Real Estate",
     "urlLabel": "kingsre.ae",
     "liveUrl": "https://kingsre.ae",
-    "timeline": "4 weeks",
-    "caseType": "custom Bricks Builder WordPress development",
+    "timeline": "1 week",
+    "caseType": "Elementor to Bricks Builder migration",
     "listing": {
       "tag": "CASE_06",
       "icon": "building-2",
       "title": "Kings Real Estate",
-      "description": "Custom WordPress website for a luxury real estate agency in Ras Al Khaimah featuring premium property listings, off-plan developments, market insights, and lead generation.",
-      "result": "Modern real estate website with editable CMS, responsive layouts, and optimized lead generation",
-      "achievement": "Built a premium real estate platform from scratch using Bricks Builder and WordPress",
+      "description": "Migrated the Kings Real Estate website from Elementor to Bricks Builder while preserving the existing design and improving performance, maintainability, and editing experience.",
+      "result": "Faster, cleaner, and fully editable Bricks Builder website with the same design",
+      "achievement": "Elementor to Bricks Builder migration with 40% better performance.",
       "stack": [
         "Bricks",
         "WordPress",
@@ -544,66 +544,66 @@
     },
     "heroMockup": "/case-study/kingsre-mockup.png",
     "pageShowcase": {
-      "label": "Delivered pages",
-      "title": "Selected Kings Real Estate desktop page views",
-      "text": "A showcase of the premium real estate website designed and developed using Bricks Builder.",
+      "label": "Website comparison",
+      "title": "Before & after migration",
+      "text": "A comparison of the original Elementor homepage and the redesigned Bricks Builder homepage after migration.",
       "items": [
         {
-          "label": "homepage",
-          "image": "/case-study/kingsre-home.jpg",
-          "caption": "Custom Bricks Builder WordPress development"
+          "label": "Old Homepage (Elementor)",
+          "image": "/case-study/kingsre-old.jpg",
+          "caption": "Old Elementor UI homepage"
         },
         {
-          "label": "About Us Page",
-          "image": "/case-study/kingsre-about.jpg",
-          "caption": "Custom Bricks Builder WordPress development"
+          "label": "New Homepage (Bricks Builder)",
+          "image": "/case-study/kingsre-home.jpg",
+          "caption": "Modern Premium UI, 40% Faster"
         }
       ]
     },
     "eyebrow": "Case study / Kings Real Estate",
-    "headline": "A premium real estate website built from scratch with Bricks Builder.",
-    "tagline": "Designed to showcase luxury properties, attract international investors, and simplify property inquiries through an editable WordPress CMS.",
-    "overview": "Kings Real Estate is a boutique real estate agency based in Ras Al Khaimah, UAE, specializing in luxury property sales, rentals, investments, and off-plan developments. The objective was to build a modern WordPress website from scratch using Bricks Builder, providing a premium browsing experience while making it easy for the team to manage listings, pages, blogs, and marketing content. The final solution highlights exclusive developments, investment opportunities, property services, and market insights while supporting lead generation and long-term content management.",
+    "headline": "Migrated from Elementor to Bricks Builder without changing the brand identity.",
+    "tagline": "The existing website was rebuilt in Bricks Builder to improve performance, maintainability, and the editing experience while preserving the original design.",
+    "overview": "Kings Real Estate already had an existing Elementor website that required migration to Bricks Builder. The goal was to faithfully recreate the design while replacing Elementor with a cleaner, faster, and more maintainable Bricks Builder architecture. Every section was rebuilt using reusable components, resulting in a lighter website that's easier to manage and extend without affecting the existing branding or user experience.",
     "facts": [
       {
         "label": "Industry",
-        "value": "Luxury real estate and property investment"
+        "value": "Luxury real estate"
       },
       {
         "label": "Objective",
-        "value": "Build a premium real estate website from scratch using Bricks Builder"
+        "value": "Migrate the website from Elementor to Bricks Builder"
       },
       {
         "label": "Project type",
-        "value": "Custom WordPress and Bricks Builder development"
+        "value": "WordPress migration and redevelopment"
       }
     ],
     "challenges": [
       {
-        "title": "Luxury brand presentation",
-        "text": "The website needed to reflect the premium nature of the agency while presenting luxury developments, investment opportunities, and property services in a clean and trustworthy way."
+        "title": "Pixel-perfect migration",
+        "text": "The existing Elementor website had to be recreated in Bricks Builder while maintaining the same visual appearance and user experience."
       },
       {
-        "title": "Scalable content management",
-        "text": "Property information, blog content, service pages, and future marketing campaigns needed to be easily managed through WordPress using reusable sections and custom fields."
+        "title": "Cleaner architecture",
+        "text": "Replace Elementor's heavier page structure with reusable Bricks Builder components for easier maintenance and future scalability."
       },
       {
-        "title": "Lead generation",
-        "text": "Every page was designed to encourage inquiries through strategically placed contact forms, property CTAs, free property valuation offers, and consultation requests."
+        "title": "Maintain existing SEO",
+        "text": "Ensure URLs, page content, metadata, and overall site structure remained intact throughout the migration."
       }
     ],
     "results": [
       {
-        "title": "Custom Bricks Builder website",
-        "text": "Developed a fully responsive WordPress website from scratch with reusable Bricks Builder components and clean page architecture."
+        "title": "Complete Bricks Builder migration",
+        "text": "Successfully rebuilt the website using Bricks Builder while preserving the original layout, branding, and functionality."
       },
       {
-        "title": "Flexible CMS",
-        "text": "Advanced Custom Fields and reusable templates provide an efficient editing experience for listings, service pages, blog articles, and marketing content."
+        "title": "Improved maintainability",
+        "text": "Reusable templates, global components, and Advanced Custom Fields provide a much cleaner editing experience."
       },
       {
-        "title": "Professional online presence",
-        "text": "The finished website positions Kings Real Estate as a trusted luxury property agency while supporting investor education, lead generation, and long-term scalability."
+        "title": "Better performance",
+        "text": "The migration reduced unnecessary page builder overhead, resulting in a faster and more maintainable WordPress website."
       }
     ],
     "tools": [
@@ -620,10 +620,10 @@
       "meta-pixel",
       "wordpress"
     ],
-    "performanceNote": "The website was built with clean Bricks Builder architecture, reusable templates, optimized caching through LiteSpeed Cache, organized CMS fields, and a lightweight plugin stack for maintainability and performance.",
+    "performanceNote": "The website was rebuilt using Bricks Builder with reusable components, optimized templates, LiteSpeed Cache, Advanced Custom Fields, and a lightweight plugin stack to improve performance and long-term maintainability.",
     "branding": {
-      "title": "A premium visual identity inspired by luxury real estate.",
-      "text": "The interface combines elegant serif typography, modern sans-serif text, warm gold highlights, deep blue branding, and spacious layouts to reinforce trust and exclusivity.",
+      "title": "Preserving the existing brand while modernizing the technology.",
+      "text": "The migration retained the original visual identity while replacing Elementor with a cleaner Bricks Builder architecture, ensuring consistency across every page.",
       "logoMark": "KR",
       "logoImage": "/client/kingsre-logo.png",
       "clientImage": "/client/inshad-arshad-bajwa-client.jpg",
@@ -632,7 +632,7 @@
         "Plus Jakarta Sans",
         "Lora"
       ],
-      "fontMeta": "Plus Jakarta Sans provides modern readability for interfaces while Lora adds an elegant editorial feel suited for luxury real estate branding.",
+      "fontMeta": "The original typography and branding were preserved throughout the migration.",
       "palette": [
         {
           "label": "Primary",
@@ -654,50 +654,46 @@
     },
     "desktopPages": [
       {
-        "name": "Home",
-        "type": "Luxury real estate overview and featured developments"
+        "name": "Homepage",
+        "type": "Migrated from Elementor to Bricks Builder"
       },
       {
-        "name": "Properties",
-        "type": "Property listings and investment opportunities"
-      },
-      {
-        "name": "Property Details",
-        "type": "Individual property showcase with inquiry forms"
+        "name": "Property Pages",
+        "type": "Rebuilt with reusable Bricks Builder templates"
       },
       {
         "name": "About",
-        "type": "Company profile, values, and local expertise"
+        "type": "Migrated while preserving design"
       },
       {
         "name": "Services",
-        "type": "Buying, selling, renting, and investment services"
+        "type": "Rebuilt using reusable components"
       },
       {
         "name": "Blog",
-        "type": "Market insights and investment guides"
+        "type": "Optimized WordPress templates"
       },
       {
         "name": "Contact",
-        "type": "Lead generation and consultation requests"
+        "type": "Responsive inquiry page"
       }
     ],
     "responsiveBenefits": [
-      "Luxury property layouts remain consistent across desktop, tablet, and mobile.",
-      "Reusable Bricks Builder components simplify future website updates.",
-      "ACF makes content management faster for listings and marketing pages.",
-      "Performance optimization improves browsing speed and SEO.",
-      "Lead-generation CTAs remain accessible throughout the customer journey."
+      "Pixel-perfect migration from Elementor to Bricks Builder.",
+      "Cleaner page structure with reusable global components.",
+      "Improved loading speed and maintainability.",
+      "Fully responsive across desktop, tablet, and mobile.",
+      "Simpler editing workflow for future website updates."
     ],
     "testimonial": {
-      "quote": "The website provides a premium online presence that showcases our properties professionally while making it simple for our team to manage content and generate new leads.",
+      "quote": "The migration to Bricks Builder preserved our website's appearance while giving us a faster, cleaner, and much easier platform to manage.",
       "author": "Kings Real Estate",
-      "meta": "Custom Bricks Builder WordPress website"
+      "meta": "Elementor to Bricks Builder migration"
     },
     "cta": {
-      "heading": "Need a premium real estate website built with WordPress?",
-      "text": "I build fast, responsive, and fully editable Bricks Builder websites designed for real estate agencies, property developers, and investment companies.",
-      "buttonText": "Start Your Project"
+      "heading": "Need to migrate your Elementor website to Bricks Builder?",
+      "text": "I rebuild existing Elementor websites in Bricks Builder while preserving the design, improving performance, and creating a cleaner, future-proof WordPress architecture.",
+      "buttonText": "Start Your Migration"
     }
   },
   "serveekay": {
