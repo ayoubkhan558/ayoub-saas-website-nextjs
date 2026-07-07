@@ -870,7 +870,7 @@
     "listing": {
       "tag": "CASE_07",
       "icon": "shopping-bag",
-      "title": "SupplementsHub Pakistan",
+      "title": "Supplements Hub ",
       "description": "Designed and developed a complete Shopify nutrition store from the ground up, including branding, logo design, product imagery, UI/UX, and a scalable ecommerce architecture without any Figma designs.",
       "result": "Modern, conversion-focused Shopify store with custom branding and premium shopping experience.",
       "achievement": "Complete Shopify design & development with custom branding and optimized shopping UX.",
@@ -886,7 +886,7 @@
       "image": "/case-study/supplementshub-thumbnail.webp",
       "imageAlt": "Screenshot preview of SupplementsHub Pakistan Shopify store"
     },
-    "heroMockup": "/case-study/supplementshub-mockup.png",
+    "heroMockup": "/case-study/supplementshub-mockup.webp",
     "pageShowcase": {
       "label": "Store showcase",
       "title": "From concept to launch",
@@ -1022,7 +1022,7 @@
     ],
     "testimonial": {
       "quote": "The store exceeded expectations with a premium design, custom branding, and a professional shopping experience built entirely from scratch.",
-      "author": "SupplementsHub Pakistan",
+      "author": "Arslan",
       "meta": "Custom Shopify Ecommerce Store"
     },
     "cta": {
