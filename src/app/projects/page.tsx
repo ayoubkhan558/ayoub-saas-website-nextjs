@@ -15,12 +15,12 @@ import portfolio from "@/data/portfolio.json";
 export const metadata: Metadata = {
   title: "Website Design & Development Portfolio",
   description:
-    "Website design and development portfolio by Muhammad Ayoub, including WordPress, WooCommerce, Bricks Builder, Elementor, React, Next.js, and business website projects.",
+    "Portfolio of Bricks Builder, WordPress, Figma to code, React, Next.js, and Shopify projects by Muhammad Ayoub Khan.",
   alternates: { canonical: "/projects" },
   openGraph: {
-    title: "Website Design & Development Portfolio | Muhammad Ayoub",
+    title: "Website Design & Development Portfolio",
     description:
-      "A structured showcase of client websites, WordPress builds, WooCommerce stores, product pages, and front-end implementation work.",
+      "Client websites, Bricks builds, WooCommerce stores, and front-end implementation work.",
     type: "website",
     url: "/projects",
     images: [

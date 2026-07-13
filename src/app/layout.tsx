@@ -7,11 +7,11 @@ const siteUrl = portfolio.profile.website;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Muhammad Ayoub Khan | Custom React.js, HTML/CSS & Front-End Developer",
+    default: "Muhammad Ayoub Khan | Bricks Builder, React & Front-End Developer",
     template: "%s | Muhammad Ayoub",
   },
   description:
-    "Hire Muhammad Ayoub Khan, also known as Ayoub, Ayoub Khan, M Ayoub Khan, and Mayoub, for WordPress development, website design, Next.js, WooCommerce, Bricks, and Elementor.",
+    "Hire Muhammad Ayoub Khan for Bricks Builder, WordPress redesigns, Figma to code, React, and Next.js websites that convert.",
   alternates: {
     canonical: "/",
   },
@@ -19,32 +19,10 @@ export const metadata: Metadata = {
   creator: portfolio.profile.name,
   publisher: portfolio.profile.brand,
   category: "Web Development",
-  keywords: [
-    "WordPress developer",
-    "Muhammad Ayoub",
-    "Muhammad Ayoub Khan",
-    "Ayoub",
-    "Ayoub Khan",
-    "M Ayoub Khan",
-    "Mayoub",
-    "mayoub.dev",
-    "website developer",
-    "website designer",
-    "freelance web developer",
-    "front-end developer",
-    "Next.js developer",
-    "React developer",
-    "WooCommerce developer",
-    "Bricks Builder developer",
-    "Elementor developer",
-    "Figma to WordPress",
-    "business website development",
-    "responsive website design",
-  ],
   openGraph: {
-    title: "Muhammad Ayoub Khan | Custom React.js, HTML/CSS & Front-End Developer",
+    title: "Muhammad Ayoub Khan | Bricks Builder, React & Front-End Developer",
     description:
-      "Freelance WordPress, website, WooCommerce, React, and Next.js development by Muhammad Ayoub Khan for fast, maintainable business websites.",
+      "Bricks Builder, WordPress, React, and Next.js development by Muhammad Ayoub Khan for fast, maintainable business websites.",
     type: "website",
     url: "/",
     siteName: portfolio.profile.brand,
@@ -53,15 +31,15 @@ export const metadata: Metadata = {
         url: "/ayoub-about-v2.jpg",
         width: 1200,
         height: 630,
-        alt: "Muhammad Ayoub Khan WordPress developer and website developer",
+        alt: "Muhammad Ayoub Khan Bricks Builder and front-end developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Ayoub Khan | Custom React.js, HTML/CSS & Front-End Developer",
+    title: "Muhammad Ayoub Khan | Bricks Builder, React & Front-End Developer",
     description:
-      "Freelance WordPress developer and website developer Muhammad Ayoub Khan for business websites, WooCommerce stores, and Next.js front ends.",
+      "Hire Muhammad Ayoub Khan for Bricks Builder, WordPress redesigns, Figma to code, and Next.js front ends.",
     images: ["/ayoub-about-v2.jpg"],
   },
   verification: {

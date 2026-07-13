@@ -8,22 +8,12 @@ import portfolio from "@/data/portfolio.json";
 export const metadata: Metadata = {
   title: "Website Development Services",
   description:
-    "WordPress, website design, WooCommerce, Bricks Builder, Elementor, React, Next.js, CMS setup, and performance services.",
+    "Bricks Builder developer, Figma to code, WordPress redesign, React landing pages, and WooCommerce cleanup by Muhammad Ayoub Khan.",
   alternates: { canonical: "/services" },
-  keywords: [
-    "website development services",
-    "WordPress development services",
-    "website design services",
-    "WooCommerce developer",
-    "Next.js developer",
-    "React website developer",
-    "Bricks Builder developer",
-    "Elementor developer",
-  ],
   openGraph: {
-    title: "Website Development Services | Muhammad Ayoub",
+    title: "Website Development Services",
     description:
-      "Front-end, React.js, HTML/CSS, JavaScript, landing page, and website improvement services for businesses that need clean delivery and measurable outcomes.",
+      "Hire for Bricks Builder, Figma to WordPress, React/Next.js landing pages, and conversion-focused redesigns.",
     type: "website",
     url: "/services",
     images: [

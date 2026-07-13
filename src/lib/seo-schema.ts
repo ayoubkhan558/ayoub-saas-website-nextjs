@@ -36,8 +36,8 @@ function basePersonSchema(): GraphNode {
     "alternateName": ["Muhammad Ayoub", "Ayoub", "Ayoub Khan", "M Ayoub Khan", "Mayoub"],
     "url": siteUrl,
     "image": imageUrl,
-    "jobTitle": "Freelance Front-End Developer and Front-End Website Developer",
-    "description": "Muhammad Ayoub Khan is a freelance WordPress developer, website developer, React developer, and Next.js developer based in Faisalabad, Pakistan.",
+    "jobTitle": "Bricks Builder and Front-End Developer",
+    "description": "Muhammad Ayoub Khan is a freelance Bricks Builder, WordPress, React, and Next.js developer based in Faisalabad, Pakistan.",
     "email": portfolio.profile.email,
     "telephone": portfolio.profile.phone,
     "address": {
@@ -71,31 +71,8 @@ function basePersonSchema(): GraphNode {
   };
 }
 
-function reviewSchemas() {
-  return portfolio.clients
-    .filter((client) => client.showInTestimonials && client.testimonial)
-    .slice(0, 12)
-    .map((client) => ({
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1",
-      },
-      "reviewBody": client.testimonial,
-      "author": {
-        "@type": "Organization",
-        "name": client.name,
-        "url": client.website,
-      },
-      "itemReviewed": { "@id": serviceId },
-    }));
-}
-
 function professionalServiceSchema(): GraphNode {
   const featuredServices = portfolio.services.filter((service) => service.featured);
-  const reviews = reviewSchemas();
 
   return {
     "@type": "ProfessionalService",
@@ -103,7 +80,7 @@ function professionalServiceSchema(): GraphNode {
     "name": "Muhammad Ayoub Khan Website Development Services",
     "alternateName": ["Ayoub Khan Web Developer", "Mayoub Website Developer", "M Ayoub Khan Front-End Developer"],
     "url": siteUrl,
-    "description": "WordPress development, website design, WooCommerce, React, Next.js, Bricks Builder, Elementor, and front-end development services by Muhammad Ayoub Khan.",
+    "description": "Bricks Builder, WordPress redesign, Figma to code, React, Next.js, and front-end development by Muhammad Ayoub Khan.",
     "email": portfolio.profile.email,
     "telephone": portfolio.profile.phone,
     "founder": { "@id": personId },
@@ -111,33 +88,36 @@ function professionalServiceSchema(): GraphNode {
     "areaServed": "Worldwide",
     "priceRange": "Custom project pricing",
     "serviceType": [
-      "WordPress development",
-      "Website design and development",
+      "Bricks Builder development",
+      "WordPress redesign",
+      "Figma to code",
       "Frontend development",
       "Next.js development",
       "React development",
       "WooCommerce development",
-      "Bricks Builder development",
-      "Elementor development",
       ...featuredServices.map((service) => service.name),
     ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "worstRating": "1",
-      "reviewCount": reviews.length,
-    },
-    "review": reviews,
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Website design and development services",
-      "itemListElement": featuredServices.map((service) => ({
-        "@type": "Offer",
-        "name": service.name,
-        "description": service.description,
-        "url": `${siteUrl}${service.href === "#cta" ? "/contact" : service.href}`,
-      })),
+      "itemListElement": [
+        ...[
+          { name: "Bricks Builder developer", description: "Custom Bricks Builder WordPress builds and migrations.", url: `${siteUrl}/services/bricks-builder` },
+          { name: "Figma to code", description: "Figma to HTML, React, or Bricks implementation.", url: `${siteUrl}/services/figma-to-code` },
+          { name: "WordPress website redesign", description: "WordPress redesign and Divi/Elementor to Bricks rebuilds.", url: `${siteUrl}/services/wordpress-redesign` },
+        ].map((offer) => ({
+          "@type": "Offer",
+          "name": offer.name,
+          "description": offer.description,
+          "url": offer.url,
+        })),
+        ...featuredServices.map((service) => ({
+          "@type": "Offer",
+          "name": service.name,
+          "description": service.description,
+          "url": `${siteUrl}${service.href === "#cta" ? "/contact" : service.href}`,
+        })),
+      ],
     },
   };
 }

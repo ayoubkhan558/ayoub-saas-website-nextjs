@@ -8,6 +8,9 @@ const staticRoutes = [
   "",
   "/about",
   "/services",
+  "/services/bricks-builder",
+  "/services/figma-to-code",
+  "/services/wordpress-redesign",
   "/projects",
   "/case-studies",
   "/contact",
@@ -27,6 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${siteUrl}${route}`,
     lastModified,
     changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : route.startsWith("/case-studies/") ? 0.8 : 0.7,
+    priority: route === "" ? 1 : route.startsWith("/case-studies/") || route.startsWith("/services/") ? 0.8 : 0.7,
   }));
 }
