@@ -4,11 +4,11 @@ import { buildLegalPageSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Muhammad Ayoub",
+  title: "Privacy Policy",
   description: "How Muhammad Ayoub handles contact details, project information, analytics, and privacy requests.",
   alternates: { canonical: "/privacy-policy" },
   openGraph: {
-    title: "Privacy Policy | Muhammad Ayoub",
+    title: "Privacy Policy",
     description: "How contact details, project information, analytics, and privacy requests are handled.",
     type: "website",
     url: "/privacy-policy",

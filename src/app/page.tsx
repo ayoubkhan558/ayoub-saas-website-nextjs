@@ -7,14 +7,14 @@ import { buildHomeSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
-  title: "Muhammad Ayoub Khan | Custom React.js, HTML/CSS & Front-End Developer",
+  title: "Muhammad Ayoub Khan | Bricks Builder, React & Front-End Developer",
   description:
-    "Hire Muhammad Ayoub Khan for custom React.js, HTML, CSS, JavaScript, and Next.js websites built for leads, speed, and clean conversion paths.",
+    "Hire Muhammad Ayoub Khan for Bricks Builder, WordPress redesigns, Figma to code, React, and Next.js websites built for leads and clean handoff.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Muhammad Ayoub Khan | Custom React.js, HTML/CSS & Front-End Developer",
+    title: "Muhammad Ayoub Khan | Bricks Builder, React & Front-End Developer",
     description:
-      "Front-end developer Muhammad Ayoub Khan builds custom React.js, HTML, CSS, JavaScript, and Next.js websites focused on speed, clarity, and conversions.",
+      "Front-end developer Muhammad Ayoub Khan builds Bricks Builder, WordPress, React, and Next.js websites focused on clarity and conversions.",
     type: "website",
     url: "/",
     images: [
@@ -22,15 +22,15 @@ export const metadata: Metadata = {
         url: "/ayoub-about-v2.jpg",
         width: 1200,
         height: 630,
-        alt: "Muhammad Ayoub Khan WordPress developer and website developer",
+        alt: "Muhammad Ayoub Khan Bricks Builder and front-end developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Ayoub Khan | Custom React.js, HTML/CSS & Front-End Developer",
+    title: "Muhammad Ayoub Khan | Bricks Builder, React & Front-End Developer",
     description:
-      "Find and hire Muhammad Ayoub Khan for custom React.js, HTML, CSS, JavaScript, Next.js, and front-end development.",
+      "Hire Muhammad Ayoub Khan for Bricks Builder, Figma to code, React, Next.js, and WordPress development.",
     images: ["/ayoub-about-v2.jpg"],
   },
 };

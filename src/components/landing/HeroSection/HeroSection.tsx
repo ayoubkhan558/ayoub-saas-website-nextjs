@@ -30,9 +30,7 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
         <div className={`container ${styles["hero__grid"]}`}>
           <div className={styles["hero__copy"]}>
             <h1 className={styles["hero__title"]}>
-              <span className={`${styles["hero__title-line"]} ${styles["hero__title-line--intro"]}`}>Hi, I&apos;m M Ayoub.</span>
               <span className={styles["hero__title-line"]}>{portfolio?.hero.headlineLineOne}</span>
-              {/* <span className={styles["hero__title-line"]} data-accent>{portfolio?.hero.headlineLineTwo}</span> */}
             </h1>
 
             <p className={styles["hero__text"]}>

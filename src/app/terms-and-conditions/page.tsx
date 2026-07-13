@@ -4,11 +4,11 @@ import { buildLegalPageSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Muhammad Ayoub",
+  title: "Terms and Conditions",
   description: "General terms for using this website and working with Muhammad Ayoub on web development projects.",
   alternates: { canonical: "/terms-and-conditions" },
   openGraph: {
-    title: "Terms and Conditions | Muhammad Ayoub",
+    title: "Terms and Conditions",
     description: "General terms for website use, project scope, payment, delivery, support, and ownership.",
     type: "website",
     url: "/terms-and-conditions",
