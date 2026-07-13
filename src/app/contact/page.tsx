@@ -13,12 +13,12 @@ import styles from "@/components/contact/ContactPage.module.scss";
 export const metadata: Metadata = {
   title: "Hire Muhammad Ayoub Khan",
   description:
-    "Hire Muhammad Ayoub Khan for WordPress, website design, WooCommerce, React, Next.js, Bricks Builder, Elementor, and frontend projects.",
+    "Hire Muhammad Ayoub Khan for Bricks Builder, Figma to code, WordPress redesign, React, and Next.js projects.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Hire Muhammad Ayoub Khan | Front-End Developer",
+    title: "Hire Muhammad Ayoub Khan",
     description:
-      "Send project details, request a build estimate, or contact Muhammad Ayoub for freelance WordPress, website design, and front-end development work.",
+      "Send project details for Bricks Builder, WordPress, or front-end development work.",
     type: "website",
     url: "/contact",
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: "/ayoub-about-v2.jpg",
         width: 1200,
         height: 630,
-        alt: "Hire Muhammad Ayoub Khan WordPress developer",
+        alt: "Hire Muhammad Ayoub Khan web developer",
       },
     ],
   },

@@ -8,14 +8,14 @@ import { caseStudies } from "@/data/work";
 import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
-  title: "Case Studies | Muhammad Ayoub",
+  title: "Case Studies",
   description:
-    "Case studies showing custom React.js, HTML/CSS, JavaScript, Next.js, performance, SEO, and conversion results delivered by Muhammad Ayoub.",
+    "Bricks Builder, Figma to code, Divi/Elementor migrations, and Shopify case studies by Muhammad Ayoub Khan.",
   alternates: { canonical: "/case-studies" },
   openGraph: {
-    title: "Case Studies | Muhammad Ayoub",
+    title: "Case Studies",
     description:
-      "Detailed project breakdowns covering challenge, stack, execution, responsive layouts, branding, and client outcomes.",
+      "Project breakdowns for law firm, clinic, real estate, portfolio, and ecommerce website builds.",
     type: "website",
     url: "/case-studies",
     images: [

@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/landing/SiteHeader/SiteHeader";
 import { ContactFooter } from "@/components/landing/ContactFooter/ContactFooter";
 import { CaseStudyDetail } from "@/components/case-studies/CaseStudyDetail/CaseStudyDetail";
 import { caseStudyDetails } from "@/data/caseStudyDetails";
+import { caseStudySeo } from "@/data/caseStudySeo";
 import { caseStudies } from "@/data/work";
 import portfolio from "@/data/portfolio.json";
 
@@ -19,36 +20,26 @@ export async function generateMetadata({
   const { slug } = await params;
   const entry = caseStudies.find((item) => item.href === `/case-studies/${slug}`);
   const study = caseStudyDetails[slug];
+  const seo = caseStudySeo[slug];
 
   if (!entry || !study) {
-    return {
-      title: "Case Study | Muhammad Ayoub",
-    };
+    return { title: "Case Study" };
   }
 
-  const title = `${study.client} Project Case Study | Muhammad Ayoub`;
-  const description = `${study.headline} ${study.overview}`.slice(0, 155);
+  const title = seo?.title ?? `${study.client} Case Study`;
+  const description = seo?.description ?? `${study.headline} ${study.overview}`.slice(0, 155);
   const image = entry.image ? [{ url: entry.image, alt: entry.imageAlt, width: 1200, height: 630 }] : undefined;
 
   return {
     title,
     description,
     alternates: { canonical: entry.href },
-    keywords: [
-      study.client,
-      "case study",
-      "WordPress case study",
-      "frontend development case study",
-      "website redesign",
-      "Muhammad Ayoub portfolio",
-      ...study.tools,
-    ],
     openGraph: {
       title,
       description,
       type: "article",
       url: entry.href,
-      siteName: "Muhammad Ayoub Portfolio",
+      siteName: portfolio.profile.brand,
       images: image,
       publishedTime: study.pageSpeed?.measuredAt,
       authors: [portfolio.profile.name],
@@ -58,17 +49,6 @@ export async function generateMetadata({
       title,
       description,
       images: entry.image ? [entry.image] : undefined,
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-        "max-video-preview": -1,
-      },
     },
   };
 }

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
 import portfolio from "@/data/portfolio.json";
 import { Typewriter } from "react-simple-typewriter";
-import { proofNotes } from "../servicesPageData";
 import styles from "../ServicesPage.module.scss";
 
 export function ServicesHero() {
@@ -17,20 +16,24 @@ export function ServicesHero() {
           <div className={styles["services-page-hero__copy"]}>
             <span className={styles["services-page__eyebrow"]}>Solutions  </span>
             <h1>
-              Web builds, done right.
+              Bricks Builder, Figma to code, and WordPress redesign services
             </h1>
             <p>
-              Pick the service that matches the problem: product interfaces, editable WordPress sites, or
-              conversion-focused e-commerce improvements.
+              Pick the problem: Bricks builds, Figma handoff, WordPress redesigns, React landing pages, or store friction fixes.
             </p>
             <div className={styles["services-page-hero__actions"]}>
               <Link className="button" href="/contact" title="Hire Muhammad Ayoub for website development">
                 Send project details
                 <IconGlyph name="arrowRight" />
               </Link>
-              <Link className="button button--ghost" href="/case-studies" title="View Muhammad Ayoub case studies">
-                View case studies
-                <IconGlyph name="arrowRight" />
+              <Link className="button button--ghost" href="/services/bricks-builder" title="Bricks Builder developer services">
+                Bricks Builder
+              </Link>
+              <Link className="button button--ghost" href="/services/figma-to-code" title="Figma to code services">
+                Figma to code
+              </Link>
+              <Link className="button button--ghost" href="/services/wordpress-redesign" title="WordPress redesign services">
+                WordPress redesign
               </Link>
             </div>
           </div>

@@ -8,11 +8,10 @@ export function CaseStudiesHero({ caseStudyCount }: { caseStudyCount: number }) 
           <div className={styles.hero__copy}>
             <span className={styles.eyebrow}>Case studies</span>
             <h1>
-              Case studies with context.
+              Bricks, Figma to code, and WordPress case studies
             </h1>
             <p>
-              Each case shows the problem, stack, implementation decisions, responsive output, and measurable benefit
-              behind selected client work.
+              Each case shows the problem, stack, implementation decisions, and result behind selected client work.
             </p>
           </div>
           <aside className={styles.summary}>

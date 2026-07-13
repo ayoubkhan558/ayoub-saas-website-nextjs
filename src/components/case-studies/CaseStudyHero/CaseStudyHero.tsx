@@ -1,4 +1,5 @@
 import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
+import { caseStudySeo } from "@/data/caseStudySeo";
 import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
 import { CaseStudyBrowserMockup } from "../CaseStudyBrowserMockup/CaseStudyBrowserMockup";
 import styles from "./CaseStudyHero.module.scss";
@@ -11,6 +12,7 @@ function getPreviewImage(label: string) {
 export function CaseStudyHero({ study }: { study: CaseStudyDetailData }) {
   const previewImage = getPreviewImage(study.urlLabel);
   const projectType = study.facts.find((fact) => fact.label.toLowerCase() === "project type")?.value ?? study.tagline;
+  const h1 = caseStudySeo[study.slug]?.h1 ?? `${study.client} website project`;
 
   return (
     <section className={`section ${styles.hero}`}>
@@ -18,7 +20,7 @@ export function CaseStudyHero({ study }: { study: CaseStudyDetailData }) {
         <div className={`container ${styles["hero-inner"]}`}>
           <div className={styles["hero-copy"]}>
             <span className={styles.eyebrow}>Case study</span>
-            <h1 className={styles.title}>{study.client} project</h1>
+            <h1 className={styles.title}>{h1}</h1>
             <p className={styles.tagline}>{projectType}</p>
             <div className={styles["hero-actions"]}>
               <dl className={styles["hero-meta"]}>

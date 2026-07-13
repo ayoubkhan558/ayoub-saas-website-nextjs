@@ -15,7 +15,7 @@ export function AboutHero({ portfolio }: { portfolio: PortfolioData }) {
           <div className={styles["about-page-hero__copy"]}>
             <span className={styles["about-page__eyebrow"]}>About / {fullName}</span>
             <h1 className={styles["about-page-hero__title"]}>
-              Self-taught developer, building with purpose.
+              Freelance Bricks Builder and front-end developer
             </h1>
             <p className={styles["about-page-hero__text"]}>
               {portfolio?.profile.summary}

@@ -4,12 +4,12 @@ import { AboutPage } from "@/components/about/AboutPage/AboutPage";
 export const metadata: Metadata = {
   title: "About Muhammad Ayoub Khan, Freelance Web Developer",
   description:
-    "About Muhammad Ayoub Khan, a freelance WordPress and web developer building React, Next.js, WooCommerce, Bricks, Elementor, and business websites.",
+    "About Muhammad Ayoub Khan — Bricks Builder, WordPress redesign, Figma to code, React, and Next.js developer.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Muhammad Ayoub Khan, Freelance Web Developer",
     description:
-      "Learn about Muhammad Ayoub's WordPress, front-end, website design, and website development experience, workflow, and practical delivery approach.",
+      "Bricks Builder, WordPress, and front-end delivery experience for clinics, firms, agencies, and founders.",
     type: "profile",
     url: "/about",
     images: [
