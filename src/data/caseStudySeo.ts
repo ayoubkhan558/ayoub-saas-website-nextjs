@@ -3,6 +3,12 @@ export const caseStudySeo: Record<
   string,
   { title: string; h1: string; description: string }
 > = {
+  "rejuvenated-knives": {
+    title: "PHP to WordPress Bricks Builder Migration",
+    h1: "PHP to WordPress migration for Rejuvenated Knives",
+    description:
+      "Case study: legacy PHP and MySQL sharpening-service website redesigned in Figma, migrated into WordPress, and rebuilt with Bricks Builder.",
+  },
   "pagano-law": {
     title: "Divi to Bricks Law Firm Website Rebuild",
     h1: "Divi to Bricks rebuild for Pagano Law",
@@ -13,7 +19,7 @@ export const caseStudySeo: Record<
     title: "Figma to Bricks Clinic Website",
     h1: "Figma to Bricks clinic website for Weinberger Aesthetics",
     description:
-      "Case study: aesthetic clinic website converted from Figma into a custom Bricks Builder WordPress build with editable CMS structure.",
+      "Case study: Neve + Live Composer clinic site rebuilt in Bricks Builder from Figma — 99 desktop PageSpeed, ~35% better performance, ~20% more conversions.",
   },
   studyly: {
     title: "Figma to HTML Tailwind Landing Pages",

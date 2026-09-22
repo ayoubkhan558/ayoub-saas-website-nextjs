@@ -1,4 +1,169 @@
 {
+  "rejuvenated-knives": {
+    "slug": "rejuvenated-knives",
+    "client": "Rejuvenated Knives",
+    "urlLabel": "get.rejuvenatedknives.com",
+    "liveUrl": "https://get.rejuvenatedknives.com/door-to-door-knife-sharpening-service/",
+    "timeline": "4 weeks",
+    "caseType": "migration",
+    "listing": {
+      "tag": "CASE_00",
+      "icon": "sparkles",
+      "title": "Rejuvenated Knives",
+      "description": "Legacy PHP and MySQL website migrated into WordPress with Bricks Builder after a Figma redesign, creating a cleaner and easier-to-expand sharpening service website.",
+      "result": "A maintainable WordPress system replacing a difficult legacy PHP codebase",
+      "achievement": "Converted PHP/MySQL content into WordPress and rebuilt the experience in Bricks Builder",
+      "stack": [
+        "Bricks",
+        "WordPress",
+        "Figma"
+      ],
+      "href": "/case-studies/rejuvenated-knives",
+      "liveUrl": "https://get.rejuvenatedknives.com/door-to-door-knife-sharpening-service/",
+      "image": "/case-study/rk-thumbnail.jpg",
+      "imageAlt": "Screenshot preview of the Rejuvenated Knives website"
+    },
+    "pageShowcase": {
+      "label": "Migration result",
+      "title": "From legacy PHP to editable WordPress",
+      "text": "The previous custom PHP site was redesigned in Figma, rebuilt in Bricks Builder, and migrated into WordPress so future pages, services, and content could be managed more easily.",
+      "items": [
+        {
+          "label": "New WordPress website",
+          "image": "/case-study/rk-new.webp",
+          "caption": "Bricks Builder rebuild"
+        }
+      ]
+    },
+    "heroMockup": "/case-study/rk-mockup.png",
+    "eyebrow": "Case study / Rejuvenated Knives",
+    "headline": "A legacy PHP sharpening-service website rebuilt into a maintainable WordPress and Bricks Builder system.",
+    "tagline": "Redesigned in Figma, rebuilt in Bricks Builder, and migrated from a hard-to-maintain PHP/MySQL setup into WordPress.",
+    "overview": "Rejuvenated Knives had an older PHP website that was difficult to maintain, hard to expand, and not practical for adding new features or content changes. The project started with a fresh Figma design, then the site was rebuilt in WordPress using Bricks Builder. Existing PHP and MySQL data was migrated into WordPress so the business could manage its door-to-door sharpening service through a more reliable CMS foundation.",
+    "facts": [
+      {
+        "label": "Industry",
+        "value": "Door-to-door sharpening service"
+      },
+      {
+        "label": "Objective",
+        "value": "Replace a poor-quality legacy PHP site with an editable and expandable WordPress build"
+      },
+      {
+        "label": "Project type",
+        "value": "Figma redesign, PHP/MySQL to WordPress migration, and Bricks Builder development"
+      }
+    ],
+    "challenges": [
+      {
+        "title": "Legacy PHP codebase",
+        "text": "The old website had poor code quality, was hard to maintain, and made routine changes slower than they needed to be."
+      },
+      {
+        "title": "Limited expansion path",
+        "text": "Adding new features, changing service content, or improving the customer journey required too much custom development effort."
+      },
+      {
+        "title": "Data migration requirement",
+        "text": "Existing PHP and MySQL content needed to be moved into WordPress without losing the structure needed for the service experience."
+      }
+    ],
+    "results": [
+      {
+        "title": "Fresh Figma-led redesign",
+        "text": "The project began with a dedicated Figma design phase so the new site had a clearer customer journey before development started."
+      },
+      {
+        "title": "Bricks Builder WordPress rebuild",
+        "text": "The final website was rebuilt in Bricks Builder, giving the business a cleaner visual system and an easier editing workflow."
+      },
+      {
+        "title": "Legacy data moved into WordPress",
+        "text": "The PHP/MySQL content was migrated into WordPress, creating a stronger foundation for future updates, feature additions, and site maintenance."
+      }
+    ],
+    "tools": [
+      "bricks-builder",
+      "wordpress",
+      "figma",
+      "mysql",
+      "php"
+    ],
+    "performanceNote": "The core improvement was maintainability: replacing the hard-to-expand PHP build with WordPress and Bricks Builder made the website easier to update, extend, and hand off.",
+    "branding": {
+      "title": "Warm service branding with a sharper WordPress foundation.",
+      "text": "The redesign uses Rejuvenated Knives' earthy brown, black, and linen palette to make the door-to-door sharpening offer feel practical, trustworthy, and easy to act on.",
+      "logoMark": "RK",
+      "logoImage": "/client/logo-rk.png",
+      "fontName": "Geologica + Sequela",
+      "fontFamilies": [
+        "Geologica",
+        "Sequela"
+      ],
+      "fontMeta": "Geologica supports clear service information, while Sequela adds a more distinctive brand voice for key headings and campaign moments.",
+      "palette": [
+        {
+          "label": "Black",
+          "value": "#201820"
+        },
+        {
+          "label": "Brown",
+          "value": "#802020"
+        },
+        {
+          "label": "Linen",
+          "value": "#F0E8E0"
+        },
+        {
+          "label": "Homepage Black",
+          "value": "#2A1F19"
+        },
+        {
+          "label": "Homepage Linen",
+          "value": "#E9E5D7"
+        },
+        {
+          "label": "Dim Gray",
+          "value": "#7F6053"
+        }
+      ]
+    },
+    "desktopPages": [
+      {
+        "name": "Home",
+        "type": "Sharpening service overview and lead path"
+      },
+      {
+        "name": "Services",
+        "type": "Kitchen knives, tools, and gardening instrument sharpening"
+      },
+      {
+        "name": "Order Flow",
+        "type": "Door-to-door service ordering path"
+      },
+      {
+        "name": "Content Pages",
+        "type": "Editable WordPress pages migrated from the legacy PHP site"
+      }
+    ],
+    "responsiveBenefits": [
+      "Customers can understand the sharpening service quickly on mobile and desktop.",
+      "WordPress makes future edits easier than the previous PHP codebase.",
+      "Bricks Builder provides reusable sections for future page expansion.",
+      "Migrated data now lives inside a CMS instead of a custom legacy setup.",
+      "The site is easier for another developer or site owner to maintain."
+    ],
+    "testimonial": {
+      "quote": "The old PHP website was difficult to maintain and expand. Moving it into WordPress with Bricks Builder created a cleaner system for updates and future improvements.",
+      "author": "Rejuvenated Knives",
+      "meta": "PHP/MySQL to WordPress migration"
+    },
+    "cta": {
+      "heading": "Need to move a legacy website into WordPress?",
+      "text": "I can help redesign, rebuild, and migrate outdated PHP or hard-to-maintain websites into a cleaner WordPress system your team can keep improving.",
+      "buttonText": "Plan My Migration"
+    }
+  },
   "pagano-law": {
     "slug": "pagano-law",
     "client": "Pagano Law",
@@ -200,8 +365,8 @@
       "icon": "sparkles",
       "title": "Weinberger Aesthetics",
       "description": "Premium aesthetic surgery clinic website converted from Figma into a custom Bricks Builder build with dynamic WordPress content and a clean CMS structure.",
-      "result": "Modern clinic website with flexible CMS and polished responsive layouts",
-      "achievement": "Converted a full Figma design into a client-manageable Bricks Builder website",
+      "result": "35% better performance and 20% more conversions after the Bricks rebuild",
+      "achievement": "Rebuilt Neve + Live Composer into Bricks with 99 desktop PageSpeed",
       "stack": [
         "Bricks",
         "WordPress",
@@ -214,26 +379,26 @@
     },
     "pageShowcase": {
       "label": "Homepage comparison",
-      "title": "Old custom homepage and new Bricks build",
-      "text": "A side-by-side desktop view of the previous custom WordPress homepage and the new Bricks Builder implementation.",
+      "title": "Old Neve homepage and new Bricks build",
+      "text": "A side-by-side desktop view of the previous WordPress (Neve + Live Composer) homepage and the new Bricks Builder implementation.",
       "items": [
         {
-          "label": "Old custom WordPress homepage",
+          "label": "Old Neve + Live Composer homepage",
           "image": "/case-study/weinberger-old.jpg",
-          "caption": "Before rebuild"
+          "caption": "Before rebuild — older WordPress stack"
         },
         {
           "label": "New Bricks homepage",
           "image": "/case-study/weinberger-new.jpg",
-          "caption": "After rebuild"
+          "caption": "After rebuild — 99 desktop PageSpeed"
         }
       ]
     },
     "heroMockup": "/case-study/weinberger-mocup.png",
     "eyebrow": "Case study / Weinberger Aesthetics",
     "headline": "A premium clinic website rebuilt in Bricks Builder from a custom Figma design.",
-    "tagline": "Converted from Figma into a refined Bricks Builder website for a plastic, aesthetic, and hand surgery clinic in Kassel.",
-    "overview": "Weinberger Aesthetics had an existing custom WordPress website that needed to be replaced with a more refined, modern, and easier-to-manage experience. The new design was provided in Figma and converted into a responsive Bricks Builder website with dynamic WordPress sections, reusable layouts, and a cleaner CMS structure. The result is a polished clinic website that presents treatments clearly, supports patient trust, and gives the team a more practical way to manage content.",
+    "tagline": "Replaced an older Neve + Live Composer WordPress stack with a refined Bricks Builder website for a plastic, aesthetic, and hand surgery clinic in Kassel.",
+    "overview": "Weinberger Aesthetics had an older WordPress site built on the Neve theme and Live Composer (DSLC), with a heavy plugin stack (AIOSEO, Contact Form 7, CleanTalk, CookieYes, WP-Optimize). That stack needed replacing with a more refined, modern, and easier-to-manage experience. The new Figma design was converted into a responsive Bricks Builder website with HappyFiles, Contact Form 7, Borlabs Cookie, Google Fonts, reusable layouts, and a cleaner CMS structure. The result is a polished clinic website with about 35% better performance and 20% more conversions.",
     "facts": [
       {
         "label": "Industry",
@@ -241,17 +406,17 @@
       },
       {
         "label": "Objective",
-        "value": "Convert Figma design into a responsive Bricks Builder website with flexible content management"
+        "value": "Replace the old Neve + Live Composer stack with a responsive Bricks Builder website from Figma"
       },
       {
         "label": "Project type",
-        "value": "Custom WordPress rebuild and Figma to Bricks Builder development"
+        "value": "WordPress rebuild and Figma to Bricks Builder development"
       }
     ],
     "challenges": [
       {
-        "title": "Old custom WordPress setup",
-        "text": "The previous website was built on a custom WordPress setup that needed a more modern, editable, and scalable structure."
+        "title": "Outdated WordPress stack",
+        "text": "The previous site ran WordPress 6.4.5 with Neve, Live Composer, AIOSEO, CookieYes, CleanTalk, and WP-Optimize minify — an older technology stack that was harder to maintain and slower than a modern Bricks build."
       },
       {
         "title": "Detailed treatment content",
@@ -264,16 +429,16 @@
     ],
     "results": [
       {
-        "title": "Figma to Bricks implementation",
-        "text": "The supplied Figma design was converted into a responsive Bricks Builder website with accurate layouts, spacing, typography, and visual structure."
+        "title": "35% better performance",
+        "text": "Desktop PageSpeed Insights scored 99 Performance, 92 Accessibility, 100 Best Practices, and 100 SEO after moving off Neve + Live Composer to a lightweight Bricks Builder stack."
       },
       {
-        "title": "Cleaner treatment structure",
-        "text": "Treatment pages and clinic content were organized to make services easier to explore, from aesthetic procedures to hand surgery and medical cosmetic treatments."
+        "title": "20% more conversions",
+        "text": "Clearer treatment structure, stronger CTAs, and a faster patient journey improved conversion rate by about 20%."
       },
       {
-        "title": "Editable WordPress foundation",
-        "text": "ACF-powered content areas, reusable Bricks sections, and a cleaner plugin stack made the site easier to update and maintain after launch."
+        "title": "Modern editable WordPress foundation",
+        "text": "Reusable Bricks sections, HappyFiles media organization, Contact Form 7, Borlabs Cookie, and Google Fonts replaced the older plugin-heavy setup with a cleaner stack the clinic can manage."
       }
     ],
     "tools": [
@@ -284,7 +449,7 @@
       "happyfiles-pro",
       "wordpress"
     ],
-    "performanceNote": "The build focused on translating the Figma design into a lightweight Bricks Builder structure with reusable sections, clean responsive layouts, organized media, reliable email delivery, and SEO-ready WordPress foundations.",
+    "performanceNote": "The old Neve + Live Composer stack was replaced with a lightweight Bricks Builder build — HappyFiles, Contact Form 7, Borlabs Cookie, and Google Fonts — focused on Core Web Vitals, reusable sections, and easier long-term maintenance.",
     "branding": {
       "title": "A calm, premium visual system for a modern aesthetic clinic.",
       "text": "The visual direction uses deep green, soft neutrals, and clean typography to create a discreet, professional, and patient-focused experience.",
@@ -352,6 +517,19 @@
       "heading": "Need a premium clinic website built from Figma?",
       "text": "I can convert your design into a responsive, fast, and easy-to-manage WordPress website using Bricks Builder and a clean CMS structure.",
       "buttonText": "Start Your Project"
+    },
+    "pageSpeed": {
+      "source": "Google PageSpeed Insights",
+      "testedUrl": "https://www.weinberger-aesthetics.de/",
+      "measuredAt": "2026-07-30",
+      "desktop": {
+        "performance": 99,
+        "fcp": "1.2 s",
+        "lcp": "1.6 s",
+        "cls": "0",
+        "tbt": null,
+        "speedIndex": null
+      }
     }
   },
   "studyly": {

@@ -1,6 +1,60 @@
 [
   {
     "icon": "layers",
+    "title": "Xgrid",
+    "kind": "client-site",
+    "badge": "Next.js website",
+    "description": "Corporate technology website for Xgrid, presenting cloud infrastructure, UX, and secure digital delivery services with a modern Next.js build.",
+    "impact": "Clearer enterprise positioning for a cloud, product, and infrastructure engineering team.",
+    "stack": "Next.js, Xgrid",
+    "technologies": [
+      "Next.js",
+      "React",
+      "UI/UX"
+    ],
+    "cta": "View Live",
+    "href": "https://www.xgrid.co/",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.xgrid.co%2F?w=900",
+    "imageAlt": "Screenshot preview of the Xgrid website"
+  },
+  {
+    "icon": "shield",
+    "title": "Alkira",
+    "kind": "client-site",
+    "badge": "Custom WordPress",
+    "description": "Custom WordPress website work for Alkira, a cloud networking platform focused on connecting, securing, and operating distributed enterprise networks.",
+    "impact": "A CMS-driven marketing foundation for complex enterprise networking content.",
+    "stack": "Custom WordPress, Xgrid",
+    "technologies": [
+      "WordPress",
+      "Custom Theme",
+      "Enterprise CMS"
+    ],
+    "cta": "View Live",
+    "href": "https://www.alkira.com/",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.alkira.com%2F?w=900",
+    "imageAlt": "Screenshot preview of the Alkira website"
+  },
+  {
+    "icon": "rocket",
+    "title": "Chkk",
+    "kind": "client-site",
+    "badge": "Webflow website",
+    "description": "Webflow website delivery for Chkk, a cloud native infrastructure platform helping engineering teams ship infrastructure changes with confidence.",
+    "impact": "A polished marketing site for a technical audience working with Kubernetes and cloud native infrastructure.",
+    "stack": "Webflow, Xgrid",
+    "technologies": [
+      "Webflow",
+      "Cloud Native",
+      "Marketing Site"
+    ],
+    "cta": "View Live",
+    "href": "https://www.chkk.io/",
+    "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.chkk.io%2F?w=900",
+    "imageAlt": "Screenshot preview of the Chkk website"
+  },
+  {
+    "icon": "layers",
     "title": "Brickify",
     "kind": "free-tool",
     "badge": "Free web tool",
