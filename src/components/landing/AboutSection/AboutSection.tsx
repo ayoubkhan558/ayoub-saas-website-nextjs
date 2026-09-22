@@ -38,7 +38,7 @@ export function AboutSection({ portfolio }: { portfolio: PortfolioData }) {
                 <IconGlyph name="linkedin" />
                 LinkedIn
               </a>
-              <a className="button button--ghost" href="/contact" title="Contact Muhammad Ayoub for Upwork project details">
+              <a className="button button--ghost" href="https://www.upwork.com/freelancers/~01176397124d8cb917?viewMode=1" title="Contact Muhammad Ayoub for Upwork project details">
                 <IconGlyph name="externalLink" />
                 Upwork profile
               </a>
