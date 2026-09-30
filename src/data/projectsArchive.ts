@@ -84,6 +84,10 @@ export function getProjectMeta(project: ProjectArchiveItem) {
   ].filter((item): item is string => Boolean(item && !/^https?:\/\//i.test(item.trim())));
 }
 
+export function getProjectCompany(project: ProjectArchiveItem) {
+  return "company" in project && typeof project.company === "string" ? project.company : null;
+}
+
 export function normalizeProjectFilter(value: string | string[] | undefined): ProjectArchiveFilter {
   const rawValue = Array.isArray(value) ? value[0] : value;
 

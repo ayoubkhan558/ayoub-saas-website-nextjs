@@ -5,6 +5,7 @@ export type CaseStudyCard = {
   tag: string;
   icon: string;
   title: string;
+  company?: string;
   description: string;
   result: string;
   achievement: string;
@@ -24,6 +25,7 @@ export type ProjectCard = {
   title: string;
   kind?: "free-tool" | "client-site" | string;
   badge?: string;
+  deliveryContext?: string;
   description?: string;
   impact?: string;
   stack: string;

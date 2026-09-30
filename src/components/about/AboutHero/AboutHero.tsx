@@ -13,9 +13,14 @@ export function AboutHero({ portfolio }: { portfolio: PortfolioData }) {
       <div className="section__inner">
         <div className={`container ${styles["about-page-hero__inner"]}`}>
           <div className={styles["about-page-hero__copy"]}>
-            <span className={styles["about-page__eyebrow"]}>About / {fullName}</span>
+            <span className={styles["about-page__eyebrow"]}>
+              About
+              /
+              {/* {fullName} */}
+            </span>
             <h1 className={styles["about-page-hero__title"]}>
-              Freelance Bricks Builder and front-end developer
+              Freelance React & Next.js Developer
+              {/* Frontend & React Engineer | WordPress Specialist */}
             </h1>
             <p className={styles["about-page-hero__text"]}>
               {portfolio?.profile.summary}

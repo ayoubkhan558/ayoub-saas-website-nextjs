@@ -16,12 +16,14 @@ export type CaseStudyDetailData = {
   client: string;
   urlLabel: string;
   liveUrl: string;
+  company?: string;
   timeline: string;
   caseType: string;
   listing: {
     tag: string;
     icon: string;
     title: string;
+    company?: string;
     description: string;
     result: string;
     achievement: string;

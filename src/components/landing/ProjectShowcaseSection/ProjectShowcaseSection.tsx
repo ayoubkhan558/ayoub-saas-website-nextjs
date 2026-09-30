@@ -78,6 +78,9 @@ export function ProjectShowcaseSection({ projects }: { projects: ProjectCard[] }
                   >
                     <span className={styles["showcase__media"]}>
                       <img src={project.image} alt={project.imageAlt} title={project.imageAlt} loading="lazy" />
+                      {project.deliveryContext ? (
+                        <span className={styles["showcase__company"]}>{project.deliveryContext}</span>
+                      ) : null}
                     </span>
                     <span className={styles["showcase__content"]}>
                       <span className={styles["showcase__badge"]}>

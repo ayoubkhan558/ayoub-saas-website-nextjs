@@ -221,12 +221,30 @@
 }
 
 .card__image {
+  position: relative;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
   background:
     linear-gradient(135deg, rgba(1, 1, 27, 0.1), transparent 44%),
     var(--color-bone-mist);
   box-shadow: color-mix(in srgb, var(--color-plum-charcoal) 12%, transparent) 0 18px 42px;
+}
+
+.card__company {
+  position: absolute;
+  right: var(--space-2);
+  bottom: var(--space-2);
+  z-index: 2;
+  max-width: calc(100% - var(--space-4));
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  background: rgba(17, 13, 14, 0.86);
+  color: var(--color-on-dark);
+  font-family: var(--font-code);
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  line-height: 1;
+  padding: var(--space-1) var(--space-2);
+  text-transform: uppercase;
 }
 
 .card__image img {

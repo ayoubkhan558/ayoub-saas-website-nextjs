@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { CopyLinksControl, type CopyLinkEntry } from "@/components/shared/CopyLinksControl/CopyLinksControl";
 import { Pagination } from "@/components/shared/Pagination/Pagination";
-import { paginate } from "@/lib/pagination";
-import type { ProjectArchiveFilter, ProjectArchiveItem } from "@/data/projectsArchive";
+import { getProjectLinks, projectArchiveItems, projectMatchesFilter, type ProjectArchiveFilter, type ProjectArchiveItem } from "@/data/projectsArchive";
 import { projectArchiveFilters } from "@/data/projectsArchive";
+import { paginate } from "@/lib/pagination";
 import { ProjectArchiveGrid } from "../ProjectArchiveGrid/ProjectArchiveGrid";
 import styles from "./ProjectArchiveSection.module.scss";
 
@@ -19,6 +20,21 @@ export function ProjectArchiveSection({
 }) {
   const page = paginate(projects, currentPage, PROJECTS_PER_PAGE);
   const paginationBasePath = activeFilter === "all" ? "/projects" : `/projects?filter=${activeFilter}`;
+  const getEntries = (items: ProjectArchiveItem[]): CopyLinkEntry[] => items
+    .filter((project) => project.projectStatus === "Live")
+    .flatMap((project) => getProjectLinks(project).map((link) => ({
+      name: project.websiteName || project.websiteUrl || `Project ${project.rowNumber}`,
+      category: project.categoryNiche || project.projectType || "Uncategorized",
+      href: link.href,
+    })));
+  const liveEntries = getEntries(projectArchiveItems);
+  const copyGroups = projectArchiveFilters
+    .filter((filter) => filter.value !== "all")
+    .map((filter) => ({
+      label: filter.label,
+      entries: getEntries(projectArchiveItems.filter((project) => projectMatchesFilter(project, filter.value))),
+    }))
+    .filter((group) => group.entries.length > 0);
 
   return (
     <section className={`section ${styles.archive}`} id="projects-list">
@@ -52,6 +68,7 @@ export function ProjectArchiveSection({
             })}
           </div>
 
+          <CopyLinksControl allEntries={liveEntries} groups={copyGroups} itemName="project" />
           <ProjectArchiveGrid projects={page.items} />
           <Pagination
             basePath={paginationBasePath}

@@ -12,6 +12,7 @@ export function CaseStudyListingCard({ study, index }: { study: CaseStudyCard; i
       </span>
       <span className={styles.card__image}>
         <img src={study.image} alt={study.imageAlt} title={study.imageAlt} loading="lazy" />
+        {study.company ? <span className={styles.card__company}>Company: {study.company}</span> : null}
       </span>
       <span className={styles.card__content}>
         <span className={styles.card__heading}>
