@@ -1,4 +1,5 @@
 import { Pagination } from "@/components/shared/Pagination/Pagination";
+import { CopyLinksControl } from "@/components/shared/CopyLinksControl/CopyLinksControl";
 import type { CaseStudyCard } from "@/data/work";
 import { paginate } from "@/lib/pagination";
 import { CaseStudyListingGrid } from "../CaseStudyListingGrid/CaseStudyListingGrid";
@@ -32,6 +33,15 @@ export function CaseStudiesPageContent({
                 layouts, responsive behavior, branding, and feedback.
               </p>
             </header>
+            <CopyLinksControl
+              allEntries={caseStudies.map((study) => ({
+                name: study.title,
+                nameLabel: "Case study",
+                category: study.tag.replaceAll("_", " "),
+                href: study.href,
+              }))}
+              itemName="case study"
+            />
             <CaseStudyListingGrid studies={page.items} startIndex={(page.currentPage - 1) * CASE_STUDIES_PER_PAGE} />
             <Pagination
               basePath="/case-studies"

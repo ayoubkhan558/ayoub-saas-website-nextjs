@@ -225,7 +225,7 @@
   .showcase__card:active .showcase__action {
     border-color: rgba(240, 120, 168, 0.72);
     background: var(--color-primary);
-    color: #fff;
+    color: var(--color-on-dark);
   }
 
   .showcase__all-link {
@@ -239,7 +239,7 @@
   .showcase__all-link:active {
     border-color: rgba(240, 120, 168, 0.72);
     background: var(--color-primary);
-    color: #fff;
+    color: var(--color-on-dark);
   }
 }
 
@@ -315,6 +315,23 @@
   object-fit: cover;
   object-position: top;
   transition: transform 260ms ease;
+}
+
+.showcase__company {
+  position: absolute;
+  right: var(--space-2);
+  bottom: var(--space-2);
+  z-index: 2;
+  max-width: calc(100% - var(--space-4));
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  background: rgba(17, 13, 14, 0.86);
+  color: var(--color-on-dark);
+  font-family: var(--font-code);
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  line-height: 1;
+  padding: var(--space-1) var(--space-2);
+  text-transform: uppercase;
 }
 
 .showcase__card:hover .showcase__media img {
@@ -414,7 +431,7 @@
 .showcase__card:focus-visible .showcase__action,
 .showcase__card:active .showcase__action {
   background: var(--color-ink-violet);
-  color: #fff;
+  color: var(--color-on-dark);
   transform: translate(2px, -2px);
 }
 
@@ -454,7 +471,7 @@
 .showcase__all-link:active {
   border-color: var(--color-ink-violet);
   background: var(--color-ink-violet);
-  color: #fff;
+  color: var(--color-on-dark);
   transform: translateY(-1px);
 }
 

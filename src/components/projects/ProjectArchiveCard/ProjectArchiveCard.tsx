@@ -1,6 +1,7 @@
 import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
 import {
   getProjectDescription,
+  getProjectCompany,
   getProjectInitials,
   getProjectLinks,
   getProjectMeta,
@@ -15,6 +16,7 @@ export function ProjectArchiveCard({ project }: { project: ProjectArchiveItem })
   const title = getProjectTitle(project);
   const description = getProjectDescription(project);
   const thumbnail = getProjectThumbnail(project);
+  const company = getProjectCompany(project);
   const meta = getProjectMeta(project);
   const links = getProjectLinks(project);
 
@@ -26,6 +28,7 @@ export function ProjectArchiveCard({ project }: { project: ProjectArchiveItem })
         ) : (
           <span className={styles.card__placeholder}>{getProjectInitials(project)}</span>
         )}
+        {company ? <span className={styles.card__company}>Company: {company}</span> : null}
       </div>
       <div className={styles.card__content}>
         <span className={styles.card__badge}>

@@ -23,6 +23,7 @@ export function FeaturedCaseStudiesSection({ projects }: { projects: CaseStudyCa
                 </span>
                 <span className={styles["work__project-image"]}>
                   <img src={project.image} alt={project.imageAlt} title={project.imageAlt} loading="lazy" />
+                  {project.company ? <span className={styles["work__project-company"]}>Company: {project.company}</span> : null}
                 </span>
                 <span className={styles["work__project-content"]}>
                   <span className={styles["work__project-heading"]}>

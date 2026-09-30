@@ -32,6 +32,12 @@ export function CaseStudyHero({ study }: { study: CaseStudyDetailData }) {
                   <dt className={styles["hero-meta__label"]}>Timeline</dt>
                   <dd className={styles["hero-meta__value"]}>{study.timeline}</dd>
                 </div>
+                {study.company ? (
+                  <div className={styles["hero-meta__item"]}>
+                    <dt className={styles["hero-meta__label"]}>Company</dt>
+                    <dd className={styles["hero-meta__value"]}>{study.company}</dd>
+                  </div>
+                ) : null}
               </dl>
               <a className="button" href={study.liveUrl} target="_blank" rel="noreferrer" title={`Visit ${study.client} live website`}>
                 Visit live site
