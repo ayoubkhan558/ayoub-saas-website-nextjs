@@ -46,6 +46,7 @@
   display: grid;
   justify-items: center;
   gap: var(--space-5);
+  margin-inline: calc(var(--space-5) * -1);
   border: 1px solid var(--color-fog-border);
   background:
     radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 4%, transparent) 1px, transparent 1px) 0 0 / 7px 7px,
@@ -54,16 +55,14 @@
     0 0 0 1px color-mix(in srgb, var(--color-plum-charcoal) 10%, transparent),
     color-mix(in srgb, var(--color-plum-charcoal) 6%, transparent) 0 20px 54px;
   padding: var(--space-5);
+
+  @include mq(md) {
+    margin-inline: 0;
+  }
 }
 
 .feedback-panel::before {
   display: none;
-}
-
-@media (max-width: 767px) {
-  .feedback-panel {
-    margin-inline: calc(var(--space-5) * -1);
-  }
 }
 
 .stars {

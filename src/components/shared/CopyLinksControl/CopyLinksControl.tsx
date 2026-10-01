@@ -86,7 +86,7 @@ export function CopyLinksControl({
         aria-label={isOpen ? "Close copy links panel" : "Open copy links panel"}
       >
         <span aria-hidden="true">{isOpen ? "×" : "+"}</span>
-        {isOpen ? "Close" : "Copy links"}
+        <b>{isOpen ? "Close" : "Copy links"}</b>
       </button>
       {isOpen ? (
         <div className={styles.panel}>
