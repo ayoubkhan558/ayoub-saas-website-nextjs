@@ -62,7 +62,7 @@ export function ProjectArchiveCard({ project }: { project: ProjectArchiveItem })
         ) : null} */}
 
         {meta.length ? (
-          <div className={styles.meta} aria-label={`${title} metadata`}>
+          <div className={styles.card__meta} aria-label={`${title} metadata`}>
             {meta.map((item) => (
               <span key={item}>{item}</span>
             ))}
