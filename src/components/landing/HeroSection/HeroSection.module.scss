@@ -326,11 +326,12 @@
   display: grid;
   gap: var(--space-1);
   min-width: 0;
-  text-align: left;
+  justify-items: center;
+  text-align: center;
 
-  @media (max-width: 430px) {
-    justify-items: center;
-    text-align: center;
+  @include mq(431px) {
+    justify-items: normal;
+    text-align: left;
   }
 }
 
