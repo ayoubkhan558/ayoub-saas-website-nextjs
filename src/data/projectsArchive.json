@@ -15,11 +15,12 @@
       "platformFrameworkBuilder": "Next.js",
       "client": null,
       "company": "Xgrid.co",
-      "notes": "Delivered while working at Xgrid.co. Corporate website for Xgrid's intelligent and secure cloud infrastructure, UI, and UX services.",
+      "notes": "Delivered while working at Xgrid.co. Corporate website for Xgrid's cloud infrastructure and technology services.",
       "date": null,
       "projectType": "Technology services website",
-      "description": "Xgrid is a technology services website delivered while working at Xgrid.co, built with Next.js to present cloud infrastructure, UI/UX, and secure digital delivery capabilities with a modern front-end foundation.",
-      "projectStatus": "Live"
+      "description": "Corporate website for Xgrid's cloud infrastructure and technology services, built with Next.js.",
+      "projectStatus": "Live",
+      "screenshot": "/projects/project-ss-xgrid.jpg"
     },
     {
       "websiteName": "Alkira",
@@ -29,11 +30,12 @@
       "platformFrameworkBuilder": "Custom WordPress",
       "client": null,
       "company": "Xgrid.co",
-      "notes": "Delivered while working at Xgrid.co. Custom WordPress delivery for Alkira, now part of Lumen.",
+      "notes": "Delivered while working at Xgrid.co. Custom WordPress website for Alkira, now part of Lumen.",
       "date": null,
       "projectType": "Enterprise networking website",
-      "description": "Alkira is an enterprise networking website delivered while working at Xgrid.co, built with custom WordPress to support marketing content for a cloud-native networking platform across cloud, site, partner, data center, and AI workloads.",
-      "projectStatus": "Live"
+      "description": "Enterprise networking website for Alkira's cloud-native networking platform, built with custom WordPress.",
+      "projectStatus": "Live",
+      "screenshot": "/projects/project-ss-alkira.jpg"
     },
     {
       "websiteName": "Chkk",
@@ -46,8 +48,9 @@
       "notes": "Delivered while working at Xgrid.co. Webflow website delivery for Chkk.",
       "date": null,
       "projectType": "SaaS marketing website",
-      "description": "Chkk is a SaaS marketing website delivered while working at Xgrid.co, built with Webflow for a cloud native infrastructure platform helping teams validate upgrades, reduce operational risk, and ship infrastructure changes safely.",
-      "projectStatus": "Live"
+      "description": "SaaS marketing website for Chkk's cloud-native infrastructure platform, built with Webflow.",
+      "projectStatus": "Live",
+      "screenshot": "/projects/project-ss-chkk.jpg"
     },
     {
       "websiteName": "dalailkhairat",
@@ -123,7 +126,7 @@
       "date": null,
       "projectType": "Education website",
       "description": "Edinburghpt Academy is an education website built with HTML, CSS to present services clearly and convert qualified visitors.",
-      "projectStatus": "Offline (Domain Expired)"
+      "projectStatus": "Live"
     },
     {
       "websiteName": "Weinberger Aesthetics",
@@ -186,34 +189,6 @@
       ]
     },
     {
-      "websiteName": "SKU Auto",
-      "categoryNiche": "Inventory & SKU Automation",
-      "websiteUrl": "https://sku-auto.com/",
-      "figmaLink": null,
-      "platformFrameworkBuilder": "Bricks Page Builder",
-      "client": "Jordan San",
-      "notes": null,
-      "date": null,
-      "projectType": "WordPress website",
-      "description": "Automates SKU and barcode generation with custom templates, bulk editing, and automated product updates for store inventory.",
-      "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-sku-auto.jpg"
-    },
-    {
-      "websiteName": "Rebill",
-      "categoryNiche": "Subscriptions & Recurring Billing",
-      "websiteUrl": "https://rebill.shop/",
-      "figmaLink": null,
-      "platformFrameworkBuilder": "Bricks Page Builder",
-      "client": "Jordan San",
-      "notes": null,
-      "date": null,
-      "projectType": "WordPress website",
-      "description": "Automates subscription management, recurring payments, customizable billing cycles, and self-service portals to boost customer LTV.",
-      "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-rebill.jpg"
-    },
-    {
       "websiteName": "Smart Bulk Price Editor",
       "categoryNiche": "E-commerce SaaS / Pricing Automation",
       "websiteUrl": "https://bulk-edit.com/",
@@ -226,6 +201,37 @@
       "description": "Automates product pricing, scheduled discounts, multi-market rate updates, and one-click price rollbacks for store inventory.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-price-bulk-edit.jpg"
+    },
+    {
+      "websiteName": "ShiningHorizon",
+      "categoryNiche": "Business services",
+      "websiteUrl": "https://shininghorizon.com/",
+      "figmaLink": null,
+      "platformFrameworkBuilder": "Wordperss, Elementor",
+      "client": "",
+      "notes": null,
+      "date": null,
+      "projectType": "WordPress website",
+      "description": "ShiningHorizon is a wordpress website built with Wordperss, Elementor to turn the brand into a faster production-ready web presence.",
+      "projectStatus": "Live",
+      "screenshot": "/projects/project-ss-shininghorizon.jpg"
+    },
+    {
+      "websiteName": "BabyPNG",
+      "categoryNiche": "Business services  ",
+      "websiteUrl": "http://www.babypng.com/",
+      "figmaLink": "https://www.figma.com/file/NnX3sSnUGbW2LhOheP6Sft/BabyPNG-development?type=design&node-id=0-1&mode=design&t=xlkhm1SjiI80dMz1-0",
+      "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
+      "client": "Indian Client",
+      "notes": null,
+      "date": null,
+      "extra": {
+        "client2": "Fiverr, India"
+      },
+      "projectType": "Figma to HTML/CSS",
+      "description": "BabyPNG is a business website translated from Figma with HTML, CSS, Bootstrap to give the client a sharper, easier-to-maintain online presence.",
+      "projectStatus": "Live",
+      "screenshot": "/projects/project-ss-babypng.jpg"
     },
     {
       "websiteName": "Shoppable",
@@ -420,6 +426,34 @@
       }
     },
     {
+      "websiteName": "SKU Auto",
+      "categoryNiche": "Inventory & SKU Automation",
+      "websiteUrl": "https://sku-auto.com/",
+      "figmaLink": null,
+      "platformFrameworkBuilder": "Bricks Page Builder",
+      "client": "Jordan San",
+      "notes": null,
+      "date": null,
+      "projectType": "WordPress website",
+      "description": "Automates SKU and barcode generation with custom templates, bulk editing, and automated product updates for store inventory.",
+      "projectStatus": "Live",
+      "screenshot": "/projects/project-ss-sku-auto.jpg"
+    },
+    {
+      "websiteName": "Rebill",
+      "categoryNiche": "Subscriptions & Recurring Billing",
+      "websiteUrl": "https://rebill.shop/",
+      "figmaLink": null,
+      "platformFrameworkBuilder": "Bricks Page Builder",
+      "client": "Jordan San",
+      "notes": null,
+      "date": null,
+      "projectType": "WordPress website",
+      "description": "Automates subscription management, recurring payments, customizable billing cycles, and self-service portals to boost customer LTV.",
+      "projectStatus": "Live",
+      "screenshot": "/projects/project-ss-rebill.jpg"
+    },
+    {
       "websiteName": "Waleed Portfolio",
       "categoryNiche": "Personal portfolios",
       "websiteUrl": "https://serveekay.com/",
@@ -466,37 +500,6 @@
       "description": "50Stars is a wordpress website built with Wordperss, Elementor to turn the brand into a faster production-ready web presence.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-50stars.jpg"
-    },
-    {
-      "websiteName": "ShiningHorizon",
-      "categoryNiche": "Business services",
-      "websiteUrl": "https://shininghorizon.com/",
-      "figmaLink": null,
-      "platformFrameworkBuilder": "Wordperss, Elementor",
-      "client": "",
-      "notes": null,
-      "date": null,
-      "projectType": "WordPress website",
-      "description": "ShiningHorizon is a wordpress website built with Wordperss, Elementor to turn the brand into a faster production-ready web presence.",
-      "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-shininghorizon.jpg"
-    },
-    {
-      "websiteName": "BabyPNG",
-      "categoryNiche": "Business services  ",
-      "websiteUrl": "http://www.babypng.com/",
-      "figmaLink": "https://www.figma.com/file/NnX3sSnUGbW2LhOheP6Sft/BabyPNG-development?type=design&node-id=0-1&mode=design&t=xlkhm1SjiI80dMz1-0",
-      "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
-      "client": "Indian Client",
-      "notes": null,
-      "date": null,
-      "extra": {
-        "client2": "Fiverr, India"
-      },
-      "projectType": "Figma to HTML/CSS",
-      "description": "BabyPNG is a business website translated from Figma with HTML, CSS, Bootstrap to give the client a sharper, easier-to-maintain online presence.",
-      "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-babypng.jpg"
     },
     {
       "websiteName": "Naseeha",
@@ -1392,18 +1395,18 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "websiteName": "DigiHun",
+      "websiteName": "DigiHub",
       "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://digihub.li/",
       "figmaLink": "https://www.figma.com/file/EcBjiUDJO3MlneCKtEazUd/New-DIGIHUB?node-id=0%3A1&mode=dev",
-      "platformFrameworkBuilder": "Wordpress, Elementor",
+      "platformFrameworkBuilder": "Wordpress",
       "client": " | Epicsols",
       "notes": null,
       "date": null,
       "projectType": "WordPress website",
-      "description": "DigiHun is a wordpress website translated from Figma with Wordpress, Elementor to turn the brand into a faster production-ready web presence.",
+      "description": "DigiHub is a wordpress website translated from Figma with Wordpress to support lead generation with a cleaner user journey.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-digihun.jpg"
+      "screenshot": "/projects/project-ss-digihub.jpg"
     },
     {
       "websiteName": "Cheapzy",
@@ -1610,20 +1613,6 @@
       "screenshot": "/projects/project-ss-reyesenvironmental.jpg"
     },
     {
-      "websiteName": "50  Stars Pro",
-      "categoryNiche": "Professional services",
-      "websiteUrl": "https://50stars.pro/",
-      "figmaLink": null,
-      "platformFrameworkBuilder": "Wordpress, Elementor",
-      "client": " | Epicsols",
-      "notes": "debate",
-      "date": null,
-      "projectType": "WordPress website",
-      "description": "50  Stars Pro is a wordpress website built with Wordpress, Elementor to present services clearly and convert qualified visitors.",
-      "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-50-stars-pro.jpg"
-    },
-    {
       "websiteName": "YT Solutions",
       "categoryNiche": "Business services",
       "websiteUrl": "https://yt-solutions.surge.sh/",
@@ -1727,20 +1716,6 @@
       "date": null,
       "projectType": "Healthcare website",
       "description": "RadioLogix is a healthcare website translated from Figma with Reactjs, Bootstrap to improve trust, browsing flow, and mobile readability."
-    },
-    {
-      "websiteName": "DigiHub",
-      "categoryNiche": "Marketing and digital services",
-      "websiteUrl": "https://digihub.li/",
-      "figmaLink": "https://www.figma.com/file/EcBjiUDJO3MlneCKtEazUd/New-DIGIHUB?node-id=0%3A1&mode=dev",
-      "platformFrameworkBuilder": "Wordpress",
-      "client": " | Epicsols",
-      "notes": null,
-      "date": null,
-      "projectType": "WordPress website",
-      "description": "DigiHub is a wordpress website translated from Figma with Wordpress to support lead generation with a cleaner user journey.",
-      "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-digihub.jpg"
     },
     {
       "websiteName": "Luxury Lagoon Dubai",

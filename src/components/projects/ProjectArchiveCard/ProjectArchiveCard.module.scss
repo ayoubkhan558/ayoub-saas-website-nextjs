@@ -216,14 +216,15 @@
   line-height: 1;
 }
 
-.meta {
+.card__meta {
+  font-size: var(--text-xs);
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-1);
   align-content: start;
 }
 
-.meta>span:not(.liveSignal) {
+.card__meta>span:not(.liveSignal) {
   max-width: 100%;
   overflow-wrap: anywhere;
   border: 1px solid var(--border-soft);
