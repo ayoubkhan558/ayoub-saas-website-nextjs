@@ -186,9 +186,20 @@
   font-size: var(--text-xs);
 }
 
+.testimonials__quote-slider :global(.splide__track),
+.testimonials__quote-slider :global(.splide__list),
+.testimonials__quote-slider :global(.splide__slide) {
+  height: 100%;
+}
+
+.testimonials__quote-slider :global(.splide__slide) {
+  display: flex;
+}
+
 .testimonials__quote-card {
   position: relative;
   display: grid;
+  width: 100%;
   min-height: 390px;
   align-content: space-between;
   gap: var(--space-7);

@@ -1,47 +1,23 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import { useRef, useState } from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import type { Splide as SplideInstance } from "@splidejs/splide";
 import type { ProjectCard } from "@/data/work";
 import { IconGlyph } from "../IconGlyph/IconGlyph";
 import { SectionHeader } from "../SectionHeader/SectionHeader";
 import styles from "./ProjectShowcaseSection.module.scss";
 
 export function ProjectShowcaseSection({ projects }: { projects: ProjectCard[] }) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "start",
-    containScroll: "trimSnaps",
-    dragFree: true,
-  });
+  const splideRef = useRef<SplideInstance | null>(null);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
 
-  const updateScrollState = useCallback(() => {
-    if (!emblaApi) {
-      return;
-    }
-
-    setCanScrollPrev(emblaApi.canScrollPrev());
-    setCanScrollNext(emblaApi.canScrollNext());
-  }, [emblaApi]);
-
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) {
-      return;
-    }
-
-    updateScrollState();
-    emblaApi.on("select", updateScrollState);
-    emblaApi.on("reInit", updateScrollState);
-
-    return () => {
-      emblaApi.off("select", updateScrollState);
-      emblaApi.off("reInit", updateScrollState);
-    };
-  }, [emblaApi, updateScrollState]);
+  const updateScrollState = (splide: SplideInstance) => {
+    const lastIndex = Math.max(0, splide.length - Number(splide.options.perPage ?? 1));
+    setCanScrollPrev(splide.index > 0);
+    setCanScrollNext(splide.index < lastIndex);
+  };
 
   return (
     <section className={`section ${styles["home-showcase"]}`} id="showcase">
@@ -54,28 +30,43 @@ export function ProjectShowcaseSection({ projects }: { projects: ProjectCard[] }
               eyebrow="Selected side projects with live links, build context, and the stack used to ship each one."
             />
             <div className={styles["showcase__controls"]} aria-label="Project slider controls">
-              <button type="button" onClick={scrollPrev} disabled={!canScrollPrev} aria-label="Previous projects">
+              <button type="button" onClick={() => splideRef.current?.go("<")} disabled={!canScrollPrev} aria-label="Previous projects">
                 <IconGlyph name="arrowLeft" />
               </button>
-              <button type="button" onClick={scrollNext} disabled={!canScrollNext} aria-label="Next projects">
+              <button type="button" onClick={() => splideRef.current?.go(">") } disabled={!canScrollNext} aria-label="Next projects">
                 <IconGlyph name="arrowRight" />
               </button>
             </div>
           </div>
-          <div className={styles["showcase__viewport"]} ref={emblaRef}>
-            <div className={styles["showcase__list"]}>
+          <Splide
+            className={styles["showcase__splide"]}
+            options={{
+              type: "slide",
+              perPage: 3,
+              perMove: 1,
+              gap: "1rem",
+              pagination: false,
+              arrows: false,
+              breakpoints: { 1080: { perPage: 2 }, 640: { perPage: 1 } },
+            }}
+            onMounted={(splide) => {
+              splideRef.current = splide;
+              updateScrollState(splide);
+            }}
+            onMoved={updateScrollState}
+          >
               {projects.map((project) => {
                 const isFreeTool = project.kind === "free-tool";
 
                 return (
-                  <a
-                    className={`${styles["showcase__card"]} ${isFreeTool ? styles["showcase__card--tool"] : ""}`}
-                    key={project.title}
-                    href={project.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    title={`View ${project.title}`}
-                  >
+                  <SplideSlide key={project.title}>
+                    <a
+                      className={`${styles["showcase__card"]} ${isFreeTool ? styles["showcase__card--tool"] : ""}`}
+                      href={project.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      title={`View ${project.title}`}
+                    >
                     <span className={styles["showcase__media"]}>
                       <img src={project.image} alt={project.imageAlt} title={project.imageAlt} loading="lazy" />
                       {project.deliveryContext ? (
@@ -104,11 +95,11 @@ export function ProjectShowcaseSection({ projects }: { projects: ProjectCard[] }
                       <span>{project.cta ?? "View project"}</span>
                       <IconGlyph name="externalLink" />
                     </span>
-                  </a>
+                    </a>
+                  </SplideSlide>
                 );
               })}
-            </div>
-          </div>
+          </Splide>
           <div className={styles["showcase__footer"]}>
             <a className={styles["showcase__all-link"]} href="/projects" title="View all projects">
               <span>View all projects</span>

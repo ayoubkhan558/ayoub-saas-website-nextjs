@@ -1,0 +1,171 @@
+@use "../../../styles/mixins" as *;
+
+.hero :global(.section__inner) {
+  --proj-tint-dot: rgba(1, 1, 27, 0.07);
+  background-color: var(--page-hero-bg);
+  background-image:
+    radial-gradient(var(--page-hero-dot) 0.75px, transparent 0.75px),
+    var(--page-hero-gradient);
+  background-size: 6px 6px, auto;
+  padding-block: var(--page-hero-padding-block);
+}
+
+:global(:root[data-theme="dark"]) .hero :global(.section__inner) {
+  --proj-tint-dot: color-mix(in srgb, var(--color-lavender-mist) 7%, transparent);
+}
+
+.hero__inner {
+  display: grid;
+  gap: var(--page-hero-grid-gap);
+
+  @include mq(lg) {
+    grid-template-columns: minmax(0, 0.92fr) minmax(340px, 0.52fr);
+    align-items: end;
+  }
+}
+
+.hero__copy {
+  @include hero-copy;
+}
+
+.eyebrow,
+.signal span {
+  color: var(--color-ink-violet);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: var(--page-hero-title-max);
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  letter-spacing: 0;
+  line-height: var(--leading-heading);
+}
+
+.hero h1 i {
+  color: var(--color-ink-violet);
+  font-family: var(--font-editorial-display);
+  font-style: normal;
+  font-weight: 200;
+}
+
+.hero p {
+  @include hero-text;
+}
+
+.hero__copy > .eyebrow {
+  @include hero-eyebrow;
+}
+
+.hero__actions {
+  @include hero-actions;
+}
+
+.signal {
+  --project-card-border: var(--color-fog-border);
+  --project-card-dot: rgba(1, 1, 27, 0.045);
+  --project-card-bg: var(--color-surface);
+  --project-card-inset: rgba(255, 255, 255, 0.74);
+  --project-card-shadow: color-mix(in srgb, var(--color-plum-charcoal) 6%, transparent) 0 20px 54px;
+  --project-card-hover-border: color-mix(in srgb, var(--color-plum-charcoal) 28%, transparent);
+  --project-card-hover-dot: rgba(1, 1, 27, 0.055);
+  --project-card-hover-bg: rgba(236, 237, 242, 0.48);
+  --project-card-hover-inset: rgba(255, 255, 255, 0.82);
+  --project-card-hover-shadow: color-mix(in srgb, var(--color-plum-charcoal) 12%, transparent) 0 34px 84px;
+  position: relative;
+  display: grid;
+  gap: var(--space-4);
+  overflow: hidden;
+  border: 1px solid var(--project-card-border);
+  border-radius: var(--radius-cards);
+  background:
+    radial-gradient(var(--project-card-dot) 0.75px, transparent 0.75px),
+    var(--project-card-bg);
+  background-size: 6px 6px, auto;
+  box-shadow:
+    var(--project-card-inset) 0 1px 0 inset,
+    var(--project-card-shadow);
+  color: var(--color-ink-violet);
+  padding: var(--space-5);
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+:global(:root[data-theme="dark"]) .signal {
+  --project-card-border: color-mix(in srgb, var(--color-lavender-mist) 16%, transparent);
+  --project-card-dot: color-mix(in srgb, var(--color-lavender-mist) 6%, transparent);
+  --project-card-bg: rgba(21, 18, 29, 0.96);
+  --project-card-inset: rgba(255, 255, 255, 0.07);
+  --project-card-shadow: rgba(0, 0, 0, 0.34) 0 20px 54px;
+  --project-card-hover-border: color-mix(in srgb, var(--color-lavender-mist) 28%, transparent);
+  --project-card-hover-dot: color-mix(in srgb, var(--color-lavender-mist) 7.5%, transparent);
+  --project-card-hover-bg: rgba(32, 27, 42, 0.98);
+  --project-card-hover-inset: rgba(255, 255, 255, 0.09);
+  --project-card-hover-shadow: rgba(0, 0, 0, 0.46) 0 34px 84px;
+}
+
+.signal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    radial-gradient(color-mix(in srgb, var(--color-plum-charcoal) 4.5%, transparent) 0.75px, transparent 0.75px),
+    linear-gradient(115deg, transparent 0 48%, color-mix(in srgb, var(--color-plum-charcoal) 3.5%, transparent) 48% 49%, transparent 49% 100%);
+  background-size: 8px 8px, 44px 44px;
+  opacity: 0.46;
+  pointer-events: none;
+}
+
+.signal > * {
+  position: relative;
+  z-index: 1;
+}
+
+.signal::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--space-1);
+  background: var(--color-ink-violet);
+}
+
+.signal:hover,
+.signal:focus-within {
+  border-color: var(--color-primary);
+  background:
+    radial-gradient(var(--project-card-hover-dot) 0.75px, transparent 0.75px),
+    var(--project-card-hover-bg);
+  background-size: 6px 6px, auto;
+  transform: translateY(-2px);
+}
+
+.signal > strong {
+  font-family: var(--font-display-compact);
+  font-size: var(--text-h3);
+  font-weight: 800;
+}
+
+.signal__stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.signal__stats div {
+  border-top: 1px solid var(--border-soft);
+  padding-top: var(--space-3);
+}
+
+.signal__stats strong {
+  display: block;
+  margin-top: var(--space-1);
+  color: var(--color-ink-violet);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-h5);
+  line-height: 1;
+}

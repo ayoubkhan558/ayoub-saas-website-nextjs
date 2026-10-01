@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
-import styles from "../ProjectsPage.module.scss";
+import styles from "./ProjectsHero.module.scss";
 
 export function ProjectsHero({ stats }: { stats: Array<{ label: string; value: string }> }) {
   return (

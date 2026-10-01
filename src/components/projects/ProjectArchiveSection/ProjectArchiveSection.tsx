@@ -23,7 +23,8 @@ export function ProjectArchiveSection({
   const getEntries = (items: ProjectArchiveItem[]): CopyLinkEntry[] => items
     .filter((project) => project.projectStatus === "Live")
     .flatMap((project) => getProjectLinks(project).map((link) => ({
-      name: project.websiteName || project.websiteUrl || `Project ${project.rowNumber}`,
+      name: project.websiteName || project.websiteUrl || "Untitled project",
+      nameLabel: project.platformFrameworkBuilder || project.projectType || "Website",
       category: project.categoryNiche || project.projectType || "Uncategorized",
       href: link.href,
     })));

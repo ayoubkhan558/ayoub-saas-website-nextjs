@@ -1,6 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import type { Splide as SplideInstance } from "@splidejs/splide";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
 import { IconGlyph } from "../IconGlyph/IconGlyph";
 import styles from "./ClientTestimonials.module.scss";
@@ -13,6 +15,7 @@ function hasTestimonial(client: Client) {
 
 export function ClientTestimonials({ clients }: { clients: Client[] }) {
   const testimonials = useMemo(() => clients.filter(hasTestimonial).slice(0, 12), [clients]);
+  const splideRef = useRef<SplideInstance | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const activeClient = testimonials[activeIndex] ?? testimonials[0];
 
@@ -20,12 +23,9 @@ export function ClientTestimonials({ clients }: { clients: Client[] }) {
     return null;
   }
 
-  const goToPrevious = () => {
-    setActiveIndex((current) => (current === 0 ? testimonials.length - 1 : current - 1));
-  };
-
-  const goToNext = () => {
-    setActiveIndex((current) => (current + 1) % testimonials.length);
+  const goToIndex = (index: number) => {
+    setActiveIndex(index);
+    splideRef.current?.go(index);
   };
 
   return (
@@ -41,7 +41,7 @@ export function ClientTestimonials({ clients }: { clients: Client[] }) {
                   className={`${styles["testimonials__client-button"]} ${isActive ? styles["testimonials__client-button--active"] : ""}`}
                   type="button"
                   key={client.name}
-                  onClick={() => setActiveIndex(index)}
+                  onClick={() => goToIndex(index)}
                   aria-label={`Show testimonial from ${client.name}`}
                   aria-pressed={isActive}
                 >
@@ -66,38 +66,49 @@ export function ClientTestimonials({ clients }: { clients: Client[] }) {
           </div>
 
           <div className={styles["testimonials__picker-actions"]} aria-label="Testimonial slider controls">
-            <button type="button" onClick={goToPrevious} aria-label="Previous testimonial">
+            <button type="button" onClick={() => splideRef.current?.go("<")} aria-label="Previous testimonial">
               <IconGlyph name="arrowRight" />
             </button>
             <span className={styles["testimonials__picker-count"]}>
               {activeIndex + 1}/{testimonials.length}
             </span>
-            <button type="button" onClick={goToNext} aria-label="Next testimonial">
+            <button type="button" onClick={() => splideRef.current?.go(">")} aria-label="Next testimonial">
               <IconGlyph name="arrowRight" />
             </button>
           </div>
         </div>
 
-        <figure className={styles["testimonials__quote-card"]} key={activeClient.name}>
-          <div className={styles["testimonials__quote-logo"]} aria-hidden="true">
-            <img src={activeClient.logo} alt={`${activeClient.name} logo`} title={`${activeClient.name} logo`} />
-          </div>
-          <blockquote className={styles["testimonials__quote"]}>
-            <span className={styles["testimonials__quote-mark"]} aria-hidden="true">"</span>
-            <p className={styles["testimonials__quote-text"]}>{activeClient.testimonial}</p>
-          </blockquote>
-          <figcaption className={styles["testimonials__author"]}>
-            <span className={styles["testimonials__author-image"]}>
-              {activeClient.avatar ? (
-                <img src={activeClient.avatar} alt={`${activeClient.name} client testimonial avatar`} title={`${activeClient.name} client testimonial avatar`} loading="lazy" />
-              ) : (
-                <img src={activeClient.logoDark ?? activeClient.logo} alt={`${activeClient.name} logo`} title={`${activeClient.name} logo`} loading="lazy" />
-              )}
-            </span>
-            <strong className={styles["testimonials__author-name"]}>{activeClient.name}</strong>
-            <span className={styles["testimonials__author-role"]}>{activeClient.role}</span>
-          </figcaption>
-        </figure>
+        <Splide
+          className={styles["testimonials__quote-slider"]}
+          options={{ type: "slide", perPage: 1, pagination: false, arrows: false, rewind: true }}
+          onMounted={(splide: SplideInstance) => { splideRef.current = splide; }}
+          onMoved={(_splide: SplideInstance, newIndex: number) => setActiveIndex(newIndex)}
+        >
+          {testimonials.map((client) => (
+            <SplideSlide key={client.name}>
+              <figure className={styles["testimonials__quote-card"]}>
+                <div className={styles["testimonials__quote-logo"]} aria-hidden="true">
+                  <img src={client.logo} alt={`${client.name} logo`} title={`${client.name} logo`} />
+                </div>
+                <blockquote className={styles["testimonials__quote"]}>
+                  <span className={styles["testimonials__quote-mark"]} aria-hidden="true">&quot;</span>
+                  <p className={styles["testimonials__quote-text"]}>{client.testimonial}</p>
+                </blockquote>
+                <figcaption className={styles["testimonials__author"]}>
+                  <span className={styles["testimonials__author-image"]}>
+                    {client.avatar ? (
+                      <img src={client.avatar} alt={`${client.name} client testimonial avatar`} title={`${client.name} client testimonial avatar`} loading="lazy" />
+                    ) : (
+                      <img src={client.logoDark ?? client.logo} alt={`${client.name} logo`} title={`${client.name} logo`} loading="lazy" />
+                    )}
+                  </span>
+                  <strong className={styles["testimonials__author-name"]}>{client.name}</strong>
+                  <span className={styles["testimonials__author-role"]}>{client.role}</span>
+                </figcaption>
+              </figure>
+            </SplideSlide>
+          ))}
+        </Splide>
       </div>
     </section>
   );
