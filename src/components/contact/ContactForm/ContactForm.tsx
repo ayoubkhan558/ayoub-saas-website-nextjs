@@ -3,7 +3,7 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { useSearchParams } from "next/navigation";
 import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
-import styles from "../ContactPage.module.scss";
+import styles from "./ContactForm.module.scss";
 
 const projectTypes = [
   "Business website redesign",
@@ -17,6 +17,17 @@ const projectTypes = [
 const budgetRanges = ["Under $1,000", "$1,000 - $3,000", "$3,000 - $7,500", "$7,500+", "Not sure yet"];
 const timelines = ["ASAP", "2-4 weeks", "1-2 months", "Flexible / planning ahead"];
 const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? "mgojyyqd";
+
+export function ContactFormFallback() {
+  return (
+    <div className={styles["contact-form-card"]}>
+      <div className={styles["contact-form-card__header"]}>
+        <span className={styles["contact-page__eyebrow"]}>Project brief</span>
+        <h2>Loading form.</h2>
+      </div>
+    </div>
+  );
+}
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm(formspreeId);

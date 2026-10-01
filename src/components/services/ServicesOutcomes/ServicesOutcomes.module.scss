@@ -1,0 +1,75 @@
+@use "../../../styles/mixins" as *;
+
+.services-outcomes__inner {
+  display: grid;
+  gap: var(--page-hero-grid-gap);
+  align-items: start;
+
+  @include mq(lg) {
+    grid-template-columns: minmax(0, 0.92fr) minmax(340px, 0.52fr);
+  }
+}
+
+.services-outcomes__copy {
+  @include hero-copy;
+}
+
+.services-page__eyebrow {
+  color: var(--color-ink-violet);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+}
+
+.services-outcomes__copy > .services-page__eyebrow {
+  @include hero-eyebrow;
+}
+
+.services-outcomes__copy h2 {
+  max-width: 820px;
+  font-size: var(--page-section-title-size);
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  line-height: var(--leading-heading);
+}
+
+.services-outcomes__copy h2 i {
+  color: var(--color-ink-violet);
+  font-family: var(--font-editorial-display);
+  font-style: normal;
+  font-weight: 200;
+}
+
+.services-outcomes__copy p {
+  @include hero-text;
+}
+
+.services-outcomes__grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.services-outcome-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+  min-height: 0;
+  border-top: 1px solid color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent);
+  padding-top: var(--space-4);
+}
+
+.services-outcome-card span {
+  color: var(--color-ink-violet);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+}
+
+.services-outcome-card strong {
+  min-width: 0;
+  font-family: var(--font-display-compact);
+  font-size: var(--text-h4);
+  font-weight: 800;
+  text-wrap: balance;
+}

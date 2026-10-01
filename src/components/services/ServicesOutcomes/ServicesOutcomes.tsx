@@ -1,5 +1,5 @@
 import { outcomes } from "../servicesPageData";
-import styles from "../ServicesPage.module.scss";
+import styles from "./ServicesOutcomes.module.scss";
 
 export function ServicesOutcomes() {
   return (

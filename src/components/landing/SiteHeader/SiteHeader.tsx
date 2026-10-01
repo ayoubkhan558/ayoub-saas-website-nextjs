@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { type MouseEvent, useEffect, useState } from "react";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
 import { IconGlyph } from "../IconGlyph/IconGlyph";
@@ -13,6 +14,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const pathname = usePathname();
   const profile = portfolio.profile;
 
   const openContactPanel = () => {
@@ -57,6 +59,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
               key={link.href}
               className={styles["site-header__nav-link"]}
               href={link.href}
+              aria-current={pathname === link.href || pathname.startsWith(`${link.href}/`) ? "page" : undefined}
               title={`Go to ${link.label}`}
             >
               {link.label}

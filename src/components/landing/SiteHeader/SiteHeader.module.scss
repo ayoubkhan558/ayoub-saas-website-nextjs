@@ -157,6 +157,10 @@
   background: var(--color-bone-mist);
 }
 
+.site-header__nav-link[aria-current="page"] {
+  color: var(--color-primary);
+}
+
 .site-header__nav-actions {
   display: flex;
   align-items: center;

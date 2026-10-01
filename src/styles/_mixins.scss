@@ -22,9 +22,11 @@ $breakpoints: (
 
 @mixin mq($bp) {
   $val: $bp;
+
   @if map.has-key($breakpoints, $bp) {
     $val: map.get($breakpoints, $bp);
   }
+
   @media (min-width: $val) {
     @content;
   }

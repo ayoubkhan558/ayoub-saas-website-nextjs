@@ -10,10 +10,11 @@ export function ProjectsHero({ stats }: { stats: Array<{ label: string; value: s
           <div className={styles.hero__copy}>
             <span className={styles.eyebrow}>Projects</span>
             <h1>
-              WordPress, Bricks, React, and Shopify project archive
+              Proven Web Builds, Custom Code & CMS Projects
             </h1>
             <p>
-              Shipped websites, Bricks builds, Figma handoffs, and store work from client projects.
+              Explore 130+ shipped client projects—from high-converting WordPress & Bricks builds to custom React, Next.js, and Shopify platforms.
+              {/* Shipped websites, Bricks builds, Figma handoffs, and store work from client projects. */}
             </p>
             <div className={styles.hero__actions}>
               <Link className="button" href="/contact" title="Contact Muhammad Ayoub about a project">
