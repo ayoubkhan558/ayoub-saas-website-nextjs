@@ -1,22 +1,55 @@
 .control {
-  position: sticky;
-  top: 80px;
-  z-index: 20;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: end;
-  width: fit-content;
-  max-width: calc(100vw - 2 * var(--space-4));
-  justify-content: center;
-  margin-inline: auto;
-  gap: var(--space-3);
-  border: 1px solid var(--color-fog-border);
-  background: var(--color-surface-chrome);
-  box-shadow: color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent) 0 12px 32px;
-  padding: var(--space-3);
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 60;
+  transform: translateY(-50%);
 }
 
-.category {
+.trigger {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  gap: var(--space-2);
+  border: 1px solid var(--color-fog-border);
+  border-left: 0;
+  background: var(--color-surface-chrome);
+  box-shadow: color-mix(in srgb, var(--color-plum-charcoal) 14%, transparent) 0 8px 24px;
+  color: var(--color-ink-violet);
+  cursor: pointer;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  padding: 0 var(--space-3);
+}
+
+.trigger span {
+  font-size: var(--text-lg);
+  line-height: 1;
+}
+
+.trigger:focus-visible,
+.field input:focus-visible,
+.field select:focus-visible,
+.option input:focus-visible,
+.actions button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.panel {
+  display: grid;
+  width: min(310px, calc(100vw - 48px));
+  max-height: min(80vh, 620px);
+  gap: var(--space-3);
+  overflow-y: auto;
+  margin-top: var(--space-2);
+  border: 1px solid var(--color-fog-border);
+  background: var(--color-surface-chrome);
+  box-shadow: color-mix(in srgb, var(--color-plum-charcoal) 18%, transparent) 0 12px 32px;
+  padding: var(--space-4);
+}
+
+.field {
   display: grid;
   gap: var(--space-1);
   color: var(--color-ink-violet);
@@ -25,21 +58,54 @@
   text-transform: uppercase;
 }
 
-.category select {
-  min-height: 38px;
+.field input,
+.field select {
+  min-height: 36px;
   max-width: 100%;
   border: 1px solid var(--border-soft);
   border-radius: 0;
   background: var(--color-surface);
   color: var(--color-ink-violet);
   font: inherit;
-  padding: 0 var(--space-3);
+  padding: 0 var(--space-2);
   text-transform: none;
 }
 
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-ink-violet);
+  font-size: var(--text-sm);
+}
+
+.option input {
+  accent-color: var(--color-primary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
 .status {
-  flex-basis: 100%;
   min-height: 1.4em;
   color: var(--color-storm-mauve);
   font-size: var(--text-sm);
+}
+
+@media (max-width: 600px) {
+  .control {
+    top: auto;
+    bottom: var(--space-4);
+    transform: none;
+  }
+
+  .panel {
+    position: absolute;
+    bottom: calc(100% + var(--space-2));
+    left: 0;
+    margin-top: 0;
+  }
 }

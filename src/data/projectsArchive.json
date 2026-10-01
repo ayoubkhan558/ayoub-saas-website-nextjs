@@ -8,7 +8,6 @@
   ],
   "projects": [
     {
-      "rowNumber": 141,
       "websiteName": "Xgrid",
       "categoryNiche": "Cloud infrastructure and technology services",
       "websiteUrl": "https://www.xgrid.co/",
@@ -23,7 +22,6 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 142,
       "websiteName": "Alkira",
       "categoryNiche": "Cloud networking",
       "websiteUrl": "https://www.alkira.com/",
@@ -38,7 +36,6 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 143,
       "websiteName": "Chkk",
       "categoryNiche": "Cloud native infrastructure",
       "websiteUrl": "https://www.chkk.io/",
@@ -53,7 +50,6 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 2,
       "websiteName": "dalailkhairat",
       "categoryNiche": "Islamic Site",
       "websiteUrl": "https://dalailkhairat.com/",
@@ -68,9 +64,8 @@
       "screenshot": "/projects/project-ss-dalailkhairat.jpg"
     },
     {
-      "rowNumber": 3,
       "websiteName": "Pagano Law",
-      "categoryNiche": null,
+      "categoryNiche": "Legal services",
       "websiteUrl": "https://paganolaw.net/",
       "figmaLink": null,
       "platformFrameworkBuilder": null,
@@ -104,7 +99,6 @@
       }
     },
     {
-      "rowNumber": 4,
       "websiteName": "King SR - Real Estate RK",
       "categoryNiche": "Real Estate",
       "websiteUrl": "https://www.kingsre.ae/",
@@ -119,9 +113,8 @@
       "screenshot": "/projects/project-ss-king-sr-real-estate-rk.jpg"
     },
     {
-      "rowNumber": 5,
       "websiteName": "Edinburghpt Academy",
-      "categoryNiche": null,
+      "categoryNiche": "Education and learning",
       "websiteUrl": "https://edinburghptacademy.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS",
@@ -133,9 +126,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 6,
       "websiteName": "Weinberger Aesthetics",
-      "categoryNiche": null,
+      "categoryNiche": "Health and wellness",
       "websiteUrl": "https://weinberger-aesthetics.de/",
       "figmaLink": "https://www.figma.com/design/uAAfNrvyJaOmVuif5wQuHV/WA-Section-Design?node-id=28-734&t=rHWrD4Ld7a2Ywg7h-0",
       "platformFrameworkBuilder": "Bricks Page Builder",
@@ -148,9 +140,8 @@
       "screenshot": "/projects/project-ss-weinberger-aesthetics.jpg"
     },
     {
-      "rowNumber": 7,
       "websiteName": "GlowCore",
-      "categoryNiche": null,
+      "categoryNiche": "Online retail",
       "websiteUrl": "https://glowcore.com.pk/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Shopify",
@@ -163,24 +154,40 @@
       "screenshot": "/projects/project-ss-glowcore.jpg"
     },
     {
-      "rowNumber": 8,
+      "websiteName": "Supplements Hub",
+      "categoryNiche": "Health & Nutrition / Dietary Supplements",
+      "websiteUrl": "https://supplementshub.com.pk/",
+      "figmaLink": null,
+      "platformFrameworkBuilder": "Shopify",
+      "client": "Arslan FSD",
+      "notes": null,
+      "date": null,
+      "projectType": "E-commerce website",
+      "description": "Showcases authentic weight management, beauty collagen, family wellness, and daily growth supplements for online ordering across Pakistan.",
+      "projectStatus": "Live",
+      "screenshot": "/projects/project-ss-supplements-hub.jpg"
+    },
+    {
       "websiteName": "Reppit",
-      "categoryNiche": null,
+      "categoryNiche": "AI SaaS / Reddit Marketing",
       "websiteUrl": "https://reppit.ai/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Bricks Page Builder",
       "client": "Jordan San",
       "notes": null,
       "date": null,
-      "projectType": "WordPress website",
-      "description": "Reppit is a wordpress website built with Bricks Page Builder to ship a focused front-end experience from design to launch.",
+      "projectType": "Bricks Builder website",
+      "description": "Automates Reddit lead generation, keyword monitoring, and AI-powered reply engagement for brand visibility and sales.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-reppit.jpg"
+      "screenshot": "/projects/project-ss-reppit.jpg",
+      "originalStack": [
+        "WordPress",
+        "Bricks Builder"
+      ]
     },
     {
-      "rowNumber": 9,
       "websiteName": "SKU Auto",
-      "categoryNiche": null,
+      "categoryNiche": "Inventory & SKU Automation",
       "websiteUrl": "https://sku-auto.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Bricks Page Builder",
@@ -188,14 +195,13 @@
       "notes": null,
       "date": null,
       "projectType": "WordPress website",
-      "description": "SKU Auto is a wordpress website built with Bricks Page Builder to make the offer easier to scan across devices.",
+      "description": "Automates SKU and barcode generation with custom templates, bulk editing, and automated product updates for store inventory.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-sku-auto.jpg"
     },
     {
-      "rowNumber": 10,
       "websiteName": "Rebill",
-      "categoryNiche": null,
+      "categoryNiche": "Subscriptions & Recurring Billing",
       "websiteUrl": "https://rebill.shop/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Bricks Page Builder",
@@ -203,14 +209,13 @@
       "notes": null,
       "date": null,
       "projectType": "WordPress website",
-      "description": "Rebill is a wordpress website built with Bricks Page Builder to present services clearly and convert qualified visitors.",
+      "description": "Automates subscription management, recurring payments, customizable billing cycles, and self-service portals to boost customer LTV.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-rebill.jpg"
     },
     {
-      "rowNumber": 11,
-      "websiteName": "Price Bulk Edit",
-      "categoryNiche": null,
+      "websiteName": "Smart Bulk Price Editor",
+      "categoryNiche": "E-commerce SaaS / Pricing Automation",
       "websiteUrl": "https://bulk-edit.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Bricks Page Builder",
@@ -218,14 +223,13 @@
       "notes": null,
       "date": null,
       "projectType": "WordPress website",
-      "description": "Price Bulk Edit is a wordpress website built with Bricks Page Builder to turn the brand into a faster production-ready web presence.",
+      "description": "Automates product pricing, scheduled discounts, multi-market rate updates, and one-click price rollbacks for store inventory.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-price-bulk-edit.jpg"
     },
     {
-      "rowNumber": 12,
       "websiteName": "Shoppable",
-      "categoryNiche": null,
+      "categoryNiche": "Video commerce",
       "websiteUrl": "https://shoppable-video.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Bricks Page Builder",
@@ -238,9 +242,8 @@
       "screenshot": "/projects/project-ss-shoppable.jpg"
     },
     {
-      "rowNumber": 13,
       "websiteName": "301-redirect",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing automation tools",
       "websiteUrl": "https://301-redirect.app/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Bricks Page Builder",
@@ -253,9 +256,8 @@
       "screenshot": "/projects/project-ss-301-redirect.jpg"
     },
     {
-      "rowNumber": 14,
       "websiteName": "Theme-scheduler",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing automation tools",
       "websiteUrl": "https://theme-scheduler.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Bricks Page Builder",
@@ -268,9 +270,8 @@
       "screenshot": "/projects/project-ss-theme-scheduler.jpg"
     },
     {
-      "rowNumber": 15,
       "websiteName": "Pin It",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing automation tools",
       "websiteUrl": "https://pin-auto.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Bricks Page Builder",
@@ -304,9 +305,8 @@
       }
     },
     {
-      "rowNumber": 16,
-      "websiteName": "Webp Optimzer",
-      "categoryNiche": null,
+      "websiteName": "WebP Optimizer",
+      "categoryNiche": "Image Optimization / Speed SEO",
       "websiteUrl": "https://webp-image.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Bricks Page Builder",
@@ -314,29 +314,27 @@
       "notes": null,
       "date": null,
       "projectType": "WordPress website",
-      "description": "Webp Optimzer is a wordpress website built with Bricks Page Builder to improve trust, browsing flow, and mobile readability.",
+      "description": "Showcases bulk WebP conversion, background compression, lazy loading, and SEO alt-text tools to improve site speed and Core Web Vitals.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-webp-optimzer.jpg"
     },
     {
-      "rowNumber": 17,
-      "websiteName": "serpio",
-      "categoryNiche": null,
+      "websiteName": "Serpio",
+      "categoryNiche": "SaaS / SEO Tools",
       "websiteUrl": "https://serpio.app/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Bricks Page Builder",
       "client": "Ismir",
       "notes": null,
       "date": null,
-      "projectType": "WordPress website",
-      "description": "serpio is a wordpress website built with Bricks Page Builder to make key content easier to understand and act on.",
+      "projectType": "Bricks Builder",
+      "description": "Serpio.app is a pay-as-you-go SEO rank tracking platform built with WordPress and Bricks Builder, designed to deliver accurate organic and Google Maps grid rank analytics.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-serpio.jpg"
     },
     {
-      "rowNumber": 18,
       "websiteName": "carptrac",
-      "categoryNiche": null,
+      "categoryNiche": "Automotive and transport",
       "websiteUrl": "https://www.carptrac.com.fj/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordperss, Elementor, WooCommerce",
@@ -350,9 +348,8 @@
       "screenshot": "/projects/project-ss-carptrac.jpg"
     },
     {
-      "rowNumber": 19,
       "websiteName": "Markedine",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://www.markedine.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "WordPerss/Elementor",
@@ -387,9 +384,8 @@
       }
     },
     {
-      "rowNumber": 23,
       "websiteName": "5gStore",
-      "categoryNiche": null,
+      "categoryNiche": "Online retail",
       "websiteUrl": "http://5gstore.pk/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordperss, Elementor, WooCommerce",
@@ -424,9 +420,8 @@
       }
     },
     {
-      "rowNumber": 24,
       "websiteName": "Waleed Portfolio",
-      "categoryNiche": null,
+      "categoryNiche": "Personal portfolios",
       "websiteUrl": "https://serveekay.com/",
       "figmaLink": "https://www.figma.com/design/B1bSg9E8R8rrMB5Q57ji6h/Untitled?node-id=0-1&p=f&t=wOfumBd8BeUhPGT6-0",
       "platformFrameworkBuilder": "Bricks Page Builder",
@@ -440,16 +435,15 @@
       "screenshot": "/projects/project-ss-waleed-portfolio.jpg"
     },
     {
-      "rowNumber": 26,
       "websiteName": "LWS Academy",
-      "categoryNiche": null,
+      "categoryNiche": "Education and learning",
       "websiteUrl": "https://lws.academy/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordperss, Elementor, TutorLMS",
       "client": "",
       "notes": null,
       "date": null,
-      "projectType": "Education website",
+      "projectType": "WordPress website",
       "description": "LWS Academy is an education website built with Wordperss, Elementor, TutorLMS to improve trust, browsing flow, and mobile readability.",
       "projectStatus": "Redesigned by Client",
       "myRole": "Built the original version of the website.",
@@ -460,9 +454,8 @@
       "screenshot": "/projects/project-ss-lws-academy.jpg"
     },
     {
-      "rowNumber": 27,
       "websiteName": "50Stars",
-      "categoryNiche": null,
+      "categoryNiche": "Professional services",
       "websiteUrl": "https://50stars.pro/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordperss, Elementor",
@@ -475,9 +468,8 @@
       "screenshot": "/projects/project-ss-50stars.jpg"
     },
     {
-      "rowNumber": 28,
       "websiteName": "ShiningHorizon",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://shininghorizon.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordperss, Elementor",
@@ -490,9 +482,8 @@
       "screenshot": "/projects/project-ss-shininghorizon.jpg"
     },
     {
-      "rowNumber": 29,
       "websiteName": "BabyPNG",
-      "categoryNiche": null,
+      "categoryNiche": "Business services  ",
       "websiteUrl": "http://www.babypng.com/",
       "figmaLink": "https://www.figma.com/file/NnX3sSnUGbW2LhOheP6Sft/BabyPNG-development?type=design&node-id=0-1&mode=design&t=xlkhm1SjiI80dMz1-0",
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -502,15 +493,14 @@
       "extra": {
         "client2": "Fiverr, India"
       },
-      "projectType": "Business website",
+      "projectType": "Figma to HTML/CSS",
       "description": "BabyPNG is a business website translated from Figma with HTML, CSS, Bootstrap to give the client a sharper, easier-to-maintain online presence.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-babypng.jpg"
     },
     {
-      "rowNumber": 30,
       "websiteName": "Naseeha",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://naseeha.surge.sh/",
       "figmaLink": "https://www.figma.com/file/l2cxK2hrGJmgBm7KTtnWqZ/Naseeha?type=design&node-id=725-9180&mode=design&t=xlkhm1SjiI80dMz1-0",
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -526,9 +516,8 @@
       "screenshot": "/projects/project-ss-naseeha.jpg"
     },
     {
-      "rowNumber": 31,
       "websiteName": "Sun Shield Insurance",
-      "categoryNiche": null,
+      "categoryNiche": "Finance and insurance",
       "websiteUrl": "https://sunshieldinsurance.com/",
       "figmaLink": "https://www.figma.com/file/FmNLwfTFE6n9itNNGvYOJa/SUN-SHIELD-WEBSITE-Final?node-id=1%3A13&mode=dev",
       "platformFrameworkBuilder": "Wordperss, Elementor",
@@ -549,9 +538,8 @@
       "screenshot": "/projects/project-ss-sun-shield-insurance.jpg"
     },
     {
-      "rowNumber": 32,
       "websiteName": "Juhayana",
-      "categoryNiche": null,
+      "categoryNiche": "Food and hospitality",
       "websiteUrl": "https://www.juhayna-co.com/",
       "figmaLink": "https://www.figma.com/file/r59v15bOHaMMQOYJuOY3w3/Juhayna?mode=dev",
       "platformFrameworkBuilder": "Wordperss, Elementor",
@@ -565,9 +553,8 @@
       "description": "Juhayana is a wordpress website translated from Figma with Wordperss, Elementor to present services clearly and convert qualified visitors."
     },
     {
-      "rowNumber": 33,
       "websiteName": "Waitiyi Admin",
-      "categoryNiche": null,
+      "categoryNiche": "Software products",
       "websiteUrl": "https://waitiyi.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -579,9 +566,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 34,
       "websiteName": "Waitiyi Front",
-      "categoryNiche": null,
+      "categoryNiche": "Software products",
       "websiteUrl": "https://waitifi-front.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -593,9 +579,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 35,
       "websiteName": "punisher",
-      "categoryNiche": null,
+      "categoryNiche": "Web interfaces",
       "websiteUrl": "http://punisher-react.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Reactjs",
@@ -607,26 +592,24 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 36,
       "websiteName": "tembekasua",
-      "categoryNiche": null,
-      "websiteUrl": "https://tembekasua.com/",
+      "categoryNiche": "Software products",
+      "websiteUrl": "http://tembekasua-react.surge.sh/",
       "figmaLink": "https://www.figma.com/file/vKg1IRnyvbUOAYusYZB41u/tembekasua?node-id=1679%3A92932&mode=dev",
       "platformFrameworkBuilder": "Tailwind, Reactjs",
       "client": "",
-      "notes": "http://tembekasua-react.surge.sh/",
+      "notes": "http://tembekasua-react.surge.sh/, https://www.tembekasua.africa/ ",
       "date": null,
       "extra": {
         "client2": "Fiverr"
       },
       "projectType": "Web app interface",
       "description": "tembekasua is a web app interface translated from Figma with Tailwind, Reactjs to ship a focused front-end experience from design to launch.",
-      "projectStatus": "Offline (Domain Expired)"
+      "projectStatus": "Live"
     },
     {
-      "rowNumber": 37,
       "websiteName": "MKZ Mart",
-      "categoryNiche": null,
+      "categoryNiche": "Online retail",
       "websiteUrl": "https://mkzmart.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": null,
@@ -639,9 +622,8 @@
       "screenshot": "/projects/project-ss-mkz-mart.jpg"
     },
     {
-      "rowNumber": 38,
       "websiteName": "Studyly",
-      "categoryNiche": null,
+      "categoryNiche": "Education and learning",
       "websiteUrl": "https://studyly.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS",
@@ -654,9 +636,8 @@
       "screenshot": "/projects/project-ss-studyly.jpg"
     },
     {
-      "rowNumber": 39,
       "websiteName": "StrainProxies Admin",
-      "categoryNiche": null,
+      "categoryNiche": "Software products",
       "websiteUrl": "https://strain-proxies.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -668,9 +649,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 40,
       "websiteName": "StrainProxies Front",
-      "categoryNiche": null,
+      "categoryNiche": "Software products",
       "websiteUrl": "https://strainproxies.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -683,9 +663,8 @@
       "screenshot": "/projects/project-ss-strainproxies-front.jpg"
     },
     {
-      "rowNumber": 41,
       "websiteName": "PaperPrensa",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://paper-prenza.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap, JQuery",
@@ -697,9 +676,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 43,
       "websiteName": "Traffictinker",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://traffictinker.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, JS, JQuery, Bootstrap, Particles.js",
@@ -711,9 +689,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 44,
       "websiteName": "WallsStreetBets",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://wallsstreetbets.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -725,9 +702,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 45,
       "websiteName": "PureForYou Landing",
-      "categoryNiche": null,
+      "categoryNiche": "Product marketing",
       "websiteUrl": "https://pure-for-you.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -739,9 +715,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 46,
       "websiteName": "Lazhora",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://lazhora.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -753,9 +728,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 47,
       "websiteName": "Leadgen",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://leadgen-fv.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -767,9 +741,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 48,
       "websiteName": "MonoAmi Landing",
-      "categoryNiche": null,
+      "categoryNiche": "Product marketing",
       "websiteUrl": "https://monoami.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, JS, JQuery, Bootstrap, Particles.js",
@@ -782,9 +755,8 @@
       "screenshot": "/projects/project-ss-monoami-landing.jpg"
     },
     {
-      "rowNumber": 49,
       "websiteName": "BCD Landing",
-      "categoryNiche": null,
+      "categoryNiche": "Product marketing",
       "websiteUrl": "https://bcd-landing.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -796,9 +768,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 50,
       "websiteName": "Assertive Industries",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://assertive-industries.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -810,9 +781,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 51,
       "websiteName": "Casino Bonuses Finder",
-      "categoryNiche": null,
+      "categoryNiche": "Gaming and digital entertainment",
       "websiteUrl": "https://casino-bonuses-finder.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -824,9 +794,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 52,
       "websiteName": "Cartoon Landing",
-      "categoryNiche": null,
+      "categoryNiche": "Product marketing",
       "websiteUrl": "https://cartoon-landing.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -838,9 +807,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 53,
       "websiteName": "Art Digital",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://art-digital.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -853,9 +821,8 @@
       "screenshot": "/projects/project-ss-art-digital.jpg"
     },
     {
-      "rowNumber": 54,
       "websiteName": "SixAgri Front",
-      "categoryNiche": null,
+      "categoryNiche": "Agriculture",
       "websiteUrl": "sixagri-front.surge.sh",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -866,9 +833,8 @@
       "description": "SixAgri Front is a business website built with HTML, CSS, Bootstrap to support lead generation with a cleaner user journey."
     },
     {
-      "rowNumber": 55,
       "websiteName": "Youtube Convert",
-      "categoryNiche": null,
+      "categoryNiche": "Media and content",
       "websiteUrl": "https://yt-converter-front.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -881,9 +847,8 @@
       "screenshot": "/projects/project-ss-youtube-convert.jpg"
     },
     {
-      "rowNumber": 56,
       "websiteName": "StarFM",
-      "categoryNiche": null,
+      "categoryNiche": "Media and content",
       "websiteUrl": "https://starfm.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -895,9 +860,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 57,
       "websiteName": "YouTube Wav",
-      "categoryNiche": null,
+      "categoryNiche": "Media and content",
       "websiteUrl": "https://yt-wav.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -909,9 +873,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 58,
       "websiteName": "10ANS+1",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "10ans.surge.sh",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -922,9 +885,8 @@
       "description": "10ANS+1 is a business website built with HTML, CSS, Bootstrap to make the offer easier to scan across devices."
     },
     {
-      "rowNumber": 59,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://tokyo-ten.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -936,9 +898,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 60,
       "websiteName": "Jackson CV",
-      "categoryNiche": null,
+      "categoryNiche": "Personal portfolios",
       "websiteUrl": "https://jackson-cv.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -950,9 +911,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 61,
       "websiteName": "Kodak Connect",
-      "categoryNiche": null,
+      "categoryNiche": "Media and content",
       "websiteUrl": "https://fv-kodak-connect.pages.dev/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -965,14 +925,13 @@
       "screenshot": "/projects/project-ss-kodak-connect.jpg"
     },
     {
-      "rowNumber": 62,
       "websiteName": "Portoro",
-      "categoryNiche": null,
-      "websiteUrl": "https://portoro.pages.dev/",
+      "categoryNiche": "Business services",
+      "websiteUrl": "https://www.portoro.com/",
       "figmaLink": "https://www.figma.com/file/lpbXdBlPE6NcXjoieZCr4v/For-Conversion",
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
       "client": "",
-      "notes": "https://github.com/Hackathon-Soft/portoro",
+      "notes": "https://portoro.pages.dev/, https://github.com/Hackathon-Soft/portoro",
       "date": null,
       "projectType": "Landing page",
       "description": "Portoro is a landing page translated from Figma with HTML, CSS, Bootstrap to improve trust, browsing flow, and mobile readability.",
@@ -980,9 +939,8 @@
       "screenshot": "/projects/project-ss-portoro.jpg"
     },
     {
-      "rowNumber": 63,
       "websiteName": "ServicePlace",
-      "categoryNiche": null,
+      "categoryNiche": "Professional services",
       "websiteUrl": "https://review-website.pages.dev/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -995,9 +953,8 @@
       "screenshot": "/projects/project-ss-serviceplace.jpg"
     },
     {
-      "rowNumber": 64,
       "websiteName": "RefillAdmin",
-      "categoryNiche": null,
+      "categoryNiche": "Software products",
       "websiteUrl": "https://refill-admin.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1009,9 +966,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 65,
       "websiteName": "Bitss",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://fv-bitss.pages.dev/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1024,9 +980,8 @@
       "screenshot": "/projects/project-ss-bitss.jpg"
     },
     {
-      "rowNumber": 66,
       "websiteName": "Safe Affinity",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://safe-affinity.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1038,9 +993,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 67,
       "websiteName": "NovaMarkets",
-      "categoryNiche": null,
+      "categoryNiche": "Finance and insurance",
       "websiteUrl": "https://nova-markets.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1052,9 +1006,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 68,
       "websiteName": "AutoMovel Landing",
-      "categoryNiche": null,
+      "categoryNiche": "Automotive and transport",
       "websiteUrl": "https://automovel-landing.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1066,9 +1019,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 69,
       "websiteName": "Guyana Landing",
-      "categoryNiche": null,
+      "categoryNiche": "Product marketing",
       "websiteUrl": "https://guyana-landing.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1080,9 +1032,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 70,
       "websiteName": "LiquidGarden",
-      "categoryNiche": null,
+      "categoryNiche": "Home and garden",
       "websiteUrl": "liquid-garden.surge.sh",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1093,9 +1044,8 @@
       "description": "LiquidGarden is a business website built with HTML, CSS, Bootstrap to turn the brand into a faster production-ready web presence."
     },
     {
-      "rowNumber": 71,
       "websiteName": "Nobux",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://nobux.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1107,9 +1057,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 72,
       "websiteName": "AccorePWA",
-      "categoryNiche": null,
+      "categoryNiche": "Software products",
       "websiteUrl": "https://accore-pwa.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1121,9 +1070,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 73,
       "websiteName": "Ventoy",
-      "categoryNiche": null,
+      "categoryNiche": "Software products",
       "websiteUrl": "ventoy.surge.sh",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1134,9 +1082,8 @@
       "description": "Ventoy is a business website built with HTML, CSS, Bootstrap to make key content easier to understand and act on."
     },
     {
-      "rowNumber": 74,
       "websiteName": "FreeEla",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://free-ela.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": null,
@@ -1148,9 +1095,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 75,
       "websiteName": "Fewcents",
-      "categoryNiche": null,
+      "categoryNiche": "Finance and insurance",
       "websiteUrl": "https://www.fewcents.co/",
       "figmaLink": null,
       "platformFrameworkBuilder": null,
@@ -1163,39 +1109,36 @@
       "screenshot": "/projects/project-ss-fewcents.jpg"
     },
     {
-      "rowNumber": 76,
       "websiteName": "XNation",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://xnation.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Reactjs, HTML, Scss, Bootstrap",
       "client": "",
       "notes": null,
       "date": null,
-      "projectType": "Frontend build",
+      "projectType": "Reactjs",
       "description": "XNation is a frontend build built with Reactjs, HTML, Scss, Bootstrap to support lead generation with a cleaner user journey.",
-      "projectStatus": "Live",
+      "projectStatus": "Offline",
       "screenshot": "/projects/project-ss-xnation.jpg"
     },
     {
-      "rowNumber": 77,
-      "websiteName": null,
-      "categoryNiche": null,
+      "websiteName": "Promo Intelligence",
+      "categoryNiche": "Web interfaces",
       "websiteUrl": "https://promo-intelligence-pro.netlify.app/",
       "figmaLink": null,
-      "platformFrameworkBuilder": "Reactjs, HTML, Scss, Bootstrap",
+      "platformFrameworkBuilder": "HTML, Scss, Bootstrap",
       "client": "",
       "notes": null,
       "date": null,
-      "projectType": "Frontend build",
-      "description": "Client project is a frontend build built with Reactjs, HTML, Scss, Bootstrap to support lead generation with a cleaner user journey.",
+      "projectType": "HTML/CSS",
+      "description": "Client project is a frontend build built with HTML, Scss, Bootstrap to support lead generation with a cleaner user journey.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-promo-intelligence-pro-netlify.jpg"
     },
     {
-      "rowNumber": 78,
       "websiteName": "Mugnsoft",
-      "categoryNiche": null,
+      "categoryNiche": "Professional services",
       "websiteUrl": "https://mugnsoft.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordperss, Elementor",
@@ -1208,9 +1151,8 @@
       "screenshot": "/projects/project-ss-mugnsoft.jpg"
     },
     {
-      "rowNumber": 79,
       "websiteName": "Polygon",
-      "categoryNiche": null,
+      "categoryNiche": "Professional services",
       "websiteUrl": "https://polygon.sa/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordperss, Elementor",
@@ -1223,9 +1165,8 @@
       "screenshot": "/projects/project-ss-polygon.jpg"
     },
     {
-      "rowNumber": 80,
       "websiteName": "TheFinancologist",
-      "categoryNiche": null,
+      "categoryNiche": "Finance and insurance",
       "websiteUrl": "https://thefinancologist.co/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordperss, Elementor",
@@ -1237,9 +1178,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 81,
-      "websiteName": null,
-      "categoryNiche": null,
+      "websiteName": "Assessment Intelligent",
+      "categoryNiche": "Business services",
       "websiteUrl": "https://assessment-intelligent.netlify.app/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1252,9 +1192,8 @@
       "screenshot": "/projects/project-ss-assessment-intelligent-netlify.jpg"
     },
     {
-      "rowNumber": 82,
-      "websiteName": null,
-      "categoryNiche": null,
+      "websiteName": "Dhabas",
+      "categoryNiche": "Food and hospitality",
       "websiteUrl": "https://dhabas.netlify.app/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1267,9 +1206,8 @@
       "screenshot": "/projects/project-ss-dhabas-netlify.jpg"
     },
     {
-      "rowNumber": 83,
-      "websiteName": null,
-      "categoryNiche": null,
+      "websiteName": "Kuza",
+      "categoryNiche": "Business services",
       "websiteUrl": "https://kuza-app.netlify.app/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1282,9 +1220,8 @@
       "screenshot": "/projects/project-ss-kuza-app-netlify.jpg"
     },
     {
-      "rowNumber": 85,
-      "websiteName": null,
-      "categoryNiche": null,
+      "websiteName": "Mrchrissy Services",
+      "categoryNiche": "Professional services",
       "websiteUrl": "https://mrchrissyservices.netlify.app/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1297,9 +1234,8 @@
       "screenshot": "/projects/project-ss-mrchrissyservices-netlify.jpg"
     },
     {
-      "rowNumber": 86,
-      "websiteName": null,
-      "categoryNiche": null,
+      "websiteName": "Service Herd",
+      "categoryNiche": "Professional services",
       "websiteUrl": "https://www.serviceherd.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1311,9 +1247,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 87,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://vikfougere.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, PHP, Laravel",
@@ -1325,9 +1260,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 88,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://tripo.netlify.app/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1340,9 +1274,8 @@
       "screenshot": "/projects/project-ss-tripo-netlify.jpg"
     },
     {
-      "rowNumber": 89,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://erepowerfl.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1353,9 +1286,8 @@
       "description": "Client project is a business website built with HTML, CSS, Bootstrap to make key content easier to understand and act on."
     },
     {
-      "rowNumber": 90,
       "websiteName": "Katy Body Sculpt",
-      "categoryNiche": null,
+      "categoryNiche": "Health and wellness",
       "websiteUrl": "https://katy-body.netlify.app/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1368,9 +1300,8 @@
       "screenshot": "/projects/project-ss-katy-body-sculpt.jpg"
     },
     {
-      "rowNumber": 91,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Food and hospitality",
       "websiteUrl": "https://www.openpantry.com.au/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -1381,9 +1312,8 @@
       "description": "Client project is a business website built with HTML, CSS, Bootstrap to make the offer easier to scan across devices."
     },
     {
-      "rowNumber": 92,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://kenmoeagency.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": null,
@@ -1395,9 +1325,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 93,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Marketing and digital services",
       "websiteUrl": "http://www.p-intelligence.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": null,
@@ -1410,9 +1339,8 @@
       "screenshot": "/projects/project-ss-p-intelligence.jpg"
     },
     {
-      "rowNumber": 94,
       "websiteName": "LuxuryLagoonDubai",
-      "categoryNiche": null,
+      "categoryNiche": "Travel and tourism",
       "websiteUrl": "https://luxurylagoondubai.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordperss, Elementor",
@@ -1424,9 +1352,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 96,
       "websiteName": "Eningo",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "eningo.se",
       "figmaLink": "https://www.figma.com/file/KgWZdYT2fOAUa4fQxLNt9Q/Eningo-mockup?node-id=0%3A1&mode=dev",
       "platformFrameworkBuilder": "Webflow",
@@ -1438,9 +1365,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 97,
       "websiteName": "The Golden Form",
-      "categoryNiche": null,
+      "categoryNiche": "Food and hospitality",
       "websiteUrl": "https://www.thegoldenfork.com.mt/",
       "figmaLink": "https://www.figma.com/file/vPZjIuEwUJtZVKWq8fy2sx/THE-GOLDEN-FORK?node-id=68%3A639&mode=dev",
       "platformFrameworkBuilder": "Wix",
@@ -1453,9 +1379,8 @@
       "screenshot": "/projects/project-ss-the-golden-form.jpg"
     },
     {
-      "rowNumber": 98,
       "websiteName": "The Infineights",
-      "categoryNiche": null,
+      "categoryNiche": "Professional services",
       "websiteUrl": "https://theinfineights.com/",
       "figmaLink": "https://www.figma.com/file/e241jolFxLdJ9qHsCYIDlb/THE-INFINEIGHTS?node-id=2%3A824&mode=dev",
       "platformFrameworkBuilder": "Wordperss, Elementor",
@@ -1467,9 +1392,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 99,
       "websiteName": "DigiHun",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://digihub.li/",
       "figmaLink": "https://www.figma.com/file/EcBjiUDJO3MlneCKtEazUd/New-DIGIHUB?node-id=0%3A1&mode=dev",
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1482,9 +1406,8 @@
       "screenshot": "/projects/project-ss-digihun.jpg"
     },
     {
-      "rowNumber": 100,
       "websiteName": "Cheapzy",
-      "categoryNiche": null,
+      "categoryNiche": "Online retail",
       "websiteUrl": "https://cheapzy.net/",
       "figmaLink": "https://www.figma.com/file/Mbkg39Gy6dsGzFdskDf2IA/CHEAPZY-WEBSITE?node-id=0%3A1&mode=dev",
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1497,9 +1420,8 @@
       "screenshot": "/projects/project-ss-cheapzy.jpg"
     },
     {
-      "rowNumber": 101,
       "websiteName": "Magnet Social",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing and digital services",
       "websiteUrl": "http://magnet.social/",
       "figmaLink": "https://www.figma.com/file/tVS468D15SuA3CoLT8dVVf/magnet-smm-(Copy)?node-id=0%3A1&mode=dev",
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1513,9 +1435,8 @@
       "screenshot": "/projects/project-ss-magnet-social.jpg"
     },
     {
-      "rowNumber": 102,
       "websiteName": "GlowUpDental",
-      "categoryNiche": null,
+      "categoryNiche": "Health and wellness",
       "websiteUrl": "https://glowupdental.co.uk/",
       "figmaLink": "https://www.figma.com/file/EBm3TFggQDe6IU9eMKewWk/GLOW-UP-DENTAL?type=design&mode=design&t=o5BL7F2hEjvzo15Z-0",
       "platformFrameworkBuilder": "Shopify",
@@ -1528,23 +1449,23 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 103,
-      "websiteName": "MoreThanBath",
-      "categoryNiche": null,
-      "websiteUrl": "https://morethanbath.com/",
+      "websiteName": "More Than Baths",
+      "categoryNiche": "Bathroom Fixtures & Home Improvement",
+      "websiteUrl": "https://morethanbaths.co.uk/",
       "figmaLink": "https://www.figma.com/file/YTWUfn5hd5CFFHuR5NzZ9x/More-Than-Bath?type=design&t=t3ekXOdJgLR1entc-6",
       "platformFrameworkBuilder": "Shopify",
-      "client": " | Epicsols",
+      "client": "Epicsols",
       "notes": "https://github.com/epicsols/episcols-shopify-theme",
       "date": "2024-02-25",
       "dateRaw": "45347.0",
       "projectType": "E-commerce website",
-      "description": "MoreThanBath is an e-commerce website translated from Figma with Shopify to support lead generation with a cleaner user journey."
+      "description": "Showcases luxury bathroom suites, custom showers, and heating products with an intuitive navigation flow to boost customer inquiries.",
+      "projectStatus": "Live",
+      "screenshot": "/projects/project-ss-more-than-baths.jpg"
     },
     {
-      "rowNumber": 104,
       "websiteName": "Champions Mortgage Team",
-      "categoryNiche": null,
+      "categoryNiche": "Finance and insurance",
       "websiteUrl": "https://championsmortgageteam.com/",
       "figmaLink": "https://www.figma.com/file/4kdaXhs0ZxRIfTxrrDdGHQ/CHAMPION-MORTAGAGE-(Copy)?mode=dev",
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1558,9 +1479,8 @@
       "screenshot": "/projects/project-ss-champions-mortgage-team.jpg"
     },
     {
-      "rowNumber": 106,
       "websiteName": "Acholyte",
-      "categoryNiche": null,
+      "categoryNiche": "Professional services",
       "websiteUrl": "http://Www.Acholyte.com",
       "figmaLink": "https://www.figma.com/file/BdvkenEPUjsVkFUR9lyM43/ACHOLYTE-WEBSITE?type=design&mode=design&t=OeKA6DbWV7m0OyrD-0",
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1574,9 +1494,8 @@
       "screenshot": "/projects/project-ss-acholyte.jpg"
     },
     {
-      "rowNumber": 107,
       "websiteName": "Majik",
-      "categoryNiche": null,
+      "categoryNiche": "Software products",
       "websiteUrl": "https://majik.bot/",
       "figmaLink": "https://www.figma.com/file/Tw5v6IJjUDV0lsSKtMIqRL/BAI-WEBSITE?type=design&mode=design&t=7fpd9NkY58FiyArg-0",
       "platformFrameworkBuilder": "Reactjs, TailwindCSS",
@@ -1588,9 +1507,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 108,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://new-beea11.webflow.io/",
       "figmaLink": "https://www.figma.com/file/KgWZdYT2fOAUa4fQxLNt9Q/Eningo-mockup?type=design&node-id=0-1&mode=design&t=RI0zFRB66LecqBOl-0",
       "platformFrameworkBuilder": "Webflow",
@@ -1601,9 +1519,8 @@
       "description": "Client project is a business website translated from Figma with Webflow to turn the brand into a faster production-ready web presence."
     },
     {
-      "rowNumber": 109,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Software products",
       "websiteUrl": "http://209.126.1.56/~eshipshtml",
       "figmaLink": "https://www.figma.com/file/q2J7E2cumcPBquvOx1VZns/BUMPING-SHIP-DASHBOARD?node-id=0%3A1&mode=dev",
       "platformFrameworkBuilder": "html,css, bootstrap 5",
@@ -1615,9 +1532,8 @@
       "description": "Client project is a web app interface translated from Figma with html,css, bootstrap 5 to support lead generation with a cleaner user journey."
     },
     {
-      "rowNumber": 110,
       "websiteName": "AppMint Landing Page",
-      "categoryNiche": null,
+      "categoryNiche": "Software products",
       "websiteUrl": "https://website-mint-landing-page.vercel.app/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Reactjs NextJs, TailwindCSS",
@@ -1631,9 +1547,8 @@
       "screenshot": "/projects/project-ss-appmint-landing-page.jpg"
     },
     {
-      "rowNumber": 111,
       "websiteName": "AppMint",
-      "categoryNiche": null,
+      "categoryNiche": "Software products",
       "websiteUrl": "https://website-mint.netlify.app/",
       "figmaLink": "WebsiteMint Final Development – Figma",
       "platformFrameworkBuilder": "Reactjs NextJs, TailwindCSS",
@@ -1647,9 +1562,8 @@
       "screenshot": "/projects/project-ss-appmint.jpg"
     },
     {
-      "rowNumber": 112,
       "websiteName": "Episcols",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://epicsols.com/",
       "figmaLink": "https://www.figma.com/file/arVVMmApgZmdzNGxxcJNWz/EPICSOLS-AGENCY-WEBSITE-2024?type=design&node-id=0-1&mode=design&t=vqAcPTGqAE4KiXBq-0",
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1667,9 +1581,8 @@
       "screenshot": "/projects/project-ss-episcols.jpg"
     },
     {
-      "rowNumber": 113,
       "websiteName": "Robux Gold",
-      "categoryNiche": null,
+      "categoryNiche": "Gaming and digital entertainment",
       "websiteUrl": "https://ro.gold/",
       "figmaLink": "https://www.figma.com/file/Isl1gmAlINlpez3CU3Znud/ROBLUXGOLD?type=design&t=NlOnUmS6H68nFy13-6",
       "platformFrameworkBuilder": "Reactjs, Bootstrap",
@@ -1682,9 +1595,8 @@
       "screenshot": "/projects/project-ss-robux-gold.jpg"
     },
     {
-      "rowNumber": 114,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Construction and home services",
       "websiteUrl": "https://reyesenvironmental.com/",
       "figmaLink": "https://www.figma.com/file/ApUGkUHARZCIECySq2HXHm",
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1698,9 +1610,8 @@
       "screenshot": "/projects/project-ss-reyesenvironmental.jpg"
     },
     {
-      "rowNumber": 115,
       "websiteName": "50  Stars Pro",
-      "categoryNiche": null,
+      "categoryNiche": "Professional services",
       "websiteUrl": "https://50stars.pro/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1713,9 +1624,8 @@
       "screenshot": "/projects/project-ss-50-stars-pro.jpg"
     },
     {
-      "rowNumber": 116,
       "websiteName": "YT Solutions",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://yt-solutions.surge.sh/",
       "figmaLink": "https://www.figma.com/file/2B08PEBi2nPfOafiJTcLR5/YT-Solutions?type=design&node-id=0-1&mode=design&t=HRDP9xwdxvOy3SE8-0",
       "platformFrameworkBuilder": "html, css",
@@ -1727,9 +1637,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 117,
       "websiteName": "Seshy",
-      "categoryNiche": null,
+      "categoryNiche": "Software products",
       "websiteUrl": "https://seshy.surge.sh/",
       "figmaLink": "https://www.figma.com/file/mkjBo8GP5AxbGbzw2ifBDY/SESHY-DASHBOARD?type=design&node-id=0-1&mode=design&t=QOLkR9R9RMpGc873-0",
       "platformFrameworkBuilder": "Reactjs, Bootstrap",
@@ -1742,9 +1651,8 @@
       "screenshot": "/projects/project-ss-seshy.jpg"
     },
     {
-      "rowNumber": 118,
       "websiteName": "Episcols Admin",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://episcols.surge.sh/",
       "figmaLink": "https://www.figma.com/file/mkjBo8GP5AxbGbzw2ifBDY/SESHY-DASHBOARD?type=design&node-id=0-1&mode=design&t=QOLkR9R9RMpGc873-0",
       "platformFrameworkBuilder": "Reactjs, Bootstrap",
@@ -1756,9 +1664,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 119,
       "websiteName": "Debate Box",
-      "categoryNiche": null,
+      "categoryNiche": "Web interfaces",
       "websiteUrl": "http://chatter-react.surge.sh/",
       "figmaLink": "ROBLUXGOLD – Figma",
       "platformFrameworkBuilder": "Reactjs, Bootstrap",
@@ -1771,9 +1678,8 @@
       "screenshot": "/projects/project-ss-debate-box.jpg"
     },
     {
-      "rowNumber": 120,
       "websiteName": "Future Pauments Tech",
-      "categoryNiche": null,
+      "categoryNiche": "Professional services",
       "websiteUrl": "Future Pauments Tech",
       "figmaLink": "https://www.figma.com/file/917e68s9KO4dBMvHCjlCuT/FUTURE-PAYMENT-%2B-TECH?type=design&node-id=0-1&mode=design&t=BOnWh2Gmnpdn7kTR-0",
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1785,9 +1691,8 @@
       "description": "Future Pauments Tech is a wordpress website translated from Figma with Wordpress, Elementor to give the client a sharper, easier-to-maintain online presence."
     },
     {
-      "rowNumber": 121,
       "websiteName": "BoatXchange",
-      "categoryNiche": null,
+      "categoryNiche": "Travel and tourism",
       "websiteUrl": "No Link",
       "figmaLink": "https://www.figma.com/file/5Dik0lUQRMeUghWLVw9v3J/BOATXCHANGE-WEBSITE?type=design&t=QOLkR9R9RMpGc873-6",
       "platformFrameworkBuilder": "NextJs, TailwindCSS",
@@ -1799,9 +1704,8 @@
       "description": "BoatXchange is a hospitality website translated from Figma with NextJs, TailwindCSS to give the client a sharper, easier-to-maintain online presence."
     },
     {
-      "rowNumber": 122,
       "websiteName": "Bunny Mint",
-      "categoryNiche": null,
+      "categoryNiche": "Software products",
       "websiteUrl": "http://bunny-mint.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Tailwind, Vuejs",
@@ -1813,9 +1717,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 123,
       "websiteName": "RadioLogix",
-      "categoryNiche": null,
+      "categoryNiche": "Health and wellness",
       "websiteUrl": "No Link",
       "figmaLink": "https://www.figma.com/file/o5jjMhW4LV9iWoFY8kl1WU/Radiologex-Website?node-id=889%3A41&mode=dev",
       "platformFrameworkBuilder": "Reactjs, Bootstrap",
@@ -1826,9 +1729,8 @@
       "description": "RadioLogix is a healthcare website translated from Figma with Reactjs, Bootstrap to improve trust, browsing flow, and mobile readability."
     },
     {
-      "rowNumber": 124,
       "websiteName": "DigiHub",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://digihub.li/",
       "figmaLink": "https://www.figma.com/file/EcBjiUDJO3MlneCKtEazUd/New-DIGIHUB?node-id=0%3A1&mode=dev",
       "platformFrameworkBuilder": "Wordpress",
@@ -1841,9 +1743,8 @@
       "screenshot": "/projects/project-ss-digihub.jpg"
     },
     {
-      "rowNumber": 125,
       "websiteName": "Luxury Lagoon Dubai",
-      "categoryNiche": null,
+      "categoryNiche": "Travel and tourism",
       "websiteUrl": "https://luxurylagoondubai.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1855,9 +1756,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 126,
       "websiteName": "The Royal Pin",
-      "categoryNiche": null,
+      "categoryNiche": "Professional services",
       "websiteUrl": "https://theroyalpin.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1870,9 +1770,8 @@
       "screenshot": "/projects/project-ss-the-royal-pin.jpg"
     },
     {
-      "rowNumber": 127,
       "websiteName": "Danielle Ball Fitness",
-      "categoryNiche": null,
+      "categoryNiche": "Health and wellness",
       "websiteUrl": "https://danielleballfitness.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1885,9 +1784,8 @@
       "screenshot": "/projects/project-ss-danielle-ball-fitness.jpg"
     },
     {
-      "rowNumber": 128,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Automotive and transport",
       "websiteUrl": "https://kargokdelivery-cqxwipnq8r.live-website.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": null,
@@ -1900,9 +1798,8 @@
       "screenshot": "/projects/project-ss-kargokdelivery-cqxwipnq8r-live-website.jpg"
     },
     {
-      "rowNumber": 129,
       "websiteName": "centaurivision",
-      "categoryNiche": null,
+      "categoryNiche": "Professional services",
       "websiteUrl": "https://centaurivision.ca/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1921,9 +1818,8 @@
       "screenshot": "/projects/project-ss-centaurivision.jpg"
     },
     {
-      "rowNumber": 130,
       "websiteName": "smartavlasia",
-      "categoryNiche": null,
+      "categoryNiche": "Travel and tourism",
       "websiteUrl": "https://smartavlasia.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1937,9 +1833,8 @@
       "screenshot": "/projects/project-ss-smartavlasia.jpg"
     },
     {
-      "rowNumber": 131,
       "websiteName": "robertw264",
-      "categoryNiche": null,
+      "categoryNiche": "Professional services",
       "websiteUrl": "https://robertw264.sg-host.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1952,9 +1847,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 132,
       "websiteName": "thaivisaexpert",
-      "categoryNiche": null,
+      "categoryNiche": "Travel and tourism",
       "websiteUrl": "https://thaivisaexpert.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -1968,9 +1862,8 @@
       "screenshot": "/projects/project-ss-thaivisaexpert.jpg"
     },
     {
-      "rowNumber": 133,
       "websiteName": "https://withdmtech.com/",
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": null,
       "figmaLink": null,
       "platformFrameworkBuilder": null,
@@ -1982,9 +1875,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 134,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": null,
       "figmaLink": null,
       "platformFrameworkBuilder": null,
@@ -1995,9 +1887,8 @@
       "description": "Client project is a business website built with a practical web stack to give the client a sharper, easier-to-maintain online presence."
     },
     {
-      "rowNumber": 135,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Business services",
       "websiteUrl": "https://mc-servers.de/",
       "figmaLink": null,
       "platformFrameworkBuilder": null,
@@ -2008,9 +1899,8 @@
       "description": "Client project is a business website built with a practical web stack to improve trust, browsing flow, and mobile readability."
     },
     {
-      "rowNumber": 136,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Professional services",
       "websiteUrl": "http://workslighter.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": null,
@@ -2022,9 +1912,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 138,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Construction and home services",
       "websiteUrl": "https://tallerpr.pixelprosai.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": null,
@@ -2036,9 +1925,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 139,
       "websiteName": "ExploreAsia",
-      "categoryNiche": null,
+      "categoryNiche": "Travel and tourism",
       "websiteUrl": "https://robertw274.sg-host.com/",
       "figmaLink": "https://www.figma.com/design/Hw0y4WjPWkQ1B2gwIOOy8M/XploreAsia?node-id=58-3050&node-type=frame&t=OFCEDTyihakPUJqb-0",
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -2050,9 +1938,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 140,
       "websiteName": "TallerPR",
-      "categoryNiche": null,
+      "categoryNiche": "Construction and home services",
       "websiteUrl": "https://tallerpr.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -2066,9 +1953,8 @@
       "description": "TallerPR is a wordpress website built with Wordpress, Elementor to give the client a sharper, easier-to-maintain online presence."
     },
     {
-      "rowNumber": 141,
       "websiteName": "mundotallerpr",
-      "categoryNiche": null,
+      "categoryNiche": "Construction and home services",
       "websiteUrl": "https://mundotallerpr.com/",
       "figmaLink": "https://www.figma.com/design/d0dzOeCcqjB9XIBGRlZcsc/Project-277---MundoTaller?node-id=92-32&t=LHUMWCY0FhfiUOmp-0",
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -2083,9 +1969,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 142,
       "websiteName": "Llavedigital",
-      "categoryNiche": null,
+      "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://mundotaller.pixelprosai.com",
       "figmaLink": "https://www.figma.com/design/4mq3m6YQE63sSg1C1ooJsS/LlaveDigital-(with-p)?node-id=16-11&t=t4BIUBvXpusj7uoO-0",
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -2100,9 +1985,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 143,
       "websiteName": "Guaranteed Grades",
-      "categoryNiche": null,
+      "categoryNiche": "Education and learning",
       "websiteUrl": "https://guaranteedgrades.net/",
       "figmaLink": "https://www.figma.com/design/GbZDZG7jXK1JrHOn84mdjZ/Guaranteed-Grades?node-id=62-260&m=dev",
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -2119,9 +2003,8 @@
       "screenshot": "/projects/project-ss-guaranteed-grades.jpg"
     },
     {
-      "rowNumber": 144,
       "websiteName": "PMS",
-      "categoryNiche": null,
+      "categoryNiche": "Education and learning",
       "websiteUrl": "https://pms-study.com/",
       "figmaLink": "https://www.figma.com/design/qiHBZQGpi0VPV6fo5Ls07Z/Phelan-McDermid-(Copy)?node-id=2844-5957&t=Af9KV8DglSpZRy8z-0",
       "platformFrameworkBuilder": "Wordpress, Elementor",
@@ -2133,9 +2016,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 25,
       "websiteName": "LP Video Site",
-      "categoryNiche": null,
+      "categoryNiche": "Product marketing",
       "websiteUrl": "https://lp-video-site.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
@@ -2147,9 +2029,8 @@
       "projectStatus": "Live"
     },
     {
-      "rowNumber": 20,
       "websiteName": "dongolthedev",
-      "categoryNiche": null,
+      "categoryNiche": "Personal portfolios",
       "websiteUrl": "http://www.dongolthedev.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Bricks Page Builder",
@@ -2162,9 +2043,8 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "rowNumber": 22,
       "websiteName": null,
-      "categoryNiche": null,
+      "categoryNiche": "Professional services",
       "websiteUrl": "https://web-metix.com/",
       "figmaLink": "WORK IN PROGRESS",
       "platformFrameworkBuilder": "Bricks Page Builder",

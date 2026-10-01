@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import portfolio from "@/data/portfolio.json";
+import "@splidejs/react-splide/css/core";
 import "./globals.scss";
 
 const siteUrl = portfolio.profile.website;

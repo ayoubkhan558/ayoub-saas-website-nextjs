@@ -42,10 +42,46 @@ export function getProjectTitle(project: ProjectArchiveItem) {
     return "Design handoff project";
   }
 
-  return `Project ${project.rowNumber}`;
+  return "Untitled project";
 }
 
 export function getProjectType(project: ProjectArchiveItem) {
+  const details = `${project.projectType ?? ""} ${project.description ?? ""} ${project.notes ?? ""}`.toLowerCase();
+  const stack = (project.platformFrameworkBuilder ?? "").toLowerCase();
+
+  if (/divi/.test(details) && /bricks/.test(details)) {
+    return "Divi to Bricks conversion";
+  }
+
+  if (/speed optimization|performance optimization/.test(details)) {
+    return "Speed optimization";
+  }
+
+  if (/redesign/.test(details)) {
+    return "Website redesign";
+  }
+
+  const usesFigma = /figma/i.test(`${project.figmaLink ?? ""} ${project.description ?? ""}`);
+  const implementation = /html|css|bootstrap|jquery/.test(stack)
+    ? "HTML/CSS"
+    : /elementor/.test(stack)
+      ? "Elementor"
+      : /bricks/.test(stack)
+        ? "Bricks Builder"
+        : /shopify/.test(stack)
+          ? "Shopify"
+          : /react|next/.test(stack)
+            ? "React/Next.js"
+            : /webflow/.test(stack)
+              ? "Webflow"
+              : /wordpress|wordperss/.test(stack)
+                ? "WordPress"
+                : null;
+
+  if (implementation) {
+    return usesFigma ? `Figma to ${implementation}` : `${implementation} build`;
+  }
+
   return project.projectType || "Client project";
 }
 
@@ -79,8 +115,6 @@ export function getProjectInitials(project: ProjectArchiveItem) {
 export function getProjectMeta(project: ProjectArchiveItem) {
   return [
     project.categoryNiche,
-    project.platformFrameworkBuilder,
-    project.projectStatus,
   ].filter((item): item is string => Boolean(item && !/^https?:\/\//i.test(item.trim())));
 }
 
