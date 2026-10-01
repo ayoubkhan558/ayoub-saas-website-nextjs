@@ -1,6 +1,6 @@
 import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
-import styles from "../ServicesPage.module.scss";
+import styles from "./ServicesProcess.module.scss";
 
 export function ServicesProcess({ process }: { process: PortfolioData["process"] }) {
   return (

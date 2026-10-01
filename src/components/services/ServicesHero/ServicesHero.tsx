@@ -4,7 +4,7 @@ import Link from "next/link";
 import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
 import portfolio from "@/data/portfolio.json";
 import { Typewriter } from "react-simple-typewriter";
-import styles from "../ServicesPage.module.scss";
+import styles from "./ServicesHero.module.scss";
 
 export function ServicesHero() {
   const industries = portfolio.trustMarquee.slice(0, 6);
@@ -16,17 +16,17 @@ export function ServicesHero() {
           <div className={styles["services-page-hero__copy"]}>
             <span className={styles["services-page__eyebrow"]}>Solutions  </span>
             <h1>
-              Bricks Builder, Figma to code, and WordPress redesign services
+              Full-Stack & CMS Web Development
             </h1>
             <p>
-              Pick the problem: Bricks builds, Figma handoff, WordPress redesigns, React landing pages, or store friction fixes.
+              I build fast, pixel-perfect sites using React, Next.js, WordPress, and Bricks Builder—turning designs and offers into real business leads.
             </p>
             <div className={styles["services-page-hero__actions"]}>
               <Link className="button" href="/contact" title="Hire Muhammad Ayoub for website development">
                 Send project details
                 <IconGlyph name="arrowRight" />
               </Link>
-              <Link className="button button--ghost" href="/services/bricks-builder" title="Bricks Builder developer services">
+              {/* <Link className="button button--ghost" href="/services/bricks-builder" title="Bricks Builder developer services">
                 Bricks Builder
               </Link>
               <Link className="button button--ghost" href="/services/figma-to-code" title="Figma to code services">
@@ -34,7 +34,7 @@ export function ServicesHero() {
               </Link>
               <Link className="button button--ghost" href="/services/wordpress-redesign" title="WordPress redesign services">
                 WordPress redesign
-              </Link>
+              </Link> */}
             </div>
           </div>
 

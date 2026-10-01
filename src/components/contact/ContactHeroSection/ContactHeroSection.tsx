@@ -12,7 +12,7 @@ export function ContactHeroSection({ profile }: { profile: PortfolioData["profil
           <div className={styles["contact-hero__copy"]}>
             <span className={styles["contact-page__eyebrow"]}>Contact / Hire Me</span>
             <h1>
-              Hire a Bricks Builder and front-end developer
+              Let’s Build Your Next Web Project
             </h1>
             <p>
               Share the site, Figma, or brief. I will reply with the next step for Bricks, WordPress, React, or Next.js work.

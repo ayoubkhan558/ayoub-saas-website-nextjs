@@ -94,8 +94,8 @@
   --text-h3: #{clamp-val(22px, 26px)};
   --text-h2: #{clamp-val(26px, 36px)};
   --text-h1: #{clamp-val(30px, 42px)};
-  --text-hero: #{clamp-val(34px, 54px)};
-  --text-display: #{clamp-val(34px, 54px)};
+  --text-hero: #{clamp-val(34px, 50px)};
+  --text-display: #{clamp-val(34px, 50px)};
 
   --leading-body: 1.6;
   --leading-heading: 1.35;
@@ -256,6 +256,7 @@ main {}
   }
 }
 
+
 h1,
 h2,
 h3,
@@ -269,6 +270,10 @@ h6 {
   line-height: var(--leading-heading);
   letter-spacing: -1px;
   text-wrap: balance;
+}
+
+h1 {
+  color: var(--color-primary);
 }
 
 h2 {

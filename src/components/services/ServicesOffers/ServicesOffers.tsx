@@ -2,7 +2,7 @@ import Link from "next/link";
 import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
 import { serviceCardVariants, serviceIcons } from "../servicesPageData";
-import styles from "../ServicesPage.module.scss";
+import styles from "./ServicesOffers.module.scss";
 
 type Service = PortfolioData["services"][number];
 
