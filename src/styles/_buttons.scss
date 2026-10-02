@@ -96,6 +96,11 @@
   padding-inline: 16px;
 }
 
+.button--ghost {
+  --button-bg: var(--color-primary);
+  color: var(--color-ink-violet);
+}
+
 .button--dark {
   border-color: var(--button-dark-border);
   background: var(--button-dark-bg);
@@ -130,6 +135,10 @@
   --button-dark-hover-bg: #ff9abd;
   --button-dark-hover-border: #ff9abd;
   --button-dark-hover-color: #120d15;
+}
+
+:root[data-theme="dark"] .button--ghost {
+  color: var(--color-on-dark);
 }
 
 
