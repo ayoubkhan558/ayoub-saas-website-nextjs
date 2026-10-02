@@ -118,7 +118,7 @@
   margin-left: 0;
 }
 
-.about-page-experience-item__year {
+.about-page-experience-item__duration {
   width: fit-content;
   border: 1px solid var(--about-border-faint);
   background: var(--about-card-muted);
@@ -157,7 +157,7 @@
 .about-page-experience-item__company {
   display: block;
   margin-top: var(--space-1);
-  color: var(--color-ink-violet);
+  color: var(--color-primary);
   font-family: var(--font-display-compact);
   font-size: var(--text-ui);
   font-weight: 800;

@@ -42,11 +42,10 @@ export function ProjectArchiveSection({
       <div className="section__inner">
         <div className={`container ${styles.archive__inner}`}>
           <header className={styles["section-header"]}>
-            <span className={styles.eyebrow}>Selected work</span>
-            <h2>Project archive.</h2>
+            {/* <span className={styles.eyebrow}>Selected work</span> */}
+            {/* <h2>Project archive.</h2> */}
             <p>
-              Showing {page.startItem}-{page.endItem} of {page.totalItems}. Each card shows the project type,
-              client context, short build summary, stack, category, and verified website link when available.
+              Showing {page.startItem}-{page.endItem} of {page.totalItems}.
             </p>
           </header>
 

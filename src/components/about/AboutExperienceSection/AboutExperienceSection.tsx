@@ -25,7 +25,7 @@ export function AboutExperienceSection({
             return (
             <article className={styles["about-page-experience-item"]} key={`${item.year}-${item.company}`}>
               <div className={styles["about-page-experience-item__meta"]}>
-                <span className={styles["about-page-experience-item__year"]}>{item.year}</span>
+                <span className={styles["about-page-experience-item__duration"]}>{item.duration}</span>
                 {logo ? (
                   <span className={styles["about-page-experience-item__logo"]}>
                     <Image
