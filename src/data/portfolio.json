@@ -811,6 +811,8 @@
     {
       "year": "2024 - 2026",
       "duration": "1 year 9 months",
+      "startDate": "2024-10-01",
+      "endDate": "2026-07-06",
       "title": "Frontend Website Developer",
       "company": "Xgrid",
       "description": "Building custom WordPress and React-based websites, developing reusable components, and creating internal tools such as Brickify to improve development workflows."
@@ -818,6 +820,8 @@
     {
       "year": "2023 - 2024",
       "duration": "1 year 6 months",
+      "startDate": "2023-02-14",
+      "endDate": "2024-08-13",
       "title": "Senior Website Developer",
       "company": "Epicsols",
       "description": "Delivered WordPress, React, and Next.js projects, transformed Figma designs into production-ready websites, and developed scalable CMS solutions."
@@ -825,6 +829,8 @@
     {
       "year": "2019 - 2020",
       "duration": "1 year",
+      "startDate": "2019-01",
+      "endDate": "2020-01",
       "title": "Frontend Developer",
       "company": "Hawk ITs & Consultancy Provider",
       "description": "Developed responsive websites and web applications using JavaScript, jQuery, AJAX, Angular, and modern front-end practices."
@@ -832,6 +838,8 @@
     {
       "year": "2018",
       "duration": "6 months",
+      "startDate": "2018-01",
+      "endDate": "2018-06",
       "title": "Frontend Developer Intern",
       "company": "AWSOL Web Technologies",
       "description": "Started my professional development journey by building responsive interfaces and learning production-level development workflows."
