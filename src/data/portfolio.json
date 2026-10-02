@@ -538,6 +538,33 @@
     "originStory": "I started web development in 2018. In the early times, I did not have an internet connection at home, so I used my friends' internet to download tutorials, then watched them offline to learn HTML, CSS, and the fundamentals. That beginning made me self-learned, resourceful, and passionate about building useful things.",
     "education": "Master of Computer Science, University of Sahiwal",
     "careerStartLabel": "Career Started",
+    "careerPath": [
+      {
+        "year": "2018",
+        "title": "Frontend Foundations",
+        "technologies": "HTML, CSS, JavaScript, Bootstrap",
+        "description": "Learning the fundamentals and building responsive web interfaces."
+      },
+      {
+        "year": "2021",
+        "title": "WordPress Development",
+        "technologies": "WordPress, Elementor",
+        "description": "Creating and customizing CMS-powered websites with flexible page layouts."
+      },
+      {
+        "year": "2022",
+        "title": "React Development",
+        "technologies": "React.js",
+        "description": "Building interactive interfaces with reusable components."
+      },
+      {
+        "year": "2026 - Current",
+        "title": "Full-Stack MERN",
+        "technologies": "MongoDB, Express.js, React, Node.js",
+        "description": "Connecting frontend and backend into complete, production-ready applications.",
+        "current": true
+      }
+    ],
     "heroStatAwardLabels": {
       "experience": "Experience",
       "projects": "Projects delivered",

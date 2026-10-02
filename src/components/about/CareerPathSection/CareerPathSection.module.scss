@@ -1,0 +1,126 @@
+@use "../../../styles/mixins" as *;
+
+.career-path {
+  max-width: 860px;
+  border: 1px solid var(--about-border-soft);
+  border-radius: 8px;
+  background: var(--about-card-gradient), var(--about-card-surface);
+  box-shadow:
+    var(--about-card-inset) 0 1px 0 inset,
+    var(--about-card-shadow);
+  padding: var(--space-5);
+
+  @include mq(md) {
+    padding: var(--space-6);
+  }
+}
+
+.career-path__eyebrow {
+  color: var(--color-secondary);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-ui);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.career-path__list {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+  padding: 0;
+  list-style: none;
+}
+
+.career-path__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.career-path__item:not(:last-child)::after {
+  position: absolute;
+  top: 54px;
+  bottom: calc(-1 * var(--space-5));
+  left: 23px;
+  width: 1px;
+  background: var(--about-border-faint);
+  content: "";
+}
+
+.career-path__number {
+  z-index: 1;
+  display: grid;
+  width: 48px;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--about-card-muted);
+  color: var(--color-ink-violet);
+  font-family: var(--font-code);
+  font-size: var(--text-ui);
+  font-weight: 800;
+}
+
+.career-path__content {
+  min-width: 0;
+  padding: 2px 0 var(--space-2);
+}
+
+.career-path__heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.career-path__title {
+  color: var(--color-ink-violet);
+  font-family: var(--font-display-compact);
+  font-size: var(--text-h4);
+  font-weight: 800;
+}
+
+.career-path__badge {
+  border: 1px solid var(--about-border-soft);
+  border-radius: 999px;
+  background: var(--about-card-muted);
+  padding: 0.2rem 0.65rem;
+  color: var(--color-secondary);
+  font-size: var(--text-sm);
+}
+
+.career-path__technologies {
+  margin-top: var(--space-2);
+  color: var(--color-ink-violet);
+  font-size: var(--text-body);
+}
+
+.career-path__description {
+  margin-top: var(--space-2);
+  color: var(--color-storm-mauve);
+  font-size: var(--text-body);
+}
+
+.career-path__year {
+  display: block;
+  margin-top: var(--space-2);
+  color: var(--color-storm-mauve);
+  font-family: var(--font-code);
+  font-size: var(--text-xs);
+}
+
+.career-path__item--current .career-path__number {
+  background: var(--color-secondary);
+  box-shadow: 0 0 0 6px var(--about-secondary-glow);
+  color: var(--about-card-surface);
+}
+
+.career-path__item--current .career-path__title {
+  color: var(--color-secondary);
+}
+
+.career-path-section :global(.section__inner) {
+  position: relative;
+}
