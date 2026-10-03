@@ -28,8 +28,12 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   };
 
   useEffect(() => {
-    const activeTheme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
-    setTheme(activeTheme);
+    const frame = window.requestAnimationFrame(() => {
+      const activeTheme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+      setTheme(activeTheme);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
   }, []);
 
   const toggleTheme = () => {
@@ -83,7 +87,7 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
             Email
           </button>
           <button className={`button button--small ${styles["site-header__nav-button"]}`} type="button" onClick={openContactPanel}>
-            Book a call
+            Start a project
             <IconGlyph name="arrowRight" />
           </button>
           <button

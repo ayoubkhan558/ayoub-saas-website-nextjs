@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
+import Link from "next/link";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
 import { LogoMarquee } from "@/components/shared/LogoMarquee/LogoMarquee";
 import { SocialProofStats } from "../SocialProofStats/SocialProofStats";
@@ -38,14 +41,14 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
             </p>
 
             <div className={styles["hero__actions"]}>
-              <a className="button" href="/contact" title="Start a website project with Muhammad Ayoub">
+              <Link className="button" href="/contact" title="Start a website project with Muhammad Ayoub">
                 {portfolio?.hero.primaryCta}
                 <IconGlyph name="arrowRight" />
-              </a>
-              <a className="button button--ghost" href="/case-studies" title="View Muhammad Ayoub case studies">
+              </Link>
+              <Link className="button button--ghost" href="/case-studies" title="View Muhammad Ayoub case studies">
                 {portfolio?.hero.secondaryCta}
                 <IconGlyph name="layers" />
-              </a>
+              </Link>
             </div>
 
             <div className={styles["hero__proof-row"]}>
@@ -53,7 +56,7 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
                 <div className={styles["hero__client-photos"]} aria-hidden="true">
                   {proofClients.map((client) => (
                     <span className={styles["hero__client-photo"]} key={client.name}>
-                      {client.avatar ? <img className={styles["hero__client-photo-img"]} src={client.avatar} alt={`${client.name} client avatar`} title={`${client.name} client avatar`} loading="lazy" /> : client.initials}
+                      {client.avatar ? <Image className={styles["hero__client-photo-img"]} src={client.avatar} alt={`${client.name} client avatar`} title={`${client.name} client avatar`} sizes="34px" loading="lazy" {...getImageDimensions(client.avatar, { width: 400, height: 400 })} /> : client.initials}
                     </span>
                   ))}
                 </div>
@@ -69,7 +72,7 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
             <div className={styles["hero__identity"]} aria-label="Muhammad Ayoub profile">
               <div className={styles["hero__identity-head"]}>
                 <span className={styles["hero__portrait"]}>
-                  <img className={styles["hero__portrait-img"]} src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub Khan website developer" title="Muhammad Ayoub Khan website developer" />
+                  <Image className={styles["hero__portrait-img"]} src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub Khan website developer" title="Muhammad Ayoub Khan website developer" sizes="(max-width: 760px) 42vw, 280px" priority {...getImageDimensions("/ayoub-about-v2.jpg")} />
                   <span className={styles["hero__portrait-status"]} aria-hidden="true" />
                 </span>
                 <div className={styles["hero__identity-copy"]}>

@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
 import { useMemo, useRef, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import type { Splide as SplideInstance } from "@splidejs/splide";
@@ -46,10 +48,10 @@ export function ClientTestimonials({ clients }: { clients: Client[] }) {
                   aria-pressed={isActive}
                 >
                   {client.avatar ? (
-                    <img src={client.avatar} alt={`${client.name} client testimonial avatar`} title={`${client.name} client testimonial avatar`} loading="lazy" />
+                    <Image src={client.avatar} alt={`${client.name} client testimonial avatar`} title={`${client.name} client testimonial avatar`} sizes="48px" loading="lazy" {...getImageDimensions(client.avatar, { width: 400, height: 400 })} />
                   ) : (
                     <span className={styles["testimonials__logo-fallback"]}>
-                      <img src={client.logoDark ?? client.logo} alt={`${client.name} logo`} title={`${client.name} logo`} loading="lazy" />
+                      <Image src={client.logoDark ?? client.logo} alt={`${client.name} logo`} title={`${client.name} logo`} sizes="72px" loading="lazy" {...getImageDimensions(client.logoDark ?? client.logo, { width: 300, height: 150 })} />
                     </span>
                   )}
                 </button>
@@ -88,7 +90,7 @@ export function ClientTestimonials({ clients }: { clients: Client[] }) {
             <SplideSlide key={client.name}>
               <figure className={styles["testimonials__quote-card"]}>
                 <div className={styles["testimonials__quote-logo"]} aria-hidden="true">
-                  <img src={client.logo} alt={`${client.name} logo`} title={`${client.name} logo`} />
+                  <Image src={client.logo} alt="" title={`${client.name} logo`} sizes="72px" {...getImageDimensions(client.logo, { width: 300, height: 150 })} />
                 </div>
                 <blockquote className={styles["testimonials__quote"]}>
                   <span className={styles["testimonials__quote-mark"]} aria-hidden="true">&quot;</span>
@@ -97,9 +99,9 @@ export function ClientTestimonials({ clients }: { clients: Client[] }) {
                 <figcaption className={styles["testimonials__author"]}>
                   <span className={styles["testimonials__author-image"]}>
                     {client.avatar ? (
-                      <img src={client.avatar} alt={`${client.name} client testimonial avatar`} title={`${client.name} client testimonial avatar`} loading="lazy" />
+                      <Image src={client.avatar} alt={`${client.name} client testimonial avatar`} title={`${client.name} client testimonial avatar`} sizes="48px" loading="lazy" {...getImageDimensions(client.avatar, { width: 400, height: 400 })} />
                     ) : (
-                      <img src={client.logoDark ?? client.logo} alt={`${client.name} logo`} title={`${client.name} logo`} loading="lazy" />
+                      <Image src={client.logoDark ?? client.logo} alt={`${client.name} logo`} title={`${client.name} logo`} sizes="72px" loading="lazy" {...getImageDimensions(client.logoDark ?? client.logo, { width: 300, height: 150 })} />
                     )}
                   </span>
                   <strong className={styles["testimonials__author-name"]}>{client.name}</strong>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
 import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
 import { getToolCatalogItem } from "@/data/toolCatalog";
 import { CaseStudySectionHeader } from "../CaseStudySectionHeader/CaseStudySectionHeader";
@@ -30,7 +32,7 @@ export function CaseStudyTools({ study }: { study: CaseStudyDetailData }) {
                 return (
                   <article className={styles["tool-card"]} key={toolKey}>
                     <span className={styles["tool-logo"]}>
-                      {tool.logo ? <img src={tool.logo} alt={`${tool.name} logo`} title={`${tool.name} logo`} /> : fallbackMark}
+                      {tool.logo ? <Image src={tool.logo} alt={`${tool.name} logo`} title={`${tool.name} logo`} sizes="96px" {...getImageDimensions(tool.logo, { width: 128, height: 128 })} /> : fallbackMark}
                     </span>
                     <span>
                       <span className={styles["tool-name"]}>{tool.name}</span>

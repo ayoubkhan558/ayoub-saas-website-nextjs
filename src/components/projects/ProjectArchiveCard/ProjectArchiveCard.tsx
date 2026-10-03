@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
 import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
 import {
   getProjectDescription,
@@ -21,7 +23,7 @@ export function ProjectArchiveCard({ project }: { project: ProjectArchiveItem })
   const links = getProjectLinks(project);
   const websiteHref = links[0]?.href;
   const preview = thumbnail ? (
-    <img className={styles.card__mediaImg} src={thumbnail} alt={`Screenshot preview for ${title}`} title={`Screenshot preview for ${title}`} loading="lazy" />
+    <Image className={styles.card__mediaImg} src={thumbnail} alt={`Screenshot preview for ${title}`} title={`Screenshot preview for ${title}`} sizes="(max-width: 760px) 100vw, (max-width: 1180px) 50vw, 33vw" loading="lazy" {...getImageDimensions(thumbnail)} />
   ) : (
     <span className={styles.card__placeholder}>{getProjectInitials(project)}</span>
   );

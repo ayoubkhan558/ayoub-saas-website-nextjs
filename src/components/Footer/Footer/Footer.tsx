@@ -1,4 +1,6 @@
 "use client";
+
+import Link from "next/link";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
 import { BrandLogo } from "@/components/layout/BrandLogo/BrandLogo";
 import styles from "./Footer.module.scss";
@@ -14,9 +16,9 @@ export function Footer({ portfolio }: { portfolio: PortfolioData }) {
           <div className={styles["footer__inner"]}>
             <div className={styles["footer__masthead"]}>
               <div className={styles["footer__brand-block"]}>
-                <a className={styles["footer__logo"]} href="/#top" title="MAYOUB.DEV home">
+                <Link className={styles["footer__logo"]} href="/#top" title="MAYOUB.DEV home">
                   <BrandLogo />
-                </a>
+                </Link>
                 <p className={styles["footer__summary"]}>{profile.summary}</p>
               </div>
               <div className={styles["footer__contact-card"]}>
@@ -32,12 +34,12 @@ export function Footer({ portfolio }: { portfolio: PortfolioData }) {
 
             <div className={styles["footer__bottom"]}>
               <nav className={styles["footer__legal"]} aria-label="Legal links">
-                <a className={styles["footer__bottom-link"]} href="/terms-and-conditions" title="Read terms and conditions">
+                <Link className={styles["footer__bottom-link"]} href="/terms-and-conditions" title="Read terms and conditions">
                   Terms and Conditions
-                </a>
-                <a className={styles["footer__bottom-link"]} href="/privacy-policy" title="Read privacy policy">
+                </Link>
+                <Link className={styles["footer__bottom-link"]} href="/privacy-policy" title="Read privacy policy">
                   Privacy Policy
-                </a>
+                </Link>
               </nav>
               <span className={styles["footer__built-with"]}>
                 Built with

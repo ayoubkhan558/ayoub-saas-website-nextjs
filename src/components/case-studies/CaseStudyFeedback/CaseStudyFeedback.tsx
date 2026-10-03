@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
 import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
 import { CaseStudySectionHeader } from "../CaseStudySectionHeader/CaseStudySectionHeader";
 import styles from "./CaseStudyFeedback.module.scss";
@@ -28,11 +30,11 @@ export function CaseStudyFeedback({ study }: { study: CaseStudyDetailData }) {
                   </span>
                 ))}
               </div>
-              <blockquote className={styles["feedback-quote"]}>"{study.testimonial.quote}"</blockquote>
+              <blockquote className={styles["feedback-quote"]}>&ldquo;{study.testimonial.quote}&rdquo;</blockquote>
               <figcaption className={styles["feedback-author"]}>
                 <span className={`${styles["feedback-author-image"]} ${study.branding.clientImage ? styles["feedback-author-image-photo"] : ""}`}>
                   {authorImage ? (
-                    <img src={authorImage} alt={authorImageAlt} title={authorImageAlt} loading="lazy" />
+                    <Image src={authorImage} alt={authorImageAlt} title={authorImageAlt} sizes="54px" loading="lazy" {...getImageDimensions(authorImage, { width: 400, height: 400 })} />
                   ) : (
                     study.testimonial.author.slice(0, 2)
                   )}

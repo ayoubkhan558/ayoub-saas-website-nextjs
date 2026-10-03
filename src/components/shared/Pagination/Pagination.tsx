@@ -39,7 +39,6 @@ export function Pagination({
   }
 
   const pages = getVisiblePages(currentPage, totalPages);
-  let previousPage = 0;
 
   return (
     <nav className={styles.pagination} aria-label="Pagination">
@@ -52,9 +51,9 @@ export function Pagination({
         Previous
       </Link>
       <div className={styles.pagination__pages}>
-        {pages.map((page) => {
-          const showGap = previousPage > 0 && page - previousPage > 1;
-          previousPage = page;
+        {pages.map((page, index) => {
+          const previousPage = pages[index - 1];
+          const showGap = previousPage !== undefined && page - previousPage > 1;
 
           return (
             <span className={styles.pagination__group} key={page}>

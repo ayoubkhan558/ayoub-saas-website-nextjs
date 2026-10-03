@@ -219,7 +219,7 @@
     {
       "websiteName": "BabyPNG",
       "categoryNiche": "Business services  ",
-      "websiteUrl": "http://www.babypng.com/",
+      "websiteUrl": "https://babypng.com/",
       "figmaLink": "https://www.figma.com/file/NnX3sSnUGbW2LhOheP6Sft/BabyPNG-development?type=design&node-id=0-1&mode=design&t=xlkhm1SjiI80dMz1-0",
       "platformFrameworkBuilder": "HTML, CSS, Bootstrap",
       "client": "Indian Client",
@@ -392,7 +392,7 @@
     {
       "websiteName": "5gStore",
       "categoryNiche": "Online retail",
-      "websiteUrl": "http://5gstore.pk/",
+      "websiteUrl": "https://5gstore.pk/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordperss, Elementor, WooCommerce",
       "client": "Hassan",
@@ -651,7 +651,7 @@
     {
       "websiteName": "punisher",
       "categoryNiche": "Web interfaces",
-      "websiteUrl": "http://punisher-react.surge.sh/",
+      "websiteUrl": "https://punisher-react.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Reactjs",
       "client": "",
@@ -664,11 +664,11 @@
     {
       "websiteName": "tembekasua",
       "categoryNiche": "Software products",
-      "websiteUrl": "http://tembekasua-react.surge.sh/",
+      "websiteUrl": "https://tembekasua-react.surge.sh/",
       "figmaLink": "https://www.figma.com/file/vKg1IRnyvbUOAYusYZB41u/tembekasua?node-id=1679%3A92932&mode=dev",
       "platformFrameworkBuilder": "Tailwind, Reactjs",
       "client": "",
-      "notes": "http://tembekasua-react.surge.sh/, https://www.tembekasua.africa/ ",
+      "notes": "https://tembekasua-react.surge.sh/, https://www.tembekasua.africa/ ",
       "date": null,
       "extra": {
         "client2": "Fiverr"
@@ -1397,7 +1397,7 @@
     {
       "websiteName": null,
       "categoryNiche": "Marketing and digital services",
-      "websiteUrl": "http://www.p-intelligence.com/",
+      "websiteUrl": "https://www.p-intelligence.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": null,
       "client": "",
@@ -1495,7 +1495,7 @@
     {
       "websiteName": "Magnet Social",
       "categoryNiche": "Marketing and digital services",
-      "websiteUrl": "http://magnet.social/",
+      "websiteUrl": "https://magnet.social/",
       "figmaLink": "https://www.figma.com/file/tVS468D15SuA3CoLT8dVVf/magnet-smm-(Copy)?node-id=0%3A1&mode=dev",
       "platformFrameworkBuilder": "Wordpress, Elementor",
       "company": "Epicsols",
@@ -1558,17 +1558,17 @@
     {
       "websiteName": "Acholyte",
       "categoryNiche": "Professional services",
-      "websiteUrl": "http://Www.Acholyte.com",
+      "websiteUrl": null,
       "figmaLink": "https://www.figma.com/file/BdvkenEPUjsVkFUR9lyM43/ACHOLYTE-WEBSITE?type=design&mode=design&t=OeKA6DbWV7m0OyrD-0",
       "platformFrameworkBuilder": "Wordpress, Elementor",
       "company": "Epicsols",
       "client": "Epicsols",
-      "notes": null,
+      "notes": "Live URL removed because the archived site does not provide a valid, secure HTTPS endpoint.",
       "date": "2023-11-01",
       "dateRaw": "45231.0",
       "projectType": "WordPress website",
       "description": "Acholyte is a wordpress website translated from Figma with Wordpress, Elementor to turn the brand into a faster production-ready web presence.",
-      "projectStatus": "Live",
+      "projectStatus": "Archived (HTTP only)",
       "screenshot": "/projects/project-ss-acholyte.jpg"
     },
     {
@@ -1601,16 +1601,17 @@
     {
       "websiteName": null,
       "categoryNiche": "Software products",
-      "websiteUrl": "http://209.126.1.56/~eshipshtml",
+      "websiteUrl": null,
       "figmaLink": "https://www.figma.com/file/q2J7E2cumcPBquvOx1VZns/BUMPING-SHIP-DASHBOARD?node-id=0%3A1&mode=dev",
       "platformFrameworkBuilder": "html,css, bootstrap 5",
       "company": "Epicsols",
       "client": "Epicsols",
-      "notes": "https://github.com/epicsols/bumping-ship-admin",
+      "notes": "https://github.com/epicsols/bumping-ship-admin; Live URL removed because the archived site does not provide a valid, secure HTTPS endpoint.",
       "date": "2023-12-11",
       "dateRaw": "45271.0",
       "projectType": "Web app interface",
-      "description": "Client project is a web app interface translated from Figma with html,css, bootstrap 5 to support lead generation with a cleaner user journey."
+      "description": "Client project is a web app interface translated from Figma with html,css, bootstrap 5 to support lead generation with a cleaner user journey.",
+      "projectStatus": "Offline (unavailable)"
     },
     {
       "websiteName": "AppMint Landing Page",
@@ -1722,7 +1723,7 @@
     {
       "websiteName": "Debate Box",
       "categoryNiche": "Web interfaces",
-      "websiteUrl": "http://chatter-react.surge.sh/",
+      "websiteUrl": "https://chatter-react.surge.sh/",
       "figmaLink": "ROBLUXGOLD – Figma",
       "platformFrameworkBuilder": "Reactjs, Bootstrap",
       "company": "Epicsols",
@@ -1765,7 +1766,7 @@
     {
       "websiteName": "Bunny Mint",
       "categoryNiche": "Software products",
-      "websiteUrl": "http://bunny-mint.surge.sh/",
+      "websiteUrl": "https://bunny-mint.surge.sh/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Tailwind, Vuejs",
       "company": "Epicsols",
@@ -1948,11 +1949,11 @@
     {
       "websiteName": null,
       "categoryNiche": "Professional services",
-      "websiteUrl": "http://workslighter.com/",
+      "websiteUrl": null,
       "figmaLink": null,
       "platformFrameworkBuilder": null,
       "client": "",
-      "notes": null,
+      "notes": "Live URL removed because the archived site does not provide a valid, secure HTTPS endpoint.",
       "date": null,
       "projectType": "Business website",
       "description": "Client project is a business website built with a practical web stack to ship a focused front-end experience from design to launch.",
@@ -2078,11 +2079,11 @@
     {
       "websiteName": "dongolthedev",
       "categoryNiche": "Personal portfolios",
-      "websiteUrl": "http://www.dongolthedev.com/",
+      "websiteUrl": null,
       "figmaLink": null,
       "platformFrameworkBuilder": "Bricks Page Builder",
       "client": "Omar - Egypt",
-      "notes": null,
+      "notes": "Live URL removed because the archived site does not provide a valid, secure HTTPS endpoint.",
       "date": "2025-07-18",
       "dateRaw": "45856.0",
       "projectType": "WordPress website",

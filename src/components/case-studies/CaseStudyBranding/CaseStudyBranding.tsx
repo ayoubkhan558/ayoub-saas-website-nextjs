@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
 import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
 import { CaseStudySectionHeader } from "../CaseStudySectionHeader/CaseStudySectionHeader";
 import styles from "./CaseStudyBranding.module.scss";
@@ -55,7 +57,7 @@ export function CaseStudyBranding({ study }: { study: CaseStudyDetailData }) {
               <span className={styles["brand-card-label"]}>Logo</span>
               <div className={styles["brand-logo-stage"]}>
                 {study.branding.logoImage ? (
-                  <img className={styles["logo-image"]} src={study.branding.logoImage} alt={`${study.client} logo`} title={`${study.client} logo`} loading="lazy" />
+                  <Image className={styles["logo-image"]} src={study.branding.logoImage} alt={`${study.client} logo`} title={`${study.client} logo`} sizes="260px" loading="lazy" {...getImageDimensions(study.branding.logoImage, { width: 500, height: 200 })} />
                 ) : (
                   <span className={styles["logo-mark"]}>{study.branding.logoMark}</span>
                 )}

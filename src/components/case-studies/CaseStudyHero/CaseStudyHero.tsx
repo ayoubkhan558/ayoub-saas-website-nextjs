@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
 import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
 import { caseStudySeo } from "@/data/caseStudySeo";
 import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
@@ -47,7 +49,7 @@ export function CaseStudyHero({ study }: { study: CaseStudyDetailData }) {
           </div>
           <aside className={styles["hero-visual"]} aria-label={`${study.client} final website design shown inside a laptop mockup`}>
             {study.heroMockup ? (
-              <img className={styles["hero-mockup-image"]} src={study.heroMockup} alt={`${study.client} responsive website mockup`} title={`${study.client} responsive website mockup`} />
+              <Image className={styles["hero-mockup-image"]} src={study.heroMockup} alt={`${study.client} responsive website mockup`} title={`${study.client} responsive website mockup`} sizes="(max-width: 900px) 100vw, 48vw" priority {...getImageDimensions(study.heroMockup, { width: 1200, height: 675 })} />
             ) : (
               <div className={styles["laptop-frame"]}>
                 <CaseStudyBrowserMockup label={study.urlLabel} imageSrc={previewImage} />

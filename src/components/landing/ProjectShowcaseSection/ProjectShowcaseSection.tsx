@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
 import { useRef, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import type { Splide as SplideInstance } from "@splidejs/splide";
@@ -68,7 +70,7 @@ export function ProjectShowcaseSection({ projects }: { projects: ProjectCard[] }
                       title={`View ${project.title}`}
                     >
                     <span className={styles["showcase__media"]}>
-                      <img src={project.image} alt={project.imageAlt} title={project.imageAlt} loading="lazy" />
+                      <Image src={project.image} alt={project.imageAlt} title={project.imageAlt} sizes="(max-width: 760px) 88vw, 33vw" loading="lazy" {...getImageDimensions(project.image)} />
                       {project.deliveryContext ? (
                         <span className={styles["showcase__company"]}>{project.deliveryContext}</span>
                       ) : null}

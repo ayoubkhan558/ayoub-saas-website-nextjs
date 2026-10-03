@@ -44,7 +44,7 @@
 
   &:hover {
     background: var(--color-surface-chrome);
-    border-color: #31263b3d;
+    border-color: var(--border-soft);
     transform: translateY(-2px);
     box-shadow: inset 0 0 0 4px #ecedf2bd;
   }

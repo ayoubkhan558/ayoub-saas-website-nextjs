@@ -14,6 +14,8 @@ type ContactPanelProps = {
 
 export function ContactPanel({ profile, open, onClose }: ContactPanelProps) {
   const drawerRef = useRef<HTMLElement | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const previouslyFocusedRef = useRef<HTMLElement | null>(null);
   const whatsappHref = `https://wa.me/${profile.phone.replace(/\D/g, "")}`;
 
   useEffect(() => {
@@ -22,10 +24,45 @@ export function ContactPanel({ profile, open, onClose }: ContactPanelProps) {
     }
 
     const previousOverflow = document.body.style.overflow;
+    previouslyFocusedRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+
+    const focusableSelector = [
+      "a[href]",
+      "button:not([disabled])",
+      "input:not([disabled])",
+      "select:not([disabled])",
+      "textarea:not([disabled])",
+      '[tabindex]:not([tabindex="-1"])',
+    ].join(",");
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        event.preventDefault();
         onClose();
+        return;
+      }
+
+      if (event.key !== "Tab" || !drawerRef.current) {
+        return;
+      }
+
+      const focusableElements = Array.from(
+        drawerRef.current.querySelectorAll<HTMLElement>(focusableSelector),
+      ).filter((element) => !element.hasAttribute("disabled") && element.tabIndex !== -1);
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements.at(-1);
+
+      if (!firstElement || !lastElement) {
+        event.preventDefault();
+        return;
+      }
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
       }
     };
 
@@ -38,6 +75,7 @@ export function ContactPanel({ profile, open, onClose }: ContactPanelProps) {
     };
 
     document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
     window.addEventListener("keydown", handleKeyDown);
     document.addEventListener("pointerdown", handlePointerDown, true);
 
@@ -45,11 +83,16 @@ export function ContactPanel({ profile, open, onClose }: ContactPanelProps) {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("pointerdown", handlePointerDown, true);
+      previouslyFocusedRef.current?.focus();
     };
   }, [open, onClose]);
 
   return (
-    <div className={`${styles["contact-panel"]} ${open ? styles["contact-panel--open"] : ""}`} aria-hidden={!open}>
+    <div
+      className={`${styles["contact-panel"]} ${open ? styles["contact-panel--open"] : ""}`}
+      aria-hidden={!open}
+      inert={!open}
+    >
       <button
         className={styles["contact-panel__backdrop"]}
         type="button"
@@ -68,7 +111,7 @@ export function ContactPanel({ profile, open, onClose }: ContactPanelProps) {
           <span className={styles["contact-panel__mark"]}>
             <IconGlyph name="code2" />
           </span>
-          <button className={styles["contact-panel__close"]} type="button" aria-label="Close contact panel" onClick={onClose}>
+          <button ref={closeButtonRef} className={styles["contact-panel__close"]} type="button" aria-label="Close contact panel" onClick={onClose}>
             <IconGlyph name="x" />
           </button>
         </div>

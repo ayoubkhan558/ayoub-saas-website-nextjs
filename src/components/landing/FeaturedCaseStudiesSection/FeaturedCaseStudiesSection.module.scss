@@ -217,13 +217,13 @@
 
 .work__tech-logo--react {
   border-color: rgba(33, 145, 140, 0.3);
-  color: #146f6c;
+  color: var(--color-secondary);
 }
 
 .work__tech-logo--bricks,
 .work__tech-logo--elementor {
   border-color: rgba(205, 89, 115, 0.28);
-  color: #9b3650;
+  color: var(--color-primary);
 }
 
 .work__tech-logo--woo,

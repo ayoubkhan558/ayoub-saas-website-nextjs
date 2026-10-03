@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
 import { useEffect, useRef, useState } from "react";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
 import styles from "./TrustLogos.module.scss";
@@ -58,7 +60,7 @@ function LogoAsset({ client, isOpen, onToggle }: { client: Client; isOpen: boole
       onClick={onToggle}
       title={`Read ${client.name} client review`}
     >
-      <img src={client.logoDark} alt={`${client.name} logo`} title={`${client.name} logo`} loading="lazy" />
+      <Image src={client.logoDark} alt={`${client.name} logo`} title={`${client.name} logo`} sizes="70px" loading="lazy" {...getImageDimensions(client.logoDark, { width: 300, height: 150 })} />
       <span className={styles["trust-logos__review"]} id={client.reviewId} role="tooltip">
         <span className={styles["trust-logos__review-name"]}>{client.name}</span>
         <span className={styles["trust-logos__review-text"]}>{client.review}</span>

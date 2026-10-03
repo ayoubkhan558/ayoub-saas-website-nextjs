@@ -10,7 +10,7 @@
 }
 
 :global(:root[data-theme="dark"]) .home-showcase :global(.section__inner) {
-  background-color: #121019;
+  background-color: var(--color-surface-soft);
   background-image:
     radial-gradient(color-mix(in srgb, var(--color-lavender-mist) 6%, transparent) 0.75px, transparent 0.75px),
     linear-gradient(180deg, #14111d, #111018);

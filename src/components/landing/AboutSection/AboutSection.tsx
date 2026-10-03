@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
 import type { CSSProperties, MouseEvent } from "react";
 import { IconGlyph } from "../IconGlyph/IconGlyph";
@@ -43,7 +45,7 @@ export function AboutSection({ portfolio }: { portfolio: PortfolioData }) {
                 Upwork profile
               </a>
               <span className={styles["about__signature"]} aria-label={portfolio?.about.signature}>
-                <img src="/mayoub-signature.png" alt="Muhammad Ayoub signature" title="Muhammad Ayoub signature" loading="lazy" />
+                <Image src="/mayoub-signature.png" alt="Muhammad Ayoub signature" title="Muhammad Ayoub signature" sizes="140px" loading="lazy" {...getImageDimensions("/mayoub-signature.png")} />
               </span>
             </div>
           </div>
@@ -53,8 +55,8 @@ export function AboutSection({ portfolio }: { portfolio: PortfolioData }) {
               onMouseMove={handlePortraitSpotlight}
               style={{ "--spotlight-x": "50%", "--spotlight-y": "42%" } as CSSProperties}
             >
-              <img src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub Khan WordPress developer portrait" title="Muhammad Ayoub Khan WordPress developer portrait" loading="lazy" />
-              <img src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub Khan website developer background portrait" title="Muhammad Ayoub Khan website developer background portrait" aria-hidden="true" loading="lazy" />
+              <Image src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub Khan WordPress developer portrait" title="Muhammad Ayoub Khan WordPress developer portrait" sizes="(max-width: 760px) 100vw, 42vw" loading="lazy" {...getImageDimensions("/ayoub-about-v2.jpg")} />
+              <Image src="/ayoub-about-v2.jpg" alt="" title="Muhammad Ayoub Khan website developer background portrait" aria-hidden="true" sizes="(max-width: 760px) 100vw, 42vw" loading="lazy" {...getImageDimensions("/ayoub-about-v2.jpg")} />
               <div className={styles["about__portrait-caption"]}>
                 <strong>Muhammad Ayoub</strong>
                 <span>5+ years of experience as Reactjs Frontend Developer & WordPress</span>

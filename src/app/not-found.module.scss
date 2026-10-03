@@ -1,6 +1,6 @@
 .not-found-page :global(.section__inner) {
   padding-block: var(--space-9) var(--space-7);
-  background-color: #eeeeef;
+  background-color: var(--color-section-tint-bg);
   background-image:
     radial-gradient(rgba(1, 1, 27, 0.07) 0.75px, transparent 0.75px),
     linear-gradient(180deg, #f6f6f7, #e9e9eb);
@@ -74,7 +74,7 @@
     radial-gradient(rgba(255, 255, 255, 0.08) 0.75px, transparent 0.75px),
     #111118;
   background-size: 7px 7px, auto;
-  color: #fff;
+  color: var(--color-on-dark);
   box-shadow:
     rgba(255, 255, 255, 0.08) 0 1px 0 inset,
     rgba(1, 1, 27, 0.18) 0 28px 72px;
@@ -107,7 +107,7 @@
   justify-content: space-between;
   gap: var(--space-3);
   border-top: 1px solid rgba(255, 255, 255, 0.16);
-  color: #fff;
+  color: var(--color-on-dark);
   font-family: var(--font-display-compact);
   font-size: var(--text-h5);
   font-weight: 800;

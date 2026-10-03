@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
 import { useRef } from "react";
 import styles from "./CaseStudyBrowserMockup.module.scss";
 
@@ -56,11 +58,13 @@ export function CaseStudyBrowserMockup({
           onMouseEnter={scrollOnHover ? handleEnter : undefined}
           onMouseLeave={scrollOnHover ? handleLeave : undefined}
         >
-          <img
+          <Image
             ref={imageRef}
             src={imageSrc}
             alt={label}
+            sizes="(max-width: 900px) 100vw, 50vw"
             loading="lazy"
+            {...getImageDimensions(imageSrc, { width: 1600, height: 9000 })}
           />
         </div>
       )}

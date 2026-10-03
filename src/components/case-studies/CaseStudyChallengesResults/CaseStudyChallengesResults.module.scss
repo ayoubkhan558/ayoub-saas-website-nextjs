@@ -80,13 +80,13 @@
   background:
     radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px) 0 0 / 7px 7px,
     linear-gradient(180deg, #16161d, #0f0f15);
-  color: #fff;
+  color: var(--color-on-dark);
   box-shadow: rgba(1, 1, 27, 0.18) 0 28px 72px;
 }
 
 .result-panel h3,
 .result-panel .comparison-item strong {
-  color: #fff;
+  color: var(--color-on-dark);
 }
 
 .result-panel .panel-label,

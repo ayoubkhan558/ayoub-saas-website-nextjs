@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
 import Link from "next/link";
 import { IconGlyph } from "@/components/landing/IconGlyph/IconGlyph";
 import type { CaseStudyCard } from "@/data/work";
@@ -11,7 +13,7 @@ export function CaseStudyListingCard({ study, index }: { study: CaseStudyCard; i
         <span>{study.tag.replace("_", " ")}</span>
       </span>
       <span className={styles.card__image}>
-        <img src={study.image} alt={study.imageAlt} title={study.imageAlt} loading="lazy" />
+        <Image src={study.image} alt={study.imageAlt} title={study.imageAlt} sizes="(max-width: 760px) 100vw, 50vw" loading="lazy" {...getImageDimensions(study.image)} />
         {study.company ? <span className={styles.card__company}>Company: {study.company}</span> : null}
       </span>
       <span className={styles.card__content}>

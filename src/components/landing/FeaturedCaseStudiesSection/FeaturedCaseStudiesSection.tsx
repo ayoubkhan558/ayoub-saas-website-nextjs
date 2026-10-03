@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
 import Link from "next/link";
 import type { CaseStudyCard } from "@/data/work";
 import { IconGlyph } from "../IconGlyph/IconGlyph";
@@ -22,7 +24,7 @@ export function FeaturedCaseStudiesSection({ projects }: { projects: CaseStudyCa
                   <span className={styles["work__project-kind"]}>{project.tag.replace("_", " ")}</span>
                 </span>
                 <span className={styles["work__project-image"]}>
-                  <img src={project.image} alt={project.imageAlt} title={project.imageAlt} loading="lazy" />
+                  <Image src={project.image} alt={project.imageAlt} title={project.imageAlt} sizes="(max-width: 760px) 100vw, 33vw" loading="lazy" {...getImageDimensions(project.image)} />
                   {project.company ? <span className={styles["work__project-company"]}>Company: {project.company}</span> : null}
                 </span>
                 <span className={styles["work__project-content"]}>

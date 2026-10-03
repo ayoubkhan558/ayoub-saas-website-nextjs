@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { getImageDimensions } from "@/lib/image-dimensions";
 import type { PortfolioData } from "@/context/PortfolioContentContext";
 import styles from "./AboutStorySection.module.scss";
 
@@ -9,7 +11,7 @@ export function AboutStorySection({ about }: { about: PortfolioData["about"] }) 
       <div className="section__inner">
         <div className={`container ${styles["about-page-story-feature"]}`}>
           <figure className={styles["about-page-story-portrait"]}>
-            <img src="/ayoub-about-v2.jpg" alt={`${fullName} website developer`} title={`${fullName} website developer`} />
+            <Image src="/ayoub-about-v2.jpg" alt={`${fullName} website developer`} title={`${fullName} website developer`} sizes="(max-width: 760px) 100vw, 40vw" {...getImageDimensions("/ayoub-about-v2.jpg")} />
           </figure>
           <div className={styles["about-page-section-header"]}>
             <span className={styles["about-page__eyebrow"]}>My Story</span>
