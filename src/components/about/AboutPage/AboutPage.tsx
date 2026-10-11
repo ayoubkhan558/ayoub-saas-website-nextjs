@@ -3,7 +3,6 @@ import { SiteHeader } from "@/components/landing/SiteHeader/SiteHeader";
 import portfolio from "@/data/portfolio.json";
 import { buildAboutSchema, jsonLdScript } from "@/lib/seo-schema";
 import { AboutExperienceSection } from "../AboutExperienceSection/AboutExperienceSection";
-import { CareerPathSection } from "../CareerPathSection/CareerPathSection";
 import { AboutHero } from "../AboutHero/AboutHero";
 import styles from "./AboutPage.module.scss";
 import { AboutStorySection } from "../AboutStorySection/AboutStorySection";
@@ -23,7 +22,6 @@ export function AboutPage() {
       <main>
         <AboutHero portfolio={portfolio} />
         <AboutStorySection about={portfolio?.about} />
-        <CareerPathSection careerPath={portfolio.about.careerPath} />
         <AboutExperienceSection experienceLog={portfolio?.experienceLog} companyLogos={portfolio?.about.companyLogos} />
         <AboutToolboxSection about={portfolio?.about} />
       </main>

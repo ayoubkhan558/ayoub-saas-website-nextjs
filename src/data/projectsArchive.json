@@ -1,7 +1,7 @@
 {
   "sourceFile": "C:\\Users\\NCS\\Downloads\\Ayoub Projects.xlsx",
   "sheet": "Sheet1",
-  "projectCount": 140,
+  "projectCount": 141,
   "excludedRows": [
     42,
     137
@@ -1828,7 +1828,7 @@
       "date": null,
       "projectType": "WordPress website",
       "description": "Danielle Ball Fitness is a wordpress website built with Wordpress, Elementor to give the client a sharper, easier-to-maintain online presence.",
-      "projectStatus": "Live",
+      "projectStatus": "Offline (Domain Expired)",
       "screenshot": "/projects/project-ss-danielle-ball-fitness.jpg"
     },
     {
@@ -1973,6 +1973,21 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
+      "websiteName": "NCL Real Estate",
+      "categoryNiche": "Real Estate",
+      "websiteUrl": "https://nclrealestate.com",
+      "figmaLink": null,
+      "platformFrameworkBuilder": "WordPress / Custom Frontend",
+      "company": null,
+      "client": null,
+      "notes": "Real estate marketing website focused on property presentation and inquiry flow.",
+      "date": null,
+      "projectType": "Real estate website",
+      "description": "NCL Real Estate is a lead-focused real estate website built to present listings and services clearly while improving trust, usability, and inquiry conversion.",
+      "projectStatus": "Live",
+      "screenshot": "/projects/project-ss-nclrealestate.jpg"
+    },
+    {
       "websiteName": "ExploreAsia",
       "categoryNiche": "Travel and tourism",
       "websiteUrl": "https://robertw274.sg-host.com/",
@@ -2047,7 +2062,7 @@
       },
       "projectType": "WordPress website",
       "description": "Guaranteed Grades is a wordpress website translated from Figma with Wordpress, Elementor to present services clearly and convert qualified visitors.",
-      "projectStatus": "Live",
+      "projectStatus": "Offline (Domain Expired)",
       "screenshot": "/projects/project-ss-guaranteed-grades.jpg"
     },
     {

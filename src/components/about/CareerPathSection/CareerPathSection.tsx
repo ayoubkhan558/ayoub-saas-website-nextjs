@@ -19,7 +19,7 @@ export function CareerPathSection({ careerPath }: { careerPath: PortfolioData["a
                 <div className={styles["career-path__content"]}>
                   <div className={styles["career-path__heading"]}>
                     <h2 className={styles["career-path__title"]}>{item.title}</h2>
-                    {item.current ? <span className={styles["career-path__badge"]}>Current Focus</span> : null}
+                    {item.current ? <span className={styles["career-path__badge"]}>Full SEO</span> : null}
                   </div>
                   <p className={styles["career-path__technologies"]}>{item.technologies}</p>
                   <p className={styles["career-path__description"]}>{item.description}</p>

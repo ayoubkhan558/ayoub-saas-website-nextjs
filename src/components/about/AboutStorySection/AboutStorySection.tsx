@@ -27,6 +27,7 @@ export function AboutStorySection({ about }: { about: PortfolioData["about"] }) 
             </article>
           </div>
         </div>
+
         <div className={`container ${styles["about-page-story-grid"]}`}>
           {about.storyCards.map((item) => (
             <article className={styles["about-page-feature-card"]} key={item.label}>
@@ -35,6 +36,33 @@ export function AboutStorySection({ about }: { about: PortfolioData["about"] }) 
               <p className={styles["about-page-feature-card__text"]}>{item.text}</p>
             </article>
           ))}
+        </div>
+
+        <div className={`container ${styles["about-page-journey"]}`}>
+          <div className={styles["about-page-journey__header"]}>
+            <span className={styles["about-page__eyebrow"]}>Career Path</span>
+            <h3 className={styles["about-page-journey__title"]}>The path that shaped how I build.</h3>
+          </div>
+
+          <ol className={styles["about-page-journey__list"]}>
+            {about.careerPath.map((item, index) => (
+              <li
+                key={`${item.year}-${item.title}`}
+                className={`${styles["about-page-journey__item"]} ${item.current ? styles["about-page-journey__item--current"] : ""}`}
+              >
+                <span className={styles["about-page-journey__index"]}>{String(index + 1).padStart(2, "0")}</span>
+                <div className={styles["about-page-journey__content"]}>
+                  <div className={styles["about-page-journey__heading"]}>
+                    <h4 className={styles["about-page-journey__name"]}>{item.title}</h4>
+                    {item.current ? <span className={styles["about-page-journey__badge"]}>Full SEO</span> : null}
+                  </div>
+                  <p className={styles["about-page-journey__tech"]}>{item.technologies}</p>
+                  <p className={styles["about-page-journey__description"]}>{item.description}</p>
+                  <span className={styles["about-page-journey__year"]}>{item.year}</span>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>
