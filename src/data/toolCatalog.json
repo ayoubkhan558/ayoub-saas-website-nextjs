@@ -162,6 +162,23 @@
     "logo": "/tools/JSON.svg",
     "description": "Lightweight data format for APIs and application configuration files."
   },
+  "seo": {
+    "name": "SEO",
+    "logo": "/tools/seo-2.png",
+    "description": "Search engine optimization practices for improving website visibility and ranking."
+  },
+  "rank-math": {
+    "name": "Rank Math",
+    "categories": ["seo"],
+    "logo": "/tools/rankmath.png",
+    "description": "WordPress SEO plugin for technical setup, structured data, and on-page optimization."
+  },
+  "yoast-seo": {
+    "name": "Yoast SEO",
+    "categories": ["seo"],
+    "logo": "/tools/yoast-seo.png",
+    "description": "WordPress SEO plugin for content optimization, metadata, and search readability."
+  },
   "vs-code": {
     "name": "VS Code",
     "logo": "/tools/vs-code.svg",

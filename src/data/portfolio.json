@@ -2,7 +2,7 @@
   "profile": {
     "name": "Muhammad Ayoub",
     "brand": "MAYOUB.DEV",
-    "role": "Conversion-focused Website Partner \u00b7 Front-End Delivery \u00b7 Technical SEO Expert",
+    "role": "Web Developer & Full-Cycle SEO Specialist",
     "location": "Faisalabad, Pakistan",
     "phone": "+92 334 781 2124",
     "email": "ayoubkhan558@hotmail.com",
@@ -12,7 +12,7 @@
     "upwork": "https://www.upwork.com/freelancers/~ayoubkhan558",
     "availability": "Open for new projects",
     "currentlyBuilding": "Brickify workflows",
-    "summary": "I help businesses turn unclear, slow, or outdated websites into sharper digital experiences that build trust, explain the offer, improve technical SEO, and turn visitors into qualified inquiries."
+    "summary": "I build conversion-focused React, Next.js, and WordPress websites, then grow their search visibility with full-cycle SEO across technical, on-page, content, and off-page work."
   },
   "offer": "Refer a client \u2014 get 15% off your next project",
   "navLinks": [
@@ -80,9 +80,9 @@
     }
   },
   "hero": {
-    "headlineLineOne": "Websites Built to Rank Fast & Convert Visitors into Clients.",
+    "headlineLineOne": "Web Developer + SEO Specialist for Sites That Rank & Convert",
     "headlineLineTwo": "",
-    "subheadline": "I rebuild slow or confusing websites into high-converting digital assets that boost your search visibility and turn traffic into qualified leads.",
+    "subheadline": "I build and improve React, Next.js, and WordPress websites, pairing solid development with technical SEO, on-page improvements, useful content, and off-page authority building.",
     "primaryCta": "Book a discovery call",
     "secondaryCta": "View case studies",
     "badges": [
@@ -533,7 +533,7 @@
     }
   ],
   "about": {
-    "story": "I'm a Front-End Engineer and Technical SEO Expert based in Faisalabad, Pakistan. I build React and Next.js interfaces for startups, agencies, and product teams \u2014 and WordPress sites for businesses that need a CMS their team can actually manage, with clean technical SEO foundations that support rankings and conversions.",
+    "story": "I'm a web developer and full-cycle SEO specialist based in Faisalabad, Pakistan. I build React, Next.js, and WordPress websites, then improve their visibility through technical SEO, on-page optimization, content strategy, and off-page authority building.",
     "motivation": "Most of the projects I'm brought onto have the same root problem: a UI that was built fast but not built to last. Hard to extend, slow to load, impossible to hand off. I fix that \u2014 and make sure the technical foundation, performance, and SEO structure support long-term growth instead of just looking good on launch day.",
     "originStory": "I started web development in 2018. In the early times, I did not have an internet connection at home, so I used my friends' internet to download tutorials, then watched them offline to learn HTML, CSS, and the fundamentals. That beginning made me self-learned, resourceful, and passionate about building useful things.",
     "education": "Master of Computer Science, University of Sahiwal",
@@ -654,9 +654,11 @@
         ]
       },
       {
-        "title": "Strategy",
+        "title": "SEO & Growth",
         "items": [
-          "Technical SEO Optimization",
+          "Technical, On-Page & Off-Page SEO",
+          "Content Strategy & Search Intent",
+          "Authority & Link Building",
           "Conversion Flow & CTA Planning",
           "Tracking-Ready Analytics",
           "CMS Handoff & Documentation"
@@ -683,6 +685,9 @@
       "npm",
       "postman",
       "json",
+      "seo",
+      "rank-math",
+      "yoast-seo",
       "vercel",
       "vs-code",
       "mysql",

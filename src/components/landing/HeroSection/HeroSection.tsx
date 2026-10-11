@@ -72,12 +72,12 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
             <div className={styles["hero__identity"]} aria-label="Muhammad Ayoub profile">
               <div className={styles["hero__identity-head"]}>
                 <span className={styles["hero__portrait"]}>
-                  <Image className={styles["hero__portrait-img"]} src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub Khan website developer" title="Muhammad Ayoub Khan website developer" sizes="(max-width: 760px) 42vw, 280px" priority {...getImageDimensions("/ayoub-about-v2.jpg")} />
+                  <Image className={styles["hero__portrait-img"]} src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub Khan web developer and SEO specialist" title="Muhammad Ayoub Khan web developer and SEO specialist" sizes="(max-width: 760px) 42vw, 280px" priority {...getImageDimensions("/ayoub-about-v2.jpg")} />
                   <span className={styles["hero__portrait-status"]} aria-hidden="true" />
                 </span>
                 <div className={styles["hero__identity-copy"]}>
                   <strong className={styles["hero__identity-name"]}>M. Ayoub</strong>
-                  <span className={styles["hero__identity-role"]}>Frontend &amp; WordPress Developer</span>
+                  <span className={styles["hero__identity-role"]}>Web Developer &amp; SEO Specialist</span>
 
                   <div className={styles["hero__badges"]} aria-label="Availability and trust badges">
                     {portfolio?.hero.badges.map((badge) => (

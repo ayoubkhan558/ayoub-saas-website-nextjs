@@ -11,7 +11,7 @@ export function AboutStorySection({ about }: { about: PortfolioData["about"] }) 
       <div className="section__inner">
         <div className={`container ${styles["about-page-story-feature"]}`}>
           <figure className={styles["about-page-story-portrait"]}>
-            <Image src="/ayoub-about-v2.jpg" alt={`${fullName} website developer`} title={`${fullName} website developer`} sizes="(max-width: 760px) 100vw, 40vw" {...getImageDimensions("/ayoub-about-v2.jpg")} />
+            <Image src="/ayoub-about-v2.jpg" alt={`${fullName} web developer and SEO specialist`} title={`${fullName} web developer and SEO specialist`} sizes="(max-width: 760px) 100vw, 40vw" {...getImageDimensions("/ayoub-about-v2.jpg")} />
           </figure>
           <div className={styles["about-page-section-header"]}>
             <span className={styles["about-page__eyebrow"]}>My Story</span>

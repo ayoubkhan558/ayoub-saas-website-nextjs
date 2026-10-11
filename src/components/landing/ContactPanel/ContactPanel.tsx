@@ -121,7 +121,7 @@ export function ContactPanel({ profile, open, onClose }: ContactPanelProps) {
             <span>Let&apos;s build something</span>
             <span>amazing together</span>
           </h2>
-          <p>Full Stack Developer and Technical SEO Expert specializing in WordPress, React, Next.js, and conversion-focused websites. Open to freelance, contracts, and collaborations.</p>
+          <p>Full-Stack Web Developer &amp; SEO Specialist working across WordPress, React, and Next.js, with full-cycle SEO from technical and on-page improvements to content and off-page growth. Open to freelance, contracts, and collaborations.</p>
         </div>
 
         <a className={styles["contact-panel__method"]} href={`mailto:${profile.email}`} title="Email Muhammad Ayoub">

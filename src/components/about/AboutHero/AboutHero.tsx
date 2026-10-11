@@ -19,7 +19,7 @@ export function AboutHero({ portfolio }: { portfolio: PortfolioData }) {
               {/* {fullName} */}
             </span>
             <h1 className={styles["about-page-hero__title"]}>
-              Freelance React & Next.js Developer
+              Web Developer &amp; SEO Specialist
               {/* Frontend & React Engineer | WordPress Specialist */}
             </h1>
             <p className={styles["about-page-hero__text"]}>
