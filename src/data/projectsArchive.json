@@ -1,7 +1,7 @@
 {
   "sourceFile": "C:\\Users\\NCS\\Downloads\\Ayoub Projects.xlsx",
   "sheet": "Sheet1",
-  "projectCount": 141,
+  "projectCount": 143,
   "excludedRows": [
     42,
     137
@@ -1973,13 +1973,13 @@
       "projectStatus": "Offline (Domain Expired)"
     },
     {
-      "websiteName": "NCL Real Estate",
+      "websiteName": "Nova Crystal Line",
       "categoryNiche": "Real Estate",
       "websiteUrl": "https://nclrealestate.com",
       "figmaLink": null,
       "platformFrameworkBuilder": "WordPress / Custom Frontend",
       "company": null,
-      "client": null,
+      "client": "Inshad Bajwa (UAE)",
       "notes": "Real estate marketing website focused on property presentation and inquiry flow.",
       "date": null,
       "projectType": "Real estate website",
@@ -2117,6 +2117,34 @@
       "projectType": "WordPress website",
       "description": "Client project is a wordpress website translated from Figma with Bricks Page Builder to give the client a sharper, easier-to-maintain online presence.",
       "projectStatus": "Live"
+    },
+    {
+      "websiteName": "Clampy",
+      "categoryNiche": "Developer tools and responsive design",
+      "websiteUrl": "https://clampy.netlify.app/",
+      "figmaLink": null,
+      "platformFrameworkBuilder": "React.js",
+      "client": null,
+      "notes": "Personal project: fluid CSS clamp() generator for responsive typography and spacing.",
+      "date": null,
+      "projectType": "CSS developer tool",
+      "description": "A React.js tool that generates fluid CSS clamp() values for scalable, viewport-responsive typography and spacing.",
+      "projectStatus": "Live",
+      "screenshot": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fclampy.netlify.app?w=900"
+    },
+    {
+      "websiteName": "Brickify",
+      "categoryNiche": "Developer tools and Bricks Builder",
+      "websiteUrl": "https://brickify.netlify.app/",
+      "figmaLink": null,
+      "platformFrameworkBuilder": "React.js",
+      "client": null,
+      "notes": "Personal project: custom AI-assisted workflow tool for Bricks Builder.",
+      "date": null,
+      "projectType": "Developer tool",
+      "description": "A React.js developer tool that converts HTML, CSS, and JavaScript into Bricks Builder JSON, supporting modern Flexbox and CSS Grid layouts and pseudo-classes.",
+      "projectStatus": "Live",
+      "screenshot": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fbrickify.netlify.app?w=900"
     }
   ]
 }
