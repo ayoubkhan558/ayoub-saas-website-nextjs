@@ -8,12 +8,12 @@ import portfolio from "@/data/portfolio.json";
 export const metadata: Metadata = {
   title: "Website Development Services",
   description:
-    "Bricks Builder developer, Figma to code, WordPress redesign, React landing pages, and WooCommerce cleanup by Muhammad Ayoub Khan.",
+    "Custom web apps, landing pages, website redesigns, speed optimization, e-commerce setup, and ongoing support by Muhammad Ayoub Khan.",
   alternates: { canonical: "/services" },
   openGraph: {
     title: "Website Development Services",
     description:
-      "Hire for Bricks Builder, Figma to WordPress, React/Next.js landing pages, and conversion-focused redesigns.",
+      "Custom web apps, landing pages, website redesigns, speed optimization, e-commerce setup, and ongoing support.",
     type: "website",
     url: "/services",
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Website Development Services",
     description:
-      "Hire for Bricks Builder, Figma to WordPress, React/Next.js landing pages, and conversion-focused redesigns.",
+      "Custom web apps, landing pages, website redesigns, speed optimization, e-commerce setup, and ongoing support.",
     images: ["/social/ayoub-portfolio-thumbnail-services.jpg"],
   },
 };

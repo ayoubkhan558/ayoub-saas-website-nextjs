@@ -2145,6 +2145,20 @@
       "description": "A React.js developer tool that converts HTML, CSS, and JavaScript into Bricks Builder JSON, supporting modern Flexbox and CSS Grid layouts and pseudo-classes.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-brickify.jpg"
+    },
+    {
+      "websiteName": "Mockify",
+      "categoryNiche": "Developer tools and product mockups",
+      "websiteUrl": "https://mockify-alpha.vercel.app/",
+      "figmaLink": null,
+      "platformFrameworkBuilder": "React.js",
+      "client": null,
+      "notes": "Personal project: website mockup generator for portfolios, proposals, and product previews.",
+      "date": null,
+      "projectType": "Developer tool",
+      "description": "Website mockup generator that captures desktop, tablet, and mobile screenshots onto a single canvas with customizable frames and transparent export.",
+      "projectStatus": "Live",
+      "screenshot": "/reactjs-projects/project-ss-mockify.jpg"
     }
   ]
 }

@@ -5,10 +5,6 @@ const imageDimensions: Record<string, ImageDimensions> = {
     "width": 180,
     "height": 180
   },
-  "/ayoub-about-v0.jpg": {
-    "width": 1184,
-    "height": 1328
-  },
   "/ayoub-about-v2.jpg": {
     "width": 1122,
     "height": 1402
