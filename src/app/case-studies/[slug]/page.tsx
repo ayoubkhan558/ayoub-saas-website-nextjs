@@ -28,7 +28,8 @@ export async function generateMetadata({
 
   const title = seo?.title ?? `${study.client} Case Study`;
   const description = seo?.description ?? `${study.headline} ${study.overview}`.slice(0, 155);
-  const image = entry.image ? [{ url: entry.image, alt: entry.imageAlt, width: 1200, height: 630 }] : undefined;
+  const image = study.heroMockup ?? entry.image;
+  const socialImage = image ? [{ url: image, alt: entry.imageAlt }] : undefined;
 
   return {
     title,
@@ -40,7 +41,7 @@ export async function generateMetadata({
       type: "article",
       url: entry.href,
       siteName: portfolio.profile.brand,
-      images: image,
+      images: socialImage,
       publishedTime: study.pageSpeed?.measuredAt,
       authors: [portfolio.profile.name],
     },
@@ -48,7 +49,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: entry.image ? [entry.image] : undefined,
+      images: image ? [image] : undefined,
     },
   };
 }

@@ -20,12 +20,19 @@ export const metadata: Metadata = {
     url: "/case-studies",
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail.jpg",
+        url: "/social/ayoub-portfolio-thumbnail-case-studies.jpg",
         width: 1734,
         height: 907,
         alt: "Muhammad Ayoub Khan website development case studies",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Studies",
+    description:
+      "Project breakdowns for law firm, clinic, real estate, portfolio, and ecommerce website builds.",
+    images: ["/social/ayoub-portfolio-thumbnail-case-studies.jpg"],
   },
 };
 

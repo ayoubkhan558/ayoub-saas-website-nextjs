@@ -31,12 +31,18 @@ export async function generateMetadata({
       url: `/services/${niche.slug}`,
       images: [
         {
-          url: "/social/ayoub-portfolio-thumbnail.jpg",
+          url: "/social/ayoub-portfolio-thumbnail-services.jpg",
           width: 1734,
           height: 907,
           alt: niche.title,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: niche.title,
+      description: niche.description,
+      images: ["/social/ayoub-portfolio-thumbnail-services.jpg"],
     },
   };
 }
