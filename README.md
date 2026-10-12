@@ -47,12 +47,11 @@ npm run lint     # Run lint checks
 
 ## Content Files
 
-- `src/content/portfolio/portfolio.json` - Homepage/profile/services/testimonials/global content
-- `src/content/work/projects.json` - Featured projects
-- `src/content/work/projectsArchive.json` - Full projects archive rendered on `/projects`
+- `src/data/portfolio.json` - Homepage/profile/services/testimonials/global content
+- `src/data/projectsArchive.json` - Full projects archive rendered on `/projects` and used as the single source for featured project cards
 - `src/data/work.ts` - Project and case-study listing cards
-- `src/content/work/caseStudyDetails.json` - Full case-study detail content
-- `src/content/work/projectLinkStatus.json` - Link status/reference data for project URLs
+- `src/data/caseStudyDetails.ts` - Full case-study detail content
+- `src/data/projectLinkStatus.json` - Link status/reference data for project URLs
 
 Project and case-study content is intentionally separated so detailed pages do not bloat the homepage data file.
 

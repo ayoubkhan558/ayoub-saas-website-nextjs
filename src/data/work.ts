@@ -1,5 +1,11 @@
 import { caseStudyDetails } from "./caseStudyDetails";
-import projectsJson from "./projects.json";
+import {
+  getProjectDescription,
+  getProjectThumbnail,
+  getProjectTitle,
+  normalizeHttpLink,
+  projectArchiveItems,
+} from "./projectsArchive";
 
 export type CaseStudyCard = {
   tag: string;
@@ -27,7 +33,6 @@ export type ProjectCard = {
   badge?: string;
   deliveryContext?: string;
   description?: string;
-  impact?: string;
   stack: string;
   technologies: string[];
   cta?: string;
@@ -36,4 +41,64 @@ export type ProjectCard = {
   imageAlt: string;
 };
 
-export const projects = projectsJson as ProjectCard[];
+const featuredProjectNames = [
+  "Xgrid",
+  "Alkira",
+  "Chkk",
+  "Brickify",
+  "PinAuto",
+  "Clampy",
+  "Markedine",
+  "Mockify",
+] as const;
+
+const projectThemeIcons: Record<string, string> = {
+  Xgrid: "layers",
+  Alkira: "shield",
+  Chkk: "rocket",
+  Brickify: "layers",
+  PinAuto: "gauge",
+  Clampy: "gauge",
+  Markedine: "sparkles",
+  Mockify: "code2",
+};
+
+function toProjectCard(project: (typeof projectArchiveItems)[number]): ProjectCard {
+  const title = getProjectTitle(project);
+  const stack = project.platformFrameworkBuilder || "Custom web build";
+  const isFreeTool = /tool|generator|mockup|clamp|convert/i.test(
+    `${project.projectType ?? ""} ${project.description ?? ""}`,
+  );
+  const href = normalizeHttpLink(project.websiteUrl) || project.websiteUrl || "#";
+  const image = getProjectThumbnail(project) || `https://s.wordpress.com/mshots/v1/${encodeURIComponent(href)}?w=900`;
+
+  return {
+    icon: projectThemeIcons[title] ?? "rocket",
+    title,
+    kind: isFreeTool ? "free-tool" : "client-site",
+    badge: isFreeTool ? "Free web tool" : `${stack} project`,
+    deliveryContext:
+      typeof project.company === "string" && project.company ? `While working at ${project.company}` : undefined,
+    description: getProjectDescription(project),
+    stack,
+    technologies: [
+      ...new Set(
+        [
+          project.platformFrameworkBuilder,
+          project.projectType,
+          project.categoryNiche,
+          "Custom web experience",
+        ].filter((value): value is string => Boolean(value)),
+      ),
+    ],
+    cta: isFreeTool ? "Open tool" : "View Live",
+    href,
+    image,
+    imageAlt: `${title} project preview`,
+  };
+}
+
+export const projects = featuredProjectNames
+  .map((name) => projectArchiveItems.find((project) => getProjectTitle(project) === name))
+  .filter((project): project is NonNullable<typeof project> => Boolean(project))
+  .map(toProjectCard);

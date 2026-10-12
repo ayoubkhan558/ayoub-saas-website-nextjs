@@ -15,7 +15,7 @@
     "currentlyBuilding": "Brickify workflows",
     "summary": "I build conversion-focused React, Next.js, and WordPress websites, then grow their search visibility with full-cycle SEO across technical, on-page, content, and off-page work."
   },
-  "offer": "Refer a client \u2014 get 15% off your next project",
+  "offer": "Refer a client — get 15% off your next project",
   "navLinks": [
     {
       "label": "About",
@@ -141,7 +141,7 @@
       },
       {
         "time": "05",
-        "message": "Legacy dependencies detected \u2014 performance pass queued",
+        "message": "Legacy dependencies detected — performance pass queued",
         "status": "WARN"
       },
       {
@@ -156,7 +156,7 @@
       },
       {
         "time": "08",
-        "message": "Handoff complete \u2014 your team owns the codebase",
+        "message": "Handoff complete — your team owns the codebase",
         "status": "OK"
       }
     ]
@@ -252,27 +252,27 @@
   "services": [
     {
       "level": "SOLUTION_01",
-      "name": "Homepage Conversion System",
-      "price": "Starting from $700",
+      "name": "Custom Web App",
+      "price": "Starting from $2,000",
       "period": "",
-      "description": "Turn a confusing homepage into a clear sales page that explains your offer, builds trust, and drives inquiries.",
-      "whatYouGet": "A sharper homepage flow, clearer messaging hierarchy, stronger proof placement, better CTA structure, and a build ready for launch.",
-      "timeline": "Typical timeline: 1-3 weeks",
-      "bestFit": "Best when people visit your site but still ask what you do, who it is for, or why they should choose you.",
+      "description": "Build a polished product interface, MVP front end, dashboard, or web app experience with clean implementation.",
+      "whatYouGet": "Reusable UI components, responsive screens, state-aware interface patterns, API-ready structure, and maintainable front-end delivery.",
+      "timeline": "Typical timeline: 2-5 weeks",
+      "bestFit": "Best when you have an MVP, internal tool, SaaS interface, or product idea that needs a clean user experience.",
       "features": [
-        "Homepage narrative built around buyer questions",
-        "Clear above-the-fold offer and CTA",
-        "Proof, outcomes, and objections placed where they matter",
-        "Mobile-first section flow",
-        "Fast implementation behind the scenes"
+        "User-flow based screen structure",
+        "Reusable interface components",
+        "Empty, loading, error, and responsive states",
+        "API and form integration readiness",
+        "Clean code handoff for future development"
       ],
-      "cta": "Book homepage sprint",
+      "cta": "Build my product",
       "href": "/contact",
       "featured": true
     },
     {
       "level": "SOLUTION_02",
-      "name": "Campaign Landing Page",
+      "name": "Landing Page",
       "price": "Starting from $500",
       "period": "",
       "description": "A focused landing page for ads, product launches, lead magnets, SaaS offers, or service campaigns.",
@@ -292,7 +292,7 @@
     },
     {
       "level": "SOLUTION_03",
-      "name": "Website Redesign Sprint",
+      "name": "Website Redesign",
       "price": "Starting from $1,000",
       "period": "",
       "description": "Modernize a dated website, improve credibility, fix the mobile experience, and strengthen conversion paths.",
@@ -312,30 +312,10 @@
     },
     {
       "level": "SOLUTION_04",
-      "name": "Product / SaaS Front End",
-      "price": "Starting from $2,000",
-      "period": "",
-      "description": "Build a polished product interface, MVP front end, dashboard, or web app experience with clean implementation.",
-      "whatYouGet": "Reusable UI components, responsive screens, state-aware interface patterns, API-ready structure, and maintainable front-end delivery.",
-      "timeline": "Typical timeline: 2-5 weeks",
-      "bestFit": "Best when you have an MVP, internal tool, SaaS interface, or product idea that needs a clean user experience.",
-      "features": [
-        "User-flow based screen structure",
-        "Reusable interface components",
-        "Empty, loading, error, and responsive states",
-        "API and form integration readiness",
-        "Clean code handoff for future development"
-      ],
-      "cta": "Build my product",
-      "href": "/contact",
-      "featured": true
-    },
-    {
-      "level": "SOLUTION_05",
-      "name": "UX, Speed & Mobile Cleanup",
+      "name": "Speed Optimization",
       "price": "Starting from $400",
       "period": "",
-      "description": "Fix the friction points that make visitors bounce: speed, forms, mobile layout, broken UI, and unclear CTAs.",
+      "description": "Improve website speed, Core Web Vitals, and page performance so visitors get a faster, smoother experience.",
       "whatYouGet": "Focused fixes across performance, spacing, mobile layout, forms, broken interactions, and high-friction user paths.",
       "timeline": "Typical timeline: 1-5 days",
       "bestFit": "Best when the website mostly exists, but users hit friction before they inquire, book, buy, or trust the brand.",
@@ -346,53 +326,33 @@
         "CTA and layout cleanup",
         "Cross-browser QA"
       ],
-      "cta": "Fix site friction",
+      "cta": "Optimize my site",
+      "href": "/contact",
+      "featured": false
+    },
+    {
+      "level": "SOLUTION_05",
+      "name": "E-Commerce Setup",
+      "price": "Starting from $900",
+      "period": "",
+      "description": "Set up a customer-ready online store with clear product pages, trusted checkout, and a smooth mobile shopping experience.",
+      "whatYouGet": "Store structure, product and collection setup, payment and shipping configuration, checkout review, and mobile QA.",
+      "timeline": "Typical timeline: 1-4 weeks",
+      "bestFit": "Best for stores with traffic but weak conversion, confusing product pages, or a checkout flow customers do not trust.",
+      "features": [
+        "Product and collection setup",
+        "Payment and shipping configuration",
+        "Clear product page structure",
+        "Mobile-friendly cart and checkout",
+        "Store launch QA"
+      ],
+      "cta": "Set up my store",
       "href": "/contact",
       "featured": false
     },
     {
       "level": "SOLUTION_06",
-      "name": "Editable Website System",
-      "price": "Starting from $1,200",
-      "period": "",
-      "description": "Create reusable sections and editable content workflows so your team can update the site after launch.",
-      "whatYouGet": "An editing-friendly setup with structured content, reusable templates, CMS guidance, and a handoff your team can actually use.",
-      "timeline": "Typical timeline: 1-3 weeks",
-      "bestFit": "Best when content changes often and the team needs practical editing control after launch.",
-      "features": [
-        "Editable content structure",
-        "Reusable page templates",
-        "Simple CMS fields where needed",
-        "Training and handoff notes",
-        "WordPress or CMS only when it solves the business need"
-      ],
-      "cta": "Make it editable",
-      "href": "/contact",
-      "featured": false
-    },
-    {
-      "level": "SOLUTION_07",
-      "name": "Store Conversion Cleanup",
-      "price": "Starting from $900",
-      "period": "",
-      "description": "Improve product clarity, trust signals, mobile store UX, and checkout flow for better sales confidence.",
-      "whatYouGet": "Product page cleanup, cart/checkout improvements, trust signals, payment flow support, and mobile conversion fixes.",
-      "timeline": "Typical timeline: 1-4 weeks",
-      "bestFit": "Best for stores with traffic but weak conversion, confusing product pages, or a checkout flow customers do not trust.",
-      "features": [
-        "Product page clarity improvements",
-        "Cart and checkout UX fixes",
-        "Trust and guarantee placement",
-        "Payment integration support",
-        "Mobile store optimization"
-      ],
-      "cta": "Improve my store",
-      "href": "/contact",
-      "featured": false
-    },
-    {
-      "level": "SOLUTION_08",
-      "name": "Website Growth & Support",
+      "name": "Ongoing Support",
       "price": "Starting from $300/mo",
       "period": "",
       "description": "Ongoing website improvements, fixes, new sections, content updates, and technical support after launch.",
@@ -535,7 +495,7 @@
   ],
   "about": {
     "story": "I'm a web developer and full-cycle SEO specialist based in Faisalabad, Pakistan. I build React, Next.js, and WordPress websites, then improve their visibility through technical SEO, on-page optimization, content strategy, and off-page authority building.",
-    "motivation": "Most of the projects I'm brought onto have the same root problem: a UI that was built fast but not built to last. Hard to extend, slow to load, impossible to hand off. I fix that \u2014 and make sure the technical foundation, performance, and SEO structure support long-term growth instead of just looking good on launch day.",
+    "motivation": "Most of the projects I'm brought onto have the same root problem: a UI that was built fast but not built to last. Hard to extend, slow to load, impossible to hand off. I fix that — and make sure the technical foundation, performance, and SEO structure support long-term growth instead of just looking good on launch day.",
     "originStory": "I started web development in 2018. In the early times, I did not have an internet connection at home, so I used my friends' internet to download tutorials, then watched them offline to learn HTML, CSS, and the fundamentals. That beginning made me self-learned, resourceful, and passionate about building useful things.",
     "education": "Master of Computer Science, University of Sahiwal",
     "careerStartLabel": "Career Started",
@@ -885,7 +845,7 @@
   "faqs": [
     {
       "question": "How long does a typical project take?",
-      "answer": "Small landing pages usually take 3\u201310 days. Redesigns and product front ends usually take 2\u20135 weeks depending on scope, content, integrations, and feedback speed."
+      "answer": "Small landing pages usually take 3–10 days. Redesigns and product front ends usually take 2–5 weeks depending on scope, content, integrations, and feedback speed."
     },
     {
       "question": "Do you only design or also develop?",
