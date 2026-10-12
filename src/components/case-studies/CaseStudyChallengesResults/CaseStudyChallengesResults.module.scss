@@ -127,5 +127,16 @@
       box-shadow:
         0 0 0 1px color-mix(in srgb, var(--color-lavender-mist) 8%, transparent),
         rgba(0, 0, 0, 0.34) 0 20px 54px;
+      color: var(--color-heading);
     }
+
+  .comparison-panel h3,
+  .comparison-panel .comparison-item strong {
+    color: var(--color-heading);
+  }
+
+  .comparison-panel .panel-label,
+  .comparison-panel .comparison-item span {
+    color: rgba(255, 255, 255, 0.68);
+  }
 }

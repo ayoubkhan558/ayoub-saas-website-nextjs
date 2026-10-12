@@ -18,12 +18,19 @@ export const metadata: Metadata = {
     url: "/services",
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail.jpg",
+        url: "/social/ayoub-portfolio-thumbnail-services.jpg",
         width: 1734,
         height: 907,
         alt: "Muhammad Ayoub Khan website development services",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Development Services",
+    description:
+      "Hire for Bricks Builder, Figma to WordPress, React/Next.js landing pages, and conversion-focused redesigns.",
+    images: ["/social/ayoub-portfolio-thumbnail-services.jpg"],
   },
 };
 

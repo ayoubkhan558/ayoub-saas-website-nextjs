@@ -14,12 +14,19 @@ export const metadata: Metadata = {
     url: "/about",
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail.jpg",
-        width: 1734,
+        url: "/social/ayoub-portfolio-thumbnail-about.jpg",
+        width: 1733,
         height: 907,
         alt: "Muhammad Ayoub Khan freelance web developer",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Muhammad Ayoub Khan, Freelance Web Developer",
+    description:
+      "Bricks Builder, WordPress, and front-end delivery experience for clinics, firms, agencies, and founders.",
+    images: ["/social/ayoub-portfolio-thumbnail-about.jpg"],
   },
 };
 

@@ -23,12 +23,19 @@ export const metadata: Metadata = {
     url: "/contact",
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail.jpg",
-        width: 1734,
-        height: 907,
+        url: "/social/ayoub-portfolio-thumbnail-contact.jpg",
+        width: 1733,
+        height: 908,
         alt: "Hire Muhammad Ayoub Khan web developer",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hire Muhammad Ayoub Khan",
+    description:
+      "Send project details for Bricks Builder, WordPress, or front-end development work.",
+    images: ["/social/ayoub-portfolio-thumbnail-contact.jpg"],
   },
 };
 

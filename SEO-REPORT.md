@@ -9,7 +9,7 @@ This is a repository-level review and local production-build verification. No Go
 ## Done
 
 - Updated the site-wide and homepage title to `Muhammad Ayoub Khan | Website Developer & SEO Expert`; refreshed the related descriptions and social titles.
-- Set `public/social/ayoub-portfolio-thumbnail.jpg` as the general Open Graph and Twitter preview image throughout the site. Its actual dimensions (1734 x 907) are included in the metadata. Case-study detail pages continue to use their individual project images.
+- Set page-specific Open Graph and Twitter preview images from `public/social/` for the homepage, about, case studies, contact, projects, and services pages. Case-study detail pages dynamically use each case study's hero mockup image, falling back to its listing image.
 - Added the Linktree URL to the contact page and the Person structured data `sameAs` profiles.
 - Confirmed the site generates `robots.txt` allowing crawlers and pointing to the sitemap, and generates `sitemap.xml` with the main site routes and case studies.
 - Confirmed canonical metadata is defined for the homepage, main content routes, service pages, and case-study pages.

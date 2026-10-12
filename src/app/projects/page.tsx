@@ -25,12 +25,19 @@ export const metadata: Metadata = {
     url: "/projects",
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail.jpg",
+        url: "/social/ayoub-portfolio-thumbnail-projects.jpg",
         width: 1734,
         height: 907,
         alt: "Muhammad Ayoub Khan website design and development portfolio",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Design & Development Portfolio",
+    description:
+      "Client websites, Bricks builds, WooCommerce stores, and front-end implementation work.",
+    images: ["/social/ayoub-portfolio-thumbnail-projects.jpg"],
   },
 };
 
