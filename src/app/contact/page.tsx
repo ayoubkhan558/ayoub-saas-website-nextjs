@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     url: "/contact",
     images: [
       {
-        url: "/ayoub-about-v2.jpg",
-        width: 1200,
-        height: 630,
+        url: "/social/ayoub-portfolio-thumbnail.jpg",
+        width: 1734,
+        height: 907,
         alt: "Hire Muhammad Ayoub Khan web developer",
       },
     ],

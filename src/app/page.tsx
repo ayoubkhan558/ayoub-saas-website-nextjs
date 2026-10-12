@@ -7,31 +7,31 @@ import { buildHomeSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 
 export const metadata: Metadata = {
-  title: "Muhammad Ayoub Khan | Bricks Builder, React & Front-End Developer",
+  title: "Muhammad Ayoub Khan | Website Developer & SEO Expert",
   description:
-    "Hire Muhammad Ayoub Khan for Bricks Builder, WordPress redesigns, Figma to code, React, and Next.js websites built for leads and clean handoff.",
+    "Hire Muhammad Ayoub Khan for website development and SEO, including Bricks Builder, WordPress, React, and Next.js websites built for leads and clean handoff.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Muhammad Ayoub Khan | Bricks Builder, React & Front-End Developer",
+    title: "Muhammad Ayoub Khan | Website Developer & SEO Expert",
     description:
-      "Front-end developer Muhammad Ayoub Khan builds Bricks Builder, WordPress, React, and Next.js websites focused on clarity and conversions.",
+      "Website developer and SEO expert Muhammad Ayoub Khan builds Bricks Builder, WordPress, React, and Next.js websites focused on clarity and conversions.",
     type: "website",
     url: "/",
     images: [
       {
-        url: "/ayoub-about-v2.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Muhammad Ayoub Khan Bricks Builder and front-end developer",
+        url: "/social/ayoub-portfolio-thumbnail.jpg",
+        width: 1734,
+        height: 907,
+        alt: "Muhammad Ayoub Khan, website developer and SEO expert",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Ayoub Khan | Bricks Builder, React & Front-End Developer",
+    title: "Muhammad Ayoub Khan | Website Developer & SEO Expert",
     description:
-      "Hire Muhammad Ayoub Khan for Bricks Builder, Figma to code, React, Next.js, and WordPress development.",
-    images: ["/ayoub-about-v2.jpg"],
+      "Hire Muhammad Ayoub Khan for website development and SEO, including Bricks Builder, React, Next.js, and WordPress.",
+    images: ["/social/ayoub-portfolio-thumbnail.jpg"],
   },
 };
 

@@ -8,11 +8,11 @@ const siteUrl = portfolio.profile.website;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Muhammad Ayoub Khan | Bricks Builder, React & Front-End Developer",
+    default: "Muhammad Ayoub Khan | Website Developer & SEO Expert",
     template: "%s | Muhammad Ayoub",
   },
   description:
-    "Hire Muhammad Ayoub Khan for Bricks Builder, WordPress redesigns, Figma to code, React, and Next.js websites that convert.",
+    "Hire Muhammad Ayoub Khan for website development and SEO, including Bricks Builder, WordPress, React, and Next.js websites that convert.",
   alternates: {
     canonical: "/",
   },
@@ -21,27 +21,27 @@ export const metadata: Metadata = {
   publisher: portfolio.profile.brand,
   category: "Web Development",
   openGraph: {
-    title: "Muhammad Ayoub Khan | Bricks Builder, React & Front-End Developer",
+    title: "Muhammad Ayoub Khan | Website Developer & SEO Expert",
     description:
-      "Bricks Builder, WordPress, React, and Next.js development by Muhammad Ayoub Khan for fast, maintainable business websites.",
+      "Website development and SEO by Muhammad Ayoub Khan, including Bricks Builder, WordPress, React, and Next.js.",
     type: "website",
     url: "/",
     siteName: portfolio.profile.brand,
     images: [
       {
-        url: "/ayoub-about-v2.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Muhammad Ayoub Khan Bricks Builder and front-end developer",
+        url: "/social/ayoub-portfolio-thumbnail.jpg",
+        width: 1734,
+        height: 907,
+        alt: "Muhammad Ayoub Khan, website developer and SEO expert",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Ayoub Khan | Bricks Builder, React & Front-End Developer",
+    title: "Muhammad Ayoub Khan | Website Developer & SEO Expert",
     description:
-      "Hire Muhammad Ayoub Khan for Bricks Builder, WordPress redesigns, Figma to code, and Next.js front ends.",
-    images: ["/ayoub-about-v2.jpg"],
+      "Hire Muhammad Ayoub Khan for website development and SEO, including Bricks Builder, WordPress, React, and Next.js.",
+    images: ["/social/ayoub-portfolio-thumbnail.jpg"],
   },
   verification: {
     google: "duyYeALQEH1wUm9zAIqqTeYPJIdo3ENxkYGdgIsc274",
@@ -93,8 +93,8 @@ export default function RootLayout({
 })();`,
           }}
         />
-        <link rel="image_src" href={`${siteUrl}/ayoub-about-v2.jpg`} />
-        <meta itemProp="image" content={`${siteUrl}/ayoub-about-v2.jpg`} />
+        <link rel="image_src" href={`${siteUrl}/social/ayoub-portfolio-thumbnail.jpg`} />
+        <meta itemProp="image" content={`${siteUrl}/social/ayoub-portfolio-thumbnail.jpg`} />
       </head>
       <body suppressHydrationWarning itemScope itemType="https://schema.org/WebPage">
         {children}

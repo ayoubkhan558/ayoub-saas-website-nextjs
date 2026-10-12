@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     url: "/about",
     images: [
       {
-        url: "/ayoub-about-v2.jpg",
-        width: 1200,
-        height: 630,
+        url: "/social/ayoub-portfolio-thumbnail.jpg",
+        width: 1734,
+        height: 907,
         alt: "Muhammad Ayoub Khan freelance web developer",
       },
     ],

@@ -45,6 +45,17 @@ export function ContactInfoCard({ profile }: { profile: PortfolioData["profile"]
           <strong>LinkedIn</strong>
           <IconGlyph name="externalLink" />
         </a>
+        <a
+          className={styles["contact-method"]}
+          href={profile.linktree}
+          target="_blank"
+          rel="noreferrer"
+          title="Visit Muhammad Ayoub's Linktree"
+        >
+          <span className={styles["contact-method__label"]}>Social links</span>
+          <strong>Linktree</strong>
+          <IconGlyph name="externalLink" />
+        </a>
       </div>
       <dl className={styles["contact-details"]}>
         <div>

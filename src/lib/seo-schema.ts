@@ -12,7 +12,7 @@ const siteUrl = portfolio.profile.website;
 const personId = `${siteUrl}/#person`;
 const serviceId = `${siteUrl}/#professional-service`;
 const websiteId = `${siteUrl}/#website`;
-const imageUrl = `${siteUrl}/ayoub-about-v2.jpg`;
+const imageUrl = `${siteUrl}/social/ayoub-portfolio-thumbnail.jpg`;
 
 type GraphNode = Record<string, unknown>;
 
@@ -36,8 +36,8 @@ function basePersonSchema(): GraphNode {
     "alternateName": ["Muhammad Ayoub", "Ayoub", "Ayoub Khan", "M Ayoub Khan", "Mayoub"],
     "url": siteUrl,
     "image": imageUrl,
-    "jobTitle": "Bricks Builder and Front-End Developer",
-    "description": "Muhammad Ayoub Khan is a freelance Bricks Builder, WordPress, React, and Next.js developer based in Faisalabad, Pakistan.",
+    "jobTitle": "Website Developer and SEO Expert",
+    "description": "Muhammad Ayoub Khan is a website developer and SEO expert specializing in Bricks Builder, WordPress, React, and Next.js, based in Faisalabad, Pakistan.",
     "email": portfolio.profile.email,
     "telephone": portfolio.profile.phone,
     "address": {
@@ -45,7 +45,7 @@ function basePersonSchema(): GraphNode {
       "addressLocality": "Faisalabad",
       "addressCountry": "PK",
     },
-    "sameAs": [portfolio.profile.linkedin, portfolio.profile.github],
+    "sameAs": [portfolio.profile.linkedin, portfolio.profile.github, portfolio.profile.linktree],
     "knowsAbout": [
       "WordPress development",
       "Website design",
