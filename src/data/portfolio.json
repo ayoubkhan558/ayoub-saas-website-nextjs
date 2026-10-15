@@ -72,7 +72,7 @@
     "expertise": {
       "label": "Stack",
       "title": "Tools I reach for on day one.",
-      "subtitle": "Five years of choosing what works."
+      "subtitle": "Eight years of choosing what works."
     },
     "contact": {
       "label": "Work together",
@@ -95,7 +95,7 @@
     "trustMetrics": [
       {
         "label": "Experience",
-        "value": "5",
+        "value": "8",
         "unit": "+ yrs",
         "trend": "React & UI"
       },
@@ -544,7 +544,7 @@
       },
       {
         "label": "Experience",
-        "value": "5+ Years"
+        "value": "8+ Years"
       },
       {
         "label": "Happy clients",
@@ -657,6 +657,7 @@
     "companyLogos": {
       "Xgrid": "/comapnies/xgrid-logo.svg",
       "Epicsols": "/comapnies/epicsols-logo.png",
+      "Fiverr & Upwork": "/comapnies/FIV_Logo.png",
       "Hawk ITs & Consultancy Provider": "/comapnies/hawk-it-logo.png",
       "AWSOL Web Technologies": "/comapnies/awsol-logo.png"
     }
@@ -808,7 +809,7 @@
       "endDate": "2026-07-06",
       "title": "Frontend Website Developer",
       "company": "Xgrid",
-      "description": "Building custom WordPress and React-based websites, developing reusable components, and creating internal tools such as Brickify to improve development workflows."
+      "description": "Building custom WordPress and React-based websites, developing reusable components, creating internal tools such as Brickify to improve development workflows, and implementing technical SEO improvements."
     },
     {
       "year": "2023 - 2024",
@@ -818,6 +819,15 @@
       "title": "Senior Website Developer",
       "company": "Epicsols",
       "description": "Delivered WordPress, React, and Next.js projects, transformed Figma designs into production-ready websites, and developed scalable CMS solutions."
+    },
+    {
+      "year": "2020 - 2023",
+      "duration": "3 years",
+      "startDate": "2020-01",
+      "endDate": "2023-01",
+      "title": "Freelance Web Developer & SEO Specialist",
+      "company": "Fiverr & Upwork",
+      "description": "Delivered 100+ small projects, including websites, landing pages, and Shopify stores, alongside SEO services. Achieved Level 2 Seller status on Fiverr and Top Rated status on Upwork."
     },
     {
       "year": "2019 - 2020",
