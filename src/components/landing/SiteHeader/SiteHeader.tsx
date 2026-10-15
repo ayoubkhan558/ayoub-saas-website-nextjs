@@ -16,6 +16,13 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const pathname = usePathname();
   const profile = portfolio.profile;
+  const navLinks = [
+    { label: "About", href: "/about" },
+    { label: "Solutions", href: "/services" },
+    { label: "Projects", href: "/projects" },
+    { label: "Case Studies", href: "/case-studies" },
+    { label: "Contact", href: "/contact" },
+  ];
 
   const openContactPanel = () => {
     setMenuOpen(false);
@@ -47,8 +54,6 @@ export function SiteHeader({ portfolio }: { portfolio: PortfolioData }) {
       return nextTheme;
     });
   };
-
-  const navLinks = portfolio.navLinks;
 
   return (<>
     <header className={styles["site-header"]}>

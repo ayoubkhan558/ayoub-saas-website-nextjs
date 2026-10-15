@@ -7,6 +7,17 @@ import styles from "./Footer.module.scss";
 
 export function Footer({ portfolio }: { portfolio: PortfolioData }) {
   const profile = portfolio.profile;
+  const footerContent = {
+    summary:
+      "I build conversion-focused React, Next.js, and WordPress websites, then grow their search visibility with full-cycle SEO across technical, on-page, content, and off-page work.",
+    availability: "Open for new projects",
+    legal: {
+      terms: "Terms and Conditions",
+      privacy: "Privacy Policy",
+    },
+    builtWith: "Built with",
+    fromLabel: "from Pakistan.",
+  };
 
   return (
     <footer className={`${styles["footer"]} section`}>
@@ -19,10 +30,10 @@ export function Footer({ portfolio }: { portfolio: PortfolioData }) {
                 <Link className={styles["footer__logo"]} href="/#top" title="MAYOUB.DEV home">
                   <BrandLogo />
                 </Link>
-                <p className={styles["footer__summary"]}>{profile.summary}</p>
+                <p className={styles["footer__summary"]}>{footerContent.summary}</p>
               </div>
               <div className={styles["footer__contact-card"]}>
-                <span className={styles["footer__contact-label"]}>{profile.availability}</span>
+                <span className={styles["footer__contact-label"]}>{footerContent.availability}</span>
                 <a className={styles["footer__contact-link"]} href={`mailto:${profile.email}`} title="Email Muhammad Ayoub">
                   {profile.email}
                 </a>
@@ -35,14 +46,14 @@ export function Footer({ portfolio }: { portfolio: PortfolioData }) {
             <div className={styles["footer__bottom"]}>
               <nav className={styles["footer__legal"]} aria-label="Legal links">
                 <Link className={styles["footer__bottom-link"]} href="/terms-and-conditions" title="Read terms and conditions">
-                  Terms and Conditions
+                  {footerContent.legal.terms}
                 </Link>
                 <Link className={styles["footer__bottom-link"]} href="/privacy-policy" title="Read privacy policy">
-                  Privacy Policy
+                  {footerContent.legal.privacy}
                 </Link>
               </nav>
               <span className={styles["footer__built-with"]}>
-                Built with
+                {footerContent.builtWith}
                 <span className={styles["footer__built-with-words"]} aria-hidden="true">
                   <span className={styles["footer__built-with-word"]}>care</span>
                   <span className={styles["footer__built-with-word"]}>taste</span>
@@ -50,7 +61,7 @@ export function Footer({ portfolio }: { portfolio: PortfolioData }) {
                   <span className={styles["footer__built-with-word"]}>code</span>
                   <span className={styles["footer__built-with-word"]}>focus</span>
                 </span>
-                from Pakistan.
+                {footerContent.fromLabel}
               </span>
             </div>
           </div>

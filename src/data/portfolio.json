@@ -9,10 +9,10 @@
     "linkedin": "https://linkedin.com/in/ayoubkhan558",
     "github": "https://github.com/ayoubkhan558",
     "linktree": "https://linktr.ee/ayoubkhan558",
-    "website": "https://www.mayoub.dev",
+    "website": "https://ayoubkhan.vercel.app/",
     "upwork": "https://www.upwork.com/freelancers/~ayoubkhan558",
     "availability": "Open for new projects",
-    "currentlyBuilding": "Brickify workflows",
+    "currentlyBuilding": "Resumify workflows",
     "summary": "I build conversion-focused React, Next.js, and WordPress websites, then grow their search visibility with full-cycle SEO across technical, on-page, content, and off-page work."
   },
   "offer": "Refer a client — get 15% off your next project",
@@ -72,7 +72,7 @@
     "expertise": {
       "label": "Stack",
       "title": "Tools I reach for on day one.",
-      "subtitle": "Five years of choosing what works."
+      "subtitle": "Eight years of choosing what works."
     },
     "contact": {
       "label": "Work together",
@@ -95,7 +95,7 @@
     "trustMetrics": [
       {
         "label": "Experience",
-        "value": "5",
+        "value": "8",
         "unit": "+ yrs",
         "trend": "React & UI"
       },
@@ -104,12 +104,6 @@
         "value": "50",
         "unit": "+",
         "trend": "+20 clients"
-      },
-      {
-        "label": "Manual work reduced",
-        "value": "60",
-        "unit": "%",
-        "trend": "via Brickify"
       },
       {
         "label": "Rating",
@@ -544,7 +538,7 @@
       },
       {
         "label": "Experience",
-        "value": "5+ Years"
+        "value": "8+ Years"
       },
       {
         "label": "Happy clients",
@@ -653,13 +647,7 @@
       "vs-code",
       "mysql",
       "phpmyadmin"
-    ],
-    "companyLogos": {
-      "Xgrid": "/comapnies/xgrid-logo.svg",
-      "Epicsols": "/comapnies/epicsols-logo.png",
-      "Hawk ITs & Consultancy Provider": "/comapnies/hawk-it-logo.png",
-      "AWSOL Web Technologies": "/comapnies/awsol-logo.png"
-    }
+    ]
   },
   "testimonials": [
     {
@@ -671,11 +659,6 @@
       "name": "Agency team",
       "role": "WordPress delivery",
       "quote": "Clear communication, reliable delivery, and strong attention to responsive details across the project."
-    },
-    {
-      "name": "Product workflow team",
-      "role": "Brickify automation",
-      "quote": "The automation saved significant manual build time and gave the team a repeatable workflow."
     }
   ],
   "stats": [
@@ -699,13 +682,6 @@
       "label": "Happy clients",
       "sub": "Across multiple industries",
       "icon": "users"
-    },
-    {
-      "target": 60,
-      "suffix": "%",
-      "label": "Workflow reduction",
-      "sub": "With Brickify automation",
-      "icon": "rocket"
     }
   ],
   "recognition": [
@@ -723,7 +699,7 @@
     },
     {
       "label": "Currently Building",
-      "status": "Brickify"
+      "status": "Resumify"
     }
   ],
   "expertise": [
@@ -788,12 +764,6 @@
       "role": "Editable content models and templates"
     },
     {
-      "icon": "shuffle",
-      "name": "Automation Tools",
-      "version": "Brickify",
-      "role": "HTML/CSS/JS to Bricks JSON workflows"
-    },
-    {
       "icon": "check",
       "name": "QA & Handoff",
       "version": "Launch",
@@ -808,7 +778,9 @@
       "endDate": "2026-07-06",
       "title": "Frontend Website Developer",
       "company": "Xgrid",
-      "description": "Building custom WordPress and React-based websites, developing reusable components, and creating internal tools such as Brickify to improve development workflows."
+      "location": "Islamabad",
+      "logo": "/comapnies/xgrid-logo.svg",
+      "description": "Building custom WordPress and React-based websites, developing reusable components, creating internal tools such as Brickify to improve development workflows, and implementing technical SEO improvements."
     },
     {
       "year": "2023 - 2024",
@@ -817,7 +789,20 @@
       "endDate": "2024-08-13",
       "title": "Senior Website Developer",
       "company": "Epicsols",
+      "location": "Sahiwal",
+      "logo": "/comapnies/epicsols-logo.png",
       "description": "Delivered WordPress, React, and Next.js projects, transformed Figma designs into production-ready websites, and developed scalable CMS solutions."
+    },
+    {
+      "year": "2020 - 2023",
+      "duration": "3 years",
+      "startDate": "2020-01",
+      "endDate": "2023-01",
+      "title": "Freelance Web Developer & SEO Specialist",
+      "company": "Fiverr & Upwork",
+      "location": "Remote",
+      "logo": "/comapnies/fiverr_Logo.png",
+      "description": "Delivered 100+ small projects, including websites, landing pages, and Shopify stores, alongside SEO services. Achieved Level 2 Seller status on Fiverr and Top Rated status on Upwork."
     },
     {
       "year": "2019 - 2020",
@@ -826,6 +811,8 @@
       "endDate": "2020-01",
       "title": "Frontend Developer",
       "company": "Hawk ITs & Consultancy Provider",
+      "location": "Sahiwal",
+      "logo": "/comapnies/hawk-it-logo.png",
       "description": "Developed responsive websites and web applications using JavaScript, jQuery, AJAX, Angular, and modern front-end practices."
     },
     {
@@ -835,6 +822,8 @@
       "endDate": "2018-06",
       "title": "Frontend Developer Intern",
       "company": "AWSOL Web Technologies",
+      "location": "Lahore",
+      "logo": "/comapnies/awsol-logo.png",
       "description": "Started my professional development journey by building responsive interfaces and learning production-level development workflows."
     }
   ],

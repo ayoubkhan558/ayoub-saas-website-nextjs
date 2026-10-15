@@ -42,6 +42,8 @@ export type ProjectCard = {
 };
 
 const featuredProjectNames = [
+  "Resumify",
+  "Mockify",
   "Xgrid",
   "Alkira",
   "Chkk",
@@ -49,7 +51,6 @@ const featuredProjectNames = [
   "PinAuto",
   "Clampy",
   "Markedine",
-  "Mockify",
 ] as const;
 
 const projectThemeIcons: Record<string, string> = {
@@ -60,6 +61,7 @@ const projectThemeIcons: Record<string, string> = {
   PinAuto: "gauge",
   Clampy: "gauge",
   Markedine: "sparkles",
+  Resumify: "fileText",
   Mockify: "code2",
 };
 
