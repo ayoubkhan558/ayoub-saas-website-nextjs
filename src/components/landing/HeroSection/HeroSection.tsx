@@ -26,6 +26,18 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
   const primaryExperience = portfolio.about.awards.find((award) => /experience|year/i.test(award.label));
   const projectsDelivered = portfolio.about.awards.find((award) => /project|deliver/i.test(award.label));
 
+  const heroContent = {
+    headline: "Web Developer + SEO Specialist for Sites That Rank & Convert",
+    subheadline:
+      "I build and improve React, Next.js, and WordPress websites, pairing solid development with technical SEO, on-page improvements, useful content, and off-page authority building.",
+    primaryCta: "Book a discovery call",
+    secondaryCta: "View case studies",
+    profileName: "M. Ayoub",
+    profileRole: "Web Developer & SEO Specialist",
+    availability: "Open for projects",
+    proofPrefix: "5.0 rating",
+  };
+
   return (
     <section id="top" className={`${styles["hero"]} section section--hero`}>
       <div className={styles["hero__texture"]} aria-hidden="true" />
@@ -33,20 +45,20 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
         <div className={`container ${styles["hero__grid"]}`}>
           <div className={styles["hero__copy"]}>
             <h1 className={styles["hero__title"]}>
-              <span className={styles["hero__title-line"]}>{portfolio?.hero.headlineLineOne}</span>
+              <span className={styles["hero__title-line"]}>{heroContent.headline}</span>
             </h1>
 
             <p className={styles["hero__text"]}>
-              {portfolio?.hero.subheadline}
+              {heroContent.subheadline}
             </p>
 
             <div className={styles["hero__actions"]}>
               <Link className="button" href="/contact" title="Start a website project with Muhammad Ayoub">
-                {portfolio?.hero.primaryCta}
+                {heroContent.primaryCta}
                 <IconGlyph name="arrowRight" />
               </Link>
               <Link className="button button--ghost" href="/case-studies" title="View Muhammad Ayoub case studies">
-                {portfolio?.hero.secondaryCta}
+                {heroContent.secondaryCta}
                 <IconGlyph name="layers" />
               </Link>
             </div>
@@ -61,7 +73,7 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
                   ))}
                 </div>
                 <div className={styles["hero__client-copy"]}>
-                  <span className={styles["hero__client-stars"]}>5.0 rating</span>
+                  <span className={styles["hero__client-stars"]}>{heroContent.proofPrefix}</span>
                   <strong className={styles["hero__client-text"]}>{proofText}</strong>
                 </div>
               </div>
@@ -76,20 +88,18 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
                   <span className={styles["hero__portrait-status"]} aria-hidden="true" />
                 </span>
                 <div className={styles["hero__identity-copy"]}>
-                  <strong className={styles["hero__identity-name"]}>M. Ayoub</strong>
-                  <span className={styles["hero__identity-role"]}>Web Developer &amp; SEO Specialist</span>
+                  <strong className={styles["hero__identity-name"]}>{heroContent.profileName}</strong>
+                  <span className={styles["hero__identity-role"]}>{heroContent.profileRole}</span>
 
                   <div className={styles["hero__badges"]} aria-label="Availability and trust badges">
-                    {portfolio?.hero.badges.map((badge) => (
-                      <span className={`badge ${styles["hero__badge"]}`} key={badge.label}>
-                        <IconGlyph name={badge.icon} className={styles["hero__badge-icon"]} />
-                        {badge.label}
-                      </span>
-                    ))}
+                    <span className={`badge ${styles["hero__badge"]}`}>
+                      <IconGlyph name="star" className={styles["hero__badge-icon"]} />
+                      Top Rated on Upwork
+                    </span>
                   </div>
                   <span className={styles["hero__identity-availability"]}>
                     <span className={styles["hero__identity-availability-dot"]} aria-hidden="true" />
-                    Open for projects
+                    {heroContent.availability}
                   </span>
                 </div>
               </div>

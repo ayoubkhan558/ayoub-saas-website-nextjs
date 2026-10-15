@@ -155,7 +155,7 @@
 }
 
 .about-page-experience-item__company {
-  display: block;
+  display: inline-flex;
   margin-top: var(--space-1);
   color: var(--color-primary);
   font-family: var(--font-display-compact);

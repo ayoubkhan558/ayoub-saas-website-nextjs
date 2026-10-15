@@ -17,16 +17,32 @@ export function AboutSection({ portfolio }: { portfolio: PortfolioData }) {
     event.currentTarget.style.setProperty("--spotlight-y", `${y}%`);
   };
 
+  const aboutCopy = {
+    label: "About me",
+    title: "About Ayoub",
+    eyebrow:
+      "I build conversion-focused React, Next.js, and WordPress websites and improve their visibility with technical SEO, on-page refinement, and clear content structure.",
+    paragraph:
+      "Most of the projects I work on have the same root problem: the interface was built fast, but not built to last. I fix the foundation, improve the performance, and make sure the site is easier to trust, easier to rank, and easier to grow.",
+    educationLabel: "Education",
+    resumeLabel: "Download resume",
+    linkedinLabel: "LinkedIn",
+    upworkLabel: "Upwork profile",
+    signatureAlt: "Muhammad Ayoub signature",
+    portraitAlt: "Muhammad Ayoub Khan WordPress developer portrait",
+    portraitCaption: "8+ years of experience building React, Next.js, and WordPress websites for businesses that need clarity and conversion.",
+  };
+
   return (
     <section className={`section ${styles["about"]}`} id="about">
       <div className="section__inner">
         <div className={`container ${styles["about__grid"]}`}>
           <div className={styles["about__copy"]}>
-            <SectionHeader label="About me" title="About Ayoub" eyebrow={portfolio?.about.story} />
-            <p className={styles["about__text"]}>{portfolio?.about.motivation}</p>
+            <SectionHeader label={aboutCopy.label} title={aboutCopy.title} eyebrow={aboutCopy.eyebrow} />
+            <p className={styles["about__text"]}>{aboutCopy.paragraph}</p>
             {education ? (
               <div className={styles["about__education"]}>
-                <span className={styles["about__education-label"]}>Education</span>
+                <span className={styles["about__education-label"]}>{aboutCopy.educationLabel}</span>
                 <strong className={styles["about__education-title"]}>{education.label}</strong>
                 <span className={styles["about__education-meta"]}>{education.status}</span>
               </div>
@@ -34,18 +50,18 @@ export function AboutSection({ portfolio }: { portfolio: PortfolioData }) {
             <div className={styles["about__actions"]}>
               <a className="button" href={portfolio?.about.resumeHref} target="_blank" rel="noreferrer" download title="Download Muhammad Ayoub resume">
                 <IconGlyph name="download" />
-                Download resume
+                {aboutCopy.resumeLabel}
               </a>
               <a className="button button--ghost" href={portfolio?.profile.linkedin} target="_blank" rel="noreferrer" title="Visit Muhammad Ayoub LinkedIn profile">
                 <IconGlyph name="linkedin" />
-                LinkedIn
+                {aboutCopy.linkedinLabel}
               </a>
               <a className="button button--ghost" href="https://www.upwork.com/freelancers/~01176397124d8cb917?viewMode=1" title="Contact Muhammad Ayoub for Upwork project details">
                 <IconGlyph name="externalLink" />
-                Upwork profile
+                {aboutCopy.upworkLabel}
               </a>
               <span className={styles["about__signature"]} aria-label={portfolio?.about.signature}>
-                <Image src="/mayoub-signature.png" alt="Muhammad Ayoub signature" title="Muhammad Ayoub signature" sizes="140px" loading="lazy" {...getImageDimensions("/mayoub-signature.png")} />
+                <Image src="/mayoub-signature.png" alt={aboutCopy.signatureAlt} title={aboutCopy.signatureAlt} sizes="140px" loading="lazy" {...getImageDimensions("/mayoub-signature.png")} />
               </span>
             </div>
           </div>
@@ -55,11 +71,11 @@ export function AboutSection({ portfolio }: { portfolio: PortfolioData }) {
               onMouseMove={handlePortraitSpotlight}
               style={{ "--spotlight-x": "50%", "--spotlight-y": "42%" } as CSSProperties}
             >
-              <Image src="/ayoub-about-v2.jpg" alt="Muhammad Ayoub Khan WordPress developer portrait" title="Muhammad Ayoub Khan WordPress developer portrait" sizes="(max-width: 760px) 100vw, 42vw" loading="lazy" {...getImageDimensions("/ayoub-about-v2.jpg")} />
+              <Image src="/ayoub-about-v2.jpg" alt={aboutCopy.portraitAlt} title={aboutCopy.portraitAlt} sizes="(max-width: 760px) 100vw, 42vw" loading="lazy" {...getImageDimensions("/ayoub-about-v2.jpg")} />
               <Image src="/ayoub-about-v2.jpg" alt="" title="Muhammad Ayoub Khan website developer background portrait" aria-hidden="true" sizes="(max-width: 760px) 100vw, 42vw" loading="lazy" {...getImageDimensions("/ayoub-about-v2.jpg")} />
               <div className={styles["about__portrait-caption"]}>
                 <strong>Muhammad Ayoub</strong>
-                <span>5+ years of experience as Reactjs Frontend Developer & WordPress</span>
+                <span>{aboutCopy.portraitCaption}</span>
               </div>
             </div>
           </aside>

@@ -9,6 +9,7 @@ import code2 from "@iconify/icons-lucide/code-2";
 import database from "@iconify/icons-lucide/database";
 import download from "@iconify/icons-lucide/download";
 import externalLink from "@iconify/icons-lucide/external-link";
+import fileText from "@iconify/icons-lucide/file-text";
 import gauge from "@iconify/icons-lucide/gauge";
 import github from "@iconify/icons-lucide/github";
 import globe2 from "@iconify/icons-lucide/globe-2";
@@ -46,6 +47,7 @@ const iconMap = {
   database,
   download,
   externalLink,
+  fileText,
   gauge,
   github,
   globe: globe2,
