@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import portfolio from "@/data/portfolio.json";
 import "@splidejs/react-splide/css/core";
 import "./globals.scss";
@@ -77,9 +78,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(() => {
+        <Script id="theme-initializer" strategy="beforeInteractive">
+          {`(() => {
   try {
     const storedTheme = localStorage.getItem("theme");
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
@@ -90,9 +90,8 @@ export default function RootLayout({
     document.documentElement.dataset.theme = "light";
     document.documentElement.style.colorScheme = "light";
   }
-})();`,
-          }}
-        />
+})();`}
+        </Script>
         <link rel="image_src" href={`${siteUrl}/social/ayoub-portfolio-thumbnail-landing.jpg`} />
         <meta itemProp="image" content={`${siteUrl}/social/ayoub-portfolio-thumbnail-landing.jpg`} />
       </head>

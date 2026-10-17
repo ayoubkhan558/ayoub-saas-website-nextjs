@@ -1,9 +1,19 @@
-import Link from "next/link";
 import { CopyLinksControl, type CopyLinkEntry } from "@/components/shared/CopyLinksControl/CopyLinksControl";
 import { Pagination } from "@/components/shared/Pagination/Pagination";
-import { getProjectLinks, projectArchiveItems, projectMatchesFilter, type ProjectArchiveFilter, type ProjectArchiveItem } from "@/data/projectsArchive";
-import { projectArchiveFilters } from "@/data/projectsArchive";
+import {
+  getProjectLinks,
+  projectArchiveItems,
+  projectMatchesFilter,
+  projectArchiveFilters,
+  projectPlatformFilters,
+  projectStatusFilters,
+  type ProjectArchiveFilter,
+  type ProjectArchiveItem,
+  type ProjectPlatformFilter,
+  type ProjectStatusFilter,
+} from "@/data/projectsArchive";
 import { paginate } from "@/lib/pagination";
+import { ProjectArchiveFilters } from "./ProjectArchiveFilters";
 import { ProjectArchiveGrid } from "../ProjectArchiveGrid/ProjectArchiveGrid";
 import styles from "./ProjectArchiveSection.module.scss";
 
@@ -13,13 +23,28 @@ export function ProjectArchiveSection({
   projects,
   currentPage,
   activeFilter,
+  activePlatform,
+  activeStatus,
 }: {
   projects: ProjectArchiveItem[];
   currentPage: number;
   activeFilter: ProjectArchiveFilter;
+  activePlatform: ProjectPlatformFilter;
+  activeStatus: ProjectStatusFilter;
 }) {
   const page = paginate(projects, currentPage, PROJECTS_PER_PAGE);
-  const paginationBasePath = activeFilter === "all" ? "/projects" : `/projects?filter=${activeFilter}`;
+  const selectedPlatform = activePlatform !== "all"
+    ? activePlatform
+    : projectPlatformFilters.find((filter) => filter.value === activeFilter)?.value ?? "all";
+  const selectedStatus = activeStatus !== "all"
+    ? activeStatus
+    : projectStatusFilters.find((filter) => filter.value === activeFilter)?.value ?? "all";
+  const paginationParams = new URLSearchParams();
+  if (activeFilter !== "all") paginationParams.set("filter", activeFilter);
+  if (activePlatform !== "all") paginationParams.set("platform", activePlatform);
+  if (activeStatus !== "all") paginationParams.set("status", activeStatus);
+  const paginationQuery = paginationParams.toString();
+  const paginationBasePath = paginationQuery ? `/projects?${paginationQuery}` : "/projects";
   const getEntries = (items: ProjectArchiveItem[]): CopyLinkEntry[] => items
     .filter((project) => project.projectStatus === "Live")
     .flatMap((project) => getProjectLinks(project).map((link) => ({
@@ -49,24 +74,7 @@ export function ProjectArchiveSection({
             </p>
           </header>
 
-          <div className={styles.filters} aria-label="Filter projects">
-            {projectArchiveFilters.map((filter) => {
-              const isActive = filter.value === activeFilter;
-              const href = filter.value === "all" ? "/projects#projects-list" : `/projects?filter=${filter.value}#projects-list`;
-
-              return (
-                <Link
-                  className={`${styles.filters__link} ${isActive ? styles["filters__link--active"] : ""}`}
-                  href={href}
-                  title={`Filter projects by ${filter.label}`}
-                  aria-current={isActive ? "page" : undefined}
-                  key={filter.value}
-                >
-                  {filter.label}
-                </Link>
-              );
-            })}
-          </div>
+          <ProjectArchiveFilters initialPlatform={selectedPlatform} initialStatus={selectedStatus} />
 
           <CopyLinksControl allEntries={liveEntries} groups={copyGroups} itemName="project" />
           <ProjectArchiveGrid projects={page.items} />
