@@ -15,12 +15,36 @@ export const projectArchiveFilters = [
   { label: "Elementor", value: "elementor" },
   { label: "React/Next.js", value: "react-nextjs" },
   { label: "Shopify", value: "shopify" },
+  { label: "WordPress", value: "wordpress" },
+  { label: "Webflow", value: "webflow" },
   { label: "Live", value: "live" },
   { label: "Redesigned", value: "redesigned" },
   { label: "Domain expired", value: "domain-expired" },
 ] as const;
 
 export type ProjectArchiveFilter = (typeof projectArchiveFilters)[number]["value"];
+
+export const projectPlatformFilters = [
+  { label: "All platforms", value: "all" },
+  { label: "HTML/CSS", value: "html-css" },
+  { label: "Bricks", value: "bricks" },
+  { label: "Elementor", value: "elementor" },
+  { label: "React/Next.js", value: "react-nextjs" },
+  { label: "Shopify", value: "shopify" },
+  { label: "WordPress", value: "wordpress" },
+  { label: "Webflow", value: "webflow" },
+] as const;
+
+export type ProjectPlatformFilter = (typeof projectPlatformFilters)[number]["value"];
+
+export const projectStatusFilters = [
+  { label: "All statuses", value: "all" },
+  { label: "Live", value: "live" },
+  { label: "Redesigned", value: "redesigned" },
+  { label: "Domain expired", value: "domain-expired" },
+] as const;
+
+export type ProjectStatusFilter = (typeof projectStatusFilters)[number]["value"];
 
 export function compactUrl(url: string) {
   try {
@@ -131,13 +155,40 @@ export function normalizeProjectFilter(value: string | string[] | undefined): Pr
     : "all";
 }
 
+export function normalizeProjectPlatformFilter(value: string | string[] | undefined): ProjectPlatformFilter {
+  const rawValue = Array.isArray(value) ? value[0] : value;
+
+  return projectPlatformFilters.some((filter) => filter.value === rawValue)
+    ? (rawValue as ProjectPlatformFilter)
+    : "all";
+}
+
+export function normalizeProjectStatusFilter(value: string | string[] | undefined): ProjectStatusFilter {
+  const rawValue = Array.isArray(value) ? value[0] : value;
+
+  return projectStatusFilters.some((filter) => filter.value === rawValue)
+    ? (rawValue as ProjectStatusFilter)
+    : "all";
+}
+
 export function projectMatchesFilter(project: ProjectArchiveItem, filter: ProjectArchiveFilter) {
   if (filter === "all") {
     return true;
   }
 
+  if (filter === "live" || filter === "redesigned" || filter === "domain-expired") {
+    return projectMatchesStatus(project, filter);
+  }
+
+  return projectMatchesPlatform(project, filter);
+}
+
+export function projectMatchesPlatform(project: ProjectArchiveItem, filter: ProjectPlatformFilter) {
+  if (filter === "all") {
+    return true;
+  }
+
   const stack = `${project.platformFrameworkBuilder ?? ""} ${project.projectType ?? ""} ${project.description ?? ""}`.toLowerCase();
-  const status = project.projectStatus;
 
   if (filter === "html-css") {
     return /html|css|bootstrap|jquery/.test(stack);
@@ -159,16 +210,32 @@ export function projectMatchesFilter(project: ProjectArchiveItem, filter: Projec
     return /shopify/.test(stack);
   }
 
+  if (filter === "wordpress") {
+    return /wordpress|wordperss/.test(stack);
+  }
+
+  if (filter === "webflow") {
+    return /webflow/.test(stack);
+  }
+
+  return true;
+}
+
+export function projectMatchesStatus(project: ProjectArchiveItem, filter: ProjectStatusFilter) {
+  if (filter === "all") {
+    return true;
+  }
+
   if (filter === "live") {
-    return status === "Live";
+    return project.projectStatus === "Live";
   }
 
   if (filter === "redesigned") {
-    return status === "Redesigned by Client";
+    return project.projectStatus === "Redesigned by Client";
   }
 
   if (filter === "domain-expired") {
-    return status === "Offline (Domain Expired)";
+    return project.projectStatus === "Offline (Domain Expired)";
   }
 
   return true;
