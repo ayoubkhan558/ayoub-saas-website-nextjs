@@ -20,6 +20,9 @@ export async function generateMetadata({
   const niche = getServiceNiche(slug);
   if (!niche) return { title: "Service" };
 
+  const pageUrl = new URL(`/services/${niche.slug}`, portfolio.profile.website).toString();
+  const socialImage = new URL("/social/ayoub-portfolio-thumbnail-services.jpg", portfolio.profile.website).toString();
+
   return {
     title: niche.title,
     description: niche.description,
@@ -28,10 +31,11 @@ export async function generateMetadata({
       title: niche.title,
       description: niche.description,
       type: "website",
-      url: `/services/${niche.slug}`,
+      url: pageUrl,
+      siteName: portfolio.profile.brand,
       images: [
         {
-          url: "/social/ayoub-portfolio-thumbnail-services.jpg",
+          url: socialImage,
           width: 1734,
           height: 907,
           alt: niche.title,
@@ -42,7 +46,9 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: niche.title,
       description: niche.description,
-      images: ["/social/ayoub-portfolio-thumbnail-services.jpg"],
+      images: [socialImage],
+      site: "@ayoubkhan558",
+      creator: "@ayoubkhan558",
     },
   };
 }

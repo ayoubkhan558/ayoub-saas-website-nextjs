@@ -6,20 +6,23 @@ import { PortfolioContentProvider } from "@/context/PortfolioContentContext";
 import { buildHomeSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 
+const siteUrl = portfolio.profile.website;
+
 export const metadata: Metadata = {
   title: "Muhammad Ayoub Khan | Website Developer & SEO Expert",
   description:
-    "Hire Muhammad Ayoub Khan for website development and SEO, including Bricks Builder, WordPress, React, and Next.js websites built for leads and clean handoff.",
+    "WordPress, React, and Next.js developer building conversion-focused websites for brands that need clarity and growth.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Muhammad Ayoub Khan | Website Developer & SEO Expert",
     description:
-      "Website developer and SEO expert Muhammad Ayoub Khan builds Bricks Builder, WordPress, React, and Next.js websites focused on clarity and conversions.",
+      "WordPress, React, and Next.js developer building conversion-focused websites for brands that need clarity and growth.",
     type: "website",
-    url: "/",
+    url: siteUrl,
+    siteName: portfolio.profile.brand,
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail.jpg",
+        url: new URL("/social/ayoub-portfolio-thumbnail.jpg", siteUrl).toString(),
         width: 1734,
         height: 907,
         alt: "Muhammad Ayoub Khan, website developer and SEO expert",
@@ -30,8 +33,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Muhammad Ayoub Khan | Website Developer & SEO Expert",
     description:
-      "Hire Muhammad Ayoub Khan for website development and SEO, including Bricks Builder, React, Next.js, and WordPress.",
-    images: ["/social/ayoub-portfolio-thumbnail.jpg"],
+      "WordPress, React, and Next.js developer building conversion-focused websites for brands that need clarity and growth.",
+    images: [new URL("/social/ayoub-portfolio-thumbnail.jpg", siteUrl).toString()],
+    site: "@ayoubkhan558",
+    creator: "@ayoubkhan558",
   },
 };
 

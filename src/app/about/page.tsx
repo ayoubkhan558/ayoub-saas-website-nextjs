@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
 import { AboutPage } from "@/components/about/AboutPage/AboutPage";
+import portfolio from "@/data/portfolio.json";
+
+const pageUrl = new URL("/about", portfolio.profile.website).toString();
 
 export const metadata: Metadata = {
   title: "About Muhammad Ayoub Khan, Freelance Web Developer",
   description:
-    "About Muhammad Ayoub Khan — Bricks Builder, WordPress redesign, Figma to code, React, and Next.js developer.",
+    "Developer for Bricks Builder, WordPress redesigns, Figma-to-code work, and React or Next.js projects.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Muhammad Ayoub Khan, Freelance Web Developer",
     description:
-      "Bricks Builder, WordPress, and front-end delivery experience for clinics, firms, agencies, and founders.",
+      "Developer for Bricks Builder, WordPress redesigns, Figma-to-code work, and React or Next.js projects.",
     type: "profile",
-    url: "/about",
+    url: pageUrl,
+    siteName: portfolio.profile.brand,
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail-about.jpg",
+        url: new URL("/social/ayoub-portfolio-thumbnail-about.jpg", portfolio.profile.website).toString(),
         width: 1733,
         height: 907,
         alt: "Muhammad Ayoub Khan freelance web developer",
@@ -25,8 +29,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Muhammad Ayoub Khan, Freelance Web Developer",
     description:
-      "Bricks Builder, WordPress, and front-end delivery experience for clinics, firms, agencies, and founders.",
-    images: ["/social/ayoub-portfolio-thumbnail-about.jpg"],
+      "Developer for Bricks Builder, WordPress redesigns, Figma-to-code work, and React or Next.js projects.",
+    images: [new URL("/social/ayoub-portfolio-thumbnail-about.jpg", portfolio.profile.website).toString()],
+    site: "@ayoubkhan558",
+    creator: "@ayoubkhan558",
   },
 };
 

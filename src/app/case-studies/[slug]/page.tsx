@@ -29,7 +29,9 @@ export async function generateMetadata({
   const title = seo?.title ?? `${study.client} Case Study`;
   const description = seo?.description ?? `${study.headline} ${study.overview}`.slice(0, 155);
   const image = study.heroMockup ?? entry.image;
-  const socialImage = image ? [{ url: image, alt: entry.imageAlt }] : undefined;
+  const resolvedImage = image ? new URL(image, portfolio.profile.website).toString() : undefined;
+  const socialImage = resolvedImage ? [{ url: resolvedImage, alt: entry.imageAlt }] : undefined;
+  const pageUrl = new URL(entry.href, portfolio.profile.website).toString();
 
   return {
     title,
@@ -39,7 +41,7 @@ export async function generateMetadata({
       title,
       description,
       type: "article",
-      url: entry.href,
+      url: pageUrl,
       siteName: portfolio.profile.brand,
       images: socialImage,
       publishedTime: study.pageSpeed?.measuredAt,
@@ -49,7 +51,9 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: image ? [image] : undefined,
+      images: resolvedImage ? [resolvedImage] : undefined,
+      site: "@ayoubkhan558",
+      creator: "@ayoubkhan558",
     },
   };
 }

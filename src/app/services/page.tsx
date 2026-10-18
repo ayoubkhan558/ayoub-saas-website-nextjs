@@ -5,20 +5,23 @@ import { ServicesPageContent } from "@/components/services/ServicesPageContent/S
 import { buildServicesSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 
+const pageUrl = new URL("/services", portfolio.profile.website).toString();
+
 export const metadata: Metadata = {
   title: "Website Development Services",
   description:
-    "Custom web apps, landing pages, website redesigns, speed optimization, e-commerce setup, and ongoing support by Muhammad Ayoub Khan.",
+    "Bricks Builder, WordPress redesign, Figma-to-code, and React or Next.js development for real business growth.",
   alternates: { canonical: "/services" },
   openGraph: {
     title: "Website Development Services",
     description:
-      "Custom web apps, landing pages, website redesigns, speed optimization, e-commerce setup, and ongoing support.",
+      "Bricks Builder, WordPress redesign, Figma-to-code, and React or Next.js development for real business growth.",
     type: "website",
-    url: "/services",
+    url: pageUrl,
+    siteName: portfolio.profile.brand,
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail-services.jpg",
+        url: new URL("/social/ayoub-portfolio-thumbnail-services.jpg", portfolio.profile.website).toString(),
         width: 1734,
         height: 907,
         alt: "Muhammad Ayoub Khan website development services",
@@ -29,8 +32,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Website Development Services",
     description:
-      "Custom web apps, landing pages, website redesigns, speed optimization, e-commerce setup, and ongoing support.",
-    images: ["/social/ayoub-portfolio-thumbnail-services.jpg"],
+      "Bricks Builder, WordPress redesign, Figma-to-code, and React or Next.js development for real business growth.",
+    images: [new URL("/social/ayoub-portfolio-thumbnail-services.jpg", portfolio.profile.website).toString()],
+    site: "@ayoubkhan558",
+    creator: "@ayoubkhan558",
   },
 };
 
