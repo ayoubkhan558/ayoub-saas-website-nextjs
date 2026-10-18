@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail-landing.jpg",
+        url: "/social/ayoub-portfolio-thumbnail.jpg",
         width: 1734,
         height: 907,
         alt: "Muhammad Ayoub Khan, website developer and SEO expert",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Muhammad Ayoub Khan | Website Developer & SEO Expert",
     description:
       "Hire Muhammad Ayoub Khan for website development and SEO, including Bricks Builder, React, Next.js, and WordPress.",
-    images: ["/social/ayoub-portfolio-thumbnail-landing.jpg"],
+    images: ["/social/ayoub-portfolio-thumbnail.jpg"],
   },
 };
 
