@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Muhammad Ayoub",
   },
   description:
-    "Hire Muhammad Ayoub Khan for website development and SEO, including Bricks Builder, WordPress, React, and Next.js websites that convert.",
+    "Faisalabad-based web developer building WordPress, React, and Next.js sites that rank, convert, and stay easy to manage.",
   alternates: {
     canonical: "/",
   },
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Muhammad Ayoub Khan | Website Developer & SEO Expert",
     description:
-      "Website development and SEO by Muhammad Ayoub Khan, including Bricks Builder, WordPress, React, and Next.js.",
+      "WordPress, React, and Next.js web developer creating faster sites with cleaner UX and stronger conversion paths.",
     type: "website",
-    url: "/",
+    url: siteUrl,
     siteName: portfolio.profile.brand,
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail.jpg",
+        url: new URL("/social/ayoub-portfolio-thumbnail.jpg", siteUrl).toString(),
         width: 1734,
         height: 907,
         alt: "Muhammad Ayoub Khan, website developer and SEO expert",
@@ -41,8 +41,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Muhammad Ayoub Khan | Website Developer & SEO Expert",
     description:
-      "Hire Muhammad Ayoub Khan for website development and SEO, including Bricks Builder, WordPress, React, and Next.js.",
-    images: ["/social/ayoub-portfolio-thumbnail.jpg"],
+      "WordPress, React, and Next.js web developer creating faster sites with cleaner UX and stronger conversion paths.",
+    images: [new URL("/social/ayoub-portfolio-thumbnail.jpg", siteUrl).toString()],
+    site: "@ayoubkhan558",
+    creator: "@ayoubkhan558",
   },
   verification: {
     google: "duyYeALQEH1wUm9zAIqqTeYPJIdo3ENxkYGdgIsc274",

@@ -22,7 +22,7 @@ export function AboutPage() {
       <main>
         <AboutHero portfolio={portfolio} />
         <AboutStorySection about={portfolio?.about} />
-        <AboutExperienceSection experienceLog={portfolio?.experienceLog} companyLogos={portfolio?.about.companyLogos} />
+        <AboutExperienceSection experienceLog={portfolio?.experienceLog} />
         <AboutToolboxSection about={portfolio?.about} />
       </main>
       <ContactFooter portfolio={portfolio} />

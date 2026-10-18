@@ -3,6 +3,8 @@ import { LegalPage } from "@/components/legal/LegalPage/LegalPage";
 import { buildLegalPageSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 
+const pageUrl = new URL("/terms-and-conditions", portfolio.profile.website).toString();
+
 export const metadata: Metadata = {
   title: "Terms and Conditions",
   description: "General terms for using this website and working with Muhammad Ayoub on web development projects.",
@@ -11,10 +13,11 @@ export const metadata: Metadata = {
     title: "Terms and Conditions",
     description: "General terms for website use, project scope, payment, delivery, support, and ownership.",
     type: "website",
-    url: "/terms-and-conditions",
+    url: pageUrl,
+    siteName: portfolio.profile.brand,
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail.jpg",
+        url: new URL("/social/ayoub-portfolio-thumbnail.jpg", portfolio.profile.website).toString(),
         width: 1734,
         height: 907,
         alt: "Muhammad Ayoub Khan terms and conditions",

@@ -10,20 +10,23 @@ import { buildContactSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 import styles from "@/components/contact/ContactPage.module.scss";
 
+const pageUrl = new URL("/contact", portfolio.profile.website).toString();
+
 export const metadata: Metadata = {
   title: "Hire Muhammad Ayoub Khan",
   description:
-    "Hire Muhammad Ayoub Khan for Bricks Builder, Figma to code, WordPress redesign, React, and Next.js projects.",
+    "Need a Bricks Builder, WordPress, React, or Next.js developer for a clean, conversion-focused project?",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Hire Muhammad Ayoub Khan",
     description:
-      "Send project details for Bricks Builder, WordPress, or front-end development work.",
+      "Need a Bricks Builder, WordPress, React, or Next.js developer for a clean, conversion-focused project?",
     type: "website",
-    url: "/contact",
+    url: pageUrl,
+    siteName: portfolio.profile.brand,
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail-contact.jpg",
+        url: new URL("/social/ayoub-portfolio-thumbnail-contact.jpg", portfolio.profile.website).toString(),
         width: 1733,
         height: 908,
         alt: "Hire Muhammad Ayoub Khan web developer",
@@ -34,8 +37,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hire Muhammad Ayoub Khan",
     description:
-      "Send project details for Bricks Builder, WordPress, or front-end development work.",
-    images: ["/social/ayoub-portfolio-thumbnail-contact.jpg"],
+      "Need a Bricks Builder, WordPress, React, or Next.js developer for a clean, conversion-focused project?",
+    images: [new URL("/social/ayoub-portfolio-thumbnail-contact.jpg", portfolio.profile.website).toString()],
+    site: "@ayoubkhan558",
+    creator: "@ayoubkhan558",
   },
 };
 

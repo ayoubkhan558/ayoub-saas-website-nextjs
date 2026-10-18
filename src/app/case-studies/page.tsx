@@ -7,20 +7,23 @@ import { buildCaseStudiesSchema, jsonLdScript } from "@/lib/seo-schema";
 import { caseStudies } from "@/data/work";
 import portfolio from "@/data/portfolio.json";
 
+const pageUrl = new URL("/case-studies", portfolio.profile.website).toString();
+
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "Bricks Builder, Figma to code, Divi/Elementor migrations, and Shopify case studies by Muhammad Ayoub Khan.",
+    "Case studies showing Bricks Builder, Figma-to-code, WordPress redesigns, and Shopify growth work.",
   alternates: { canonical: "/case-studies" },
   openGraph: {
     title: "Case Studies",
     description:
-      "Project breakdowns for law firm, clinic, real estate, portfolio, and ecommerce website builds.",
+      "Case studies showing Bricks Builder, Figma-to-code, WordPress redesigns, and Shopify growth work.",
     type: "website",
-    url: "/case-studies",
+    url: pageUrl,
+    siteName: portfolio.profile.brand,
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail-case-studies.jpg",
+        url: new URL("/social/ayoub-portfolio-thumbnail-case-studies.jpg", portfolio.profile.website).toString(),
         width: 1734,
         height: 907,
         alt: "Muhammad Ayoub Khan website development case studies",
@@ -31,8 +34,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Case Studies",
     description:
-      "Project breakdowns for law firm, clinic, real estate, portfolio, and ecommerce website builds.",
-    images: ["/social/ayoub-portfolio-thumbnail-case-studies.jpg"],
+      "Case studies showing Bricks Builder, Figma-to-code, WordPress redesigns, and Shopify growth work.",
+    images: [new URL("/social/ayoub-portfolio-thumbnail-case-studies.jpg", portfolio.profile.website).toString()],
+    site: "@ayoubkhan558",
+    creator: "@ayoubkhan558",
   },
 };
 

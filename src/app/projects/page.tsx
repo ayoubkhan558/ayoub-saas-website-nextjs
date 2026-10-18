@@ -16,20 +16,23 @@ import {
 import { buildProjectsSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 
+const pageUrl = new URL("/projects", portfolio.profile.website).toString();
+
 export const metadata: Metadata = {
   title: "Website Design & Development Portfolio",
   description:
-    "Portfolio of Bricks Builder, WordPress, Figma to code, React, Next.js, and Shopify projects by Muhammad Ayoub Khan.",
+    "Selected Bricks Builder, WordPress, Shopify, and React projects showing practical design and development work.",
   alternates: { canonical: "/projects" },
   openGraph: {
     title: "Website Design & Development Portfolio",
     description:
-      "Client websites, Bricks builds, WooCommerce stores, and front-end implementation work.",
+      "Selected Bricks Builder, WordPress, Shopify, and React projects showing practical design and development work.",
     type: "website",
-    url: "/projects",
+    url: pageUrl,
+    siteName: portfolio.profile.brand,
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail-projects.jpg",
+        url: new URL("/social/ayoub-portfolio-thumbnail-projects.jpg", portfolio.profile.website).toString(),
         width: 1734,
         height: 907,
         alt: "Muhammad Ayoub Khan website design and development portfolio",
@@ -40,8 +43,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Website Design & Development Portfolio",
     description:
-      "Client websites, Bricks builds, WooCommerce stores, and front-end implementation work.",
-    images: ["/social/ayoub-portfolio-thumbnail-projects.jpg"],
+      "Selected Bricks Builder, WordPress, Shopify, and React projects showing practical design and development work.",
+    images: [new URL("/social/ayoub-portfolio-thumbnail-projects.jpg", portfolio.profile.website).toString()],
+    site: "@ayoubkhan558",
+    creator: "@ayoubkhan558",
   },
 };
 

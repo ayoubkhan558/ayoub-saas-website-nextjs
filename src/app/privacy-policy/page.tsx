@@ -3,6 +3,8 @@ import { LegalPage } from "@/components/legal/LegalPage/LegalPage";
 import { buildLegalPageSchema, jsonLdScript } from "@/lib/seo-schema";
 import portfolio from "@/data/portfolio.json";
 
+const pageUrl = new URL("/privacy-policy", portfolio.profile.website).toString();
+
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "How Muhammad Ayoub handles contact details, project information, analytics, and privacy requests.",
@@ -11,10 +13,11 @@ export const metadata: Metadata = {
     title: "Privacy Policy",
     description: "How contact details, project information, analytics, and privacy requests are handled.",
     type: "website",
-    url: "/privacy-policy",
+    url: pageUrl,
+    siteName: portfolio.profile.brand,
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail.jpg",
+        url: new URL("/social/ayoub-portfolio-thumbnail.jpg", portfolio.profile.website).toString(),
         width: 1734,
         height: 907,
         alt: "Muhammad Ayoub Khan privacy policy",
