@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: portfolio.profile.brand,
     images: [
       {
-        url: "/social/ayoub-portfolio-thumbnail-landing.jpg",
+        url: "/social/ayoub-portfolio-thumbnail.jpg",
         width: 1734,
         height: 907,
         alt: "Muhammad Ayoub Khan, website developer and SEO expert",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Muhammad Ayoub Khan | Website Developer & SEO Expert",
     description:
       "Hire Muhammad Ayoub Khan for website development and SEO, including Bricks Builder, WordPress, React, and Next.js.",
-    images: ["/social/ayoub-portfolio-thumbnail-landing.jpg"],
+    images: ["/social/ayoub-portfolio-thumbnail.jpg"],
   },
   verification: {
     google: "duyYeALQEH1wUm9zAIqqTeYPJIdo3ENxkYGdgIsc274",
@@ -92,8 +92,8 @@ export default function RootLayout({
   }
 })();`}
         </Script>
-        <link rel="image_src" href={`${siteUrl}/social/ayoub-portfolio-thumbnail-landing.jpg`} />
-        <meta itemProp="image" content={`${siteUrl}/social/ayoub-portfolio-thumbnail-landing.jpg`} />
+        <link rel="image_src" href={`${siteUrl}/social/ayoub-portfolio-thumbnail.jpg`} />
+        <meta itemProp="image" content={`${siteUrl}/social/ayoub-portfolio-thumbnail.jpg`} />
       </head>
       <body suppressHydrationWarning itemScope itemType="https://schema.org/WebPage">
         {children}
