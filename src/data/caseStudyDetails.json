@@ -3,7 +3,7 @@
     "slug": "rejuvenated-knives",
     "client": "Rejuvenated Knives",
     "urlLabel": "get.rejuvenatedknives.com",
-    "liveUrl": "https://get.rejuvenatedknives.com/door-to-door-knife-sharpening-service/",
+    "liveUrl": "https://get.rejuvenatedknives.com",
     "company": "Xgrid.co",
     "timeline": "4 weeks",
     "caseType": "migration",
@@ -21,7 +21,7 @@
         "Figma"
       ],
       "href": "/case-studies/rejuvenated-knives",
-      "liveUrl": "https://get.rejuvenatedknives.com/door-to-door-knife-sharpening-service/",
+      "liveUrl": "https://get.rejuvenatedknives.com",
       "image": "/case-study/rk-thumbnail.jpg",
       "imageAlt": "Screenshot preview of the Rejuvenated Knives website"
     },
