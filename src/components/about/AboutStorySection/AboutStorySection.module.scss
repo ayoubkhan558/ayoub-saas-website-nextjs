@@ -116,9 +116,18 @@
 
 .about-page-education {
   display: grid;
-  width: fit-content;
+  width: min(100%, 680px);
   gap: var(--space-2);
   padding: var(--space-5);
+}
+
+.about-page-education__meta,
+.about-page-education__details,
+.about-page-education__coursework {
+  margin: 0;
+  color: var(--color-storm-mauve);
+  font-size: var(--text-sm);
+  line-height: var(--leading-copy);
 }
 
 .about-page-education span,
@@ -135,6 +144,11 @@
   color: var(--color-ink-violet);
   font-family: var(--font-display-compact);
   font-weight: 800;
+}
+
+.about-page-education__coursework strong {
+  font-family: inherit;
+  font-weight: 700;
 }
 
 .about-page-story-grid {

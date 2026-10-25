@@ -7,7 +7,7 @@ import { SectionHeader } from "../SectionHeader/SectionHeader";
 import styles from "./AboutSection.module.scss";
 
 export function AboutSection({ portfolio }: { portfolio: PortfolioData }) {
-  const education = portfolio.recognition.find((item) => item.label === "Master of Computer Science");
+  const education = portfolio.about.educationHistory[0];
   const handlePortraitSpotlight = (event: MouseEvent<HTMLDivElement>) => {
     const bounds = event.currentTarget.getBoundingClientRect();
     const x = ((event.clientX - bounds.left) / bounds.width) * 100;
@@ -43,8 +43,8 @@ export function AboutSection({ portfolio }: { portfolio: PortfolioData }) {
             {education ? (
               <div className={styles["about__education"]}>
                 <span className={styles["about__education-label"]}>{aboutCopy.educationLabel}</span>
-                <strong className={styles["about__education-title"]}>{education.label}</strong>
-                <span className={styles["about__education-meta"]}>{education.status}</span>
+                <strong className={styles["about__education-title"]}>{education.degree}</strong>
+                <span className={styles["about__education-meta"]}>{education.institution}</span>
               </div>
             ) : null}
             <div className={styles["about__actions"]}>
