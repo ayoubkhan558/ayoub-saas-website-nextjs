@@ -5,6 +5,7 @@ import styles from "./AboutStorySection.module.scss";
 
 export function AboutStorySection({ about }: { about: PortfolioData["about"] }) {
   const fullName = about.signature;
+  const latestEducation = about.educationHistory[0];
 
   return (
     <section className="section">
@@ -21,10 +22,22 @@ export function AboutStorySection({ about }: { about: PortfolioData["about"] }) 
             <p className={styles["about-page-section-header__text"]}>
               {about.originStory}
             </p>
-            <article className={styles["about-page-education"]}>
-              <span>Latest degree</span>
-              <strong>{about.education}</strong>
-            </article>
+            {latestEducation ? (
+              <article className={styles["about-page-education"]}>
+                <span>Education</span>
+                <strong>{latestEducation.degree}</strong>
+                <p className={styles["about-page-education__meta"]}>
+                  {latestEducation.field} · {latestEducation.institution} · {latestEducation.location}
+                </p>
+                <p className={styles["about-page-education__meta"]}>
+                  {latestEducation.startYear}–{latestEducation.endYear} · {latestEducation.grade}
+                </p>
+                <p className={styles["about-page-education__details"]}>{latestEducation.details}</p>
+                <p className={styles["about-page-education__coursework"]}>
+                  <strong>Coursework:</strong> {latestEducation.coursework.join(", ")}
+                </p>
+              </article>
+            ) : null}
           </div>
         </div>
 
