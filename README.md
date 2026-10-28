@@ -88,7 +88,7 @@ Implementation:
 Resume links point to:
 
 ```txt
-/ATS-react-front-Ayoub-CV_Resume.pdf
+/cv-resume-ayoub-web-dev-seo.pdf
 ```
 
 Buttons either download or open the PDF in a new browser tab depending on browser behavior.
